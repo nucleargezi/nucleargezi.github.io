@@ -15,7 +15,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
-## Writing & Development
+## Editor Setup
 
 ### VS Code
 
@@ -37,7 +37,13 @@ Install suggseted extensions:
 - `myriad-dreamin.tinymist`, for writing blog posts in typst.
 - `astro-build.astro-vscode`, for developing astro components.
 
-Create a new blog post in `src/content/blog`:
+### Official Web App
+
+(Untested) [Start from GitHub](https://typst.app/) and open your blog repository. You should be able to write articles like you do in local.
+
+## Writing
+
+Create a new blog post in `content/blog`:
 
 ```typ
 #import "/typ/templates/blog.typ": main
@@ -47,6 +53,8 @@ Create a new blog post in `src/content/blog`:
   date: "2025-04-25",
 )
 ```
+
+There is a sample blog post in [`content/blog/personal-info.typ`](./content/blog/personal-info.typ).
 
 ## Customization
 

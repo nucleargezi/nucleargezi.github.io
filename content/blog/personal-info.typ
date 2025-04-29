@@ -16,3 +16,7 @@
 - Name：Miya Reiha
 - Birthday：12. 24
 - Year：14
+
+= About Me
+
+#include "/content/other/about.typ"
