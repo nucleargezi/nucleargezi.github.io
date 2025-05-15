@@ -1,6 +1,7 @@
 {
   "folders": [{ "path": ".." }],
   "settings": {
+    "tinymist.preview.invertColors": "auto",
     "[javascript]": {
       "editor.formatOnSave": true,
       "editor.defaultFormatter": "esbenp.prettier-vscode"

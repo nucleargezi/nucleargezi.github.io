@@ -5,10 +5,14 @@ import { typst } from "astro-typst";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  // Deploys to GitHub Pages
+  site: "https://myriad-dreamin.github.io",
+  base: "/blog",
+
   integrations: [
     sitemap(),
     typst({
+      // Always builds HTML files
       mode: {
         default: "html",
         detect: () => "html",

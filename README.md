@@ -43,7 +43,7 @@ Install suggseted extensions:
 
 ## Writing
 
-Create a new blog post in `content/blog`:
+Create a new blog post in `content/article`:
 
 ```typ
 #import "/typ/templates/blog.typ": main
@@ -54,7 +54,7 @@ Create a new blog post in `content/blog`:
 )
 ```
 
-There is a sample blog post in [`content/blog/personal-info.typ`](./content/blog/personal-info.typ).
+There is a sample blog post in [`content/article/personal-info.typ`](./content/article/personal-info.typ).
 
 ## Customization
 
