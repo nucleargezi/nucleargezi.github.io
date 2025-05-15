@@ -6,5 +6,13 @@ import { typst } from "astro-typst";
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
-  integrations: [sitemap(), typst()],
+  integrations: [
+    sitemap(),
+    typst({
+      mode: {
+        default: "html",
+        detect: () => "html",
+      },
+    }),
+  ],
 });
