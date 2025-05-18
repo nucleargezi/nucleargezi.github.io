@@ -37,29 +37,6 @@ import { URL_BASE, SITE_TITLE } from "$consts";
     <script>
       const themeToggle = document.getElementById("theme-toggle");
 
-      const checkCss = () => {
-        const prefersDarkScheme = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        );
-        if (prefersDarkScheme.matches) {
-          document.documentElement.classList.add("dark");
-        }
-      };
-
-      // Check for saved theme preference or default to dark theme
-      if (typeof localStorage !== "undefined") {
-        const userSetTheme = localStorage.getItem("theme");
-        if (userSetTheme) {
-          if (userSetTheme === "dark") {
-            document.documentElement.classList.add("dark");
-          }
-        } else {
-          checkCss();
-        }
-      } else {
-        checkCss();
-      }
-
       // Theme toggle functionality
       themeToggle?.addEventListener("click", () => {
         const isDark = document.documentElement.classList.toggle("dark");
