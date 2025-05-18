@@ -2,7 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { typst } from "astro-typst";
-import { URL_BASE } from "$consts";
+import { URL_BASE } from "./config.json";
 
 // https://astro.build/config
 export default defineConfig({

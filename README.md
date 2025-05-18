@@ -58,8 +58,8 @@ There is a sample blog post in [`content/article/personal-info.typ`](./content/a
 
 ## Customization
 
+- `config.json`: Configuration read by files.
 - `src/consts.ts,src/components/BaseHead.astro`: global metadata and the head component.
-- `src/consts.ts`: global shared consts.
 - `src/styles/*`: CSS styles.
 
 ## Credit
