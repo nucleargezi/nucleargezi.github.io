@@ -7,9 +7,9 @@ import { URL_BASE, SITE_TITLE } from "$consts";
 
 <header>
   <nav>
-    <h2><a href={URL_BASE}>{SITE_TITLE}</a></h2>
+    <h2><a href={`${URL_BASE}/`}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
-      <HeaderLink href={URL_BASE}>Home</HeaderLink>
+      <HeaderLink href={`${URL_BASE}/`}>Home</HeaderLink>
       <HeaderLink href={`${URL_BASE}/article`}>Blog</HeaderLink>
       <HeaderLink href={`${URL_BASE}/about`}>About</HeaderLink>
     </div>
