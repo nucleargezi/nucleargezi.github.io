@@ -2,12 +2,13 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { typst } from "astro-typst";
+import { URL_BASE } from "$consts";
 
 // https://astro.build/config
 export default defineConfig({
   // Deploys to GitHub Pages
   site: "https://myriad-dreamin.github.io",
-  base: "/blog",
+  base: URL_BASE,
 
   integrations: [
     sitemap(),

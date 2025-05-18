@@ -59,6 +59,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](./content/a
 ## Customization
 
 - `src/consts.ts,src/components/BaseHead.astro`: global metadata and the head component.
+- `src/consts.ts`: global shared consts.
 - `src/styles/*`: CSS styles.
 
 ## Credit

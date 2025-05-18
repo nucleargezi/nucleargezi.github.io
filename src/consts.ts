@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = "Myriad-Dreamin's Blog";
 export const SITE_DESCRIPTION = "Welcome to my blog!";
+export const URL_BASE = "/blog";

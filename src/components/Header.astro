@@ -1,15 +1,15 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "$consts";
+import { URL_BASE, SITE_TITLE } from "$consts";
 ---
 
 <header>
   <nav>
-    <h2><a href="/blog">{SITE_TITLE}</a></h2>
+    <h2><a href={URL_BASE}>{SITE_TITLE}</a></h2>
     <div class="internal-links">
-      <HeaderLink href="/blog">Home</HeaderLink>
-      <HeaderLink href="/blog/article">Blog</HeaderLink>
-      <HeaderLink href="/blog/about">About</HeaderLink>
+      <HeaderLink href={URL_BASE}>Home</HeaderLink>
+      <HeaderLink href={`${URL_BASE}/article`}>Blog</HeaderLink>
+      <HeaderLink href={`${URL_BASE}/about`}>About</HeaderLink>
     </div>
     <div class="social-links">
       <span style="width: 2em;">&nbsp;</span>
