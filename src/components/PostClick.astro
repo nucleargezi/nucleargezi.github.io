@@ -1,0 +1,41 @@
+---
+import { CLICK_SERVERS } from "$consts";
+const { id } = Astro.props;
+---
+
+<script data-id={id} data-click-server={CLICK_SERVERS} is:inline>
+  const postId = document.currentScript.getAttribute("data-id");
+  const servers = document.currentScript
+    .getAttribute("data-click-server")
+    .split(",")
+    .filter((server) => server);
+  console.log("Post ID:", postId, "to", servers);
+
+  servers.reduce((promise, server) => {
+    return promise.then((resolved) => {
+      if (resolved) {
+        return Promise.resolve(true);
+      }
+
+      return fetch(server + "/article/click", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: postId,
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            console.error("Failed to send click event:", response.statusText);
+          }
+          return !!response.ok;
+        })
+        .catch((error) => {
+          console.error("Error sending click event:", error, "to", server);
+          return false;
+        });
+    });
+  }, Promise.resolve(false));
+</script>
