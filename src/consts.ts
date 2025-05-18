@@ -8,6 +8,8 @@ export const SITE_TITLE = config.SITE_TITLE;
 export const SITE_DESCRIPTION = config.SITE_DESCRIPTION;
 export const URL_BASE = config.URL_BASE;
 
-export const CLICK_SERVERS = [];
-export const ENABLE_CLICK = false;
+export const CLICK_SERVERS = [
+  "https://glittery-valkyrie-8fbf14.netlify.app/api",
+];
+export const ENABLE_CLICK = true;
 export const CLICK_INFO = INFO;
