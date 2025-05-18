@@ -1,5 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import sunSvg from "/assets/fa-sun.svg?raw";
+import moonSvg from "/assets/fa-moon.svg?raw";
 import { URL_BASE, SITE_TITLE } from "$consts";
 ---
 
@@ -13,6 +15,15 @@ import { URL_BASE, SITE_TITLE } from "$consts";
     </div>
     <div class="social-links">
       <span style="width: 2em;">&nbsp;</span>
+      <a id="theme-toggle" target="_blank">
+        <span class="sr-only">Toggle theme</span>
+        <div class="theme-icon light">
+          <Fragment set:html={sunSvg} />
+        </div>
+        <div class="theme-icon dark">
+          <Fragment set:html={moonSvg} />
+        </div>
+      </a>
       <a href="https://github.com/Myriad-Dreamin" target="_blank">
         <span class="sr-only">Go to My GitHub's Profile</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -23,6 +34,38 @@ import { URL_BASE, SITE_TITLE } from "$consts";
         >
       </a>
     </div>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+
+      const checkCss = () => {
+        const prefersDarkScheme = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        );
+        if (prefersDarkScheme.matches) {
+          document.documentElement.classList.add("dark");
+        }
+      };
+
+      // Check for saved theme preference or default to dark theme
+      if (typeof localStorage !== "undefined") {
+        const userSetTheme = localStorage.getItem("theme");
+        if (userSetTheme) {
+          if (userSetTheme === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+        } else {
+          checkCss();
+        }
+      } else {
+        checkCss();
+      }
+
+      // Theme toggle functionality
+      themeToggle?.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+    </script>
   </nav>
 </header>
 <style>

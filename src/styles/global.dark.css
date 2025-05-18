@@ -1,4 +1,4 @@
-:root {
+:root.dark {
   --main-color: #dfdfd6;
   --date-color: #dfdfd6;
   --raw-bg-color: rgba(101, 117, 133, 0.16);
