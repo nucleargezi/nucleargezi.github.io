@@ -12,8 +12,8 @@ export const SITE_TITLE = config.SITE_TITLE;
 export const SITE_DESCRIPTION = config.SITE_DESCRIPTION;
 export const URL_BASE = config.URL_BASE;
 
-const BACKEND_ADDR = "http://localhost:13333";
-// const BACKEND_ADDR = "https://glittery-valkyrie-8fbf14.netlify.app/api";
+// const BACKEND_ADDR = "http://localhost:13333";
+const BACKEND_ADDR = "https://glittery-valkyrie-8fbf14.netlify.app/api";
 export const CLICK_SERVERS = [BACKEND_ADDR];
 export const COMMENT_SERVER = BACKEND_ADDR;
 export const CLICK_INFO = INFO;
