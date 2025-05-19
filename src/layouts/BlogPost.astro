@@ -5,7 +5,8 @@ import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
 import FormattedDate from "$components/FormattedDate.astro";
 import PostClick from "$components/PostClick.astro";
-import { ENABLE_CLICK, CLICK_INFO } from "$consts";
+import Comment from "$components/Comment.astro";
+import { ENABLE_CLICK, CLICK_INFO, ENABLE_COMMENT } from "$consts";
 
 type Props = CollectionEntry<"blog">["data"] & {
   id: string;
@@ -19,18 +20,21 @@ const click: number =
 <html lang="en">
   <head>
     <BaseHead title={title} description={desc} />
-    <style>
+    <style is:global>
       main {
         width: calc(100% - 2em);
         max-width: 100%;
         margin: 0;
       }
-      .prose {
+      .prose,
+      .comment-region {
         width: 720px;
         max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
         color: var(--main-color);
+        margin: auto;
+      }
+      .prose {
+        padding: 1em;
       }
       .title {
         margin-bottom: 1em;
@@ -84,6 +88,7 @@ const click: number =
           <slot />
         </div>
       </article>
+      {ENABLE_COMMENT && <Comment id={id} />}
     </main>
     <Footer />
   </body>

@@ -1,0 +1,192 @@
+---
+const comments = [
+  {
+    // article_id, comment, email, created_at
+    article_id: 1,
+    comment: "Hello World",
+    email: "Test <random-blog-test@gmail.com>",
+    created_at: new Date("2023-10-01 12:00:00"),
+  },
+];
+const { id } = Astro.props;
+const MAILTO = "yekongqiuyu@163.com";
+---
+
+<style>
+  #comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  #comment-form textarea {
+  }
+
+  /* https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/ */
+  .grow-wrap {
+    /* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+    display: grid;
+    height: fit-content;
+  }
+  .grow-wrap::after {
+    /* Note the weird space! Needed to preventy jumpy behavior */
+    content: attr(data-replicated-value) " ";
+
+    /* This is how textarea text behaves */
+    white-space: pre-wrap;
+
+    /* Hidden from view, clicks, and screen readers */
+    visibility: hidden;
+  }
+  .grow-wrap > textarea {
+    /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+    resize: none;
+
+    /* Firefox shows scrollbar on growth, you can hide like this. */
+    overflow: hidden;
+    box-sizing: border-box;
+    /* width: 100%; */
+    /* height: 1em; */
+  }
+  .grow-wrap > textarea,
+  .grow-wrap::after {
+    /* Identical styling required!! */
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    padding: 0.5rem;
+    font: inherit;
+
+    /* Place on top of each other */
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .submit-button {
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    color: white;
+    padding: 0.3em 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    float: right;
+  }
+  .submit-button:hover {
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+  }
+  .submit-button:active {
+    color: rgba(var(--main-bg-color), 80%);
+    background-color: rgba(var(--main-color), 80%);
+  }
+
+  #email-from {
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 2px;
+    color: white;
+    padding: 0.3em;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+</style>
+<div class="comment-region">
+  <h3>Comments</h3>
+  <form id="comment-form" data-mailto={MAILTO} data-article-id={id}>
+    <div class="grow-wrap">
+      <textarea
+        name="comment"
+        placeholder="Your comment"
+        oninput="this.parentNode.dataset.replicatedValue = this.value"
+        required></textarea>
+    </div>
+    <!-- <button type="submit">Submit</button> -->
+    <div style="display: flex; justify-content: space-between;">
+      <button type="button" class="submit-button" style="flex: 0 0 auto;"
+        >Submit</button
+      >
+      <div>
+        <!-- drop down -->
+        <select name="email" id="email-from">
+          <option value="Gmail">Gmail</option>
+          <option value="System">System Default</option>
+        </select>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("comment-form")!;
+      const mailto = form.dataset.mailto!;
+      const articleId = form.dataset.articleId!;
+      const submitButton = form.querySelector(".submit-button");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+      submitButton?.addEventListener("click", async () => {
+        const textarea = form.querySelector<HTMLTextAreaElement>(
+          "textarea[name='comment']"
+        );
+
+        const content = textarea!.value;
+        if (!content) {
+          alert("Please enter a comment");
+          return;
+        }
+
+        const emailFrom = form.querySelector<HTMLSelectElement>(
+          "select[name='email']"
+        )?.value;
+        if (!emailFrom) {
+          alert("Please select an email");
+          return;
+        }
+
+        const subject = `Comment to article "${articleId}"`;
+
+        switch (emailFrom) {
+          case "Gmail": {
+            // https://mail.google.com/mail/?view=cm&fs=1&to=yekongqiuyu@163.com
+            // send email using Gmail
+            const mailtoLink = new URL(
+              `https://mail.google.com/mail/?view=cm&fs=1`
+            );
+            mailtoLink.searchParams.set("to", mailto);
+            // subject
+            mailtoLink.searchParams.set("su", subject);
+            mailtoLink.searchParams.set("body", content);
+            // trigger the mailto link
+            window.open(mailtoLink.toString(), "_blank");
+
+            break;
+          }
+          case "System": {
+            const mailtoLink = new URL(`mailto:${mailto}`);
+            mailtoLink.searchParams.set("subject", subject);
+            mailtoLink.searchParams.set("body", content);
+            // trigger the mailto link
+            window.open(mailtoLink.toString(), "_blank");
+            break;
+          }
+          default:
+            alert("Please select a valid email");
+            return;
+        }
+      });
+    </script>
+  </form>
+  <div class="comment-list">
+    {
+      comments.map((comment) => (
+        <div class="comment-item">
+          <div class="comment-email">{comment.email}</div>
+          <div class="comment-text">{comment.comment}</div>
+          <div class="comment-date">
+            {new Date(comment.created_at).toLocaleString()}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
