@@ -115,7 +115,7 @@ const comments = COMMENT_INFO.get(id) || [];
     <div class="grow-wrap">
       <textarea
         name="comment"
-        placeholder="Your comment, in Markdown format. (Your email will not be shown on the site.)"
+        placeholder="Your comment in Markdown format, which will be visible after review. Your email will not be shown on the site."
         oninput="this.parentNode.dataset.replicatedValue = this.value"
         required></textarea>
     </div>
@@ -175,7 +175,9 @@ const comments = COMMENT_INFO.get(id) || [];
               );
               return;
             }
-            alert("Comment sent successfully");
+            alert(
+              "Comment sent successfully. It will be visible after review."
+            );
             textarea!.value = "";
           })
           .catch((error) => {
