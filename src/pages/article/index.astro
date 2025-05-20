@@ -5,6 +5,7 @@ import Footer from "$components/Footer.astro";
 import { kUrlBase, kSiteTitle, kSiteDescription } from "$consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "$components/FormattedDate.astro";
+import "./PostList.css";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -15,29 +16,6 @@ const posts = (await getCollection("blog")).sort(
 <html lang="en">
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
-    <style>
-      .posts li {
-        list-style: none;
-        margin: 0;
-        margin-top: 1.5em;
-        padding: 0;
-      }
-      .posts li > a {
-        display: flex;
-      }
-      .date {
-        margin-left: 0.5em;
-        font-style: italic;
-        color: var(--accent);
-      }
-      h4 {
-        margin: 0;
-      }
-      h4,
-      .date {
-        line-height: 32px;
-      }
-    </style>
   </head>
   <body>
     <Header />

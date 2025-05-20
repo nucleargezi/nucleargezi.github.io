@@ -57,6 +57,7 @@ export const kCommentInfo = (() => {
   }
   return kCommentInfo;
 })();
+export const kCommentList = COMMENTS;
 /**
  * A candidate list of servers to cover people in different regions.
  */

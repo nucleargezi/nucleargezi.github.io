@@ -1,0 +1,23 @@
+.posts li {
+  list-style: none;
+  margin: 0;
+  margin-top: 1.5em;
+  padding: 0;
+}
+.posts li > a {
+  display: flex;
+}
+.date {
+  font-style: italic;
+}
+.posts .date {
+  margin-left: 0.5em;
+  color: var(--accent);
+}
+.posts h4 {
+  margin: 0;
+}
+.posts h4,
+.posts .date {
+  line-height: 32px;
+}
