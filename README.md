@@ -67,6 +67,13 @@ The `blog-tags` index is defined in [`content/article/blog-tags.typ`](./typ/temp
 
 There is a sample blog post in [`content/article/personal-info.typ`](./content/article/personal-info.typ).
 
+## Deploying to GitHub Pages
+
+1. Search and change the [URL_BASE](./config.json) to name of your own repository.
+   - For a GitHub page `https://username.github.io/repo`, the URL base is `/repo/`.
+2. Change Source's "Build and deployment" to "GitHub Actions" in [Page Settings](../../settings/pages).
+3. Push your changes to the `main` branch and it will automatically deploy to GitHub Pages by [CI](.github/workflows/gh-pages.yml).
+
 ## Customization
 
 - [`config.json`](config.json): Configuration read by files.
@@ -75,6 +82,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](./content/a
 
 ## Todo
 
+- [ ] More friendly content submodule for forks
 - [ ] Printing support
 - [ ] Images in Dark mode
 
