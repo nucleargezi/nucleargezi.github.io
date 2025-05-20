@@ -17,7 +17,7 @@ export async function renderComment(typstCode: string): Promise<string> {
     }
   }
 
-  const backtick = "`".repeat(maxRawBackticks + 1);
+  const backtick = "`".repeat(Math.max(maxRawBackticks + 1, 3));
   const mainFileContent = `
 ${commentTemplate}
 ${backtick}md-render
