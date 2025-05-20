@@ -7,6 +7,7 @@ import FormattedDate from "$components/FormattedDate.astro";
 import PostClick from "$components/PostClick.astro";
 import Comment from "$components/Comment.astro";
 import { kEnableClick, kClickInfo, kEnableComment } from "$consts";
+import TagList from "$components/TagList.astro";
 
 interface IdExt {
   id: string;
@@ -14,7 +15,7 @@ interface IdExt {
 
 type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
 
-const { id, title, desc, date, updatedDate } = Astro.props;
+const { id, title, desc, date, updatedDate, tags } = Astro.props;
 const click: number =
   (kEnableClick && kClickInfo.find((click) => click.id === id)?.click) || 0;
 ---
@@ -29,7 +30,8 @@ const click: number =
         margin: 0;
       }
       .prose,
-      .comment-region {
+      .comment-region,
+      ul.tags {
         max-width: min(56rem, calc(100% - 2em));
         color: var(--main-color);
         margin: auto;
@@ -58,6 +60,18 @@ const click: number =
       .last-updated-on,
       .click-count {
         font-style: italic;
+      }
+      ul.tags {
+        list-style: none;
+        padding: 0;
+      }
+      .tags li {
+        display: inline-block;
+        margin: 0;
+        margin-right: 1em;
+      }
+      .tags a {
+        text-decoration: none;
       }
     </style>
     {id && kEnableClick && <PostClick id={id} />}
@@ -93,6 +107,7 @@ const click: number =
           <slot />
         </div>
       </article>
+      {tags && <TagList tags={tags} />}
       {id && kEnableComment && <Comment id={id} />}
     </main>
     <Footer />
