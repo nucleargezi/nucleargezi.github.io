@@ -5,6 +5,7 @@ import BaseHead from "$components/BaseHead.astro";
 import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
 import FormattedDate from "$components/FormattedDate.astro";
+import { renderComment } from "$components/CommentBody";
 
 import {
   kSiteTitle,
@@ -16,8 +17,7 @@ import {
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
 
-import "./PostList.css";
-import { renderComment } from "$components/CommentBody";
+import "$styles/IndexPostList.css";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()

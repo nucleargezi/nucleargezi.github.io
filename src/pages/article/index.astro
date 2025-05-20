@@ -1,13 +1,16 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseHead from "$components/BaseHead.astro";
 import Footer from "$components/Footer.astro";
 import FormattedDate from "$components/FormattedDate.astro";
 import TagList from "$components/TagList.astro";
 import Header from "$components/Header.astro";
 import Search from "$components/Search.astro";
+
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
-import { getCollection } from "astro:content";
-import "./PostList.css";
+
+import "$styles/ArticlePostList.css";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
