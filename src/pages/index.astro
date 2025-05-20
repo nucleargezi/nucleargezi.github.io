@@ -11,6 +11,7 @@ import {
   kSiteIndexTitle,
   kSiteDescription,
   kCommentList,
+  kUrlBase,
 } from "$consts";
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
@@ -49,7 +50,7 @@ const recent5Comments = comments.slice(0, 5);
         {
           recent5Posts.map((post) => (
             <li>
-              <a class="heading" href={`/article/${post.id}/`}>
+              <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
                 <h4>
                   <span class="title">{post.data.title}</span>
                 </h4>
@@ -69,7 +70,10 @@ const recent5Comments = comments.slice(0, 5);
             <li>
               <h4>
                 <span class="name">{comment.email}</span> commented on
-                <a class="heading" href={`/article/${comment.articleId}`}>
+                <a
+                  class="heading"
+                  href={`${kUrlBase}/article/${comment.articleId}`}
+                >
                   {
                     posts.find((post) => post.id === comment.articleId)?.data
                       .title

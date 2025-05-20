@@ -1,11 +1,15 @@
 ---
+import { kUrlBase } from "$consts";
+
 interface Props {
   tags: string[];
 }
 
 const { tags } = Astro.props;
 const postByTag = (tag: string) => {
-  return `/article/?search=${tag}`;
+  const params = new URLSearchParams();
+  params.set("search", tag);
+  return `${kUrlBase}/article?${params}`;
 };
 ---
 
