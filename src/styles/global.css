@@ -37,9 +37,12 @@ body {
   color: var(--main-color);
   line-height: 1.7;
 }
-main {
+main,
+.search {
   max-width: min(56rem, calc(100% - 2em));
   margin: auto;
+}
+main {
   padding: 3em 1em;
 }
 h1,

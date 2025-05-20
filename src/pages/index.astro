@@ -15,7 +15,7 @@ import {
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
 
-import "./article/PostList.css";
+import "./PostList.css";
 import { renderComment } from "$components/CommentBody";
 
 const posts = (await getCollection("blog")).sort(
@@ -34,12 +34,6 @@ const recent5Comments = comments.slice(0, 5);
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
     <style>
-      .posts li {
-        list-style: disc;
-        margin: 0;
-        margin-top: 0.5em;
-        padding: 0;
-      }
       .comments a {
         display: inline-block;
       }
@@ -55,7 +49,7 @@ const recent5Comments = comments.slice(0, 5);
         {
           recent5Posts.map((post) => (
             <li>
-              <a href={`/article/${post.id}/`}>
+              <a class="heading" href={`/article/${post.id}/`}>
                 <h4>
                   <span class="title">{post.data.title}</span>
                 </h4>
@@ -63,6 +57,7 @@ const recent5Comments = comments.slice(0, 5);
                   <FormattedDate date={post.data.date} />
                 </span>
               </a>
+              {post.data.desc || ""}
             </li>
           ))
         }
@@ -74,7 +69,7 @@ const recent5Comments = comments.slice(0, 5);
             <li>
               <h4>
                 <span class="name">{comment.email}</span> commented on
-                <a href={`/article/${comment.articleId}`}>
+                <a class="heading" href={`/article/${comment.articleId}`}>
                   {
                     posts.find((post) => post.id === comment.articleId)?.data
                       .title

@@ -1,10 +1,13 @@
+.posts,
 .posts li {
-  list-style: none;
   margin: 0;
-  margin-top: 1.5em;
   padding: 0;
 }
-.posts li > a {
+.posts li {
+  list-style: none;
+  margin-top: 1.5em;
+}
+.posts li > a.heading {
   display: flex;
 }
 .date {
@@ -20,4 +23,16 @@
 .posts h4,
 .posts .date {
   line-height: 32px;
+}
+ul.tags {
+  list-style: none;
+  padding: 0;
+}
+.tags li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+}
+.tags a {
+  text-decoration: none;
 }

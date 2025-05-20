@@ -46,7 +46,7 @@ Install suggseted extensions:
 Create a new blog post in `content/article`:
 
 ```typ
-#import "/typ/templates/blog.typ": main
+#import "/typ/templates/blog.typ": *
 #show: main.with(
   title: "Title of the blog post",
   desc: [This is a test post.],
@@ -64,12 +64,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](./content/a
 
 ## Todo
 
-- [ ] Tags.
 - [ ] Friends.
-- [ ] RSS.
-- [ ] Search.
-- [ ] Search Tags.
-- [ ] Digest.
 
 ## Credit
 

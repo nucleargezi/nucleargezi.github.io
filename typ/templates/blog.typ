@@ -3,6 +3,7 @@
 #import "@preview/shiroa:0.2.3": templates
 #import templates: *
 #import "mod.typ": *
+#import "supports-text.typ": plain-text
 
 #let code-font = (
   "DejaVu Sans Mono",
@@ -96,6 +97,7 @@
   title: "Untitled",
   desc: [This is a blog post.],
   date: "2024-08-15",
+  tags: (),
   body,
 ) = {
   // set basic document metadata
@@ -122,10 +124,11 @@
 
   [
     #metadata((
-      title: title,
+      title: plain-text(title),
       author: "Myriad-Dreamin",
-      desc: desc,
+      desc: plain-text(desc),
       date: date,
+      tags: tags,
     )) <frontmatter>
   ]
 

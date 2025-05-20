@@ -1,0 +1,20 @@
+---
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props;
+const postByTag = (tag: string) => {
+  return `/article/?search=${tag}`;
+};
+---
+
+<ul class="tags">
+  {
+    tags.map((tag) => (
+      <li>
+        <a href={postByTag(tag)}>#{tag}</a>
+      </li>
+    ))
+  }
+</ul>

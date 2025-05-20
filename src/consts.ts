@@ -16,6 +16,10 @@ export const kEnableClick = true;
  */
 export const kEnableComment = true;
 /**
+ * Whether to enable post search (needs Js).
+ */
+export const kEnableSearch = true;
+/**
  * Whether to enable backend, required by click and comment feature.
  */
 export const kEnableBackend = true;

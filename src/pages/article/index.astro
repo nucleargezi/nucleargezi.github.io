@@ -1,10 +1,12 @@
 ---
 import BaseHead from "$components/BaseHead.astro";
-import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
-import { kUrlBase, kSiteTitle, kSiteDescription } from "$consts";
-import { getCollection } from "astro:content";
 import FormattedDate from "$components/FormattedDate.astro";
+import TagList from "$components/TagList.astro";
+import Header from "$components/Header.astro";
+import Search from "$components/Search.astro";
+import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
+import { getCollection } from "astro:content";
 import "./PostList.css";
 
 const posts = (await getCollection("blog")).sort(
@@ -16,16 +18,28 @@ const posts = (await getCollection("blog")).sort(
 <html lang="en">
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
+    <style>
+      .posts.loading {
+        display: none;
+      }
+      main.search-enabled {
+        padding-top: 0;
+      }
+    </style>
   </head>
   <body>
     <Header />
-    <main>
+    {kEnableSearch && <Search />}
+    <main class={kEnableSearch ? "search-enabled" : ""}>
       <section>
-        <ul class="posts">
+        <ul class={`posts${kEnableSearch ? " loading" : ""}`}>
           {
             posts.map((post) => (
-              <li>
-                <a href={`${kUrlBase}/article/${post.id}/`}>
+              <li
+                data-article-id={post.id}
+                data-article-meta={JSON.stringify(post.data)}
+              >
+                <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
                   <h4>
                     <span class="title">{post.data.title}</span>
                   </h4>
@@ -33,10 +47,17 @@ const posts = (await getCollection("blog")).sort(
                     <FormattedDate date={post.data.date} />
                   </span>
                 </a>
+                {post.data.tags && <TagList tags={post.data.tags} />}
+                {post.data.desc || ""}
               </li>
             ))
           }
         </ul>
+        <script is:inline>
+          if (!window.location.search) {
+            document.querySelector(".posts").classList.remove("loading");
+          }
+        </script>
       </section>
     </main>
     <Footer />

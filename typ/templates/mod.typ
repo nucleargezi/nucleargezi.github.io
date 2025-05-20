@@ -10,3 +10,12 @@
 } else {
   it => it
 }
+
+#let blog-tags = (
+  programming: "Programming",
+  linux: "Linux",
+  dev-ops: "DevOps",
+  compiler: "Compiler",
+  music-theory: "Music Theory",
+  misc: "Miscellaneous",
+)
