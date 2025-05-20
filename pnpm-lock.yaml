@@ -14,6 +14,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.4.0
         version: 3.4.0
+      '@myriaddreamin/typst-ts-node-compiler':
+        specifier: ^0.6.0-rc1
+        version: 0.6.0-rc1
       astro:
         specifier: ^5.7.13
         version: 5.7.13(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)

@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.4.0",
+    "@myriaddreamin/typst-ts-node-compiler": "^0.6.0-rc1",
     "astro": "^5.7.13",
     "astro-typst": "0.9.0-rc1"
   }

@@ -1,5 +1,6 @@
 ---
 import { COMMENT_SERVER, COMMENT_INFO } from "$consts";
+import { renderComment } from "./CommentBody";
 
 const { id } = Astro.props;
 const comments = COMMENT_INFO.get(id) || [];
@@ -198,7 +199,7 @@ const comments = COMMENT_INFO.get(id) || [];
               {new Date(comment.createdAt).toLocaleString()}
             </em>
           </div>
-          <div class="comment-text">{comment.content}</div>
+          <div class="comment-text" set:html={renderComment(comment.content)} />
         </div>
       ))
     }
