@@ -24,7 +24,7 @@
 ) = book-theme-from(toml("theme-style.toml"), xml: it => xml(it), target: "web-ayu")
 
 #let markup-rules(body) = {
-  set text(18pt) if sys-is-html-target
+  set text(16pt) if sys-is-html-target
   set text(fill: rgb("dfdfd6")) if is-dark-theme
   show link: set text(fill: dash-color)
 
