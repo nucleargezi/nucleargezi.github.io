@@ -1,5 +1,6 @@
 :root.dark {
   --main-color: #dfdfd6;
+  --main-hover-color: #fff;
   --date-color: #dfdfd6;
   --raw-bg-color: rgba(101, 117, 133, 0.16);
   --main-bg-color: black;

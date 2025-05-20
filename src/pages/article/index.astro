@@ -16,8 +16,26 @@ const posts = (await getCollection("blog")).sort(
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
     <style>
-      main {
-        width: 960px;
+      .posts li {
+        list-style: none;
+        margin: 0;
+        margin-top: 1.5em;
+        padding: 0;
+      }
+      .posts li > a {
+        display: flex;
+      }
+      .date {
+        margin-left: 0.5em;
+        font-style: italic;
+        color: var(--accent);
+      }
+      h4 {
+        margin: 0;
+      }
+      h4,
+      .date {
+        line-height: 32px;
       }
     </style>
   </head>
@@ -25,15 +43,17 @@ const posts = (await getCollection("blog")).sort(
     <Header />
     <main>
       <section>
-        <ul>
+        <ul class="posts">
           {
             posts.map((post) => (
               <li>
                 <a href={`${kUrlBase}/article/${post.id}/`}>
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
+                  <h4>
+                    <span class="title">{post.data.title}</span>
+                  </h4>
+                  <span class="date">
                     <FormattedDate date={post.data.date} />
-                  </p>
+                  </span>
                 </a>
               </li>
             ))

@@ -6,6 +6,7 @@
 
 :root {
   --main-color: black;
+  --main-hover-color: 34, 41, 57;
   --raw-bg-color: rgba(101, 117, 133, 0.16);
   --main-bg-color: white;
   --nav-bg-color: white;
@@ -15,7 +16,6 @@
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
-  --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
@@ -162,6 +162,38 @@ hr {
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
 }
+nav a,
+.social-links a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+nav a:hover,
+.social-links a:hover {
+  color: var(--main-hover-color);
+}
+.social-links svg {
+  width: 32px;
+  height: 32px;
+}
+.social-links svg path {
+  fill: currentColor;
+}
+.theme-icon {
+  cursor: pointer;
+}
+.dark .theme-icon.light {
+  display: block;
+}
+.dark .theme-icon.dark {
+  display: none;
+}
+.theme-icon.light {
+  display: none;
+}
+.theme-icon.dark {
+  display: block;
+}
+
 figcaption {
   text-align: center;
 }
@@ -177,23 +209,4 @@ figcaption {
   display: grid;
   place-items: center;
   overflow-x: auto;
-}
-.theme-icon svg {
-  width: 32px;
-  height: 32px;
-  path {
-    fill: var(--main-color);
-  }
-}
-.dark .theme-icon.light {
-  display: block;
-}
-.dark .theme-icon.dark {
-  display: none;
-}
-.theme-icon.light {
-  display: none;
-}
-.theme-icon.dark {
-  display: block;
 }
