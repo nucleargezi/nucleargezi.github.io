@@ -8,9 +8,11 @@ import PostClick from "$components/PostClick.astro";
 import Comment from "$components/Comment.astro";
 import { kEnableClick, kClickInfo, kEnableComment } from "$consts";
 
-type Props = CollectionEntry<"blog">["data"] & {
+interface IdExt {
   id: string;
-};
+}
+
+type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
 
 const { id, title, desc, date, updatedDate } = Astro.props;
 const click: number =
@@ -55,7 +57,7 @@ const click: number =
         font-style: italic;
       }
     </style>
-    {kEnableClick && <PostClick id={id} />}
+    {id && kEnableClick && <PostClick id={id} />}
   </head>
 
   <body>
@@ -75,7 +77,7 @@ const click: number =
               }
             </div>
             {
-              kEnableClick && (
+              id && kEnableClick && (
                 <div class="click-count">
                   {click}
                   {click === 1 ? "click" : "clicks"}
@@ -88,7 +90,7 @@ const click: number =
           <slot />
         </div>
       </article>
-      {kEnableComment && <Comment id={id} />}
+      {id && kEnableComment && <Comment id={id} />}
     </main>
     <Footer />
   </body>
