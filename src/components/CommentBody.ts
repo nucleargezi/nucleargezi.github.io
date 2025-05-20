@@ -1,9 +1,9 @@
 import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
 import commentTemplate from "../../typ/templates/comment.typ?raw";
+import { resolve } from "path";
 
 const compiler = NodeCompiler.create({
-  workspace:
-    process.platform === "win32" ? "C:\\tmp\\undefined" : "/tmp/undefined",
+  workspace: resolve(import.meta.dirname, "../../typ/templates"),
 });
 
 export async function renderComment(typstCode: string): Promise<string> {
@@ -20,7 +20,7 @@ export async function renderComment(typstCode: string): Promise<string> {
   const backtick = "`".repeat(maxRawBackticks + 1);
   const mainFileContent = `
 ${commentTemplate}
-${backtick}
+${backtick}md-render
 ${typstCode}
 ${backtick}
 `;

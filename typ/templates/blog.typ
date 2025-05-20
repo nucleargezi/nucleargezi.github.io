@@ -23,24 +23,15 @@
   code-extra-colors: code-extra-colors,
 ) = book-theme-from(toml("theme-style.toml"), xml: it => xml(it), target: "web-ayu")
 
-#let main(
-  title: "Untitled",
-  desc: [This is a blog post.],
-  date: "2024-08-15",
-  body,
-) = {
-  // set basic document metadata
-  set document(
-    author: ("Myriad-Dreamin",),
-    title: title,
-  )
-
+#let markup-rules(body) = {
   set text(18pt) if sys-is-html-target
-
-  // link setting
+  set text(fill: rgb("dfdfd6")) if is-dark-theme
   show link: set text(fill: dash-color)
 
-  // math setting
+  body
+}
+
+#let equation-rules(body) = {
   show math.equation: set text(weight: 400)
   show math.equation.where(block: true): it => context if shiroa-sys-target() == "html" {
     p-frame(attrs: ("class": "block-equation"), it)
@@ -52,9 +43,10 @@
   } else {
     it
   }
+  body
+}
 
-  set text(fill: rgb("dfdfd6")) if is-dark-theme
-
+#let code-block-rules(body) = {
   /// HTML code block supported by zebraw.
   show: if is-dark-theme {
     zebraw-init.with(
@@ -72,7 +64,6 @@
     zebraw-init.with(lang: false, numbering: false)
   }
 
-  // code block setting
   set raw(theme: theme-style.code-theme) if theme-style.code-theme.len() > 0
   show raw: set text(font: code-font)
   show raw.where(block: true): it => context if shiroa-sys-target() == "paged" {
@@ -98,6 +89,27 @@
       it,
     )
   }
+  body
+}
+
+#let main(
+  title: "Untitled",
+  desc: [This is a blog post.],
+  date: "2024-08-15",
+  body,
+) = {
+  // set basic document metadata
+  set document(
+    author: ("Myriad-Dreamin",),
+    title: title,
+  )
+
+  // markup setting
+  show: markup-rules
+  // math setting
+  show: equation-rules
+  // code block setting
+  show: code-block-rules
 
   show: it => if sys-is-html-target {
     show footnote: it => context {
@@ -121,6 +133,7 @@
   set par(justify: true)
 
   body
+
   context if sys-is-html-target {
     query(footnote)
       .enumerate()
