@@ -62,10 +62,6 @@ There is a sample blog post in [`content/article/personal-info.typ`](./content/a
 - `src/consts.ts,src/components/BaseHead.astro`: global metadata and the head component.
 - `src/styles/*`: CSS styles.
 
-## Todo
-
-- [ ] Friends.
-
 ## Credit
 
 This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
