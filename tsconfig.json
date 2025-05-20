@@ -4,6 +4,7 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "types": ["src/global.d.ts"],
+    "typeRoots": ["./node_modules/@types", "."],
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
