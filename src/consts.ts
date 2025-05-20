@@ -10,6 +10,7 @@ export const kEnableComment = true;
 export const kEnableBackend = true;
 
 export const kSiteTitle = config.SITE_TITLE;
+export const kSiteIndexTitle = config.SITE_INDEX_TITLE;
 export const kSiteDescription = config.SITE_DESCRIPTION;
 export const kUrlBase = config.URL_BASE;
 
