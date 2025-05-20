@@ -13,6 +13,8 @@
 
 #let blog-tags = (
   programming: "Programming",
+  software: "Software",
+  tooling: "Tooling",
   linux: "Linux",
   dev-ops: "DevOps",
   compiler: "Compiler",
