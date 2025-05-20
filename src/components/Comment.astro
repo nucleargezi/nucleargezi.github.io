@@ -62,7 +62,7 @@ const comments = COMMENT_INFO.get(id) || [];
     padding: 0.3em 1em;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.8rem;
     display: inline-block;
     float: right;
   }
@@ -81,7 +81,7 @@ const comments = COMMENT_INFO.get(id) || [];
     color: white;
     padding: 0.3em 0.3em;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.8rem;
     display: inline-block;
   }
 
@@ -105,6 +105,18 @@ const comments = COMMENT_INFO.get(id) || [];
   .comment-text {
     margin: 0.5em 0 0.5em 1em;
   }
+
+  .comment-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  @media (max-width: 550px) {
+    .comment-fields {
+      flex-direction: column;
+      gap: 0.5em;
+    }
+  }
 </style>
 <div class="comment-region">
   <h3>Comments</h3>
@@ -121,16 +133,16 @@ const comments = COMMENT_INFO.get(id) || [];
         required></textarea>
     </div>
     <!-- <button type="submit">Submit</button> -->
-    <div style="display: flex; justify-content: space-between;">
-      <button type="button" class="submit-button" style="flex: 0 0 auto;"
-        >Submit</button
-      >
+    <div class="comment-fields">
       <input
         class="comment-input"
         type="text"
         name="email"
         placeholder="Name <mail@x.com>"
       />
+      <button type="button" class="submit-button" style="flex: 0 0 auto;"
+        >Submit</button
+      >
     </div>
 
     <script>
