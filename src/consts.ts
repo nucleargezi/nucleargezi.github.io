@@ -7,6 +7,7 @@ import COMMENTS from "../content/snapshot/article-comments.json";
 
 export const kEnableClick = true;
 export const kEnableComment = true;
+export const kEnableBackend = true;
 
 export const kSiteTitle = config.SITE_TITLE;
 export const kSiteDescription = config.SITE_DESCRIPTION;
@@ -15,9 +16,13 @@ export const kUrlBase = config.URL_BASE;
 // const BACKEND_ADDR = "http://localhost:13333";
 const BACKEND_ADDR = "https://glittery-valkyrie-8fbf14.netlify.app/api";
 
-export const kClickServers = [BACKEND_ADDR];
+export const kServers = [BACKEND_ADDR];
 export const kCommentServers = BACKEND_ADDR;
 export const kClickInfo = INFO;
+
+if (kEnableBackend && kServers.length === 0) {
+  throw new Error("kServers is empty, please set kServers in consts.ts");
+}
 
 type Comment = (typeof COMMENTS)[number];
 export const kCommentInfo = new Map<string, Comment[]>();

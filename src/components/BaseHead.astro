@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import "$styles/global.css";
 import "$styles/global.dark.css";
-import { kUrlBase, kSiteTitle } from "$consts";
+import { kUrlBase, kSiteTitle, kServers, kEnableBackend } from "$consts";
 
 interface Props {
   title: string;
@@ -58,6 +58,8 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Theme Support -->
 <script is:inline>
   const checkCss = () => {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -80,3 +82,53 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
     checkCss();
   }
 </script>
+
+<!-- Backend Support -->
+{kEnableBackend && <script is:inline define:vars={{ kServers }}>
+  window.postServer = (url, opts) => {
+    const { headers, body, doAlert } = opts || {};
+    const errors = [];
+    let lastResponse = undefined;
+    return kServers
+      .reduce((promise, server) => {
+        return promise.then((resolved) => {
+          if (resolved) {
+            return Promise.resolve(true);
+          }
+
+          return fetch(server + url, {
+            method: "POST",
+            headers,
+            body,
+          })
+            .then(async (response) => [response, await response.text()] )
+            .then(([response, text]) => {
+              if (!response.ok) {
+                errors.push(
+                  `Failed to send: ${response.statusText} (${text.trim()})`
+                );
+                return false;
+              } else {
+                lastResponse = response;
+                return true;
+              }
+            })
+            .catch((error) => {
+              errors.push(`"Exception when sending: ${error}`);
+              return false;
+            });
+        });
+      }, Promise.resolve(false))
+      .then((resolved) => {
+        if (!resolved) {
+          const msg = errors.join("\n");
+
+          console.error(msg);
+          if (doAlert) {
+            alert(msg);
+          }
+        }
+        return lastResponse;
+      });
+  };
+</script>}

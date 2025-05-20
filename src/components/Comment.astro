@@ -176,26 +176,16 @@ const comments = kCommentInfo.get(id) || [];
         formData.append("email", email.value || "");
 
         localStorage.setItem("commentMailFrom", email.value || "");
-        fetch(commentServer + "/article/comment", {
-          method: "POST",
-          body: formData,
-        })
-          .then(async (response) => [response, await response.text()] as const)
-          .then(([response, text]) => {
-            if (!response.ok) {
+
+        window
+          .postServer("/article/comment", { body: formData })
+          .then((response) => {
+            if (response) {
               alert(
-                `Failed to send comment: ${response.statusText} (${text.trim()})`
+                "Comment sent successfully. It will be visible after review."
               );
-              return;
+              textarea!.value = "";
             }
-            alert(
-              "Comment sent successfully. It will be visible after review."
-            );
-            textarea!.value = "";
-          })
-          .catch((error) => {
-            console.error("Error sending comment:", error);
-            alert("Error sending comment");
           });
       });
     </script>
