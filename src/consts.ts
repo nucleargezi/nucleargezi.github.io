@@ -8,21 +8,21 @@ import COMMENTS from "../content/snapshot/article-comments.json";
 type Comment = (typeof COMMENTS)[number];
 
 /**
+ * Whether to enable backend, required by click and comment feature.
+ */
+export const kEnableBackend = true;
+/**
  * Whether to enable click tracking.
  */
-export const kEnableClick = true;
+export const kEnableClick = true && kEnableBackend;
 /**
  * Whether to enable comment posting and viewing.
  */
-export const kEnableComment = true;
+export const kEnableComment = true && kEnableBackend;
 /**
  * Whether to enable post search (needs Js).
  */
 export const kEnableSearch = true;
-/**
- * Whether to enable backend, required by click and comment feature.
- */
-export const kEnableBackend = true;
 
 /**
  * The title of the website.

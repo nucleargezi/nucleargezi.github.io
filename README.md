@@ -1,6 +1,12 @@
 # Blog
 
-The starter template for typst blogs, powered by typst and astro.
+The starter template for static blogs, powered by [typst](https://github.com/typst/typst) and [Astro](https://astro.build/).
+
+## Features
+
+- **Tags**: Categorize your blog posts with tags.
+- **Search**: Search through your blog posts by "title", "description", or "tags".
+- **Click Stats and Comment** (Optional): Using an optional backend to store your blog post's click statistics and comments.
 
 ## Commands
 
@@ -43,7 +49,7 @@ Install suggseted extensions:
 
 ## Writing
 
-Create a new blog post in `content/article`:
+Create a new blog post in [`content/article`:](./content/article/)
 
 ```typ
 #import "/typ/templates/blog.typ": *
@@ -51,17 +57,29 @@ Create a new blog post in `content/article`:
   title: "Title of the blog post",
   desc: [This is a test post.],
   date: "2025-04-25",
+  tags: (
+    blog-tags.misc,
+  ),
 )
 ```
+
+The `blog-tags` index is defined in [`content/article/blog-tags.typ`](./typ/templates/mod.typ#L14) to ensure type safety. You can add your own tags by adding a new `blog-tags` index.
 
 There is a sample blog post in [`content/article/personal-info.typ`](./content/article/personal-info.typ).
 
 ## Customization
 
-- `config.json`: Configuration read by files.
-- `src/consts.ts,src/components/BaseHead.astro`: global metadata and the head component.
-- `src/styles/*`: CSS styles.
+- [`config.json`](config.json): Configuration read by files.
+- [`src/consts.ts`](./src/consts.ts),[`src/components/BaseHead.astro`](./src/components/BaseHead.astro): global metadata and the head component.
+- [`src/styles/*`](src/styles/): CSS styles.
+
+## Todo
+
+- [ ] Printing support
+- [ ] Images in Dark mode
 
 ## Credit
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- This theme is based off of the lovely [Bear Blog.](https://github.com/HermanMartinus/bearblog/)
+- The astro integration is supported by [astro-typst.](https://github.com/overflowcat/astro-typst)
+- And, the lovely [typst.](https://github.com/typst/typst)
