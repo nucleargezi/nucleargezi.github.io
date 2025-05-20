@@ -2,19 +2,7 @@
 import BaseHead from "$components/BaseHead.astro";
 import Footer from "$components/Footer.astro";
 import Header from "$components/Header.astro";
-
-const friendLinks = [
-  {
-    name: "7mile",
-    url: "https://7li.moe/",
-    desc: "一切都有其意义，包括停滞不前的日子。",
-  },
-  {
-    name: "Margatroid",
-    url: "https://blog.mgt.moe/",
-    desc: "SIGSLEEP Fellow",
-  },
-];
+import { kFriendLinks } from "$consts";
 ---
 
 <html lang="en">
@@ -29,7 +17,7 @@ const friendLinks = [
       <section>
         <ul>
           {
-            friendLinks.map((link) => (
+            kFriendLinks.map((link) => (
               <li>
                 <a href={link.url} target="_blank">
                   {link.name}

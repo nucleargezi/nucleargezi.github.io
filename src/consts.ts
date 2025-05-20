@@ -63,6 +63,21 @@ export const kCommentInfo = (() => {
 })();
 export const kCommentList = COMMENTS;
 /**
+ * The friend link info.
+ */
+export const kFriendLinks = [
+  {
+    name: "7mile",
+    url: "https://7li.moe/",
+    desc: "一切都有其意义，包括停滞不前的日子。",
+  },
+  {
+    name: "Margatroid",
+    url: "https://blog.mgt.moe/",
+    desc: "SIGSLEEP Fellow",
+  },
+];
+/**
  * A candidate list of servers to cover people in different regions.
  */
 export const kServers = (() => {
