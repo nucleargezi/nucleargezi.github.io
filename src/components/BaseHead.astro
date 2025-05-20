@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import "$styles/global.css";
 import "$styles/global.dark.css";
-import { URL_BASE, SITE_TITLE } from "$consts";
+import { kUrlBase, kSiteTitle } from "$consts";
 
 interface Props {
   title: string;
@@ -19,12 +19,12 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href={`${URL_BASE}/favicon.svg`} />
-<link rel="sitemap" href={`${URL_BASE}/sitemap-index.xml`} />
+<link rel="icon" type="image/svg+xml" href={`${kUrlBase}/favicon.svg`} />
+<link rel="sitemap" href={`${kUrlBase}/sitemap-index.xml`} />
 <link
   rel="alternate"
   type="application/rss+xml"
-  title={SITE_TITLE}
+  title={kSiteTitle}
   href={new URL("rss.xml", Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />

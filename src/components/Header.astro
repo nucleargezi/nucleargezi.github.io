@@ -2,16 +2,16 @@
 import HeaderLink from "./HeaderLink.astro";
 import sunSvg from "/assets/fa-sun.svg?raw";
 import moonSvg from "/assets/fa-moon.svg?raw";
-import { URL_BASE, SITE_TITLE } from "$consts";
+import { kUrlBase, kSiteTitle } from "$consts";
 ---
 
 <header>
   <nav>
-    <h2><a href={`${URL_BASE}/`}>{SITE_TITLE}</a></h2>
+    <h2><a href={`${kUrlBase}/`}>{kSiteTitle}</a></h2>
     <div class="internal-links">
-      <HeaderLink href={`${URL_BASE}/`}>Home</HeaderLink>
-      <HeaderLink href={`${URL_BASE}/article`}>Blog</HeaderLink>
-      <HeaderLink href={`${URL_BASE}/about`}>About</HeaderLink>
+      <HeaderLink href={`${kUrlBase}/`}>Home</HeaderLink>
+      <HeaderLink href={`${kUrlBase}/article`}>Blog</HeaderLink>
+      <HeaderLink href={`${kUrlBase}/about`}>About</HeaderLink>
     </div>
     <div class="social-links">
       <span style="width: 2em;">&nbsp;</span>

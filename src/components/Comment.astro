@@ -1,9 +1,9 @@
 ---
-import { COMMENT_SERVER, COMMENT_INFO } from "$consts";
+import { kCommentServers, kCommentInfo } from "$consts";
 import { renderComment } from "./CommentBody";
 
 const { id } = Astro.props;
-const comments = COMMENT_INFO.get(id) || [];
+const comments = kCommentInfo.get(id) || [];
 ---
 
 <style>
@@ -122,7 +122,7 @@ const comments = COMMENT_INFO.get(id) || [];
   <h3>Comments</h3>
   <form
     id="comment-form"
-    data-comment-server={COMMENT_SERVER}
+    data-comment-server={kCommentServers}
     data-article-id={id}
   >
     <div class="grow-wrap">

@@ -2,7 +2,7 @@
 import BaseHead from "$components/BaseHead.astro";
 import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "$consts";
+import { kSiteTitle, kSiteDescription } from "$consts";
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
 ---
@@ -10,12 +10,12 @@ import AboutContent from "../../content/other/about.typ?html&body";
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={kSiteTitle} description={kSiteDescription} />
   </head>
   <body>
     <Header />
     <main>
-      <h1>{SITE_TITLE}</h1>
+      <h1>{kSiteTitle}</h1>
       <AboutContent />
     </main>
     <Footer />
