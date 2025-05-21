@@ -26,7 +26,7 @@
 
 #let markup-rules(body) = {
   set text(16pt) if sys-is-html-target
-  set text(fill: rgb("dfdfd6")) if is-dark-theme
+  set text(fill: rgb("dfdfd6")) if is-dark-theme and sys-is-html-target
   show link: set text(fill: dash-color)
 
   body
