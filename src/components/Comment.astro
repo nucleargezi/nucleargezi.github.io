@@ -91,7 +91,7 @@ const comments = kCommentInfo.get(id) || [];
 
   .comment-item {
     background-color: var(--main-bg-color);
-    color: white;
+    color: var(--main-color);
     border-left: 2.5px solid var(--main-color);
     margin: 1em 0;
     padding-left: 1em;
@@ -193,7 +193,7 @@ const comments = kCommentInfo.get(id) || [];
             <strong>{comment.email}</strong>
             <em>
               at
-              {new Date(comment.createdAt).toLocaleString()}
+              <time>{new Date(comment.createdAt).toLocaleString()}</time>
             </em>
           </div>
           <div class="comment-text" set:html={renderComment(comment.content)} />

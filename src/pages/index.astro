@@ -45,6 +45,25 @@ const recent5Comments = comments.slice(0, 5);
           flex-direction: column;
         }
       }
+      .comments,
+      .comments li {
+        margin: 0;
+        padding: 0;
+      }
+      .comments > li {
+        list-style: none;
+        margin-top: 1.5em;
+        padding-left: 1em;
+        border-left: 2.5px solid var(--main-color);
+      }
+      .comment-item {
+        background-color: var(--main-bg-color);
+        color: var(--main-color);
+        border-left: 2.5px solid var(--main-color);
+        margin: 1em 0;
+        padding-left: 1em;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -75,9 +94,9 @@ const recent5Comments = comments.slice(0, 5);
       <ul class="comments">
         {
           recent5Comments.map((comment) => (
-            <li>
-              <h4>
-                <span class="name">{comment.email}</span> commented on
+            <li class="comment-item">
+              <div class="comment-head">
+                <strong class="name">{comment.email}</strong> on
                 <a
                   class="heading"
                   href={`${kUrlBase}/article/${comment.articleId}`}
@@ -87,11 +106,11 @@ const recent5Comments = comments.slice(0, 5);
                       .title
                   }
                 </a>
-                at
-                <span class="date">
+                <em>
+                  at
                   <time>{new Date(comment.createdAt).toLocaleString()}</time>
-                </span>
-              </h4>
+                </em>
+              </div>
               <span class="title" set:html={renderComment(comment.content)} />
             </li>
           ))

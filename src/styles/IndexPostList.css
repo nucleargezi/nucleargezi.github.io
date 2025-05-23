@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
 }
-.posts li {
+.posts > li {
   list-style: none;
   margin-top: 1.5em;
+  padding-left: 1em;
+  border-left: 2.5px solid var(--accent);
 }
 .posts li > a.heading {
   display: flex;
@@ -13,8 +15,20 @@
 .date {
   font-style: italic;
 }
-.posts .date {
+h4 {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.1s;
+}
+.posts .heading h4 {
+  color: var(--main-color);
+}
+.posts .heading {
   color: var(--accent);
+}
+.posts .heading:hover,
+.posts .heading:hover h4 {
+  color: var(--accent-dark);
 }
 .posts h4 {
   margin: 0;
@@ -35,4 +49,7 @@ ul.tags {
 }
 .tags a {
   text-decoration: none;
+}
+.tags a:hover {
+  text-decoration: underline;
 }
