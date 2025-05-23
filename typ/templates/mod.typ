@@ -14,6 +14,7 @@
 #let blog-tags = (
   programming: "Programming",
   software: "Software",
+  software-engineering: "Software Engineering",
   tooling: "Tooling",
   linux: "Linux",
   dev-ops: "DevOps",
