@@ -53,53 +53,59 @@ const recent5Comments = comments.slice(0, 5);
   <body>
     <Header />
     <main>
-      <h1>{kSiteIndexTitle}</h1>
-      <AboutContent />
-      <h2>Recent Posts</h2>
-      <ul class="accent block-list posts">
-        {
-          recent5Posts.map((post) => (
-            <li>
-              <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
-                <h4>
-                  <span class="title">{post.data.title}</span>
-                </h4>
-                <span class="date">
-                  <FormattedDate date={post.data.date} />
-                </span>
-              </a>
-              {post.data.tags && <TagList tags={post.data.tags} />}
-              {post.data.desc || ""}
-            </li>
-          ))
-        }
-      </ul>
-      <h2>Recent Comments</h2>
-      <ul class="block-list comments">
-        {
-          recent5Comments.map((comment) => (
-            <li class="comment-item">
-              <div class="comment-head">
-                <strong class="name">{comment.email}</strong> on
-                <a
-                  class="heading"
-                  href={`${kUrlBase}/article/${comment.articleId}`}
-                >
-                  {
-                    posts.find((post) => post.id === comment.articleId)?.data
-                      .title
-                  }
+      <section aria-label="Prelude">
+        <h1>{kSiteIndexTitle}</h1>
+        <AboutContent />
+      </section>
+      <section aria-label="Recent Posts">
+        <h2>Recent Posts</h2>
+        <ul class="accent block-list posts">
+          {
+            recent5Posts.map((post) => (
+              <li>
+                <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
+                  <h4>
+                    <span class="title">{post.data.title}</span>
+                  </h4>
+                  <span class="date">
+                    <FormattedDate date={post.data.date} />
+                  </span>
                 </a>
-                <em>
-                  at
-                  <time>{new Date(comment.createdAt).toLocaleString()}</time>
-                </em>
-              </div>
-              <span class="title" set:html={renderComment(comment.content)} />
-            </li>
-          ))
-        }
-      </ul>
+                {post.data.tags && <TagList tags={post.data.tags} />}
+                {post.data.desc || ""}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section aria-label="Recent Comments">
+        <h2>Recent Comments</h2>
+        <ul class="block-list comments">
+          {
+            recent5Comments.map((comment) => (
+              <li class="comment-item">
+                <div class="comment-head">
+                  <strong class="name">{comment.email}</strong> on
+                  <a
+                    class="heading"
+                    href={`${kUrlBase}/article/${comment.articleId}`}
+                  >
+                    {
+                      posts.find((post) => post.id === comment.articleId)?.data
+                        .title
+                    }
+                  </a>
+                  <em>
+                    at
+                    <time>{new Date(comment.createdAt).toLocaleString()}</time>
+                  </em>
+                </div>
+                <span class="title" set:html={renderComment(comment.content)} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </main>
     <Footer />
   </body>
