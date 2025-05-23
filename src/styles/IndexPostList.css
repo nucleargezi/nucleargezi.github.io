@@ -1,5 +1,11 @@
+.posts,
 .posts li {
-  margin-top: 0.5em;
+  margin: 0;
+  padding: 0;
+}
+.posts li {
+  list-style: none;
+  margin-top: 1.5em;
 }
 .posts li > a.heading {
   display: flex;
@@ -8,13 +14,25 @@
   font-style: italic;
 }
 .posts .date {
-  margin-left: 0.5em;
   color: var(--accent);
 }
 .posts h4 {
   margin: 0;
+  margin-right: 0.5em;
 }
 .posts h4,
 .posts .date {
   line-height: 32px;
+}
+ul.tags {
+  list-style: none;
+  padding: 0;
+}
+.tags li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 1em;
+}
+.tags a {
+  text-decoration: none;
 }

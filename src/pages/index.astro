@@ -5,6 +5,7 @@ import BaseHead from "$components/BaseHead.astro";
 import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
 import FormattedDate from "$components/FormattedDate.astro";
+import TagList from "$components/TagList.astro";
 import { renderComment } from "$components/CommentBody";
 
 import {
@@ -38,6 +39,12 @@ const recent5Comments = comments.slice(0, 5);
       .comments a {
         display: inline-block;
       }
+      @media (max-width: 600px) {
+        .posts .heading {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
@@ -58,6 +65,7 @@ const recent5Comments = comments.slice(0, 5);
                   <FormattedDate date={post.data.date} />
                 </span>
               </a>
+              {post.data.tags && <TagList tags={post.data.tags} />}
               {post.data.desc || ""}
             </li>
           ))

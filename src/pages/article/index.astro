@@ -10,7 +10,7 @@ import Search from "$components/Search.astro";
 
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
-import "$styles/ArticlePostList.css";
+import "$styles/IndexPostList.css";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -27,6 +27,13 @@ const posts = (await getCollection("blog")).sort(
       }
       main.search-enabled {
         padding-top: 0;
+      }
+      /*  */
+      @media (max-width: 600px) {
+        .heading {
+          display: flex;
+          flex-direction: column;
+        }
       }
     </style>
   </head>

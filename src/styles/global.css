@@ -45,6 +45,14 @@ main,
 main {
   padding: 3em 1em;
 }
+@media (max-width: 720px) {
+  main {
+    padding: 1em;
+  }
+  body {
+    text-align: left;
+  }
+}
 h1,
 h2,
 h3,
@@ -141,11 +149,6 @@ blockquote {
 hr {
   border: none;
   border-top: 1px solid var(--raw-bg-color);
-}
-@media (max-width: 720px) {
-  main {
-    padding: 1em;
-  }
 }
 
 .sr-only {
