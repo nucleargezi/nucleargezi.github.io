@@ -87,29 +87,29 @@
       params.delete("search");
     }
 
+    posts = posts.sort(
+      sort === "date"
+        ? (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+        : sort === "title"
+          ? (a, b) => a.data.title.localeCompare(b.data.title)
+          : (a, b) => {
+              const aTags = a.data.tags || [];
+              const bTags = b.data.tags || [];
+              if (aTags.length !== bTags.length) {
+                return aTags.length - bTags.length;
+              }
+              for (let i = 0; i < aTags.length; i++) {
+                const aTag = aTags[i];
+                const bTag = bTags[i];
+                if (aTag !== bTag) {
+                  return aTag.localeCompare(bTag);
+                }
+              }
+              return 0;
+            }
+    );
     if (sort !== "date") {
       params.set("sort", sort);
-      posts = posts.sort(
-        sort === "date"
-          ? (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-          : sort === "title"
-            ? (a, b) => a.data.title.localeCompare(b.data.title)
-            : (a, b) => {
-                const aTags = a.data.tags || [];
-                const bTags = b.data.tags || [];
-                if (aTags.length !== bTags.length) {
-                  return aTags.length - bTags.length;
-                }
-                for (let i = 0; i < aTags.length; i++) {
-                  const aTag = aTags[i];
-                  const bTag = bTags[i];
-                  if (aTag !== bTag) {
-                    return aTag.localeCompare(bTag);
-                  }
-                }
-                return 0;
-              }
-      );
     } else {
       params.delete("sort");
     }
