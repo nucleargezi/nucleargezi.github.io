@@ -14,8 +14,8 @@ import { kUrlBase, kSiteTitle } from "$consts";
       <HeaderLink href={`${kUrlBase}/about`}>About</HeaderLink>
     </div>
     <div class="social-links">
-      <span style="width: 2em;">&nbsp;</span>
-      <a id="theme-toggle" target="_blank">
+      <span style="width: 2em;" aria-hidden="true">&nbsp;</span>
+      <button id="theme-toggle">
         <span class="sr-only">Toggle theme</span>
         <div class="theme-icon light">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -33,7 +33,7 @@ import { kUrlBase, kSiteTitle } from "$consts";
             ></path></svg
           >
         </div>
-      </a>
+      </button>
       <a
         href="https://github.com/Myriad-Dreamin/blog"
         class="ls-icon"
@@ -87,6 +87,13 @@ import { kUrlBase, kSiteTitle } from "$consts";
   nav a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
+  }
+  .social-links button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
   }
   .social-links,
   .social-links a {

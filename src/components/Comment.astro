@@ -58,7 +58,7 @@ const comments = kCommentInfo.get(id) || [];
     background-color: var(--main-bg-color);
     border: 1px solid var(--main-color);
     border-radius: 4px;
-    color: white;
+    color: var(--main-color);
     padding: 0.3em 1em;
     text-align: center;
     text-decoration: none;
@@ -78,7 +78,7 @@ const comments = kCommentInfo.get(id) || [];
     background-color: var(--main-bg-color);
     border: 1px solid var(--main-color);
     border-radius: 4px;
-    color: white;
+    color: var(--main-color);
     padding: 0.3em 0.3em;
     text-decoration: none;
     font-size: 0.8rem;
@@ -88,14 +88,8 @@ const comments = kCommentInfo.get(id) || [];
   .comment-list {
     margin-top: 2em;
   }
-
   .comment-item {
     background-color: var(--main-bg-color);
-    color: var(--main-color);
-    border-left: 2.5px solid var(--main-color);
-    margin: 1em 0;
-    padding-left: 1em;
-    text-decoration: none;
   }
 
   .comment-head {
@@ -118,9 +112,9 @@ const comments = kCommentInfo.get(id) || [];
     }
   }
 </style>
-<div class="comment-region">
+<section class="comment-region" aria-label="Comments">
   <h3>Comments</h3>
-  <form id="comment-form" data-article-id={id}>
+  <form id="comment-form" data-article-id={id} aria-label="Submit a Comment">
     <div class="grow-wrap">
       <textarea
         name="comment"
@@ -185,10 +179,10 @@ const comments = kCommentInfo.get(id) || [];
       });
     </script>
   </form>
-  <div class="comment-list">
+  <ol class="block-list comment-list">
     {
       comments.map((comment) => (
-        <div class="comment-item">
+        <li class="comment-item">
           <div class="comment-head">
             <strong>{comment.email}</strong>
             <em>
@@ -197,8 +191,8 @@ const comments = kCommentInfo.get(id) || [];
             </em>
           </div>
           <div class="comment-text" set:html={renderComment(comment.content)} />
-        </div>
+        </li>
       ))
     }
-  </div>
-</div>
+  </ol>
+</section>

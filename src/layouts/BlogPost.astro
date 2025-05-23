@@ -85,7 +85,7 @@ const click: number =
     <main>
       <article>
         <div class="prose">
-          <div class="title">
+          <section class="title" aria-label="Title">
             <h1>{title}</h1>
             <div class="date">
               <FormattedDate date={date} />
@@ -106,7 +106,7 @@ const click: number =
               )
             }
             <hr />
-          </div>
+          </section>
           <slot />
         </div>
       </article>

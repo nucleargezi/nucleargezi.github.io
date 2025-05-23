@@ -42,7 +42,7 @@ const posts = (await getCollection("blog")).sort(
     {kEnableSearch && <Search />}
     <main class={kEnableSearch ? "search-enabled" : ""}>
       <section>
-        <ul class={`posts${kEnableSearch ? " loading" : ""}`}>
+        <ul class={`accent block-list posts${kEnableSearch ? " loading" : ""}`}>
           {
             posts.map((post) => (
               <li
