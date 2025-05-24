@@ -41,6 +41,11 @@ export const kSiteIndexTitle = config.SITE_INDEX_TITLE;
  */
 export const kSiteDescription = config.SITE_DESCRIPTION;
 /**
+ * The baidu verification code, used for SEO.
+ */
+export const kBaiduVeriCode = config.BAIDU_VERIFICATION_CODE;
+
+/**
  * The URL base of the website.
  * - For a GitHub page `https://username.github.io/repo`, the URL base is `/repo/`.
  * - For a netlify page, the URL base is `/`.

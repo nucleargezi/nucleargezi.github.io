@@ -14,6 +14,7 @@ import {
   kSiteDescription,
   kCommentList,
   kUrlBase,
+  kBaiduVeriCode,
 } from "$consts";
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
@@ -42,6 +43,9 @@ function extractArchive(month: (typeof archive)[0]) {
 <html lang="en">
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
+    <!-- Baidu -->
+    <meta name="baidu-site-verification" content={kBaiduVeriCode} />
+
     <style>
       .comments a {
         display: inline-block;
