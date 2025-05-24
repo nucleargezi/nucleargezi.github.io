@@ -2,9 +2,25 @@ import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
 import commentTemplate from "../../typ/templates/comment.typ?raw";
 import { resolve } from "path";
 
+const projectRoot = resolve(import.meta.dirname, "../../");
+
 const compiler = NodeCompiler.create({
-  workspace: resolve(import.meta.dirname, "../../typ/templates"),
+  workspace: resolve(projectRoot, "typ/templates"),
 });
+
+const pdfCompiler = NodeCompiler.create({
+  workspace: projectRoot,
+  fontArgs: [{ fontPaths: [resolve(projectRoot, "assets/fonts/")] }],
+});
+
+export async function renderMonthlyPdf(mainFilePath: string): Promise<Buffer> {
+  return pdfCompiler.pdf({
+    mainFilePath: resolve(projectRoot, mainFilePath),
+    inputs: {
+      "build-kind": "monthly",
+    },
+  });
+}
 
 export async function renderComment(typstCode: string): Promise<string> {
   let maxRawBackticks = 0;

@@ -168,8 +168,10 @@ nav a:hover,
 .social-links svg {
   width: 32px;
   height: 32px;
+  overflow: visible;
 }
-.social-links svg path {
+.social-links svg path,
+.social-links svg circle {
   fill: currentColor;
 }
 .theme-icon {

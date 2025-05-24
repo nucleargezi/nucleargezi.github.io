@@ -41,6 +41,10 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+      - name: Download Fonts
+        run: |
+          mkdir -p ./assets/fonts
+          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.1.5/source-han-serif-font-assets.tar.gz | tar -xvz -C assets/fonts
       - run: pnpm install
       - run: pnpm build
       - name: Setup Pages

@@ -5,6 +5,8 @@ dist/
 
 # dependencies
 node_modules/
+# font assets
+assets/fonts/
 
 # logs
 npm-debug.log*

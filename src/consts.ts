@@ -23,6 +23,10 @@ export const kEnableComment = true && kEnableBackend;
  * Whether to enable post search (needs Js).
  */
 export const kEnableSearch = true;
+/**
+ * Whether to enable printing
+ */
+export const kEnablePrinting = true;
 
 /**
  * The title of the website.
