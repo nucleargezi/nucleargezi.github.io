@@ -1,5 +1,5 @@
 import type { APIContext } from "astro";
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 
 import { kEnablePrinting } from "$consts";
 import { renderMonthlyPdf } from "$components/Typst";
@@ -15,7 +15,6 @@ export async function getStaticPaths() {
     props: post,
   }));
 }
-type Props = CollectionEntry<"blog">;
 
 export async function GET({ params }: APIContext) {
   // props: Props
