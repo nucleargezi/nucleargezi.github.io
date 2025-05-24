@@ -3,6 +3,7 @@
 #import "@preview/shiroa:0.2.3": templates
 #import templates: *
 #import "mod.typ": *
+#import "theme.typ": *
 #import "supports-text.typ": plain-text
 
 #let default-kind = "post"
@@ -24,7 +25,7 @@
 #let span-frame = div-frame.with(tag: "span")
 #let p-frame = div-frame.with(tag: "p")
 
-// Theme (Colors)
+// defaults
 #let (
   style: theme-style,
   is-dark: is-dark-theme,
@@ -32,7 +33,7 @@
   main-color: main-color,
   dash-color: dash-color,
   code-extra-colors: code-extra-colors,
-) = book-theme-from(toml("theme-style.toml"), xml: it => xml(it), target: "web-ayu")
+) = default-theme
 
 #let markup-rules(body) = {
   set text(font: pdf-fonts) if build-kind == "monthly"
@@ -47,12 +48,24 @@
 #let equation-rules(body) = {
   show math.equation: set text(weight: 400)
   show math.equation.where(block: true): it => context if shiroa-sys-target() == "html" {
-    p-frame(attrs: ("class": "block-equation"), it)
+    theme-frame(
+      tag: "p",
+      theme => {
+        set text(fill: theme.main-color)
+        p-frame(attrs: ("class": "block-equation"), it)
+      },
+    )
   } else {
     it
   }
   show math.equation.where(block: false): it => context if shiroa-sys-target() == "html" {
-    span-frame(attrs: (class: "inline-equation"), it)
+    theme-frame(
+      tag: "span",
+      theme => {
+        set text(fill: theme.main-color)
+        span-frame(attrs: (class: "inline-equation"), it)
+      },
+    )
   } else {
     it
   }
@@ -60,8 +73,7 @@
 }
 
 #let code-block-rules(body) = {
-  /// HTML code block supported by zebraw.
-  show: if is-dark-theme {
+  let init-with-theme((code-extra-colors, is-dark)) = if is-dark {
     zebraw-init.with(
       // should vary by theme
       background-color: if code-extra-colors.bg != none {
@@ -74,12 +86,22 @@
       numbering: false,
     )
   } else {
-    zebraw-init.with(lang: false, numbering: false)
+    zebraw-init.with(
+      // should vary by theme
+      background-color: if code-extra-colors.bg != none {
+        (code-extra-colors.bg, code-extra-colors.bg)
+      },
+      lang: false,
+      numbering: false,
+    )
   }
 
-  set raw(theme: theme-style.code-theme) if theme-style.code-theme.len() > 0
+  /// HTML code block supported by zebraw.
+  show: init-with-theme(default-theme)
+
   show raw: set text(font: code-font)
   show raw.where(block: true): it => context if shiroa-sys-target() == "paged" {
+    set raw(theme: theme-style.code-theme) if theme-style.code-theme.len() > 0
     rect(
       width: 100%,
       inset: (x: 4pt, y: 5pt),
@@ -93,14 +115,20 @@
       ],
     )
   } else {
-    set text(fill: code-extra-colors.fg) if code-extra-colors.fg != none
-    set par(justify: false)
-    zebraw(
-      block-width: 100%,
-      // line-width: 100%,
-      wrap: false,
-      it,
-    )
+    theme-frame(theme => {
+      show: init-with-theme(theme)
+      let code-extra-colors = theme.code-extra-colors
+      set text(fill: code-extra-colors.fg) if code-extra-colors.fg != none
+      set text(fill: black) if code-extra-colors.fg == none
+      set raw(theme: theme-style.code-theme) if theme.style.code-theme.len() > 0
+      set par(justify: false)
+      zebraw(
+        block-width: 100%,
+        // line-width: 100%,
+        wrap: false,
+        it,
+      )
+    })
   }
   body
 }

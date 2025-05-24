@@ -189,6 +189,18 @@ nav a:hover,
 .theme-icon.dark {
   display: block;
 }
+.dark .code-image.themed .light {
+  display: none;
+}
+.dark .code-image.themed .dark {
+  display: initial;
+}
+.code-image.themed .light {
+  display: initial;
+}
+.code-image.themed .dark {
+  display: none;
+}
 
 figcaption {
   text-align: center;

@@ -1,11 +1,14 @@
 
 #import "@preview/fletcher:0.5.7"
-
-#let sys-is-html-target = ("target" in dictionary(std))
+#import "target.typ": sys-is-html-target
+#import "theme.typ": theme-frame
 
 #let code-image = if sys-is-html-target {
   it => {
-    html.elem("div", html.frame(it), attrs: ("class": "code-image"))
+    theme-frame(theme => {
+      set text(fill: theme.main-color)
+      html.frame(it)
+    })
   }
 } else {
   it => it
