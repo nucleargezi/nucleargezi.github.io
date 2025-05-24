@@ -68,7 +68,7 @@ function extractArchive(month: (typeof archive)[0]) {
     <Header />
     <main>
       <section aria-label="Prelude">
-        <h1>{kSiteIndexTitle}</h1>
+        <h1 set:html={kSiteIndexTitle} />
         <AboutContent />
       </section>
       <section aria-label="Recent Posts">

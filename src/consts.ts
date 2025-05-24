@@ -32,6 +32,11 @@ export const kEnablePrinting = true;
  * The title of the website.
  */
 export const kSiteTitle = config.SITE_TITLE;
+
+/**
+ * The title of the website.
+ */
+export const kSiteLogo = "Poe magie";
 /**
  * The title of the website, used in the index page.
  */

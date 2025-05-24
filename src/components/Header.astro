@@ -1,14 +1,14 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 
-import { kUrlBase, kSiteTitle } from "$consts";
+import { kUrlBase, kSiteLogo } from "$consts";
 
 const { pdfPage } = Astro.props;
 ---
 
 <header>
   <nav>
-    <h2 class="logo"><a href={`${kUrlBase}/`}>{kSiteTitle}</a></h2>
+    <h2 class="logo"><a href={`${kUrlBase}/`}>{kSiteLogo}</a></h2>
     <div class="internal-links">
       <HeaderLink href={`${kUrlBase}/`}>Home</HeaderLink>
       <HeaderLink href={`${kUrlBase}/article`}>Posts</HeaderLink>
@@ -78,6 +78,10 @@ const { pdfPage } = Astro.props;
   </nav>
 </header>
 <style>
+  .logo {
+    font-weight: 700;
+    font-style: italic;
+  }
   header {
     margin: 0;
     padding: 0 1em;
