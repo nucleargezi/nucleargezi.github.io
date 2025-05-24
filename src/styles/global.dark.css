@@ -2,9 +2,9 @@
   --main-color: #dfdfd6;
   --main-hover-color: #fff;
   --date-color: #dfdfd6;
-  --raw-bg-color: rgba(101, 117, 133, 0.16);
-  --main-bg-color: black;
-  --nav-bg-color: #1b1b1f;
-  --accent: rgb(158, 169, 252);
-  --accent-dark: #5c73e7;
+  --raw-bg-color: #65758529;
+  --main-bg-color: #212737;
+  --nav-bg-color: #212737;
+  --accent: #cf829e;
+  --accent-dark: #cf829eb3;
 }

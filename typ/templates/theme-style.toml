@@ -25,6 +25,6 @@ code-theme = "tokyo-night.tmTheme"
 
 [ayu]
 color-scheme = "dark"
-main-color = "#c5c5c5"
+main-color = "#dfdfd6"
 dash-color = "#0096cf"
 code-theme = "tokyo-night.tmTheme"

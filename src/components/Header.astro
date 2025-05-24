@@ -97,6 +97,8 @@ const { pdfPage } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: min(56rem, calc(100% - 2em));
+    margin: auto;
   }
   nav a {
     padding: 1em 0.5em;
@@ -119,7 +121,7 @@ const { pdfPage } = Astro.props;
   .social-links a {
     display: flex;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 680px) {
     .logo,
     .social-links a.ls-icon {
       display: none;
@@ -128,6 +130,15 @@ const { pdfPage } = Astro.props;
   @media (max-width: 400px) {
     nav {
       font-size: 14px;
+    }
+  }
+  @media (max-width: 370px) {
+    .internal-links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .internal-links a {
+      flex: 1 0 70px;
     }
   }
 </style>
