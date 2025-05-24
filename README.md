@@ -85,6 +85,18 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 ## Todo
 
 - [ ] More friendly content submodule for forks
+- [ ] Like Reaction
+- [ ] Intro-site Link Hover Preview
+- [ ] Heading Permalinks
+- [ ] Table of Contents
+- [ ] General Archive
+- [ ] Styling
+  - [ ] Table
+  - [ ] Inline Raw
+  - [ ] Blocky Raw
+- [ ] Index Page Design
+  - [ ] SVG Personal Avatar
+  - [ ] Badge
 
 ## Credit
 
