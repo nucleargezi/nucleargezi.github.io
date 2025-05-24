@@ -9,8 +9,8 @@ export async function getStaticPaths() {
     return [];
   }
 
-  const monthly = await getCollection("monthly");
-  return monthly.map((post) => ({
+  const archive = await getCollection("archive");
+  return archive.map((post) => ({
     params: { slug: post.id },
     props: post,
   }));

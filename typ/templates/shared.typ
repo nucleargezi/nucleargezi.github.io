@@ -235,7 +235,7 @@
     #metadata((
       title: plain-text(title),
       author: "Myriad-Dreamin",
-      desc: plain-text(desc),
+      description: plain-text(desc),
       date: date,
       tags: tags,
     )) <frontmatter>

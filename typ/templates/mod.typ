@@ -25,3 +25,7 @@
   music-theory: "Music Theory",
   misc: "Miscellaneous",
 )
+
+#let archive-tags = (
+  blog-post: "Blog Post",
+)

@@ -16,13 +16,13 @@ interface IdExt {
 
 type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
 
-const { id, title, desc, date, updatedDate, tags } = Astro.props;
+const { id, title, description, date, updatedDate, tags } = Astro.props;
 const click: number =
   (kEnableClick && kClickInfo.find((click) => click.id === id)?.click) || 0;
 const pdfPage = await (async () => {
   const pdfIndex = `blog-${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}`;
-  const monthly = await getCollection("monthly");
-  const month = monthly.find((m) => m.id === pdfIndex);
+  const archive = await getCollection("archive");
+  const month = archive.find((m) => m.id === pdfIndex);
   if (month) {
     return `${kUrlBase}/archive/${pdfIndex}.pdf`;
   } else {
@@ -33,7 +33,7 @@ const pdfPage = await (async () => {
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={desc} />
+    <BaseHead title={title} description={description} />
     <style is:global>
       main {
         width: calc(100% - 2em);

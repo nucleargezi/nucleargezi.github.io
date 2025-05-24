@@ -26,14 +26,14 @@ const posts = (await getCollection("blog")).sort(
 const comments = kCommentList.sort(
   (a, b) => b.createdAt.valueOf() - a.createdAt.valueOf()
 );
-const monthly = (await getCollection("monthly")).sort(
+const archive = (await getCollection("archive")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
 const recent5Posts = posts.slice(0, 5);
 const recent5Comments = comments.slice(0, 5);
 
-function extractMonthly(month: (typeof monthly)[0]) {
+function extractArchive(month: (typeof archive)[0]) {
   return [month.id, month.data.title];
 }
 ---
@@ -82,7 +82,7 @@ function extractMonthly(month: (typeof monthly)[0]) {
                   </span>
                 </a>
                 {post.data.tags && <TagList tags={post.data.tags} />}
-                {post.data.desc || ""}
+                {post.data.description || ""}
               </li>
             ))
           }
@@ -120,7 +120,7 @@ function extractMonthly(month: (typeof monthly)[0]) {
         <h2>Monthly (Archived PDFs)</h2>
         <ul class="accent block-list monthly">
           {
-            monthly.map(extractMonthly).map(([id, title]) => (
+            archive.map(extractArchive).map(([id, title]) => (
               <li>
                 <a href={`${kUrlBase}/archive/${id}.pdf`}>{title}</a>
               </li>

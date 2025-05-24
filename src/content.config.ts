@@ -8,7 +8,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     author: z.string().optional(),
-    desc: z.any().optional(),
+    description: z.any().optional(),
     date: z.coerce.date(),
     // Transform string to Date object
     updatedDate: z.coerce.date().optional(),
@@ -16,13 +16,14 @@ const blog = defineCollection({
   }),
 });
 
-const monthly = defineCollection({
+const archive = defineCollection({
   // Load Typst files in the `content/article/` directory.
   loader: glob({ base: "./content/monthly", pattern: "**/*.typ" }),
   // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
     author: z.string().optional(),
+    description: z.any().optional(),
     date: z.coerce.date(),
     // Transform string to Date object
     updatedDate: z.coerce.date().optional(),
@@ -30,4 +31,4 @@ const monthly = defineCollection({
   }),
 });
 
-export const collections = { blog, monthly };
+export const collections = { blog, archive };
