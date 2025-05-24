@@ -7,6 +7,8 @@ The starter template for static blogs, powered by [typst](https://github.com/typ
 - **Tags**: Categorize your blog posts with tags.
 - **Search**: Search through your blog posts by "title", "description", or "tags".
 - **Click Stats and Comment** (Optional): Using an optional backend to store your blog post's click statistics and comments.
+- **Link Preview**: Link Preview on Open Graph, Facebook, and Twitter.
+- **SEO**: ARIA and Sitemap support.
 
 ## Commands
 
