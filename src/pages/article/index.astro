@@ -58,7 +58,7 @@ const posts = (await getCollection("blog")).sort(
                   </span>
                 </a>
                 {post.data.tags && <TagList tags={post.data.tags} />}
-                {post.data.desc || ""}
+                {post.data.description || ""}
               </li>
             ))
           }
