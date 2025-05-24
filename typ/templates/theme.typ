@@ -4,8 +4,20 @@
 
 // Theme (Colors)
 #let dark-theme = book-theme-from(toml("theme-style.toml"), xml: it => xml(it), target: "web-ayu")
-#let light-theme = book-theme-from(toml("theme-style.toml"), xml: it => xml(it), target: "web-light")
-#let default-theme = dark-theme
+#let light-theme = book-theme-from(
+  toml("theme-style.toml"),
+  xml: it => xml(it),
+  target: if sys-is-html-target {
+    "web-light"
+  } else {
+    "pdf"
+  },
+)
+#let default-theme = if sys-is-html-target {
+  dark-theme
+} else {
+  light-theme
+}
 
 #let theme-frame(render, tag: "div", theme-tag: none) = if sys-is-html-target {
   if theme-tag == none {

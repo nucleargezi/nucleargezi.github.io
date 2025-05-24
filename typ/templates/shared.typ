@@ -119,7 +119,7 @@
       show: init-with-theme(theme)
       let code-extra-colors = theme.code-extra-colors
       set text(fill: code-extra-colors.fg) if code-extra-colors.fg != none
-      set text(fill: black) if code-extra-colors.fg == none
+      set text(fill: if theme.is-dark { rgb("dfdfd6") } else { black }) if code-extra-colors.fg == none
       set raw(theme: theme-style.code-theme) if theme.style.code-theme.len() > 0
       set par(justify: false)
       zebraw(

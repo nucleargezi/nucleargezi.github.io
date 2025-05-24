@@ -83,7 +83,6 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 ## Todo
 
 - [ ] More friendly content submodule for forks
-- [ ] Images in Dark mode
 
 ## Credit
 
