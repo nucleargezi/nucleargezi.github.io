@@ -10,10 +10,21 @@
   --raw-bg-color: rgba(101, 117, 133, 0.16);
   --main-bg-color: #fafcfc;
   --nav-bg-color: #fafcfc;
-  --date-color: #374151;
+  --gray-color: #6d6d6d;
   --accent: #d3006a;
   --accent-dark: #d30069b3;
   --black: #0f1219;
+}
+
+:root.dark {
+  --main-color: #dfdfd6;
+  --main-hover-color: #fff;
+  --gray-color: #939da3;
+  --raw-bg-color: #65758529;
+  --main-bg-color: #212737;
+  --nav-bg-color: #212737;
+  --accent: #cf829e;
+  --accent-dark: #cf829eb3;
 }
 
 body {
@@ -51,7 +62,7 @@ main {
   }
 }
 h1 {
-  font-size: 2.5em;
+  font-size: 2.75em;
   margin-top: 0;
   margin-bottom: 0.8888889em;
   line-height: 1.1111111;
@@ -87,13 +98,18 @@ strong,
 b {
   font-weight: 700;
 }
-a {
+a,
+.link {
   color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
 }
-a {
+a,
+.link {
   transition: color 0.1s, underline 0.1s;
 }
-a:hover {
+a:hover,
+.link:hover {
   color: var(--accent-dark);
   text-decoration: underline solid 2px;
 }
@@ -167,13 +183,13 @@ nav a:hover,
 .social-links a:hover {
   color: var(--main-hover-color);
 }
-.social-links svg {
+.icon svg {
   width: 32px;
   height: 32px;
   overflow: visible;
 }
-.social-links svg path,
-.social-links svg circle {
+.icon svg path,
+.icon svg circle {
   fill: currentColor;
 }
 .theme-icon {

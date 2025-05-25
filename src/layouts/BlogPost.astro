@@ -6,7 +6,8 @@ import Footer from "$components/Footer.astro";
 import FormattedDate from "$components/FormattedDate.astro";
 import PostClick from "$components/PostClick.astro";
 import Comment from "$components/Comment.astro";
-import { kEnableClick, kClickInfo, kEnableComment, kUrlBase } from "$consts";
+import LikeReaction from "$components/LikeReaction.astro";
+import { kEnableClick, kArticleStats, kEnableComment, kUrlBase, kEnableReaction } from "$consts";
 import TagList from "$components/TagList.astro";
 import { getCollection } from "astro:content";
 
@@ -17,8 +18,10 @@ interface IdExt {
 type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
 
 const { id, title, description, date, updatedDate, tags } = Astro.props;
-const click: number =
-  (kEnableClick && kClickInfo.find((click) => click.id === id)?.click) || 0;
+const stat: {like?: number, click?: number} =
+  ((kEnableClick || kEnableReaction) && kArticleStats.find((stat) => stat.id === id)) || {};
+const click = stat.click || 0;
+const like = stat.like || 0;
 const pdfPage = await (async () => {
   const pdfIndex = `blog-${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}`;
   const archive = await getCollection("archive");
@@ -57,19 +60,20 @@ const pdfPage = await (async () => {
       .title {
         margin-bottom: 1em;
         padding: 1em 0;
-        text-align: center;
         line-height: 1;
       }
       .title h1 {
         margin: 0 0 0.5em 0;
       }
-      .date,
-      .click-count {
+      .annotation {
+        color: var(--gray-color);
+        display: flex;
+        gap: 0.5em;
         margin-bottom: 0.5em;
-        color: rgb(var(--date-color));
       }
       .last-updated-on,
-      .click-count {
+      .click-count,
+      .like-count {
         font-style: italic;
       }
       ul.tags {
@@ -97,25 +101,34 @@ const pdfPage = await (async () => {
       <article>
         <div class="prose">
           <section class="title" aria-label="Title">
-            <h1>{title}</h1>
-            <div class="date">
-              <FormattedDate date={date} />
+            <div class="annotation">
+              <div class="date">
+                <FormattedDate date={date} />
+                {
+                  updatedDate && (
+                    <span class="last-updated-on">
+                      , Last updated on{" "}
+                      <FormattedDate date={updatedDate || date} />
+                    </span>
+                  )
+                }
+              </div>
               {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate || date} />
-                  </div>
+                id && kEnableClick && (
+                  <span>·</span>
+                  <div class="click-count">{click} {click === 1 ? "view" : "views"}</div>
+                )
+              }
+              {
+                id && kEnableReaction && (
+                  <span>·</span>
+                  <span class="like-count">{like} {like === 1 ? "like" : "likes"}</span>
+                  <span>·</span>
+                  <LikeReaction id={id} />
                 )
               }
             </div>
-            {
-              id && kEnableClick && (
-                <div class="click-count">
-                  {click}
-                  {click === 1 ? "click" : "clicks"}
-                </div>
-              )
-            }
+            <h1>{title}</h1>
             <hr />
           </section>
           <slot />

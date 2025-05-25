@@ -2,7 +2,6 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "$styles/global.css";
-import "$styles/global.dark.css";
 
 import { kUrlBase, kSiteTitle, kServers, kEnableBackend } from "$consts";
 
@@ -89,7 +88,7 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
 <!-- Backend Support -->
 {kEnableBackend && <script is:inline define:vars={{ kServers }}>
   window.postServer = (url, opts) => {
-    const { headers, body, doAlert } = opts || {};
+    const { headers, body, doAlert, method } = opts || {};
     const errors = [];
     let lastResponse = undefined;
     return kServers
@@ -100,19 +99,18 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
           }
 
           return fetch(server + url, {
-            method: "POST",
+            method: method || "POST",
             headers,
             body,
           })
-            .then(async (response) => [response, await response.text()] )
-            .then(([response, text]) => {
+            .then((response) => {
+               lastResponse = response;
               if (!response.ok) {
                 errors.push(
                   `Failed to send: ${response.statusText} (${text.trim()})`
                 );
                 return false;
               } else {
-                lastResponse = response;
                 return true;
               }
             })
@@ -126,10 +124,10 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
         if (!resolved) {
           const msg = errors.join("\n");
 
-          console.error(msg);
           if (doAlert) {
             alert(msg);
           }
+          throw new Error(msg);
         }
         return lastResponse;
       });

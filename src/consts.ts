@@ -2,7 +2,7 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 import * as config from "../config.json";
-import CLICKS from "../content/snapshot/article-clicks.json";
+import STATS from "../content/snapshot/article-stats.json";
 import COMMENTS from "../content/snapshot/article-comments.json";
 
 type Comment = (typeof COMMENTS)[number];
@@ -19,6 +19,10 @@ export const kEnableClick = true && kEnableBackend;
  * Whether to enable comment posting and viewing.
  */
 export const kEnableComment = true && kEnableBackend;
+/**
+ * Whether to enable like reaction.
+ */
+export const kEnableReaction = true && kEnableBackend;
 /**
  * Whether to enable post search (needs Js).
  */
@@ -60,7 +64,8 @@ export const kUrlBase = config.URL_BASE.replace(/\/$/, "");
 /**
  * The click info obtained from the backend.
  */
-export const kClickInfo = CLICKS;
+export const kArticleStats = STATS;
+
 /**
  * The comment info obtained from the backend.
  */

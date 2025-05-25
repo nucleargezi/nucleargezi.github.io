@@ -19,7 +19,7 @@ const { pdfPage } = Astro.props;
       <span style="width: 2em;" aria-hidden="true">&nbsp;</span>
       <button id="theme-toggle">
         <span class="sr-only">Toggle theme</span>
-        <div class="theme-icon light">
+        <div class="icon theme-icon light">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
             ><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
             <path
@@ -27,7 +27,7 @@ const { pdfPage } = Astro.props;
             ></path></svg
           >
         </div>
-        <div class="theme-icon dark">
+        <div class="icon theme-icon dark">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 0 384 512"
             ><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
             <path
@@ -38,7 +38,12 @@ const { pdfPage } = Astro.props;
       </button>
       {
         pdfPage && (
-          <a href={pdfPage} class="ls-icon" target="_blank" title="Get Pdf">
+          <a
+            class="icon ls-icon"
+            href={pdfPage}
+            target="_blank"
+            title="Get Pdf"
+          >
             <span class="sr-only">Get Pdf</span>
             <svg
               viewBox="-100 100 1000 1000"
@@ -54,7 +59,7 @@ const { pdfPage } = Astro.props;
       }
       <a
         href="https://github.com/Myriad-Dreamin/blog"
-        class="ls-icon"
+        class="icon ls-icon"
         target="_blank"
         title="Go to the repository of this blog"
       >

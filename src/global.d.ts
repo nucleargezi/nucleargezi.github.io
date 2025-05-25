@@ -1,6 +1,6 @@
 interface Window {
   postServer(
     url: string,
-    opts?: { headers?: Record<string, string>; body?: any }
+    opts?: { headers?: Record<string, string>; body?: any; method?: string }
   ): Promise<any>;
 }
