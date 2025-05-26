@@ -4,26 +4,29 @@
 .date {
   font-style: italic;
 }
-h4 {
+.posts .heading h2 {
+  font-size: 1.25em;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+.posts .heading h2 {
   color: var(--main-color);
   text-decoration: none;
   transition: color 0.1s;
-}
-.posts .heading h4 {
-  color: var(--main-color);
 }
 .posts .heading {
   color: var(--accent);
 }
 .posts .heading:hover,
-.posts .heading:hover h4 {
+.posts .heading:hover h2 {
   color: var(--accent-dark);
 }
-.posts h4 {
+.posts h2 {
   margin: 0;
   margin-right: 0.5em;
 }
-.posts h4,
+.posts h2,
 .posts .date {
   line-height: 32px;
 }

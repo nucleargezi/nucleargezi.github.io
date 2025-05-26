@@ -50,9 +50,9 @@ const posts = (await getCollection("blog")).sort(
                 data-article-meta={JSON.stringify(post.data)}
               >
                 <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
-                  <h4>
+                  <h2>
                     <span class="title">{post.data.title}</span>
-                  </h4>
+                  </h2>
                   <span class="date">
                     <FormattedDate date={post.data.date} />
                   </span>

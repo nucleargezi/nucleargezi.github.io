@@ -78,9 +78,9 @@ function extractArchive(month: (typeof archive)[0]) {
             recent5Posts.map((post) => (
               <li>
                 <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
-                  <h4>
+                  <h2>
                     <span class="title">{post.data.title}</span>
-                  </h4>
+                  </h2>
                   <span class="date">
                     <FormattedDate date={post.data.date} />
                   </span>
