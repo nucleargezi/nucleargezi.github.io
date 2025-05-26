@@ -9,7 +9,12 @@ The starter template for static blogs, powered by [typst](https://github.com/typ
 - **Self-Host Fonts**: bundle and self-host fonts via `@fontsource-variable/inter`.
 - **Link Preview**: Link Preview on Open Graph, Facebook, and Twitter.
 - **SEO**: ARIA and Sitemap support.
-- **Click Stats and Comment** (Optional): Using an optional backend to store your blog post's click statistics and comments.
+- **Click Stats, Like Reaction, and Comment** (Optional): Using an optional backend to store your blog post's click statistics and comments.
+
+Typst-specific features:
+
+- Heading Permalinks and Table of Contents.
+- PDF Archives.
 
 ## Commands
 
@@ -86,17 +91,12 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 ## Todo
 
 - [ ] More friendly content submodule for forks
-- [x] Like Reaction
 - [ ] Intro-site Link Hover Preview
-- [x] Heading Permalinks
-- [x] Table of Contents
-- [x] General Archive
 - [ ] Styling
   - [ ] Table
   - [ ] Inline Raw
   - [ ] Blocky Raw
 - [ ] Index Page Design
-  - [x] SVG Personal Avatar
   - [ ] Badge
 
 ## Credit
