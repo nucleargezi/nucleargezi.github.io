@@ -63,32 +63,42 @@ main {
 }
 h1 {
   font-size: 2.75em;
-  margin-top: 0;
-  margin-bottom: 0.8888889em;
+  margin-block-start: 0em;
+  margin-block-end: 0.8888889em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   line-height: 1.1111111;
 }
 h2 {
   font-size: 2em;
-  margin-top: 1.6em;
-  margin-bottom: 0.6em;
+  margin-block-start: 1.6em;
+  margin-block-end: 0.6em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   line-height: 1.3333333;
 }
 h3 {
   font-size: 1.5em;
-  margin-top: 1.5em;
-  margin-bottom: 0.6em;
+  margin-block-start: 1.5em;
+  margin-block-end: 0.6em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   line-height: 1.45;
 }
 h4 {
   font-size: 1.25em;
-  margin-top: 1.5em;
-  margin-bottom: 0.6em;
+  margin-block-start: 1.5em;
+  margin-block-end: 0.6em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   line-height: 1.6;
 }
 h5 {
   font-size: 1.1em;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-block-start: 1.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   line-height: 1.5;
 }
 p {
