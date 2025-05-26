@@ -40,7 +40,7 @@ export const kSiteTitle = config.SITE_TITLE;
 /**
  * The title of the website.
  */
-export const kSiteLogo = "Poe magie";
+export const kSiteLogo = "PoeMagie";
 /**
  * The title of the website, used in the index page.
  */
