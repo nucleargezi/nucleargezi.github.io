@@ -2,7 +2,8 @@
 #import "@preview/fletcher:0.5.7"
 #import "target.typ": sys-is-html-target
 #import "theme.typ": theme-frame
-#import "@preview/shiroa:0.2.3": templates.get-label-disambiguator, plain-text
+#import "@preview/shiroa:0.2.3": plain-text, templates
+#import templates: get-label-disambiguator, label-disambiguator, make-unique-label
 
 #let code-image = if sys-is-html-target {
   it => {
@@ -18,20 +19,24 @@
 /// Alternative resolves all heading as static link
 ///
 /// - `elem`(content): The heading element to resolve
-#let static-heading-link(elem) = context {
-  let loc = here()
+#let static-heading-link(elem, body: "#") = context {
   let id = {
+    let title = plain-text(elem).trim()
     "label-"
-    str(get-label-disambiguator(loc, plain-text(elem)))
+    str(
+      make-unique-label(
+        title,
+        disambiguator: label-disambiguator.at(elem.location()).at(title, default: 0) + 1,
+      ),
+    )
   }
   html.elem(
     "a",
     attrs: (
-      "id": id,
-      "data-typst-label": id,
       "href": "#" + id,
+      ..if body == "#" { ("id": id, "data-typst-label": id) },
     ),
-    "#",
+    body,
   )
 }
 

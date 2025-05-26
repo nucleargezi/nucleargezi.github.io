@@ -172,6 +172,7 @@
   date: "2024-08-15",
   tags: (),
   kind: "post",
+  show-outline: true,
   body,
 ) = {
   let is-same-kind = build-kind == kind
@@ -273,6 +274,33 @@
       tags: tags,
     )) <frontmatter>
   ]
+
+  context if show-outline and is-same-kind and sys-is-html-target {
+    if query(heading).len() == 0 {
+      return
+    }
+
+    let outline-counter = counter("html-outline")
+    outline-counter.update(0)
+    show outline.entry: it => html.elem(
+      "div",
+      attrs: (
+        class: "outline-item x-heading-" + str(it.level),
+      ),
+      {
+        outline-counter.step(level: it.level)
+        static-heading-link(it.element, body: [#sym.section#context outline-counter.display("1.") #it.element.body])
+      },
+    )
+    html.elem(
+      "div",
+      attrs: (
+        class: "outline",
+      ),
+      outline(title: none),
+    )
+    html.elem("hr")
+  }
 
   body
 

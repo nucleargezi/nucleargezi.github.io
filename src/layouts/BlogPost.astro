@@ -62,6 +62,12 @@ const pdfPage = await (async () => {
         padding: 1em 0;
         line-height: 1;
       }
+      .outline {
+        margin-top: -2em;
+      }
+      .outline + hr {
+        margin-bottom: 1em;
+      }
       .title h1 {
         margin: 0 0 0.5em 0;
       }
@@ -90,6 +96,28 @@ const pdfPage = await (async () => {
       }
       .tags a:hover {
         text-decoration: underline;
+      }
+      .outline {
+        text-align: left;
+      }
+
+      .outline-item {
+        line-height: 1.8889;
+      }
+      .outline-item.x-heading-1 {
+        margin-left: 0em;
+      }
+      .outline-item.x-heading-2 {
+        margin-left: 1em;
+      }
+      .outline-item.x-heading-3 {
+        margin-left: 2em;
+      }
+      .outline-item.x-heading-4 {
+        margin-left: 3em;
+      }
+      .outline-item.x-heading-5 {
+        margin-left: 4em;
       }
     </style>
     {id && kEnableClick && <PostClick id={id} />}

@@ -88,8 +88,8 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 - [ ] More friendly content submodule for forks
 - [x] Like Reaction
 - [ ] Intro-site Link Hover Preview
-- [ ] Heading Permalinks
-- [ ] Table of Contents
+- [x] Heading Permalinks
+- [x] Table of Contents
 - [ ] General Archive
 - [ ] Styling
   - [ ] Table
