@@ -1,10 +1,16 @@
 
 #import "@preview/zebraw:0.5.2": zebraw-init, zebraw
-#import "@preview/shiroa:0.2.3": templates
+#import "@preview/shiroa:0.2.3": is-web-target, is-pdf-target, plain-text, is-html-target, templates
 #import templates: *
 #import "mod.typ": *
 #import "theme.typ": *
-#import "supports-text.typ": plain-text
+
+// Metadata
+#let is-html-target = is-html-target()
+#let is-pdf-target = is-pdf-target()
+#let is-web-target = is-web-target() or sys-is-html-target
+#let is-md-target = target == "md"
+#let sys-is-html-target = ("target" in dictionary(std))
 
 #let default-kind = "post"
 // #let default-kind = "monthly"
@@ -19,6 +25,16 @@
 #let code-font = (
   "DejaVu Sans Mono",
 )
+
+// Sizes
+#let main-size = if sys-is-html-target {
+  16pt
+} else {
+  10.5pt
+}
+// ,
+#let heading-sizes = (22pt, 18pt, 14pt, 12pt, main-size)
+#let list-indent = 0.5em
 
 /// Creates an embedded block typst frame.
 #let div-frame(content, attrs: (:), tag: "div") = html.elem(tag, html.frame(content), attrs: attrs)
@@ -38,9 +54,26 @@
 #let markup-rules(body) = {
   set text(font: pdf-fonts) if build-kind == "monthly"
 
-  set text(16pt) if sys-is-html-target
+  set text(main-size) if sys-is-html-target
   set text(fill: rgb("dfdfd6")) if is-dark-theme and sys-is-html-target
   show link: set text(fill: dash-color)
+
+  show heading: it => {
+    set text(size: heading-sizes.at(it.level))
+
+    block(
+      spacing: 0.7em * 1.5 * 1.2,
+      below: 0.7em * 1.2,
+      {
+        if is-web-target {
+          show link: static-heading-link(it)
+          heading-hash(it, hash-color: dash-color)
+        }
+
+        it
+      },
+    )
+  }
 
   body
 }
