@@ -3,6 +3,8 @@
 // all pages through the use of the <BaseHead /> component.
 import "$styles/global.css";
 
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
 import { kUrlBase, kSiteTitle, kServers, kEnableBackend } from "$consts";
 
 interface Props {
@@ -30,12 +32,8 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link href="https://fonts.googleapis.com" rel="preconnect" />
-<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-  rel="stylesheet"
-/>
+<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+</GoogleFontsOptimizer>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
