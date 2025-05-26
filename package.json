@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "pull-data": "node scripts/pull-data.mjs",
     "astro": "astro"
   },
   "dependencies": {

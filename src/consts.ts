@@ -104,10 +104,9 @@ export const kFriendLinks = [
  * A candidate list of servers to cover people in different regions.
  */
 export const kServers = (() => {
-  // const BACKEND_ADDR = "http://localhost:13333";
-  const BACKEND_ADDR = "https://glittery-valkyrie-8fbf14.netlify.app/api";
+  // const kServers = ["http://localhost:13333"];
 
-  const kServers = [BACKEND_ADDR];
+  const kServers = config.BACKEND_ADDR;
 
   if (kEnableBackend && kServers.length === 0) {
     throw new Error("kServers is empty, please set kServers in consts.ts");
