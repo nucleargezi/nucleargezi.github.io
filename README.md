@@ -6,9 +6,10 @@ The starter template for static blogs, powered by [typst](https://github.com/typ
 
 - **Tags**: Categorize your blog posts with tags.
 - **Search**: Search through your blog posts by "title", "description", or "tags".
-- **Click Stats and Comment** (Optional): Using an optional backend to store your blog post's click statistics and comments.
+- **Self-Host Fonts**: bundle and self-host fonts via `@fontsource-variable/inter`.
 - **Link Preview**: Link Preview on Open Graph, Facebook, and Twitter.
 - **SEO**: ARIA and Sitemap support.
+- **Click Stats and Comment** (Optional): Using an optional backend to store your blog post's click statistics and comments.
 
 ## Commands
 
@@ -79,7 +80,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 ## Customization
 
 - [`config.json`](config.json): Configuration read by files.
-- [`src/consts.ts`](./src/consts.ts),[`src/components/BaseHead.astro`](./src/components/BaseHead.astro): global metadata and the head component.
+- [`src/consts.ts`](./src/consts.ts),[`src/components/BaseHead.astro`](./src/components/BaseHead.astro): global metadata, font resource declarations, and the head component.
 - [`src/styles/*`](src/styles/): CSS styles.
 
 ## Todo
