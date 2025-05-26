@@ -1,0 +1,11 @@
+---
+import { kUrlBase } from "$consts";
+
+type Props = {
+  id: string;
+  title: string;
+};
+const { id, title } = Astro.props;
+---
+
+<a href={`${kUrlBase}/archive/${id}.pdf`}>{title}</a>

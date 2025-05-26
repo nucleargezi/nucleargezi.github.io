@@ -49,6 +49,8 @@
   dev-ops: "DevOps",
   compiler: "Compiler",
   music-theory: "Music Theory",
+  tinymist: "Tinymist",
+  typst: "Typst",
   misc: "Miscellaneous",
 )
 

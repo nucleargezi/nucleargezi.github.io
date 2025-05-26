@@ -19,6 +19,6 @@ export async function getStaticPaths() {
 export async function GET({ params }: APIContext) {
   // props: Props
   return new Response(
-    await renderMonthlyPdf(`content/monthly/${params.slug}.typ`)
+    await renderMonthlyPdf(`content/archive/${params.slug}.typ`)
   );
 }

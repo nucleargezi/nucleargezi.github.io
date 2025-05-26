@@ -90,7 +90,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 - [ ] Intro-site Link Hover Preview
 - [x] Heading Permalinks
 - [x] Table of Contents
-- [ ] General Archive
+- [x] General Archive
 - [ ] Styling
   - [ ] Table
   - [ ] Inline Raw

@@ -166,6 +166,7 @@
   body
 }
 
+/// sub-chapters is only used in monthly (archive) build.
 #let shared-template(
   title: "Untitled",
   desc: [This is a blog post.],
@@ -173,6 +174,7 @@
   tags: (),
   kind: "post",
   show-outline: true,
+  archive-indices: (),
   body,
 ) = {
   let is-same-kind = build-kind == kind
@@ -272,6 +274,9 @@
       description: plain-text(desc),
       date: date,
       tags: tags,
+      ..if kind == "monthly" {
+        (indices: archive-indices)
+      },
     )) <frontmatter>
   ]
 

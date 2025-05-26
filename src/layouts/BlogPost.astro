@@ -7,9 +7,10 @@ import FormattedDate from "$components/FormattedDate.astro";
 import PostClick from "$components/PostClick.astro";
 import Comment from "$components/Comment.astro";
 import LikeReaction from "$components/LikeReaction.astro";
-import { kEnableClick, kArticleStats, kEnableComment, kUrlBase, kEnableReaction } from "$consts";
+import { kEnableClick, kArticleStats, kEnableComment, kUrlBase, kEnableReaction, kEnableArchive } from "$consts";
 import TagList from "$components/TagList.astro";
 import { getCollection } from "astro:content";
+import ArchiveLink from "$components/ArchiveLink.astro";
 
 interface IdExt {
   id: string;
@@ -22,15 +23,25 @@ const stat: {like?: number, click?: number} =
   ((kEnableClick || kEnableReaction) && kArticleStats.find((stat) => stat.id === id)) || {};
 const click = stat.click || 0;
 const like = stat.like || 0;
-const pdfPage = await (async () => {
-  const pdfIndex = `blog-${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}`;
+const normArchive = ({id}: {id: string}) => id.startsWith("blog-");
+const pdfArchives = await (async () => {
   const archive = await getCollection("archive");
-  const month = archive.find((m) => m.id === pdfIndex);
-  if (month) {
-    return `${kUrlBase}/archive/${pdfIndex}.pdf`;
-  } else {
-    return undefined;
+  return archive.filter((m) => id && m.data.indices?.includes(id))
+    .sort((a, b) => {
+      if (normArchive(a) || normArchive(b)) {
+        // Sort archives that are not blog archives to the end
+        return normArchive(a) && normArchive(b) ? a.id.localeCompare(b.id) : normArchive(a) ? 1 : -1;
+      }
+      
+      return a.id.localeCompare(b.id)
+    })
+})();
+const primaryPdfPage = await (async () => {
+  const specialArchive = pdfArchives.find((m) => !normArchive(m));
+  if (specialArchive) {
+    return specialArchive;
   }
+  return pdfArchives.find(normArchive);
 })();
 ---
 
@@ -124,7 +135,7 @@ const pdfPage = await (async () => {
   </head>
 
   <body>
-    <Header pdfPage={pdfPage} />
+    <Header pdfPage={primaryPdfPage} />
     <main>
       <article>
         <div class="prose">
@@ -157,6 +168,18 @@ const pdfPage = await (async () => {
               }
             </div>
             <h1>{title}</h1>
+            { id && kEnableArchive && pdfArchives.length > 0 && 
+              <p>
+                This article is part of {
+                  pdfArchives.map(
+                    (archive, idx) => (
+                      <span>{pdfArchives.length === 2 && idx === 1 ? " and ": idx > 0 ? (pdfArchives.length === idx + 1 ? ", and " : ", ") : ""}</span>
+                      <ArchiveLink id={archive.id} title={`${archive.data.title}${pdfArchives.length === idx + 1 ? "." : ""}`} />
+                    )
+                  )
+                }
+              </p>  
+            }
             <hr />
           </section>
           <slot />

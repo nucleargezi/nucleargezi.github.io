@@ -27,15 +27,15 @@ const posts = (await getCollection("blog")).sort(
 const comments = kCommentList.sort(
   (a, b) => b.createdAt.valueOf() - a.createdAt.valueOf()
 );
-const archive = (await getCollection("archive")).sort(
+const pdfArchives = (await getCollection("archive")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
 const recent5Posts = posts.slice(0, 5);
 const recent5Comments = comments.slice(0, 5);
 
-function extractArchive(month: (typeof archive)[0]) {
-  return [month.id, month.data.title];
+function extractArchive(archive: (typeof pdfArchives)[0]) {
+  return [archive.id, archive.data.title];
 }
 ---
 
@@ -121,10 +121,10 @@ function extractArchive(month: (typeof archive)[0]) {
         </ul>
       </section>
       <section aria-label="Archive">
-        <h2>Monthly (Archived PDFs)</h2>
+        <h2>Archived PDFs</h2>
         <ul class="accent block-list monthly">
           {
-            archive.map(extractArchive).map(([id, title]) => (
+            pdfArchives.map(extractArchive).map(([id, title]) => (
               <li>
                 <a href={`${kUrlBase}/archive/${id}.pdf`}>{title}</a>
               </li>

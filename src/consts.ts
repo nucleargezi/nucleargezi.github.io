@@ -28,9 +28,13 @@ export const kEnableReaction = true && kEnableBackend;
  */
 export const kEnableSearch = true;
 /**
+ * Whether to enable PDF Archive.
+ */
+export const kEnableArchive = true;
+/**
  * Whether to enable printing
  */
-export const kEnablePrinting = true;
+export const kEnablePrinting = true && kEnableArchive;
 
 /**
  * The title of the website.
