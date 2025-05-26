@@ -26,6 +26,12 @@ export default defineConfig({
   ],
 
   vite: {
+    build: {
+      assetsInlineLimit(filePath, content) {
+        const KB = 1024;
+        return content.length < (filePath.endsWith(".css") ? 100 * KB : 4 * KB);
+      },
+    },
     ssr: {
       external: ["@myriaddreamin/typst-ts-node-compiler"],
     },
