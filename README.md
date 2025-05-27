@@ -90,7 +90,13 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 ## Todo
 
+Improve experience:
+
 - [ ] More friendly content submodule for forks
+- [ ] Split Backend Components to a separate repository
+
+Improve website:
+
 - [ ] Intro-site Link Hover Preview
 - [ ] Styling
   - [ ] Table
@@ -98,6 +104,9 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
   - [ ] Blocky Raw
 - [ ] Index Page Design
   - [ ] Badge
+- [ ] Comment Reply
+- [ ] Better [`theme-frame`](typ/templates/theme.typ)
+- [ ] Refactor code to publish packages
 
 ## Credit
 
