@@ -1,17 +1,20 @@
-import { readFile, writeFile } from "fs/promises";
+import { readFile, writeFile, readdir } from "fs/promises";
 import { existsSync } from "fs";
 import { execSync } from "child_process";
 import { join } from "path";
 
-const id = process.argv[2];
+const fileType = process.argv[2];
+
+const id = process.argv[3];
 if (!id) {
-  throw new Error("No ID provided. Usage: node create.mjs <id>");
+  throw new Error("No ID provided. Usage: node create-file.mjs <type> <id>");
 }
 
 async function main() {
   const root = join(import.meta.dirname, "../");
 
-  const dest = join(root, `content/article/${id}.typ`);
+  const destMap = { "blog-post": "article", "archive-post": "archive" };
+  const dest = join(root, `content/${destMap[fileType]}/${id}.typ`);
   if (existsSync(dest)) {
     console.error(
       `Post already exists at ${dest}. Please choose a different ID.`
@@ -19,7 +22,7 @@ async function main() {
     process.exit(1);
   }
 
-  const src = join(root, "typ/templates/blog-post.typ");
+  const src = join(root, `typ/templates/${fileType}.typ`);
 
   const content = (await readFile(src, "utf-8")).replaceAll(
     '"1970-01-01"',
@@ -27,6 +30,17 @@ async function main() {
   );
 
   await writeFile(dest, content, "utf-8");
+  console.log(`Created new post at ${dest}`);
+
+  const arts = (await readdir(join(root, `content/article`)))
+    .map((it) => it.replace(/\.typ$/g, ""))
+    .sort();
+  await writeFile(
+    join(root, `typ/templates/articles.json`),
+    JSON.stringify(arts, null, 1),
+    "utf-8"
+  );
+
   console.log(`Created new post at ${dest}`);
 
   if (process.env.TERM_PROGRAM === "vscode") {

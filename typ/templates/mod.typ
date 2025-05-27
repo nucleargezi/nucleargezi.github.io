@@ -57,3 +57,5 @@
 #let archive-tags = (
   blog-post: "Blog Post",
 )
+
+#let articles = json("articles.json").map(it => ((it): it)).join()
