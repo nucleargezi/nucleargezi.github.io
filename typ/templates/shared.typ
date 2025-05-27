@@ -166,6 +166,10 @@
   body
 }
 
+#let default-archive-creator = (indices, body) => {
+  indices.map(fname => include "/content/article/" + fname + ".typ").join(pagebreak(weak: true))
+}
+
 /// sub-chapters is only used in monthly (archive) build.
 #let shared-template(
   title: "Untitled",
@@ -175,6 +179,7 @@
   kind: "post",
   show-outline: true,
   archive-indices: (),
+  archive-creator: default-archive-creator,
   body,
 ) = {
   let is-same-kind = build-kind == kind
@@ -231,7 +236,7 @@
     it
   }
 
-  if build-kind == "monthly" and kind == "monthly" {
+  if is-same-kind and kind == "monthly" {
     align(
       center,
       {
@@ -307,7 +312,11 @@
     html.elem("hr")
   }
 
-  body
+  if kind == "monthly" {
+    archive-creator(archive-indices, body)
+  } else {
+    body
+  }
 
   context if is-same-kind and sys-is-html-target {
     query(footnote)
