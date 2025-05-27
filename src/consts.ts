@@ -1,7 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-import * as config from "../config.json";
+import * as config from "astro:env/client";
 import STATS from "../content/snapshot/article-stats.json";
 import COMMENTS from "../content/snapshot/article-comments.json";
 
@@ -63,7 +63,7 @@ export const kBaiduVeriCode = config.BAIDU_VERIFICATION_CODE;
  * - For a GitHub page `https://username.github.io/repo`, the URL base is `/repo/`.
  * - For a netlify page, the URL base is `/`.
  */
-export const kUrlBase = config.URL_BASE.replace(/\/$/, "");
+export const kUrlBase = (config.URL_BASE || "").replace(/\/$/, "");
 
 /**
  * The click info obtained from the backend.
@@ -106,10 +106,14 @@ export const kFriendLinks = [
 export const kServers = (() => {
   // const kServers = ["http://localhost:13333"];
 
-  const kServers = config.BACKEND_ADDR;
+  const kServers = config.BACKEND_ADDR.split(";")
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
 
   if (kEnableBackend && kServers.length === 0) {
-    throw new Error("kServers is empty, please set kServers in consts.ts");
+    throw new Error(
+      "kServers is empty, please set BACKEND_ADDR in .env, or disable kEnableBackend in consts.ts"
+    );
   }
 
   return kServers;

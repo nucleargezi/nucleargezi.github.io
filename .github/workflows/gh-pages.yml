@@ -44,6 +44,8 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+      - name: Sync Environment Variables
+        run: cp content/.env.blog .env
       - name: Download Fonts
         run: |
           mkdir -p ./assets/fonts

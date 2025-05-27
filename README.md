@@ -77,14 +77,14 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 ## Deploying to GitHub Pages
 
-1. Search and change the [URL_BASE](./config.json) to name of your own repository.
+1. Set the URL_BASE environment variable to your own repository in [Environments](../../settings/environments).
    - For a GitHub page `https://username.github.io/repo`, the URL base is `/repo/`.
 2. Change Source's "Build and deployment" to "GitHub Actions" in [Page Settings](../../settings/pages).
 3. Push your changes to the `main` branch and it will automatically deploy to GitHub Pages by [CI](.github/workflows/gh-pages.yml).
 
 ## Customization
 
-- [`config.json`](config.json): Configuration read by files.
+- `.env`: Configuration read by files, Please check `defineConfig/env` in [astro.config.mjs](astro.config.mjs) for schema.
 - [`src/consts.ts`](./src/consts.ts),[`src/components/BaseHead.astro`](./src/components/BaseHead.astro): global metadata, font resource declarations, and the head component.
 - [`src/styles/*`](src/styles/): CSS styles.
 

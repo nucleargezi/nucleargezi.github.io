@@ -1,15 +1,17 @@
 import { execSync } from "child_process";
-import { readFile } from "fs/promises";
-import { join } from "path";
+import { loadEnv } from "vite";
 
-const config = JSON.parse(
-  await readFile(join(import.meta.dirname, "../config.json"), "utf-8")
-);
+/**
+ * Please check `defineConfig/env` in astro.config.mjs for schema
+ *
+ * @type {ClientEnv}
+ */
+const e = loadEnv(process.env.NODE_ENV || "", process.cwd(), "");
 
-const firstBackendUrl = config.BACKEND_ADDR[0];
+const firstBackendUrl = (e.BACKEND_ADDR || "").split(";")[0].trim();
 if (!firstBackendUrl) {
   throw new Error(
-    "No backend address provided in config.json. Either disable the data pull or provide valid addresses."
+    "No backend address provided in .env. Either disable the data pull or provide valid addresses."
   );
 }
 

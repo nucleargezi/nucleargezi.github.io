@@ -1,3 +1,5 @@
+type ClientEnv = typeof import("astro:env/client");
+
 interface Window {
   postServer(
     url: string,
