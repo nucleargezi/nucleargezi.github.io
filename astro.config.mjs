@@ -12,6 +12,12 @@ const EnvStr = (optional = false) =>
   envField.string({ context: "client", access: "public", optional });
 
 export default defineConfig({
+  // Whether to prefetch links while hovering.
+  // See: https://docs.astro.build/en/guides/prefetch/
+  prefetch: {
+    prefetchAll: true,
+  },
+
   site: SITE,
   base: URL_BASE,
 
