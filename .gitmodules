@@ -2,3 +2,6 @@
 	path = content
 	url = https://github.com/Myriad-Dreamin/Myriad-Dreamin
 	branch = blog
+[submodule "typ/packages/zebraw"]
+	path = typ/packages/zebraw
+	url = https://github.com/hongjr03/typst-zebraw/

@@ -1,5 +1,5 @@
 
-#import "@preview/zebraw:0.5.2": zebraw-init, zebraw
+#import "../packages/zebraw.typ": *
 #import "@preview/shiroa:0.2.3": is-web-target, is-pdf-target, plain-text, is-html-target, templates
 #import templates: *
 #import "mod.typ": *

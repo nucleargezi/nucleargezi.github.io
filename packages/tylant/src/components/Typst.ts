@@ -5,7 +5,7 @@ import { readFile } from "fs/promises";
 const projectRoot = process.cwd();
 
 const compiler = NodeCompiler.create({
-  workspace: resolve(projectRoot, "typ/templates"),
+  workspace: resolve(projectRoot, "typ/"),
 });
 
 const pdfCompiler = NodeCompiler.create({
@@ -39,7 +39,7 @@ export async function renderComment(typstCode: string): Promise<string> {
 
   const backtick = "`".repeat(Math.max(maxRawBackticks + 1, 3));
   const mainFileContent = `
-${commentTemplate}
+${commentTemplate.replace("blog.typ", "templates/blog.typ")}
 ${backtick}md-render
 ${typstCode}
 ${backtick}
