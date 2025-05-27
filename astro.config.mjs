@@ -51,6 +51,7 @@ export default defineConfig({
     },
     ssr: {
       external: ["@myriaddreamin/typst-ts-node-compiler"],
+      noExternal: ["@fontsource-variable/inter"],
     },
   },
 });
