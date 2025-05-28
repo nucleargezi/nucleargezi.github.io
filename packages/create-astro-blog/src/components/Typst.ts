@@ -2,7 +2,7 @@ import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
 import { resolve } from "path";
 import { readFile } from "fs/promises";
 
-const projectRoot = resolve(import.meta.dirname, "../../../../");
+const projectRoot = process.cwd();
 
 const compiler = NodeCompiler.create({
   workspace: resolve(projectRoot, "typ/templates"),
