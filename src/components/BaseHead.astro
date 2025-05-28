@@ -7,6 +7,7 @@ import interWoff2 from '@fontsource-variable/inter/files/inter-latin-opsz-normal
 import interItalicWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-italic.woff2?url';
 
 import { kUrlBase, kSiteTitle, kServers, kEnableBackend } from "$consts";
+import { ThemeInit } from "@myriaddreamin/blog-theme-toggle";
 
 interface Props {
   title: string;
@@ -60,29 +61,7 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
 <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin="anonymous" />
 <link rel="preload" as="font" type="font/woff2" href={interItalicWoff2} crossorigin="anonymous" />
 
-<!-- Theme Support -->
-<script is:inline>
-  const checkCss = () => {
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (prefersDarkScheme.matches) {
-      document.documentElement.classList.add("dark");
-    }
-  };
-
-  // Check for saved theme preference or default to dark theme
-  if (typeof localStorage !== "undefined") {
-    const userSetTheme = localStorage.getItem("theme");
-    if (userSetTheme) {
-      if (userSetTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else {
-      checkCss();
-    }
-  } else {
-    checkCss();
-  }
-</script>
+<ThemeInit/>
 
 <!-- Backend Support -->
 {kEnableBackend && <script is:inline define:vars={{ kServers }}>
