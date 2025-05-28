@@ -17,6 +17,9 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.2.5
         version: 5.2.5
+      '@myriaddreamin/blog-comment':
+        specifier: workspace:^
+        version: link:packages/comment
       '@myriaddreamin/blog-theme-toggle':
         specifier: workspace:^
         version: link:packages/theme-toggle
@@ -33,6 +36,12 @@ importers:
       vite:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@22.15.18)
+
+  packages/comment:
+    devDependencies:
+      astro:
+        specifier: ^5.8.0
+        version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
   packages/theme-toggle:
     devDependencies:

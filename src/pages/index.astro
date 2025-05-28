@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 
+import { RecentComment } from "@myriaddreamin/blog-comment";
+
 import BaseHead from "$components/BaseHead.astro";
 import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
@@ -15,6 +17,7 @@ import {
   kCommentList,
   kUrlBase,
   kBaiduVeriCode,
+  kEnableComment,
 } from "$consts";
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
@@ -24,15 +27,11 @@ import "$styles/IndexPostList.css";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
-const comments = kCommentList.sort(
-  (a, b) => b.createdAt.valueOf() - a.createdAt.valueOf()
-);
 const pdfArchives = (await getCollection("archive")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
 const recent5Posts = posts.slice(0, 5);
-const recent5Comments = comments.slice(0, 5);
 
 function extractArchive(archive: (typeof pdfArchives)[0]) {
   return [archive.id, archive.data.title];
@@ -92,34 +91,23 @@ function extractArchive(archive: (typeof pdfArchives)[0]) {
           }
         </ul>
       </section>
-      <section aria-label="Recent Comments">
-        <h2>Recent Comments</h2>
-        <ul class="block-list comments">
-          {
-            recent5Comments.map((comment) => (
-              <li class="comment-item">
-                <div class="comment-head">
-                  <strong class="name">{comment.email}</strong> on
-                  <a
-                    class="heading"
-                    href={`${kUrlBase}/article/${comment.articleId}`}
-                  >
-                    {
-                      posts.find((post) => post.id === comment.articleId)?.data
-                        .title
-                    }
-                  </a>
-                  <em>
-                    at
-                    <time>{new Date(comment.createdAt).toLocaleString()}</time>
-                  </em>
-                </div>
-                <span class="title" set:html={renderComment(comment.content)} />
-              </li>
-            ))
-          }
-        </ul>
-      </section>
+      {
+        kEnableComment && (
+          <RecentComment
+            kCommentList={kCommentList}
+            renderComment={renderComment}
+          >
+            <fragment slot="articleRef">
+              {(id: string) => (
+                <a class="heading" href={`${kUrlBase}/article/${id}`}>
+                  {posts.find((post) => post.id === id)?.data.title || ""}
+                </a>
+              )}
+            </fragment>
+          </RecentComment>
+        )
+      }
+
       <section aria-label="Archive">
         <h2>Archived PDFs</h2>
         <ul class="accent block-list monthly">

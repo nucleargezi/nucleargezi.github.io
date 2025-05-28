@@ -1,8 +1,12 @@
 ---
-import { kCommentInfo } from "$consts";
-import { renderComment } from "./Typst";
+import type { BlogComment, CommentHost } from "..";
 
-const { id } = Astro.props;
+interface Props extends CommentHost {
+  id: string;
+  kCommentInfo: Map<string, BlogComment[]>;
+}
+
+const { id, kCommentInfo, renderComment } = Astro.props;
 const comments = kCommentInfo.get(id) || [];
 ---
 
@@ -166,9 +170,10 @@ const comments = kCommentInfo.get(id) || [];
 
         localStorage.setItem("commentMailFrom", email.value || "");
 
-        window
+        // todo: use fetch instead of postServer
+        (window as any)
           .postServer("/article/comment", { body: formData })
-          .then((response) => {
+          .then((response: Response) => {
             if (response) {
               alert(
                 "Comment sent successfully. It will be visible after review."

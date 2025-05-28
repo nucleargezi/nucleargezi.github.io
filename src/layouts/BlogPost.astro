@@ -5,12 +5,13 @@ import Header from "$components/Header.astro";
 import Footer from "$components/Footer.astro";
 import FormattedDate from "$components/FormattedDate.astro";
 import PostClick from "$components/PostClick.astro";
-import Comment from "$components/Comment.astro";
+import CommentList from "@myriaddreamin/blog-comment";
 import LikeReaction from "$components/LikeReaction.astro";
-import { kEnableClick, kArticleStats, kEnableComment, kEnableReaction, kEnableArchive } from "$consts";
+import { kEnableClick, kArticleStats, kEnableComment, kEnableReaction, kEnableArchive, kCommentInfo } from "$consts";
 import TagList from "$components/TagList.astro";
 import { getCollection } from "astro:content";
 import ArchiveLink from "$components/ArchiveLink.astro";
+import { renderComment } from "$components/Typst";
 
 interface IdExt {
   id: string;
@@ -186,7 +187,7 @@ const primaryPdfPage = await (async () => {
         </div>
       </article>
       {tags && <TagList tags={tags} />}
-      {id && kEnableComment && <Comment id={id} />}
+      {id && kEnableComment && <CommentList id={id}, kCommentInfo={kCommentInfo} renderComment={renderComment} />}
     </main>
     <Footer />
   </body>
