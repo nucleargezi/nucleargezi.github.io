@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/tyland-like-reaction",
+  "name": "@myriaddreamin/tylant-like-reaction",
   "description": "A simple like-reaction component for Astro blog",
   "version": "0.0.1",
   "type": "module",

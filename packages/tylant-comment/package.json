@@ -1,6 +1,5 @@
 {
-  "name": "@myriaddreamin/create-tyland",
-  "description": "Create astro blog",
+  "name": "@myriaddreamin/tylant-comment",
   "version": "0.0.1",
   "type": "module",
   "exports": {

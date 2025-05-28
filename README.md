@@ -110,18 +110,18 @@ Improve website:
 - [ ] Refactor code to publish packages
   - [ ] `@myriad-dreamin/blog-template` for creating blogs
   - Some components that could be removed (JS required):
-    - [ ] `@myriaddreamin/tyland-search`
-    - [ ] `@myriaddreamin/tyland-theme-toggle`
+    - [ ] `@myriaddreamin/tylant-search`
+    - [ ] `@myriaddreamin/tylant-theme-toggle`
   - Typst Kit
-    - [ ] `@myriaddreamin/tyland-typst-kit`
+    - [ ] `@myriaddreamin/tylant-typst-kit`
       - focus on concept: `post` collections
-    - [ ] `@myriaddreamin/tyland-pdf-archive`
+    - [ ] `@myriaddreamin/tylant-pdf-archive`
       - focus on concept: `pdf` collections
   - People who don't like backend could remove them:
-    - [ ] `@myriaddreamin/tyland-backend-client`
-    - [ ] `@myriaddreamin/tyland-click`
-    - [ ] `@myriaddreamin/tyland-like-reaction`
-    - [ ] `@myriaddreamin/tyland-comment`
+    - [ ] `@myriaddreamin/tylant-backend-client`
+    - [ ] `@myriaddreamin/tylant-click`
+    - [ ] `@myriaddreamin/tylant-like-reaction`
+    - [ ] `@myriaddreamin/tylant-comment`
 
 ## Credit
 

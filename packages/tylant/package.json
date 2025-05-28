@@ -1,5 +1,6 @@
 {
-  "name": "@myriaddreamin/tyland-pdf-archive",
+  "name": "@myriaddreamin/create-tylant",
+  "description": "Create astro blog",
   "version": "0.0.1",
   "type": "module",
   "exports": {

@@ -17,21 +17,21 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.2.5
         version: 5.2.5
-      '@myriaddreamin/create-tyland':
+      '@myriaddreamin/create-tylant':
         specifier: workspace:^
-        version: link:packages/tyland
-      '@myriaddreamin/tyland-comment':
+        version: link:packages/tylant
+      '@myriaddreamin/tylant-comment':
         specifier: workspace:^
-        version: link:packages/tyland-comment
-      '@myriaddreamin/tyland-like-reaction':
+        version: link:packages/tylant-comment
+      '@myriaddreamin/tylant-like-reaction':
         specifier: workspace:^
-        version: link:packages/tyland-like-reaction
-      '@myriaddreamin/tyland-pdf-archive':
+        version: link:packages/tylant-like-reaction
+      '@myriaddreamin/tylant-pdf-archive':
         specifier: workspace:^
-        version: link:packages/tyland-pdf-archive
-      '@myriaddreamin/tyland-theme-toggle':
+        version: link:packages/tylant-pdf-archive
+      '@myriaddreamin/tylant-theme-toggle':
         specifier: workspace:^
-        version: link:packages/tyland-theme-toggle
+        version: link:packages/tylant-theme-toggle
       '@myriaddreamin/typst-ts-node-compiler':
         specifier: ^0.6.0-rc1
         version: 0.6.0-rc1
@@ -46,31 +46,31 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@22.15.18)
 
-  packages/tyland:
+  packages/tylant:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tyland-comment:
+  packages/tylant-comment:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tyland-like-reaction:
+  packages/tylant-like-reaction:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tyland-pdf-archive:
+  packages/tylant-pdf-archive:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tyland-theme-toggle:
+  packages/tylant-theme-toggle:
     devDependencies:
       astro:
         specifier: ^5.8.0

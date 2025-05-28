@@ -1,6 +1,5 @@
 {
-  "name": "@myriaddreamin/tyland-theme-toggle",
-  "description": "A simple theme toggle component for Astro blog",
+  "name": "@myriaddreamin/tylant-pdf-archive",
   "version": "0.0.1",
   "type": "module",
   "exports": {
