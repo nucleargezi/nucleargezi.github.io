@@ -101,7 +101,7 @@ Improve website:
 - [ ] [Last Modified Time](https://5-0-0-beta.docs.astro.build/en/recipes/modified-time/)
 - [ ] Styling
   - [ ] Table
-  - [ ] Inline Raw
+  - [x] Inline Raw
   - [ ] Blocky Raw
 - [ ] Index Page Design
   - [ ] Badge
@@ -111,17 +111,17 @@ Improve website:
   - [ ] `@myriad-dreamin/blog-template` for creating blogs
   - Some components that could be removed (JS required):
     - [ ] `@myriaddreamin/tylant-search`
-    - [ ] `@myriaddreamin/tylant-theme-toggle`
+    - [x] `@myriaddreamin/tylant-theme-toggle`
   - Typst Kit
     - [ ] `@myriaddreamin/tylant-typst-kit`
       - focus on concept: `post` collections
-    - [ ] `@myriaddreamin/tylant-pdf-archive`
+    - [x] `@myriaddreamin/tylant-pdf-archive`
       - focus on concept: `pdf` collections
   - People who don't like backend could remove them:
     - [ ] `@myriaddreamin/tylant-backend-client`
     - [ ] `@myriaddreamin/tylant-click`
-    - [ ] `@myriaddreamin/tylant-like-reaction`
-    - [ ] `@myriaddreamin/tylant-comment`
+    - [x] `@myriaddreamin/tylant-like-reaction`
+    - [x] `@myriaddreamin/tylant-comment`
 
 ## Credit
 
