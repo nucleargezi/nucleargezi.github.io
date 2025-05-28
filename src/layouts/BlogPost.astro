@@ -187,7 +187,7 @@ const primaryPdfPage = await (async () => {
         </div>
       </article>
       {tags && <TagList tags={tags} />}
-      {id && kEnableComment && <CommentList id={id}, kCommentInfo={kCommentInfo} renderComment={renderComment} />}
+      {id && kEnableComment && <CommentList articleId={id}, kCommentInfo={kCommentInfo} renderComment={renderComment} />}
     </main>
     <Footer />
   </body>

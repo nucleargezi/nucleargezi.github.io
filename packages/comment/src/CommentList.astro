@@ -2,12 +2,12 @@
 import type { BlogComment, CommentHost } from "..";
 
 interface Props extends CommentHost {
-  id: string;
+  articleId: string;
   kCommentInfo: Map<string, BlogComment[]>;
 }
 
-const { id, kCommentInfo, renderComment } = Astro.props;
-const comments = kCommentInfo.get(id) || [];
+const { articleId, kCommentInfo, renderComment } = Astro.props;
+const comments = kCommentInfo.get(articleId) || [];
 ---
 
 <style>
@@ -118,7 +118,11 @@ const comments = kCommentInfo.get(id) || [];
 </style>
 <section class="comment-region" aria-label="Comments">
   <h3>Comments</h3>
-  <form id="comment-form" data-article-id={id} aria-label="Submit a Comment">
+  <form
+    id="comment-form"
+    data-article-id={articleId}
+    aria-label="Submit a Comment"
+  >
     <div class="grow-wrap">
       <textarea
         name="comment"
