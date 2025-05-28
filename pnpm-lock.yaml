@@ -19,19 +19,19 @@ importers:
         version: 5.2.5
       '@myriaddreamin/create-tyland':
         specifier: workspace:^
-        version: link:packages/create-astro-blog
+        version: link:packages/tyland
       '@myriaddreamin/tyland-comment':
         specifier: workspace:^
-        version: link:packages/comment
+        version: link:packages/tyland-comment
       '@myriaddreamin/tyland-like-reaction':
         specifier: workspace:^
-        version: link:packages/like-reaction
+        version: link:packages/tyland-like-reaction
       '@myriaddreamin/tyland-pdf-archive':
         specifier: workspace:^
-        version: link:packages/pdf-archive
+        version: link:packages/tyland-pdf-archive
       '@myriaddreamin/tyland-theme-toggle':
         specifier: workspace:^
-        version: link:packages/theme-toggle
+        version: link:packages/tyland-theme-toggle
       '@myriaddreamin/typst-ts-node-compiler':
         specifier: ^0.6.0-rc1
         version: 0.6.0-rc1
@@ -46,31 +46,31 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@22.15.18)
 
-  packages/comment:
+  packages/tyland:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/create-astro-blog:
+  packages/tyland-comment:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/like-reaction:
+  packages/tyland-like-reaction:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/pdf-archive:
+  packages/tyland-pdf-archive:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/theme-toggle:
+  packages/tyland-theme-toggle:
     devDependencies:
       astro:
         specifier: ^5.8.0
