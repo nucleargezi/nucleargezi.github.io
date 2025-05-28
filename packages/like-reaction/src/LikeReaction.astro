@@ -1,5 +1,8 @@
 ---
-const { id } = Astro.props;
+interface Props {
+  articleId: string;
+}
+const { articleId } = Astro.props;
 ---
 
 <style>
@@ -38,7 +41,7 @@ const { id } = Astro.props;
     >
   </div>
 
-  <script define:vars={{ id }}>
+  <script define:vars={{ articleId }}>
     // localStorage.getItem("commentMailFrom") || ""
 
     const la = document.querySelector(".like-reaction");
@@ -53,7 +56,7 @@ const { id } = Astro.props;
       })();
 
     const params = new URLSearchParams();
-    params.append("articleId", id);
+    params.append("articleId", articleId);
     params.append("email", encodeURIComponent(email));
 
     window
@@ -68,7 +71,7 @@ const { id } = Astro.props;
         }
 
         la?.addEventListener("click", (e) => {
-          if (!la || !id) {
+          if (!la || !articleId) {
             return;
           }
           const isLiking = la.classList.contains("is-liking");
@@ -82,7 +85,7 @@ const { id } = Astro.props;
             })();
 
           const formData = new FormData();
-          formData.append("articleId", id);
+          formData.append("articleId", articleId);
           formData.append("email", email);
 
           window

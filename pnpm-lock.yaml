@@ -20,6 +20,9 @@ importers:
       '@myriaddreamin/blog-comment':
         specifier: workspace:^
         version: link:packages/comment
+      '@myriaddreamin/blog-like-reaction':
+        specifier: workspace:^
+        version: link:packages/like-reaction
       '@myriaddreamin/blog-theme-toggle':
         specifier: workspace:^
         version: link:packages/theme-toggle
@@ -38,6 +41,12 @@ importers:
         version: 6.3.5(@types/node@22.15.18)
 
   packages/comment:
+    devDependencies:
+      astro:
+        specifier: ^5.8.0
+        version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
+
+  packages/like-reaction:
     devDependencies:
       astro:
         specifier: ^5.8.0
