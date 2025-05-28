@@ -23,6 +23,9 @@ importers:
       '@myriaddreamin/blog-like-reaction':
         specifier: workspace:^
         version: link:packages/like-reaction
+      '@myriaddreamin/blog-pdf-archive':
+        specifier: workspace:^
+        version: link:packages/pdf-archive
       '@myriaddreamin/blog-theme-toggle':
         specifier: workspace:^
         version: link:packages/theme-toggle
@@ -47,6 +50,12 @@ importers:
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
   packages/like-reaction:
+    devDependencies:
+      astro:
+        specifier: ^5.8.0
+        version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
+
+  packages/pdf-archive:
     devDependencies:
       astro:
         specifier: ^5.8.0

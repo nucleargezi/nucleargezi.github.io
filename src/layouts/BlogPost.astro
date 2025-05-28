@@ -19,8 +19,8 @@ import {
 } from "$consts";
 import TagList from "$components/TagList.astro";
 import { getCollection } from "astro:content";
-import ArchiveLink from "$components/ArchiveLink.astro";
 import { renderComment } from "$components/Typst";
+import { ArchiveRef } from "@myriaddreamin/blog-pdf-archive";
 
 interface IdExt {
   id: string;
@@ -28,38 +28,15 @@ interface IdExt {
 
 type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
 
-const { id, title, description, date, updatedDate, tags } = Astro.props;
+const { id, title, description, date, updatedDate, tags, author, ...rest } =
+  Astro.props;
 const stat: { like?: number; click?: number } =
   ((kEnableClick || kEnableReaction) &&
     kArticleStats.find((stat) => stat.id === id)) ||
   {};
 const click = stat.click || 0;
 const like = stat.like || 0;
-const normArchive = ({ id }: { id: string }) => id.startsWith("blog-");
-const pdfArchives = await (async () => {
-  const archive = await getCollection("archive");
-  return archive
-    .filter((m) => id && m.data.indices?.includes(id))
-    .sort((a, b) => {
-      if (normArchive(a) || normArchive(b)) {
-        // Sort archives that are not blog archives to the end
-        return normArchive(a) && normArchive(b)
-          ? a.id.localeCompare(b.id)
-          : normArchive(a)
-            ? 1
-            : -1;
-      }
-
-      return a.id.localeCompare(b.id);
-    });
-})();
-const primaryPdfPage = await (async () => {
-  const specialArchive = pdfArchives.find((m) => !normArchive(m));
-  if (specialArchive) {
-    return specialArchive;
-  }
-  return pdfArchives.find(normArchive);
-})();
+const pdfArchives = await getCollection("archive");
 ---
 
 <html lang="en">
@@ -152,7 +129,7 @@ const primaryPdfPage = await (async () => {
   </head>
 
   <body>
-    <Header pdfPage={primaryPdfPage} />
+    <Header articleId={id || undefined} />
     <main>
       <article>
         <div class="prose">
@@ -197,26 +174,11 @@ const primaryPdfPage = await (async () => {
             <h1>{title}</h1>
             {
               id && kEnableArchive && pdfArchives.length > 0 && (
-                <p>
-                  This article is part of{" "}
-                  {pdfArchives.map((archive, idx) => (
-                    <>
-                      <span>
-                        {pdfArchives.length === 2 && idx === 1
-                          ? " and "
-                          : idx > 0
-                            ? pdfArchives.length === idx + 1
-                              ? ", and "
-                              : ", "
-                            : ""}
-                      </span>
-                      <ArchiveLink
-                        id={archive.id}
-                        title={`${archive.data.title}${pdfArchives.length === idx + 1 ? "." : ""}`}
-                      />
-                    </>
-                  ))}
-                </p>
+                <ArchiveRef
+                  articleId={id || undefined}
+                  pdfArchives={pdfArchives}
+                  {...rest}
+                />
               )
             }
             <hr />

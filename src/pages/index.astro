@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 
 import { RecentComment } from "@myriaddreamin/blog-comment";
+import { ArchiveList } from "@myriaddreamin/blog-pdf-archive";
 
 import BaseHead from "$components/BaseHead.astro";
 import Header from "$components/Header.astro";
@@ -18,24 +19,19 @@ import {
   kUrlBase,
   kBaiduVeriCode,
   kEnableComment,
+  kEnableArchive,
 } from "$consts";
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
 
 import "$styles/IndexPostList.css";
 
+const pdfArchives = await getCollection("archive");
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
-const pdfArchives = (await getCollection("archive")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
 const recent5Posts = posts.slice(0, 5);
-
-function extractArchive(archive: (typeof pdfArchives)[0]) {
-  return [archive.id, archive.data.title];
-}
 ---
 
 <!doctype html>
@@ -108,18 +104,7 @@ function extractArchive(archive: (typeof pdfArchives)[0]) {
         )
       }
 
-      <section aria-label="Archive">
-        <h2>Archived PDFs</h2>
-        <ul class="accent block-list monthly">
-          {
-            pdfArchives.map(extractArchive).map(([id, title]) => (
-              <li>
-                <a href={`${kUrlBase}/archive/${id}.pdf`}>{title}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
+      {kEnableArchive && <ArchiveList pdfArchives={pdfArchives} />}
     </main>
     <Footer />
   </body>
