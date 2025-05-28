@@ -88,8 +88,8 @@
         params.set("search", search);
         const usingSearch = search.toLowerCase();
         posts = posts.filter((post) => {
-          const { title, desc, tags } = post.data;
-          const text = `${title} ${desc} ${tags?.join(" ") || ""}`;
+          const { title, description, tags } = post.data;
+          const text = `${title} ${description} ${tags?.join(" ") || ""}`;
           return text.toLowerCase().includes(usingSearch);
         });
       } else {
