@@ -108,6 +108,20 @@ Improve website:
 - [ ] Comment Reply
 - [ ] Better [`theme-frame`](typ/templates/theme.typ)
 - [ ] Refactor code to publish packages
+  - [ ] `@myriad-dreamin/blog-template` for creating blogs
+  - Some components that could be removed (JS required):
+    - [ ] `@myriaddreamin/blog-search`
+    - [ ] `@myriaddreamin/blog-theme-toggle`
+  - Typst Kit
+    - [ ] `@myriaddreamin/blog-typst-kit`
+      - focus on concept: `post` collections
+    - [ ] `@myriaddreamin/blog-pdf-archive`
+      - focus on concept: `pdf` collections
+  - People who don't like backend could remove them:
+    - [ ] `@myriaddreamin/blog-backend-client`
+    - [ ] `@myriaddreamin/blog-click`
+    - [ ] `@myriaddreamin/blog-like-reaction`
+    - [ ] `@myriaddreamin/blog-comment`
 
 ## Credit
 

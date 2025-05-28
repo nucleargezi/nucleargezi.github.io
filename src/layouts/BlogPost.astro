@@ -165,6 +165,12 @@ const pdfArchives = await getCollection("archive");
                     <span class="like-count">
                       {like} {like === 1 ? "like" : "likes"}
                     </span>
+                  </>
+                )
+              }
+              {
+                id && kEnableReaction && (
+                  <>
                     <span>·</span>
                     <LikeReaction articleId={id} />
                   </>
