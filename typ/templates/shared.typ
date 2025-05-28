@@ -132,7 +132,34 @@
   /// HTML code block supported by zebraw.
   show: init-with-theme(default-theme)
 
+
+  let mk-raw(
+    it,
+    tag: "div",
+  ) = theme-frame(
+    tag: tag,
+    theme => {
+      show: init-with-theme(theme)
+      let code-extra-colors = theme.code-extra-colors
+      set text(fill: code-extra-colors.fg) if code-extra-colors.fg != none
+      set text(fill: if theme.is-dark { rgb("dfdfd6") } else { black }) if code-extra-colors.fg == none
+      set raw(theme: theme-style.code-theme) if theme.style.code-theme.len() > 0
+      set par(justify: false)
+      zebraw(
+        block-width: 100%,
+        // line-width: 100%,
+        wrap: false,
+        it,
+      )
+    },
+  )
+
   show raw: set text(font: code-font)
+  show raw.where(block: false): it => context if shiroa-sys-target() == "paged" {
+    it
+  } else {
+    mk-raw(it, tag: "span")
+  }
   show raw.where(block: true): it => context if shiroa-sys-target() == "paged" {
     set raw(theme: theme-style.code-theme) if theme-style.code-theme.len() > 0
     rect(
@@ -148,20 +175,7 @@
       ],
     )
   } else {
-    theme-frame(theme => {
-      show: init-with-theme(theme)
-      let code-extra-colors = theme.code-extra-colors
-      set text(fill: code-extra-colors.fg) if code-extra-colors.fg != none
-      set text(fill: if theme.is-dark { rgb("dfdfd6") } else { black }) if code-extra-colors.fg == none
-      set raw(theme: theme-style.code-theme) if theme.style.code-theme.len() > 0
-      set par(justify: false)
-      zebraw(
-        block-width: 100%,
-        // line-width: 100%,
-        wrap: false,
-        it,
-      )
-    })
+    mk-raw(it)
   }
   body
 }
