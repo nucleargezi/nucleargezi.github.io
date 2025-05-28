@@ -5,15 +5,17 @@ import ArchiveList from "./src/ArchiveList.astro";
 import ArchiveButton from "./src/ArchiveButton.astro";
 import ArchiveRef from "./src/ArchiveRef.astro";
 
+export interface PdfArchive {
+  id: string;
+  data: {
+    title: string;
+    date: Date;
+    indices?: string[];
+  };
+}
+
 export interface ArchiveProps {
-  pdfArchives: {
-    id: string;
-    data: {
-      title: string;
-      date: Date;
-      indices?: string[];
-    };
-  }[];
+  pdfArchives: PdfArchive[];
 }
 
 export { ArchiveList, ArchiveButton, ArchiveRef };

@@ -1,6 +1,6 @@
 ---
 import type { ArchiveProps } from "..";
-import { archiveUrl } from "./url";
+import { archiveUrl, articleArchives } from "./utils";
 
 // Write your component code in this file!
 interface Props extends ArchiveProps {
@@ -8,14 +8,7 @@ interface Props extends ArchiveProps {
 }
 
 const { articleId, pdfArchives, ...attrs } = Astro.props;
-const normArchive = ({ id }: { id: string }) => id.startsWith("blog-");
-const primaryPdfPage = await (async () => {
-  const specialArchive = pdfArchives.find((m) => !normArchive(m));
-  if (specialArchive) {
-    return specialArchive;
-  }
-  return pdfArchives.find(normArchive);
-})();
+const primaryPdfPage = (await articleArchives(pdfArchives, articleId))[0];
 ---
 
 {
