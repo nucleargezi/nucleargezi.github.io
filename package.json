@@ -24,6 +24,7 @@
     "@myriaddreamin/blog-comment": "workspace:^",
     "@myriaddreamin/blog-like-reaction": "workspace:^",
     "@myriaddreamin/blog-pdf-archive": "workspace:^",
+    "@myriaddreamin/create-astro-blog": "workspace:^",
     "astro": "^5.8.0",
     "astro-typst": "0.9.0-rc1"
   },

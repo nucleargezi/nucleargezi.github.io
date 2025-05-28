@@ -2,7 +2,7 @@ import type { APIContext } from "astro";
 import { getCollection } from "astro:content";
 
 import { kEnablePrinting } from "$consts";
-import { renderMonthlyPdf } from "$components/Typst";
+import { renderMonthlyPdf } from "@myriaddreamin/create-astro-blog";
 
 export async function getStaticPaths() {
   if (!kEnablePrinting) {

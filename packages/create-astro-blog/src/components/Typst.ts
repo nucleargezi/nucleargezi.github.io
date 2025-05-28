@@ -1,8 +1,8 @@
 import { NodeCompiler } from "@myriaddreamin/typst-ts-node-compiler";
-import commentTemplate from "../../typ/templates/comment.typ?raw";
 import { resolve } from "path";
+import { readFile } from "fs/promises";
 
-const projectRoot = resolve(import.meta.dirname, "../../");
+const projectRoot = resolve(import.meta.dirname, "../../../../");
 
 const compiler = NodeCompiler.create({
   workspace: resolve(projectRoot, "typ/templates"),
@@ -32,6 +32,10 @@ export async function renderComment(typstCode: string): Promise<string> {
       maxRawBackticks = backtickCount;
     }
   }
+  const commentTemplate = await readFile(
+    resolve(projectRoot, "typ/templates/comment.typ"),
+    "utf-8"
+  );
 
   const backtick = "`".repeat(Math.max(maxRawBackticks + 1, 3));
   const mainFileContent = `
