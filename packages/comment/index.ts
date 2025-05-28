@@ -17,4 +17,3 @@ export interface CommentHost {
 }
 
 export { RecentComment, CommentList };
-export default CommentList;

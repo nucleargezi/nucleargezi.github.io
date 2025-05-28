@@ -4,4 +4,3 @@
 import LikeReaction from "./src/LikeReaction.astro";
 
 export { LikeReaction };
-export default LikeReaction;

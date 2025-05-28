@@ -5,4 +5,3 @@ import ThemeInit from "./src/ThemeInit.astro";
 import ThemeToggle from "./src/ThemeToggle.astro";
 
 export { ThemeInit, ThemeToggle };
-export default ThemeToggle;
