@@ -1,5 +1,5 @@
 {
-  "name": "@myriaddreamin/blog-theme-toggle",
+  "name": "@myriaddreamin/tyland-theme-toggle",
   "description": "A simple theme toggle component for Astro blog",
   "version": "0.0.1",
   "type": "module",

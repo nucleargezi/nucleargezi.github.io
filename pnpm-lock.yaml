@@ -17,21 +17,21 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.2.5
         version: 5.2.5
-      '@myriaddreamin/blog-comment':
-        specifier: workspace:^
-        version: link:packages/comment
-      '@myriaddreamin/blog-like-reaction':
-        specifier: workspace:^
-        version: link:packages/like-reaction
-      '@myriaddreamin/blog-pdf-archive':
-        specifier: workspace:^
-        version: link:packages/pdf-archive
-      '@myriaddreamin/blog-theme-toggle':
-        specifier: workspace:^
-        version: link:packages/theme-toggle
-      '@myriaddreamin/create-astro-blog':
+      '@myriaddreamin/create-tyland':
         specifier: workspace:^
         version: link:packages/create-astro-blog
+      '@myriaddreamin/tyland-comment':
+        specifier: workspace:^
+        version: link:packages/comment
+      '@myriaddreamin/tyland-like-reaction':
+        specifier: workspace:^
+        version: link:packages/like-reaction
+      '@myriaddreamin/tyland-pdf-archive':
+        specifier: workspace:^
+        version: link:packages/pdf-archive
+      '@myriaddreamin/tyland-theme-toggle':
+        specifier: workspace:^
+        version: link:packages/theme-toggle
       '@myriaddreamin/typst-ts-node-compiler':
         specifier: ^0.6.0-rc1
         version: 0.6.0-rc1
