@@ -19,19 +19,19 @@ importers:
         version: 5.2.5
       '@myriaddreamin/create-tylant':
         specifier: workspace:^
-        version: link:packages/tylant
+        version: link:packages/tylant/packages/tylant
       '@myriaddreamin/tylant-comment':
         specifier: workspace:^
-        version: link:packages/tylant-comment
+        version: link:packages/tylant/packages/tylant-comment
       '@myriaddreamin/tylant-like-reaction':
         specifier: workspace:^
-        version: link:packages/tylant-like-reaction
+        version: link:packages/tylant/packages/tylant-like-reaction
       '@myriaddreamin/tylant-pdf-archive':
         specifier: workspace:^
-        version: link:packages/tylant-pdf-archive
+        version: link:packages/tylant/packages/tylant-pdf-archive
       '@myriaddreamin/tylant-theme-toggle':
         specifier: workspace:^
-        version: link:packages/tylant-theme-toggle
+        version: link:packages/tylant/packages/tylant-theme-toggle
       '@myriaddreamin/typst-ts-node-compiler':
         specifier: ^0.6.0-rc1
         version: 0.6.0-rc1
@@ -46,31 +46,31 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@22.15.18)
 
-  packages/tylant:
+  packages/tylant/packages/tylant:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tylant-comment:
+  packages/tylant/packages/tylant-comment:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tylant-like-reaction:
+  packages/tylant/packages/tylant-like-reaction:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tylant-pdf-archive:
+  packages/tylant/packages/tylant-pdf-archive:
     devDependencies:
       astro:
         specifier: ^5.8.0
         version: 5.8.0(@types/node@22.15.18)(rollup@4.40.2)(typescript@5.8.3)
 
-  packages/tylant-theme-toggle:
+  packages/tylant/packages/tylant-theme-toggle:
     devDependencies:
       astro:
         specifier: ^5.8.0

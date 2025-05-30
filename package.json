@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "workspaces": [
     ".",
-    "packages/*"
+    "packages/tylant/packages/*"
   ],
   "scripts": {
     "dev": "astro dev",
