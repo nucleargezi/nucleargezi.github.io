@@ -39,24 +39,25 @@ export const kEnablePrinting = true && kEnableArchive;
 /**
  * The title of the website.
  */
-export const kSiteTitle = config.SITE_TITLE;
+export const kSiteTitle: string = config.SITE_TITLE || "My Blog";
 
 /**
  * The title of the website.
  */
-export const kSiteLogo = "PoeMagie";
+export const kSiteLogo: string = kSiteTitle;
 /**
  * The title of the website, used in the index page.
  */
-export const kSiteIndexTitle = config.SITE_INDEX_TITLE;
+export const kSiteIndexTitle: string = config.SITE_INDEX_TITLE || kSiteTitle;
 /**
  * The description of the website.
  */
-export const kSiteDescription = config.SITE_DESCRIPTION;
+export const kSiteDescription: string = config.SITE_DESCRIPTION || "My blog.";
 /**
  * The baidu verification code, used for SEO.
  */
-export const kBaiduVeriCode = config.BAIDU_VERIFICATION_CODE;
+export const kBaiduVeriCode: string | undefined =
+  config.BAIDU_VERIFICATION_CODE;
 
 /**
  * The URL base of the website.
@@ -106,7 +107,8 @@ export const kFriendLinks = [
 export const kServers = (() => {
   // const kServers = ["http://localhost:13333"];
 
-  const kServers = config.BACKEND_ADDR.split(";")
+  const kServers = (config.BACKEND_ADDR || "")
+    .split(";")
     .map((s) => s.trim())
     .filter((s) => s.length > 0);
 

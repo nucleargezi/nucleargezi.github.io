@@ -8,8 +8,9 @@ import { loadEnv } from "vite";
 const e = loadEnv(process.env.NODE_ENV || "", process.cwd(), "");
 const { SITE, URL_BASE } = e;
 
-const EnvStr = (optional = false) =>
+const EnvStr = (optional = true) =>
   envField.string({ context: "client", access: "public", optional });
+const MustEnvStr = (optional = false) => EnvStr(optional);
 
 export default defineConfig({
   // Whether to prefetch links while hovering.
@@ -23,12 +24,12 @@ export default defineConfig({
 
   env: {
     schema: {
+      SITE: MustEnvStr(),
+      URL_BASE: EnvStr(),
+
       SITE_TITLE: EnvStr(),
       SITE_INDEX_TITLE: EnvStr(),
       SITE_DESCRIPTION: EnvStr(),
-
-      SITE: EnvStr(),
-      URL_BASE: EnvStr(true),
 
       // # Please remove them if you don't like to use backend.
       // `;` separated list of backend addresses

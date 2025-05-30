@@ -80,10 +80,10 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 ## Deploying to GitHub Pages
 
-1. Set the URL_BASE environment variable to your own repository in [Environments](../../settings/environments).
+1. Set the URL_BASE in [.env](./.env). If you would like to keep it in secret, please set it in either `.env.{production,development}` file in root or [Environments](../../settings/environments).
    - For a GitHub page `https://username.github.io/repo`, the URL base is `/repo/`.
-2. Change Source's "Build and deployment" to "GitHub Actions" in [Page Settings](../../settings/pages).
-3. Push your changes to the `main` branch and it will automatically deploy to GitHub Pages by [CI](.github/workflows/gh-pages.yml).
+1. Change Source's "Build and deployment" to "GitHub Actions" in [Page Settings](../../settings/pages).
+1. Push your changes to the `main` branch and it will automatically deploy to GitHub Pages by [CI](.github/workflows/gh-pages.yml).
 
 ## Customization
 
@@ -95,7 +95,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 Improve experience:
 
-- [ ] More friendly content submodule for forks
+- [ ] More friendly submodule for forks
 - [ ] Split Backend Components to a separate repository
 
 Improve website:

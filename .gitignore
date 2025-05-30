@@ -16,7 +16,8 @@ pnpm-debug.log*
 pnpm-workspace.yaml
 
 # environment variables
-.env
+.env.*
+# For example, .env.production, .which is used by astro build
 .env.production
 
 # macOS-specific files

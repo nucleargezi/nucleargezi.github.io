@@ -39,7 +39,11 @@ const recent5Posts = posts.slice(0, 5);
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
     <!-- Baidu -->
-    <meta name="baidu-site-verification" content={kBaiduVeriCode} />
+    {
+      kBaiduVeriCode && (
+        <meta name="baidu-site-verification" content={kBaiduVeriCode} />
+      )
+    }
 
     <style>
       .comments a {
