@@ -36,7 +36,7 @@ async function main() {
     .map((it) => it.replace(/\.typ$/g, ""))
     .sort();
   await writeFile(
-    join(root, `typ/templates/articles.json`),
+    join(root, `content/snapshot/article-ids.json`),
     JSON.stringify(arts, null, 1),
     "utf-8"
   );
