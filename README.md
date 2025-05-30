@@ -19,6 +19,12 @@ Typst-specific features:
 - Heading Permalinks and Table of Contents.
 - PDF Archives.
 
+## Creating a Blog from Template
+
+```bash
+pnpm create @myriaddreamin/tylant@latest
+```
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -38,13 +44,13 @@ All commands are run from the root of the project, from a terminal:
 
 Open using the default setting:
 
-```
+```bash
 code .vscode/blog.code-workspace
 ```
 
 Or customize it:
 
-```
+```bash
 cp .vscode/blog.code-workspace .vscode/blog.private.code-workspace
 code .vscode/blog.private.code-workspace
 ```
@@ -95,7 +101,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 Improve experience:
 
-- [x] More friendly submodule for forks
+- [ ] More friendly submodule for forks
 - [ ] Split Backend Components to a separate repository
 
 Improve website:
