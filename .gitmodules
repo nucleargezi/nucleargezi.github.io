@@ -1,7 +1,3 @@
-[submodule "content"]
-	path = content
-	url = https://github.com/Myriad-Dreamin/Myriad-Dreamin
-	branch = blog
 [submodule "typ"]
 	path = typ
 	url = https://github.com/Myriad-Dreamin/typ.git
