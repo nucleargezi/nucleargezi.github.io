@@ -2,6 +2,9 @@
 
 The starter template for static blogs, powered by [typst](https://github.com/typst/typst) and [Astro](https://astro.build/).
 
+> [!NOTE]
+> wanna use it to write your blog posts? Please fork [blog-template](https://github.com/Myriad-Dreamin/blog-template) instead of my personal blog, which contains my personal blog posts and configurations.
+
 ## Features
 
 - **Tags**: Categorize your blog posts with tags.
