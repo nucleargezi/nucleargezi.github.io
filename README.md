@@ -1,6 +1,6 @@
 # Blog
 
-The starter template for static blogs, powered by [typst](https://github.com/typst/typst) and [Astro](https://astro.build/).
+My personal blog, powered by [typst](https://github.com/typst/typst) and [Astro](https://astro.build/).
 
 > [!NOTE]
 > wanna use it to write your blog posts? Please fork [blog-template](https://github.com/Myriad-Dreamin/blog-template) instead of my personal blog, which contains my personal blog posts and configurations.
@@ -95,7 +95,7 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 Improve experience:
 
-- [ ] More friendly submodule for forks
+- [x] More friendly submodule for forks
 - [ ] Split Backend Components to a separate repository
 
 Improve website:
