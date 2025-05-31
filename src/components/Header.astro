@@ -7,6 +7,7 @@ import { ThemeToggle } from "@myriaddreamin/tylant-theme-toggle";
 import { ArchiveButton } from "@myriaddreamin/tylant-pdf-archive";
 
 import HeaderLink from "./HeaderLink.astro";
+import moonFlower from "../../assets/moon-flower.svg?raw";
 
 interface Props {
   articleId?: string;
@@ -27,7 +28,7 @@ const pdfArchives = await getCollection("archive");
     </div>
     <div class="social-links">
       <span style="width: 2em;" aria-hidden="true">&nbsp;</span>
-      <ThemeToggle />
+      <ThemeToggle darkIcon={moonFlower} />
       {
         articleId && (
           <ArchiveButton articleId={articleId} pdfArchives={pdfArchives} />
