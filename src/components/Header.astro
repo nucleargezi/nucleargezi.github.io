@@ -7,7 +7,8 @@ import { ThemeToggle } from "@myriaddreamin/tylant-theme-toggle";
 import { ArchiveButton } from "@myriaddreamin/tylant-pdf-archive";
 
 import HeaderLink from "./HeaderLink.astro";
-import moonFlower from "../../assets/moon-flower.svg?raw";
+import sunFlower from "../../assets/sun-flower.svg?raw";
+// import moonFlower from "../../assets/moon-flower.svg?raw";
 
 interface Props {
   articleId?: string;
@@ -17,6 +18,27 @@ const { articleId } = Astro.props;
 const pdfArchives = await getCollection("archive");
 ---
 
+<style is:global>
+  .theme-icon-circle {
+    transition: all 0.3s linear;
+  }
+  .theme-icon-petal {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .dark path.theme-icon-petal {
+    d: path(
+      "M256 22h-3a193 193 0 0 1-41-6c-15-2-29-1-42 6-13 6-24 27-34 64s3 62 38 76l82 2m0-142h3a193 193 0 0 0 41-6c15-2 29-1 42 6 13 6 24 28 32 67l-48 78-70-3Zm223 162-1-3a193 193 0 0 1-8-40c-2-16-8-29-18-39-9-11-33-15-72-13-38 3-58 22-60 60l23 79m136-44 1 2a193 193 0 0 0 17 37c8 14 10 28 9 42-2 15-20 32-55 52l-88-22-20-67Zm-85 262 2-2a193 193 0 0 1 36-20c14-7 25-16 31-29 7-12 4-37-10-72-14-36-39-49-75-39l-68 46m84 116-2 1a193 193 0 0 0-30 28 69 69 0 0 1-38 21c-14 3-36-9-65-36l-7-91 58-39Zm-276 0 2 1a193 193 0 0 1 30 28c11 12 24 19 38 21 14 3 36-8 65-32 30-24 34-52 14-84l-65-50m-84 116-2-2a193 193 0 0 0-36-20c-14-7-25-16-31-29-7-12-3-37 13-73l85-35 55 43ZM33 184l-1 2a193 193 0 0 1-17 37c-8 14-10 28-9 42 2 15 19 32 51 53 33 20 61 16 84-13l28-77M33 184l1-3a193 193 0 0 0 8-40c2-16 8-29 18-39 9-11 34-14 74-10l59 70-24 66Z"
+    );
+  }
+
+  .dark path.theme-icon-circle {
+    /* M195 256a61 */
+    d: path(
+      "M256 318 a 64 64 0 1 0 0 -128 a 64 64 0 1 0 0 128 z M 256 256 a 0 0 0 1 1 0 0 a 0 0 0 1 1 0 0 z"
+    );
+  }
+</style>
 <header>
   <nav>
     <h2 class="logo"><a href={`${kUrlBase}/`}>{kSiteLogo}</a></h2>
@@ -28,7 +50,7 @@ const pdfArchives = await getCollection("archive");
     </div>
     <div class="social-links">
       <span style="width: 2em;" aria-hidden="true">&nbsp;</span>
-      <ThemeToggle darkIcon={moonFlower} />
+      <ThemeToggle icon={sunFlower} />
       {
         articleId && (
           <ArchiveButton articleId={articleId} pdfArchives={pdfArchives} />
