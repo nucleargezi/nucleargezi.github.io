@@ -1,10 +1,11 @@
 #import "/typ/templates/blog.typ": *
 #show: main.with(
   title: "Hosting Multiple Websites using Caddy",
-  desc: [To host multiple websites on a single server, I tried nginx, caddy, and traefik, and finally select caddy.],
+  desc: [To host multiple websites on a single server, I tried nginx, caddy, and traefik, and finally use caddy.],
   date: "2025-06-02T10:50:39+08:00",
   tags: (
     blog-tags.dev-ops,
+    blog-tags.network,
     blog-tags.golang,
   ),
 )
