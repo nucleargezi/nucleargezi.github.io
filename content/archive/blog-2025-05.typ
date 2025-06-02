@@ -14,5 +14,6 @@
     articles.shr,
     articles.domain-setup,
     articles.tinymist-2024-server-part,
+    articles.syntax,
   ),
 )
