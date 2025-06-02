@@ -17,7 +17,7 @@
   ),
 )
 
-I bought a VPS to host my websites, a home page (i.myriad-dreamin.com) and a mirror site of my blog (cn.myriad-dreamin.com). Since Cloudflare is not available in my country, I'd better host them on my own server instead of proxying them through cloudflare.
+I bought a VPS to host my websites, a home page (i.myriad-dreamin.com) and a mirror site of my blog (cn.myriad-dreamin.com). Since Cloudflare is not available in my country, I'd better host them on my own server instead of proxying them through Cloudflare.
 
 = Directory Structure
 
@@ -129,7 +129,7 @@ Again, I only used standard libraries to build my custom tools. `gopls`, as one 
 
 About 4 years ago, I had experience to build a HTTPS file server using Go, but this is not a best practice in my view. Considering that I have to make an ingress controller, the SSL/TLS could be handled in middle. This mitigates both the complexity and attack surface of http services.
 
-= Starting the HTTP File Server Container
+= Building the HTTP File Server Container
 
 It is not needed to build a custom image for the file server, if you use the following command to build the Go program:
 
@@ -154,7 +154,7 @@ services:
         command: 'file-server :80'
 ```
 
-= Starting Ingress using Nginx
+= Building Ingress using Nginx
 
 I used both Caddy and Nginx. Both of them are good in my mind. Since it is not so disturbing to try both of them, I first tried Nginx, whose docker image is maintained by docker officially：
 
@@ -272,7 +272,7 @@ Since we use `docker compose`, The `http://homepage` is resolved by the Docker's
 
 To support a new site, just copy the two server blocks (another one is in the previous section) about `orange.myriad-dreamin.com` and change the `server_name` to the new site name. I thing this is simple enough.
 
-= The Bad Guys are Accessing My Site
+= The Bad Guys are Accessing My Sites
 
 From the logs, I found that there are some bad guys trying to access my site. They are trying to access many common paths, like `/admin`, `/login`, `/wp-login.php`, etc. That's interesting. Luckily, I only have read-only static files, and both Nginx and Golang HTTP file server are robust enough. But even if Nginx has been used for 20 years, we can usually see CVEs about it. Caddy does has slightly poorer performance, but my personal websites doesn't need to handle high traffic yet. `traefik` is another choice, but it is too complex and I might not use it for my personal websites. I think we can try Caddy next.
 
@@ -415,7 +415,7 @@ services:
 
 orange.myriad-dreamin.com {
 	import subdomain-log orange.myriad-dreamin.com
-	tls camiyoru@gmail.com
+	tls x@email.com
 	reverse_proxy homepage
 }
 ```
