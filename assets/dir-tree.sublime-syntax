@@ -1,0 +1,33 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: dir-tree
+scope: source.dir-tree
+# docker-compose.yml
+# ├── caddy
+# │   ├── Caddyfile
+# │   ├── log
+# │   └── data
+# ├── nginx
+# │   ├── conf
+# │   │   └── nginx.conf
+# │   └── log
+# ├── dist
+# │   ├── i.myriad-dreamin.com
+# │   │   └── index.html
+# │   └── cn.myriad-dreamin.com
+# │       └── index.html
+# └── certbot
+#     ├── ssl
+#     └── www
+contexts:
+  main:
+    - include: pipe
+  pipe:
+    - match: '((?:│\s+)*\s*(?:├──|└──)\s*)([^\n]+)'
+      captures:
+        1: entity.name.function.dir-tree
+        2: string.dir-tree
+    - match: '([^\n]+)'
+      captures:
+        1: string.dir-tree
