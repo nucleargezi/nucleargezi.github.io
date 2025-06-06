@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="GuidingStar">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/05/04/数据库系统原理作业6/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/mika.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/mika.jpg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/mika.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            数据库系统原理作业6 | Realm of GuidingStar
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"zh-CN"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"atom-one-light","dark":"atom-one-dark"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":false,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/plana.jpg","dark":"/images/plana.jpg"},"title":"Ciallo～(∠・ω< )⌒★","subtitle":{"text":["回忆其中 不禁泪如雨下声嘶力竭","在正确的呼吸中得以延命","乌云密布 泥泞不堪 无一处幸免"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":300,"backing_delay":2000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/nucleargezi","instagram":null,"zhihu":null,"twitter":null,"email":"lfaij114514@163.com","bilibili":"https://space.bilibili.com/285769347"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"icon":"fa-solid fa-folder","path":"/categories/"},"Tags":{"icon":"fa-solid fa-tags","path":"/tags/"},"About":{"icon":"fa-regular fa-user","submenus":{"我":"/about/","Github":"https://github.com/nucleargezi","朋友们":"/links"}}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2025/1/14 19:19:19"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Realm of GuidingStar
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首页
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    归档
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories/"
+                                        >
+                                    <i class="fa-solid fa-folder fa-fw"></i>
+                                    分类
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags/"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    标签
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    关于
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about/">
+                                                    我
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/nucleargezi">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/links">
+                                                    朋友们
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首页
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                归档
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories/"
+                        >
+                            <span>
+                                分类
+                            </span>
+                            
+                                <i class="fa-solid fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags/"
+                        >
+                            <span>
+                                标签
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                关于
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about/">我</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/nucleargezi">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/links">朋友们</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">8</div>
+        <div class="label text-third-text-color text-sm">标签</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">分类</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">30</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86%E4%BD%9C%E4%B8%9A1/cover.jpeg" alt="数据库系统原理作业6" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">数据库系统原理作业6</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/head.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">GuidingStar</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv3</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-05-04 21:40:15</span>
+        <span class="mobile">2025-05-04 21:40:15</span>
+        <span class="hover-info">创建</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-06-06 18:29:20</span>
+            <span class="mobile">2025-06-06 18:29:20</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E4%BD%9C%E4%B8%9A/">作业</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>12 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h4 id="22281089-陈可致"><a href="#22281089-陈可致" class="headerlink" title="22281089 陈可致"></a>22281089 陈可致</h4><h2 id="task1"><a href="#task1" class="headerlink" title="task1"></a>task1</h2><p>针对前期作业中选定的业务背景，请完成如下数据库应用系统规划训练</p>
+<ol>
+<li>给你所规划的数据库应用系统起一个系统名称</li>
+<li>尝试调研分析或自主规划设计该系统的业主企业或组织机构的组织架构图，并说明该系统涉及企业或组织机构中哪些相关业务部门。</li>
+<li>调研分析企业相关部门中的跟该系统有关的各种用户或企业外的用户，用文字描述用户使用系统开展业务的场景（例如，租车客户将在特定手机上打开APP，用户在界面上点击….）</li>
+<li>规划系统的性能指标，如并发用户数、用户数、核心业务响应时间等。</li>
+<li>说明你所规划的系统的战略地位，例如系统服务于公司以什么方式赢得客户、获得直接或间接收益，获得市场地位。</li>
+<li>尝试说明建设该系统可能涉及的投资和运营成本，分析可能获得的收益。</li>
+<li>结合系统业务功能与性能规划，确定初步的技术选型规划，大致分析该系统在技术上的可行性。<br>将以上内容形成系统规划与可行性分析报告，找两位同学当业务专家帮你论证方案的可行性，并在报告上列出专家姓名、专家论证建议和结论。</li>
+</ol>
+<p>感谢提供SQL脚本，以下是对你的数据库系统（基于朋友圈/社交动态平台）的初步分析和规划。我们将基于你建库脚本中定义的几张表（用户 <code>user</code>、朋友圈动态 <code>moment</code>、多媒体内容 <code>media</code> 等）来构建完整的系统规划、需求分析与设计文档。</p>
+<hr>
+<h3 id="1-系统名称"><a href="#1-系统名称" class="headerlink" title="1 系统名称"></a>1 系统名称</h3><p>Wavelet Matrix</p>
+<h3 id="2-组织机构与业务部门"><a href="#2-组织机构与业务部门" class="headerlink" title="2 组织机构与业务部门"></a>2 组织机构与业务部门</h3><h4 id="组织架构示意："><a href="#组织架构示意：" class="headerlink" title="组织架构示意："></a>组织架构示意：</h4><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">社交平台公司</span><br><span class="line">├── 产品部</span><br><span class="line">│   ├── 产品经理</span><br><span class="line">│   └── 用户研究</span><br><span class="line">├── 技术部</span><br><span class="line">│   ├── 后端开发组（负责数据库及API）</span><br><span class="line">│   ├── 前端与移动开发组</span><br><span class="line">│   └── 运维与安全组</span><br><span class="line">├── 审核部</span><br><span class="line">├── 客服与用户支持部</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="涉及部门"><a href="#涉及部门" class="headerlink" title="涉及部门"></a>涉及部门</h4><ul>
+<li>技术部：实现系统后端逻辑与数据库管理；</li>
+<li>审核部：处理动态中的违规内容；</li>
+<li>客服：处理用户反馈、封号等问题；</li>
+<li>产品部：定义系统业务逻辑与用户体验流程。</li>
+</ul>
+<h3 id="3-用户与业务场景"><a href="#3-用户与业务场景" class="headerlink" title="3 用户与业务场景"></a>3 用户与业务场景</h3><ul>
+<li>普通用户：打开移动APP或Web平台 → 查看好友动态 → 发布图文/视频 → 点赞评论。</li>
+<li>审核：登录管理后台 → 审查被举报内容 → 删除/警告处理。</li>
+<li>管理：管理用户信息，处理系统配置。</li>
+</ul>
+<h3 id="4-系统性能指标"><a href="#4-系统性能指标" class="headerlink" title="4 系统性能指标"></a>4 系统性能指标</h3><ul>
+<li>并发用户数：支持 1 万用户同时在线</li>
+<li>总用户容量：100 万用户</li>
+<li>核心业务响应时间：<ul>
+<li>发布动态 &lt; 1 秒</li>
+<li>点赞/评论 &lt; 300 毫秒</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-系统战略地位"><a href="#5-系统战略地位" class="headerlink" title="5 系统战略地位"></a>5 系统战略地位</h3><p>该系统为公司主要流量入口与用户黏性载体：</p>
+<ul>
+<li>提高用户日活跃度（DAU）</li>
+<li>促进广告投放与品牌合作</li>
+<li>通过付费功能（置顶动态、表情包等）实现营收</li>
+</ul>
+<h3 id="6-投资与收益"><a href="#6-投资与收益" class="headerlink" title="6 投资与收益"></a>6 投资与收益</h3><ul>
+<li><p>投资成本：</p>
+<ul>
+<li>初期开发人力约 80 万元</li>
+<li>云服务与数据库托管约 5 万元/年</li>
+</ul>
+</li>
+<li><p>运营成本：</p>
+<ul>
+<li>内容审核与客服人力</li>
+</ul>
+</li>
+<li><p>收益来源：</p>
+<ul>
+<li>广告展示</li>
+<li>用户增值服务</li>
+<li>数据分析服务</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-技术选型与可行性"><a href="#7-技术选型与可行性" class="headerlink" title="7 技术选型与可行性"></a>7 技术选型与可行性</h3><h4 id="技术栈规划："><a href="#技术栈规划：" class="headerlink" title="技术栈规划："></a>技术栈规划：</h4><ul>
+<li>后端：Node.js / Python Flask + MySQL</li>
+<li>前端：React + 微信小程序</li>
+<li>数据库：MySQL，支持全文索引和事务</li>
+<li>存储：对象存储服务</li>
+</ul>
+<h4 id="可行性分析："><a href="#可行性分析：" class="headerlink" title="可行性分析："></a>可行性分析：</h4><ul>
+<li>数据模型简单、关系清晰，适合用关系型数据库；</li>
+<li>高并发读写可通过缓存层（如Redis）优化；</li>
+<li>多媒体内容独立存储，利于扩展与CDN分发。</li>
+</ul>
+<h3 id="业务专家论证"><a href="#业务专家论证" class="headerlink" title="业务专家论证"></a>业务专家论证</h3><table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>论证建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>杨展宇</td>
+<td>系统功能明确，符合年轻用户习惯，可增加实时互动功能</td>
+</tr>
+<tr>
+<td>郭瑞军</td>
+<td>技术选型合理，建议数据库预留分库分表设计，增强可扩展性</td>
+</tr>
+</tbody></table>
+<p>结论：系统设计合理，具备上线可行性。</p>
+<hr>
+<h2 id="task2"><a href="#task2" class="headerlink" title="task2"></a>task2</h2><p>数据库应用系统需求分析</p>
+<p>自学统一建模语言(Unified Modeling Language, UML)，在作业中解释UML、用例(Use Case)、用况(Use Case Scenario)、用例图(Use Case Diagram)、泳道图和数据流图（Data Flow Diagram，DFD）的概念及其VISIO中的画法，针对前述作业中选定的业务场景，开展如下系统需求分析：</p>
+<ol>
+<li>分析系统业务需求，标识出用户(Actor或User)，进行系统功能划分，画出用例图；</li>
+<li>分析系统业务场景，针对涉及多个用户(Actor或用户)的业务场景，分析业务流程，画出泳道图（至少一个）。</li>
+<li>结合前面作业设计结果，补充分析完善系统的数据项，数据结构（可以用类图表示），数据的存储（持久化）需求，形成数据字典。</li>
+<li>分析系统的数据处理需求，画出系统主要的数据流图，建议包含两个层级的DFD。</li>
+<li>分析系统的非功能性需求，给出系统业务处理性能、安全性、完整性等需求。<br>将以上内容形成系统的需求规格说明书。</li>
+</ol>
+<p>好的，以下是第二部分：数据库应用系统需求规格说明书，将涵盖UML相关概念与图示，以及对你的“社交动态平台系统”做详细需求分析和建模。</p>
+<hr>
+<h3 id="1-UML基础与用例分析"><a href="#1-UML基础与用例分析" class="headerlink" title="1 UML基础与用例分析"></a>1 UML基础与用例分析</h3><h4 id="UML-简介"><a href="#UML-简介" class="headerlink" title="UML 简介"></a>UML 简介</h4><p>UML（统一建模语言）是一种用于系统分析与设计的图形化建模语言，常用于表示系统结构、功能与行为。</p>
+<h4 id="用例（Use-Case）"><a href="#用例（Use-Case）" class="headerlink" title="用例（Use Case）"></a>用例（Use Case）</h4><p>表示系统能完成的某个功能（比如“发布动态”）。</p>
+<h4 id="用况场景（Use-Case-Scenario）"><a href="#用况场景（Use-Case-Scenario）" class="headerlink" title="用况场景（Use Case Scenario）"></a>用况场景（Use Case Scenario）</h4><p>描述用例实际执行过程中的具体流程。</p>
+<h4 id="用例图（Use-Case-Diagram）"><a href="#用例图（Use-Case-Diagram）" class="headerlink" title="用例图（Use Case Diagram）"></a>用例图（Use Case Diagram）</h4><p>展示用户与系统交互的功能结构。</p>
+<h4 id="泳道图（Swimlane-Diagram）"><a href="#泳道图（Swimlane-Diagram）" class="headerlink" title="泳道图（Swimlane Diagram）"></a>泳道图（Swimlane Diagram）</h4><p>用来清晰展示多个用户（或角色）之间业务流程的分工与协作。</p>
+<h4 id="数据流图（DFD）"><a href="#数据流图（DFD）" class="headerlink" title="数据流图（DFD）"></a>数据流图（DFD）</h4><p>用于表示信息在系统中如何流动与处理。</p>
+<h3 id="2-系统用例分析与用例图"><a href="#2-系统用例分析与用例图" class="headerlink" title="2 系统用例分析与用例图"></a>2 系统用例分析与用例图</h3><h4 id="用户角色（Actors）"><a href="#用户角色（Actors）" class="headerlink" title="用户角色（Actors）"></a>用户角色（Actors）</h4><ul>
+<li>普通用户</li>
+<li>审核员</li>
+<li>管理员</li>
+</ul>
+<h4 id="主要功能用例"><a href="#主要功能用例" class="headerlink" title="主要功能用例"></a>主要功能用例</h4><ul>
+<li>注册与登录</li>
+<li>发布动态（文字/图像/视频）</li>
+<li>点赞、评论</li>
+<li>举报动态</li>
+<li>审核处理</li>
+<li>用户管理</li>
+</ul>
+<h4 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h4><pre class="mermaid">graph TD
+    subgraph 用户系统
+        注册登录[1. 注册/登录]
+        发布动态[2. 发布动态]
+        点赞评论[3. 点赞/评论]
+        举报动态[4. 举报动态]
+        审核举报[5. 审核举报内容]
+        管理用户[6. 管理用户]
+    end
+
+    用户((用户)) --&gt; 注册登录
+    用户 --&gt; 发布动态
+    用户 --&gt; 点赞评论
+    用户 --&gt; 举报动态
+
+    审核员((审核员)) --&gt; 审核举报
+    管理员((管理员)) --&gt; 管理用户</pre>
+
+<h3 id="3-业务流程分析与泳道图"><a href="#3-业务流程分析与泳道图" class="headerlink" title="3 业务流程分析与泳道图"></a>3 业务流程分析与泳道图</h3><h4 id="业务场景：用户举报并审核流程"><a href="#业务场景：用户举报并审核流程" class="headerlink" title="业务场景：用户举报并审核流程"></a>业务场景：用户举报并审核流程</h4><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[用户]         → [举报按钮] → [填写原因] → [提交举报]</span><br><span class="line">[系统]         → [记录举报] → [通知审核员]</span><br><span class="line">[审核员]       → [查看举报内容] → [处理：通过/删除/警告]</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-数据结构分析与数据字典"><a href="#4-数据结构分析与数据字典" class="headerlink" title="4 数据结构分析与数据字典"></a>4 数据结构分析与数据字典</h3><h4 id="1-用户表"><a href="#1-用户表" class="headerlink" title="1. 用户表"></a>1. 用户表</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>主/外键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>user_id</code></td>
+<td>BIGINT</td>
+<td>主键</td>
+<td>用户唯一ID</td>
+</tr>
+<tr>
+<td><code>user_name</code></td>
+<td>VARCHAR(50)</td>
+<td>唯一</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td><code>gender</code></td>
+<td>ENUM(‘男’,’女’,’保密’)</td>
+<td>-</td>
+<td>性别</td>
+</tr>
+<tr>
+<td><code>birth</code></td>
+<td>DATE</td>
+<td>-</td>
+<td>出生日期</td>
+</tr>
+<tr>
+<td><code>school</code></td>
+<td>VARCHAR(100)</td>
+<td>-</td>
+<td>学校信息</td>
+</tr>
+<tr>
+<td><code>major</code></td>
+<td>VARCHAR(100)</td>
+<td>-</td>
+<td>专业</td>
+</tr>
+<tr>
+<td><code>hometown</code></td>
+<td>VARCHAR(100)</td>
+<td>-</td>
+<td>家乡</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>VARCHAR(100)</td>
+<td>-</td>
+<td>所在区域</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>VARCHAR(15)</td>
+<td>-</td>
+<td>手机号</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>VARCHAR(50)</td>
+<td>-</td>
+<td>邮箱地址</td>
+</tr>
+<tr>
+<td><code>register_time</code></td>
+<td>DATETIME</td>
+<td>-</td>
+<td>注册时间</td>
+</tr>
+</tbody></table>
+<h4 id="2-好友关系表"><a href="#2-好友关系表" class="headerlink" title="2. 好友关系表"></a>2. 好友关系表</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>主/外键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>user_id1</code></td>
+<td>BIGINT</td>
+<td>复合主键，外键</td>
+<td>发起方用户ID</td>
+</tr>
+<tr>
+<td><code>user_id2</code></td>
+<td>BIGINT</td>
+<td>复合主键，外键</td>
+<td>接收方用户ID</td>
+</tr>
+<tr>
+<td><code>create_time</code></td>
+<td>DATETIME</td>
+<td>-</td>
+<td>成为好友时间</td>
+</tr>
+</tbody></table>
+<h4 id="3-动态表"><a href="#3-动态表" class="headerlink" title="3. 动态表"></a>3. 动态表</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>主/外键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>moment_id</code></td>
+<td>BIGINT</td>
+<td>主键</td>
+<td>动态唯一ID</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td>BIGINT</td>
+<td>外键</td>
+<td>发布者ID</td>
+</tr>
+<tr>
+<td><code>text_content</code></td>
+<td>TEXT</td>
+<td>-</td>
+<td>动态文本内容</td>
+</tr>
+<tr>
+<td><code>create_time</code></td>
+<td>DATETIME</td>
+<td>-</td>
+<td>发布时间</td>
+</tr>
+</tbody></table>
+<h4 id="4-多媒体资源表"><a href="#4-多媒体资源表" class="headerlink" title="4. 多媒体资源表"></a>4. 多媒体资源表</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>主/外键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>media_id</code></td>
+<td>BIGINT</td>
+<td>主键</td>
+<td>媒体唯一ID</td>
+</tr>
+<tr>
+<td><code>moment_id</code></td>
+<td>BIGINT</td>
+<td>外键</td>
+<td>所属动态ID</td>
+</tr>
+<tr>
+<td><code>file_type</code></td>
+<td>VARCHAR(20)</td>
+<td>-</td>
+<td>媒体类型（图片/视频）</td>
+</tr>
+<tr>
+<td><code>file_path</code></td>
+<td>VARCHAR(255)</td>
+<td>-</td>
+<td>文件存储路径</td>
+</tr>
+</tbody></table>
+<h4 id="5-评论表"><a href="#5-评论表" class="headerlink" title="5. 评论表"></a>5. 评论表</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>主/外键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>comment_id</code></td>
+<td>BIGINT</td>
+<td>主键</td>
+<td>评论ID</td>
+</tr>
+<tr>
+<td><code>moment_id</code></td>
+<td>BIGINT</td>
+<td>外键</td>
+<td>评论所属动态</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td>BIGINT</td>
+<td>外键</td>
+<td>评论者ID</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>TEXT</td>
+<td>-</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td><code>create_time</code></td>
+<td>DATETIME</td>
+<td>-</td>
+<td>评论时间</td>
+</tr>
+</tbody></table>
+<h4 id="6-点赞表"><a href="#6-点赞表" class="headerlink" title="6. 点赞表"></a>6. 点赞表</h4><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>主/外键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>like_id</code></td>
+<td>BIGINT</td>
+<td>主键</td>
+<td>点赞记录ID</td>
+</tr>
+<tr>
+<td><code>moment_id</code></td>
+<td>BIGINT</td>
+<td>外键</td>
+<td>被点赞动态</td>
+</tr>
+<tr>
+<td><code>user_id</code></td>
+<td>BIGINT</td>
+<td>外键</td>
+<td>点赞者ID</td>
+</tr>
+<tr>
+<td><code>like_time</code></td>
+<td>DATETIME</td>
+<td>-</td>
+<td>点赞时间</td>
+</tr>
+</tbody></table>
+<h3 id="5-数据流图（DFD）"><a href="#5-数据流图（DFD）" class="headerlink" title="5 数据流图（DFD）"></a>5 数据流图（DFD）</h3><h4 id="一级DFD（系统模块级别）"><a href="#一级DFD（系统模块级别）" class="headerlink" title="一级DFD（系统模块级别）"></a>一级DFD（系统模块级别）</h4><div class="code-container" data-rel="Less"><figure class="iseeu highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+<span class="selector-tag">-------------</span>+        +<span class="selector-tag">------------</span>+        +<span class="selector-tag">-------------</span>+</span><br><span class="line">|   用户      | <span class="selector-tag">-----</span>&gt; |   系统     | <span class="selector-tag">-----</span>&gt; |   数据库    |</span><br><span class="line">+<span class="selector-tag">-------------</span>+        +<span class="selector-tag">------------</span>+        +<span class="selector-tag">-------------</span>+</span><br><span class="line">       |                     ↑                     ↓</span><br><span class="line">  <span class="selector-attr">[注册、发动态、评论]</span>    <span class="selector-attr">[审核功能]</span>         <span class="selector-attr">[数据读取/写入]</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="二级DFD（举报审核模块）"><a href="#二级DFD（举报审核模块）" class="headerlink" title="二级DFD（举报审核模块）"></a>二级DFD（举报审核模块）</h4><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户 -&gt; 提交举报 -&gt; 系统记录举报 -&gt; 审核员处理 -&gt; 更新状态</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="6-非功能性需求分析"><a href="#6-非功能性需求分析" class="headerlink" title="6 非功能性需求分析"></a>6 非功能性需求分析</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>性能</td>
+<td>平均响应时间 &lt; 1 秒；支持 1 万并发</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>使用 HTTPS、JWT 鉴权、防止SQL注入</td>
+</tr>
+<tr>
+<td>完整性</td>
+<td>使用外键约束保证用户-动态-媒体关系一致性</td>
+</tr>
+<tr>
+<td>可扩展性</td>
+<td>模块化开发，支持插件与新功能接入</td>
+</tr>
+<tr>
+<td>可维护性</td>
+<td>RESTful API，文档完备，代码规范化</td>
+</tr>
+</tbody></table>
+<hr>
+<p>非常好，接下来是第三部分：数据库系统设计——概念与逻辑设计。我们将基于你之前的SQL建库语句进行补充与完善，生成完整的ER模型，并进行规范化分析，确保其达到第三范式（3NF）。</p>
+<hr>
+<h2 id="task3"><a href="#task3" class="headerlink" title="task3"></a>task3</h2><p>基于以上需求规格说明书，完成如下任务：</p>
+<ol>
+<li>结合新补充的需求，完善ER图，形成完整的实体关系模型。</li>
+<li>结合前面几次作业设计的数据模式，在函数依赖的范畴判定原有模式的规范化程度，并根据需要补充新关系模式。并对不属于3NF的模式进行分解，使其达到3NF的要求。</li>
+</ol>
+<p>以上内容形成第一版的系统设计规格说明，以后持续完善。</p>
+<h4 id="核心实体："><a href="#核心实体：" class="headerlink" title="核心实体："></a>核心实体：</h4><ul>
+<li><code>User</code>：用户</li>
+<li><code>Moment</code>：动态（可含文字内容）</li>
+<li><code>Media</code>：多媒体资源（图像/视频）</li>
+<li><code>Comment</code>：评论</li>
+<li><code>Like</code>：点赞</li>
+<li><code>Report</code>：举报</li>
+<li><code>Friendship</code>：好友关系</li>
+</ul>
+<h4 id="实体关系简述（ER关系）："><a href="#实体关系简述（ER关系）：" class="headerlink" title="实体关系简述（ER关系）："></a>实体关系简述（ER关系）：</h4><ul>
+<li>一个 用户 发布多个 动态（1:N）</li>
+<li>一个 动态 包含多个 多媒体资源（1:N）</li>
+<li>一个 动态 可被多个 评论、多个 点赞</li>
+<li>一个 用户 可以举报多个 动态（1:N）</li>
+<li>用户之间 存在 好友关系（对称N:N）</li>
+</ul>
+<h4 id="ER图逻辑描述"><a href="#ER图逻辑描述" class="headerlink" title="ER图逻辑描述"></a>ER图逻辑描述</h4><div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[User]──&lt;发布&gt;──[Moment]──&lt;包含&gt;──[Media]</span><br><span class="line">   │              │             │</span><br><span class="line">   └──&lt;评论&gt;─────┘             └──&lt;点赞&gt;</span><br><span class="line">   └──&lt;举报&gt;─────┘</span><br><span class="line">   └──&lt;好友关系&gt;──[User]</span><br></pre></td></tr></table></figure></div>
+<h3 id="2-规范化分析与数据模式调整"><a href="#2-规范化分析与数据模式调整" class="headerlink" title="2 规范化分析与数据模式调整"></a>2 规范化分析与数据模式调整</h3><p>挺规范的 大概</p>
+<h4 id="补充表：Friendship（好友关系）"><a href="#补充表：Friendship（好友关系）" class="headerlink" title="补充表：Friendship（好友关系）"></a>补充表：Friendship（好友关系）</h4><div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE TABLE</span> friendship (</span><br><span class="line">  user_id1 <span class="type">BIGINT</span>,</span><br><span class="line">  user_id2 <span class="type">BIGINT</span>,</span><br><span class="line">  create_time DATETIME,</span><br><span class="line">  <span class="keyword">PRIMARY KEY</span> (user_id1, user_id2),</span><br><span class="line">  <span class="keyword">FOREIGN KEY</span> (user_id1) <span class="keyword">REFERENCES</span> <span class="keyword">user</span>(user_id),</span><br><span class="line">  <span class="keyword">FOREIGN KEY</span> (user_id2) <span class="keyword">REFERENCES</span> <span class="keyword">user</span>(user_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></div>
+<hr>
+<h2 id="extask1"><a href="#extask1" class="headerlink" title="extask1"></a>extask1</h2><p>我们来逐步完成题目中的两个任务：</p>
+<hr>
+<h2 id="第7题：学院的E-R图设计"><a href="#第7题：学院的E-R图设计" class="headerlink" title="第7题：学院的E-R图设计"></a>第7题：学院的E-R图设计</h2><p>实体：</p>
+<ol>
+<li>系：系编号、系名</li>
+<li>班级：班级编号、班级名</li>
+<li>教研室：教研室编号、教研室名</li>
+<li>教员：职工号、姓名、职称</li>
+<li>学生：学号、姓名、学历</li>
+<li>课程：课程编号、课程名</li>
+<li>成绩：成绩（联系的属性）</li>
+</ol>
+<p>联系：</p>
+<ul>
+<li>系与班级：一个系有多个班级（1:N）</li>
+<li>系与教研室：一个系有多个教研室（1:N）</li>
+<li>教研室与教员：一个教研室有多个教员（1:N）</li>
+<li>教员与研究生（学生）：教授和副教授指导多个研究生（1:N，可设为“指导”）</li>
+<li>班级与学生：一个班级有多个学生（1:N）</li>
+<li>学生与课程：多对多，学生选修课程，产生一个成绩（M:N，有联系“选修”）</li>
+</ul>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[系]───&lt;包含&gt;───[班级]</span><br><span class="line"> │                 │</span><br><span class="line"> └───&lt;设有&gt;───[教研室]───&lt;拥有&gt;───[教员]───&lt;指导&gt;───[学生]</span><br><span class="line">                                  ▲                 │</span><br><span class="line">[课程]───&lt;授课/选修&gt;───[学生]───&lt;属于&gt;───[班级]      │</span><br><span class="line">         （含成绩）                                  │</span><br><span class="line">                                                   ▼</span><br><span class="line">                                                [研究生]</span><br></pre></td></tr></table></figure></div>
+<hr>
+<h2 id="第8题：工厂的E-R图设计"><a href="#第8题：工厂的E-R图设计" class="headerlink" title="第8题：工厂的E-R图设计"></a>第8题：工厂的E-R图设计</h2><p>实体：</p>
+<ol>
+<li>产品：产品号，产品名</li>
+<li>零件：零件号，零件名</li>
+<li>原材料：原材料号，原材料名，类别</li>
+<li>仓库：仓库号，仓库名</li>
+</ol>
+<p>联系：</p>
+<ul>
+<li>产品由多个零件组成（M:N）</li>
+<li>零件由不同原材料组成（M:N）</li>
+<li>零件归属于某个产品，存储在某个仓库（多对一）</li>
+<li>原材料按类别放入不同仓库（多对一）</li>
+</ul>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[产品]───&lt;由...组成&gt;───[零件]───&lt;由...组成&gt;───[原材料]</span><br><span class="line">  │                         │                         │</span><br><span class="line">  └────&lt;存放&gt;─────────────┘                         │</span><br><span class="line">        （仓库）                                     │</span><br><span class="line">                                                    └───&lt;分类存放&gt;───[仓库]</span><br></pre></td></tr></table></figure></div>
+
+
+<hr>
+<h3 id="第7题关系模型："><a href="#第7题关系模型：" class="headerlink" title="第7题关系模型："></a>第7题关系模型：</h3><ol>
+<li>系(系编号 PK, 系名)</li>
+<li>教研室(教研室编号 PK, 教研室名, 系编号 FK)</li>
+<li>老师(职工号 PK, 姓名, 职称, 教研室编号 FK)</li>
+<li>班级(班级编号 PK, 班级名, 系编号 FK)</li>
+<li>学生(学号 PK, 姓名, 学历, 班级编号 FK)</li>
+<li>职工(职工号 FK, 学号 FK) — 教员指导学生（职工号限制为教授/副教授）</li>
+<li>课程(课程编号 PK, 课程名)</li>
+<li>选课(学号 FK, 课程编号 FK, 成绩) — 学生选课成绩，多对多关系</li>
+</ol>
+<ul>
+<li>所有基本关系均为3NF，若每个非主属性只依赖于主键。</li>
+<li>选课关系不满足BCNF（因为学号, 课程编号 → 成绩，但课程编号 → 成绩 不成立）=&gt; 满足BCNF。</li>
+</ul>
+<hr>
+<h3 id="第8题关系模型："><a href="#第8题关系模型：" class="headerlink" title="第8题关系模型："></a>第8题关系模型：</h3><ol>
+<li>产品(产品号 PK, 产品名)</li>
+<li>零件(零件号 PK, 零件名)</li>
+<li>原材料(原材料号 PK, 原材料名, 类别)</li>
+<li>仓库(仓库号 PK, 仓库名)</li>
+<li>产品零件(产品号 FK, 零件号 FK) — M:N 关系</li>
+<li>零件原材料(零件号 FK, 原材料号 FK) — M:N 关系</li>
+<li>零件仓库(零件号 PK, 仓库号 FK) — 零件存在哪个仓库（一对多）</li>
+<li>原料仓库(原材料号 PK, 仓库号 FK) — 原材料存在哪个仓库（一对多）</li>
+</ol>
+<ul>
+<li>所有关系为3NF</li>
+<li>M:N 关系转化后，每个表的主键是复合主键，满足BCNF</li>
+</ul>
+<hr>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>标题:</strong> 数据库系统原理作业6</li>
+        <li><strong>作者:</strong> GuidingStar</li>
+        <li><strong>创建于
+                :</strong> 2025-05-04 21:40:15</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2025-06-06 18:29:20
+            </li>
+        
+        <li>
+            <strong>链接:</strong> https://nucleargezi.github.io/2025/05/04/数据库系统原理作业6/
+        </li>
+        <li>
+            <strong>
+                版权声明:
+            </strong>
+            
+
+            
+                本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/05/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%AE%9E%E9%AA%8C4/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">计算机网络-实验4</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/04/27/%E5%A4%A7%E6%95%B0%E6%8D%AElab2/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">大数据lab2</span>
+						<span class="post-nav-item">下一篇</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        评论
+    </div>
+    
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'nucleargezi/my_talk',
+                'data-repo-id': 'R_kgDONqOB8w',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDONqOB884CmBU0',
+                'data-mapping': 'pathname',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '1',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">目录</div>
+		<div class="page-title">数据库系统原理作业6</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#task1"><span class="nav-text">task1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%B3%BB%E7%BB%9F%E5%90%8D%E7%A7%B0"><span class="nav-text">1 系统名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BB%84%E7%BB%87%E6%9C%BA%E6%9E%84%E4%B8%8E%E4%B8%9A%E5%8A%A1%E9%83%A8%E9%97%A8"><span class="nav-text">2 组织机构与业务部门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%94%A8%E6%88%B7%E4%B8%8E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF"><span class="nav-text">3 用户与业务场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-text">4 系统性能指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E7%B3%BB%E7%BB%9F%E6%88%98%E7%95%A5%E5%9C%B0%E4%BD%8D"><span class="nav-text">5 系统战略地位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%8A%95%E8%B5%84%E4%B8%8E%E6%94%B6%E7%9B%8A"><span class="nav-text">6 投资与收益</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E4%B8%8E%E5%8F%AF%E8%A1%8C%E6%80%A7"><span class="nav-text">7 技术选型与可行性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%9A%E5%8A%A1%E4%B8%93%E5%AE%B6%E8%AE%BA%E8%AF%81"><span class="nav-text">业务专家论证</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#task2"><span class="nav-text">task2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-UML%E5%9F%BA%E7%A1%80%E4%B8%8E%E7%94%A8%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">1 UML基础与用例分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%B3%BB%E7%BB%9F%E7%94%A8%E4%BE%8B%E5%88%86%E6%9E%90%E4%B8%8E%E7%94%A8%E4%BE%8B%E5%9B%BE"><span class="nav-text">2 系统用例分析与用例图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90%E4%B8%8E%E6%B3%B3%E9%81%93%E5%9B%BE"><span class="nav-text">3 业务流程分析与泳道图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8"><span class="nav-text">4 数据结构分析与数据字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%EF%BC%88DFD%EF%BC%89"><span class="nav-text">5 数据流图（DFD）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E9%9D%9E%E5%8A%9F%E8%83%BD%E6%80%A7%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-text">6 非功能性需求分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#task3"><span class="nav-text">task3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%A7%84%E8%8C%83%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%BC%8F%E8%B0%83%E6%95%B4"><span class="nav-text">2 规范化分析与数据模式调整</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extask1"><span class="nav-text">extask1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC7%E9%A2%98%EF%BC%9A%E5%AD%A6%E9%99%A2%E7%9A%84E-R%E5%9B%BE%E8%AE%BE%E8%AE%A1"><span class="nav-text">第7题：学院的E-R图设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC8%E9%A2%98%EF%BC%9A%E5%B7%A5%E5%8E%82%E7%9A%84E-R%E5%9B%BE%E8%AE%BE%E8%AE%A1"><span class="nav-text">第8题：工厂的E-R图设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC7%E9%A2%98%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="nav-text">第7题关系模型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC8%E9%A2%98%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="nav-text">第8题关系模型：</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">动身的苍穹中有着邂逅与离别</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2025</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">GuidingStar</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共撰写了 30 篇文章
+                    </span>
+                    
+                        <span>
+                            共 71.1k 字
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">访问人数</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">总访问量</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">由 <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 驱动</span>
+            <span class="text-sm lg:block">主题&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已运行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小时 <span class="odometer" id="runtime_minutes"></span> 分钟 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
