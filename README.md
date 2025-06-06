@@ -122,15 +122,10 @@ Improve website:
     - [ ] `@myriaddreamin/tylant-search`
     - [x] `@myriaddreamin/tylant-theme-toggle`
   - Typst Kit
-    - [ ] `@myriaddreamin/tylant-typst-kit`
+    - [ ] `@myriaddreamin/tylant`
       - focus on concept: `post` collections
     - [x] `@myriaddreamin/tylant-pdf-archive`
       - focus on concept: `pdf` collections
-  - People who don't like backend could remove them:
-    - [ ] `@myriaddreamin/tylant-backend-client`
-    - [ ] `@myriaddreamin/tylant-click`
-    - [x] `@myriaddreamin/tylant-like-reaction`
-    - [x] `@myriaddreamin/tylant-comment`
 
 ## Credit
 
