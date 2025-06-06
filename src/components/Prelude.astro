@@ -1,0 +1,37 @@
+---
+
+---
+
+<style is:global>
+  .prelude {
+    --prelude-margin: 1em;
+    font-family: serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: min(56rem, calc(100% - 2em));
+    margin: 0 auto;
+    margin-top: var(--prelude-margin);
+  }
+  .prelude p {
+    margin: 0 var(--prelude-margin);
+  }
+  .prelude .emph-ch {
+    color: var(--accent);
+  }
+  .prelude .author {
+    text-align: right;
+  }
+</style>
+<div class="prelude">
+  <p>
+    <span class="emph-ch">L</span>ike starlight that is light years on the go
+    <br />
+    <span class="emph-ch">F</span>rom far away and takes light years arriving<span
+      class="emph-ch">.</span
+    >
+  </p>
+  <p class="author">
+    <span>— The Flight Path, Seamus Heaney</span>
+  </p>
+  <slot />
+</div>

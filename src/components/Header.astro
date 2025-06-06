@@ -9,11 +9,18 @@ import sunFlower from "../../assets/sun-flower.svg?raw";
 // import moonFlower from "../../assets/moon-flower.svg?raw";
 
 interface Props {
+  breadcrumbs: string;
   articleId?: string;
 }
 
-const { articleId } = Astro.props;
+const { articleId, breadcrumbs } = Astro.props;
 const pdfArchives = await getCollection("archive");
+
+const links: Record<string, string> = {
+  Posts: `${kUrlBase}/article`,
+  Friends: `${kUrlBase}/friend`,
+  About: `${kUrlBase}/about`,
+};
 ---
 
 <style is:global>
@@ -39,13 +46,22 @@ const pdfArchives = await getCollection("archive");
 </style>
 <header>
   <nav>
-    <h2 class="logo"><a href={`${kUrlBase}/`}>{kSiteLogo}</a></h2>
-    <div class="internal-links">
+    <h2 class="logo">
+      <a href={`${kUrlBase}/`}>{kSiteLogo}</a>{
+        breadcrumbs && (
+          <>
+            <span> / </span>
+            {<a href={links[breadcrumbs]}>{breadcrumbs}</a>}
+          </>
+        )
+      }
+    </h2>
+    <!-- <div class="internal-links">
       <HeaderLink href={`${kUrlBase}/`}>Home</HeaderLink>
       <HeaderLink href={`${kUrlBase}/article`}>Posts</HeaderLink>
       <HeaderLink href={`${kUrlBase}/friend`}>Friends</HeaderLink>
       <HeaderLink href={`${kUrlBase}/about`}>About</HeaderLink>
-    </div>
+    </div> -->
     <div class="social-links">
       <span style="width: 2em;" aria-hidden="true">&nbsp;</span>
       <ThemeToggle icon={sunFlower} />
@@ -98,38 +114,22 @@ const pdfArchives = await getCollection("archive");
     justify-content: space-between;
     max-width: min(56rem, calc(100% - 2em));
     margin: auto;
+    padding: 1em 0;
   }
   nav a {
-    padding: 1em 0.5em;
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
+    /* padding: 1em 0.5em; */
+    /* border-bottom: 4px solid transparent; */
+    text-decoration: underline 1.5px solid var(--accent);
   }
   nav a.active {
     text-decoration: none;
-    border-bottom-color: var(--accent);
+    /* border-bottom-color: var(--accent); */
+  }
+  nav .icon {
+    padding: 0 0.5em;
   }
   .social-links,
   .social-links a {
     display: flex;
-  }
-  @media (max-width: 680px) {
-    .logo,
-    .social-links a.ls-icon {
-      display: none;
-    }
-  }
-  @media (max-width: 400px) {
-    nav {
-      font-size: 14px;
-    }
-  }
-  @media (max-width: 370px) {
-    .internal-links {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .internal-links a {
-      flex: 1 0 70px;
-    }
   }
 </style>

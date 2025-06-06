@@ -10,6 +10,7 @@ import {
   Footer,
   FormattedDate,
   Header,
+  Prelude,
   RecentComment,
 } from "$components";
 import {
@@ -61,10 +62,27 @@ const recent5Posts = posts.slice(0, 5);
       .monthly li {
         font-style: italic;
       }
+      h1 {
+        font-size: 0;
+      }
+      main {
+        margin-top: 2em;
+      }
     </style>
   </head>
   <body>
-    <Header />
+    <Header breadcrumbs="" />
+    <Prelude>
+      <p style="margin-top: 1em;">
+        <span class="emph-ch">I</span>n {kSiteTitle}, discover my <a
+          href=`${kUrlBase}/article`>Posts</a
+        ><span class="emph-ch">,</span> my <a href=`${kUrlBase}/friend`
+          >Friends</a
+        ><span class="emph-ch">, </span>and that <a href=`${kUrlBase}/about`
+          >About Myriad Dreamin.</a
+        >
+      </p>
+    </Prelude>
     <main>
       <section aria-label="Prelude">
         <h1 set:html={kSiteIndexTitle} />

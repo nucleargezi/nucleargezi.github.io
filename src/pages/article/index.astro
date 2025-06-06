@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 
 import { TagList, Search } from "@myriaddreamin/tylant";
 
-import { BaseHead, Footer, FormattedDate, Header } from "$components";
+import { BaseHead, Footer, FormattedDate, Header, Prelude } from "$components";
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
 import "$styles/IndexPostList.css";
@@ -34,7 +34,8 @@ const posts = (await getCollection("blog")).sort(
     </style>
   </head>
   <body>
-    <Header />
+    <Header breadcrumbs="Posts" />
+    <Prelude />
     {kEnableSearch && <Search />}
     <main class={kEnableSearch ? "search-enabled" : ""}>
       <section>

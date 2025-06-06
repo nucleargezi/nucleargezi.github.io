@@ -22,11 +22,11 @@
   #context if not is-external.get() { blog-desc }
 
   #en[
-    I'm a student. I make compilers and software in my spare time. I have a fictional character named raihamiya.
+    A student, that makes compilers and software in my spare time, that has a fictional character named raihamiya.
   ]
 
   #zh[
-    我是一名学生。我在空余时间开发编译器和软件。我拥有一个名为「礼羽みや」的虚构角色。
+    一名学生。在空余时间开发编译器和软件。拥有一个名为「礼羽みや」的虚构角色。
   ]
 
   #link("https://github.com/Myriad-Dreamin")[GitHub]/#link("https://skeb.jp/@camiyoru")[Skeb]. Buy me a coffee on #link("https://app.unifans.io/c/camiyoru")[Unifans]/#link("https://afdian.com/a/camiyoru")[Afdian].

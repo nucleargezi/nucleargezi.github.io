@@ -25,10 +25,22 @@ interface IdExt {
   id: string;
 }
 
-type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
+type Props = CollectionEntry<"blog">["data"] &
+  (IdExt | { id: false }) & {
+    breadcrumbs: string;
+  };
 
-const { id, title, description, date, updatedDate, tags, author, ...rest } =
-  Astro.props;
+const {
+  id,
+  title,
+  description,
+  date,
+  updatedDate,
+  tags,
+  author,
+  breadcrumbs,
+  ...rest
+} = Astro.props;
 const stat: { like?: number; click?: number } =
   ((kEnableClick || kEnableReaction) &&
     kArticleStats.find((stat) => stat.id === id)) ||
@@ -128,7 +140,7 @@ const pdfArchives = await getCollection("archive");
   </head>
 
   <body>
-    <Header articleId={id || undefined} />
+    <Header articleId={id || undefined} breadcrumbs={breadcrumbs} />
     <main>
       <article>
         <div class="prose">
