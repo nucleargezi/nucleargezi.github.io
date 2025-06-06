@@ -3,12 +3,11 @@
 // all pages through the use of the <BaseHead /> component.
 import "$styles/global.css";
 import "$styles/font.css";
-import interWoff2 from '@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2?url';
-import interItalicWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-italic.woff2?url';
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2?url";
+import interItalicWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-italic.woff2?url";
 
+import { BackendClientScript, ThemeInit } from "$components";
 import { kUrlBase, kSiteTitle, kServers } from "$consts";
-import { ThemeInit } from "@myriaddreamin/tylant-theme-toggle";
-import { BackendClientScript } from "$components";
 
 interface Props {
   title: string;
@@ -34,7 +33,6 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
 />
 <meta name="generator" content={Astro.generator} />
 
-
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
@@ -59,8 +57,20 @@ const { title, description, image = "/blog-heading.webp" } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 <meta property="twitter:image:alt" content="Kamiya's Character Design" />
 
-<link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin="anonymous" />
-<link rel="preload" as="font" type="font/woff2" href={interItalicWoff2} crossorigin="anonymous" />
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={interWoff2}
+  crossorigin="anonymous"
+/>
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={interItalicWoff2}
+  crossorigin="anonymous"
+/>
 
-<ThemeInit/>
-<BackendClientScript kServers={kServers}/>
+<ThemeInit />
+<BackendClientScript kServers={kServers} />

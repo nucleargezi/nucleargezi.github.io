@@ -2,11 +2,16 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 import * as config from "astro:env/client";
+
 import STATS from "../content/snapshot/article-stats.json";
 import COMMENTS from "../content/snapshot/article-comments.json";
 
 type Comment = (typeof COMMENTS)[number];
 
+/**
+ * Whether to enable theming (dark & light mode).
+ */
+export const kEnableTheming = true;
 /**
  * Whether to enable backend, required by click and comment feature.
  */

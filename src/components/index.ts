@@ -1,12 +1,5 @@
-// import BackendClientScript from "@myriaddreamin/tylant-backend-client";
-
-import { kEnableBackend, kEnableClick } from "$consts";
-import Stub from "./Stub.astro";
-
-export const BackendClientScript = kEnableBackend
-  ? (await import("@myriaddreamin/tylant-backend-client")).default
-  : Stub;
-
-export const PostClick = kEnableClick
-  ? (await import("@myriaddreamin/tylant-click")).PostClick
-  : Stub;
+export { default as BaseHead } from "$components/BaseHead.astro";
+export { default as Footer } from "$components/Footer.astro";
+export { default as FormattedDate } from "$components/FormattedDate.astro";
+export { default as Header } from "$components/Header.astro";
+export * from "./deps";

@@ -1,7 +1,7 @@
-import rss, { type RSSFeedItem } from "@astrojs/rss";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 import type { APIContext } from "astro";
+import rss, { type RSSFeedItem } from "@astrojs/rss";
+import { getCollection, type CollectionEntry } from "astro:content";
+
 import { kUrlBase, kSiteTitle, kSiteDescription } from "$consts";
 
 type Kind = "blog" | "archive";
