@@ -30,6 +30,8 @@ export default defineConfig({
       SITE_TITLE: EnvStr(),
       SITE_INDEX_TITLE: EnvStr(),
       SITE_DESCRIPTION: EnvStr(),
+      SITE_OWNER: EnvStr(),
+      SITE_SOURCE_URL: EnvStr(),
 
       // # Please remove them if you don't like to use backend.
       // `;` separated list of backend addresses

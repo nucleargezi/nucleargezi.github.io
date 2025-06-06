@@ -59,6 +59,16 @@ export const kSiteIndexTitle: string = config.SITE_INDEX_TITLE || kSiteTitle;
  */
 export const kSiteDescription: string = config.SITE_DESCRIPTION || "My blog.";
 /**
+ * The name of the site owner.
+ */
+export const kSiteOwner: string = config.SITE_OWNER || "Myriad-Dreamin";
+/**
+ * The source code URL of the site.
+ *
+ * Disable this if you don't want to show the source code link.
+ */
+export const kSiteSourceUrl: string | undefined = config.SITE_SOURCE_URL;
+/**
  * The baidu verification code, used for SEO.
  */
 export const kBaiduVeriCode: string | undefined =
