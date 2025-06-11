@@ -31,6 +31,11 @@ Typst syntax hightlight are specially handled internally:
 
 = Images
 
+/// Parses a `.env` file into a dictionary.
+/// TODO: multiple-line values are not supported.
+///
+/// - data (str): The content of the `.env` file.
+/// -> dictionary
 #let parse-env(data) = {
   let lines = data.split("\n").map(it => it.trim()).filter(it => it != "" and not it.starts-with("#"))
   let env = (:)
@@ -44,20 +49,39 @@ Typst syntax hightlight are specially handled internally:
     .to-dict()
 }
 
-// todo: what if I would like use other configuration like `.env-production`
-#let env-data = parse-env(read("/.env"))
+// Gets url-base from the `.env` file
+#let url-base = {
+  // todo: what if I would like use other configuration like `.env-production`
+  let env-data = parse-env(read("/.env"))
 
-#let url-base = env-data.at("URL_BASE", default: "")
-#if not url-base.ends-with("/") {
-  url-base = url-base + "/"
+  let url-base = env-data.at("URL_BASE", default: "")
+  if not url-base.ends-with("/") {
+    url-base = url-base + "/"
+  }
+  url-base
 }
-#let resolve(path) = (path.replace("../../public/", url-base).replace("/public/", url-base))
+
+// Resolves the path to the image source
+#let resolve(path) = (
+  path.replace(
+    // Substitutes the paths with some assumption.
+    regex("^[./]*/public/"),
+    url-base,
+  )
+)
 
 #show image: it => {
   html.elem(
     "img",
-    attrs: (src: resolve(it.source), style: "width: 33%; display: block; margin: auto;"),
+    attrs: (
+      // Sets src
+      src: resolve(it.source),
+      // This is only set for good look in the follow tests.
+      style: "width: 33%; display: block; margin: auto;",
+    ),
   )
 }
 
-#image("../../public/favicon.svg")
+// #image("../../public/favicon.svg")
+
+// #image("/public/favicon.svg")
