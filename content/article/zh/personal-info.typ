@@ -1,7 +1,7 @@
 #import "/typ/templates/blog.typ": *
-#show: main-en.with(
-  title: "Personal Information",
-  desc: [This is a test post.],
+#show: main-zh.with(
+  title: "个人信息",
+  desc: [这是一篇测试文章。],
   date: "2025-04-25",
   tags: (
     blog-tags.misc,
@@ -9,7 +9,7 @@
   show-outline: false,
 )
 
-= About me
+= 关于我
 
 #include "/content/other/about.typ"
 
@@ -19,8 +19,8 @@
 - 生日：12月24日
 - 年龄：14
 
-= Personal Information
+= 个人信息
 
-- Name：Miya Reiha
-- Birthday：12. 24
-- Year：14
+- 名字：Miya Reiha
+- 生日：12月24日
+- 年龄：14

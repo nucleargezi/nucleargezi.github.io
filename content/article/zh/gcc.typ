@@ -1,7 +1,7 @@
 #import "/typ/templates/blog.typ": *
-#show: main-en.with(
-  title: "Maintaining GCC",
-  desc: [Some useful commands to maintain gcc globally.],
+#show: main-zh.with(
+  title: "维护 GCC",
+  desc: [一些全局维护 gcc 的有用命令。],
   date: "2025-05-12",
   tags: (
     blog-tags.programming,
@@ -10,7 +10,7 @@
   ),
 )
 
-= List G++ Packages
+= 列出 G++ 包
 
 ```bash
 sudo apt list "gcc-*" | grep -P "gcc-\d+\/"
@@ -29,25 +29,25 @@ sudo apt-get install build-essential
 sudo apt-get install update-alternatives
 ```
 
-= Using specific version of gcc
+= 使用特定版本的 gcc
 
 ```bash
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 7
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 7
 ```
 
-= Checking versions of configured gcc
+= 检查已配置的 gcc 版本
 
 ```bash
 sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
 ```
 
-= GNU Toolchain Directory Layout
+= GNU 工具链目录结构
 
-- `bin` - Executable files
-- `include` - Header files
-- `lib` - Libraries
-- `libexec` - Executable files for internal use
+- `bin` - 可执行文件
+- `include` - 头文件
+- `lib` - 库文件
+- `libexec` - 内部使用的可执行文件
 
-The directory layout is important, because `gcc` will find files in these directories by path relative to `which gcc`.
+目录结构很重要，因为 `gcc` 会根据相对于 `which gcc` 的路径在这些目录中查找文件。

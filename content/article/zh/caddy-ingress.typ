@@ -1,7 +1,7 @@
 #import "/typ/templates/blog.typ": *
-#show: main-en.with(
-  title: "Hosting Multiple Websites using Caddy",
-  desc: [To host multiple websites on a single server, I tried nginx, caddy, and traefik, and finally use caddy.],
+#show: main-zh.with(
+  title: "使用Caddy托管多个网站",
+  desc: [为了在单台服务器上托管多个网站, 我尝试了nginx、caddy和traefik, 最终选择了caddy。],
   date: "2025-06-02T10:50:39+08:00",
   tags: (
     blog-tags.dev-ops,
@@ -17,11 +17,11 @@
   ),
 )
 
-I bought a VPS to host my websites, a home page (i.myriad-dreamin.com) and a mirror site of my blog (cn.myriad-dreamin.com). Since Cloudflare is not available in my country, I'd better host them on my own server instead of proxying them through Cloudflare.
+我购买了VPS来托管我的网站：个人主页(i.myriad-dreamin.com)和博客镜像站(cn.myriad-dreamin.com)。由于Cloudflare在我国不可用，最好在自有服务器上托管而非通过Cloudflare代理。
 
-= Directory Structure
+= 目录结构
 
-The directory structure of the websites is as follows:
+网站目录结构如下：
 
 ```dir-tree
 deployment
@@ -45,15 +45,15 @@ deployment
     └── www
 ```
 
-The `docker-compose.yml` file contains all containers running for the websites The `dist` directory contains the static files for each website. The `caddy` or `nginx` have their owned directory to store the configuration files and logs. A `certbot` directory contains the SSL certificates and the webroot for certbot.
+`docker-compose.yml`包含所有运行网站的容器。`dist`目录存储各网站的静态文件。`caddy`或`nginx`拥有独立目录存放配置文件和日志。`certbot`目录包含SSL证书和certbot的webroot。
 
-= Serving `dist` through HTTP File Server
+= 通过HTTP文件服务器提供`dist`内容
 
-I don't want to use integrated file servers from `caddy` or `nginx`. I would like have some fine-grained control over the files. For example, I would like to cache fonts permanently. So I seek a simple HTTP file server implementation. As usual, I first tried to find one written in Rust, but failed.
+我不想使用`caddy`或`nginx`内置的文件服务器，需要更精细的控制（例如永久缓存字体）。因此寻找简单的HTTP文件服务器实现。照例先尝试Rust方案但未成功。
 
-I have to admit that Rust is not a good (or simple) choice to build web services. There are some heavy engine, but I don't want to use them. If I turn my eyes to lightweight ones, I find they are not well maintained or not feature complete. My last try was #link("https://github.com/tiny-http/tiny-http")[tiny-http], which deserves a look. It is almost great, but I'm still not satisfied with it.
+必须承认Rust并非构建Web服务的最佳（或简单）选择。虽有重型框架但不符合需求。转向轻量方案时发现它们维护不善或功能不全。最后尝试了#link("https://github.com/tiny-http/tiny-http")[tiny-http]，值得关注但仍有不足。
 
-If I'm going to build some network things, why not use Go? I had good memory of writing network tools and services in Go. It is an indisputable good start. I start it with less than 10 lines of code, and it works well:
+既然要构建网络工具，为何不用Go？我对用Go编写网络工具印象深刻。这是无可争议的良好起点，不到10行代码即可运行：
 
 ```go
 package main
@@ -77,7 +77,7 @@ func main() {
 }
 ```
 
-I also made some other improvments, like `gzip` compression:
+我还添加了`gzip`压缩等改进：
 
 ```go
 // https://gist.github.com/bryfry/09a650eb8aac0fb76c24
@@ -111,7 +111,7 @@ func Gzip(handler http.Handler) http.Handler {
 }
 ```
 
-And change the main function to use the `Gzip` middleware:
+并修改主函数使用`Gzip`中间件：
 
 ```diff
  func main() {
@@ -123,21 +123,21 @@ And change the main function to use the `Gzip` middleware:
  }
 ```
 
-Again, I only used standard libraries to build my custom tools. `gopls`, as one of my favorite language server, completed all of the package imports automatically.
+再次仅用标准库构建自定义工具。最爱的语言服务器`gopls`自动完成了所有包导入。
 
-= HTTPS File Server?
+= 需要HTTPS文件服务器吗？
 
-About 4 years ago, I had experience to build a HTTPS file server using Go, but this is not a best practice in my view. Considering that I have to make an ingress controller, the SSL/TLS could be handled in middle. This mitigates both the complexity and attack surface of http services.
+四年前曾用Go构建HTTPS文件服务器，但这不是最佳实践。考虑到需设置入口控制器，SSL/TLS可在中间层处理，降低复杂度和攻击面。
 
-= Building the HTTP File Server Container
+= 构建HTTP文件服务器容器
 
-It is not needed to build a custom image for the file server, if you use the following command to build the Go program:
+若使用以下命令构建Go程序，无需自定义镜像：
 
 ```bash
 CGO_ENABLED=0 go build -tags netgo -o target/file-server ./cmd/file-server
 ```
 
-Simply start a `alpine` container with the file server binary mounted as a volume, and it will work well. The `docker-compose.yml` file is as follows:
+只需启动`alpine`容器并挂载文件服务器二进制文件即可正常工作。`docker-compose.yml`如下：
 
 ```yml
 services:
@@ -154,11 +154,11 @@ services:
         command: 'file-server :80'
 ```
 
-= Building Ingress using Nginx
+= 使用Nginx构建入口
 
-I used both Caddy and Nginx. Both of them are good in my mind. Since it is not so disturbing to try both of them, I first tried Nginx, whose docker image is maintained by docker officially：
+我同时尝试了Caddy和Nginx，两者都不错。由于试错成本不高，先尝试了Docker官方维护的Nginx镜像：
 
-First, add a container for Nginx in `docker-compose.yml`:
+首先在`docker-compose.yml`添加Nginx容器：
 
 ```yml
 services:
@@ -180,7 +180,7 @@ services:
       command:  nginx -g 'daemon off;'
 ```
 
-And add a configuration file `nginx.conf` in `nginx/conf` directory:
+在`nginx/conf`目录创建配置文件`nginx.conf`：
 
 ```conf
 events {
@@ -204,13 +204,13 @@ http {
 }
 ```
 
-Note that `location /.well-known/acme-challenge/` is intercepted for HTTP challenge from certbot, which is used to obtain SSL certificates. The `location /` block redirects all HTTP traffic to HTTPS.
+注意`location /.well-known/acme-challenge/`用于certbot的HTTP挑战认证，`location /`将所有HTTP流量重定向到HTTPS。
 
-Then, running `docker compose up -d nginx` to start the Nginx container. The Nginx will listen on port 80 and 443.
+运行`docker compose up -d nginx`启动Nginx容器，监听80和443端口。
 
-= Making SSL Certificates using Certbot
+= 使用Certbot生成SSL证书
 
-Add a `certbot` container in `docker-compose.yml`:
+在`docker-compose.yml`添加`certbot`容器：
 
 ```yml
 services:
@@ -222,19 +222,16 @@ services:
           - ./certbot/ssl:/etc/letsencrypt:rw
 ```
 
-Dry running the certbot to check if everything is fine:
+执行试运行检查配置：
 ```bash
 docker compose run --rm  certbot certonly --webroot --webroot-path /usr/share/certbot/www/ --dry-run -d orange.myriad-dreamin.com
 ```
 
-And then remove the `--dry-run` flag to obtain the real certificates.
+移除`--dry-run`标志获取真实证书。成功后证书将存储在`certbot/ssl`目录。
 
-If everything is fine, the certificates will be stored in `certbot/ssl` directory.
+= 通过Nginx提供HTTPS服务
 
-= Serving HTTPS using Nginx
-
-The SSL certificates should be accessible in `/usr/share/certbot/ssl/live/orange.myriad-dreamin.com`. Let's add a server block in `nginx.conf` to serve the HTTPS traffic:
-
+SSL证书应位于`/usr/share/certbot/ssl/live/orange.myriad-dreamin.com`。在`nginx.conf`添加服务器块处理HTTPS流量：
 
 ```conf
 http {
@@ -268,17 +265,15 @@ http {
 }
 ```
 
-Since we use `docker compose`, The `http://homepage` is resolved by the Docker's internal DNS to the `homepage` container, which is running the HTTP file server we started earlier.
+在Docker Compose环境下，`http://homepage`通过Docker内部DNS解析到文件服务器容器。添加新站点只需复制`orange.myriad-dreamin.com`的两个服务器块并修改`server_name`。
 
-To support a new site, just copy the two server blocks (another one is in the previous section) about `orange.myriad-dreamin.com` and change the `server_name` to the new site name. I thing this is simple enough.
+= 恶意访问者
 
-= The Bad Guys are Accessing My Sites
+日志显示有恶意尝试访问`/admin`、`/login`等常见路径。幸运的是网站只有静态文件，且Nginx/Golang文件服务器足够健壮。虽然Nginx已使用20年，但仍有CVE漏洞。Caddy性能稍弱但个人网站无需高吞吐。`traefik`过于复杂，最终决定尝试Caddy。
 
-From the logs, I found that there are some bad guys trying to access my site. They are trying to access many common paths, like `/admin`, `/login`, `/wp-login.php`, etc. That's interesting. Luckily, I only have read-only static files, and both Nginx and Golang HTTP file server are robust enough. But even if Nginx has been used for 20 years, we can usually see CVEs about it. Caddy does has slightly poorer performance, but my personal websites doesn't need to handle high traffic yet. `traefik` is another choice, but it is too complex and I might not use it for my personal websites. I think we can try Caddy next.
+= 使用Caddy提供HTTP服务
 
-= Serving HTTP using Caddy
-
-First add a `caddy` container in `docker-compose.yml`:
+首先在`docker-compose.yml`添加`caddy`容器：
 
 ```yml
 services:
@@ -298,7 +293,7 @@ services:
         - ./caddy/log:/var/log/caddy
 ```
 
-Then create a `Caddyfile` in `caddy/config` directory:
+在`caddy/config`目录创建`Caddyfile`：
 
 ```caddy
 :80 {
@@ -306,11 +301,11 @@ Then create a `Caddyfile` in `caddy/config` directory:
 }
 ```
 
-We should be able to get a response containing ```typc "Hello World!"``` from the Caddy server by running `docker compose up -d caddy` and visiting `http://localhost:80`.
+运行`docker compose up -d caddy`后访问`http://localhost:80`应显示"Hello World!"。
 
-= Serving HTTPS using Caddy
+= 通过Caddy提供HTTPS服务
 
-Caddy can maintain the SSL certificates automatically, so we don't need to use `certbot` anymore. It will be pretty easy to set up a HTTPS server using Caddy. Just change the `Caddyfile` to:
+Caddy可自动维护SSL证书，无需certbot。配置HTTPS服务器异常简单：
 
 ```caddy
 orange.myriad-dreamin.com {
@@ -319,21 +314,19 @@ orange.myriad-dreamin.com {
 }
 ```
 
-Once again, `homepage` is the name of the HTTP file server container, which is resolved by Docker's internal DNS.
-
-Execute the following command to ensure the configuration is hot reloaded:
+其中`homepage`由Docker内部DNS解析。执行以下命令热重载配置：
 
 ```bash
 docker compose exec caddy caddy reload --config /etc/caddy/Caddyfile
 ```
 
-Looks even much simpler than Nginx, right? Besides, Caddy is written in Go, so no memory bug will be introduced.
+比Nginx更简洁！且Caddy用Go编写，避免内存错误。
 
-= Recording Access Logs
+= 记录访问日志
 
-Caddy supports both Plaintext and JSON format for access logs. To enable access logs in Caddy, we can add the following snippet to the `Caddyfile`:
+Caddy支持纯文本和JSON格式访问日志。启用日志需在`Caddyfile`添加：
 
-```
+```caddy
 (subdomain-log) {
 	log {
 		hostnames {args[0]}
@@ -347,7 +340,7 @@ Caddy supports both Plaintext and JSON format for access logs. To enable access 
 }
 ```
 
-And then include this snippet in each site block:
+并在各站点块引用：
 ```diff
  orange.myriad-dreamin.com {
 +  import subdomain-log orange.myriad-dreamin.com
@@ -356,16 +349,16 @@ And then include this snippet in each site block:
  }
 ```
 
-I prefer JSON format, which is more structured and easier to parse. Among them, #link("https://github.com/pamburus/hl")[hl] is a good tool to parse JSON logs.
+我偏好结构化JSON日志便于解析。#link("https://github.com/pamburus/hl")[hl]是优秀的JSON日志解析工具：
 
 ```bash
 $ hl caddy/log/orange.myriad-dreamin.com.jsonl
 Jun 01 01:02:03.456 [INF] http.log.access.log0: handled request request.remote-ip=a.b.c.d request.remote-port="xyz" request.client-ip=a.b.c.d ...
 ```
 
-In fact, copilot helped me aggregate and display the access logs in a more readable way.
+实际上copilot帮助我更可读地聚合展示了访问日志。
 
-= List of Code
+= 代码清单
 
 `docker-compose.yml`:
 
