@@ -101,8 +101,8 @@ There is a sample blog post in [`content/article/personal-info.typ`](https://git
 
 Improve experience:
 
-- [ ] More friendly submodule for forks
-- [ ] Split Backend Components to a separate repository
+- [ ] Make submodule friendly for forks
+- [x] Split Backend Components to a separate repository
 
 Improve website:
 
@@ -115,9 +115,9 @@ Improve website:
 - [ ] Index Page Design
   - [ ] Badge
 - [ ] Comment Reply
-- [ ] Better [`theme-frame`](typ/templates/theme.typ)
+- [x] Better [`theme-frame`](typ/templates/theme.typ)
 - [ ] Refactor code to publish packages
-  - [ ] `@myriad-dreamin/blog-template` for creating blogs
+  - [x] `@myriad-dreamin/blog-template` for creating blogs
   - Some components that could be removed (JS required):
     - [ ] `@myriaddreamin/tylant-search`
     - [x] `@myriaddreamin/tylant-theme-toggle`
