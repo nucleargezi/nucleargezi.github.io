@@ -1,6 +1,7 @@
 {
   "folders": [{ "path": ".." }],
   "settings": {
+    "tinymist.exportTarget": "html",
     "tinymist.preview.invertColors": "auto",
     "tinymist.fontPaths": ["${workspaceFolder}/assets/fonts"],
     "[javascript]": {

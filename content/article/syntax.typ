@@ -28,3 +28,36 @@ Typst syntax hightlight are specially handled internally:
 ```typ
 #let f(x) = x;
 ```
+
+= Images
+
+#let parse-env(data) = {
+  let lines = data.split("\n").map(it => it.trim()).filter(it => it != "" and not it.starts-with("#"))
+  let env = (:)
+
+  lines
+    .map(line => {
+      let matched = line.match(regex("^([^=]+)=(?:\"([^\"]*)\"|(.*))$"))
+      let (key, v1, v2) = matched.captures
+      (key, v1 + v2)
+    })
+    .to-dict()
+}
+
+// todo: what if I would like use other configuration like `.env-production`
+#let env-data = parse-env(read("/.env"))
+
+#let url-base = env-data.at("URL_BASE", default: "")
+#if not url-base.ends-with("/") {
+  url-base = url-base + "/"
+}
+#let resolve(path) = (path.replace("../../public/", url-base).replace("/public/", url-base))
+
+#show image: it => {
+  html.elem(
+    "img",
+    attrs: (src: resolve(it.source), style: "width: 33%; display: block; margin: auto;"),
+  )
+}
+
+#image("../../public/favicon.svg")
