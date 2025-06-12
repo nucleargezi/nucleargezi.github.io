@@ -103,27 +103,6 @@ const recent5Posts = posts.slice(0, 5);
         <h1 set:html={kSiteIndexTitle} />
         <AboutContent />
       </section>
-      <section aria-label="Recent Posts">
-        <h2>Recent Posts</h2>
-        <ul class="accent block-list posts">
-          {
-            recent5Posts.map((post) => (
-              <li>
-                <a class="heading" href={`${kUrlBase}/article/${post.id}/`}>
-                  <h2>
-                    <span class="title">{post.data.title}</span>
-                  </h2>
-                  <span class="date">
-                    <FormattedDate date={post.data.date} />
-                  </span>
-                </a>
-                {post.data.tags && <TagList tags={post.data.tags} />}
-                {post.data.description || ""}
-              </li>
-            ))
-          }
-        </ul>
-      </section>
       <RecentComment kCommentList={kCommentList} renderComment={renderComment}>
         <fragment slot="articleRef">
           {
