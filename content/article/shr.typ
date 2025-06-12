@@ -26,7 +26,7 @@
 
 #link("https://github.com/Myriad-Dreamin/shr/tree/main/crates/shr-browser")[`shr-browser`]是一个Slint GUI，使用了`shr`的后端API。出乎意料的是，它也支持所有主流平台。
 
-#figure(code-image(image("shr/gui.png")), caption: "Slint GUI")
+#figure(image("/public/shr/gui.png", alt: "Slint GUI"), caption: "Slint GUI")
 
 = 性能
 

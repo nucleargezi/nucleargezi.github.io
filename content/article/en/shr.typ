@@ -25,7 +25,7 @@ I divided shr into frontend and backend. The backend takes parameters, scans the
 
 #link("https://github.com/Myriad-Dreamin/shr/tree/main/crates/shr-browser")[`shr-browser`] is a Slint GUI utilizing shr's backend API. Surprisingly, it also supports all major platforms.
 
-#figure(code-image(image("../shr/gui.png")), caption: "Slint GUI")
+#figure(image("/public/shr/gui.png", alt: "Slint GUI"), caption: "Slint GUI")
 
 = Performance
 
