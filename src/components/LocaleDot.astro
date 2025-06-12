@@ -1,0 +1,45 @@
+---
+interface Props {
+  isHome?: boolean;
+}
+
+const locale = Astro.currentLocale || "en";
+const explicitLocale =
+  locale === "en" && !Astro.url.pathname.includes("/en/") ? undefined : locale;
+
+const { isHome = false } = Astro.props as Props;
+---
+
+<style>
+  a {
+    text-decoration: underline 1.5px solid var(--accent);
+  }
+  a.locale-switch.active,
+  a.locale-switch:hover {
+    color: var(--accent);
+  }
+  .locale-comma {
+    margin-inline: 0.7px;
+  }
+</style>
+{
+  isHome && (
+    <>
+      <span class="emph-dot">.</span>
+      <span>&lbrace;</span>
+      <a class="locale-switch">en</a>
+      <span class="locale-comma">,</span>
+      <a class="locale-switch">zh</a>
+      <span>&rbrace;</span>
+      <script is:inline src="./LocaleDot.js" />
+    </>
+  )
+}
+{
+  !isHome && explicitLocale !== undefined && (
+    <>
+      <span class="emph-dot">.</span>
+      <span>{explicitLocale}</span>
+    </>
+  )
+}

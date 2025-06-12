@@ -1,18 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-import { TagList } from "@myriaddreamin/tylant";
-import { renderComment } from "@myriaddreamin/tylant";
-
-import {
-  ArchiveList,
-  BaseHead,
-  Footer,
-  FormattedDate,
-  Header,
-  Prelude,
-  RecentComment,
-} from "$components";
+import { BaseHead, Footer, Header } from "$components";
 import {
   kSiteTitle,
   kSiteIndexTitle,
@@ -20,19 +9,46 @@ import {
   kCommentList,
   kUrlBase,
   kBaiduVeriCode,
-  kEnableArchive,
 } from "$consts";
 // @ts-ignore
 import AboutContent from "../../content/other/about.typ?html&body";
 
 import "$styles/IndexPostList.css";
+import { getPostLocaleInfo } from "$components/locale";
+
+const currentLocale = Astro.currentLocale || "en";
 
 const pdfArchives = await getCollection("archive");
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const posts = await getCollection("blog");
 
-const recent5Posts = posts.slice(0, 5);
+const lastPost =
+  posts.length === 0
+    ? undefined
+    : posts.reduce((prev, cur) =>
+        cur.data.date > prev.data.date ? cur : prev
+      );
+const localePostData = lastPost && getPostLocaleInfo(lastPost.id);
+const lastComment =
+  kCommentList.length === 0
+    ? undefined
+    : kCommentList.reduce((prev, cur) =>
+        new Date(cur.createdAt) > new Date(prev.createdAt) ? cur : prev
+      );
+const lastArchive =
+  pdfArchives.length === 0
+    ? undefined
+    : pdfArchives.reduce((prev, cur) =>
+        cur.data.date > prev.data.date ? cur : prev
+      );
+
+function getOrdinalNum(n: number) {
+  return (
+    n +
+    (n > 0
+      ? ["th", "st", "nd", "rd"][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10]
+      : "")
+  );
+}
 ---
 
 <!doctype html>
@@ -45,7 +61,31 @@ const recent5Posts = posts.slice(0, 5);
         <meta name="baidu-site-verification" content={kBaiduVeriCode} />
       )
     }
+    <style is:global>
+      html:lang(zh) :lang(en) {
+        display: none;
+      }
+      html:lang(en) :lang(zh) {
+        display: none;
+      }
 
+      .nav-section {
+        display: none;
+      }
+      .nav-section.default {
+        display: block;
+      }
+      html.lang-active:lang(en) .nav-section.default,
+      html.lang-active:lang(zh) .nav-section.default {
+        display: none;
+      }
+      html.lang-active:lang(zh) .nav-section {
+        display: block;
+      }
+      html.lang-active:lang(en) .nav-section {
+        display: block;
+      }
+    </style>
     <style>
       .comments a {
         display: inline-block;
@@ -62,60 +102,215 @@ const recent5Posts = posts.slice(0, 5);
       .monthly li {
         font-style: italic;
       }
-      h1 {
-        font-size: 0;
-      }
       main {
-        margin-top: 2em;
+        margin-top: 1em;
+        min-height: calc(92vh - 6em);
+      }
+      h1 {
+        font-size: 3.5rem;
+        margin-block-end: 0.5em;
+      }
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 0;
+        }
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 1em;
+        padding: 0;
+        margin: 0;
+        margin-top: 1.5em;
+      }
+      .nav li {
+        padding: 0.2em 1em;
+        display: flex;
+        flex-direction: column;
+        border-left: 2.5px solid var(--main-color);
+      }
+      .nav li > :nth-child(1) {
+        flex: 0 auto;
+      }
+      @media (min-width: 550px) {
+        .nav li {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .nav li > :nth-child(1) {
+          flex: 0 0 7em;
+        }
+        .nav li > :nth-child(2) {
+          flex-grow: 1;
+          min-width: 0;
+          overflow: hidden;
+          line-height: 1.7em;
+          max-height: 1.7em;
+          text-align: left;
+        }
       }
     </style>
   </head>
   <body>
-    <Header breadcrumbs="" />
-    <Prelude>
-      <section>
-        <p>
-          <span lang="en">
-            <span class="emph-ch">I</span>n <span translate="no"
-              >{kSiteTitle}</span
-            >, discover my <a href=`${kUrlBase}/article`>Posts</a><span
-              class="emph-ch">,</span
-            > my <a href=`${kUrlBase}/friend`>Friends</a><span class="emph-ch"
-              >,
-            </span>and that <a href=`${kUrlBase}/about`>About Myriad Dreamin.</a
-            >
-          </span>
-          <br />
-          <span lang="zh" translate="no">
-            <span class="emph-ch">于</span>
-            <span lang="en" translate="no"> {kSiteTitle} </span>中, 发现我的<a
-              href=`${kUrlBase}/zh/article`>文章</a
-            ><span class="emph-ch">，</span><a href=`${kUrlBase}/friend`>朋友</a
-            ><span class="emph-ch">，</span>和<a href=`${kUrlBase}/about`
-              >个人介绍。</a
-            >
-          </span>
-        </p>
-      </section>
-    </Prelude>
+    <Header breadcrumbs="" isHome={true} />
     <main>
       <section aria-label="Prelude">
         <h1 set:html={kSiteIndexTitle} />
         <AboutContent />
       </section>
-      <RecentComment kCommentList={kCommentList} renderComment={renderComment}>
-        <fragment slot="articleRef">
-          {
-            (id: string) => (
-              <a class="heading" href={`${kUrlBase}/article/${id}`}>
-                {posts.find((post) => post.id === id)?.data.title || ""}
-              </a>
-            )
-          }
-        </fragment>
-      </RecentComment>
 
-      {kEnableArchive && <ArchiveList pdfArchives={pdfArchives} />}
+      <section class="nav-section default" lang="en">
+        <ul class="nav">
+          <li>
+            <a href=`${kUrlBase}/article/`>Posts</a>
+            {
+              lastPost && (
+                <a
+                  class="nav-desc"
+                  href={`${kUrlBase}/article/${lastPost.id}`}
+                  title={lastPost.data.title}
+                >
+                  {lastPost.data.title}
+                </a>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/archive/`>Archives</a>
+            {
+              lastArchive && (
+                <a
+                  class="nav-desc"
+                  href={`${kUrlBase}/archive/${lastArchive.id}.pdf`}
+                  title={lastArchive.data.title}
+                >
+                  {lastArchive.data.title}
+                </a>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/comment/`>Comments</a>
+            {
+              lastComment && (
+                <span
+                  class="nav-desc"
+                  title={`${lastComment.email} at ${new Date(lastComment.createdAt).toLocaleString()}. ${lastComment.content}`}
+                >
+                  <strong class="name">{lastComment.email}</strong>
+                  made the {getOrdinalNum(kCommentList.length)} comment.
+                </span>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/friend/`>Friends</a>
+            <span> Myriad Dreamin's friends. </span>
+          </li>
+        </ul>
+      </section>
+      <section class="nav-section" lang="en">
+        <ul class="nav">
+          <li>
+            <a href=`${kUrlBase}/en/article/`>Posts</a>
+            {
+              lastPost && (
+                <a
+                  class="nav-desc"
+                  href={`${kUrlBase}/${currentLocale === lastPost.data.lang ? "" : "en/"}article/${lastPost.id}`}
+                  title={localePostData?.data("en").title}
+                >
+                  {localePostData?.data("en").title}
+                </a>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/en/archive/`>Archives</a>
+            {
+              lastArchive && (
+                <a
+                  class="nav-desc"
+                  href={`${kUrlBase}/archive/${lastArchive.id}.pdf`}
+                  title={lastArchive.data.title}
+                >
+                  {lastArchive.data.title}
+                </a>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/en/comment/`>Comments</a>
+            {
+              lastComment && (
+                <span
+                  class="nav-desc"
+                  title={`${lastComment.email} at ${new Date(lastComment.createdAt).toLocaleString()}. ${lastComment.content}`}
+                >
+                  <strong class="name">{lastComment.email}</strong>
+                  made the {getOrdinalNum(kCommentList.length)} comment.
+                </span>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/friend/`>Friends</a>
+            <span> Myriad Dreamin's friends. </span>
+          </li>
+        </ul>
+      </section>
+      <section class="nav-section" lang="zh">
+        <ul class="nav">
+          <li>
+            <a href=`${kUrlBase}/zh/article/`>文章</a>
+            {
+              lastPost && (
+                <a
+                  class="nav-desc"
+                  href={`${kUrlBase}/${currentLocale === lastPost.data.lang ? "" : "zh/"}article/${lastPost.id}`}
+                  title={localePostData?.data("zh").title}
+                >
+                  {localePostData?.data("zh").title}
+                </a>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/zh/archive/`>归档</a>
+            {
+              lastArchive && (
+                <a
+                  class="nav-desc"
+                  href={`${kUrlBase}/archive/${lastArchive.id}.pdf`}
+                  title={lastArchive.data.title}
+                >
+                  {lastArchive.data.title}
+                </a>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/zh/comment/`>评论</a>
+            {
+              lastComment && (
+                <span
+                  class="nav-desc"
+                  title={`${lastComment.email} 于 ${new Date(lastComment.createdAt).toLocaleString()}。${lastComment.content}`}
+                >
+                  <strong class="name">{lastComment.email}</strong>
+                  发表了第 {kCommentList.length} 个评论。
+                </span>
+              )
+            }
+          </li>
+          <li>
+            <a href=`${kUrlBase}/friend/`>友链</a>
+            <span> Myriad Dreamin的朋友们。 </span>
+          </li>
+        </ul>
+      </section>
     </main>
     <Footer />
   </body>

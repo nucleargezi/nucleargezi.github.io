@@ -2,7 +2,7 @@
 
 #show: main.with(
   title: "Tinymist 2024",
-  desc: [Review of the Tinymist in 2024],
+  desc: [Review of the Tinymist in 2024.],
   date: "2025-05-30",
   tags: (
     archive-tags.blog-post,

@@ -5,22 +5,30 @@ import { ArchiveButton, ThemeToggle } from "$components";
 import { kUrlBase, kSiteLogo, kSiteSourceUrl } from "$consts";
 
 import sunFlower from "../../assets/sun-flower.svg?raw";
+import LocaleDot from "./LocaleDot.astro";
 // import moonFlower from "../../assets/moon-flower.svg?raw";
-
-const localeOpt = Astro.currentLocale;
 
 interface Props {
   breadcrumbs: string;
   articleId?: string;
+  isHome?: true;
 }
 
-const { articleId, breadcrumbs } = Astro.props;
+const { articleId, breadcrumbs, isHome } = Astro.props;
 const pdfArchives = await getCollection("archive");
 
+const locale = Astro.currentLocale || "en";
+const explicitLocale =
+  locale === "en" && !Astro.url.pathname.includes("/en/") ? undefined : locale;
+
+const kLUrlBase = explicitLocale ? `${kUrlBase}/${explicitLocale}` : kUrlBase;
+
 const links: Record<string, string> = {
-  Posts: `${kUrlBase}/article`,
-  Friends: `${kUrlBase}/friend`,
-  About: `${kUrlBase}/about`,
+  Posts: `${kLUrlBase}/article/`,
+  Archives: `${kLUrlBase}/archive/`,
+  Comments: `${kLUrlBase}/comment/`,
+  Friends: `${kUrlBase}/friend/`,
+  About: `${kUrlBase}/about/`,
 };
 ---
 
@@ -47,22 +55,36 @@ const links: Record<string, string> = {
       "M256 318 a 64 64 0 1 0 0 -128 a 64 64 0 1 0 0 128 z M 256 256 a 0 0 0 1 1 0 0 a 0 0 0 1 1 0 0 z"
     );
   }
+  .logo {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0;
+    display: flex;
+  }
+  .spaceless {
+    display: flex;
+  }
 </style>
 <header>
   <nav>
-    <h2 class="logo">
-      <a href={`${kUrlBase}/`}
-        >{
-          (localeOpt !== undefined && localeOpt !== 'en') ? (
-              <><!-- prettier-ignore --><span>{kSiteLogo.trim()}</span><span class="emph-dot">.</span><span>{localeOpt}</span></>
-          ) : (
+    <h2 class="logo spaceless">
+      {
+        isHome ? (
+          <>
+            <a href={`${kUrlBase}/`}>{kSiteLogo.trim()}</a>
+            <LocaleDot isHome={isHome} />
+          </>
+        ) : (
+          <a class="spaceless" href={`${kUrlBase}/`}>
             <span>{kSiteLogo.trim()}</span>
-          )
-        }</a
-      >{
+            <LocaleDot isHome={isHome} />
+          </a>
+        )
+      }
+      {
         breadcrumbs && (
           <>
-            <span> / </span>
+            <span>&nbsp;/&nbsp;</span>
             {<a href={links[breadcrumbs]}>{breadcrumbs}</a>}
           </>
         )
@@ -95,13 +117,6 @@ const links: Record<string, string> = {
   </nav>
 </header>
 <style>
-  .logo {
-    font-weight: 700;
-    font-style: italic;
-  }
-  .logo span {
-    display: inline;
-  }
   header {
     margin: 0;
     padding: 0 1em;
@@ -126,13 +141,10 @@ const links: Record<string, string> = {
     padding: 1em 0;
   }
   nav a {
-    /* padding: 1em 0.5em; */
-    /* border-bottom: 4px solid transparent; */
     text-decoration: underline 1.5px solid var(--accent);
   }
-  nav a.active {
-    text-decoration: none;
-    /* border-bottom-color: var(--accent); */
+  .logo a:hover {
+    color: var(--accent);
   }
   nav .icon {
     padding: 0 0.5em;

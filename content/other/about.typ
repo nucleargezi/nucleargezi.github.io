@@ -22,7 +22,7 @@
 
 #let blog-desc = [
   #en[
-    Myriad Dreamin puts down notes, essays, and articles within _PoeMagie._
+    Myriad Dreamin puts down articles within _PoeMagie._
   ]
 
   #zh[
@@ -34,11 +34,11 @@
   #context if not is-external.get() { blog-desc }
 
   #en[
-    A student, that makes compilers and software in my spare time, that has a fictional character named raihamiya.
+    A student, that makes compilers and software, that has a fictional character named raihamiya.
   ]
 
   #zh[
-    一名学生。在空余时间开发编译器和软件。拥有一个名为「礼羽みや」的虚构角色。
+    一名学生。开发编译器和软件。拥有一个名为「礼羽みや」的虚构角色。
   ]
 
   #link("https://github.com/Myriad-Dreamin")[GitHub]/#link("https://skeb.jp/@camiyoru")[Skeb]. Buy me a coffee on #link("https://app.unifans.io/c/camiyoru")[Unifans]/#link("https://afdian.com/a/camiyoru")[Afdian].
@@ -82,6 +82,7 @@
         align-items: center;
       }
       .self-desc .thumbnail-container {
+      margin-left: 0em;
         margin-block-start: 0em;
         margin-block-end: 0em;
       }
@@ -164,14 +165,14 @@
   [= My Blog]
 
   blog-desc
-} else {
-  [= Regional Mirror]
 }
+// else {
+//   [= Regional Mirror]
+//   en[
+//     If you are in the Asia region, such as China and Japan, you can access the regional mirror at #link("https://cn.myriad-dreamin.com")[PoeMagie.]
+//   ]
 
-#en[
-  If you are in the Asia region, such as China and Japan, you can access the regional mirror at #link("https://cn.myriad-dreamin.com")[PoeMagie.]
-]
-
-#zh[
-  如果你在亚洲地区（例如中国或日本），可以访问 #link("https://cn.myriad-dreamin.com")[PoeMagie] 的亚洲地区镜像。
-]
+//   zh[
+//     如果你在亚洲地区（例如中国或日本），可以访问 #link("https://cn.myriad-dreamin.com")[PoeMagie] 的亚洲地区镜像。
+//   ]
+// }

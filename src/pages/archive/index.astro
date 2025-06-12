@@ -9,73 +9,43 @@ import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
 import "$styles/IndexPostList.css";
 
-interface Props {
-  lang?: string;
-}
+const lang = Astro.currentLocale || "en";
 
-const lang = Astro.props.lang || Astro.currentLocale || "en";
-const explicitLang = Astro.props.lang ? lang : undefined;
-//todo: remove this hack
-const canonical = explicitLang
-  ? Astro.url.pathname.replace(/\/(zh|en)\//, "/")
-  : undefined;
-
-const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .map((post) => {
-    if (!explicitLang) {
-      // If no specific language is requested, use the default locale
-      return post;
-    }
-
-    return {
-      id: post.id,
-      data: getPostLocaleInfo(post.id)?.data(lang) || post.data,
-    };
-  });
+const archives = (await getCollection("archive")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
-    <BaseHead
-      title={kSiteTitle}
-      canonical={canonical}
-      description={kSiteDescription}
-    />
+    <BaseHead title={kSiteTitle} description={kSiteDescription} />
     <style>
-      .posts.loading {
-        display: none;
-      }
-      main.search-enabled {
-        padding-top: 0;
-      }
-      /*  */
       @media (max-width: 600px) {
         .heading {
           display: flex;
           flex-direction: column;
         }
       }
+      main {
+        padding: 0em 1em;
+      }
     </style>
   </head>
   <body>
-    <Header breadcrumbs="Posts" />
+    <Header breadcrumbs="Archives" />
     <Prelude />
     {kEnableSearch && <Search />}
     <main class={kEnableSearch ? "search-enabled" : ""}>
       <section>
         <ul class={`accent block-list posts${kEnableSearch ? " loading" : ""}`}>
           {
-            posts.map((post) => (
+            archives.map((post) => (
               <li
                 data-article-id={post.id}
                 data-article-meta={JSON.stringify(post.data)}
               >
-                <a
-                  class="heading"
-                  href={`${kUrlBase}/${lang}/article/${post.id}/`}
-                >
+                <a class="heading" href={`${kUrlBase}/archive/${post.id}.pdf`}>
                   <h2>
                     <span class="title">{post.data.title}</span>
                   </h2>
@@ -85,7 +55,7 @@ const posts = (await getCollection("blog"))
                 </a>
                 {post.data.tags && (
                   <TagList
-                    baseUrl={`${kUrlBase}/${explicitLang ? explicitLang + "/" : ""}article`}
+                    baseUrl={`${kUrlBase}/archive`}
                     tags={post.data.tags}
                   />
                 )}

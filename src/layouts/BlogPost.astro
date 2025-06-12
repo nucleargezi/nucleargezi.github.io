@@ -19,6 +19,7 @@ import {
   kArticleStats,
   kEnableReaction,
   kCommentInfo,
+  kUrlBase,
 } from "$consts";
 import { formatLang, getPostLocaleInfo } from "$components/locale";
 import LocaleMessage from "$components/LocaleMessage.astro";
@@ -56,6 +57,8 @@ const like = stat.like || 0;
 const pdfArchives = await getCollection("archive");
 
 const htmlLang = formatLang(lang, region);
+const explicitLang =
+  lang == "en" && !Astro.url.pathname.includes("/en/") ? undefined : lang;
 const localeInfo = id && getPostLocaleInfo(id);
 ---
 
@@ -221,7 +224,14 @@ const localeInfo = id && getPostLocaleInfo(id);
           <slot />
         </div>
       </article>
-      {tags && <TagList tags={tags} />}
+      {
+        tags && (
+          <TagList
+            baseUrl={`${kUrlBase}/${explicitLang ? explicitLang + "/" : ""}article`}
+            tags={tags}
+          />
+        )
+      }
       {
         id && (
           <CommentList

@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+
+import { renderComment } from "@myriaddreamin/tylant";
+
+import { BaseHead, Footer, Header, Prelude, RecentComment } from "$components";
+import { kUrlBase, kSiteTitle, kSiteDescription, kCommentList } from "$consts";
+
+export async function getStaticPaths() {
+  return ["zh", "en"].map((lang) => ({
+    params: { lang },
+  }));
+}
+
+import "$styles/IndexPostList.css";
+
+const lang = Astro.currentLocale || "en";
+
+const posts = await getCollection("blog");
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={kSiteTitle} description={kSiteDescription} />
+    <style>
+      @media (max-width: 600px) {
+        .heading {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      main {
+        padding: 0em 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <Header breadcrumbs="Comments" />
+    <Prelude />
+    <main>
+      <RecentComment kCommentList={kCommentList} renderComment={renderComment}>
+        <fragment slot="articleRef">
+          {
+            (id: string) => (
+              <a class="heading" href={`${kUrlBase}/article/${id}`}>
+                {posts.find((post) => post.id === id)?.data.title || ""}
+              </a>
+            )
+          }
+        </fragment>
+      </RecentComment>
+    </main>
+    <Footer />
+  </body>
+</html>
