@@ -1,7 +1,7 @@
 #import "/typ/templates/blog.typ": *
 #show: main-zh.with(
-  title: "Revisiting Old Memory",
-  desc: [Revisit the songs that I listened.],
+  title: "重温旧曲",
+  desc: [重温我以前喜欢的歌曲。],
   date: "2025-05-17",
   tags: (
     blog-tags.music-theory,

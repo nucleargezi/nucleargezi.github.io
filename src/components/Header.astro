@@ -7,6 +7,8 @@ import { kUrlBase, kSiteLogo, kSiteSourceUrl } from "$consts";
 import sunFlower from "../../assets/sun-flower.svg?raw";
 // import moonFlower from "../../assets/moon-flower.svg?raw";
 
+const localeOpt = Astro.currentLocale;
+
 interface Props {
   breadcrumbs: string;
   articleId?: string;
@@ -23,6 +25,9 @@ const links: Record<string, string> = {
 ---
 
 <style is:global>
+  .emph-dot {
+    color: var(--accent);
+  }
   .theme-icon-circle {
     transition: all 0.3s linear;
   }
@@ -46,7 +51,15 @@ const links: Record<string, string> = {
 <header>
   <nav>
     <h2 class="logo">
-      <a href={`${kUrlBase}/`}>{kSiteLogo}</a>{
+      <a href={`${kUrlBase}/`}
+        >{
+          (localeOpt !== undefined && localeOpt !== 'en') ? (
+              <><!-- prettier-ignore --><span>{kSiteLogo.trim()}</span><span class="emph-dot">.</span><span>{localeOpt}</span></>
+          ) : (
+            <span>{kSiteLogo.trim()}</span>
+          )
+        }</a
+      >{
         breadcrumbs && (
           <>
             <span> / </span>
@@ -85,6 +98,9 @@ const links: Record<string, string> = {
   .logo {
     font-weight: 700;
     font-style: italic;
+  }
+  .logo span {
+    display: inline;
   }
   header {
     margin: 0;

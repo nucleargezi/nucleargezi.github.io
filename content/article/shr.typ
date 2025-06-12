@@ -1,8 +1,9 @@
 
 #import "/typ/templates/blog.typ": *
 #show: main-zh.with(
-  title: "Say Goodbye to Space Sniffer",
-  desc: [I wrote a fast tool to replace space sniffer.],
+  title: "和 Space Sniffer 说再见",
+  desc: [
+    我写了一个高性能工具来替代 Space Sniffer。],
   date: "2025-05-20",
   tags: (
     blog-tags.programming,

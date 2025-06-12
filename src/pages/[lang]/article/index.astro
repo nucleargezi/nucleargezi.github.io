@@ -1,0 +1,11 @@
+---
+import ArticleIndex from "$layouts/ArticleIndex.astro";
+
+export async function getStaticPaths() {
+  return ["zh", "en"].map((lang) => ({
+    params: { lang },
+  }));
+}
+---
+
+<ArticleIndex />

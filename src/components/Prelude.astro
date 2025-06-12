@@ -12,7 +12,13 @@
     margin: 0 auto;
     margin-top: var(--prelude-margin);
   }
-  .prelude p {
+  .prelude :lang(zh) {
+    font-style: normal;
+  }
+  .prelude :lang(en) {
+    font-style: italic;
+  }
+  .prelude section {
     margin: 0 var(--prelude-margin);
   }
   .prelude .emph-ch {
@@ -22,16 +28,18 @@
     text-align: right;
   }
 </style>
-<div class="prelude">
-  <p>
-    <span class="emph-ch">L</span>ike starlight that is light years on the go
-    <br />
-    <span class="emph-ch">F</span>rom far away and takes light years arriving<span
-      class="emph-ch">.</span
-    >
-  </p>
-  <p class="author">
-    <span>— The Flight Path, Seamus Heaney</span>
-  </p>
+<div class="prelude" lang="en">
+  <section>
+    <p>
+      <span class="emph-ch">L</span>ike starlight that is light years on the go
+      <br />
+      <span class="emph-ch">F</span>rom far away and takes light years arriving<span
+        class="emph-ch">.</span
+      >
+    </p>
+    <p class="author">
+      <span>— The Flight Path, Seamus Heaney</span>
+    </p>
+  </section>
   <slot />
 </div>

@@ -1,8 +1,8 @@
 #import "/typ/templates/blog.typ": *
 
 #show: main-zh.with(
-  title: "Tinymist 2024 - Language Server Part",
-  desc: [Some thoughts on the development of tinymist, a language server for typst.],
+  title: "Tinymist 2024 - 语言服务器部分",
+  desc: [关于 tinymist，一个 typst 的语言服务器的开发思考。],
   date: "2025-05-23",
   tags: (
     blog-tags.programming,

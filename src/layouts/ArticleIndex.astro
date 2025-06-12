@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+
+import { TagList, Search } from "@myriaddreamin/tylant";
+
+import { BaseHead, Footer, FormattedDate, Header, Prelude } from "$components";
+import { getPostLocaleInfo } from "$components/locale";
+import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
+
+import "$styles/IndexPostList.css";
+
+const lang = Astro.currentLocale || "en";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((post) => {
+    return {
+      id: post.id,
+      data: getPostLocaleInfo(post.id)?.data(lang) || post.data,
+    };
+  });
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={kSiteTitle} description={kSiteDescription} />
+    <style>
+      .posts.loading {
+        display: none;
+      }
+      main.search-enabled {
+        padding-top: 0;
+      }
+      /*  */
+      @media (max-width: 600px) {
+        .heading {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Header breadcrumbs="Posts" />
+    <Prelude />
+    {kEnableSearch && <Search />}
+    <main class={kEnableSearch ? "search-enabled" : ""}>
+      <section>
+        <ul class={`accent block-list posts${kEnableSearch ? " loading" : ""}`}>
+          {
+            posts.map((post) => (
+              <li
+                data-article-id={post.id}
+                data-article-meta={JSON.stringify(post.data)}
+              >
+                <a
+                  class="heading"
+                  href={`${kUrlBase}/${lang}/article/${post.id}/`}
+                >
+                  <h2>
+                    <span class="title">{post.data.title}</span>
+                  </h2>
+                  <span class="date">
+                    <FormattedDate date={post.data.date} />
+                  </span>
+                </a>
+                {post.data.tags && <TagList tags={post.data.tags} />}
+                {post.data.description || ""}
+              </li>
+            ))
+          }
+        </ul>
+        <script is:inline>
+          if (!window.location.search) {
+            document.querySelector(".posts").classList.remove("loading");
+          }
+        </script>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

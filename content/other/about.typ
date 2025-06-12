@@ -5,8 +5,20 @@
 #let show-artwork = true
 #let is-external = state("about:is-external", false)
 
-#let en = text.with(lang: "en")
-#let zh = text.with(lang: "zh")
+#let lang-par(lang, body) = {
+  show: text.with(lang: lang)
+  context if sys-is-html-target {
+    let translate = if lang != "en" {
+      ("translate": "no")
+    }
+    html.elem("p", attrs: ("lang": lang) + translate, body)
+  } else {
+    body
+  }
+}
+
+#let en = lang-par.with("en")
+#let zh = lang-par.with("zh")
 
 #let blog-desc = [
   #en[

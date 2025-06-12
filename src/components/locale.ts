@@ -1,12 +1,18 @@
-import { getCollection } from "astro:content";
+import { kUrlBase } from "$consts";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 const blog = await getCollection("blog");
 const blogEn = new Map((await getCollection("blog-en")).map((p) => [p.id, p]));
 const blogZh = new Map((await getCollection("blog-zh")).map((p) => [p.id, p]));
+const blogByLocale: Record<string, typeof blogEn | typeof blogZh> = {
+  zh: blogZh,
+  en: blogEn,
+};
 
 export interface LocaleInfo {
   canonical: string;
   availables: string[];
+  data(locale?: string): CollectionEntry<"blog">["data"];
 }
 
 export function formatLang(lang: string | null, region: string | null) {
@@ -26,6 +32,9 @@ const localeInfo = new Map(
           ? ["zh"]
           : []),
       ],
+      data(locale?: string) {
+        return blogByLocale[locale || "en"].get(post.id)?.data || post.data;
+      },
     } satisfies LocaleInfo,
   ])
 );

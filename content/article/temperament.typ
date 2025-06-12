@@ -1,7 +1,8 @@
 #import "/typ/templates/blog.typ": *
 #show: main-zh.with(
-  title: "Temperament",
-  desc: [Some mathematics about temperament.],
+  title: "音律",
+  desc: [
+    一些关于音律的数字游戏。],
   date: "2025-05-12",
   tags: (
     blog-tags.music-theory,

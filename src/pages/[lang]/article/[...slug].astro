@@ -9,23 +9,36 @@ export async function getStaticPaths() {
   const postsZh = new Map(
     (await getCollection("blog-zh")).map((p) => [p.id, p])
   );
+  const postsEn = new Map(
+    (await getCollection("blog-en")).map((p) => [p.id, p])
+  );
 
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: {
-      canonical: post,
-      specific: postsZh.get(post.id),
-    },
-  }));
+  return [
+    ...posts.map((post) => ({
+      params: { lang: "zh", slug: post.id },
+      props: {
+        canonical: post,
+        specific: postsZh.get(post.id),
+      },
+    })),
+    ...posts.map((post) => ({
+      params: { lang: "en", slug: post.id },
+      props: {
+        canonical: post,
+        specific: postsEn.get(post.id),
+      },
+    })),
+  ];
 }
 type Props = {
   canonical: CollectionEntry<"blog">;
-  specific: CollectionEntry<"blog-zh"> | undefined;
+  specific: CollectionEntry<"blog"> | undefined;
 };
 
 const postAll = Astro.props;
 const post = postAll.specific || postAll.canonical;
-const canonical = Astro.url.pathname.replace(/\/zh\//, "/");
+//todo: remove this hack
+const canonical = Astro.url.pathname.replace(/\/(zh|en)\//, "/");
 const { Content } = await render(post);
 ---
 

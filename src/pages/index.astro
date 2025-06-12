@@ -73,15 +73,26 @@ const recent5Posts = posts.slice(0, 5);
   <body>
     <Header breadcrumbs="" />
     <Prelude>
-      <p style="margin-top: 1em;">
-        <span class="emph-ch">I</span>n {kSiteTitle}, discover my <a
-          href=`${kUrlBase}/article`>Posts</a
-        ><span class="emph-ch">,</span> my <a href=`${kUrlBase}/friend`
-          >Friends</a
-        ><span class="emph-ch">, </span>and that <a href=`${kUrlBase}/about`
-          >About Myriad Dreamin.</a
-        >
-      </p>
+      <section>
+        <p style="margin-top: 1em;" lang="en">
+          <span class="emph-ch">I</span>n <span translate="no"
+            >{kSiteTitle}</span
+          >, discover my <a href=`${kUrlBase}/article`>Posts</a><span
+            class="emph-ch">,</span
+          > my <a href=`${kUrlBase}/friend`>Friends</a><span class="emph-ch"
+            >,
+          </span>and that <a href=`${kUrlBase}/about`>About Myriad Dreamin.</a>
+        </p>
+        <p style="margin-top: 1em;" lang="zh" translate="no">
+          <span class="emph-ch">于</span>
+          <span lang="en" translate="no"> {kSiteTitle} </span>中, 发现我的<a
+            href=`${kUrlBase}/zh/article`>文章</a
+          ><span class="emph-ch">，</span><a href=`${kUrlBase}/friend`>朋友</a
+          ><span class="emph-ch">，</span>和<a href=`${kUrlBase}/about`
+            >个人介绍。</a
+          >
+        </p>
+      </section>
     </Prelude>
     <main>
       <section aria-label="Prelude">

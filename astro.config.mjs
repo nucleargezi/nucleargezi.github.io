@@ -50,6 +50,16 @@ export default defineConfig({
       },
     }),
   ],
+  i18n: {
+    locales: [
+      "en",
+      {
+        path: "zh",
+        codes: ["zh", "zh-CN"],
+      },
+    ],
+    defaultLocale: "en",
+  },
 
   vite: {
     build: {
