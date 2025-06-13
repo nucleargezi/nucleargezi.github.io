@@ -45,7 +45,9 @@ interface CommitItem {
 
 export const postLastModified = gitProperty<CommitItem>(
   (entry) =>
-    `git log --follow --format="%H %ct" -- ${JSON.stringify(entry.filePath!)}`,
+    `git log -1 --follow --format="%H %ct" -- ${JSON.stringify(
+      entry.filePath!
+    )}`,
   (stdout) => {
     const [commit, date_] = stdout.split(" ");
     return { commit, date: new Date(parseInt(date_) * 1000) };
