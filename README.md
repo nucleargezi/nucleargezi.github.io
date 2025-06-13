@@ -107,7 +107,7 @@ Improve experience:
 Improve website:
 
 - [ ] Intro-site Link Hover Preview
-- [ ] [Last Modified Time](https://5-0-0-beta.docs.astro.build/en/recipes/modified-time/)
+- [x] [Last Modified Time](https://5-0-0-beta.docs.astro.build/en/recipes/modified-time/)
 - [ ] Styling
   - [ ] Table
   - [x] Inline Raw
