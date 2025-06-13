@@ -8,7 +8,7 @@ import { getPostLocaleInfo } from "$components/locale";
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
 import "$styles/IndexPostList.css";
-import { blogPosts } from "$content";
+import { blogPosts, postLastModified } from "$content";
 
 interface Props {
   lang?: string;
@@ -21,15 +21,24 @@ const canonical = explicitLang
   ? Astro.url.pathname.replace(/\/(zh|en)\//, "/")
   : undefined;
 
-const posts = blogPosts.map((post) => {
-  if (!explicitLang) {
-    // If no specific language is requested, use the default locale
-    return post;
-  }
+const postModified = new Map<string, Date>(
+  await Promise.all(
+    blogPosts.map(
+      async (post) => [post.id, (await postLastModified(post.id)).date] as const
+    )
+  )
+);
 
+const posts = blogPosts.map((post) => {
   return {
     id: post.id,
-    data: getPostLocaleInfo(post.id)?.data(lang) || post.data,
+    // If no specific language is requested, use the default locale
+    data: {
+      ...(explicitLang
+        ? getPostLocaleInfo(post.id)?.data(lang) || post.data
+        : post.data),
+      modifiedDate: postModified.get(post.id),
+    },
   };
 });
 ---
@@ -81,6 +90,12 @@ const posts = blogPosts.map((post) => {
                   <span class="date">
                     <FormattedDate date={post.data.date} />
                   </span>
+                  {post.data.modifiedDate && (
+                    <span class="date last-updated-on">
+                      &nbsp;&#x270e;
+                      <FormattedDate date={post.data.modifiedDate} />
+                    </span>
+                  )}
                 </a>
                 {post.data.tags && (
                   <TagList
