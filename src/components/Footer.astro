@@ -1,12 +1,29 @@
 ---
-import { kSiteOwner, kSiteSourceUrl, kUrlBase } from "$consts";
+import { kSiteTitle, kSiteSourceUrl, kUrlBase } from "$consts";
+interface Props {
+  isHome?: true;
+}
 
+const locale = Astro.currentLocale || "en";
 const today = new Date();
+const { isHome = false } = Astro.props as Props;
 ---
 
 <footer>
-  &copy; 2023-{today.getFullYear()}
-  {kSiteOwner}. All rights reserved.
+  {
+    (isHome || locale !== "zh") && (
+      <p lang="en">
+        &copy; 2023-{today.getFullYear()} {kSiteTitle}. All rights reserved.
+      </p>
+    )
+  }
+  {
+    (isHome || locale === "zh") && (
+      <p lang="zh">
+        &copy; 2023-{today.getFullYear()} {kSiteTitle}. 保留所有权利.
+      </p>
+    )
+  }
   <div class="social-links">
     {
       kSiteSourceUrl && (
@@ -33,6 +50,20 @@ const today = new Date();
       >
     </a>
   </div>
+  {
+    (isHome || locale !== "zh") && (
+      <p lang="en">
+        <span>No peeking at my footer~! Saw you (`・ω・´)~</span>
+      </p>
+    )
+  }
+  {
+    (isHome || locale === "zh") && (
+      <p lang="zh">
+        <span>(`・ω・´) 偷看被我抓到了吧～</span>
+      </p>
+    )
+  }
 </footer>
 <style>
   footer {
