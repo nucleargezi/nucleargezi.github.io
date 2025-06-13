@@ -15,18 +15,13 @@ import AboutContent from "../../content/other/about.typ?html&body";
 
 import "$styles/IndexPostList.css";
 import { getPostLocaleInfo } from "$components/locale";
+import { blogPosts } from "$content";
 
 const currentLocale = Astro.currentLocale || "en";
 
 const pdfArchives = await getCollection("archive");
-const posts = await getCollection("blog");
 
-const lastPost =
-  posts.length === 0
-    ? undefined
-    : posts.reduce((prev, cur) =>
-        cur.data.date > prev.data.date ? cur : prev
-      );
+const lastPost = blogPosts[0];
 const localePostData = lastPost && getPostLocaleInfo(lastPost.id);
 const lastComment =
   kCommentList.length === 0

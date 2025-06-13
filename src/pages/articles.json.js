@@ -1,10 +1,8 @@
-import { getCollection } from "astro:content";
+import { blogPosts } from "$content";
 
 export async function GET() {
-  const rawPosts = await getCollection("blog");
-
   // only export specified fields
-  const posts = rawPosts.map((post) => ({
+  const posts = blogPosts.map((post) => ({
     id: post.id,
     collection: post.collection,
     data: {

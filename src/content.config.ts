@@ -13,8 +13,6 @@ const blogFrom = (dir: string) =>
       author: z.string().optional(),
       description: z.any().optional(),
       date: z.coerce.date(),
-      // Transform string to Date object
-      updatedDate: z.coerce.date().optional(),
       tags: z.array(z.string()).optional(),
     }),
   });
@@ -29,8 +27,6 @@ const archive = defineCollection({
     description: z.any().optional(),
     date: z.coerce.date(),
     indices: z.array(z.string()).optional(),
-    // Transform string to Date object
-    updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
   }),
 });

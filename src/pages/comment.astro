@@ -1,6 +1,4 @@
 ---
-import { getCollection } from "astro:content";
-
 import { renderComment } from "@myriaddreamin/tylant";
 
 import { BaseHead, Footer, Header, Prelude, RecentComment } from "$components";
@@ -13,10 +11,11 @@ export async function getStaticPaths() {
 }
 
 import "$styles/IndexPostList.css";
+import { blogPosts } from "$content";
 
 const lang = Astro.currentLocale || "en";
 
-const posts = await getCollection("blog");
+const posts = blogPosts;
 ---
 
 <!doctype html>

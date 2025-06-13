@@ -23,6 +23,8 @@ import {
 } from "$consts";
 import { formatLang, getPostLocaleInfo } from "$components/locale";
 import LocaleMessage from "$components/LocaleMessage.astro";
+import { postLastModified } from "$content";
+import { SITE_SOURCE_URL } from "astro:env/client";
 
 interface IdExt {
   id: string;
@@ -39,7 +41,6 @@ const {
   title,
   description,
   date,
-  updatedDate,
   tags,
   author,
   breadcrumbs,
@@ -55,6 +56,7 @@ const stat: { like?: number; click?: number } =
 const click = stat.click || 0;
 const like = stat.like || 0;
 const pdfArchives = await getCollection("archive");
+const modifiedTime = id && (await postLastModified(id));
 
 const htmlLang = formatLang(lang, region);
 const explicitLang =
@@ -161,12 +163,28 @@ const localeInfo = id && getPostLocaleInfo(id);
               <div class="date">
                 <FormattedDate date={date} />
                 {
-                  updatedDate && (
+                  modifiedTime && !SITE_SOURCE_URL && (
                     <>
+                      <span>·</span>&#x270e;
                       <span class="last-updated-on">
-                        , Last updated on{" "}
-                        <FormattedDate date={updatedDate || date} />
+                        <FormattedDate date={modifiedTime.date} />
                       </span>
+                    </>
+                  )
+                }
+                {
+                  modifiedTime && SITE_SOURCE_URL && (
+                    <>
+                      <span>·</span>
+                      <a
+                        href={`${SITE_SOURCE_URL}/commit/${modifiedTime.commit}`}
+                        target="_blank"
+                      >
+                        &#x270e;
+                        <span class="last-updated-on">
+                          <FormattedDate date={modifiedTime.date} />
+                        </span>
+                      </a>
                     </>
                   )
                 }

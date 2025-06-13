@@ -8,6 +8,7 @@ import { getPostLocaleInfo } from "$components/locale";
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
 import "$styles/IndexPostList.css";
+import { blogPosts } from "$content";
 
 interface Props {
   lang?: string;
@@ -20,19 +21,17 @@ const canonical = explicitLang
   ? Astro.url.pathname.replace(/\/(zh|en)\//, "/")
   : undefined;
 
-const posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .map((post) => {
-    if (!explicitLang) {
-      // If no specific language is requested, use the default locale
-      return post;
-    }
+const posts = blogPosts.map((post) => {
+  if (!explicitLang) {
+    // If no specific language is requested, use the default locale
+    return post;
+  }
 
-    return {
-      id: post.id,
-      data: getPostLocaleInfo(post.id)?.data(lang) || post.data,
-    };
-  });
+  return {
+    id: post.id,
+    data: getPostLocaleInfo(post.id)?.data(lang) || post.data,
+  };
+});
 ---
 
 <!doctype html>
