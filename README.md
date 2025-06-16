@@ -114,7 +114,7 @@ Improve website:
   - [ ] Blocky Raw
 - [ ] Index Page Design
   - [ ] Badge
-- [ ] Comment Reply
+- [x] Comment Reply
 - [x] Better [`theme-frame`](typ/templates/theme.typ)
 - [ ] Refactor code to publish packages
   - [x] `@myriad-dreamin/blog-template` for creating blogs
