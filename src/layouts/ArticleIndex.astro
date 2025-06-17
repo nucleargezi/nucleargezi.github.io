@@ -22,11 +22,14 @@ const canonical = explicitLang
   : undefined;
 
 const postModified = new Map<string, Date>(
-  await Promise.all(
-    blogPosts.map(
-      async (post) => [post.id, (await postLastModified(post.id)).date] as const
+  (
+    await Promise.all(
+      blogPosts.map(
+        async (post) =>
+          [post.id, (await postLastModified(post.id))?.date as Date] as const
+      )
     )
-  )
+  ).filter(([, date]) => date)
 );
 
 const posts = blogPosts.map((post) => {
