@@ -33,6 +33,7 @@ async function main() {
   console.log(`Created new post at ${dest}`);
 
   const arts = (await readdir(join(root, `content/article`)))
+    .filter((it) => it.endsWith(".typ"))
     .map((it) => it.replace(/\.typ$/g, ""))
     .sort();
   await writeFile(
