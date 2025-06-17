@@ -70,7 +70,7 @@
 #figure(
   code-image.with(class: "center")(theme => [
     // #set page(width: auto, height: auto, margin: 5mm, fill: white)
-    #let node-text = text.with(white, font: "New Computer Modern")
+    #let node-text = text.with(white)
     #let colors = (green.darken(20%), eastern, blue.lighten(20%))
     #let edge = edge.with(stroke: theme.main-color)
 
@@ -159,7 +159,7 @@
 #figure(
   code-image.with(class: "center")(theme => [
     // #set page(width: auto, height: auto, margin: 5mm, fill: white)
-    #let node-text = text.with(white, font: "New Computer Modern")
+    #let node-text = text.with(white)
     #let colors = (green.darken(20%), eastern, blue.lighten(20%))
     #let edge = edge.with(stroke: theme.main-color)
 

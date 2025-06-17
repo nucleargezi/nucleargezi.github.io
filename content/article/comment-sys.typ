@@ -147,7 +147,7 @@ This doesn't mean that I will use my home-made comment system eventually. I cont
 #figure(
   code-image.with(class: "center")(theme => [
     // #set page(width: auto, height: auto, margin: 5mm, fill: white)
-    #let node-text = text.with(white, font: "New Computer Modern")
+    #let node-text = text.with(white)
     #let colors = (green.darken(20%), eastern, blue.lighten(20%))
     #let edge = edge.with(stroke: theme.main-color)
 
@@ -237,7 +237,7 @@ People who have been mentioned in the comment will receive an email notification
 #figure(
   code-image.with(class: "center")(theme => [
     // #set page(width: auto, height: auto, margin: 5mm, fill: white)
-    #let node-text = text.with(white, font: "New Computer Modern")
+    #let node-text = text.with(white)
     #let colors = (green.darken(20%), eastern, blue.lighten(20%))
     #let edge = edge.with(stroke: theme.main-color)
 
