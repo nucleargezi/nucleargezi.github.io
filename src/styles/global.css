@@ -176,7 +176,7 @@ pre > code {
   all: unset;
 }
 blockquote {
-  border-left: 2.5px solid var(--accent);
+  border-left: 4px solid var(--accent);
   padding: 0 0 0 18px;
   margin: 0px;
 }
@@ -244,6 +244,15 @@ nav a:hover,
 .code-image.themed .light {
   display: initial;
 }
+.code-image.center {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  width: fit-content;
+}
+.zebraw-code-line-container {
+  height: 1.8rem;
+}
 .code-image.themed .dark {
   display: none;
 }
@@ -274,8 +283,8 @@ figcaption {
   list-style: none;
   margin-top: 1.5em;
   padding-left: 1em;
-  border-left: 2.5px solid var(--main-color);
+  border-left: 4px solid var(--main-color);
 }
 .block-list.accent > li {
-  border-left: 2.5px solid var(--accent);
+  border-left: 4px solid var(--accent);
 }
