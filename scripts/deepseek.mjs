@@ -29,22 +29,24 @@ export const createCompletion = async (message, language = "Chinese") => {
   }
 };
 
-const fileName = process.argv[2];
-if (!fileName) {
-  console.error("Please provide a file name as an argument.");
+const input = process.argv[2];
+if (!input) {
+  console.error("Please provide a valid source path to translate.");
   process.exit(1);
 }
 
-const output = process.argv[3];
-if (!output) {
-  console.error("Please provide an output file name as an argument.");
+const lang = process.argv[3];
+if (lang != "zh" && lang != "en") {
+  console.error("Please provide a valid language (zh or en) to translate to.");
   process.exit(1);
 }
 
-const language = output.includes("/zh/") ? "Chinese" : "English";
+const language = lang == "zh" ? "Chinese" : "English";
 console.log(`Translating to ${language}...`);
 
-const fileContent = await fs.readFile(fileName, "utf-8");
+const output = input.replace(/\/article\//, `/article/${lang}/`);
+
+const fileContent = await fs.readFile(input, "utf-8");
 const translated = await createCompletion(fileContent, language);
 await fs.writeFile(output, translated, "utf-8");
 console.log(`Translation completed and saved to ${output}`);
