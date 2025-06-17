@@ -48,7 +48,7 @@ jobs:
       - name: Download Fonts
         run: |
           mkdir -p /usr/shared/fonts
-          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.1.5/source-han-serif-font-assets.tar.gz | tar -xvz -C /usr/shared/fonts
+          curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.1.5/source-han-serif-font-assets.tar.gz | tar -xvz -C /usr/share/fonts
       - run: pnpm install
       - name: Pull Data from Backend (Optional)
         run: pnpm run pull-data
