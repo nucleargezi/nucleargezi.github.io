@@ -3,14 +3,15 @@ import { render } from "astro:content";
 import { type CollectionEntry, getCollection } from "astro:content";
 
 import BlogPost from "$layouts/BlogPost.astro";
+import { published } from "$content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   const postsZh = new Map(
-    (await getCollection("blog-zh")).map((p) => [p.id, p])
+    (await getCollection("blog-zh")).filter(published).map((p) => [p.id, p])
   );
   const postsEn = new Map(
-    (await getCollection("blog-en")).map((p) => [p.id, p])
+    (await getCollection("blog-en")).filter(published).map((p) => [p.id, p])
   );
 
   return [

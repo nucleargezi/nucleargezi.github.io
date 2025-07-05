@@ -1,9 +1,22 @@
 import { getCollection, getEntry, type CollectionEntry } from "astro:content";
 import { exec } from "child_process";
 
-export const blogPosts = (await getCollection("blog")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const now = new Date();
+interface Publishable {
+  data: {
+    date: Date;
+  };
+}
+export const byDate = (a: Publishable, b: Publishable) =>
+  b.data.date.valueOf() - a.data.date.valueOf();
+export const published = (it: Publishable) =>
+  it.data.date.valueOf() <= now.valueOf();
+
+export const blogPosts = (await getCollection("blog")).sort(byDate);
+export const archives = (await getCollection("archive")).sort(byDate);
+
+export const publishedBlogPosts = blogPosts.filter(published);
+export const publishedArchives = archives.filter(published);
 
 const gitProperty = <T>(
   command: (entry: CollectionEntry<"blog">) => string,

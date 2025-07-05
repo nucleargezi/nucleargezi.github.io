@@ -5,6 +5,7 @@ import { TagList, Search } from "@myriaddreamin/tylant";
 
 import { BaseHead, Footer, FormattedDate, Header, Prelude } from "$components";
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
+import { published } from "$content";
 
 export async function getStaticPaths() {
   return ["zh", "en"].map((lang) => ({
@@ -17,9 +18,9 @@ import "$styles/IndexPostList.css";
 const lang = Astro.currentLocale || "en";
 const canonical = Astro.url.pathname.replace(/\/(zh|en)\//, "/");
 
-const archives = (await getCollection("archive")).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+const archives = (await getCollection("archive"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .filter(published);
 ---
 
 <!doctype html>

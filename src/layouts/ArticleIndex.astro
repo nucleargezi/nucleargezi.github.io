@@ -8,7 +8,7 @@ import { getPostLocaleInfo } from "$components/locale";
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
 import "$styles/IndexPostList.css";
-import { blogPosts, postLastModified } from "$content";
+import { postLastModified, publishedBlogPosts } from "$content";
 
 interface Props {
   lang?: string;
@@ -24,7 +24,7 @@ const canonical = explicitLang
 const postModified = new Map<string, Date>(
   (
     await Promise.all(
-      blogPosts.map(
+      publishedBlogPosts.map(
         async (post) =>
           [post.id, (await postLastModified(post.id))?.date as Date] as const
       )
@@ -32,7 +32,7 @@ const postModified = new Map<string, Date>(
   ).filter(([, date]) => date)
 );
 
-const posts = blogPosts.map((post) => {
+const posts = publishedBlogPosts.map((post) => {
   return {
     id: post.id,
     // If no specific language is requested, use the default locale
