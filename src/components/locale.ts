@@ -15,7 +15,7 @@ export interface LocaleInfo {
   data(locale?: string): CollectionEntry<"blog">["data"];
 }
 
-export function formatLang(lang: string | null, region: string | null) {
+export function formatLang(lang?: string, region?: string) {
   return lang && region ? `${lang}-${region.toUpperCase()}` : lang || "en";
 }
 

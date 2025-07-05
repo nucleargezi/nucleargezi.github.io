@@ -1,6 +1,9 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
+const nullToUndefined = <T>(value: T | null) => value ?? undefined;
+const coerceStringOpt = () => z.string().nullish().transform(nullToUndefined);
+
 const blogFrom = (dir: string) =>
   defineCollection({
     // Load Typst files in the `content/article/` directory.
@@ -8,8 +11,8 @@ const blogFrom = (dir: string) =>
     // Type-check frontmatter using a schema
     schema: z.object({
       title: z.string(),
-      lang: z.string().nullable(),
-      region: z.string().nullable(),
+      lang: coerceStringOpt(),
+      region: coerceStringOpt(),
       author: z.string().optional(),
       description: z.any().optional(),
       date: z.coerce.date(),
