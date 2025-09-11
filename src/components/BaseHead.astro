@@ -6,7 +6,8 @@ import "$styles/font.css";
 import interWoff2 from "@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2?url";
 import interItalicWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-italic.woff2?url";
 
-import { BackendClientScript, ThemeInit } from "$components";
+import ThemeProvider from "virtual:tylant/components/ThemeProvider";
+import { BackendClientScript } from "$components";
 import { kUrlBase, kSiteTitle, kServers } from "$consts";
 
 interface Props {
@@ -77,5 +78,5 @@ const canonicalURL = new URL(canonical, Astro.site);
   crossorigin="anonymous"
 />
 
-<ThemeInit />
+<ThemeProvider />
 <BackendClientScript kServers={kServers} />

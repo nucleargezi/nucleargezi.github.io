@@ -3,7 +3,8 @@ import { getCollection } from "astro:content";
 
 import { renderComment } from "@myriaddreamin/tylant";
 
-import { BaseHead, Footer, Header, Prelude, RecentComment } from "$components";
+import RecentComment from "virtual:tylant/components/RecentComment";
+import { BaseHead, Footer, Header, Prelude } from "$components";
 import { kUrlBase, kSiteTitle, kSiteDescription, kCommentList } from "$consts";
 import { getPostLocaleInfo } from "$components/locale";
 

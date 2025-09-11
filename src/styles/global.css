@@ -204,7 +204,6 @@ hr {
 }
 nav a,
 .social-links a {
-  text-decoration: none;
   color: var(--main-color);
 }
 nav a:hover,
