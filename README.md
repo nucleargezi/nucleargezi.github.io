@@ -120,12 +120,9 @@ Improve website:
   - [x] `@myriad-dreamin/blog-template` for creating blogs
   - Some components that could be removed (JS required):
     - [ ] `@myriaddreamin/tylant-search`
-    - [x] `@myriaddreamin/tylant-theme-toggle`
   - Typst Kit
     - [ ] `@myriaddreamin/tylant`
-      - focus on concept: `post` collections
-    - [x] `@myriaddreamin/tylant-pdf-archive`
-      - focus on concept: `pdf` collections
+      - focus on concept: `post` and `pdf` collections
 
 ## Credit
 
