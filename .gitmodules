@@ -1,6 +1,6 @@
 [submodule "typ"]
 	path = typ
-	url = https://github.com/Myriad-Dreamin/typ.git
+	url = https://github.com/nucleargezi/typ.git
 	branch = main
 [submodule "packages/tylant"]
 	path = packages/tylant
