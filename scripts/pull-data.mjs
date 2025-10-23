@@ -1,5 +1,6 @@
 import { execSync } from "child_process";
 import { loadEnv } from "vite";
+import { writeFileSync } from "fs";
 
 /**
  * Please check `defineConfig/env` in astro.config.mjs for schema
@@ -10,9 +11,12 @@ const e = loadEnv(process.env.NODE_ENV || "", process.cwd(), "");
 
 const firstBackendUrl = (e.BACKEND_ADDR || "").split(";")[0].trim();
 if (!firstBackendUrl) {
-  throw new Error(
-    "No backend address provided in .env. Either disable the data pull or provide valid addresses."
+  console.warn(
+    "No backend address provided in .env. Creating empty snapshot files."
   );
+  writeFileSync("content/snapshot/article-stats.json", "[]", "utf-8");
+  writeFileSync("content/snapshot/article-comments.json", "[]", "utf-8");
+  process.exit(0);
 }
 
 /**
@@ -28,13 +32,40 @@ const pullData = (route, dest) => {
   );
   try {
     console.log(`Pulling data from ${url}...`);
-    execSync(`curl -s ${url} > ${dest}`, {
-      stdio: "inherit",
+    const result = execSync(`curl -s -w "\n%{http_code}" ${url}`, {
+      encoding: "utf-8",
     });
-    console.log(`Data pulled successfully to ${dest}`);
-    return true;
+    
+    const lines = result.trim().split("\n");
+    const httpCode = lines[lines.length - 1];
+    const content = lines.slice(0, -1).join("\n");
+    
+    // Check if HTTP request was successful
+    if (httpCode !== "200") {
+      console.warn(`HTTP ${httpCode} received from ${url}, using empty array as fallback`);
+      writeFileSync(dest, "[]", "utf-8");
+      return false;
+    }
+    
+    // Validate JSON
+    try {
+      JSON.parse(content);
+      writeFileSync(dest, content, "utf-8");
+      console.log(`Data pulled successfully to ${dest}`);
+      return true;
+    } catch (jsonError) {
+      console.warn(`Invalid JSON received from ${url}, using empty array as fallback`);
+      writeFileSync(dest, "[]", "utf-8");
+      return false;
+    }
   } catch (error) {
     console.error(`Failed to pull data from ${url}:`, error);
+    // Create empty JSON array as fallback
+    try {
+      writeFileSync(dest, "[]", "utf-8");
+    } catch (e) {
+      console.error(`Failed to create fallback file ${dest}:`, e);
+    }
   }
 
   return false;
