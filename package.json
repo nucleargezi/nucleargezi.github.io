@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "create:post": "node scripts/create-file.mjs blog-post",
     "create:archive": "node scripts/create-file.mjs archive-post",
+    "update:articles": "node scripts/update-article-ids.mjs",
     "pull-data": "node scripts/pull-data.mjs",
     "astro": "astro"
   },
