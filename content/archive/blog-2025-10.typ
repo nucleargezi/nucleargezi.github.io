@@ -1,8 +1,8 @@
 #import "/typ/templates/monthly.typ": *
 
 #show: main.with(
-  title: "Myriad Dreamin Blog 2025-07",
-  desc: [Archive of Blog posts in July 2025.],
+  title: "Yorisou Blog 2025-07",
+  desc: [Yorisou Blog 2025-10 collect],
   date: "2025-08-01",
   tags: (
     archive-tags.blog-post,
