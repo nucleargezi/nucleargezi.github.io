@@ -31,9 +31,16 @@
 }
 
 body {
-  --vp-font-family-base: "Inter Variable", "Inter", "Noto Sans SC",
+
+  /* past  */
+  /* --vp-font-family-base: "Inter Variable", "Inter", "Noto Sans SC",
     "PingFang SC", "Microsoft Yahei", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --vp-font-family-mono: ui-monospace, "Menlo", "Monaco", "Consolas",
+    "Liberation Mono", "Courier New", monospace; */
+    
+  --vp-font-family-base: "Latin Modern Roman", "Noto Serif CJK SC",
+    "Noto Color Emoji", serif;
   --vp-font-family-mono: ui-monospace, "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
 

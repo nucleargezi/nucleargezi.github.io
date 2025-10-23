@@ -7,5 +7,7 @@
   tags: (
     archive-tags.blog-post,
   ),
-  archive-indices: (),
+  archive-indices: (
+    articles.personal-info,
+  ),
 )

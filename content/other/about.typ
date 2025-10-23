@@ -21,27 +21,19 @@
 #let zh = lang-par.with("zh")
 
 #let blog-desc = [
-  #en[
-    Myriad Dreamin puts down articles within _PoeMagie._
-  ]
-
   #zh[
-    _PoeMagie_ 中记录了 Myriad Dreamin 的日常与随笔。
+    记录了 Yorisou 的日常与随笔。
   ]
 ]
 
 #let self-desc = [
   #context if not is-external.get() { blog-desc }
 
-  #en[
-    A student, that makes compilers and software, that has a fictional character named raihamiya.
-  ]
-
   #zh[
-    一名学生。开发编译器和软件。拥有一个名为「礼羽みや」的虚构角色。
-  ]
+    算法竞赛选手
 
-  #link("https://github.com/Myriad-Dreamin")[GitHub]/#link("https://skeb.jp/@camiyoru")[Skeb]. Buy me a coffee on #link("https://app.unifans.io/c/camiyoru")[Unifans]/#link("https://afdian.com/a/camiyoru")[Afdian].
+    想要了解我可以点击头像
+  ]
 ]
 
 #if sys-is-html-target and show-artwork {
@@ -49,29 +41,25 @@
     show raw: it => html.elem("style", it.text)
     ```css
     .self-desc .thumbnail-container {
-      flex: 0 0 22em;
+      flex: 0 0 28em;
       border-radius: 0.5em;
       overflow: hidden;
       margin-left: 2em;
-      margin-block-start: -1em;
+      margin-block-start: -5em;
       margin-block-end: 2em;
     }
 
     .self-desc .thumbnail-container,
     .self-desc .thumbnail {
       float: right;
-      width: 22em;
-      height: 22em;
+      width: 28em;
+      height: 28em;
     }
 
-    .thumbnail {
-      --thumbnail-fg: var(--main-color);
-      --thumbnail-bg: transparent;
-    }
-
-    .dark .thumbnail {
-      --thumbnail-bg: var(--main-color);
-      --thumbnail-fg: transparent;
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     @media (max-width: 800px) {
@@ -96,43 +84,18 @@
   }
 
   let div = html.elem.with("div")
-  let svg = html.elem.with("svg")
 
-  let artwork = svg(
+  let artwork = div(
     attrs: (
       class: "thumbnail",
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 640 640",
     ),
-    {
-      let count-path() = {
-        let data = str(read("/public/favicon.svg"))
-        let fgs = regex("thumbnail-fg\d+")
-        let bgs = regex("thumbnail-bg\d+")
-        (data.matches(fgs).len(), data.matches(bgs).len())
-      }
-
-      let (fgs, bgs) = count-path()
-
-      for i in range(bgs) {
-        html.elem(
-          "use",
-          attrs: (
-            "xlink:href": "/favicon.svg#thumbnail-bg" + str(i),
-            style: "fill: var(--thumbnail-bg)",
-          ),
-        )
-      }
-      for i in range(fgs) {
-        html.elem(
-          "use",
-          attrs: (
-            "xlink:href": "/favicon.svg#thumbnail-fg" + str(i),
-            style: "fill: var(--thumbnail-fg)",
-          ),
-        )
-      }
-    },
+    html.elem(
+      "img",
+      attrs: (
+        src: "/favicon.svg",
+        alt: "Profile Picture",
+      ),
+    ),
   )
 
   div(
@@ -143,9 +106,9 @@
       context div(
         attrs: (
           class: "thumbnail-container link",
-          title: "礼羽みや, artwork by ちょみます (@tyomimas)",
+          title: "",
           onclick: if is-external.get() {
-            "location.href='https://www.myriad-dreamin.com/article/personal-info'"
+            "location.href='https://nucleargezi.github.io/article/personal-info'"
           } else {
             "location.href='/article/personal-info'"
           },
@@ -160,19 +123,9 @@
 }
 
 #context if is-external.get() {
-  show "PoeMagie": link.with("https://www.myriad-dreamin.com")
+  show "Yorisou Realm": link.with("https://nucleargezi.github.io")
 
   [= My Blog]
 
   blog-desc
 }
-// else {
-//   [= Regional Mirror]
-//   en[
-//     If you are in the Asia region, such as China and Japan, you can access the regional mirror at #link("https://cn.myriad-dreamin.com")[PoeMagie.]
-//   ]
-
-//   zh[
-//     如果你在亚洲地区（例如中国或日本），可以访问 #link("https://cn.myriad-dreamin.com")[PoeMagie] 的亚洲地区镜像。
-//   ]
-// }

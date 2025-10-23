@@ -6,7 +6,6 @@ import ThemeToggle from "virtual:tylant/components/ThemeToggle";
 import { kUrlBase, kSiteLogo, kSiteSourceUrl } from "$consts";
 
 import sunFlower from "../../assets/sun-flower.svg?raw";
-import LocaleDot from "./LocaleDot.astro";
 // import moonFlower from "../../assets/moon-flower.svg?raw";
 
 interface Props {
@@ -18,16 +17,9 @@ interface Props {
 const { articleId, breadcrumbs, isHome } = Astro.props;
 const pdfArchives = await getCollection("archive");
 
-const locale = Astro.currentLocale || "en";
-const explicitLocale =
-  locale === "en" && !Astro.url.pathname.includes("/en/") ? undefined : locale;
-
-const kLUrlBase = explicitLocale ? `${kUrlBase}/${explicitLocale}` : kUrlBase;
-
 const links: Record<string, string> = {
-  Posts: `${kLUrlBase}/article/`,
-  Archives: `${kLUrlBase}/archive/`,
-  Comments: `${kLUrlBase}/comment/`,
+  Posts: `${kUrlBase}/article/`,
+  Archives: `${kUrlBase}/archive/`,
   Friends: `${kUrlBase}/friend/`,
   About: `${kUrlBase}/about/`,
 };
@@ -68,19 +60,7 @@ const links: Record<string, string> = {
 <header>
   <nav>
     <h2 class="logo spaceless">
-      {
-        isHome ? (
-          <>
-            <a href={`${kUrlBase}/`}>{kSiteLogo.trim()}</a>
-            <LocaleDot isHome={isHome} />
-          </>
-        ) : (
-          <a class="spaceless" href={`${kUrlBase}/`}>
-            <span>{kSiteLogo.trim()}</span>
-            <LocaleDot isHome={isHome} />
-          </a>
-        )
-      }
+      <a href={`${kUrlBase}/`}>{kSiteLogo.trim()}</a>
       {
         breadcrumbs && (
           <>

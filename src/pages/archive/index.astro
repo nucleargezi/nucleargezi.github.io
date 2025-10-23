@@ -10,15 +10,13 @@ import { published } from "$content";
 
 import "$styles/IndexPostList.css";
 
-const lang = Astro.currentLocale || "en";
-
 const archives = (await getCollection("archive"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .filter(published);
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang="en">
   <head>
     <BaseHead title={kSiteTitle} description={kSiteDescription} />
     <style>

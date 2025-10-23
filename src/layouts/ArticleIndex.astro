@@ -5,22 +5,10 @@ import TagList from "virtual:tylant/components/TagList";
 import Search from "virtual:tylant/components/Search";
 
 import { BaseHead, Footer, FormattedDate, Header, Prelude } from "$components";
-import { getPostLocaleInfo } from "$components/locale";
 import { kUrlBase, kSiteTitle, kSiteDescription, kEnableSearch } from "$consts";
 
 import "$styles/IndexPostList.css";
 import { postLastModified, publishedBlogPosts } from "$content";
-
-interface Props {
-  lang?: string;
-}
-
-const lang = Astro.props.lang || Astro.currentLocale || "en";
-const explicitLang = Astro.props.lang ? lang : undefined;
-//todo: remove this hack
-const canonical = explicitLang
-  ? Astro.url.pathname.replace(/\/(zh|en)\//, "/")
-  : undefined;
 
 const postModified = new Map<string, Date>(
   (
@@ -36,11 +24,8 @@ const postModified = new Map<string, Date>(
 const posts = publishedBlogPosts.map((post) => {
   return {
     id: post.id,
-    // If no specific language is requested, use the default locale
     data: {
-      ...(explicitLang
-        ? getPostLocaleInfo(post.id)?.data(lang) || post.data
-        : post.data),
+      ...post.data,
       modifiedDate: postModified.get(post.id),
     },
   };
@@ -48,11 +33,10 @@ const posts = publishedBlogPosts.map((post) => {
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang="en">
   <head>
     <BaseHead
       title={kSiteTitle}
-      canonical={canonical}
       description={kSiteDescription}
     />
     <style>
@@ -86,7 +70,7 @@ const posts = publishedBlogPosts.map((post) => {
               >
                 <a
                   class="heading"
-                  href={`${kUrlBase}/${lang}/article/${post.id}/`}
+                  href={`${kUrlBase}/article/${post.id}/`}
                 >
                   <h2>
                     <span class="title">{post.data.title}</span>
@@ -103,7 +87,7 @@ const posts = publishedBlogPosts.map((post) => {
                 </a>
                 {post.data.tags && (
                   <TagList
-                    baseUrl={`${kUrlBase}/${explicitLang ? explicitLang + "/" : ""}article`}
+                    baseUrl={`${kUrlBase}/article`}
                     tags={post.data.tags}
                   />
                 )}

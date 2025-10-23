@@ -4,9 +4,6 @@
 import * as config from "astro:env/client";
 
 import STATS from "../content/snapshot/article-stats.json";
-import COMMENTS from "../content/snapshot/article-comments.json";
-
-type Comment = (typeof COMMENTS)[number];
 
 /**
  * Whether to enable theming (dark & light mode).
@@ -23,7 +20,7 @@ export const kEnableClick = true && kEnableBackend;
 /**
  * Whether to enable comment posting and viewing.
  */
-export const kEnableComment = true && kEnableBackend;
+export const kEnableComment = false;
 /**
  * Whether to enable like reaction.
  */
@@ -87,33 +84,13 @@ export const kUrlBase = (config.URL_BASE || "").replace(/\/$/, "");
 export const kArticleStats = STATS;
 
 /**
- * The comment info obtained from the backend.
- */
-export const kCommentInfo = (() => {
-  const kCommentInfo = new Map<string, Comment[]>();
-  for (const comment of COMMENTS) {
-    const { articleId } = comment;
-    if (!kCommentInfo.has(articleId)) {
-      kCommentInfo.set(articleId, []);
-    }
-    kCommentInfo.get(articleId)?.push(comment);
-  }
-  return kCommentInfo;
-})();
-export const kCommentList = COMMENTS;
-/**
  * The friend link info.
  */
 export const kFriendLinks = [
   {
-    name: "7mile",
-    url: "https://7li.moe/",
-    desc: "一切都有其意义，包括停滞不前的日子。",
-  },
-  {
-    name: "Margatroid",
-    url: "https://blog.mgt.moe/",
-    desc: "SIGSLEEP Fellow",
+    name: "QOJ",
+    url: "https://qoj.ac/",
+    desc: "没朋友，放个oj吧",
   },
 ];
 /**

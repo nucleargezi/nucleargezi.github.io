@@ -4,21 +4,16 @@ import { getCollection } from "astro:content";
 
 import TagList from "virtual:tylant/components/TagList";
 import ArchiveRef from "virtual:tylant/components/ArchiveRef";
-import CommentList from "virtual:tylant/components/CommentList";
 import LikeReaction from "virtual:tylant/components/LikeReaction";
 import PostClick from "virtual:tylant/components/PostClick";
-import { renderComment } from "@myriaddreamin/tylant";
 
 import { BaseHead, Footer, FormattedDate, Header } from "$components";
 import {
   kEnableClick,
   kArticleStats,
   kEnableReaction,
-  kCommentInfo,
   kUrlBase,
 } from "$consts";
-import { formatLang, getPostLocaleInfo } from "$components/locale";
-import LocaleMessage from "$components/LocaleMessage.astro";
 import { postLastModified } from "$content";
 import { SITE_SOURCE_URL } from "astro:env/client";
 
@@ -54,10 +49,7 @@ const like = stat.like || 0;
 const pdfArchives = await getCollection("archive");
 const modifiedTime = id && (await postLastModified(id));
 
-const htmlLang = formatLang(lang, region);
-const explicitLang =
-  lang == "en" && !Astro.url.pathname.includes("/en/") ? undefined : lang;
-const localeInfo = id && getPostLocaleInfo(id);
+const htmlLang = lang && region ? `${lang}-${region.toUpperCase()}` : lang || "en";
 ---
 
 <html lang={htmlLang}>
@@ -70,7 +62,6 @@ const localeInfo = id && getPostLocaleInfo(id);
         margin: 0;
       }
       .prose,
-      .comment-region,
       ul.tags {
         max-width: min(56rem, calc(100% - 2em));
         color: var(--main-color);
@@ -216,15 +207,6 @@ const localeInfo = id && getPostLocaleInfo(id);
             </div>
             <h1>{title}</h1>
             {
-              localeInfo && (
-                <LocaleMessage
-                  articleId={id}
-                  lang={lang || "en"}
-                  localeInfo={localeInfo}
-                />
-              )
-            }
-            {
               id && pdfArchives.length > 0 && (
                 <ArchiveRef
                   articleId={id || undefined}
@@ -241,17 +223,8 @@ const localeInfo = id && getPostLocaleInfo(id);
       {
         tags && (
           <TagList
-            baseUrl={`${kUrlBase}/${explicitLang ? explicitLang + "/" : ""}article`}
+            baseUrl={`${kUrlBase}/article`}
             tags={tags}
-          />
-        )
-      }
-      {
-        id && (
-          <CommentList
-            articleId={id}
-            kCommentInfo={kCommentInfo}
-            renderComment={renderComment}
           />
         )
       }

@@ -4,26 +4,14 @@ interface Props {
   isHome?: true;
 }
 
-const locale = Astro.currentLocale || "en";
 const today = new Date();
 const { isHome = false } = Astro.props as Props;
 ---
 
 <footer>
-  {
-    (isHome || locale !== "zh") && (
-      <p lang="en">
-        &copy; 2023-{today.getFullYear()} {kSiteTitle}. All rights reserved.
-      </p>
-    )
-  }
-  {
-    (isHome || locale === "zh") && (
-      <p lang="zh">
-        &copy; 2023-{today.getFullYear()} {kSiteTitle}. 保留所有权利.
-      </p>
-    )
-  }
+  <p>
+    &copy; 2023-{today.getFullYear()} {kSiteTitle}. All rights reserved.
+  </p>
   <div class="social-links">
     {
       kSiteSourceUrl && (
@@ -50,20 +38,9 @@ const { isHome = false } = Astro.props as Props;
       >
     </a>
   </div>
-  {
-    (isHome || locale !== "zh") && (
-      <p lang="en">
-        <span>No peeking at my footer~! Saw you (`・ω・´)~</span>
-      </p>
-    )
-  }
-  {
-    (isHome || locale === "zh") && (
-      <p lang="zh">
-        <span>(`・ω・´) 偷看被我抓到了吧～</span>
-      </p>
-    )
-  }
+  <p>
+    <span>No peeking at my footer~! Saw you (`・ω・´)~</span>
+  </p>
 </footer>
 <style>
   footer {

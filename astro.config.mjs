@@ -67,16 +67,6 @@ export default defineConfig({
       siteLogo: SITE_LOGO,
     }),
   ],
-  i18n: {
-    locales: [
-      "en",
-      {
-        path: "zh",
-        codes: ["zh", "zh-CN"],
-      },
-    ],
-    defaultLocale: "en",
-  },
 
   vite: {
     build: {

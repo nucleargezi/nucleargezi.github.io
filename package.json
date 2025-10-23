@@ -9,7 +9,6 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "build:cn": "NODE_ENV=cn pnpm build --mode cn",
     "preview": "astro preview",
     "create:post": "node scripts/create-file.mjs blog-post",
     "create:archive": "node scripts/create-file.mjs archive-post",
