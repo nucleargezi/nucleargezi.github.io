@@ -9,6 +9,6 @@
   ),
   archive-indices: (
     articles.personal-info,
-    articles.a-20251022-sais,
+    // articles.a-20251022-sais,
   ),
 )
