@@ -45,8 +45,20 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
-      - name: Download Fonts
-        run: curl -L https://github.com/Myriad-Dreamin/shiroa/releases/download/v0.1.5/source-han-serif-font-assets.tar.gz | tar -xvz -C /usr/share/fonts
+      - name: Download and Install Fonts
+        run: |
+          # Install Noto Serif CJK SC (and other Noto CJK fonts)
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-color-emoji
+          
+          # Install Latin Modern fonts
+          sudo apt-get install -y fonts-lmodern
+          
+          # Install DejaVu Sans Mono
+          sudo apt-get install -y fonts-dejavu
+          
+          # Refresh font cache
+          fc-cache -f -v
       - run: pnpm install
       - name: Pull Data from Backend (Optional)
         run: pnpm run pull-data
