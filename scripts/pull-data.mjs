@@ -1,5 +1,6 @@
 import { execSync } from "child_process";
 import { loadEnv } from "vite";
+import fs from "fs";
 
 /**
  * Please check `defineConfig/env` in astro.config.mjs for schema
@@ -31,7 +32,17 @@ const pullData = (route, dest) => {
     execSync(`curl -s ${url} > ${dest}`, {
       stdio: "inherit",
     });
-    console.log(`Data pulled successfully to ${dest}`);
+    
+    // Format JSON file to make it more readable and compatible
+    try {
+      const data = JSON.parse(fs.readFileSync(dest, 'utf8'));
+      fs.writeFileSync(dest, JSON.stringify(data, null, 2), 'utf8');
+      console.log(`Data pulled and formatted successfully to ${dest}`);
+    } catch (formatError) {
+      console.warn(`Warning: Failed to format JSON at ${dest}:`, formatError.message);
+      console.log(`Data pulled successfully to ${dest} (unformatted)`);
+    }
+    
     return true;
   } catch (error) {
     console.error(`Failed to pull data from ${url}:`, error);
