@@ -19,17 +19,6 @@
   --blue: #5cb3cc;
 }
 
-:root.dark {
-  --main-color: #dfdfd6;
-  --main-hover-color: #fff;
-  --gray-color: #939da3;
-  --raw-bg-color: #65758529;
-  --main-bg-color: #212737;
-  --nav-bg-color: #212737;
-  --accent: #cf829e;
-  --accent-dark: #cf829eb3;
-}
-
 body {
 
   /* past  */
@@ -233,33 +222,6 @@ nav a:hover,
 .icon svg path,
 .icon svg circle {
   fill: currentColor;
-}
-.theme-icon {
-  cursor: pointer;
-}
-.dark .theme-icon.light {
-  display: none;
-}
-.dark .theme-icon.dark {
-  display: dark;
-}
-.theme-icon.light {
-  display: dark;
-}
-.theme-icon.dark {
-  display: none;
-}
-.dark .code-image.themed .light {
-  display: none;
-}
-.dark .code-image.themed .dark {
-  display: initial;
-}
-.code-image.themed .light {
-  display: initial;
-}
-.code-image.themed .dark {
-  display: none;
 }
 .code-image.center {
   display: block;

@@ -8,7 +8,7 @@ import STATS from "../content/snapshot/article-stats.json";
 /**
  * Whether to enable theming (dark & light mode).
  */
-export const kEnableTheming = true;
+export const kEnableTheming = false;
 /**
  * Whether to enable backend, required by click and comment feature.
  */
