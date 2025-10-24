@@ -229,16 +229,33 @@ nav a:hover,
   max-width: 100%;
   width: fit-content;
 }
+
+/* Allow code blocks to be wider and scrollable */
+.code-image {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.code-image svg {
+  min-width: 100%;
+  width: max-content;
+  height: fit-content;
+}
+
+/* Override zebraw's fixed width */
+.zebraw-code-block {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 .zebraw-code-line-container {
   height: 1.8rem;
+  width: 100% !important;
 }
 
 figcaption {
   text-align: center;
-}
-.code-image svg {
-  max-width: 100%;
-  height: fit-content;
 }
 .inline-equation {
   display: inline-block;
