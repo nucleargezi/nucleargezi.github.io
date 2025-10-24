@@ -3,7 +3,7 @@
 #show: main.with(
   title: "SAIS 模板",
   desc: [一份 On SA],
-  date: "2025-10-23",
+  date: "2025-10-21",
   tags: (
     blog-tags.alg,
     blog-tags.temp,

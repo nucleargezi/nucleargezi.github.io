@@ -1,8 +1,8 @@
 #import "/typ/templates/blog.typ": *
 
 #show: main.with(
-  title: "ntt convolution",
-  desc: [一份简短的 ntt 卷积模板，以及三模ntt（任意模数ntt）],
+  title: "NTT convolution",
+  desc: [一份简短的 NTT 卷积模板，以及三模 NTT （任意模数 NTT ）],
   date: "2025-10-23",
   tags: (
     blog-tags.alg,
@@ -12,7 +12,8 @@
   show-outline: false,
 )
 
-= ntt convolution template
+= Template
+== NTT convolution
 
 #zebraw(
   numbering: true,
@@ -54,7 +55,7 @@
   ```,
 )
 
-= MTT convolution
+== MTT convolution
 
 #zebraw(
   ```cpp
