@@ -13,6 +13,7 @@
 )
 
 = The 3rd Universal Cup. Stage 30: Northern
+link: #link("https://qoj.ac/contest/1917", "QOJ");
 == A.Archaeology
 === 简要题意
 在一个 $N * N$ （$N<=10^9$）的空间内 有一个随机的特殊整点，需要找到它，每次可以询问一个整点 $O$ ，得到空间中射线 $arrow(O A)$ 所在的半平面内的随机一个点，在90次询问中找出这个点，询问和回答为同一个点即为找到。
