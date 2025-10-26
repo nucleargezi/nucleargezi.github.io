@@ -53,12 +53,12 @@ Link: #link("https://judge.yosupo.jp/problem/majority_voting", "单点修改区�
 - 将 $[L, R)$ 内的数修改为 $x$
 - 查询 $[L, R)$ 范围内出现次数超过 $P%$ 的数字，要求输出一个集合，包含全部符合条件的数字，可以输出多余的数字。
 === Solution
-这题区间内可能有 $S = floor(N / P)$ ($1<=S<=5$) 个答案，所以可以每次删除 $S$ 个不同的数，具体的信息合并可以这样：
+这题区间内可能有 $S = floor(N / P)$ ( $1<=S<=5$ ) 个答案，所以可以每次删除 $S + 1$ 个不同的数，具体的信息合并可以这样：
 #zebraw(
   ```cpp
-  using X = array<piar<int, int>, 5>;
+  using X = array<pair<int, int>, S>;
 
-  void f(X &L, piar<int, int> x) {
+  void f(X &L, pair<int, int> x) {
     if (x.first == -1) return;
     FOR(i, S) if (L[i].first == x.first) return L[i].second += x.second, void();
     FOR(i, S) if (L[i].first == -1) return L[i] = x, void();
