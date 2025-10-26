@@ -43,7 +43,7 @@
 
 如果需要区间推平，仍然可以对每个数字开一颗动态开点线段树，修改时可以在原序列的线段树上二分查找范围内的若干连续段推平，同时在动态开点线段树上区间修改，也可以维护一棵珂朵莉数来查找和修改连续段。
 
-Link: #link("https://judge.yosupo.jp/problem/majority_voting", "单点修盖区间绝对众数查询模板题")
+Link: #link("https://judge.yosupo.jp/problem/majority_voting", "单点修改区间绝对众数查询模板题")
 
 == 不严格的区间众数
 === Problem
