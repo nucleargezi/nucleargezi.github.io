@@ -12,6 +12,8 @@
   show-outline: false,
 )
 
+#set text(size: 8pt)
+
 = Template
 == NTT convolution
 

@@ -12,6 +12,8 @@
   show-outline: false,
 )
 
+#set text(size: 8pt)
+
 = The 3rd Universal Cup. Stage 30: Northern
 link: #link("https://qoj.ac/contest/1917", "QOJ");
 == A.Archaeology

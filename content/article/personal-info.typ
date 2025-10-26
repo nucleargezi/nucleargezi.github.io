@@ -8,6 +8,8 @@
   show-outline: false,
 )
 
+#set text(size: 8pt)
+
 = Yorisou
 
 // #figure(image("/public/trash.svg", alt: "yorisou"), caption: "yorisou")
