@@ -60,6 +60,7 @@
 == MTT convolution
 
 #zebraw(
+  numbering: true,
   ```cpp
   constexpr ll m0 = 167772161, g0 = 3,
                m1 = 469762049, g1 = 3,
