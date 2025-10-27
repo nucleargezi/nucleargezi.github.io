@@ -6,7 +6,8 @@
   date: "2025-10-25",
   tags: (
     blog-tags.alg,
-    blog-tags.tech
+    blog-tags.temp,
+    blog-tags.tech,
   ),
   show-outline: false,
 )
