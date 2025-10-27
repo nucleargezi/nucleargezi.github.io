@@ -15,12 +15,13 @@
 #set text(size: 8pt)
 = Subset Convolution Template
 == 这是一份子集卷积模板
-给定两个长度为 $2^n$ 的序列 $a_0 \, a_1 \, dots.h.c \, a_(2^n - 1)$ 和
-$b_0 \, b_1 \, dots.h.c \, b_(2^n - 1)$，你需要求出一个序列
-$c_0 \, c_1 \, dots.h.c \, c_(2^n - 1)$，其中 $c_k$ 满足：
+给定两个长度为 $2^n$ 的序列 $a_0 , a_1 , dots.h.c , a_(2^n - 1)$ 和
+$b_0 , b_1 , dots.h.c , b_(2^n - 1)$，你需要求出一个序列
+$c_0 , c_1 , dots.h.c , c_(2^n - 1)$，其中 $c_k$ 满足：
 
 $ c_k = sum_(i amp j = 0\
 i med divides med j = k) a_i b_j $
+
 #zebraw(
   numbering: true,
   ```cpp
