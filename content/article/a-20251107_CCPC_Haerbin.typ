@@ -3,7 +3,7 @@
 #show: main.with(
   title: "REC of 2025 CCPC Haerbin Site",
   desc: [CCPC 哈尔滨站记录],
-  date: "2025-11-06",
+  date: "2025-11-07",
   tags: (
     blog-tags.contest,
     blog-tags.tour,
