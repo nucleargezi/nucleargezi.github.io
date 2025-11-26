@@ -9,7 +9,7 @@
   ),
   archive-indices: (
     articles.a-20251105_dynamic_tree_dp,
-    articles.a-20251106_ICPC_Wuhan,
-    articles.a-20251107_CCPC_Haerbin,
+    articles.a-20251106_icpc_wuhan,
+    articles.a-20251107_ccpc_haerbin,
   ),
 )
