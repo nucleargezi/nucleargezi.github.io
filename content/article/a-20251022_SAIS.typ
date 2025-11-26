@@ -14,6 +14,9 @@
 
 #set text(size: 8pt)
 
+= SAIS
+== Template
+
 #zebraw(
   ```cpp
   struct SA {
