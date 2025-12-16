@@ -10,7 +10,7 @@
     blog-tags.sol,
     blog-tags.rec
   ),
-  show-outline: false,
+  show-outline: true,
 )
 
 #set text(size: 8pt)

@@ -9,7 +9,7 @@
     blog-tags.temp,
     blog-tags.tech,
   ),
-  show-outline: false,
+  show-outline: true,
 )
 
 #set text(size: 8pt)
