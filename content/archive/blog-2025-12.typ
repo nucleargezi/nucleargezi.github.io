@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Yorisou Blog 2025-12",
   desc: [Yorisou Blog 2025-12 collect],
-  date: "2025-12-17",
+  date: "2025-12-16",
   tags: (
     archive-tags.blog-post,  
   ),

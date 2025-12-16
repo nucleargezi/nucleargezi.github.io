@@ -3,7 +3,7 @@
 #show: main.with(
   title: "FPS Learn Memo",
   desc: [哈级幂学习笔记],
-  date: "2025-12-17",
+  date: "2025-12-16",
   tags: (
     blog-tags.alg,
     blog-tags.train,
