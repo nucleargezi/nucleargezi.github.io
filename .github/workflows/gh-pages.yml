@@ -29,6 +29,16 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      # 必填：你的博客站点 URL（修改为你实际的 GitHub Pages URL）
+      SITE: ${{ vars.SITE }}
+      # 可选：如果部署在子路径下，设置 URL_BASE
+      URL_BASE: ${{ vars.URL_BASE }}
+      # 可选：其他配置
+      SITE_TITLE: ${{ vars.SITE_TITLE }}
+      SITE_DESCRIPTION: ${{ vars.SITE_DESCRIPTION }}
+      SITE_OWNER: ${{ vars.SITE_OWNER }}
+      SITE_SOURCE_URL: ${{ vars.SITE_SOURCE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

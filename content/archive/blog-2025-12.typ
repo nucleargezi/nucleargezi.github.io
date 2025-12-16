@@ -8,6 +8,6 @@
     archive-tags.blog-post,  
   ),
   archive-indices: (
-    articles.a-20251217_fps0,
+    articles.a-20251216_fps0,
   ),
 )
