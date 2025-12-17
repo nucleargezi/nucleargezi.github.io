@@ -2,7 +2,7 @@
 
 #show: main.with(
   title: "FPS Learn Memo 0",
-  desc: [哈级幂学习笔记0],
+  desc: [形式幂级数学习笔记0],
   date: "2025-12-16",
   tags: (
     blog-tags.alg,
