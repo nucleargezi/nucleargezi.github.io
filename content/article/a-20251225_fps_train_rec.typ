@@ -21,8 +21,6 @@
 #let tab = text[#h(8pt)]
 #let endl = linebreak()
 
-#outline()
-#pagebreak()
 
 = FPS Training Log
 == P4491 [HAOI2018] 染色
@@ -62,8 +60,6 @@ $
 $
 
 令 $ T_k (x) = binom(M, k) x^(s k)/(s!)^k e^((M-k)x) $
-
-#pagebreak()
 
 变换 $F(x, y)$
 $
