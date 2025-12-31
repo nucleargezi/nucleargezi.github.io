@@ -21,6 +21,9 @@
 #let tab = text[#h(8pt)]
 #let endl = linebreak()
 
+#outline()
+#pagebreak()
+
 = FPS Training Log
 == P4491 [HAOI2018] 染色
 
