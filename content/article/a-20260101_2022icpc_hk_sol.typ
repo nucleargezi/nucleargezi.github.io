@@ -3,7 +3,7 @@
 #show: main.with(
   title: "2022 ICPC Hongkong Training REC",
   desc: [2022 ICPC HK 训练记录],
-  date: "2025-12-25",
+  date: "2026-01-01",
   tags: (
     blog-tags.alg,
     blog-tags.train,
