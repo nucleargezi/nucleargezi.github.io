@@ -3,7 +3,7 @@
 #show: main.with(
   title: "EGF Learn Memo",
   desc: [指数型生成函数学习笔记],
-  date: "2026-01-19",
+  date: "2026-01-17",
   tags: (
     blog-tags.alg,
     blog-tags.train,
