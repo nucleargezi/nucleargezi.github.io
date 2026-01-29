@@ -81,7 +81,7 @@
           column-gutter: 10pt,
           text("📚", size: 12pt) + text("  BJTU undergrad, year 4, majoring in CS", size: 12pt),
           text("🎯", size: 12pt) + text("  XCPCer", size: 12pt),
-          text("🥪  Codeforces: ", size: 12pt) + text("2342", size: 12pt, fill: rgb("#ffc85a"), weight: "bold"),
+          text("🥪  Codeforces: ", size: 12pt) + text("2450", size: 12pt, fill: rgb("#ff0000"), weight: "bold"),
           text("🚀  Atcoder: ", size: 12pt) + text("2010", size: 12pt, fill: rgb("#f5ed67"), weight: "bold"),
           text("📧", size: 12pt) + text("  QQ：604223110", size: 12pt),
           text("💎", size: 12pt) + text("  Interested in: galgame / competitive programming", size: 12pt),
@@ -102,10 +102,31 @@
   #align(left)[
     #timeline_item(
       "🥇",
+      "11/2025",
+      "第 11 届 CCPC 中国大学生程序设计竞赛郑州站",
+      "2025 - 2026 China Collegiate Programming Contest, Zhengzhou Site",
+      "金奖\nGold Medal",
+    )
+    #timeline_item(
+      "🥇",
+      "11/2025",
+      "第 50 届 ICPC 国际大学生程序设计竞赛区域赛沈阳站",
+      "2025 - 2026 International Collegiate Programming Contest, Shenyang Site",
+      "金奖\nGold Medal",
+    )
+    #timeline_item(
+      "🥇",
       "05/2025",
       "2025年北京市大学生程序设计竞赛暨“小米杯”全国邀请赛",
       "2025 - 2026 China Collegiate Programming Contest, Beijing Site",
       "金奖\nGold Medal",
+    )
+    #timeline_item(
+      "🥈",
+      "11/2024",
+      "第49届 ICPC 国际大学生程序设计竞赛区域赛昆明站",
+      "2024 - 2025 International Collegiate Programming Contest, Kunming Site",
+      "银奖\nSilver Medal",
     )
     #timeline_item(
       "🥇",
@@ -118,7 +139,7 @@
       "🥈",
       "10/2024",
       "第10届 CCPC 中国大学生程序设计竞赛区域赛济南站",
-      "2024 - 2025 International Collegiate Programming Contest, Kunming Site",
+      "2024 - 2025 International Collegiate Programming Contest, Jinan Site",
       "银奖\nSilver Medal",
     )
   ]
