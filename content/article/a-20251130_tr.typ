@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Training Log 20251130",
   desc: [做题记录 20251130],
-  date: "2025-11-30",
+  date: "2080-11-30",
   tags: (
     blog-tags.alg,
     blog-tags.train,

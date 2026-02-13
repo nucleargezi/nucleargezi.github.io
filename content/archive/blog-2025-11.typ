@@ -8,9 +8,9 @@
     archive-tags.blog-post,  
   ),
   archive-indices: (
-    articles.a-20251105_dynamic_tree_dp,
+    // articles.a-20251105_dynamic_tree_dp,
     articles.a-20251106_icpc_wuhan,
     articles.a-20251107_ccpc_haerbin,
-    articles.a-20251130_tr,
+    // articles.a-20251130_tr,
   ),
 )

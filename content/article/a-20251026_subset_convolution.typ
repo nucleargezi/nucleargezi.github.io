@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Subset Convolution 模板",
   desc: [魔怔卡常短码量子集卷积],
-  date: "2025-10-25",
+  date: "2080-10-25",
   tags: (
     blog-tags.alg,
     blog-tags.temp,

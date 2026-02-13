@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Static Toptree 模板",
   desc: [一天一棵 Toptree],
-  date: "2025-11-05",
+  date: "2080-11-05",
   tags: (
     blog-tags.alg,
     blog-tags.temp,
