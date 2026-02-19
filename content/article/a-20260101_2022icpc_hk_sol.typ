@@ -1,7 +1,7 @@
 #import "/typ/templates/blog.typ": *
 
 #show: main.with(
-  title: "2022 ICPC Hongkong Training REC",
+  title: "Record 2022 ICPC Hongkong Training",
   desc: [2022 ICPC HK 训练记录],
   date: "2026-01-01",
   tags: (
