@@ -1,7 +1,7 @@
 [submodule "typ"]
 	path = typ
 	url = https://github.com/nucleargezi/typ.git
-	branch = main
+	branch = gg
 [submodule "packages/tylant"]
 	path = packages/tylant
 	url = https://github.com/Myriad-Dreamin/tylant.git
