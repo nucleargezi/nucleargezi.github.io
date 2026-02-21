@@ -13,6 +13,11 @@
   show-outline: true,
 )
 
+#show raw.where(block: true, lang: "cpp"): it => zebraw(
+  numbering: true,
+  it,
+)
+
 #set text(size: 8pt)
 
 #let msk = "■";
