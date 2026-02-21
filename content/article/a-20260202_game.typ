@@ -2,8 +2,8 @@
 
 #show: main.with(
   title: "Game Theory",
-  desc: [博弈论学习笔记(施工中)],
-  date: "2026-02-01",
+  desc: [博弈论学习笔记 施工中],
+  date: "2026-02-02",
   tags: (
     blog-tags.alg,
     blog-tags.train,
@@ -19,6 +19,12 @@
 )
 
 #set text(size: 8pt)
+
+#let msk = "■";
+#let HL(s) = text(size: 9pt)[*#s*]
+#let tab = text[#h(8pt)]
+#let endl = linebreak()
+#let prod = $product$
 
 = Nim
 
