@@ -598,22 +598,20 @@ $
 
 $C$ 和 $D$ 是两个 sum of pow , 求完乘上系数卷一下, 最后乘上 $p! * 1 / (N M)$ 就是答案
 
-#zebraw(
-  ```cpp
-  using mint = M99;
-  void Yorisou() {
-    INT(N, M, K);
-    VEC(mint, a, N);
-    VEC(mint, b, M);
-    vc<mint> c = sum_of_pow(a, K), d = sum_of_pow(b, K);
-    FOR(i, K + 1) c[i] *= ifac(i);
-    FOR(i, K + 1) d[i] *= ifac(i);
-    c = c * d;
-    mint in = mint(1) / N / M;
-    FOR(i, 1, K + 1) print(c[i] * fac(i) * in);
-  }
-  ```,
-)
+```cpp
+using mint = M99;
+void Yorisou() {
+  INT(N, M, K);
+  VEC(mint, a, N);
+  VEC(mint, b, M);
+  vc<mint> c = sum_of_pow(a, K), d = sum_of_pow(b, K);
+  FOR(i, K + 1) c[i] *= ifac(i);
+  FOR(i, K + 1) d[i] *= ifac(i);
+  c = c * d;
+  mint in = mint(1) / N / M;
+  FOR(i, 1, K + 1) print(c[i] * fac(i) * in);
+}
+```,
 
 #pagebreak()
 
@@ -675,18 +673,16 @@ $
 $
 通过在线 $exp(B)$ 可以求出答案, 由于根固定需要 $\/ i$
 
-#zebraw(
-  ```cpp
-  vc<mint> A(N + 1), B = count_label_tree<mint>(N);
-  FOR(i, 1, N + 1) B[i] *= ifac(i) * i;
-  online_exp<mint> expB;
-  FOR(i, 1, N + 1) {
-    A[i] = expB(B[i - 1]);
-    B[i] = B[i] - A[i];
-  }
-  FOR(i, 2, N + 1) print(A[i] * fac(i) * inv<mint>(i));
-  ```,
-)
+```cpp
+vc<mint> A(N + 1), B = count_label_tree<mint>(N);
+FOR(i, 1, N + 1) B[i] *= ifac(i) * i;
+online_exp<mint> expB;
+FOR(i, 1, N + 1) {
+  A[i] = expB(B[i - 1]);
+  B[i] = B[i] - A[i];
+}
+FOR(i, 2, N + 1) print(A[i] * fac(i) * inv<mint>(i));
+```,
 
 也可以用牛顿迭代来做, 比在线 exp 慢一些
 
@@ -701,27 +697,26 @@ $
   G'(B) = 1 - x(exp(x exp(B) + B)(x exp(B) + 1) - exp(B))
 $
 牛顿迭代即可
-#zebraw(
-  ```cpp
-  const fps x{0, 1}, one{1};
-  pair<fps, fps> ke(fps B, int N) {
-    sh(B, N);
-    fps E = fps_exp(B);
-    fps H = E * x + B;
-    sh(H, N);
-    fps F = fps_exp(H);
-    fps g = (B - x * (F - E));
-    sh(g, N);
-    fps dg = one - x * (F * (x * E + one) - E);
-    sh(dg, N);
-    return {g, dg};
-  }
 
-  fps B = newton(ke, mint(0), N + 1);
-  fps A = x * fps_exp(B);
-  FOR(i, 2, N + 1) print(A[i] * fac(i) * inv<mint>(i));
-  ```,
-)
+```cpp
+const fps x{0, 1}, one{1};
+pair<fps, fps> ke(fps B, int N) {
+  sh(B, N);
+  fps E = fps_exp(B);
+  fps H = E * x + B;
+  sh(H, N);
+  fps F = fps_exp(H);
+  fps g = (B - x * (F - E));
+  sh(g, N);
+  fps dg = one - x * (F * (x * E + one) - E);
+  sh(dg, N);
+  return {g, dg};
+}
+
+fps B = newton(ke, mint(0), N + 1);
+fps A = x * fps_exp(B);
+FOR(i, 2, N + 1) print(A[i] * fac(i) * inv<mint>(i));
+```,
 
 #pagebreak()
 
@@ -745,15 +740,13 @@ $
 $
 这样就解出了偶数时的答案, 由于是无根树 $\/ i$, 奇数时没有完美匹配
 
-#zebraw(
-  ```cpp
-  vc<mint> f = count_label_tree<mint>(N);
-  FOR(i, 2, N + 1) {
-    if (i & 1) print(f[i]);
-    else print(f[i] - mint(i).pow(i / 2 - 1) * ifac(i / 2) * inv<mint>(i) * fac(i));
-  }
-  ```,
-)
+```cpp
+vc<mint> f = count_label_tree<mint>(N);
+FOR(i, 2, N + 1) {
+  if (i & 1) print(f[i]);
+  else print(f[i] - mint(i).pow(i / 2 - 1) * ifac(i / 2) * inv<mint>(i) * fac(i));
+}
+```,
 
 #pagebreak()
 
@@ -792,19 +785,17 @@ $
   [x^T] F * 1 / (1 - a_0 x F) = A / (B - A - a_0 x A)
 $
 
-#zebraw(
-  ```cpp
-  using mint = M99;
-  using fps = vc<mint>;
-  void Yorisou() {
-    LL(N, T);
-    VEC(mint, a, N);
-    vc<pair<fps, fps>> fr;
-    FOR(i, 1, N) {
-      fr.ep(fps{0, mint(a[i])}, fps{1, mint(a[i])});
-    }
-    Z [A, B] = sum_of_rationals(fr);
-    print(coef_of_rational_fps(A, B - A - A * fps{0, mint(a[0])}, T - 1));
+```cpp
+using mint = M99;
+using fps = vc<mint>;
+void Yorisou() {
+  LL(N, T);
+  VEC(mint, a, N);
+  vc<pair<fps, fps>> fr;
+  FOR(i, 1, N) {
+    fr.ep(fps{0, mint(a[i])}, fps{1, mint(a[i])});
   }
-  ```,
-)
+  Z [A, B] = sum_of_rationals(fr);
+  print(coef_of_rational_fps(A, B - A - A * fps{0, mint(a[0])}, T - 1));
+}
+```,
