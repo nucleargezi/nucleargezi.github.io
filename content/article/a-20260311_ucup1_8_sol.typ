@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Record The 1st Universal Cup. Stage 8: Slovenia",
   desc: [ucup 1-8 训练记录],
-  date: "2026-02-03",
+  date: "2026-03-11",
   tags: (
     blog-tags.alg,
     blog-tags.train,
