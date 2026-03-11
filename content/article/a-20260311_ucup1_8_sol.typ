@@ -25,7 +25,7 @@
 
 == 鲜花
 
-感觉挺简单的, 不知道为什么有些简单题过的人不多, 排名莫名其妙在很前面
+感觉挺简单的, 不知道为什么有些简单题过的人不多, 排名莫名其妙在很前面 
 
 == A - Bandits
 
@@ -391,7 +391,7 @@ void Yorisou() {
 
 可以看草稿中这个构造, 圆点表示书, 方点表示书柜, 对于这个部分, 度数最少的只有中间一个圆点, 只要它匹配到左边的方点, 策略就炸了, 所以可以重复造这样的大小只有 6 的结构, 失败概率 $1 / 2^25$
 
-#figure(image("/public/imgss/image.png", alt: "yorisou"), caption: "赛时草稿")
+#figure(image("/public/imgss/ucup1_8_0.png", alt: "yorisou"), caption: "赛时草稿")
 
 ```cpp
 void Yorisou() {
