@@ -17,11 +17,11 @@
 
 // 标题字号
 #let heading-size(level) = if level == 1 {
-  20pt
+  18pt
 } else if level == 2 {
-  17pt
+  15pt
 } else if level == 3 {
-  14pt
+  13pt
 } else if level == 4 {
   12pt
 } else {
@@ -32,7 +32,7 @@
   let spacing = if it.level == 1 {
     (above: 1.5em, below: 1em)
   } else {
-    (above: 1.1em, below: 1em)
+    (above: 1.1em, below: 1.1em)
   }
 
   block(
