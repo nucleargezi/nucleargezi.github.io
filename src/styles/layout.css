@@ -1,8 +1,10 @@
+/* 页面主容器：限制内容宽度并控制整体留白。 */
 .site-shell {
   width: min(980px, calc(100vw - 32px));
-  margin: 24px auto 48px;
+  margin: 10px auto 48px;
 }
 
+/* 顶部导航区域：使用卡片式外观承载站点标题与导航。 */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -16,6 +18,7 @@
   box-shadow: var(--shadow);
 }
 
+/* 站点标题强调品牌感，使用衬线斜体。 */
 .site-title {
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
@@ -24,11 +27,13 @@
   text-decoration: none;
 }
 
+/* 主导航横向排列链接。 */
 .site-nav {
   display: flex;
   gap: 18px;
 }
 
+/* 导航链接默认弱化，悬停时再提升强调度。 */
 .site-nav a {
   color: var(--muted);
   text-decoration: none;
@@ -39,6 +44,7 @@
   color: var(--accent-strong);
 }
 
+/* 页面主体内容区域沿用卡片容器视觉。 */
 .page {
   padding: 28px;
   border: 1px solid var(--line);
@@ -47,6 +53,7 @@
   box-shadow: var(--shadow);
 }
 
+/* 小屏下收紧留白，并把头部切换为纵向排布。 */
 @media (max-width: 720px) {
   .site-shell {
     width: min(100vw - 20px, 980px);

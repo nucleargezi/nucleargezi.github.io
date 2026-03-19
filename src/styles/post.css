@@ -1,26 +1,32 @@
+/* 文章页主标题，使用更强的字号与紧凑行高。 */
 .post-title {
   margin: 0;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
   line-height: 1.02;
 }
 
+/* 文章头部承载标题、元信息与简介。 */
 .post-header {
   margin-bottom: 24px;
 }
 
+/* 元信息与摘要统一弱化，避免抢主标题层级。 */
 .post-meta,
 .post-description {
   color: var(--muted);
 }
 
+/* 标题与元信息之间保留基本呼吸感。 */
 .post-meta {
-  margin-top: 12px;
+  margin-top: 2px;
 }
 
+/* 摘要与上方信息拉开更明显的阅读间隔。 */
 .post-description {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
 }
 
+/* 标签列表横向换行展示。 */
 .tag-list {
   list-style: none;
   padding: 0;
@@ -30,22 +36,16 @@
   gap: 8px;
 }
 
-.tag-list li {
-  padding: 4px 10px;
-  border: 1px solid rgba(15, 118, 110, 0.22);
-  border-radius: 999px;
-  color: var(--accent-strong);
-  background: rgba(15, 118, 110, 0.08);
-  font-size: 0.92rem;
-}
-
+/* 正文区域允许横向滚动，避免嵌入内容溢出。 */
 .post-body {
   overflow-x: auto;
 }
 
+/* 保证 Typst 渲染内容在容器内自适应缩放。 */
 .post-body .typst-doc {
   display: block;
-  width: 100% !important;
-  max-width: 100%;
+  width: calc(100% * 540 / 492) !important;
+  max-width: none;
   height: auto !important;
+  margin-inline: calc(100% * -24 / 492);
 }

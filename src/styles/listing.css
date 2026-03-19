@@ -1,25 +1,36 @@
+/* 列表页主标题。 */
 .page-title {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
+/* 列表页的辅助说明文字统一使用弱化颜色。 */
 .page-intro,
 .post-list-description,
 .empty-state {
   color: var(--muted);
 }
 
+.article-filter-status {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+/* Hero 区块使用纵向栅格组织标题与入口链接。 */
 .hero {
   display: grid;
   gap: 18px;
 }
 
+/* Hero 内的主入口链接使用强调色。 */
 .hero-link {
   width: fit-content;
   color: var(--accent);
   text-decoration: none;
 }
 
+/* 统一处理列表页内关键链接的悬停与聚焦反馈。 */
 .hero-link:hover,
 .hero-link:focus-visible,
 .post-list-link:hover .post-list-title,
@@ -29,6 +40,7 @@
   color: var(--accent-strong);
 }
 
+/* 分区标题栏左右排布标题与更多入口。 */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -37,16 +49,19 @@
   margin: 44px 0 18px;
 }
 
+/* 分区标题层级低于页面主标题。 */
 .section-title {
   margin: 0;
   font-size: 1.4rem;
 }
 
+/* 分区跳转链接沿用强调色。 */
 .section-link {
   color: var(--accent);
   text-decoration: none;
 }
 
+/* 文章列表本体：去除默认列表样式并控制项间距。 */
 .post-list {
   list-style: none;
   padding: 0;
@@ -55,16 +70,19 @@
   gap: 16px;
 }
 
+/* 单条列表项通过顶部描边分隔。 */
 .post-list-item {
   padding: 18px 0;
   border-top: 1px solid rgba(214, 205, 193, 0.8);
 }
 
+/* 首项不需要额外分隔线与顶部留白。 */
 .post-list-item:first-child {
   border-top: 0;
   padding-top: 0;
 }
 
+/* 标题与日期左右分布，便于快速扫读。 */
 .post-list-link {
   display: flex;
   justify-content: space-between;
@@ -73,25 +91,58 @@
   text-decoration: none;
 }
 
+/* 列表标题是每条内容的视觉主焦点。 */
 .post-list-title {
   font-size: 1.15rem;
   font-weight: 600;
 }
 
+/* 日期与 eyebrow 标签共用强调色，形成信息层级。 */
 .post-list-date,
 .eyebrow {
-  color: var(--muted);
+  color: var(--accent);
 }
 
+/* 日期保持固定收缩策略，避免挤压标题。 */
 .post-list-date {
   flex-shrink: 0;
   font-size: 0.95rem;
 }
 
+.post-list-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.post-list-tag {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+
+.post-list-tag::before {
+  content: "#";
+}
+
+.post-list-tag:hover,
+.post-list-tag:focus-visible,
+.post-list-tag.is-active {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+/* 列表描述与标题保留一小段垂直间距。 */
 .post-list-description {
   margin: 8px 0 0;
 }
 
+/* Eyebrow 用于展示分组或辅助标签。 */
 .eyebrow {
   margin: 0 0 12px;
   font-size: 0.8rem;
@@ -99,6 +150,7 @@
   text-transform: uppercase;
 }
 
+/* 小屏下将横向信息堆叠，避免标题与日期挤压。 */
 @media (max-width: 720px) {
   .post-list-link,
   .section-header {

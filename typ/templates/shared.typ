@@ -48,7 +48,7 @@
   set page(
     width: 540pt,
     height: auto, // 不分页
-    margin: (x: 12pt, y: 20pt),
+    margin: (x: 24pt, y: 20pt),
   )
 
   set text(font: text-fonts, size: body-size)
