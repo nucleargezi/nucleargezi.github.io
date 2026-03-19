@@ -36,12 +36,12 @@ const descriptionText = normalizeDescription(description);
   <article class="post">
     <header class="post-header">
       <p class="eyebrow">Article</p>
-      <h1 class="post-title">{title}</h1>
       <div class="post-meta">
-        <time datetime={formatDate(date)}>{formatDate(date)}</time>
+        <time datetime={formatDate(date)}>{formatDate(date)}·✎</time>
       </div>
-      {descriptionText && <p class="post-description">{descriptionText}</p>}
-      {
+      <h1 class="post-title">{title}</h1>
+      <!-- {descriptionText && <p class="post-description">{descriptionText}</p>} -->
+      <!-- {
         tags.length > 0 && (
           <ul class="tag-list" aria-label="Tags">
             {tags.map((tag) => (
@@ -49,7 +49,7 @@ const descriptionText = normalizeDescription(description);
             ))}
           </ul>
         )
-      }
+      } -->
     </header>
 
     <div class="post-body">
