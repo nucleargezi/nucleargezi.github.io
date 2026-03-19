@@ -17,22 +17,22 @@
 
 // 标题字号
 #let heading-size(level) = if level == 1 {
-  22pt
+  20pt
 } else if level == 2 {
-  18pt
+  17pt
 } else if level == 3 {
-  15pt
+  14pt
 } else if level == 4 {
-  13pt
+  12pt
 } else {
-  11.5pt
+  10.5pt
 }
 
 #let heading-block(it) = {
   let spacing = if it.level == 1 {
-    (above: 1.5em, below: 0.7em)
+    (above: 1.5em, below: 1em)
   } else {
-    (above: 1.1em, below: 0.55em)
+    (above: 1.1em, below: 1em)
   }
 
   block(
@@ -52,7 +52,7 @@
   )
 
   set text(font: text-fonts, size: body-size)
-  set par(justify: true, leading: 0.72em) // 两端对齐 | 行距
+  set par(justify: true, leading: 0.62em) // 两端对齐 | 行距
   set list(indent: 1.25em)
   set enum(indent: 1.25em)
   set heading(numbering: "1.") // 标题编号
