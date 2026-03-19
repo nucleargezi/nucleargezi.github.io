@@ -90,7 +90,7 @@
 }
 
 .toc-link {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
   overflow-wrap: anywhere;
 }
