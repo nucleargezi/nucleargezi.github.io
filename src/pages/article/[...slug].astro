@@ -2,6 +2,7 @@
 import { render, getCollection } from "astro:content";
 
 import BlogPost from "../../layouts/BlogPost.astro";
+import { extractTypstToc } from "../../lib/blog";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -13,8 +14,9 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const toc = extractTypstToc(post.body);
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} toc={toc}>
   <Content />
 </BlogPost>

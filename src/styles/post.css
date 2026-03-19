@@ -42,6 +42,66 @@
   overflow-x: clip;
 }
 
+.post-toc {
+  margin: 0 0 24px;
+  padding: 10px 10px;
+  border-radius: 14px;
+}
+
+.post-toc-title {
+  margin: 0 0 8px;
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.post-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-toc-item {
+  line-height: 1.7;
+}
+
+.post-toc-item + .post-toc-item {
+  margin-top: 2px;
+}
+
+.post-toc-item.toc-level-1 {
+  margin-left: 0;
+}
+
+.post-toc-item.toc-level-2 {
+  margin-left: 1em;
+}
+
+.post-toc-item.toc-level-3 {
+  margin-left: 2em;
+}
+
+.post-toc-item.toc-level-4 {
+  margin-left: 3em;
+}
+
+.post-toc-item.toc-level-5 {
+  margin-left: 4em;
+}
+
+.toc-link {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.toc-link:hover,
+.toc-link:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 26, 23, 0.35);
+  text-underline-offset: 0.12em;
+}
+
 /* 保证 Typst 渲染内容在容器内自适应缩放。 */
 .post-body .typst-doc {
   display: block;
