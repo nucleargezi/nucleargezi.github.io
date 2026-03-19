@@ -38,7 +38,8 @@
 
 /* 正文区域允许横向滚动，避免嵌入内容溢出。 */
 .post-body {
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* 保证 Typst 渲染内容在容器内自适应缩放。 */
