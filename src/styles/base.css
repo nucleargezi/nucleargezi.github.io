@@ -1,0 +1,47 @@
+:root {
+  --text: #1f1a17;
+  --muted: #6d6258;
+
+  --main-color: #000;
+  --main-hover-color: #222939;
+  --raw-bg-color: rgba(101, 117, 133, 0.16);
+  --main-bg-color: #fafcfc;
+  --nav-bg-color: #fafcfc;
+  --gray-color: #6d6d6d;
+
+  /* 交互强调色 */
+  --accent: #d3006a;
+  --accent-dark: #d30069b3;
+  --accent-strong: #a00052;
+
+  /* 表面与边框 */
+  /* --bg: #f6f2eb; */
+  /* --panel: rgba(255, 252, 248, 0.9); */
+  /* --line: rgba(214, 205, 193, 0.9); */
+  /* --shadow: 0 18px 40px rgba(31, 26, 23, 0.08); */
+
+  /* 扩展色 */
+  --black: #0f1219;
+  --blue: #5cb3cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}

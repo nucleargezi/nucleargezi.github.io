@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import PostList from "../../components/PostList.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { sortPosts } from "../../lib/blog";
+import "../../styles/listing.css";
 
 const posts = sortPosts(await getCollection("blog"));
 ---
