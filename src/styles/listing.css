@@ -1,6 +1,7 @@
 /* 列表页主标题。 */
 .page-title {
   margin: 0;
+  font-style: italic;
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
@@ -65,14 +66,14 @@
 .post-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
   display: grid;
-  gap: 16px;
+  gap: 5px;
 }
 
 /* 单条列表项通过顶部描边分隔。 */
 .post-list-item {
-  padding: 18px 0;
+  padding: 5px 0;
   border-top: 1px solid rgba(214, 205, 193, 0.8);
 }
 
@@ -114,7 +115,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 10px 0 0;
+  margin: 0px 0 0;
   padding: 0;
 }
 
@@ -139,7 +140,7 @@
 
 /* 列表描述与标题保留一小段垂直间距。 */
 .post-list-description {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
 }
 
 /* Eyebrow 用于展示分组或辅助标签。 */
