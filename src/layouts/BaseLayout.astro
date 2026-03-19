@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+  pageClass?: string;
+}
+
+const {
+  title,
+  description,
+  lang = "zh-CN",
+  pageClass,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-title" href="/">Yorisou Blog</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/">首页</a>
+          <a href="/article/">文章</a>
+        </nav>
+      </header>
+
+      <main class:list={["page", pageClass]}>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

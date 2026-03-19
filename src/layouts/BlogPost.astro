@@ -1,0 +1,59 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import {
+  formatDate,
+  normalizeDescription,
+  toHtmlLang,
+} from "../lib/blog";
+
+interface Props {
+  title: string;
+  date: Date;
+  tags?: string[];
+  description?: unknown;
+  lang?: string;
+  region?: string;
+}
+
+const {
+  title,
+  date,
+  tags = [],
+  description,
+  lang,
+  region,
+} = Astro.props;
+
+const descriptionText = normalizeDescription(description);
+---
+
+<BaseLayout
+  title={title}
+  description={descriptionText}
+  lang={toHtmlLang(lang, region)}
+  pageClass="page-post"
+>
+  <article class="post">
+    <header class="post-header">
+      <p class="eyebrow">Article</p>
+      <h1 class="post-title">{title}</h1>
+      <div class="post-meta">
+        <time datetime={formatDate(date)}>{formatDate(date)}</time>
+      </div>
+      {descriptionText && <p class="post-description">{descriptionText}</p>}
+      {
+        tags.length > 0 && (
+          <ul class="tag-list" aria-label="Tags">
+            {tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <div class="post-body">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

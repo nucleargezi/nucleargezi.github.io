@@ -1,0 +1,255 @@
+:root {
+  --bg: #f6f2ea;
+  --panel: rgba(255, 252, 246, 0.9);
+  --line: #d6cdc1;
+  --text: #1f1a17;
+  --muted: #6d6258;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --shadow: 0 24px 60px rgba(31, 26, 23, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.site-shell {
+  width: min(980px, calc(100vw - 32px));
+  margin: 24px auto 48px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.site-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.hero-link:hover,
+.hero-link:focus-visible,
+.post-list-link:hover .post-list-title,
+.post-list-link:focus-visible .post-list-title {
+  color: var(--accent-strong);
+}
+
+.page {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.page-intro,
+.post-description,
+.post-list-description,
+.empty-state {
+  color: var(--muted);
+}
+
+.hero {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-link {
+  width: fit-content;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin: 44px 0 18px;
+}
+
+.section-title,
+.post-title {
+  margin: 0;
+}
+
+.section-title {
+  font-size: 1.4rem;
+}
+
+.section-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.post-list-item {
+  padding: 18px 0;
+  border-top: 1px solid rgba(214, 205, 193, 0.8);
+}
+
+.post-list-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.post-list-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.post-list-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.post-list-date,
+.post-meta,
+.eyebrow {
+  color: var(--muted);
+}
+
+.post-list-date {
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.post-list-description {
+  margin: 8px 0 0;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.post-header {
+  margin-bottom: 24px;
+}
+
+.post-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.02;
+}
+
+.post-meta {
+  margin-top: 12px;
+}
+
+.post-description {
+  max-width: 52ch;
+  margin: 14px 0 0;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  padding: 4px 10px;
+  border: 1px solid rgba(15, 118, 110, 0.22);
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: rgba(15, 118, 110, 0.08);
+  font-size: 0.92rem;
+}
+
+.post-body {
+  overflow-x: auto;
+}
+
+.post-body .typst-doc {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 720px) {
+  .site-shell {
+    width: min(100vw - 20px, 980px);
+    margin-top: 10px;
+  }
+
+  .site-header,
+  .page {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .site-header,
+  .post-list-link,
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    gap: 12px;
+  }
+}

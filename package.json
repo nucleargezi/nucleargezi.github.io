@@ -1,0 +1,22 @@
+{
+  "name": "bl",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^6.0.5",
+    "astro-typst": "^0.12.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

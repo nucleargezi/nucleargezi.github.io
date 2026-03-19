@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+
+import PostList from "../../components/PostList.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { sortPosts } from "../../lib/blog";
+
+const posts = sortPosts(await getCollection("blog"));
+---
+
+<BaseLayout title="文章列表 | Yorisou Blog" description="这个站点当前的全部 Typst 文章。">
+  <section>
+    <p class="eyebrow">Articles</p>
+    <h1 class="page-title">文章列表</h1>
+    <p class="page-intro">
+      这里展示 `content/article/*.typ` 中的所有文章，按照日期倒序排列。
+    </p>
+  </section>
+
+  <section>
+    <PostList posts={posts} emptyText="还没有写好的文章。" />
+  </section>
+</BaseLayout>

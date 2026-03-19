@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { formatDate, normalizeDescription } from "../lib/blog";
+
+interface Props {
+  posts: CollectionEntry<"blog">[];
+  emptyText?: string;
+}
+
+const { posts, emptyText = "还没有文章。" } = Astro.props;
+---
+
+{
+  posts.length === 0 ? (
+    <p class="empty-state">{emptyText}</p>
+  ) : (
+    <ul class="post-list">
+      {posts.map((post) => {
+        const description = normalizeDescription(post.data.description);
+
+        return (
+          <li class="post-list-item">
+            <a class="post-list-link" href={`/article/${post.id}`}>
+              <span class="post-list-title">{post.data.title}</span>
+              <span class="post-list-date">{formatDate(post.data.date)}</span>
+            </a>
+            {description && <p class="post-list-description">{description}</p>}
+          </li>
+        );
+      })}
+    </ul>
+  )
+}

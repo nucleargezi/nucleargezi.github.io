@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+
+import PostList from "../components/PostList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sortPosts } from "../lib/blog";
+
+const posts = sortPosts(await getCollection("blog"));
+
+const latestPosts = posts.slice(0, 5);
+---
+
+<BaseLayout
+  title="Yorisou Blog"
+  description="一个由 Astro + Typst 驱动的个人博客骨架。"
+>
+  <section class="hero">
+    <p class="eyebrow">Astro + Typst</p>
+    <h1 class="page-title">用 Typst 写文章，用 Astro 发布博客。</h1>
+    <p class="page-intro">
+      这个项目现在只保留单篇文章的 HTML 博客流，重点是清晰的模板结构、可维护的页面壳子，以及稳定的代码和公式展示。
+    </p>
+    <a class="hero-link" href="/article/">查看全部文章</a>
+  </section>
+
+  <section>
+    <div class="section-header">
+      <h2 class="section-title">最新文章</h2>
+      <a class="section-link" href="/article/">文章列表</a>
+    </div>
+    <PostList posts={latestPosts} />
+  </section>
+</BaseLayout>
