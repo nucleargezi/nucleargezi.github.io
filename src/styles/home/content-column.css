@@ -21,6 +21,16 @@
   line-height: 0.95;
 }
 
+.home-brand-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-brand-link:hover,
+.home-brand-link:focus-visible {
+  color: var(--accent-strong);
+}
+
 .home-brand-note {
   margin: 10px 0 0;
   color: var(--muted);

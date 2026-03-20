@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 24px;
   padding: 18px 22px;
   border: 1px solid var(--line);
@@ -29,20 +30,47 @@
 
 /* 主导航横向排列链接。 */
 .site-nav {
-  font-style: italic;
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
-/* 导航链接默认弱化，悬停时再提升强调度。 */
+/* 通用页顶部导航按钮复用首页卡片入口的视觉语言。 */
 .site-nav a {
-  color: var(--muted);
+  display: grid;
+  place-items: center;
+  min-width: 67px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(31, 26, 23, 0.16);
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.72);
+  color: inherit;
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.25;
   text-decoration: none;
+  text-align: center;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
+  transform: translateY(-2px);
   color: var(--accent-strong);
+  border-color: rgba(160, 0, 82, 0.35);
+  box-shadow: 0 10px 24px rgba(31, 26, 23, 0.08);
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid rgba(160, 0, 82, 0.3);
+  outline-offset: 2px;
 }
 
 /* 页面主体内容区域沿用卡片容器视觉。 */
