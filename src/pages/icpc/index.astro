@@ -7,13 +7,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { sortPosts } from "../../lib/blog";
 import "../../styles/listing.css";
 
-const posts = sortPosts(await getCollection("blog"));
+const posts = sortPosts(
+  (await getCollection("blog")).filter((post) => post.data.category === "ICPC"),
+);
 ---
 
-<BaseLayout title="Articles" description="这个站点当前的全部 Typst 文章。">
+<BaseLayout title="ICPC" description="ICPC 分类下的全部文章。">
   <section>
-    <!-- <p class="eyebrow">Articles</p> -->
-    <h1 class="page-title">Articles list</h1>
+    <h1 class="page-title">ICPC</h1>
   </section>
 
   <section>
@@ -21,10 +22,11 @@ const posts = sortPosts(await getCollection("blog"));
     <p class="empty-state article-filter-empty" data-filter-empty hidden></p>
     <PostList
       posts={posts}
-      emptyText="还没有写好的文章。"
+      emptyText="这个分类下还没有写好的文章。"
       showTags={true}
-      tagBaseUrl="/article/"
+      tagBaseUrl="/icpc/"
     />
   </section>
 </BaseLayout>
-<TagFilterScript baseUrl="/article/" emptyText="还没有写好的文章。" />
+
+<TagFilterScript baseUrl="/icpc/" emptyText="这个分类下还没有写好的文章。" />

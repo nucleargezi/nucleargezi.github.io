@@ -1,0 +1,100 @@
+---
+interface Props {
+  baseUrl: string;
+  emptyText: string;
+}
+
+const { baseUrl, emptyText } = Astro.props;
+---
+
+<script is:inline define:vars={{ baseUrl, emptyText }}>
+  const filterStatus = document.querySelector("[data-filter-status]");
+  const filterEmpty = document.querySelector("[data-filter-empty]");
+  const postItems = [...document.querySelectorAll(".post-list-item")];
+
+  const parseSearchTags = () => {
+    const params = new URLSearchParams(window.location.search);
+    const raw = params.get("search") ?? "";
+    return [...new Set(raw.split(/\s+/).map((tag) => tag.trim()).filter(Boolean))];
+  };
+
+  const updateTagLinks = (selectedTags) => {
+    for (const tagLink of document.querySelectorAll(".post-list-tag")) {
+      const tag = tagLink.dataset.tag;
+      if (!tag) {
+        continue;
+      }
+
+      const isActive = selectedTags.includes(tag);
+      const nextTags = isActive
+        ? selectedTags.filter((selectedTag) => selectedTag !== tag)
+        : [...selectedTags, tag];
+      const params = new URLSearchParams(window.location.search);
+
+      if (nextTags.length === 0) {
+        params.delete("search");
+      } else {
+        params.set("search", nextTags.join(" "));
+      }
+
+      const query = params.toString();
+      tagLink.href = query ? `${baseUrl}?${query}` : baseUrl;
+      tagLink.classList.toggle("is-active", isActive);
+    }
+  };
+
+  const applyFilter = () => {
+    const selectedTags = parseSearchTags();
+    let visibleCount = 0;
+
+    for (const item of postItems) {
+      const itemTags = JSON.parse(item.dataset.tags ?? "[]");
+      const matches =
+        selectedTags.length === 0 ||
+        selectedTags.every((tag) => itemTags.includes(tag));
+
+      item.toggleAttribute("hidden", !matches);
+      if (matches) {
+        visibleCount += 1;
+      }
+    }
+
+    updateTagLinks(selectedTags);
+
+    if (filterStatus) {
+      if (selectedTags.length === 0) {
+        filterStatus.hidden = true;
+        filterStatus.textContent = "";
+      } else {
+        filterStatus.hidden = false;
+        filterStatus.textContent = `Tag: #${selectedTags.join(" + #")}`;
+      }
+    }
+
+    if (filterEmpty) {
+      filterEmpty.hidden = visibleCount !== 0;
+      filterEmpty.textContent =
+        selectedTags.length === 0
+          ? emptyText
+          : `没有同时带有 ${selectedTags.join(" + ")} 的文章。`;
+    }
+  };
+
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) {
+      return;
+    }
+
+    const tagLink = event.target.closest(".post-list-tag");
+    if (!(tagLink instanceof HTMLAnchorElement)) {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.pushState({}, "", tagLink.href);
+    applyFilter();
+  });
+
+  window.addEventListener("popstate", applyFilter);
+  applyFilter();
+</script>

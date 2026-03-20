@@ -17,15 +17,15 @@
 
 // 标题字号
 #let heading-size(level) = if level == 1 {
-  18pt
-} else if level == 2 {
   15pt
-} else if level == 3 {
+} else if level == 2 {
   13pt
+} else if level == 3 {
+  11.5pt
 } else if level == 4 {
-  12pt
+  10pt
 } else {
-  10.5pt
+  9.5pt
 }
 
 #let heading-block(it) = {
@@ -96,6 +96,7 @@
   desc: [No description],
   date: "1970-01-01",
   tags: (),
+  category: "",
   body,
 ) = {
   [
@@ -104,6 +105,7 @@
       description: desc,
       date: date,
       tags: tags,
+      category: category,
     )) <frontmatter>
   ]
 

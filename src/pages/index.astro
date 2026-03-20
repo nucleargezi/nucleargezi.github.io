@@ -9,9 +9,9 @@ const posts = sortPosts(await getCollection("blog"));
 const latestPosts = posts.slice(0, 5);
 const navItems = [
   { label: "Articles", href: "/article/", disabled: false },
+  { label: "ICPC", href: "/icpc/", disabled: false },
+  { label: "Algorithm", href: "/algorithm/", disabled: false },
   { label: "About", href: "/article/personal-info", disabled: false },
-  { label: "Reserved", href: "#", disabled: true },
-  { label: "Reserved", href: "#", disabled: true },
   { label: "Reserved", href: "#", disabled: true },
   { label: "Reserved", href: "#", disabled: true },
   { label: "Reserved", href: "#", disabled: true },

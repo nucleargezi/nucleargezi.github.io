@@ -7,6 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     tags: z.array(z.string()).optional(),
+    category: z.union([z.literal(""), z.enum(["ICPC", "Algorithm"])]).optional(),
     description: z.any().optional(),
     lang: z.string().optional(),
     region: z.string().optional(),

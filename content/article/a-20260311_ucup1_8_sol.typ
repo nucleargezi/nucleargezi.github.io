@@ -4,7 +4,8 @@
   title: "Record The 1st Universal Cup. Stage 8: Slovenia",
   desc: [ucup 1-8 训练记录],
   date: "2026-03-11",
-  tags: ("train", "tech", "sol", "rec", "icpc"),
+  tags: ("train", "sol", "rec", "icpc"),
+  category: "ICPC",
 )
 
 = The 1st Universal Cup. Stage 8: Slovenia

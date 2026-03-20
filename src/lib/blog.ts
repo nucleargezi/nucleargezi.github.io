@@ -5,7 +5,6 @@ export interface TocHeading {
   id: string;
   level: number;
   title: string;
-  matchIndex: number;
 }
 
 export function sortPosts(posts: BlogPost[]) {
@@ -51,13 +50,22 @@ export function toHtmlLang(lang?: string, region?: string) {
   return region ? `${lang}-${region.toUpperCase()}` : lang;
 }
 
+function normalizeTocTitle(rawTitle: string) {
+  return rawTitle
+    .replace(/#link\(\s*"[^"]*"\s*,\s*"([^"]*)"\s*\)/g, "$1")
+    .replace(/#link\(\s*"[^"]*"\s*,\s*\[([^\]]*)\]\s*\)/g, "$1")
+    .replace(/#\w+\[([^\]]+)\]/g, "$1")
+    .replace(/#\w+\(\s*"([^"]+)"\s*\)/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function extractTypstToc(body?: string): TocHeading[] {
   if (!body) {
     return [];
   }
 
   const headings: TocHeading[] = [];
-  const titleCounts = new Map<string, number>();
   let inFence = false;
 
   for (const rawLine of body.split(/\r?\n/)) {
@@ -79,15 +87,15 @@ export function extractTypstToc(body?: string): TocHeading[] {
     }
 
     const [, marks, rawTitle] = match;
-    const title = rawTitle.trim();
-    const matchIndex = titleCounts.get(title) ?? 0;
-    titleCounts.set(title, matchIndex + 1);
+    const title = normalizeTocTitle(rawTitle);
+    if (!title) {
+      continue;
+    }
 
     headings.push({
       id: `heading-${headings.length + 1}`,
       level: marks.length,
       title,
-      matchIndex,
     });
   }
 

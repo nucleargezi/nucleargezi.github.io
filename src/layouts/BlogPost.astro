@@ -68,7 +68,6 @@ const descriptionText = normalizeDescription(description);
                   href={`#${item.id}`}
                   data-heading-id={item.id}
                   data-heading-title={item.title}
-                  data-heading-match-index={item.matchIndex}
                 >
                   {item.title}
                 </a>
@@ -85,30 +84,72 @@ const descriptionText = normalizeDescription(description);
   </article>
   <script is:inline>
     const normalizeTocText = (value) => value.replace(/\s+/g, " ").trim();
+    const compactTocText = (value) => normalizeTocText(value).replace(/\s+/g, "");
+    const isHeadingNumber = (value) => /^\d+(?:\.\d+)*\.$/.test(value);
 
-    const buildHeadingIndex = () => {
-      const index = new Map();
-      const nodes = document.querySelectorAll(".post-body .typst-doc .tsel");
+    const buildHeadingTargets = () => {
+      const tocLinks = [...document.querySelectorAll(".toc-link")];
+      const textNodes = [...document.querySelectorAll(".post-body .typst-doc .tsel")]
+        .map((node) => ({
+          node,
+          text: normalizeTocText(node.textContent ?? ""),
+        }))
+        .filter((item) => item.text.length > 0);
 
-      for (const node of nodes) {
-        const text = normalizeTocText(node.textContent ?? "");
-        if (!text) continue;
+      const targets = new Map();
+      let cursor = 0;
 
-        const list = index.get(text) ?? [];
-        list.push(node);
-        index.set(text, list);
+      for (const link of tocLinks) {
+        const headingId = link.dataset.headingId ?? "";
+        const targetText = compactTocText(link.dataset.headingTitle ?? "");
+        if (!headingId || !targetText) {
+          continue;
+        }
+
+        for (let start = cursor; start < textNodes.length; start += 1) {
+          let combined = "";
+          let anchorNode = null;
+          let matched = false;
+
+          for (let end = start; end < Math.min(textNodes.length, start + 12); end += 1) {
+            const segment = textNodes[end].text;
+
+            if (!anchorNode && isHeadingNumber(segment)) {
+              continue;
+            }
+
+            if (!anchorNode) {
+              anchorNode = textNodes[end].node;
+            }
+
+            combined += compactTocText(segment);
+
+            if (!targetText.startsWith(combined)) {
+              break;
+            }
+
+            if (combined === targetText) {
+              targets.set(headingId, anchorNode);
+              cursor = end + 1;
+              matched = true;
+              break;
+            }
+          }
+
+          if (matched) {
+            break;
+          }
+        }
       }
 
-      return index;
+      return targets;
     };
 
-    const headingIndex = buildHeadingIndex();
+    const headingTargets = buildHeadingTargets();
 
     const scrollToHeading = (link, behavior) => {
-      const title = normalizeTocText(link.dataset.headingTitle ?? "");
-      const matchIndex = Number(link.dataset.headingMatchIndex ?? "0");
-      const candidates = headingIndex.get(title) ?? [];
-      const target = candidates[matchIndex];
+      const headingId = link.dataset.headingId ?? "";
+      const target = headingTargets.get(headingId);
 
       if (!target) {
         return false;
