@@ -33,7 +33,7 @@ const {
             data-tags={JSON.stringify(tags)}
           >
             <a class="post-list-link" href={`/article/${post.id}`}>
-              <span class="post-list-title">{post.data.title}</span>
+              <span class="post-list-title">-> {post.data.title}</span>
               <span class="post-list-date">{formatDate(post.data.date)} ·✎</span>
             </a>
             {showTags && tags.length > 0 && (
