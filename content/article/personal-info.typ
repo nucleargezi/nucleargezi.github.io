@@ -1,7 +1,7 @@
 #import "/typ/templates/blog.typ": *
 
 #show: main.with(
-  title: "关于",
+  title: "About",
   desc: [一点自我介绍],
   date: "2025-10-20",
   tags: (),

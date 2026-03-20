@@ -2,7 +2,7 @@
 .post-title {
   margin: 0;
   font-size: 2.5rem;
-  line-height: 1.40;
+  line-height: 1.00;
 }
 
 /* 文章头部承载标题、元信息与简介。 */
@@ -23,7 +23,7 @@
 
 /* 摘要与上方信息拉开更明显的阅读间隔。 */
 .post-description {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
 }
 
 /* 标签列表横向换行展示。 */
@@ -65,7 +65,7 @@
   line-height: 1.7;
 }
 
-.post-toc-item + .post-toc-item {
+.post-toc-item+.post-toc-item {
   margin-top: 2px;
 }
 

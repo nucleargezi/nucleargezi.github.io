@@ -4,14 +4,14 @@
   title: "Record The 1st Universal Cup. Stage 8: Slovenia",
   desc: [ucup 1-8 训练记录],
   date: "2026-03-11",
-  tags: ("train", "tech", "sol", "rec"),
+  tags: ("train", "tech", "sol", "rec", "icpc"),
 )
 
 = The 1st Universal Cup. Stage 8: Slovenia
 
 == 鲜花
 
-感觉挺简单的, 不知道为什么有些简单题过的人不多, 排名莫名其妙在很前面 
+感觉挺简单的, 不知道为什么有些简单题过的人不多, 排名莫名其妙在很前面
 
 == A - Bandits
 

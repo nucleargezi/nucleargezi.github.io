@@ -4,7 +4,7 @@
   title: "Ciallo World",
   desc: [testtest],
   date: "2026-03-18",
-  tags: ("hello", "typst"),
+  tags: ("typst", ),
 )
 
 = Hello
