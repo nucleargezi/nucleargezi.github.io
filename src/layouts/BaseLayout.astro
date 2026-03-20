@@ -9,12 +9,7 @@ interface Props {
   pageClass?: string;
 }
 
-const {
-  title,
-  description,
-  lang = "zh-CN",
-  pageClass,
-} = Astro.props;
+const { title, description, lang = "zh-CN", pageClass } = Astro.props;
 ---
 
 <!doctype html>
@@ -31,7 +26,10 @@ const {
         <a class="site-title" href="/">Yorisou Realm</a>
         <nav class="site-nav" aria-label="Primary">
           <!-- <a href="/">首页</a> -->
+
           <a href="/article/">Article</a>
+
+          <a href="/article/personal-info">About</a>
         </nav>
       </header>
 
