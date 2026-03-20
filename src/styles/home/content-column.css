@@ -84,6 +84,6 @@
   flex-shrink: 0;
   color: var(--accent);
   font-size: 0.72rem;
-  font-style: normal;
+  font-style: italic;
   white-space: nowrap;
 }
