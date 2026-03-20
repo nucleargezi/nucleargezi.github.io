@@ -141,7 +141,7 @@
     align: center,
     [
       #move(
-        dy: -4pt,
+        dy: -2.5pt,
         timeline_rail_segment(not is-first),
       )
     ],
