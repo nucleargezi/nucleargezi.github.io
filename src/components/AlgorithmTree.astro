@@ -1,0 +1,75 @@
+---
+import type { AlgorithmTreeLeaf, AlgorithmTreeNode } from "../data/algorithm-tree";
+
+interface Props {
+  tree: AlgorithmTreeNode[];
+}
+
+interface AlgorithmTreeLine {
+  connector: string;
+  label: string;
+  prefix: string;
+  slug?: string;
+}
+
+const { tree } = Astro.props;
+
+function isLeaf(node: AlgorithmTreeNode): node is AlgorithmTreeLeaf {
+  return "slug" in node;
+}
+
+function buildTreeLines(
+  nodes: AlgorithmTreeNode[],
+  ancestorsWithNextSibling: boolean[] = [],
+): AlgorithmTreeLine[] {
+  const lines: AlgorithmTreeLine[] = [];
+
+  for (const [index, node] of nodes.entries()) {
+    const isLast = index === nodes.length - 1;
+    const prefix = ancestorsWithNextSibling
+      .map((hasNextSibling) => (hasNextSibling ? "│  " : "   "))
+      .join("");
+
+    if (isLeaf(node)) {
+      lines.push({
+        connector: isLast ? "└──" : "├──",
+        label: node.label,
+        prefix,
+        slug: node.slug,
+      });
+      continue;
+    }
+
+    lines.push({
+      connector: isLast ? "└──" : "├──",
+      label: node.label,
+      prefix,
+    });
+
+    lines.push(...buildTreeLines(node.children, [...ancestorsWithNextSibling, !isLast]));
+  }
+
+  return lines;
+}
+
+const lines = buildTreeLines(tree);
+---
+
+<ul class="algorithm-tree" aria-label="Algorithm tree">
+  {
+    lines.map((line) => (
+      <li class="algorithm-tree-line">
+        <span class="algorithm-tree-prefix" aria-hidden="true">{`${line.prefix}${line.connector} `}</span>
+        {
+          line.slug ? (
+            <a class="algorithm-tree-link" href={`/article/${line.slug}`}>
+              {line.label}
+            </a>
+          ) : (
+            <span class="algorithm-tree-label">{line.label}</span>
+          )
+        }
+      </li>
+    ))
+  }
+</ul>

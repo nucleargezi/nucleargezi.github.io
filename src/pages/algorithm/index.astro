@@ -1,32 +1,60 @@
 ---
 import { getCollection } from "astro:content";
 
-import PostList from "../../components/PostList.astro";
-import TagFilterScript from "../../components/TagFilterScript.astro";
+import AlgorithmTree from "../../components/AlgorithmTree.astro";
+import { algorithmTree, type AlgorithmTreeNode } from "../../data/algorithm-tree";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { sortPosts } from "../../lib/blog";
 import "../../styles/listing.css";
+import "../../styles/algorithm-tree.css";
 
-const posts = sortPosts(
-  (await getCollection("blog")).filter((post) => post.data.category === "Algorithm"),
-);
+const posts = await getCollection("blog");
+const postIds = new Set(posts.map((post) => post.id));
+
+function countLeaves(nodes: AlgorithmTreeNode[]): number {
+  return nodes.reduce((count, node) => {
+    if ("slug" in node) {
+      return count + 1;
+    }
+
+    return count + countLeaves(node.children);
+  }, 0);
+}
+
+function validateTree(nodes: AlgorithmTreeNode[], parentLabels: string[] = []) {
+  for (const node of nodes) {
+    const currentPath = [...parentLabels, node.label];
+
+    if ("slug" in node) {
+      if (!postIds.has(node.slug)) {
+        throw new Error(
+          `[algorithm-tree] Unknown slug "${node.slug}" at ${currentPath.join(" / ")}`,
+        );
+      }
+
+      continue;
+    }
+
+    validateTree(node.children, currentPath);
+  }
+}
+
+validateTree(algorithmTree);
+
+const leafCount = countLeaves(algorithmTree);
 ---
 
-<BaseLayout title="Algorithm" description="Algorithm 分类下的全部文章。">
+<BaseLayout title="Algorithm" description="Algorithm 索引树。">
   <section>
     <h1 class="page-title">Algorithm</h1>
   </section>
 
   <section>
-    <p class="article-filter-status" data-filter-status hidden></p>
-    <p class="empty-state article-filter-empty" data-filter-empty hidden></p>
-    <PostList
-      posts={posts}
-      emptyText="这个分类下还没有写好的文章。"
-      showTags={true}
-      tagBaseUrl="/algorithm/"
-    />
+    {
+      leafCount === 0 ? (
+        <p class="empty-state">算法索引还没有内容。</p>
+      ) : (
+        <AlgorithmTree tree={algorithmTree} />
+      )
+    }
   </section>
 </BaseLayout>
-
-<TagFilterScript baseUrl="/algorithm/" emptyText="这个分类下还没有写好的文章。" />

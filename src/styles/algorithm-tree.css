@@ -1,0 +1,42 @@
+.algorithm-tree {
+  list-style: none;
+  margin: 10;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.algorithm-tree-line {
+  display: flex;
+  align-items: baseline;
+  font-family: "Fira Code", monospace;
+  line-height: 1.5;
+}
+
+.algorithm-tree-prefix {
+  flex-shrink: 0;
+  color: var(--c);
+  white-space: pre;
+}
+
+.algorithm-tree-label,
+.algorithm-tree-link {
+  overflow-wrap: anywhere;
+}
+
+.algorithm-tree-label {
+  color: var(--text);
+}
+
+.algorithm-tree-link {
+  font-style: italic;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.algorithm-tree-link:hover,
+.algorithm-tree-link:focus-visible {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
