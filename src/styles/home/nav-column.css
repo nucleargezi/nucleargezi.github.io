@@ -1,0 +1,67 @@
+/* 右栏标题标签：和中栏分开维护，便于后续单独调整。 */
+.home-nav-kicker {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 右栏导航格：桌面端保持 4 列平铺。 */
+.home-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* 方格按钮统一比例，启用与禁用态使用同一版式。 */
+.home-nav-card {
+  display: grid;
+  place-items: center;
+  width: 67px;
+  height: 40px;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid rgba(31, 26, 23, 0.16);
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.72);
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.home-nav-card-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+/* 可点击入口提供更明显的悬停与聚焦反馈。 */
+.home-nav-card.is-link {
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.home-nav-card.is-link:hover,
+.home-nav-card.is-link:focus-visible {
+  transform: translateY(-2px);
+  color: var(--accent-strong);
+  border-color: rgba(160, 0, 82, 0.35);
+  box-shadow: 0 10px 24px rgba(31, 26, 23, 0.08);
+}
+
+.home-nav-card.is-link:focus-visible {
+  outline: 2px solid rgba(160, 0, 82, 0.3);
+  outline-offset: 2px;
+}
+
+/* 占位格保留版式但禁用交互，提示后续可扩展。 */
+.home-nav-card.is-disabled {
+  color: var(--muted);
+  cursor: default;
+}

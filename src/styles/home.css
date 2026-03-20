@@ -1,0 +1,23 @@
+@import "./home/avatar-column.css";
+@import "./home/content-column.css";
+@import "./home/nav-column.css";
+
+/* 首页公共容器：只保留三栏共享的页面级布局。 */
+.page-home {
+  padding: 22px;
+}
+
+/* 首页三栏总区域：负责整体横向排布与列宽分配。 */
+.home-hero {
+  display: grid;
+  grid-template-columns: 220px auto 300px;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 三栏共享外壳：统一最小宽度、内边距与圆角。 */
+.home-column {
+  min-width: 0;
+  padding: 10px;
+  border-radius: 20px;
+}

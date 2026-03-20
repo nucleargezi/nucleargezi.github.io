@@ -1,28 +1,92 @@
 ---
 import { getCollection } from "astro:content";
 
-import PostList from "../components/PostList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { sortPosts } from "../lib/blog";
-import "../styles/listing.css";
+import { formatDate, sortPosts } from "../lib/blog";
+import "../styles/home.css";
 
 const posts = sortPosts(await getCollection("blog"));
-
 const latestPosts = posts.slice(0, 5);
+const navItems = [
+  { label: "Articles", href: "/article/", disabled: false },
+  { label: "About", href: "/article/personal-info", disabled: false },
+  { label: "Reserved", href: "#", disabled: true },
+  { label: "Reserved", href: "#", disabled: true },
+  { label: "Reserved", href: "#", disabled: true },
+  { label: "Reserved", href: "#", disabled: true },
+  { label: "Reserved", href: "#", disabled: true },
+  { label: "Reserved", href: "#", disabled: true },
+];
 ---
 
 <BaseLayout
   title="Yorisou Realm"
   description="一个由 Astro + Typst 驱动的个人博客骨架。"
+  pageClass="page-home"
+  hideHeader={true}
 >
-  <section class="hero">
-  </section>
+  <section class="home-hero" aria-label="Homepage overview">
 
-  <section>
-    <div class="section-header">
-      <h2 class="section-title">最新文章</h2>
-      <!-- <a class="section-link" href="/article/">文章列表</a> -->
+    <!-- 头像 -->
+    <aside class="home-column home-avatar-column">
+      <a class="home-avatar-link" href="/article/personal-info">
+        <img
+          class="home-avatar"
+          src="/images/hs.jpg"
+          alt="Yorisou 的头像"
+          loading="eager"
+          decoding="async"
+        />
+      </a>
+      <!-- <p class="home-avatar-caption">想了解我可以点击头像</p> -->
+    </aside>
+
+    <!-- 最近文章 -->
+    <div class="home-column">
+      <div class="home-brand">
+        <!-- <p class="home-brand-kicker">Realm Index</p> -->
+        <h1 class="home-brand-title">Yorisou Realm</h1>
+        <!-- <p class="home-brand-note">Recent notes, experiments, and things worth keeping.</p> -->
+      </div>
+
+      <div class="home-latest">
+        <h2 class="home-latest-title">Latest Articles</h2>
+        <ul class="home-latest-list">
+          {
+            latestPosts.map((post) => (
+              <li class="home-latest-item">
+                <a class="home-latest-link" href={`/article/${post.id}`}>
+                  <span class="home-latest-name">-> {post.data.title}</span>
+                  <time class="home-latest-date" datetime={formatDate(post.data.date)}>
+                    {formatDate(post.data.date)}
+                  </time>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
-    <PostList posts={latestPosts} />
+
+    <!-- 跳转入口 -->
+    <nav class="home-column" aria-label="Homepage navigation">
+      <p class="home-nav-kicker">Navigation</p>
+      <!-- <h2 class="home-nav-title">Explore</h2> -->
+      <div class="home-nav-grid">
+        {
+          navItems.map((item) =>
+            item.disabled ? (
+              <span class="home-nav-card is-disabled" aria-disabled="true">
+                <span class="home-nav-card-label">{item.label}</span>
+              </span>
+            ) : (
+              <a class="home-nav-card is-link" href={item.href}>
+                <span class="home-nav-card-label">{item.label}</span>
+              </a>
+            ),
+          )
+        }
+      </div>
+    </nav>
   </section>
 </BaseLayout>
