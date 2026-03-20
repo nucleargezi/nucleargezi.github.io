@@ -4,8 +4,7 @@
   title: "Group Theory",
   desc: [群论学习笔记 施工中],
   date: "2026-02-03",
-  tags: ("group_theory", ),
-  category: "Algorithm",
+  tags: ("alg", ),
 )
 
 = Group Theory

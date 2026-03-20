@@ -4,8 +4,7 @@
   title: "Major Voting 但是 1/5",
   desc: [关于多数投票的一点笔记],
   date: "2025-10-25",
-  tags: (),
-  category: "Algorithm",
+  tags: ("alg", ),
 )
 
 
