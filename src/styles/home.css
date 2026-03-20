@@ -6,7 +6,6 @@
 .page-home {
   padding: 22px;
 }
-
 /* 首页三栏总区域：负责整体横向排布与列宽分配。 */
 .home-hero {
   display: grid;
@@ -14,10 +13,41 @@
   gap: 20px;
   align-items: center;
 }
-
 /* 三栏共享外壳：统一最小宽度、内边距与圆角。 */
 .home-column {
   min-width: 0;
   padding: 10px;
   border-radius: 20px;
+}
+
+
+.home-gallery {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  margin-top: 28px;
+}
+.home-gallery-item:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-gallery-item:nth-child(2) .home-gallery-image {
+  width: 250px;
+  height: auto;
+}
+.home-gallery-item:first-child {
+  transform: translateX(20px);
+}
+.home-gallery-item:last-child {
+  transform: translateX(-20px);
+}
+.home-gallery-item {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.home-gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
