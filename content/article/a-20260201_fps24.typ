@@ -597,26 +597,23 @@ $
 $
 这样的一个循环卷积, 由于环长是 2 的幂, 可以直接 ntt 处理, 跑快速幂应该会 TLE , 注意端点无镜像点
 
-#zebraw(
-  ```cpp
-  using mint = M99;
-  void Yorisou() {
-    LL(N, T, x);
-    --x;
-    int sz = 1 << (N + 1);
-    vc<mint> f(sz);
-    f[1] = 1;
-    f[sz - 1] = 1;
-    ntt(f, 0);
-    FOR(i, sz) f[i] = f[i].pow(T);
-    ntt(f, 1);
-    mint ans;
-    FOR(i, sz) if (i == x or i == (sz - x)) ans += f[i];
-    print(ans * mint(2).inv().pow(T));
-  }
-  ```,
-)
-
+```cpp
+using mint = M99;
+void Yorisou() {
+  LL(N, T, x);
+  --x;
+  int sz = 1 << (N + 1);
+  vc<mint> f(sz);
+  f[1] = 1;
+  f[sz - 1] = 1;
+  ntt(f, 0);
+  FOR(i, sz) f[i] = f[i].pow(T);
+  ntt(f, 1);
+  mint ans;
+  FOR(i, sz) if (i == x or i == (sz - x)) ans += f[i];
+  print(ans * mint(2).inv().pow(T));
+}
+```
 
 == S - ゲーム
 
