@@ -1,0 +1,69 @@
+name: blog::gh_pages
+
+on:
+  push:
+    branches: ["main"]
+  schedule:
+    - cron: "0 */12 * * *"
+
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  pages: write
+  id-token: write
+  contents: read
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-gh-pages:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: "0"
+          submodules: recursive
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 10
+          run_install: false
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+      - name: Download and Install Fonts
+        run: |
+          # Install Noto Serif CJK SC (and other Noto CJK fonts)
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-color-emoji
+          
+          # Install Latin Modern fonts
+          sudo apt-get install -y fonts-lmodern
+          
+          # Install DejaVu Sans Mono
+          sudo apt-get install -y fonts-dejavu
+          
+          # Refresh font cache
+          fc-cache -f -v
+      - run: pnpm install
+      - run: pnpm build
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./dist"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
