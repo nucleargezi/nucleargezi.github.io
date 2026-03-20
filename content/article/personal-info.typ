@@ -7,8 +7,6 @@
   tags: (),
 )
 
-#set text(size: 8pt)
-
 = Personal-Info
 
 == About Me

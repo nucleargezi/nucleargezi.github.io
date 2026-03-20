@@ -11,17 +11,17 @@
   "DejaVu Sans Mono",
 )
 
-#let body-size = 8pt
+#let body-size = 7pt
 #let link-color = rgb("#ff9292")
 #let code-bg = rgb("#f5f7fb")
 
 // 标题字号
 #let heading-size(level) = if level == 1 {
-  15pt
-} else if level == 2 {
   13pt
+} else if level == 2 {
+  12pt
 } else if level == 3 {
-  11.5pt
+  11pt
 } else if level == 4 {
   10pt
 } else {
@@ -61,7 +61,7 @@
 
   show heading: heading-block
 
-  show raw: set text(font: code-fonts, size: 7.0pt)
+  show raw: set text(font: code-fonts, size: 6.7pt)
   show raw.where(block: false): it => box(
     fill: code-bg,
     inset: (x: 2pt, y: 1pt),
