@@ -1,8 +1,8 @@
 #import "/typ/templates/blog.typ": *
 
 #show: main.with(
-  title: "FPS Training Log 20251225",
-  desc: [形式幂级数相关 训练记录 20251130],
+  title: "FPS Training Log",
+  desc: [形式幂级数相关 训练记录],
   date: "2025-12-25",
   tags: ("alg", "fps"),
 )

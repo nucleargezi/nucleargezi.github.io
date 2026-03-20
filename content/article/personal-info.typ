@@ -85,25 +85,24 @@
 
 主要是记录个人学习，以及一些乱七八糟的东西
 
-== 阿巴阿巴
+== Blessing Software
 
 在这里放一个在线卷积
 
 ```cpp
+#include "c/bs.hpp"
+
 // 2e5 888ms , offline 88ms
-// (i, f[i], g[i]) return c[i]; (N + M - 1) all ins
-template <typename mint>
-struct online_conv {
-  static_assert(mint::can_ntt());
-  vc<mint> f, g, h, a, b;
-  vc<vc<mint>> ff, gg;
-  int p;
+// (f[i], g[i]) return c[i]; (N + M - 1) all ins
+template <typename T> 
+struct fps_t<T>::conv_t {
+  fps f, g, c, a, b;
+  vc<fps> ff, gg;
+  int p = 0;
 
-  online_conv() : p(0) {}
+  inline T operator()(T fi, T gi) { return add(fi, gi); }
 
-  inline mint operator()(mint fi, mint gi) { return add(fi, gi); }
-
-  mint add(mint fi, mint gi) {
+  T add(T fi, T gi) {
     f.ep(fi);
     g.ep(gi);
     int k = lowbit(p + 2), w = 1 << k, s;
@@ -111,31 +110,31 @@ struct online_conv {
       a = f;
       sh(a, w << 1);
       ntt(a, 0);
-      ff.ep(a.begin(), a.begin() + w);
-
+      ff.ep(bg(a), bg(a) + w);
       b = g;
       sh(b, w << 1);
       ntt(b, 0);
-      gg.ep(b.begin(), b.begin() + w);
+      gg.ep(bg(b), bg(b) + w);
       FOR(i, w << 1) a[i] *= b[i];
-
       s = w - 2;
-      sh(h, 2 * s + 2);
+      sh(c, 2 * s + 2);
     } else {
-      a.assign(f.end() - w, f.end());
+      a.assign(ed(f) - w, ed(f));
       sh(a, w << 1);
       ntt(a, 0);
       FOR(i, w << 1) a[i] *= gg[k][i];
-
-      b.assign(g.end() - w, g.end());
+      b.assign(ed(g) - w, ed(g));
       sh(b, w << 1);
       ntt(b, 0);
       FOR(i, w << 1) a[i] += b[i] * ff[k][i];
       s = w - 1;
     }
     ntt(a, 1);
-    FOR(i, s + 1) h[p + i] += a[s + i];
-    return h[p++];
+    FOR(i, s + 1) c[p + i] += a[s + i];
+    return c[p++];
   }
 };
+
+template <typename T> 
+fps_t<T>::conv_t fps_t<T>::online_conv() { return conv_t(); }
 ```
