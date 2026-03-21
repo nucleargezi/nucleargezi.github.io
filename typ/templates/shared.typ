@@ -39,7 +39,7 @@
     above: spacing.above,
     below: spacing.below,
   )[
-    #set text(size: heading-size(it.level), weight: 700)
+    #set text(size: heading-size(it.level), weight: 700, style: "italic")
     #it
   ]
 }
@@ -55,7 +55,7 @@
   set par(justify: true, leading: 0.62em) // 两端对齐 | 行距
   set list(indent: 1.25em)
   set enum(indent: 1.25em)
-  set heading(numbering: "1.") // 标题编号
+  // set heading(numbering: "1.") // 标题编号
 
   show link: set text(fill: link-color)
 
@@ -84,13 +84,9 @@
     #align(center, it)
   ]
 
-  // 返回正文内容，让上面这些规则在正文渲染期间全部生效
   body
 }
 
-// 输出 frontmatter 元数据，供外部系统读取
-// 设置文档标题
-// 应用全局排版规则后再渲染正文
 #let shared-template(
   title: "Untitled",
   desc: [No description],
