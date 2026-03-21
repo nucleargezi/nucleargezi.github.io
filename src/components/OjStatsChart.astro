@@ -13,7 +13,7 @@ const { stats, total, updatedAt, available } = Astro.props;
 
 const fallbackMessage = "统计暂时不可用。";
 
-const chartHeight = 370;
+const chartHeight = 220;
 const chartWidth = Math.max(stats.length * 68 + 120, 760);
 const topPadding = 20;
 const rightPadding = 24;
@@ -110,7 +110,7 @@ const summaryBits = [
                 y={bar.y}
                 width={barWidth}
                 height={Math.max(bar.height, 1)}
-                rx="0"
+                rx="1"
               />
               <text
                 class="oj-stats-value"

@@ -43,9 +43,10 @@
   stroke-dasharray: 4 6;
 }
 
-.oj-stats-bar {
-  fill: rgba(255, 143, 193, 0.83);
-  /* fill: rgba(189, 129, 245, 0.203); */
+.oj-stats-bar { 
+  /* fill: rgba(255, 143, 193, 0.83); */
+  fill: rgba(189, 129, 245, 0.203);
+  /* fill: rgba(148, 129, 245, 0.203); */
 }
 
 .oj-stats-tick,
