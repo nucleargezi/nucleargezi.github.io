@@ -1,0 +1,91 @@
+.oj-stats-card {
+  margin: 24px 0 36px;
+  padding: 22px 24px 18px;
+  border: 1px solid rgba(214, 205, 193, 0.8);
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.7);
+}
+
+.oj-stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.oj-stats-title {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+}
+
+.oj-stats-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.oj-stats-chart-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+}
+
+.oj-stats-chart {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+}
+
+.oj-stats-axis {
+  stroke: rgba(31, 26, 23, 0.72);
+  stroke-width: 1.2;
+}
+
+.oj-stats-grid {
+  stroke: rgba(109, 98, 88, 0.18);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+}
+
+.oj-stats-bar {
+  fill: rgba(211, 0, 106, 0.82);
+}
+
+.oj-stats-tick,
+.oj-stats-label,
+.oj-stats-value {
+  fill: var(--text);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", serif;
+}
+
+.oj-stats-tick {
+  font-size: 11px;
+  fill: var(--muted);
+}
+
+.oj-stats-label {
+  font-size: 11px;
+}
+
+.oj-stats-value {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .oj-stats-card {
+    margin: 20px 0 28px;
+    padding: 18px 16px 14px;
+  }
+
+  .oj-stats-header {
+    flex-direction: column;
+  }
+
+  .oj-stats-meta {
+    text-align: left;
+  }
+}

@@ -1,0 +1,141 @@
+---
+import type { OjPlatformStat } from "../lib/oj-stats";
+import "../styles/oj-stats-chart.css";
+
+interface Props {
+  stats: OjPlatformStat[];
+  total?: number;
+  updatedAt?: string;
+  available: boolean;
+}
+
+const { stats, total, updatedAt, available } = Astro.props;
+
+const fallbackMessage = "做题统计暂时不可用。";
+const title = "Solved by Platform";
+
+const chartHeight = 280;
+const chartWidth = Math.max(stats.length * 68 + 120, 760);
+const topPadding = 28;
+const rightPadding = 24;
+const bottomPadding = 132;
+const leftPadding = 56;
+const plotWidth = chartWidth - leftPadding - rightPadding;
+const plotHeight = chartHeight - topPadding - bottomPadding;
+const maxCount = Math.max(...stats.map((item) => item.count), 0);
+const tickCount = maxCount > 0 ? 4 : 0;
+const ticks =
+  tickCount === 0
+    ? []
+    : Array.from({ length: tickCount + 1 }, (_, index) => {
+        const value = Math.round((maxCount * (tickCount - index)) / tickCount);
+        const y = topPadding + (plotHeight * index) / tickCount;
+
+        return { value, y };
+      });
+const step = stats.length > 0 ? plotWidth / stats.length : 0;
+const barWidth = Math.max(Math.min(step * 0.58, 34), 18);
+const bars = stats.map((item, index) => {
+  const height = maxCount > 0 ? (item.count / maxCount) * plotHeight : 0;
+  const x = leftPadding + index * step + (step - barWidth) / 2;
+  const y = topPadding + plotHeight - height;
+  const labelX = leftPadding + index * step + step / 2;
+
+  return {
+    ...item,
+    height,
+    x,
+    y,
+    labelX,
+  };
+});
+const summaryBits = [
+  typeof total === "number" ? `${total} solved` : undefined,
+  updatedAt ? `Updated ${updatedAt}` : undefined,
+].filter(Boolean);
+---
+
+<section class="oj-stats-card" aria-labelledby="oj-stats-title">
+  <div class="oj-stats-header">
+    <div>
+      <p class="eyebrow">Stats</p>
+      <h2 class="oj-stats-title" id="oj-stats-title">{title}</h2>
+    </div>
+    {summaryBits.length > 0 && <p class="oj-stats-meta">{summaryBits.join(" · ")}</p>}
+  </div>
+
+  {
+    available && stats.length > 0 ? (
+      <div class="oj-stats-chart-wrap">
+        <svg
+          class="oj-stats-chart"
+          viewBox={`0 0 ${chartWidth} ${chartHeight}`}
+          role="img"
+          aria-label="Solved problems by platform bar chart"
+        >
+          <line
+            class="oj-stats-axis"
+            x1={leftPadding}
+            y1={topPadding}
+            x2={leftPadding}
+            y2={topPadding + plotHeight}
+          />
+          <line
+            class="oj-stats-axis"
+            x1={leftPadding}
+            y1={topPadding + plotHeight}
+            x2={chartWidth - rightPadding}
+            y2={topPadding + plotHeight}
+          />
+
+          {ticks.map((tick) => (
+            <g>
+              <line
+                class="oj-stats-grid"
+                x1={leftPadding}
+                y1={tick.y}
+                x2={chartWidth - rightPadding}
+                y2={tick.y}
+              />
+              <text class="oj-stats-tick" x={leftPadding - 10} y={tick.y + 4} text-anchor="end">
+                {tick.value}
+              </text>
+            </g>
+          ))}
+
+          {bars.map((bar) => (
+            <g>
+              <rect
+                class="oj-stats-bar"
+                x={bar.x}
+                y={bar.y}
+                width={barWidth}
+                height={Math.max(bar.height, 1)}
+                rx="5"
+              />
+              <text
+                class="oj-stats-value"
+                x={bar.labelX}
+                y={Math.max(bar.y - 8, topPadding - 2)}
+                text-anchor="middle"
+              >
+                {bar.count}
+              </text>
+              <text
+                class="oj-stats-label"
+                x={bar.labelX}
+                y={topPadding + plotHeight + 24}
+                text-anchor="end"
+                transform={`rotate(-45 ${bar.labelX} ${topPadding + plotHeight + 24})`}
+              >
+                {bar.name}
+              </text>
+            </g>
+          ))}
+        </svg>
+      </div>
+    ) : (
+      <p class="page-intro">{fallbackMessage}</p>
+    )
+  }
+</section>

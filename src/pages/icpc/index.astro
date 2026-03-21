@@ -1,8 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 
+import OjStatsChart from "../../components/OjStatsChart.astro";
 import PostList from "../../components/PostList.astro";
 import TagFilterScript from "../../components/TagFilterScript.astro";
+import { getOjStats } from "../../lib/oj-stats";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { sortPosts } from "../../lib/blog";
 import "../../styles/listing.css";
@@ -10,11 +12,18 @@ import "../../styles/listing.css";
 const posts = sortPosts(
   (await getCollection("blog")).filter((post) => post.data.category === "ICPC"),
 );
+const ojStats = await getOjStats();
 ---
 
 <BaseLayout title="ICPC" description="ICPC 分类下的全部文章。">
   <section>
     <h1 class="page-title">ICPC</h1>
+    <OjStatsChart
+      stats={ojStats.stats}
+      total={ojStats.total}
+      updatedAt={ojStats.updatedAt}
+      available={ojStats.available}
+    />
   </section>
 
   <section>
