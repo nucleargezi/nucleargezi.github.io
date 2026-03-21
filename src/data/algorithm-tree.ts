@@ -12,6 +12,17 @@ export type AlgorithmTreeNode = AlgorithmTreeDirectory | AlgorithmTreeLeaf;
 
 export const algorithmTree = [
   {
+    label: "Data Structure",
+    children: [
+      {
+        label: "Heap",
+        children: [
+          { label: "Radix Heap", slug: "a-20260321_fheap" },
+        ],
+      }
+    ],
+  },
+  {
     label: "Math",
     children: [
       {
