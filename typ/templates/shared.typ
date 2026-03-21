@@ -12,7 +12,7 @@
 )
 
 #let body-size = 7pt
-#let link-color = rgb("#ff9292")
+#let link-color = rgb("#ff5757")
 #let code-bg = rgb("#f5f7fb")
 
 // 标题字号
