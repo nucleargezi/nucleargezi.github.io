@@ -11,14 +11,13 @@ interface Props {
 
 const { stats, total, updatedAt, available } = Astro.props;
 
-const fallbackMessage = "做题统计暂时不可用。";
-const title = "Solved by Platform";
+const fallbackMessage = "统计暂时不可用。";
 
-const chartHeight = 280;
+const chartHeight = 370;
 const chartWidth = Math.max(stats.length * 68 + 120, 760);
-const topPadding = 28;
+const topPadding = 20;
 const rightPadding = 24;
-const bottomPadding = 132;
+const bottomPadding = 60;
 const leftPadding = 56;
 const plotWidth = chartWidth - leftPadding - rightPadding;
 const plotHeight = chartHeight - topPadding - bottomPadding;
@@ -49,9 +48,10 @@ const bars = stats.map((item, index) => {
     labelX,
   };
 });
+const displayDate = updatedAt?.slice(0, 10);
 const summaryBits = [
   typeof total === "number" ? `${total} solved` : undefined,
-  updatedAt ? `Updated ${updatedAt}` : undefined,
+  displayDate ? `2024-12-12 ~ ${displayDate}` : undefined,
 ].filter(Boolean);
 ---
 
@@ -59,7 +59,6 @@ const summaryBits = [
   <div class="oj-stats-header">
     <div>
       <p class="eyebrow">Stats</p>
-      <h2 class="oj-stats-title" id="oj-stats-title">{title}</h2>
     </div>
     {summaryBits.length > 0 && <p class="oj-stats-meta">{summaryBits.join(" · ")}</p>}
   </div>
@@ -111,7 +110,7 @@ const summaryBits = [
                 y={bar.y}
                 width={barWidth}
                 height={Math.max(bar.height, 1)}
-                rx="5"
+                rx="0"
               />
               <text
                 class="oj-stats-value"
@@ -126,7 +125,7 @@ const summaryBits = [
                 x={bar.labelX}
                 y={topPadding + plotHeight + 24}
                 text-anchor="end"
-                transform={`rotate(-45 ${bar.labelX} ${topPadding + plotHeight + 24})`}
+                transform={`rotate(-25 ${bar.labelX} ${topPadding + plotHeight + 24})`}
               >
                 {bar.name}
               </text>

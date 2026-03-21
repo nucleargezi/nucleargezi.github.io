@@ -2,8 +2,6 @@
   margin: 24px 0 36px;
   padding: 22px 24px 18px;
   border: 1px solid rgba(214, 205, 193, 0.8);
-  border-radius: 18px;
-  background: rgba(255, 252, 246, 0.7);
 }
 
 .oj-stats-header {
@@ -12,11 +10,6 @@
   align-items: flex-start;
   gap: 16px;
   margin-bottom: 18px;
-}
-
-.oj-stats-title {
-  margin: 0;
-  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
 }
 
 .oj-stats-meta {
@@ -51,7 +44,8 @@
 }
 
 .oj-stats-bar {
-  fill: rgba(211, 0, 106, 0.82);
+  fill: rgba(255, 143, 193, 0.83);
+  /* fill: rgba(189, 129, 245, 0.203); */
 }
 
 .oj-stats-tick,
