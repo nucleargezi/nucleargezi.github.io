@@ -8,13 +8,18 @@
   category: "ICPC",
 )
 
-= The 4th Universal Cup. Extra Stage 4: Chongqing
+= The 4th Universal Cup. Extra Stage 4: Chongqing 
+
+#link("https://qoj.ac/contest/3387", "Qoj Link")
 
 == Hitokoto
 
 和队友组队 vp 的, 题目相当 dirt
 
 == J. Tetris
+
+#link("https://qoj.ac/contest/3387/problem/15428")
+
 === Formal Problem Statement
 
 给定整数 $n, m, q$, 以及长度为 $m$ 的数组 $f$
@@ -156,6 +161,9 @@ void Yorisou() {
 ```
 
 == M. Reduction and Growth
+
+#link("https://qoj.ac/contest/3387/problem/15431")
+
 === Formal Problem Statement
 
 给一棵树, 初始根为 0, 值为 $a_0$, 接下来会不断用一个三元组 ${w, f, t}$ 给这个树加叶子, 从 f 到 t , 每经过一个点 $i$, 就令 $w = w / gcd(w, a_i)$ , 然后给点 t 新增一个叶子, 权值为 $w$
