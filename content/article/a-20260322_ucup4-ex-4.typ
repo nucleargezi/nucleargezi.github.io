@@ -46,7 +46,7 @@
 
 连续区间 $[L, R)$ 的异或值可以用差分求出, 而 $[0, N)$ 的异或值可以打表得到规律, 直接推也可以, 线段树区间初始化时带上这个值, 区间合并时若 max 相等则 xor 起来
 
-=== Code
+=== Implementation
 
 ```cpp
 struct def {
@@ -178,7 +178,7 @@ void Yorisou() {
 
 跑得飞快, 在 qoj 第一页
 
-=== Code
+=== Implementation
 ```cpp
 constexpr int sz = 1'000'000, B = 200;
 vc<int> pt = ptable(sz), lpf = lpf_table(sz), to(sz, -1);
