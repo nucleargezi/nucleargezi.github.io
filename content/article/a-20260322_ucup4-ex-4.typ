@@ -17,8 +17,8 @@
 和队友组队 vp 的, 题目相当 dirt
 
 == J. Tetris
-
-#link("https://qoj.ac/contest/3387/problem/15428")
+- In-Contest Solves: 40/175 (ucup)
+- #link("https://qoj.ac/contest/3387/problem/15428")
 
 === Formal Problem Statement
 
@@ -161,8 +161,8 @@ void Yorisou() {
 ```
 
 == M. Reduction and Growth
-
-#link("https://qoj.ac/contest/3387/problem/15431")
+- In-Contest Solves: 171/679 (ucup)
+- #link("https://qoj.ac/contest/3387/problem/15431")
 
 === Formal Problem Statement
 
