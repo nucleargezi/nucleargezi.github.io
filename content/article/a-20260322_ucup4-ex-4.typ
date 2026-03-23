@@ -10,7 +10,7 @@
 
 = The 4th Universal Cup. Extra Stage 4: Chongqing 
 
-#link("https://qoj.ac/contest/3387", "Qoj Link")
+#link("https://qoj.ac/contest/3387", "Qoj Link") 
 
 == Hitokoto
 
