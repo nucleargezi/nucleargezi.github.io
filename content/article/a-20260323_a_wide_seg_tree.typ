@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Segment Tree Based on N_ary Tree",
   desc: [一个在一些场景下更快的类线段树实现],
-  date: "2026-03-21",
+  date: "2026-03-23",
   tags: ("alg", "ds"),
 )
 
