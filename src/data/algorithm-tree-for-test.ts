@@ -15,9 +15,15 @@ export const algorithmTree = [
     label: "Data Structure",
     children: [
       {
+        label: "Segment tree",
+        children: [
+          { label: "Segment Tree Based on N_ary Tree", slug: "a-20260323_a_wide_seg_tree" },
+        ],
+      },
+      {
         label: "Heap",
         children: [
-          { label: "Radix Heap", slug: "a-20260321_fheap" },
+          // { label: "Radix Heap", slug: "a-20260321_fheap" },
         ],
       }
     ],
@@ -28,16 +34,16 @@ export const algorithmTree = [
       {
         label: "Formal Power Series",
         children: [
-          // { label: "FPS Note 0", slug: "a-20251216_fps0"},
-          // { label: "FPS Note 1", slug: "a-20251217_fps1"},
-          // { label: "FPS Note 2", slug: "a-20251218_fps2"},
-          // { label: "FPS Training Rec", slug: "a-20251225_fps_train_rec"},
-          // { label: "EGF Note", slug: "a-20260117_fps_egf"},
-          // { label: "FPS 24 Rec", slug: "a-20260201_fps24"},
+          // { label: "FPS Note 0", slug: "a-20251216_fps0" },
+          // { label: "FPS Note 1", slug: "a-20251217_fps1" },
+          // { label: "FPS Note 2", slug: "a-20251218_fps2" },
+          // { label: "FPS Training Rec", slug: "a-20251225_fps_train_rec" },
+          // { label: "EGF Note", slug: "a-20260117_fps_egf" },
+          // { label: "FPS 24 Rec", slug: "a-20260201_fps24" },
         ]
       },
       {
-        label: "Group Theory", 
+        label: "Group Theory",
         children: [
           // { label: "Base", slug: "a-20260203_group" },
         ]
