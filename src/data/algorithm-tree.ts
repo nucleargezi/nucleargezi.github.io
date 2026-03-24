@@ -15,6 +15,12 @@ export const algorithmTree = [
     label: "Data Structure",
     children: [
       {
+        label: "Segment tree",
+        children: [
+          { label: "Segment Tree Based on N_ary Tree", slug: "a-20260323_a_wide_seg_tree" },
+        ],
+      },
+      {
         label: "Heap",
         children: [
           { label: "Radix Heap", slug: "a-20260321_fheap" },
