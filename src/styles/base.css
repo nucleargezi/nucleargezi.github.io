@@ -25,6 +25,7 @@
 
 /* 页面级背景与默认文字颜色。 */
 html {
+  scrollbar-gutter: stable;
   zoom: 0.9;
   background:
     radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34%),
