@@ -15,6 +15,12 @@ export const algorithmTree = [
     label: "Data Structure",
     children: [
       {
+        label: "Bitset",
+        children: [
+          { label: "Bitmask Range Prod", slug: "a-20260327_bitmask_range_prod" },
+        ],
+      },
+      {
         label: "Segment tree",
         children: [
           { label: "Segment Tree Based on N_ary Tree", slug: "a-20260323_a_wide_seg_tree" },
