@@ -8,7 +8,8 @@
   "Noto Color Emoji",
 )
 #let code-fonts = (
-  "DejaVu Sans Mono",
+  "Fira Code",
+  // "DejaVu Sans Mono",
 )
 
 #let body-size = 7pt
