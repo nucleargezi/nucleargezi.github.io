@@ -13,7 +13,7 @@
 
 // #figure(image("/public/trash.svg", alt: "yorisou"), caption: "yorisou")
 
-#import "/public/trs.typ": *
+#import "/public/trs.typ": * 
 
 #align(center)[
   #profile-card[
