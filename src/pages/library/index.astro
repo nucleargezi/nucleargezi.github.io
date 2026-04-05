@@ -1,0 +1,337 @@
+---
+import LibraryTree from "../../components/LibraryTree.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  getLibraryPageData,
+  type LibraryDetail,
+} from "../../lib/library-state";
+import "../../styles/listing.css";
+import "../../styles/library.css";
+
+const library = await getLibraryPageData();
+
+const detailStatusLabels = {
+  all_passed: "All tests passed",
+  has_failures: "Contains failing test coverage",
+  unused: "No tests recorded",
+  passed: "Passed",
+  not_passed: "Not passed",
+} as const;
+
+const detailKindLabels = {
+  template: "Template",
+  test: "Test",
+} as const;
+
+const emptyRelatedLabels = {
+  template: "No related tests recorded.",
+  test: "No dependent templates recorded.",
+} as const;
+
+const relatedTitles = {
+  template: "Related Tests",
+  test: "Dependent Templates",
+} as const;
+
+function getRelatedPaths(detail: LibraryDetail | undefined): string[] {
+  if (!detail) {
+    return [];
+  }
+
+  return detail.kind === "template" ? detail.relatedTests : detail.relatedTemplates;
+}
+
+const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c");
+---
+
+<BaseLayout
+  title="Library"
+  description="Template coverage and test status for the local algorithm library."
+  pageClass="page-library"
+>
+  <h1 class="page-title">Library</h1>
+
+  <section class="library-summary-grid" aria-label="Library summary">
+    <article class="library-summary-card">
+      <p class="eyebrow">Templates</p>
+      <h2 class="library-summary-title">Template Coverage</h2>
+      <ul class="library-stat-list">
+        <li class="library-stat-item">
+          <span class="library-stat-label">Total files</span>
+          <span class="library-stat-value">{library.summary.templates.total}</span>
+        </li>
+        <li class="library-stat-item">
+          <span class="library-stat-label">All passed</span>
+          <span class="library-stat-value is-pass">{library.summary.templates.allPassed}</span>
+        </li>
+        <li class="library-stat-item">
+          <span class="library-stat-label">Has failures</span>
+          <span class="library-stat-value is-fail">{library.summary.templates.hasFailures}</span>
+        </li>
+        <li class="library-stat-item">
+          <span class="library-stat-label">No tests</span>
+          <span class="library-stat-value is-unused">{library.summary.templates.unused}</span>
+        </li>
+      </ul>
+    </article>
+
+    <article class="library-summary-card">
+      <p class="eyebrow">Tests</p>
+      <h2 class="library-summary-title">Test Files</h2>
+      <ul class="library-stat-list">
+        <li class="library-stat-item">
+          <span class="library-stat-label">Total files</span>
+          <span class="library-stat-value">{library.summary.tests.total}</span>
+        </li>
+        <li class="library-stat-item">
+          <span class="library-stat-label">Passed</span>
+          <span class="library-stat-value is-pass">{library.summary.tests.passed}</span>
+        </li>
+        <li class="library-stat-item">
+          <span class="library-stat-label">Failed</span>
+          <span class="library-stat-value is-fail">{library.summary.tests.notPassed}</span>
+        </li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="library-panels" aria-label="Library trees">
+    <section class="library-panel">
+      <div class="section-header library-panel-heading">
+        <h2 class="section-title">Template Coverage</h2>
+        <p class="library-panel-count">{library.summary.templates.total} files</p>
+      </div>
+      <div class="library-legend" aria-label="Template status legend">
+        <span class="library-legend-item is-pass">
+          <span class="library-legend-dot" aria-hidden="true"></span>
+          All passed
+        </span>
+        <span class="library-legend-item is-fail">
+          <span class="library-legend-dot" aria-hidden="true"></span>
+          Has failures
+        </span>
+        <span class="library-legend-item is-unused">
+          <span class="library-legend-dot" aria-hidden="true"></span>
+          No tests
+        </span>
+      </div>
+      <LibraryTree
+        tree={library.templateTree}
+        ariaLabel="Template coverage tree"
+      />
+    </section>
+
+    <section class="library-panel">
+      <div class="section-header library-panel-heading">
+        <h2 class="section-title">Tests</h2>
+        <p class="library-panel-count">{library.summary.tests.total} files</p>
+      </div>
+      <div class="library-legend" aria-label="Test status legend">
+        <span class="library-legend-item is-pass">
+          <span class="library-legend-dot" aria-hidden="true"></span>
+          Passed
+        </span>
+        <span class="library-legend-item is-fail">
+          <span class="library-legend-dot" aria-hidden="true"></span>
+          Not passed
+        </span>
+      </div>
+      <LibraryTree
+        tree={library.testTree}
+        ariaLabel="Test file tree"
+      />
+    </section>
+  </section>
+
+  <section
+    class="library-detail-modal"
+    data-library-detail-modal
+    hidden
+    aria-hidden="true"
+  >
+    <section
+      class="library-detail-dialog"
+      data-library-detail-dialog
+      aria-live="polite"
+      aria-label="Library detail"
+    >
+      <p class="eyebrow" data-library-detail-kicker>Library</p>
+      <h2 class="library-detail-title" data-library-detail-title>
+        Select a file to inspect its coverage details.
+      </h2>
+      <p class="library-detail-summary" data-library-detail-summary>No file selected.</p>
+
+      <ul class="library-detail-meta" data-library-detail-meta hidden></ul>
+
+      <section class="library-detail-related" data-library-detail-related hidden>
+        <h3 class="library-detail-related-title" data-library-detail-related-title>Related Files</h3>
+        <ul class="library-detail-related-list" data-library-detail-related-list>
+          <li class="library-detail-related-item is-empty">No related files.</li>
+        </ul>
+      </section>
+    </section>
+  </section>
+
+  <script type="application/json" id="library-details" set:html={serializedDetails}></script>
+
+  <script is:inline>
+    const detailSource = document.getElementById("library-details");
+    const detailMap = detailSource ? JSON.parse(detailSource.textContent ?? "{}") : {};
+    const statusLabels = {
+      all_passed: "All tests passed",
+      has_failures: "Contains failing test coverage",
+      unused: "No tests recorded",
+      passed: "Passed",
+      not_passed: "Not passed",
+    };
+    const kindLabels = {
+      template: "Template",
+      test: "Test",
+    };
+    const emptyRelatedLabels = {
+      template: "No related tests recorded.",
+      test: "No dependent templates recorded.",
+    };
+    const relatedTitles = {
+      template: "Related Tests",
+      test: "Dependent Templates",
+    };
+
+    const buttons = [...document.querySelectorAll("[data-library-tree-button]")];
+    const modalElement = document.querySelector("[data-library-detail-modal]");
+    const dialogElement = document.querySelector("[data-library-detail-dialog]");
+    const kickerElement = document.querySelector("[data-library-detail-kicker]");
+    const titleElement = document.querySelector("[data-library-detail-title]");
+    const summaryElement = document.querySelector("[data-library-detail-summary]");
+    const metaElement = document.querySelector("[data-library-detail-meta]");
+    const relatedSectionElement = document.querySelector("[data-library-detail-related]");
+    const relatedTitleElement = document.querySelector("[data-library-detail-related-title]");
+    const relatedListElement = document.querySelector("[data-library-detail-related-list]");
+
+    const updateSelection = (activeButton) => {
+      for (const candidate of buttons) {
+        const isSelected = candidate === activeButton;
+        candidate.classList.toggle("is-selected", isSelected);
+        candidate.setAttribute("aria-pressed", isSelected ? "true" : "false");
+      }
+    };
+
+    const createMetaItem = (label, value) => {
+      const item = document.createElement("li");
+      item.className = "library-detail-meta-item";
+
+      const labelElement = document.createElement("span");
+      labelElement.className = "library-detail-meta-label";
+      labelElement.textContent = label;
+
+      const valueElement = document.createElement("span");
+      valueElement.className = "library-detail-meta-value";
+      valueElement.textContent = value;
+
+      item.append(labelElement, valueElement);
+      return item;
+    };
+
+    const renderRelatedItems = (kind, paths) => {
+      if (!relatedListElement) {
+        return;
+      }
+
+      relatedListElement.textContent = "";
+
+      if (paths.length === 0) {
+        const item = document.createElement("li");
+        item.className = "library-detail-related-item is-empty";
+        item.textContent = emptyRelatedLabels[kind];
+        relatedListElement.append(item);
+        return;
+      }
+
+      for (const path of paths) {
+        const item = document.createElement("li");
+        item.className = "library-detail-related-item";
+        item.textContent = path;
+        relatedListElement.append(item);
+      }
+    };
+
+    const renderDetail = (detailId) => {
+      const detail = detailMap[detailId];
+      if (!detail || !kickerElement || !titleElement || !summaryElement) {
+        return;
+      }
+
+      kickerElement.textContent = kindLabels[detail.kind];
+      titleElement.textContent = detail.path;
+      summaryElement.textContent = statusLabels[detail.status] ?? detail.status;
+
+      if (metaElement) {
+        metaElement.textContent = "";
+
+        if (detail.kind === "test") {
+          const metaEntries = [
+            ["Status", statusLabels[detail.status] ?? detail.status],
+            ["Verdict", detail.verdict],
+            ["Grade", detail.grade],
+            ["Time", detail.timeText],
+            ["Memory", detail.memoryText],
+          ].filter(([, value]) => typeof value === "string" && value.length > 0);
+
+          for (const [label, value] of metaEntries) {
+            metaElement.append(createMetaItem(label, value));
+          }
+
+          metaElement.hidden = metaEntries.length === 0;
+        } else {
+          metaElement.hidden = true;
+        }
+      }
+
+      if (relatedSectionElement && relatedTitleElement) {
+        relatedSectionElement.hidden = false;
+        relatedTitleElement.textContent = relatedTitles[detail.kind];
+        renderRelatedItems(
+          detail.kind,
+          detail.kind === "template" ? detail.relatedTests : detail.relatedTemplates,
+        );
+      }
+    };
+
+    const closeModal = () => {
+      if (!modalElement) {
+        return;
+      }
+
+      modalElement.hidden = true;
+      modalElement.setAttribute("aria-hidden", "true");
+      updateSelection(null);
+    };
+
+    const openModal = (button) => {
+      if (!button || !modalElement) {
+        return;
+      }
+
+      updateSelection(button);
+      renderDetail(button.dataset.detailId);
+      modalElement.hidden = false;
+      modalElement.setAttribute("aria-hidden", "false");
+    };
+
+    for (const button of buttons) {
+      button.addEventListener("click", () => {
+        openModal(button);
+      });
+    }
+
+    if (modalElement) {
+      modalElement.addEventListener("click", closeModal);
+    }
+
+    if (dialogElement) {
+      dialogElement.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+    }
+  </script>
+</BaseLayout>

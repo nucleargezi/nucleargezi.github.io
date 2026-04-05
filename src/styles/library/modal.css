@@ -1,0 +1,104 @@
+/* 详情弹窗遮罩：负责覆盖全屏并聚焦当前查看项。 */
+.library-detail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  backdrop-filter: blur(2px);
+}
+
+/* hidden 状态必须显式压住 display，避免被布局声明覆盖。 */
+.library-detail-modal[hidden],
+.library-detail-meta[hidden],
+.library-detail-related[hidden] {
+  display: none;
+}
+
+/* 弹窗卡片沿用 library 的纸面感背景与较强阴影。 */
+.library-detail-dialog {
+  width: 840px;
+  max-height: min(80vh, 860px);
+  overflow: auto;
+  padding: 24px 26px;
+  background: #fafcfc;
+  box-shadow: 0 18px 44px rgba(15, 38, 29, 0.192);
+}
+
+.library-detail-title {
+  margin: 0;
+  color: var(--library-highlight);
+}
+
+.library-detail-summary {
+  margin: 10px 0 0;
+}
+
+/* 元信息卡片组用于展示 verdict、grade、time 等测试数据。 */
+.library-detail-meta {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.library-detail-meta-item {
+  min-width: 132px;
+  padding: 10px 12px;
+  border: 1px solid rgba(23, 51, 40, 0.12);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.library-detail-meta-label {
+  display: block;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.library-detail-meta-value {
+  display: block;
+  margin-top: 4px;
+  color: var(--library-text);
+}
+
+/* 关联项列表位于弹窗底部，承担路径级补充信息。 */
+.library-detail-related {
+  margin-top: 22px;
+}
+
+.library-detail-related-title {
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.library-detail-related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.library-detail-related-item {
+  padding: 10px 12px;
+  border: 1px solid rgba(23, 51, 40, 0.12);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.58);
+  overflow-wrap: anywhere;
+}
+
+.library-detail-related-item.is-empty {
+  color: var(--library-muted);
+}
+
+/* 小屏上收紧遮罩和卡片留白，保证弹窗仍能完整显示。 */
+@media (max-width: 860px) {
+  .library-detail-modal {
+    padding: 16px;
+  }
+}

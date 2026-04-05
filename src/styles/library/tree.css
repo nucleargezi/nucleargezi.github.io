@@ -1,0 +1,82 @@
+/* 文件树本体：终端风格的前缀与紧凑的纵向排布。 */
+.library-tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+/* 每一行都按“前缀 + 名称”两段对齐。 */
+.library-tree-line {
+  display: flex;
+  align-items: baseline;
+  line-height: 1.55;
+}
+
+/* 树前缀保持等宽空白，便于字符树结构稳定展示。 */
+.library-tree-prefix {
+  flex-shrink: 0;
+  color: rgba(95, 120, 109, 0.9);
+  white-space: pre;
+}
+
+/* 目录名和文件按钮都允许长路径断行。 */
+.library-tree-directory,
+.library-tree-button {
+  overflow-wrap: anywhere;
+}
+
+.library-tree-directory {
+  color: var(--library-text);
+}
+
+/* 文件节点使用 button，便于承载选中与详情弹窗交互。 */
+.library-tree-button {
+  appearance: none;
+  border: 0;
+  padding: 0 4px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+/* 不同状态的文件用颜色直接编码覆盖情况。 */
+.library-tree-button[data-kind="template"][data-status="all_passed"],
+.library-tree-button[data-kind="test"][data-status="passed"] {
+  color: var(--library-pass);
+}
+
+.library-tree-button[data-kind="template"][data-status="has_failures"],
+.library-tree-button[data-kind="test"][data-status="not_passed"] {
+  color: var(--library-fail);
+}
+
+.library-tree-button[data-kind="template"][data-status="unused"] {
+  color: var(--library-unused);
+}
+
+/* 悬停、键盘聚焦和选中态共用轻量背景反馈。 */
+.library-tree-button:hover,
+.library-tree-button:focus-visible,
+.library-tree-button.is-selected {
+  text-decoration: none;
+  background: rgba(95, 120, 109, 0.12);
+}
+
+/* 键盘导航保留明确的可见焦点环。 */
+.library-tree-button:focus-visible {
+  outline: 2px solid rgba(27, 122, 54, 0.35);
+  outline-offset: 2px;
+}
+
+/* 选中态再叠加更强的高亮色。 */
+.library-tree-button.is-selected {
+  color: var(--library-highlight);
+  background: rgba(27, 122, 54, 0.12);
+}

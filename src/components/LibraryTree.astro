@@ -1,0 +1,98 @@
+---
+import type { LibraryFileNode, LibraryTreeNode } from "../lib/library-state";
+
+interface Props {
+  tree: LibraryTreeNode[];
+  ariaLabel: string;
+  selectedDetailId?: string;
+}
+
+interface LibraryTreeLine {
+  connector: string;
+  prefix: string;
+  label: string;
+  type: "directory" | "file";
+  id?: string;
+  kind?: LibraryFileNode["kind"];
+  status?: LibraryFileNode["status"];
+}
+
+const { tree, ariaLabel, selectedDetailId } = Astro.props;
+
+function isFileNode(node: LibraryTreeNode): node is LibraryFileNode {
+  return node.type === "file";
+}
+
+function buildTreeLines(
+  nodes: LibraryTreeNode[],
+  ancestorsWithNextSibling: boolean[] = [],
+): LibraryTreeLine[] {
+  const lines: LibraryTreeLine[] = [];
+
+  for (const [index, node] of nodes.entries()) {
+    const isLast = index === nodes.length - 1;
+    const prefix = ancestorsWithNextSibling
+      .map((hasNextSibling) => (hasNextSibling ? "│  " : "   "))
+      .join("");
+
+    if (isFileNode(node)) {
+      lines.push({
+        connector: isLast ? "└──" : "├──",
+        prefix,
+        label: node.label,
+        type: "file",
+        id: node.id,
+        kind: node.kind,
+        status: node.status,
+      });
+      continue;
+    }
+
+    lines.push({
+      connector: isLast ? "└──" : "├──",
+      prefix,
+      label: node.label,
+      type: "directory",
+    });
+
+    lines.push(...buildTreeLines(node.children, [...ancestorsWithNextSibling, !isLast]));
+  }
+
+  return lines;
+}
+
+const lines = buildTreeLines(tree);
+---
+
+<ul class="library-tree" aria-label={ariaLabel}>
+  {
+    lines.map((line) => (
+      <li class="library-tree-line">
+        <span class="library-tree-prefix" aria-hidden="true">{`${line.prefix}${line.connector} `}</span>
+        {
+          line.type === "file" ? (
+            (() => {
+              const isSelected = line.id === selectedDetailId;
+
+              return (
+            <button
+              class:list={["library-tree-button", isSelected && "is-selected"]}
+              type="button"
+              data-library-tree-button
+              data-detail-id={line.id}
+              data-kind={line.kind}
+              data-status={line.status}
+              aria-pressed={isSelected ? "true" : "false"}
+            >
+              {line.label}
+            </button>
+              );
+            })()
+          ) : (
+            <span class="library-tree-directory">{line.label}</span>
+          )
+        }
+      </li>
+    ))
+  }
+</ul>

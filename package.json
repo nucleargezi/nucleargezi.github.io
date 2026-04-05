@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "astro": "^6.0.5",
-    "astro-typst": "^0.12.3"
+    "astro-typst": "^0.12.3",
+    "smol-toml": "1.6.0"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

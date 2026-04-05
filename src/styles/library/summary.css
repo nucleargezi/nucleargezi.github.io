@@ -1,0 +1,148 @@
+/* Library 页顶部统计区与双栏面板布局。 */
+.library-summary-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* 概览卡片与主面板共享同一套边框和背景基底。 */
+.library-summary-card,
+.library-panel,
+.library-detail-dialog {
+  border: 1px solid var(--library-line);
+  border-radius: 0;
+  background: var(--library-soft);
+}
+
+/* 顶部统计卡使用更紧凑的内边距，便于并排展示。 */
+.library-summary-card {
+  padding: 20px 22px;
+}
+
+/* 模块标题作为统计区的视觉锚点。 */
+.library-summary-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--library-highlight);
+}
+
+/* 指标列表去掉默认样式，改为纵向紧凑排布。 */
+.library-stat-list {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+/* 每条统计项左右对齐并用虚线分隔。 */
+.library-stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(23, 51, 40, 0.14);
+}
+
+.library-stat-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+/* 标签前缀模拟终端提示符，强化 library 的工具属性。 */
+.library-stat-label::before {
+  content: "> ";
+  color: rgba(23, 51, 40, 0.42);
+}
+
+/* 指标值默认使用正文色，状态值再由修饰类覆盖。 */
+.library-stat-value {
+  font-size: 0.95rem;
+  color: var(--library-text);
+}
+
+.library-stat-value.is-pass {
+  color: var(--library-pass);
+}
+
+.library-stat-value.is-fail {
+  color: var(--library-fail);
+}
+
+.library-stat-value.is-unused {
+  color: var(--library-unused);
+}
+
+/* 两棵树主体区域使用双栏布局容纳模板和测试。 */
+.library-panels {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* 单个面板提供足够内边距支撑长列表阅读。 */
+.library-panel {
+  padding: 22px;
+}
+
+.library-panel-heading {
+  margin: 0 0 14px;
+}
+
+.library-panel-count {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(23, 51, 40, 0.66);
+}
+
+/* 图例横向排列，便于快速理解颜色编码。 */
+.library-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 0 0 14px;
+}
+
+.library-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.library-legend-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 0;
+  background: currentColor;
+}
+
+.library-legend-item.is-pass {
+  color: var(--library-pass);
+}
+
+.library-legend-item.is-fail {
+  color: var(--library-fail);
+}
+
+.library-legend-item.is-unused {
+  color: var(--library-unused);
+}
+
+/* 小屏下把顶部统计和双树面板都改成单列。 */
+@media (max-width: 860px) {
+  .library-summary-grid,
+  .library-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .library-hero,
+  .library-summary-card,
+  .library-panel,
+  .library-detail-dialog {
+    padding-inline: 16px;
+  }
+}

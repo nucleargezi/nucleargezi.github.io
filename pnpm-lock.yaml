@@ -11,6 +11,9 @@ dependencies:
   astro-typst:
     specifier: ^0.12.3
     version: 0.12.3(@myriaddreamin/typst-ts-node-compiler@0.6.1-rc5)(@myriaddreamin/typst-ts-renderer@0.6.1-rc5)(@myriaddreamin/typst.ts@0.6.1-rc5)(astro@6.0.5)(cheerio@1.2.0)
+  smol-toml:
+    specifier: 1.6.0
+    version: 1.6.0
 
 devDependencies:
   typescript:

@@ -1,0 +1,97 @@
+/* Library 页面的主题变量与基础排版。 */
+.page-library {
+  --library-text: #173328;
+  --library-muted: #5f786d;
+  --library-highlight: #0f261d;
+  --library-pass: #1b7a36;
+  --library-fail: #b13c30;
+  --library-unused: #215f9e;
+  --library-line: rgba(23, 51, 40, 0.18);
+  --library-soft: var(--library-panel-bg);
+  color: var(--library-text);
+  border-color: rgba(23, 51, 40, 0.14);
+  border-radius: 0;
+  background: transparent;
+  font-family: "Fira Code", "JetBrains Mono", "SFMono-Regular", monospace;
+}
+
+/* 预留命令行风格的 Hero 结构，兼容现有视觉语言。 */
+.library-hero {
+  display: grid;
+  gap: 8px;
+  padding: 18px 20px;
+  border: 1px solid var(--library-line);
+  border-radius: 0;
+  background: var(--library-panel-bg);
+}
+
+/* 页面主标题与详情标题统一继承 library 专属字族。 */
+.page-library .page-title,
+.page-library .section-title,
+.page-library .eyebrow,
+.page-library .library-summary-title,
+.page-library .library-detail-title,
+.page-library .library-detail-related-title {
+  font-family: inherit;
+}
+
+/* 页面标题保持衬线体，和站内其他列表页保持区分。 */
+.page-library .page-title {
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif SC", serif;
+}
+
+/* 次级文案统一使用弱化色，避免和文件树抢主视觉。 */
+.page-library .page-intro,
+.page-library .empty-state,
+.page-library .eyebrow,
+.page-library .library-panel-count,
+.page-library .library-stat-label,
+.page-library .library-legend-item,
+.page-library .library-detail-meta-label,
+.page-library .library-detail-summary {
+  color: var(--library-muted);
+}
+
+/* 分区标题使用更深的强调色提高层级感。 */
+.page-library .section-title {
+  color: var(--library-highlight);
+}
+
+/* Eyebrow 作为模块辅助标签，维持紧凑的大写样式。 */
+.page-library .eyebrow {
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+/* 命令行辅助文字使用更细密的排版，保留换行弹性。 */
+.library-shell-line,
+.library-subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.library-shell-line {
+  color: var(--library-highlight);
+}
+
+.library-prompt {
+  color: var(--library-pass);
+}
+
+.library-path {
+  color: var(--library-highlight);
+}
+
+.library-command {
+  color: var(--library-text);
+}
+
+.library-subtitle {
+  color: var(--library-muted);
+  letter-spacing: 0.03em;
+}
