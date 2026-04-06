@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-06T09:58:09.644617218Z"
+generated_at = "2026-04-06T10:03:19.345314962Z"
 status = "passed"
 failures = []
 
@@ -10,11 +10,11 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = []
-selected_tests = []
+changed_paths = ["ge/basic/angle_sort.hpp"]
+selected_tests = ["test/geo/angle_sort.cpp"]
 total_discovered = 22
-total_selected = 0
-passed = 0
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
@@ -30,7 +30,9 @@ all_passed = [
     "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_t.hpp",
+    "ge/basic/angle_sort.hpp",
     "ge/basic/hull.hpp",
+    "ge/basic/point.hpp",
     "ge/pairs/closest_pair.hpp",
     "mod/mint_t.hpp",
     "mod/powtable.hpp",
@@ -56,10 +58,7 @@ all_passed = [
     "random/hash.hpp",
     "random/rng.hpp",
 ]
-has_failures = [
-    "ge/basic/angle_sort.hpp",
-    "ge/basic/point.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -6514,6 +6513,18 @@ dependencies = [
     "ge/basic/angle_sort.hpp",
     "ge/basic/point.hpp",
 ]
+last_trigger = "dependency_changed"
+last_tested_head = "498af005c7283fc038a725dfd569b26ead706e73"
+last_updated_at = "2026-04-06T10:03:19.345314962Z"
+
+[tests."test/geo/angle_sort.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "87 ms"
+memory_text = "9564 KB"
+run_id = 778992
+runtime_error = "Run time error details not Available"
 
 [tests."test/geo/cloest_pair.cpp"]
 path = "test/geo/cloest_pair.cpp"
