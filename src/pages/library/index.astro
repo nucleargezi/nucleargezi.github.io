@@ -1,45 +1,11 @@
 ---
 import LibraryTree from "../../components/LibraryTree.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import {
-  getLibraryPageData,
-  type LibraryDetail,
-} from "../../lib/library-state";
+import { getLibraryPageData } from "../../lib/library-state";
 import "../../styles/listing.css";
 import "../../styles/library.css";
 
 const library = await getLibraryPageData();
-
-const detailStatusLabels = {
-  all_passed: "All tests passed",
-  has_failures: "Contains failing test coverage",
-  unused: "No tests recorded",
-  passed: "Passed",
-  not_passed: "Not passed",
-} as const;
-
-const detailKindLabels = {
-  template: "Template",
-  test: "Test",
-} as const;
-
-const emptyRelatedLabels = {
-  template: "No related tests recorded.",
-  test: "No dependent templates recorded.",
-} as const;
-
-const relatedTitles = {
-  template: "Related Tests",
-  test: "Dependent Templates",
-} as const;
-
-function getRelatedPaths(detail: LibraryDetail | undefined): string[] {
-  if (!detail) {
-    return [];
-  }
-
-  return detail.kind === "template" ? detail.relatedTests : detail.relatedTemplates;
-}
 
 const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c");
 ---
@@ -268,20 +234,12 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
       if (metaElement) {
         metaElement.textContent = "";
 
-        if (detail.kind === "test") {
-          const metaEntries = [
-            ["Status", statusLabels[detail.status] ?? detail.status],
-            ["Verdict", detail.verdict],
-            ["Grade", detail.grade],
-            ["Time", detail.timeText],
-            ["Memory", detail.memoryText],
-          ].filter(([, value]) => typeof value === "string" && value.length > 0);
-
-          for (const [label, value] of metaEntries) {
+        if (detail.kind === "test" && Array.isArray(detail.meta)) {
+          for (const { label, value } of detail.meta) {
             metaElement.append(createMetaItem(label, value));
           }
 
-          metaElement.hidden = metaEntries.length === 0;
+          metaElement.hidden = detail.meta.length === 0;
         } else {
           metaElement.hidden = true;
         }

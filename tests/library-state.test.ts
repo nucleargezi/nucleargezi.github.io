@@ -7,6 +7,21 @@ generated_at = "2026-04-05T14:35:16.222682488Z"
 status = "failed"
 failures = []
 
+[repo]
+root = "/home/yorisou/Yorisou_alg_space/YRS"
+base = "origin/main"
+head = "HEAD"
+
+[latest_run]
+trigger_mode = "all"
+changed_paths = []
+selected_tests = ["test/aa/head.cpp", "test/al/add.cpp"]
+total_discovered = 2
+total_selected = 2
+passed = 1
+failed = 1
+invalid = 0
+
 [template_coverage]
 all_passed = ["aa/head.hpp", "aa/main.hpp"]
 has_failures = ["al/m/add.hpp"]
@@ -85,6 +100,13 @@ test("buildLibraryPageDataFromTomlText normalizes template and test state", asyn
   });
 
   assert.equal(data.details["test:test/al/add.cpp"]?.status, "not_passed");
+  assert.deepEqual(data.details["test:test/aa/head.cpp"]?.meta, [
+    { label: "Status", value: "Passed" },
+    { label: "Verdict", value: "Accepted" },
+    { label: "Grade", value: "100/100" },
+    { label: "Time", value: "12 ms" },
+    { label: "Memory", value: "1024 KB" },
+  ]);
 });
 
 test("buildLibraryPageDataFromTomlText creates reverse dependency indexes", async () => {
@@ -195,6 +217,27 @@ test("buildLibraryPageDataFromTomlText maps invalid test results to not_passed",
   assert.equal(data.summary.tests.notPassed, 1);
   assert.equal(data.testTree[0]?.type, "directory");
   assert.equal(data.details["test:test/aa/head.cpp"]?.status, "not_passed");
+  assert.deepEqual(data.details["test:test/aa/head.cpp"]?.meta, [
+    { label: "Status", value: "Not passed" },
+    { label: "Verdict", value: "Compile Error" },
+  ]);
+});
+
+test("buildLibraryPageDataFromTomlText omits missing test detail metadata entries", async () => {
+  const module = await loadLibraryStateModule();
+
+  assert.equal(
+    typeof module?.buildLibraryPageDataFromTomlText,
+    "function",
+    "expected buildLibraryPageDataFromTomlText to be exported from src/lib/library-state.ts",
+  );
+
+  const data = module!.buildLibraryPageDataFromTomlText(sampleToml);
+
+  assert.deepEqual(data.details["test:test/al/add.cpp"]?.meta, [
+    { label: "Status", value: "Not passed" },
+    { label: "Verdict", value: "Wrong Answer" },
+  ]);
 });
 
 test("buildLibraryPageDataFromTomlText rejects unknown test result statuses", async () => {

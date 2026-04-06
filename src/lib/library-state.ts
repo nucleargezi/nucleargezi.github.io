@@ -50,15 +50,17 @@ export interface LibraryTemplateDetail {
   relatedTests: string[];
 }
 
+export interface LibraryDetailMetaItem {
+  label: string;
+  value: string;
+}
+
 export interface LibraryTestDetail {
   kind: "test";
   path: string;
   status: TestStatus;
   relatedTemplates: string[];
-  verdict?: string;
-  grade?: string;
-  timeText?: string;
-  memoryText?: string;
+  meta: LibraryDetailMetaItem[];
 }
 
 export type LibraryDetail = LibraryTemplateDetail | LibraryTestDetail;
@@ -308,6 +310,20 @@ function parseTests(value: unknown): ParsedTestEntry[] {
     });
 }
 
+function getTestStatusLabel(status: TestStatus): string {
+  return status === "passed" ? "Passed" : "Not passed";
+}
+
+function createTestMeta(test: ParsedTestEntry): LibraryDetailMetaItem[] {
+  return [
+    { label: "Status", value: getTestStatusLabel(test.status) },
+    { label: "Verdict", value: test.verdict },
+    { label: "Grade", value: test.grade },
+    { label: "Time", value: test.timeText },
+    { label: "Memory", value: test.memoryText },
+  ].filter((entry): entry is LibraryDetailMetaItem => typeof entry.value === "string");
+}
+
 function createTemplateToTests(
   templates: Record<TemplateStatus, string[]>,
   tests: ParsedTestEntry[],
@@ -387,10 +403,7 @@ function createDetails(
       path: test.path,
       status: test.status,
       relatedTemplates: testToTemplates[test.path] ?? [],
-      verdict: test.verdict,
-      grade: test.grade,
-      timeText: test.timeText,
-      memoryText: test.memoryText,
+      meta: createTestMeta(test),
     };
   }
 

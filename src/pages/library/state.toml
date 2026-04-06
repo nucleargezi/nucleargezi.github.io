@@ -1,5 +1,5 @@
 schema_version = 2
-generated_at = "2026-04-06T05:44:57.389122896Z"
+generated_at = "2026-04-06T06:22:43.032395355Z"
 status = "passed"
 failures = []
 
@@ -9,12 +9,34 @@ base = "origin/main"
 head = "HEAD"
 
 [latest_run]
-trigger_mode = "diff"
-changed_paths = ["test/geo/cloest_pair.cpp"]
-selected_tests = ["test/geo/cloest_pair.cpp"]
+trigger_mode = "all"
+changed_paths = []
+selected_tests = [
+    "test/bigint/add.cpp",
+    "test/bigint/div.cpp",
+    "test/bigint/mul.cpp",
+    "test/ds/seg/beats_maxminadd.cpp",
+    "test/ds/seg/range_sum_point_add.cpp",
+    "test/ds/seg/seg_t_add.cpp",
+    "test/ds/seg/segd.cpp",
+    "test/fps/comp.cpp",
+    "test/fps/comp_inv.cpp",
+    "test/fps/comp_inv_mtt.cpp",
+    "test/fps/conv17.cpp",
+    "test/fps/conv99.cpp",
+    "test/fps/conv_ull.cpp",
+    "test/fps/sing1_k.cpp",
+    "test/fps/sing1_n.cpp",
+    "test/fps/sing2_k.cpp",
+    "test/fps/sing2_n.cpp",
+    "test/geo/cloest_pair.cpp",
+    "test/geo/static_hull.cpp",
+    "test/nt/nim_prod.cpp",
+    "test/nt/sbt.cpp",
+]
 total_discovered = 21
-total_selected = 1
-passed = 1
+total_selected = 21
+passed = 21
 failed = 0
 invalid = 0
 
@@ -658,8 +680,8 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/bigint/add.cpp".last_result]
 status = "passed"
@@ -667,30 +689,7 @@ verdict = "Accepted"
 grade = "100/100"
 time_text = "164 ms"
 memory_text = "16992 KB"
-run_id = 778546
-judge_detail = """
-Sample case: example_00.in, Accepted, 2696 KB, 5 ms
-Secret case: carry_chain_00.in, Accepted, 2696 KB, 54 ms
-Secret case: carry_chain_01.in, Accepted, 2696 KB, 63 ms
-Secret case: carry_chain_02.in, Accepted, 2696 KB, 59 ms
-Secret case: carry_chain_03.in, Accepted, 2696 KB, 69 ms
-Secret case: large_00.in, Accepted, 3240 KB, 76 ms
-Secret case: large_01.in, Accepted, 3324 KB, 80 ms
-Secret case: large_02.in, Accepted, 3324 KB, 75 ms
-Secret case: large_small_00.in, Accepted, 12620 KB, 105 ms
-Secret case: max_max_00.in, Accepted, 16992 KB, 96 ms
-Secret case: max_max_01.in, Accepted, 16992 KB, 95 ms
-Secret case: max_max_02.in, Accepted, 16992 KB, 92 ms
-Secret case: max_max_03.in, Accepted, 16992 KB, 96 ms
-Secret case: max_max_04.in, Accepted, 16992 KB, 97 ms
-Secret case: max_max_05.in, Accepted, 16992 KB, 96 ms
-Secret case: max_max_06.in, Accepted, 16992 KB, 99 ms
-Secret case: max_max_07.in, Accepted, 16992 KB, 99 ms
-Secret case: medium_00.in, Accepted, 16992 KB, 75 ms
-Secret case: medium_01.in, Accepted, 16992 KB, 75 ms
-Secret case: medium_02.in, Accepted, 16992 KB, 75 ms
-Secret case: small_00.in, Accepted, 16992 KB, 164 ms
-Secret case: sum_zero_00.in, Accepted, 16992 KB, 75 ms"""
+run_id = 778763
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/div.cpp"]
@@ -710,43 +709,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/bigint/div.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1764 ms"
+time_text = "1772 ms"
 memory_text = "25104 KB"
-run_id = 778545
-judge_detail = """
-Sample case: example_00.in, Accepted, 2696 KB, 4 ms
-Secret case: a_max_b_random_00.in, Accepted, 24140 KB, 917 ms
-Secret case: a_max_b_random_01.in, Accepted, 24140 KB, 999 ms
-Secret case: a_max_b_random_02.in, Accepted, 24140 KB, 1106 ms
-Secret case: burnikel_ziegler_bound_00.in, Accepted, 24140 KB, 308 ms
-Secret case: burnikel_ziegler_bound_01.in, Accepted, 24140 KB, 542 ms
-Secret case: burnikel_ziegler_bound_02.in, Accepted, 24140 KB, 438 ms
-Secret case: burnikel_ziegler_bound_03.in, Accepted, 24140 KB, 787 ms
-Secret case: large_00.in, Accepted, 24140 KB, 806 ms
-Secret case: large_01.in, Accepted, 24140 KB, 1022 ms
-Secret case: length_ratio_integer_00.in, Accepted, 24140 KB, 1298 ms
-Secret case: length_ratio_integer_01.in, Accepted, 24140 KB, 1564 ms
-Secret case: length_ratio_integer_02.in, Accepted, 24140 KB, 1739 ms
-Secret case: length_ratio_integer_03.in, Accepted, 24308 KB, 1764 ms
-Secret case: length_ratio_integer_04.in, Accepted, 25104 KB, 1722 ms
-Secret case: length_ratio_integer_05.in, Accepted, 25104 KB, 1706 ms
-Secret case: max_00.in, Accepted, 25104 KB, 71 ms
-Secret case: max_01.in, Accepted, 25104 KB, 67 ms
-Secret case: max_02.in, Accepted, 25104 KB, 88 ms
-Secret case: medium_00.in, Accepted, 25104 KB, 259 ms
-Secret case: medium_01.in, Accepted, 25104 KB, 173 ms
-Secret case: medium_02.in, Accepted, 25104 KB, 599 ms
-Secret case: r_nearly_zero_00.in, Accepted, 25104 KB, 261 ms
-Secret case: r_nearly_zero_01.in, Accepted, 25104 KB, 246 ms
-Secret case: r_nearly_zero_02.in, Accepted, 25104 KB, 924 ms
-Secret case: small_00.in, Accepted, 25104 KB, 358 ms"""
+run_id = 778761
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/mul.cpp"]
@@ -766,37 +738,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/bigint/mul.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "380 ms"
+time_text = "366 ms"
 memory_text = "28016 KB"
-run_id = 778547
-judge_detail = """
-Sample case: example_00.in, Accepted, 2696 KB, 6 ms
-Secret case: fft_killer_00.in, Accepted, 28016 KB, 336 ms
-Secret case: fft_killer_01.in, Accepted, 28016 KB, 350 ms
-Secret case: large_00.in, Accepted, 28016 KB, 295 ms
-Secret case: large_01.in, Accepted, 28016 KB, 316 ms
-Secret case: large_02.in, Accepted, 28016 KB, 300 ms
-Secret case: large_small_00.in, Accepted, 28016 KB, 338 ms
-Secret case: max_max_00.in, Accepted, 28016 KB, 380 ms
-Secret case: max_max_01.in, Accepted, 28016 KB, 368 ms
-Secret case: max_max_02.in, Accepted, 28016 KB, 370 ms
-Secret case: max_max_03.in, Accepted, 28016 KB, 360 ms
-Secret case: max_max_04.in, Accepted, 28016 KB, 368 ms
-Secret case: max_max_05.in, Accepted, 28016 KB, 349 ms
-Secret case: max_max_06.in, Accepted, 28016 KB, 351 ms
-Secret case: max_max_07.in, Accepted, 28016 KB, 358 ms
-Secret case: medium_00.in, Accepted, 28016 KB, 116 ms
-Secret case: medium_01.in, Accepted, 28016 KB, 116 ms
-Secret case: medium_02.in, Accepted, 28016 KB, 116 ms
-Secret case: small_00.in, Accepted, 28016 KB, 181 ms
-Secret case: zero_00.in, Accepted, 28016 KB, 49 ms"""
+run_id = 778758
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/beats_maxminadd.cpp"]
@@ -813,50 +764,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/ds/seg/beats_maxminadd.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "975 ms"
+time_text = "938 ms"
 memory_text = "43176 KB"
-run_id = 778548
-judge_detail = """
-Sample case: example_00.in, Accepted, 2692 KB, 6 ms
-Secret case: issue_1369_log2_00.in, Accepted, 43152 KB, 575 ms
-Secret case: issue_1369_log2_01.in, Accepted, 43156 KB, 640 ms
-Secret case: issue_1369_log2_02.in, Accepted, 43156 KB, 701 ms
-Secret case: issue_1369_log2_03.in, Accepted, 43156 KB, 791 ms
-Secret case: max_random_00.in, Accepted, 43176 KB, 946 ms
-Secret case: max_random_01.in, Accepted, 43176 KB, 893 ms
-Secret case: max_random_02.in, Accepted, 43176 KB, 914 ms
-Secret case: medium_00.in, Accepted, 43176 KB, 8 ms
-Secret case: medium_01.in, Accepted, 43176 KB, 5 ms
-Secret case: medium_02.in, Accepted, 43176 KB, 7 ms
-Secret case: random2_00.in, Accepted, 43176 KB, 936 ms
-Secret case: random2_01.in, Accepted, 43176 KB, 938 ms
-Secret case: random2_02.in, Accepted, 43176 KB, 845 ms
-Secret case: random3_00.in, Accepted, 43176 KB, 975 ms
-Secret case: random3_01.in, Accepted, 43176 KB, 970 ms
-Secret case: random3_02.in, Accepted, 43176 KB, 922 ms
-Secret case: random_00.in, Accepted, 43176 KB, 529 ms
-Secret case: random_01.in, Accepted, 43176 KB, 606 ms
-Secret case: random_02.in, Accepted, 43176 KB, 360 ms
-Secret case: small_00.in, Accepted, 43176 KB, 4 ms
-Secret case: small_01.in, Accepted, 43176 KB, 5 ms
-Secret case: small_02.in, Accepted, 43176 KB, 5 ms
-Secret case: small_03.in, Accepted, 43176 KB, 5 ms
-Secret case: small_04.in, Accepted, 43176 KB, 5 ms
-Secret case: small_05.in, Accepted, 43176 KB, 4 ms
-Secret case: small_06.in, Accepted, 43176 KB, 5 ms
-Secret case: small_07.in, Accepted, 43176 KB, 4 ms
-Secret case: small_08.in, Accepted, 43176 KB, 5 ms
-Secret case: small_09.in, Accepted, 43176 KB, 4 ms
-Secret case: small_absolute_values_00.in, Accepted, 43176 KB, 566 ms
-Secret case: small_absolute_values_01.in, Accepted, 43176 KB, 616 ms
-Secret case: small_absolute_values_02.in, Accepted, 43176 KB, 353 ms"""
+run_id = 778762
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
@@ -873,38 +790,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/ds/seg/range_sum_point_add.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "123 ms"
+time_text = "121 ms"
 memory_text = "14408 KB"
-run_id = 778549
-judge_detail = """
-Sample case: example_00.in, Accepted, 2684 KB, 4 ms
-Secret case: max_random_00.in, Accepted, 14408 KB, 113 ms
-Secret case: max_random_01.in, Accepted, 14408 KB, 123 ms
-Secret case: max_random_02.in, Accepted, 14408 KB, 120 ms
-Secret case: max_random_03.in, Accepted, 14408 KB, 123 ms
-Secret case: max_random_04.in, Accepted, 14408 KB, 109 ms
-Secret case: random_00.in, Accepted, 14408 KB, 87 ms
-Secret case: random_01.in, Accepted, 14408 KB, 94 ms
-Secret case: random_02.in, Accepted, 14408 KB, 52 ms
-Secret case: random_03.in, Accepted, 14408 KB, 31 ms
-Secret case: random_04.in, Accepted, 14408 KB, 32 ms
-Secret case: small_00.in, Accepted, 14408 KB, 4 ms
-Secret case: small_01.in, Accepted, 14408 KB, 4 ms
-Secret case: small_02.in, Accepted, 14408 KB, 3 ms
-Secret case: small_03.in, Accepted, 14408 KB, 5 ms
-Secret case: small_04.in, Accepted, 14408 KB, 6 ms
-Secret case: small_05.in, Accepted, 14408 KB, 6 ms
-Secret case: small_06.in, Accepted, 14408 KB, 5 ms
-Secret case: small_07.in, Accepted, 14408 KB, 5 ms
-Secret case: small_08.in, Accepted, 14408 KB, 4 ms
-Secret case: small_09.in, Accepted, 14408 KB, 3 ms"""
+run_id = 778759
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/seg_t_add.cpp"]
@@ -921,38 +816,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/ds/seg/seg_t_add.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "179 ms"
+time_text = "157 ms"
 memory_text = "14788 KB"
-run_id = 778550
-judge_detail = """
-Sample case: example_00.in, Accepted, 2684 KB, 5 ms
-Secret case: max_random_00.in, Accepted, 14788 KB, 146 ms
-Secret case: max_random_01.in, Accepted, 14788 KB, 158 ms
-Secret case: max_random_02.in, Accepted, 14788 KB, 159 ms
-Secret case: max_random_03.in, Accepted, 14788 KB, 179 ms
-Secret case: max_random_04.in, Accepted, 14788 KB, 173 ms
-Secret case: random_00.in, Accepted, 14788 KB, 118 ms
-Secret case: random_01.in, Accepted, 14788 KB, 117 ms
-Secret case: random_02.in, Accepted, 14788 KB, 68 ms
-Secret case: random_03.in, Accepted, 14788 KB, 36 ms
-Secret case: random_04.in, Accepted, 14788 KB, 47 ms
-Secret case: small_00.in, Accepted, 14788 KB, 5 ms
-Secret case: small_01.in, Accepted, 14788 KB, 5 ms
-Secret case: small_02.in, Accepted, 14788 KB, 5 ms
-Secret case: small_03.in, Accepted, 14788 KB, 5 ms
-Secret case: small_04.in, Accepted, 14788 KB, 4 ms
-Secret case: small_05.in, Accepted, 14788 KB, 4 ms
-Secret case: small_06.in, Accepted, 14788 KB, 4 ms
-Secret case: small_07.in, Accepted, 14788 KB, 5 ms
-Secret case: small_08.in, Accepted, 14788 KB, 5 ms
-Secret case: small_09.in, Accepted, 14788 KB, 3 ms"""
+run_id = 778757
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/segd.cpp"]
@@ -971,42 +844,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/ds/seg/segd.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "957 ms"
+time_text = "909 ms"
 memory_text = "144092 KB"
-run_id = 778551
-judge_detail = """
-Sample case: example_00.in, Accepted, 8868 KB, 5 ms
-Secret case: dense_00.in, Accepted, 8872 KB, 233 ms
-Secret case: dense_01.in, Accepted, 8872 KB, 307 ms
-Secret case: dense_02.in, Accepted, 21132 KB, 523 ms
-Secret case: many_query_0_00.in, Accepted, 144092 KB, 957 ms
-Secret case: many_query_0_01.in, Accepted, 144092 KB, 930 ms
-Secret case: many_query_1_00.in, Accepted, 144092 KB, 300 ms
-Secret case: many_query_1_01.in, Accepted, 144092 KB, 313 ms
-Secret case: max_random_00.in, Accepted, 144092 KB, 853 ms
-Secret case: max_random_01.in, Accepted, 144092 KB, 872 ms
-Secret case: max_random_02.in, Accepted, 144092 KB, 845 ms
-Secret case: near_0_and_n_00.in, Accepted, 144092 KB, 482 ms
-Secret case: near_0_and_n_01.in, Accepted, 144092 KB, 503 ms
-Secret case: query_0_then_1_00.in, Accepted, 144092 KB, 877 ms
-Secret case: query_0_then_1_01.in, Accepted, 144092 KB, 907 ms
-Secret case: random_00.in, Accepted, 144092 KB, 592 ms
-Secret case: random_01.in, Accepted, 144092 KB, 593 ms
-Secret case: random_02.in, Accepted, 144092 KB, 589 ms
-Secret case: random_03.in, Accepted, 144092 KB, 30 ms
-Secret case: random_04.in, Accepted, 144092 KB, 104 ms
-Secret case: small_n_00.in, Accepted, 144092 KB, 62 ms
-Secret case: small_n_01.in, Accepted, 144092 KB, 67 ms
-Secret case: small_n_02.in, Accepted, 144092 KB, 63 ms
-Secret case: small_n_03.in, Accepted, 144092 KB, 69 ms
-Secret case: small_n_04.in, Accepted, 144092 KB, 73 ms"""
+run_id = 778764
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/comp.cpp"]
@@ -1028,49 +875,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/comp.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "827 ms"
+time_text = "826 ms"
 memory_text = "52040 KB"
-run_id = 778552
-judge_detail = """
-Sample case: example_00.in, Accepted, 2712 KB, 4 ms
-Secret case: hack2_00.in, Accepted, 51104 KB, 806 ms
-Secret case: hack2_01.in, Accepted, 51104 KB, 808 ms
-Secret case: hack2_02.in, Accepted, 51104 KB, 797 ms
-Secret case: hack_00.in, Accepted, 51104 KB, 792 ms
-Secret case: hack_01.in, Accepted, 51104 KB, 794 ms
-Secret case: hack_02.in, Accepted, 51104 KB, 795 ms
-Secret case: max_random_00.in, Accepted, 51104 KB, 806 ms
-Secret case: max_random_01.in, Accepted, 51104 KB, 812 ms
-Secret case: max_random_02.in, Accepted, 51104 KB, 805 ms
-Secret case: max_random_03.in, Accepted, 51104 KB, 827 ms
-Secret case: max_random_04.in, Accepted, 51104 KB, 792 ms
-Secret case: mid_00.in, Accepted, 51104 KB, 38 ms
-Secret case: mid_01.in, Accepted, 51104 KB, 39 ms
-Secret case: mid_02.in, Accepted, 51104 KB, 38 ms
-Secret case: mid_03.in, Accepted, 51104 KB, 19 ms
-Secret case: mid_04.in, Accepted, 51104 KB, 39 ms
-Secret case: random_00.in, Accepted, 52040 KB, 789 ms
-Secret case: random_01.in, Accepted, 52040 KB, 794 ms
-Secret case: random_02.in, Accepted, 52040 KB, 366 ms
-Secret case: random_03.in, Accepted, 52040 KB, 369 ms
-Secret case: random_04.in, Accepted, 52040 KB, 80 ms
-Secret case: small_00.in, Accepted, 52040 KB, 4 ms
-Secret case: small_01.in, Accepted, 52040 KB, 3 ms
-Secret case: small_02.in, Accepted, 52040 KB, 4 ms
-Secret case: small_03.in, Accepted, 52040 KB, 3 ms
-Secret case: small_04.in, Accepted, 52040 KB, 3 ms
-Secret case: small_05.in, Accepted, 52040 KB, 4 ms
-Secret case: small_06.in, Accepted, 52040 KB, 4 ms
-Secret case: small_07.in, Accepted, 52040 KB, 4 ms
-Secret case: small_08.in, Accepted, 52040 KB, 3 ms
-Secret case: small_09.in, Accepted, 52040 KB, 4 ms"""
+run_id = 778765
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/comp_inv.cpp"]
@@ -1096,45 +910,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/comp_inv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "995 ms"
+time_text = "1000 ms"
 memory_text = "13544 KB"
-run_id = 778553
-judge_detail = """
-Sample case: example_00.in, Accepted, 2728 KB, 3 ms
-Secret case: identity_00.in, Accepted, 2728 KB, 3 ms
-Secret case: max_identity_00.in, Accepted, 13544 KB, 882 ms
-Secret case: max_random_00.in, Accepted, 13544 KB, 976 ms
-Secret case: max_random_01.in, Accepted, 13544 KB, 988 ms
-Secret case: max_random_02.in, Accepted, 13544 KB, 995 ms
-Secret case: max_random_03.in, Accepted, 13544 KB, 981 ms
-Secret case: max_random_04.in, Accepted, 13544 KB, 984 ms
-Secret case: mid_00.in, Accepted, 13544 KB, 47 ms
-Secret case: mid_01.in, Accepted, 13544 KB, 48 ms
-Secret case: mid_02.in, Accepted, 13544 KB, 48 ms
-Secret case: mid_03.in, Accepted, 13544 KB, 24 ms
-Secret case: mid_04.in, Accepted, 13544 KB, 49 ms
-Secret case: random_00.in, Accepted, 13544 KB, 987 ms
-Secret case: random_01.in, Accepted, 13544 KB, 982 ms
-Secret case: random_02.in, Accepted, 13544 KB, 455 ms
-Secret case: random_03.in, Accepted, 13544 KB, 455 ms
-Secret case: random_04.in, Accepted, 13544 KB, 104 ms
-Secret case: small_degree_00.in, Accepted, 13544 KB, 5 ms
-Secret case: small_degree_01.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_02.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_03.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_04.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_05.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_06.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_07.in, Accepted, 13544 KB, 7 ms
-Secret case: small_degree_08.in, Accepted, 13544 KB, 6 ms
-Secret case: small_degree_09.in, Accepted, 13544 KB, 6 ms"""
+run_id = 778766
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/comp_inv_mtt.cpp"]
@@ -1160,45 +945,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/comp_inv_mtt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "4822 ms"
+time_text = "4851 ms"
 memory_text = "24724 KB"
-run_id = 778554
-judge_detail = """
-Sample case: example_00.in, Accepted, 2744 KB, 5 ms
-Secret case: identity_00.in, Accepted, 2744 KB, 4 ms
-Secret case: max_identity_00.in, Accepted, 23836 KB, 3688 ms
-Secret case: max_random_00.in, Accepted, 23836 KB, 4816 ms
-Secret case: max_random_01.in, Accepted, 23836 KB, 4794 ms
-Secret case: max_random_02.in, Accepted, 23836 KB, 4785 ms
-Secret case: max_random_03.in, Accepted, 23836 KB, 4760 ms
-Secret case: max_random_04.in, Accepted, 23836 KB, 4822 ms
-Secret case: mid_00.in, Accepted, 23836 KB, 201 ms
-Secret case: mid_01.in, Accepted, 23836 KB, 197 ms
-Secret case: mid_02.in, Accepted, 23836 KB, 195 ms
-Secret case: mid_03.in, Accepted, 23836 KB, 93 ms
-Secret case: mid_04.in, Accepted, 23836 KB, 197 ms
-Secret case: random_00.in, Accepted, 24724 KB, 4773 ms
-Secret case: random_01.in, Accepted, 24724 KB, 4721 ms
-Secret case: random_02.in, Accepted, 24724 KB, 2154 ms
-Secret case: random_03.in, Accepted, 24724 KB, 2140 ms
-Secret case: random_04.in, Accepted, 24724 KB, 437 ms
-Secret case: small_degree_00.in, Accepted, 24724 KB, 5 ms
-Secret case: small_degree_01.in, Accepted, 24724 KB, 3 ms
-Secret case: small_degree_02.in, Accepted, 24724 KB, 5 ms
-Secret case: small_degree_03.in, Accepted, 24724 KB, 6 ms
-Secret case: small_degree_04.in, Accepted, 24724 KB, 6 ms
-Secret case: small_degree_05.in, Accepted, 24724 KB, 6 ms
-Secret case: small_degree_06.in, Accepted, 24724 KB, 7 ms
-Secret case: small_degree_07.in, Accepted, 24724 KB, 6 ms
-Secret case: small_degree_08.in, Accepted, 24724 KB, 7 ms
-Secret case: small_degree_09.in, Accepted, 24724 KB, 6 ms"""
+run_id = 778767
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/conv17.cpp"]
@@ -1217,65 +973,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/conv17.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "554 ms"
+time_text = "560 ms"
 memory_text = "39644 KB"
-run_id = 778555
-judge_detail = """
-Sample case: example_00.in, Accepted, 2708 KB, 5 ms
-Sample case: example_01.in, Accepted, 2708 KB, 5 ms
-Secret case: all_same_00.in, Accepted, 39644 KB, 509 ms
-Secret case: all_same_01.in, Accepted, 39644 KB, 553 ms
-Secret case: all_same_02.in, Accepted, 39644 KB, 544 ms
-Secret case: all_same_03.in, Accepted, 39644 KB, 554 ms
-Secret case: fft_killer_00.in, Accepted, 39644 KB, 541 ms
-Secret case: fft_killer_01.in, Accepted, 39644 KB, 537 ms
-Secret case: fft_killer_02.in, Accepted, 39644 KB, 552 ms
-Secret case: fft_killer_03.in, Accepted, 39644 KB, 544 ms
-Secret case: fft_killer_04.in, Accepted, 39644 KB, 540 ms
-Secret case: fft_killer_05.in, Accepted, 39644 KB, 538 ms
-Secret case: fft_killer_06.in, Accepted, 39644 KB, 544 ms
-Secret case: fft_killer_07.in, Accepted, 39644 KB, 553 ms
-Secret case: fft_killer_08.in, Accepted, 39644 KB, 542 ms
-Secret case: fft_killer_09.in, Accepted, 39644 KB, 540 ms
-Secret case: max_ans_zero_00.in, Accepted, 39644 KB, 544 ms
-Secret case: max_random_00.in, Accepted, 39644 KB, 542 ms
-Secret case: max_random_01.in, Accepted, 39644 KB, 544 ms
-Secret case: medium_00.in, Accepted, 39644 KB, 14 ms
-Secret case: medium_01.in, Accepted, 39644 KB, 10 ms
-Secret case: medium_02.in, Accepted, 39644 KB, 14 ms
-Secret case: medium_all_zero_00.in, Accepted, 39644 KB, 14 ms
-Secret case: random_00.in, Accepted, 39644 KB, 509 ms
-Secret case: random_01.in, Accepted, 39644 KB, 530 ms
-Secret case: random_02.in, Accepted, 39644 KB, 254 ms
-Secret case: signed_overflow_00.in, Accepted, 39644 KB, 3 ms
-Secret case: small_00.in, Accepted, 39644 KB, 3 ms
-Secret case: small_01.in, Accepted, 39644 KB, 5 ms
-Secret case: small_02.in, Accepted, 39644 KB, 5 ms
-Secret case: small_03.in, Accepted, 39644 KB, 5 ms
-Secret case: small_04.in, Accepted, 39644 KB, 4 ms
-Secret case: small_05.in, Accepted, 39644 KB, 4 ms
-Secret case: small_06.in, Accepted, 39644 KB, 4 ms
-Secret case: small_07.in, Accepted, 39644 KB, 4 ms
-Secret case: small_08.in, Accepted, 39644 KB, 4 ms
-Secret case: small_09.in, Accepted, 39644 KB, 3 ms
-Secret case: small_10.in, Accepted, 39644 KB, 4 ms
-Secret case: small_11.in, Accepted, 39644 KB, 4 ms
-Secret case: small_12.in, Accepted, 39644 KB, 6 ms
-Secret case: small_13.in, Accepted, 39644 KB, 4 ms
-Secret case: small_14.in, Accepted, 39644 KB, 4 ms
-Secret case: small_15.in, Accepted, 39644 KB, 3 ms
-Secret case: small_and_large_00.in, Accepted, 39644 KB, 220 ms
-Secret case: small_and_large_01.in, Accepted, 39644 KB, 487 ms
-Secret case: small_and_large_02.in, Accepted, 39644 KB, 224 ms
-Secret case: small_and_large_03.in, Accepted, 39644 KB, 490 ms
-Secret case: unsigned_overflow_00.in, Accepted, 39644 KB, 3 ms"""
+run_id = 778768
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/conv99.cpp"]
@@ -1294,70 +1001,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/conv99.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "197 ms"
+time_text = "200 ms"
 memory_text = "17052 KB"
-run_id = 778556
-judge_detail = """
-Sample case: example_00.in, Accepted, 2696 KB, 6 ms
-Sample case: example_01.in, Accepted, 2696 KB, 6 ms
-Secret case: all_same_00.in, Accepted, 17052 KB, 150 ms
-Secret case: all_same_01.in, Accepted, 17052 KB, 185 ms
-Secret case: all_same_02.in, Accepted, 17052 KB, 187 ms
-Secret case: all_same_03.in, Accepted, 17052 KB, 197 ms
-Secret case: fft_killer_00.in, Accepted, 17052 KB, 186 ms
-Secret case: fft_killer_01.in, Accepted, 17052 KB, 188 ms
-Secret case: fft_killer_02.in, Accepted, 17052 KB, 184 ms
-Secret case: fft_killer_03.in, Accepted, 17052 KB, 184 ms
-Secret case: fft_killer_04.in, Accepted, 17052 KB, 197 ms
-Secret case: fft_killer_05.in, Accepted, 17052 KB, 193 ms
-Secret case: fft_killer_06.in, Accepted, 17052 KB, 191 ms
-Secret case: fft_killer_07.in, Accepted, 17052 KB, 191 ms
-Secret case: fft_killer_08.in, Accepted, 17052 KB, 188 ms
-Secret case: fft_killer_09.in, Accepted, 17052 KB, 184 ms
-Secret case: max_ans_zero_00.in, Accepted, 17052 KB, 187 ms
-Secret case: max_random_00.in, Accepted, 17052 KB, 187 ms
-Secret case: max_random_01.in, Accepted, 17052 KB, 187 ms
-Secret case: medium_00.in, Accepted, 17052 KB, 6 ms
-Secret case: medium_01.in, Accepted, 17052 KB, 6 ms
-Secret case: medium_02.in, Accepted, 17052 KB, 6 ms
-Secret case: medium_all_zero_00.in, Accepted, 17052 KB, 6 ms
-Secret case: medium_pre_suf_zero_00.in, Accepted, 17052 KB, 3 ms
-Secret case: medium_pre_suf_zero_01.in, Accepted, 17052 KB, 4 ms
-Secret case: medium_pre_suf_zero_02.in, Accepted, 17052 KB, 6 ms
-Secret case: medium_pre_suf_zero_03.in, Accepted, 17052 KB, 7 ms
-Secret case: medium_pre_suf_zero_04.in, Accepted, 17052 KB, 7 ms
-Secret case: random_00.in, Accepted, 17052 KB, 168 ms
-Secret case: random_01.in, Accepted, 17052 KB, 172 ms
-Secret case: random_02.in, Accepted, 17052 KB, 91 ms
-Secret case: signed_overflow_00.in, Accepted, 17052 KB, 4 ms
-Secret case: small_00.in, Accepted, 17052 KB, 3 ms
-Secret case: small_01.in, Accepted, 17052 KB, 4 ms
-Secret case: small_02.in, Accepted, 17052 KB, 3 ms
-Secret case: small_03.in, Accepted, 17052 KB, 4 ms
-Secret case: small_04.in, Accepted, 17052 KB, 5 ms
-Secret case: small_05.in, Accepted, 17052 KB, 4 ms
-Secret case: small_06.in, Accepted, 17052 KB, 4 ms
-Secret case: small_07.in, Accepted, 17052 KB, 3 ms
-Secret case: small_08.in, Accepted, 17052 KB, 3 ms
-Secret case: small_09.in, Accepted, 17052 KB, 5 ms
-Secret case: small_10.in, Accepted, 17052 KB, 5 ms
-Secret case: small_11.in, Accepted, 17052 KB, 3 ms
-Secret case: small_12.in, Accepted, 17052 KB, 3 ms
-Secret case: small_13.in, Accepted, 17052 KB, 4 ms
-Secret case: small_14.in, Accepted, 17052 KB, 4 ms
-Secret case: small_15.in, Accepted, 17052 KB, 4 ms
-Secret case: small_and_large_00.in, Accepted, 17052 KB, 146 ms
-Secret case: small_and_large_01.in, Accepted, 17052 KB, 143 ms
-Secret case: small_and_large_02.in, Accepted, 17052 KB, 152 ms
-Secret case: small_and_large_03.in, Accepted, 17052 KB, 158 ms
-Secret case: unsigned_overflow_00.in, Accepted, 17052 KB, 5 ms"""
+run_id = 778769
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/conv_ull.cpp"]
@@ -1377,61 +1030,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/conv_ull.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "885 ms"
+time_text = "899 ms"
 memory_text = "58084 KB"
-run_id = 778558
-judge_detail = """
-Sample case: example_00.in, Accepted, 2716 KB, 4 ms
-Sample case: example_01.in, Accepted, 2716 KB, 4 ms
-Secret case: all_same_00.in, Accepted, 58084 KB, 733 ms
-Secret case: all_same_01.in, Accepted, 58084 KB, 856 ms
-Secret case: all_same_02.in, Accepted, 58084 KB, 847 ms
-Secret case: all_same_03.in, Accepted, 58084 KB, 854 ms
-Secret case: gen_131072_00.in, Accepted, 58084 KB, 206 ms
-Secret case: gen_131073_00.in, Accepted, 58084 KB, 340 ms
-Secret case: gen_177147_00.in, Accepted, 58084 KB, 368 ms
-Secret case: gen_177148_00.in, Accepted, 58084 KB, 370 ms
-Secret case: gen_262144_00.in, Accepted, 58084 KB, 424 ms
-Secret case: gen_262145_00.in, Accepted, 58084 KB, 713 ms
-Secret case: gen_265721_00.in, Accepted, 58084 KB, 725 ms
-Secret case: gen_265722_00.in, Accepted, 58084 KB, 721 ms
-Secret case: gen_354294_00.in, Accepted, 58084 KB, 794 ms
-Secret case: gen_354295_00.in, Accepted, 58084 KB, 772 ms
-Secret case: gen_524288_00.in, Accepted, 58084 KB, 883 ms
-Secret case: gen_524288_01.in, Accepted, 58084 KB, 885 ms
-Secret case: medium_00.in, Accepted, 58084 KB, 18 ms
-Secret case: medium_01.in, Accepted, 58084 KB, 14 ms
-Secret case: medium_02.in, Accepted, 58084 KB, 18 ms
-Secret case: random_00.in, Accepted, 58084 KB, 792 ms
-Secret case: random_01.in, Accepted, 58084 KB, 849 ms
-Secret case: random_02.in, Accepted, 58084 KB, 407 ms
-Secret case: small_00.in, Accepted, 58084 KB, 6 ms
-Secret case: small_01.in, Accepted, 58084 KB, 7 ms
-Secret case: small_02.in, Accepted, 58084 KB, 6 ms
-Secret case: small_03.in, Accepted, 58084 KB, 6 ms
-Secret case: small_04.in, Accepted, 58084 KB, 7 ms
-Secret case: small_05.in, Accepted, 58084 KB, 6 ms
-Secret case: small_06.in, Accepted, 58084 KB, 6 ms
-Secret case: small_07.in, Accepted, 58084 KB, 7 ms
-Secret case: small_08.in, Accepted, 58084 KB, 6 ms
-Secret case: small_09.in, Accepted, 58084 KB, 7 ms
-Secret case: small_10.in, Accepted, 58084 KB, 7 ms
-Secret case: small_11.in, Accepted, 58084 KB, 6 ms
-Secret case: small_12.in, Accepted, 58084 KB, 6 ms
-Secret case: small_13.in, Accepted, 58084 KB, 7 ms
-Secret case: small_14.in, Accepted, 58084 KB, 6 ms
-Secret case: small_15.in, Accepted, 58084 KB, 7 ms
-Secret case: small_and_large_00.in, Accepted, 58084 KB, 711 ms
-Secret case: small_and_large_01.in, Accepted, 58084 KB, 709 ms
-Secret case: small_and_large_02.in, Accepted, 58084 KB, 705 ms
-Secret case: small_and_large_03.in, Accepted, 58084 KB, 706 ms"""
+run_id = 778770
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_k.cpp"]
@@ -1457,31 +1065,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/sing1_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "531 ms"
+time_text = "541 ms"
 memory_text = "24712 KB"
-run_id = 778557
-judge_detail = """
-Sample case: example_00.in, Accepted, 2712 KB, 4 ms
-Secret case: 0_00.in, Accepted, 12808 KB, 44 ms
-Secret case: 1_00.in, Accepted, 24712 KB, 529 ms
-Secret case: 2_00.in, Accepted, 24712 KB, 526 ms
-Secret case: max_max_00.in, Accepted, 24712 KB, 40 ms
-Secret case: max_random_00.in, Accepted, 24712 KB, 145 ms
-Secret case: max_random_01.in, Accepted, 24712 KB, 525 ms
-Secret case: max_random_02.in, Accepted, 24712 KB, 520 ms
-Secret case: max_random_03.in, Accepted, 24712 KB, 259 ms
-Secret case: max_small_00.in, Accepted, 24712 KB, 531 ms
-Secret case: max_small_01.in, Accepted, 24712 KB, 531 ms
-Secret case: random_00.in, Accepted, 24712 KB, 89 ms
-Secret case: random_01.in, Accepted, 24712 KB, 61 ms
-Secret case: random_02.in, Accepted, 24712 KB, 135 ms"""
+run_id = 778771
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_n.cpp"]
@@ -1507,27 +1100,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/sing1_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "240 ms"
+time_text = "239 ms"
 memory_text = "16308 KB"
-run_id = 778559
-judge_detail = """
-Sample case: example_00.in, Accepted, 2700 KB, 5 ms
-Secret case: 0_00.in, Accepted, 2700 KB, 4 ms
-Secret case: 1_00.in, Accepted, 2700 KB, 3 ms
-Secret case: 262143_00.in, Accepted, 9244 KB, 114 ms
-Secret case: 262144_00.in, Accepted, 15212 KB, 211 ms
-Secret case: 2_00.in, Accepted, 15212 KB, 5 ms
-Secret case: 491519_00.in, Accepted, 15592 KB, 240 ms
-Secret case: 499999_00.in, Accepted, 16120 KB, 240 ms
-Secret case: 500000_00.in, Accepted, 16308 KB, 231 ms
-Secret case: 5000_00.in, Accepted, 16308 KB, 8 ms"""
+run_id = 778772
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_k.cpp"]
@@ -1554,31 +1136,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/sing2_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "549 ms"
+time_text = "547 ms"
 memory_text = "25128 KB"
-run_id = 778560
-judge_detail = """
-Sample case: example_00.in, Accepted, 2724 KB, 4 ms
-Secret case: 0_00.in, Accepted, 14876 KB, 58 ms
-Secret case: 1_00.in, Accepted, 25128 KB, 524 ms
-Secret case: 2_00.in, Accepted, 25128 KB, 549 ms
-Secret case: max_max_00.in, Accepted, 25128 KB, 49 ms
-Secret case: max_random_00.in, Accepted, 25128 KB, 145 ms
-Secret case: max_random_01.in, Accepted, 25128 KB, 531 ms
-Secret case: max_random_02.in, Accepted, 25128 KB, 537 ms
-Secret case: max_random_03.in, Accepted, 25128 KB, 265 ms
-Secret case: max_small_00.in, Accepted, 25128 KB, 531 ms
-Secret case: max_small_01.in, Accepted, 25128 KB, 547 ms
-Secret case: random_00.in, Accepted, 25128 KB, 87 ms
-Secret case: random_01.in, Accepted, 25128 KB, 64 ms
-Secret case: random_02.in, Accepted, 25128 KB, 156 ms"""
+run_id = 778773
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_n.cpp"]
@@ -1605,27 +1172,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/fps/sing2_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "173 ms"
+time_text = "174 ms"
 memory_text = "21048 KB"
-run_id = 778561
-judge_detail = """
-Sample case: example_00.in, Accepted, 2708 KB, 5 ms
-Secret case: 0_00.in, Accepted, 2708 KB, 5 ms
-Secret case: 1_00.in, Accepted, 2708 KB, 4 ms
-Secret case: 262143_00.in, Accepted, 12080 KB, 84 ms
-Secret case: 262144_00.in, Accepted, 19240 KB, 139 ms
-Secret case: 2_00.in, Accepted, 19240 KB, 4 ms
-Secret case: 491519_00.in, Accepted, 20952 KB, 165 ms
-Secret case: 499999_00.in, Accepted, 21048 KB, 168 ms
-Secret case: 500000_00.in, Accepted, 21048 KB, 173 ms
-Secret case: 5000_00.in, Accepted, 21048 KB, 6 ms"""
+run_id = 778774
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/cloest_pair.cpp"]
@@ -1644,47 +1200,17 @@ dependencies = [
     "ds/basic/hashmap.hpp",
     "aa/main.hpp",
 ]
-last_trigger = "test_file_changed"
+last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T05:44:57.389122896Z"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/geo/cloest_pair.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "766 ms"
+time_text = "813 ms"
 memory_text = "46860 KB"
-run_id = 778719
-judge_detail = """
-Sample case: example_00.in, Accepted, 2704 KB, 8 ms
-Secret case: all_same_00.in, Accepted, 3248 KB, 60 ms
-Secret case: fix_near_grid_00.in, Accepted, 46852 KB, 587 ms
-Secret case: fix_near_grid_01.in, Accepted, 46852 KB, 523 ms
-Secret case: max_colinear_00.in, Accepted, 46852 KB, 93 ms
-Secret case: max_colinear_01.in, Accepted, 46852 KB, 96 ms
-Secret case: max_random_00.in, Accepted, 46860 KB, 368 ms
-Secret case: max_random_01.in, Accepted, 46860 KB, 68 ms
-Secret case: max_random_02.in, Accepted, 46860 KB, 72 ms
-Secret case: max_random_03.in, Accepted, 46860 KB, 255 ms
-Secret case: max_random_04.in, Accepted, 46860 KB, 393 ms
-Secret case: max_random_05.in, Accepted, 46860 KB, 66 ms
-Secret case: max_random_06.in, Accepted, 46860 KB, 72 ms
-Secret case: max_random_07.in, Accepted, 46860 KB, 238 ms
-Secret case: mid_random_00.in, Accepted, 46860 KB, 265 ms
-Secret case: mid_random_01.in, Accepted, 46860 KB, 129 ms
-Secret case: mid_random_02.in, Accepted, 46860 KB, 255 ms
-Secret case: near_circle_00.in, Accepted, 46860 KB, 103 ms
-Secret case: near_circle_01.in, Accepted, 46860 KB, 140 ms
-Secret case: near_grid_00.in, Accepted, 46860 KB, 766 ms
-Secret case: near_grid_01.in, Accepted, 46860 KB, 697 ms
-Secret case: small_random_00.in, Accepted, 46860 KB, 265 ms
-Secret case: small_random_01.in, Accepted, 46860 KB, 127 ms
-Secret case: small_random_02.in, Accepted, 46860 KB, 193 ms
-Secret case: small_random_03.in, Accepted, 46860 KB, 226 ms
-Secret case: small_random_04.in, Accepted, 46860 KB, 271 ms
-Secret case: small_random_05.in, Accepted, 46860 KB, 125 ms
-Secret case: small_random_06.in, Accepted, 46860 KB, 190 ms
-Secret case: small_random_07.in, Accepted, 46860 KB, 226 ms"""
+run_id = 778775
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/static_hull.cpp"]
@@ -1701,42 +1227,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/geo/static_hull.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "211 ms"
+time_text = "228 ms"
 memory_text = "22268 KB"
-run_id = 778562
-judge_detail = """
-Sample case: example_00.in, Accepted, 2692 KB, 8 ms
-Sample case: example_01.in, Accepted, 2692 KB, 6 ms
-Secret case: all_same_00.in, Accepted, 2908 KB, 52 ms
-Secret case: all_same_01.in, Accepted, 2984 KB, 55 ms
-Secret case: max_ans_00.in, Accepted, 22268 KB, 211 ms
-Secret case: max_colinear_00.in, Accepted, 22268 KB, 158 ms
-Secret case: max_colinear_01.in, Accepted, 22268 KB, 159 ms
-Secret case: max_random_00.in, Accepted, 22268 KB, 170 ms
-Secret case: max_random_01.in, Accepted, 22268 KB, 159 ms
-Secret case: max_random_02.in, Accepted, 22268 KB, 157 ms
-Secret case: max_random_03.in, Accepted, 22268 KB, 174 ms
-Secret case: max_random_04.in, Accepted, 22268 KB, 166 ms
-Secret case: max_random_05.in, Accepted, 22268 KB, 145 ms
-Secret case: max_random_06.in, Accepted, 22268 KB, 164 ms
-Secret case: max_random_07.in, Accepted, 22268 KB, 193 ms
-Secret case: near_circle_00.in, Accepted, 22268 KB, 187 ms
-Secret case: near_circle_01.in, Accepted, 22268 KB, 193 ms
-Secret case: small_random_00.in, Accepted, 22268 KB, 101 ms
-Secret case: small_random_01.in, Accepted, 22268 KB, 74 ms
-Secret case: small_random_02.in, Accepted, 22268 KB, 80 ms
-Secret case: small_random_03.in, Accepted, 22268 KB, 84 ms
-Secret case: small_random_04.in, Accepted, 22268 KB, 106 ms
-Secret case: small_random_05.in, Accepted, 22268 KB, 80 ms
-Secret case: small_random_06.in, Accepted, 22268 KB, 81 ms
-Secret case: small_random_07.in, Accepted, 22268 KB, 82 ms"""
+run_id = 778776
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/nim_prod.cpp"]
@@ -1752,27 +1252,16 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/nt/nim_prod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "289 ms"
+time_text = "267 ms"
 memory_text = "3964 KB"
-run_id = 778563
-judge_detail = """
-Sample case: example_00.in, Accepted, 3964 KB, 12 ms
-Secret case: large_00.in, Accepted, 3964 KB, 193 ms
-Secret case: large_few_00.in, Accepted, 3964 KB, 29 ms
-Secret case: power_of_two_00.in, Accepted, 3964 KB, 11 ms
-Secret case: random_00.in, Accepted, 3964 KB, 282 ms
-Secret case: random_01.in, Accepted, 3964 KB, 289 ms
-Secret case: random_few_00.in, Accepted, 3964 KB, 41 ms
-Secret case: random_few_01.in, Accepted, 3964 KB, 40 ms
-Secret case: small_00.in, Accepted, 3964 KB, 71 ms
-Secret case: small_few_00.in, Accepted, 3964 KB, 16 ms"""
+run_id = 778777
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/sbt.cpp"]
@@ -1788,33 +1277,14 @@ dependencies = [
     "aa/main.hpp",
 ]
 last_trigger = "manual"
-last_tested_head = "0d746ba71d88e764ea7c4af17eb0a6265b759586"
-last_updated_at = "2026-04-05T14:23:51.583978181Z"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T06:22:43.032395355Z"
 
 [tests."test/nt/sbt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "175 ms"
+time_text = "180 ms"
 memory_text = "2696 KB"
-run_id = 778564
-judge_detail = """
-Sample case: example_00.in, Accepted, 2696 KB, 5 ms
-Secret case: edge_decode_00.in, Accepted, 2696 KB, 30 ms
-Secret case: edge_encode_00.in, Accepted, 2696 KB, 54 ms
-Secret case: edge_lca_00.in, Accepted, 2696 KB, 31 ms
-Secret case: edge_range_00.in, Accepted, 2696 KB, 30 ms
-Secret case: hand_00.in, Accepted, 2696 KB, 5 ms
-Secret case: hand_01.in, Accepted, 2696 KB, 3 ms
-Secret case: random_ancestor_no_00.in, Accepted, 2696 KB, 63 ms
-Secret case: random_ancestor_yes_00.in, Accepted, 2696 KB, 52 ms
-Secret case: random_decode_00.in, Accepted, 2696 KB, 75 ms
-Secret case: random_encode_00.in, Accepted, 2696 KB, 175 ms
-Secret case: random_lca_00.in, Accepted, 2696 KB, 129 ms
-Secret case: random_range_00.in, Accepted, 2696 KB, 79 ms
-Secret case: small_ancestor_00.in, Accepted, 2696 KB, 31 ms
-Secret case: small_decode_00.in, Accepted, 2696 KB, 43 ms
-Secret case: small_encode_00.in, Accepted, 2696 KB, 69 ms
-Secret case: small_lca_00.in, Accepted, 2696 KB, 41 ms
-Secret case: small_range_00.in, Accepted, 2696 KB, 41 ms"""
+run_id = 778778
 runtime_error = "Run time error details not Available"
