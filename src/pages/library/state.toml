@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-06T09:44:15.911030608Z"
+generated_at = "2026-04-06T09:56:53.548754855Z"
 status = "passed"
 failures = []
 
@@ -12,7 +12,7 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = []
 selected_tests = []
-total_discovered = 21
+total_discovered = 22
 total_selected = 0
 passed = 0
 failed = 0
@@ -31,7 +31,6 @@ all_passed = [
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_t.hpp",
     "ge/basic/hull.hpp",
-    "ge/basic/point.hpp",
     "ge/pairs/closest_pair.hpp",
     "mod/mint_t.hpp",
     "mod/powtable.hpp",
@@ -57,10 +56,11 @@ all_passed = [
     "random/hash.hpp",
     "random/rng.hpp",
 ]
-has_failures = []
+has_failures = [
+    "ge/basic/angle_sort.hpp",
+    "ge/basic/point.hpp",
+]
 unused = [
-    "aa/fast.hpp",
-    "aa/file_io.hpp",
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
     "al/am/max_add.hpp",
@@ -281,7 +281,6 @@ unused = [
     "g/two_sat.hpp",
     "g/vs_to_es.hpp",
     "ge/all.hpp",
-    "ge/basic/angle_sort.hpp",
     "ge/basic/area.hpp",
     "ge/basic/bs3.hpp",
     "ge/basic/circle.hpp",
@@ -636,8 +635,6 @@ unused = [
 ]
 
 [template_dependencies]
-"aa/fast.hpp" = []
-"aa/file_io.hpp" = []
 "al/acted_set/from_monoid.hpp" = []
 "al/am/his_max_add_assign.hpp" = []
 "al/am/max_add.hpp" = []
@@ -3443,8 +3440,6 @@ unused = [
 ]
 
 [template_dependents]
-"aa/fast.hpp" = []
-"aa/file_io.hpp" = []
 "al/acted_set/from_monoid.hpp" = ["pr/discreate_log.hpp"]
 "al/am/his_max_add_assign.hpp" = []
 "al/am/max_add.hpp" = []
@@ -6510,6 +6505,15 @@ time_text = "173 ms"
 memory_text = "21048 KB"
 run_id = 778975
 runtime_error = "Run time error details not Available"
+
+[tests."test/geo/angle_sort.cpp"]
+path = "test/geo/angle_sort.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11255"
+problem_id = 11255
+dependencies = [
+    "ge/basic/angle_sort.hpp",
+    "ge/basic/point.hpp",
+]
 
 [tests."test/geo/cloest_pair.cpp"]
 path = "test/geo/cloest_pair.cpp"
