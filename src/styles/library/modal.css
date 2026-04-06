@@ -85,14 +85,55 @@
 }
 
 .library-detail-related-item {
-  padding: 10px 12px;
   border: 1px solid rgba(23, 51, 40, 0.12);
   border-radius: 0;
   background: rgba(255, 255, 255, 0.58);
   overflow-wrap: anywhere;
 }
 
+.library-detail-related-button {
+  appearance: none;
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 10px 12px;
+  background: none;
+  color: var(--library-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.library-detail-related-button[data-kind="template"][data-status="all_passed"],
+.library-detail-related-button[data-kind="test"][data-status="passed"] {
+  color: var(--library-pass);
+}
+
+.library-detail-related-button[data-kind="template"][data-status="has_failures"],
+.library-detail-related-button[data-kind="test"][data-status="not_passed"] {
+  color: var(--library-fail);
+}
+
+.library-detail-related-button[data-kind="template"][data-status="unused"] {
+  color: var(--library-unused);
+}
+
+.library-detail-related-button:hover,
+.library-detail-related-button:focus-visible {
+  background: rgba(95, 120, 109, 0);
+}
+
+.library-detail-related-button:focus-visible {
+  outline: 2px solid rgba(27, 122, 54, 0);
+  outline-offset: -2px;
+}
+
 .library-detail-related-item.is-empty {
+  padding: 10px 12px;
   color: var(--library-muted);
 }
 

@@ -1,5 +1,5 @@
-schema_version = 2
-generated_at = "2026-04-06T06:22:43.032395355Z"
+schema_version = 3
+generated_at = "2026-04-06T08:31:48.374166836Z"
 status = "passed"
 failures = []
 
@@ -9,46 +9,19 @@ base = "origin/main"
 head = "HEAD"
 
 [latest_run]
-trigger_mode = "all"
-changed_paths = []
-selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/ds/seg/beats_maxminadd.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/seg_t_add.cpp",
-    "test/ds/seg/segd.cpp",
-    "test/fps/comp.cpp",
-    "test/fps/comp_inv.cpp",
-    "test/fps/comp_inv_mtt.cpp",
-    "test/fps/conv17.cpp",
-    "test/fps/conv99.cpp",
-    "test/fps/conv_ull.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/geo/cloest_pair.cpp",
-    "test/geo/static_hull.cpp",
-    "test/nt/nim_prod.cpp",
-    "test/nt/sbt.cpp",
-]
+trigger_mode = "diff"
+changed_paths = ["test/geo/cloest_pair.cpp"]
+selected_tests = ["test/geo/cloest_pair.cpp"]
 total_discovered = 21
-total_selected = 21
-passed = 21
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
-    "aa/head.hpp",
-    "aa/main.hpp",
     "al/m/add.hpp",
     "al/m/affine.hpp",
-    "all.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
     "ds/basic/retsu.hpp",
@@ -88,7 +61,6 @@ has_failures = []
 unused = [
     "aa/fast.hpp",
     "aa/file_io.hpp",
-    "aa/timer.hpp",
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
     "al/am/max_add.hpp",
@@ -663,33 +635,2835 @@ unused = [
     "tr/subtree_hash.hpp",
 ]
 
+[template_dependencies]
+"aa/fast.hpp" = []
+"aa/file_io.hpp" = []
+"al/acted_set/from_monoid.hpp" = []
+"al/am/his_max_add_assign.hpp" = []
+"al/am/max_add.hpp" = []
+"al/am/max_assign.hpp" = []
+"al/am/max_max.hpp" = ["al/m/max.hpp"]
+"al/am/max_set.hpp" = []
+"al/am/max_set_add.hpp" = []
+"al/am/max_sub_array_sum.hpp" = []
+"al/am/maxidx_add.hpp" = [
+    "al/m/add.hpp",
+    "al/m/maxidx.hpp",
+]
+"al/am/maxidx_max.hpp" = [
+    "al/m/max.hpp",
+    "al/m/maxidx.hpp",
+]
+"al/am/min_add.hpp" = []
+"al/am/min_set.hpp" = []
+"al/am/min_set_add.hpp" = []
+"al/am/mincnt_add.hpp" = [
+    "al/m/add.hpp",
+    "al/m/minmincnt.hpp",
+]
+"al/am/minidx_add.hpp" = []
+"al/am/minmax_add.hpp" = []
+"al/am/minmax_rev.hpp" = []
+"al/am/sum_add.hpp" = ["al/m/add.hpp"]
+"al/am/sum_add_set.hpp" = []
+"al/am/sum_affine.hpp" = [
+    "al/m/add.hpp",
+    "al/m/affine.hpp",
+]
+"al/am/sum_assign.hpp" = []
+"al/am/sum_line_add.hpp" = []
+"al/am/sum_mul.hpp" = [
+    "al/m/add.hpp",
+    "al/m/mul.hpp",
+]
+"al/am/sum_rev.hpp" = []
+"al/am/xor_or.hpp" = []
+"al/m/add.hpp" = []
+"al/m/add_array.hpp" = []
+"al/m/add_line.hpp" = []
+"al/m/add_pair.hpp" = []
+"al/m/add_set.hpp" = []
+"al/m/affine.hpp" = []
+"al/m/and.hpp" = []
+"al/m/assign.hpp" = []
+"al/m/dis_substr.hpp" = []
+"al/m/floor_sum.hpp" = []
+"al/m/gcd.hpp" = []
+"al/m/hash.hpp" = [
+    "mod/mint61.hpp",
+    "random/rng.hpp",
+]
+"al/m/his_add_assign.hpp" = []
+"al/m/major_voting.hpp" = []
+"al/m/major_voting_pro.hpp" = []
+"al/m/max.hpp" = []
+"al/m/max_his_max.hpp" = []
+"al/m/max_subarray_sum.hpp" = []
+"al/m/maxidx.hpp" = []
+"al/m/min.hpp" = []
+"al/m/minidx.hpp" = []
+"al/m/minmax.hpp" = []
+"al/m/minmincnt.hpp" = []
+"al/m/mul.hpp" = []
+"al/m/or.hpp" = []
+"al/m/reverse.hpp" = []
+"al/m/set.hpp" = []
+"al/m/sub_array_sum.hpp" = []
+"al/m/vector_space.hpp" = [
+    "line/01/xor_vector_space.hpp",
+    "line/01/transpose01.hpp",
+]
+"al/m/vs.hpp" = [
+    "line/01/sp.hpp",
+    "line/01/transpose01.hpp",
+]
+"al/m/xor.hpp" = []
+"al/monoid_pow.hpp" = []
+"conv/max_add_convolution.hpp" = []
+"conv/min_add_convolution.hpp" = []
+"conv/monotone_minima.hpp" = []
+"debug.hpp" = []
+"dp/01.hpp" = []
+"dp/01_diff.hpp" = ["conv/max_add_convolution.hpp"]
+"dp/monge.hpp" = ["nt/fib_search.hpp"]
+"dp/monoton.hpp" = []
+"dp/multi.hpp" = []
+"dp/subset_sum.hpp" = ["ds/basic/bs.hpp"]
+"dp/tot.hpp" = []
+"ds/basic/bits.hpp" = []
+"ds/basic/bs.hpp" = []
+"ds/basic/bs_sim.hpp" = []
+"ds/basic/compress.hpp" = []
+"ds/basic/deque.hpp" = []
+"ds/basic/fset.hpp" = []
+"ds/basic/fset_del.hpp" = []
+"ds/basic/hashmap.hpp" = [
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"ds/basic/node_pool.hpp" = []
+"ds/basic/pbds.hpp" = []
+"ds/basic/queue.hpp" = []
+"ds/basic/retsu.hpp" = []
+"ds/basic/unordered_discreate.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"ds/bit/bit.hpp" = []
+"ds/bit/bit01.hpp" = [
+    "al/m/add.hpp",
+    "ds/bit/bit.hpp",
+]
+"ds/bit/bit2.hpp" = []
+"ds/bit/bitbit.hpp" = ["ds/basic/retsu.hpp"]
+"ds/bit/dual_bit.hpp" = []
+"ds/bit/dual_bit2.hpp" = []
+"ds/bit/range_sumadd.hpp" = []
+"ds/chtholly/chtholly.hpp" = []
+"ds/chtholly/chtholly_fast.hpp" = ["ds/basic/fset.hpp"]
+"ds/dynamic_array.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/heap/erase_heap.hpp" = []
+"ds/heap/fheap.hpp" = []
+"ds/heap/merge.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/heap/merge_laz.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/heap/minmax_heap.hpp" = ["ds/heap/erase_heap.hpp"]
+"ds/kdtree/kdtree.hpp" = []
+"ds/lct/lct.hpp" = []
+"ds/lct/lct_act.hpp" = []
+"ds/lct/lct_base.hpp" = []
+"ds/lct/lct_monoid.hpp" = []
+"ds/lct/lct_monoid_sub.hpp" = []
+"ds/lct/lct_simple.hpp" = []
+"ds/lis.hpp" = []
+"ds/mo/mo.hpp" = []
+"ds/mo/mo_roll.hpp" = []
+"ds/mo/mo_upd.hpp" = []
+"ds/off_line/K_cdq.hpp" = []
+"ds/off_line/mo_niji.hpp" = []
+"ds/off_line/range_quis/range_inverse_count.hpp" = ["ds/off_line/mo_niji.hpp"]
+"ds/off_line/range_quis/range_lis_quety.hpp" = []
+"ds/off_line/range_quis/range_mex_query.hpp" = []
+"ds/off_line/range_quis/range_mode.hpp" = []
+"ds/off_line/rectangle_union.hpp" = [
+    "al/am/mincnt_add.hpp",
+    "al/m/add.hpp",
+    "al/m/minmincnt.hpp",
+    "ds/seg/segl_t.hpp",
+]
+"ds/online_range_q/range_lis_query.hpp" = [
+    "ds/wave/wave_mat.hpp",
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+    "al/m/add.hpp",
+    "nt/seaweed_doubling.hpp",
+]
+"ds/online_range_q/range_major_voting.hpp" = [
+    "ds/seg/segd_sprase_t.hpp",
+    "ds/basic/node_pool.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/m/major_voting.hpp",
+    "al/m/add.hpp",
+    "ds/basic/unordered_discreate.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"ds/range/range_bitmsk_prod.hpp" = ["ds/basic/bs.hpp"]
+"ds/rb/rb_arr.hpp" = []
+"ds/rb/rb_dsu.hpp" = ["ds/rb/rb_arr.hpp"]
+"ds/rb/rollback_dsu_bipartite.hpp" = ["ds/rb/rb_arr.hpp"]
+"ds/seg/beats/beats_chmax.hpp" = ["ds/seg/beats/seg_beats.hpp"]
+"ds/seg/beats/beats_chmin.hpp" = ["ds/seg/beats/seg_beats.hpp"]
+"ds/seg/beats/beats_minmax.hpp" = ["ds/seg/beats/seg_beats.hpp"]
+"ds/seg/beats/beats_no_sum.hpp" = ["ds/seg/beats/seg_beats.hpp"]
+"ds/seg/beats/ktt.hpp" = ["ds/seg/beats/seg_beats.hpp"]
+"ds/seg/beats/seg_beats.hpp" = []
+"ds/seg/lichao_seg_t.hpp" = []
+"ds/seg/range_assign_seg.hpp" = [
+    "al/monoid_pow.hpp",
+    "ds/basic/fset.hpp",
+    "ds/seg/seg_t.hpp",
+]
+"ds/seg/range_max_add.hpp" = ["ds/seg/seg_t.hpp"]
+"ds/seg/range_min_add.hpp" = ["ds/seg/seg_t.hpp"]
+"ds/seg/range_sum_point_add.hpp" = []
+"ds/seg/seg_dual_t.hpp" = []
+"ds/seg/seg_premax_t.hpp" = []
+"ds/seg/seg_sort_t.hpp" = [
+    "ds/basic/node_pool.hpp",
+    "ds/basic/fset.hpp",
+    "ds/seg/seg_t.hpp",
+]
+"ds/seg/seg_t.hpp" = []
+"ds/seg/segd_sprase_t.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/seg/segd_t.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/seg/segdl_def_t.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/seg/segdl_t.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/seg/segl_sparse_t.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"ds/seg/segl_t.hpp" = []
+"ds/sl/cht.hpp" = []
+"ds/sl/slope_trick.hpp" = []
+"ds/splay/node_acted_monoid_splay.hpp" = []
+"ds/splay/node_acted_set_splay.hpp" = []
+"ds/splay/node_base_splay.hpp" = []
+"ds/splay/node_monoid_commute_splay.hpp" = []
+"ds/splay/node_monoid_splay.hpp" = []
+"ds/splay/splay_acted_monoid.hpp" = [
+    "ds/splay/splay_base.hpp",
+    "ds/splay/node_acted_monoid_splay.hpp",
+]
+"ds/splay/splay_acted_set.hpp" = [
+    "ds/splay/splay_base.hpp",
+    "ds/splay/node_acted_set_splay.hpp",
+]
+"ds/splay/splay_base.hpp" = []
+"ds/splay/splay_monoid.hpp" = [
+    "ds/splay/splay_base.hpp",
+    "ds/splay/node_monoid_splay.hpp",
+]
+"ds/splay/splay_monoid_commute.hpp" = [
+    "ds/splay/splay_base.hpp",
+    "ds/splay/node_monoid_commute_splay.hpp",
+]
+"ds/splay/splay_sequence.hpp" = [
+    "ds/splay/splay_base.hpp",
+    "ds/splay/node_base_splay.hpp",
+]
+"ds/st/del/st.hpp" = ["ds/st/del/st_base.hpp"]
+"ds/st/del/st_base.hpp" = []
+"ds/st/del/st_dis.hpp" = ["ds/st/del/st_base.hpp"]
+"ds/st/range_max.hpp" = [
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/max.hpp",
+]
+"ds/st/range_min.hpp" = [
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/min.hpp",
+]
+"ds/st/rmq.hpp" = [
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+]
+"ds/st/st.hpp" = []
+"ds/st/st_dis.hpp" = []
+"ds/st/st_range_prod.hpp" = [
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+]
+"ds/static_range_group.hpp" = []
+"ds/swag.hpp" = []
+"ds/toptree/satt.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/toptree/satt_ddp.hpp" = []
+"ds/toptree/satt_sim.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/treap/treap_act.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/treap/treap_base.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/treap/treap_monoid.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/treap/treap_monoid_commute.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/trie_bina.hpp" = ["ds/basic/node_pool.hpp"]
+"ds/un/dsu.hpp" = []
+"ds/un/dsu_mono.hpp" = []
+"ds/un/dsu_t.hpp" = []
+"ds/un/dynamic_dsu.hpp" = [
+    "ds/dynamic_array.hpp",
+    "ds/basic/node_pool.hpp",
+]
+"ds/wave/wave_mat.hpp" = [
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+    "al/m/add.hpp",
+]
+"ds/wave/wave_mat_2d.hpp" = [
+    "ds/wave/wave_mat.hpp",
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+    "al/m/add.hpp",
+]
+"ds/wave/wave_mat_sim.hpp" = [
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+]
+"flow/BM.hpp" = [
+    "g/01coloring.hpp",
+    "ds/un/dsu.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "g/scc.hpp",
+    "ds/basic/queue.hpp",
+]
+"flow/BM_dense.hpp" = ["ds/basic/bs.hpp"]
+"flow/HLPP.hpp" = []
+"flow/flow_lm.hpp" = []
+"flow/flower.hpp" = []
+"flow/hungarian.hpp" = ["ds/basic/retsu.hpp"]
+"flow/max_flow.hpp" = []
+"flow/mcf.hpp" = []
+"flow/min_cost_flow_lower.hpp" = []
+"g/01coloring.hpp" = [
+    "ds/un/dsu.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/Basic.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/bcc_e.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/bcc_v_e.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/bellman_ford.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/bfs.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/queue.hpp",
+]
+"g/bfs01.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/deque.hpp",
+]
+"g/bfs1.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/queue.hpp",
+]
+"g/block_cut_tree.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/brige.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/cactus.hpp" = [
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/cactus_diameter.hpp" = [
+    "ds/basic/queue.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/count_c3c4.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/count_c5.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/bs.hpp",
+    "ds/basic/retsu.hpp",
+]
+"g/count_p345.hpp" = [
+    "g/count_c3c4.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/dag_path_cover.hpp" = [
+    "flow/max_flow.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/dijkstra.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/dijkstra_fheap.hpp" = [
+    "ds/heap/fheap.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/dominator_tree.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/enumerate_clique.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/enumerate_cyc3.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/euler_walk.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "g/vs_to_es.hpp",
+]
+"g/find_centroids.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/find_cycle_directed.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/johnson.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/retsu.hpp",
+]
+"g/k_shortest/k_short_walk.hpp" = [
+    "ds/heap/merge.hpp",
+    "ds/basic/node_pool.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "g/dijkstra.hpp",
+]
+"g/k_shortest/k_shortest_path.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/max_anti_chain.hpp" = [
+    "flow/BM.hpp",
+    "g/01coloring.hpp",
+    "ds/un/dsu.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "g/scc.hpp",
+    "ds/basic/queue.hpp",
+]
+"g/max_clique.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/max_independent_set.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/min_color.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/mst_kru.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/un/dsu.hpp",
+]
+"g/mst_prim.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/path_cycle.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/reverse.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/scc.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/steiner.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/retsu.hpp",
+]
+"g/tree_diameter.hpp" = [
+    "g/bfs.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/queue.hpp",
+]
+"g/two_sat.hpp" = []
+"g/vs_to_es.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "g/Basic.hpp",
+]
+"ge/all.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/line.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/circle.hpp",
+    "ge/basic/hull.hpp",
+    "ge/basic/convex_polygon.hpp",
+    "ge/basic/polygon.hpp",
+    "ge/basic/triangle.hpp",
+    "ge/basic/dist.hpp",
+    "ge/basic/area.hpp",
+    "ge/basic/angle_sort.hpp",
+    "ge/basic/minkovski_sum.hpp",
+    "ge/basic/convex_checker.hpp",
+]
+"ge/basic/angle_sort.hpp" = ["ge/basic/point.hpp"]
+"ge/basic/area.hpp" = ["ge/basic/point.hpp"]
+"ge/basic/bs3.hpp" = []
+"ge/basic/circle.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/line.hpp",
+]
+"ge/basic/convex_checker.hpp" = ["ge/basic/point.hpp"]
+"ge/basic/convex_polygon.hpp" = [
+    "ge/basic/hull.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/line.hpp",
+]
+"ge/basic/dist.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/line.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/circle.hpp",
+    "ge/basic/triangle.hpp",
+]
+"ge/basic/donut.hpp" = []
+"ge/basic/hull.hpp" = ["ge/basic/point.hpp"]
+"ge/basic/line.hpp" = ["ge/basic/point.hpp"]
+"ge/basic/minkovski_sum.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/hull.hpp",
+    "ge/basic/angle_sort.hpp",
+]
+"ge/basic/point.hpp" = []
+"ge/basic/polygon.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/line.hpp",
+]
+"ge/basic/segment.hpp" = [
+    "ge/basic/line.hpp",
+    "ge/basic/point.hpp",
+]
+"ge/basic/triangle.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/dist.hpp",
+    "ge/basic/line.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/circle.hpp",
+]
+"ge/ds/convex_layer.hpp" = [
+    "ge/ds/dynamic_hull_del.hpp",
+    "ge/basic/point.hpp",
+]
+"ge/ds/dynamic_hull.hpp" = ["ge/basic/point.hpp"]
+"ge/ds/dynamic_hull_del.hpp" = ["ge/basic/point.hpp"]
+"ge/exp/area_of_c_union.hpp" = []
+"ge/exp/area_of_cyc.hpp" = [
+    "ge/basic/circle.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/line.hpp",
+]
+"ge/exp/area_of_cyc_fast.hpp" = [
+    "random/rng.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/bs3.hpp",
+]
+"ge/exp/circle_inverse.hpp" = []
+"ge/exp/count_p_in_tri.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/angle_sort.hpp",
+]
+"ge/exp/max_norm_sum.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/angle_sort.hpp",
+]
+"ge/exp/minimum_enclosing_circle.hpp" = [
+    "ge/basic/triangle.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/dist.hpp",
+    "ge/basic/line.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/circle.hpp",
+    "random/rng.hpp",
+]
+"ge/exp/mst.hpp" = ["ge/basic/point.hpp"]
+"ge/exp/rect_convex_cover.hpp" = [
+    "ge/basic/triangle.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/dist.hpp",
+    "ge/basic/line.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/circle.hpp",
+]
+"ge/exp/tri_area_me.hpp" = []
+"ge/pairs/closest_pair.hpp" = [
+    "ge/basic/point.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/hashmap.hpp",
+]
+"ge/pairs/furthest_pair.hpp" = [
+    "ge/basic/point.hpp",
+    "ge/basic/hull.hpp",
+]
+"jen/greedy_coins_hack_gen.hpp" = []
+"jen/magic_square.hpp" = ["ds/basic/retsu.hpp"]
+"jen/rasen.hpp" = ["ds/basic/retsu.hpp"]
+"jen/special_hull.hpp" = [
+    "ge/basic/angle_sort.hpp",
+    "ge/basic/point.hpp",
+]
+"line/01/full_rank.hpp" = ["ds/basic/bs.hpp"]
+"line/01/gauss.hpp" = ["ds/basic/bs.hpp"]
+"line/01/sp.hpp" = ["line/01/transpose01.hpp"]
+"line/01/transpose01.hpp" = []
+"line/01/xor_basis.hpp" = []
+"line/01/xor_vector_space.hpp" = ["line/01/transpose01.hpp"]
+"line/det.hpp" = ["mod/barrett.hpp"]
+"line/mat.hpp" = ["ds/basic/retsu.hpp"]
+"line/mat_op.hpp" = []
+"line/solve_line.hpp" = []
+"mas.hpp" = []
+"mod/all_inv.hpp" = []
+"mod/barrett.hpp" = []
+"mod/binom.hpp" = ["mod/mint_t.hpp"]
+"mod/crt3.hpp" = []
+"mod/dmint_t.hpp" = [
+    "mod/barrett.hpp",
+    "mod/primitive_root.hpp",
+    "random/rng.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "mod/mod_pow.hpp",
+]
+"mod/inv_fast.hpp" = ["mod/mint_t.hpp"]
+"mod/inv_fast_d.hpp" = ["mod/barrett.hpp"]
+"mod/log_table.hpp" = [
+    "mod/primitive_root.hpp",
+    "random/rng.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "mod/mod_pow.hpp",
+    "mod/barrett.hpp",
+]
+"mod/mint61.hpp" = []
+"mod/mint_mongo.hpp" = [
+    "mod/primitive_root.hpp",
+    "random/rng.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "mod/mod_pow.hpp",
+    "mod/barrett.hpp",
+]
+"mod/mint_t.hpp" = []
+"mod/mod_inv.hpp" = []
+"mod/mod_pow.hpp" = ["mod/barrett.hpp"]
+"mod/mod_sqrt.hpp" = ["mod/barrett.hpp"]
+"mod/modfast.hpp" = [
+    "pr/lpf_table.hpp",
+    "pr/ptable.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "mod/primitive_root.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "mod/mod_pow.hpp",
+    "mod/barrett.hpp",
+]
+"mod/modfast_d.hpp" = [
+    "pr/lpf_table.hpp",
+    "pr/ptable.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "mod/primitive_root.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "mod/mod_pow.hpp",
+    "mod/barrett.hpp",
+]
+"mod/pow_fast.hpp" = ["mod/mint_t.hpp"]
+"mod/powtable.hpp" = ["pr/ptable.hpp"]
+"mod/primitive_root.hpp" = [
+    "random/rng.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "mod/mod_pow.hpp",
+    "mod/barrett.hpp",
+]
+"mod/tetration.hpp" = [
+    "pr/euler_phi.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "random/rng.hpp",
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+"nt/adaptive_simpson.hpp" = []
+"nt/bigint/big.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"nt/bigint/bigint_binary.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"nt/bigint/odd_big_int.hpp" = []
+"nt/counting/count_inv_of_permutation.hpp" = [
+    "ds/bit/bit.hpp",
+    "al/m/add.hpp",
+]
+"nt/counting/count_rectangle.hpp" = []
+"nt/counting/tri_euler_count.hpp" = []
+"nt/digit_sum.hpp" = []
+"nt/enum_div.hpp" = []
+"nt/enum_pytagorean_triple.hpp" = []
+"nt/fib.hpp" = []
+"nt/fib_search.hpp" = []
+"nt/frac_betweem.hpp" = []
+"nt/golden_search.hpp" = []
+"nt/gray_code.hpp" = []
+"nt/hyogen.hpp" = []
+"nt/next_permutation.hpp" = []
+"nt/nim/nimbase.hpp" = []
+"nt/pell.hpp" = []
+"nt/radix_sort.hpp" = []
+"nt/range/range_xors.hpp" = []
+"nt/range/xor_range.hpp" = []
+"nt/sbt.hpp" = []
+"nt/seaweed_doubling.hpp" = []
+"nt/step_of_add_pc.hpp" = []
+"others/date_time.hpp" = []
+"po/FFP.hpp" = [
+    "po/multipoint.hpp",
+    "mod/all_inv.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/mid_prod.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/conv_all.hpp",
+]
+"po/FFP_conv.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/all.hpp" = [
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_exp.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_pow.hpp",
+    "po/conv_all.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+]
+"po/bs.hpp" = [
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+]
+"po/c/convolution_u64.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/c/count_terms.hpp" = []
+"po/c/diff.hpp" = []
+"po/c/inte.hpp" = []
+"po/c/ntt.hpp" = []
+"po/c/ntt_db.hpp" = [
+    "po/c/ntt.hpp",
+    "po/c/transposed_ntt.hpp",
+]
+"po/c/transposed_ntt.hpp" = []
+"po/cg/label_bcc_e.hpp" = [
+    "po/cg/label_undir_con.hpp",
+    "po/cg/label_undir.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/comp.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/taylor.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "po/comp_inv.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/pow_projection.hpp",
+]
+"po/cg/label_bcc_v.hpp" = [
+    "po/cg/label_undir_con.hpp",
+    "po/cg/label_undir.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/comp.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/taylor.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "po/comp_inv.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/pow_projection.hpp",
+]
+"po/cg/label_bipartite.hpp" = [
+    "po/fps_sqrt.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+]
+"po/cg/label_dag.hpp" = [
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+]
+"po/cg/label_euler_undir.hpp" = [
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/cg/label_undir.hpp",
+]
+"po/cg/label_forest.hpp" = [
+    "po/cg/label_tree.hpp",
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/cg/label_scc.hpp" = [
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/cg/label_tournament.hpp" = [
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/cg/label_tree.hpp" = []
+"po/cg/label_undir.hpp" = []
+"po/cg/label_undir_con.hpp" = [
+    "po/cg/label_undir.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/cg/label_unicycle.hpp" = [
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/cg/unlabel_undir_tree.hpp" = [
+    "po/online_exp.hpp",
+    "po/online_conv.hpp",
+    "po/c/ntt.hpp",
+    "po/convolution.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/coef_of_rational_fps.hpp" = [
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/poly_divmod.hpp",
+]
+"po/comp.hpp" = [
+    "po/c/transposed_ntt.hpp",
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+]
+"po/comp_f_1_minus_ex.hpp" = [
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "po/comp_f_ex.hpp",
+    "po/sum_of_exp_bx.hpp",
+    "po/sum_of_rationals.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+]
+"po/comp_f_AplusBx_div_CplusDx.hpp" = [
+    "po/comp_f_a_plus_bx.hpp",
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+]
+"po/comp_f_a_plus_bx.hpp" = [
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+]
+"po/comp_f_ex.hpp" = [
+    "po/sum_of_exp_bx.hpp",
+    "po/sum_of_rationals.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+]
+"po/comp_f_ex_nimus_1.hpp" = [
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "po/comp_f_ex.hpp",
+    "po/sum_of_exp_bx.hpp",
+    "po/sum_of_rationals.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+]
+"po/comp_f_x_plus_1_divx.hpp" = [
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+]
+"po/comp_inv.hpp" = [
+    "po/c/diff.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/fps_log.hpp",
+    "po/pow_projection.hpp",
+]
+"po/conv_all.hpp" = [
+    "po/c/ntt_db.hpp",
+    "po/c/ntt.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/convolution.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/convolution.hpp" = [
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/f/bell.hpp" = [
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/f/bernoulli.hpp" = [
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/f/count_subseq.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"po/f/derange.hpp" = []
+"po/f/egf.hpp" = [
+    "po/f/ex.hpp",
+    "po/f/sinh.hpp",
+]
+"po/f/ex.hpp" = []
+"po/f/fac_large.hpp" = [
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/lag.hpp",
+    "mod/all_inv.hpp",
+]
+"po/f/k_presum.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/f/partition.hpp" = [
+    "po/prod_of_one_minus_xn.hpp",
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/f/sinh.hpp" = []
+"po/f/stiling_1.hpp" = [
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+    "ds/basic/retsu.hpp",
+]
+"po/f/stiling_2.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+    "ds/basic/retsu.hpp",
+]
+"po/f/subset_sum.hpp" = [
+    "po/prod_of_one_plus_xn.hpp",
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/f/subset_sum_lm.hpp" = [
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+]
+"po/fft.hpp" = []
+"po/find_line.hpp" = []
+"po/fps_div.hpp" = [
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/fps_exp.hpp" = [
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/fps_inv.hpp" = [
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/fps_log.hpp" = [
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/fps_ode_exp.hpp" = [
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/online_conv.hpp",
+]
+"po/fps_pow.hpp" = [
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+]
+"po/fps_sqrt.hpp" = [
+    "po/fps_pow.hpp",
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+]
+"po/fps_trig.hpp" = [
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/fps_sqrt.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/fps_inv.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+]
+"po/lag.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/all_inv.hpp",
+]
+"po/line_inte.hpp" = [
+    "po/coef_of_rational_fps.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/poly_divmod.hpp",
+    "po/find_line.hpp",
+]
+"po/mid_prod.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/multipoint.hpp" = [
+    "mod/all_inv.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/mid_prod.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+]
+"po/multipoint_preprod.hpp" = [
+    "po/conv_all.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/ntt.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/convolution.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/typical_divide.hpp",
+    "po/mid_prod.hpp",
+]
+"po/newton.hpp" = []
+"po/ofps.hpp" = [
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "ds/basic/node_pool.hpp",
+    "po/online_conv.hpp",
+    "po/online_div.hpp",
+    "po/online_exp.hpp",
+    "po/online_inv.hpp",
+    "po/online_log.hpp",
+    "po/online_pow.hpp",
+]
+"po/online_conv.hpp" = ["po/c/ntt.hpp"]
+"po/online_div.hpp" = [
+    "po/online_conv.hpp",
+    "po/c/ntt.hpp",
+]
+"po/online_exp.hpp" = [
+    "po/online_conv.hpp",
+    "po/c/ntt.hpp",
+]
+"po/online_inv.hpp" = [
+    "po/online_div.hpp",
+    "po/online_conv.hpp",
+    "po/c/ntt.hpp",
+]
+"po/online_log.hpp" = [
+    "po/online_div.hpp",
+    "po/online_conv.hpp",
+    "po/c/ntt.hpp",
+]
+"po/online_pow.hpp" = [
+    "po/online_div.hpp",
+    "po/online_conv.hpp",
+    "po/c/ntt.hpp",
+]
+"po/poly_divmod.hpp" = [
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/poly_find_root.hpp" = [
+    "po/poly_modpow.hpp",
+    "po/poly_divmod.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/poly_gcd.hpp",
+    "random/rng.hpp",
+]
+"po/poly_gcd.hpp" = [
+    "po/poly_divmod.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/poly_inv.hpp" = [
+    "po/poly_gcd.hpp",
+    "po/poly_divmod.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/poly_modpow.hpp" = [
+    "po/poly_divmod.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/pow_projection.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/prod_of_f_rk_x.hpp" = [
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/fps_exp.hpp",
+]
+"po/prod_of_one_minus_xn.hpp" = [
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/prod_of_one_plus_xn.hpp" = [
+    "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/count_terms.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+]
+"po/sum_of_exp_bx.hpp" = [
+    "po/sum_of_rationals.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/fps_inv.hpp",
+    "po/c/count_terms.hpp",
+]
+"po/sum_of_pow.hpp" = [
+    "po/conv_all.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/ntt.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/convolution.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/fps_log.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/sum_of_rationals.hpp",
+]
+"po/sum_of_rationals.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+]
+"po/sum_of_shift_binomail.hpp" = [
+    "po/taylor.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+]
+"po/taylor.hpp" = [
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+]
+"po/typical_divide.hpp" = [
+    "po/mid_prod.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+]
+"po/vandermonde.hpp" = [
+    "po/multipoint.hpp",
+    "mod/all_inv.hpp",
+    "po/fps_div.hpp",
+    "po/c/count_terms.hpp",
+    "po/fps_inv.hpp",
+    "po/convolution.hpp",
+    "po/c/ntt.hpp",
+    "mod/crt3.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
+    "po/mid_prod.hpp",
+    "po/c/ntt_db.hpp",
+    "po/c/transposed_ntt.hpp",
+    "po/sum_of_rationals.hpp",
+]
+"poly/c/bs.hpp" = [
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/c/fps_t.hpp" = [
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/c/ntt_db.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+"poly/c/ntt_short.hpp" = [
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/c/trans_ntt.hpp" = [
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/cc/label_bcc_e.hpp" = [
+    "poly/cc/label_undir.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/comp.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/shift.hpp",
+    "poly/comp_inv.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_exp.hpp",
+    "poly/pow_proj.hpp",
+]
+"poly/cc/label_bcc_v.hpp" = [
+    "poly/cc/label_undir.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/comp.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/shift.hpp",
+    "poly/comp_inv.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_exp.hpp",
+    "poly/pow_proj.hpp",
+]
+"poly/cc/label_bipartite.hpp" = [
+    "poly/fps_sqrt.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/cc/label_dag.hpp" = [
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+]
+"poly/cc/label_euler_undir.hpp" = [
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/cc/label_undir.hpp",
+]
+"poly/cc/label_forest.hpp" = [
+    "poly/cc/label_tree.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/cc/label_scc.hpp" = [
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/cc/label_tournament.hpp" = [
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/cc/label_tree.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/cc/label_undir.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/cc/label_unicycle.hpp" = [
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/cc/unlabel_undir_tree.hpp" = [
+    "poly/online_exp.hpp",
+    "poly/online_conv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/coef_of_rationals.hpp" = [
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/mid_prod.hpp",
+]
+"poly/comp.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/shift.hpp",
+]
+"poly/comp_f_1_minus_ex.hpp" = [
+    "poly/comp_f_ex.hpp",
+    "poly/sum_of_exp_bx.hpp",
+    "poly/sum_of_rationals_sp.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/sum_of_rationals.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/shift.hpp",
+]
+"poly/comp_f_a_plus_bx.hpp" = [
+    "poly/shift.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/comp_f_aplusbx_div_cplusdx.hpp" = [
+    "poly/comp_f_a_plus_bx.hpp",
+    "poly/shift.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/comp_f_ex.hpp" = [
+    "poly/sum_of_exp_bx.hpp",
+    "poly/sum_of_rationals_sp.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/sum_of_rationals.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/comp_f_ex_minus_1.hpp" = [
+    "poly/comp_f_ex.hpp",
+    "poly/sum_of_exp_bx.hpp",
+    "poly/sum_of_rationals_sp.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/sum_of_rationals.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/shift.hpp",
+]
+"poly/comp_f_x_plus_1_divx.hpp" = [
+    "poly/shift.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/comp_inv.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+    "poly/pow_proj.hpp",
+]
+"poly/comp_short.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/shift.hpp",
+]
+"poly/comp_slow.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/conv_all.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+"poly/conv_ull.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/bell.hpp" = [
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/bernoulli.hpp" = [
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/f/derange.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/egf.hpp" = [
+    "poly/f/ex.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/f/sinh.hpp",
+]
+"poly/f/ex.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/partition.hpp" = [
+    "poly/prod_of_one_minus_xn.hpp",
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/presum.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/sinh.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/f/stiling_1.hpp" = [
+    "poly/shift.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/f/stiling_2.hpp" = [
+    "ds/basic/retsu.hpp",
+    "mod/powtable.hpp",
+    "pr/ptable.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/fac_large.hpp" = [
+    "poly/lag.hpp",
+    "mod/all_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/ffp.hpp" = [
+    "poly/multi.hpp",
+    "poly/subprod.hpp",
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/mid_prod.hpp",
+    "poly/multi_ntt.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+"poly/find_line.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/fps.hpp" = [
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_exp.hpp",
+    "poly/fps_pow.hpp",
+    "poly/conv_all.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+"poly/fps_div.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/fps_exp.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/fps_inv.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/fps_log.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/fps_pow.hpp" = [
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/fps_sqrt.hpp" = [
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/fps_tri.hpp" = [
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+    "poly/fps_sqrt.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+]
+"poly/lag.hpp" = [
+    "mod/all_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/line_inte.hpp" = [
+    "poly/find_line.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/coef_of_rationals.hpp",
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/mid_prod.hpp",
+]
+"poly/mid_prod.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/multi.hpp" = [
+    "poly/subprod.hpp",
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/mid_prod.hpp",
+    "poly/multi_ntt.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+"poly/multi_geo.hpp" = [
+    "mod/all_inv.hpp",
+    "poly/mid_prod.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/multi_ntt.hpp" = [
+    "poly/c/ntt_db.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/mid_prod.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/online_conv.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/online_div.hpp" = [
+    "poly/online_conv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/online_exp.hpp" = [
+    "poly/online_conv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/online_inv.hpp" = [
+    "poly/online_div.hpp",
+    "poly/online_conv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/online_log.hpp" = [
+    "poly/online_div.hpp",
+    "poly/online_conv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/online_pow.hpp" = [
+    "poly/online_div.hpp",
+    "poly/online_conv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/poly_divmod.hpp" = [
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/poly_modpow.hpp" = [
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/pow_proj.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/prod_of_f_rk_x.hpp" = [
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+]
+"poly/prod_of_one_minus_xn.hpp" = [
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/prod_of_one_plus_xn.hpp" = [
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/shift.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/subprod.hpp" = [
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/mid_prod.hpp",
+]
+"poly/subset_sum.hpp" = [
+    "poly/prod_of_one_plus_xn.hpp",
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/subset_sum_lm.hpp" = [
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/sum_of_exp_bx.hpp" = [
+    "poly/sum_of_rationals_sp.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/sum_of_rationals.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/sum_of_pow.hpp" = [
+    "poly/conv_all.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/sum_of_rationals.hpp",
+]
+"poly/sum_of_rationals.hpp" = [
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"poly/sum_of_rationals_sp.hpp" = [
+    "poly/c/ntt_db.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/trans_ntt.hpp",
+    "poly/sum_of_rationals.hpp",
+]
+"poly/sum_of_shift_binomail.hpp" = [
+    "poly/shift.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+"pr/convex_floor_sum.hpp" = []
+"pr/convolution_gcd.hpp" = [
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+"pr/convolution_lcm.hpp" = [
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+"pr/copr_bas.hpp" = []
+"pr/crt.hpp" = [
+    "mod/barrett.hpp",
+    "mod/mod_inv.hpp",
+    "pr/copr_bas.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "random/rng.hpp",
+]
+"pr/diri.hpp" = ["pr/floor_root.hpp"]
+"pr/discreate_log.hpp" = [
+    "al/acted_set/from_monoid.hpp",
+    "al/m/mul.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"pr/discreate_log_fast.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "pr/exgcd.hpp",
+    "pr/farey.hpp",
+    "mod/mod_pow.hpp",
+    "mod/barrett.hpp",
+]
+"pr/divisors.hpp" = [
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "random/rng.hpp",
+]
+"pr/du.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "pr/euler_phi.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+    "pr/mobius_table.hpp",
+]
+"pr/euler_phi.hpp" = [
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "random/rng.hpp",
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+"pr/exgcd.hpp" = ["pr/farey.hpp"]
+"pr/f/exp_miller_factor.hpp" = ["ds/basic/retsu.hpp"]
+"pr/f/line_con_1.hpp" = ["mod/mod_inv.hpp"]
+"pr/fac.hpp" = [
+    "pr/ptest.hpp",
+    "mod/mod_inv.hpp",
+]
+"pr/factors.hpp" = [
+    "pr/ptest.hpp",
+    "random/rng.hpp",
+]
+"pr/farey.hpp" = []
+"pr/first_mod_range_line.hpp" = ["pr/min_line_seg.hpp"]
+"pr/floor_exp_seki.hpp" = ["al/monoid_pow.hpp"]
+"pr/floor_root.hpp" = []
+"pr/floor_sum.hpp" = [
+    "al/m/floor_sum.hpp",
+    "pr/floor_exp_seki.hpp",
+    "al/monoid_pow.hpp",
+]
+"pr/floor_sum_line.hpp" = []
+"pr/gcd_fast.hpp" = []
+"pr/lpf_table.hpp" = ["pr/ptable.hpp"]
+"pr/min_line.hpp" = ["pr/min_line_seg.hpp"]
+"pr/min_line_seg.hpp" = []
+"pr/min_two_congruences.hpp" = []
+"pr/ml.hpp" = []
+"pr/mobius_table.hpp" = [
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+"pr/psum.hpp" = ["pr/ptable.hpp"]
+"pr/ptable.hpp" = []
+"pr/ptest.hpp" = []
+"pr/zeta_mobius.hpp" = ["pr/ptable.hpp"]
+"random/const_rng.hpp" = []
+"random/gen.hpp" = ["random/rng.hpp"]
+"random/hash.hpp" = ["random/rng.hpp"]
+"random/rng.hpp" = []
+"range_of/mo.hpp" = []
+"range_of/range_closest_pair.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/retsu.hpp",
+]
+"range_on/range_major_voting.hpp" = [
+    "ds/basic/unordered_discreate.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"seq/inversion.hpp" = [
+    "ds/bit/bit01.hpp",
+    "al/m/add.hpp",
+    "ds/bit/bit.hpp",
+    "ds/basic/retsu.hpp",
+]
+"snip/ds/bs.hpp" = []
+"snip/math/comb.hpp" = []
+"snip/math/factor.hpp" = []
+"snip/math/inv_o1.hpp" = []
+"snip/math/mtt_convolution.hpp" = []
+"snip/math/ntt_convolution.hpp" = []
+"snip/math/sieve.hpp" = []
+"snip/math/subset_conv.hpp" = []
+"snip/string/SA.hpp" = []
+"snip/tree/dynamic_reroot_treedp.hpp" = []
+"snip/tree/dynamic_treedp.hpp" = []
+"snip/tree/tree_hash.hpp" = []
+"sps/all.hpp" = [
+    "sps/conv.hpp",
+    "sps/conv_inv.hpp",
+    "sps/exp.hpp",
+    "sps/log.hpp",
+    "sps/inv.hpp",
+    "sps/comp.hpp",
+]
+"sps/bit.hpp" = [
+    "sps/f/zeta.hpp",
+    "sps/f/hadamard.hpp",
+]
+"sps/comp.hpp" = ["sps/conv.hpp"]
+"sps/conv.hpp" = []
+"sps/conv_inv.hpp" = []
+"sps/exp.hpp" = ["sps/conv.hpp"]
+"sps/f/hadamard.hpp" = []
+"sps/f/zeta.hpp" = []
+"sps/inv.hpp" = ["sps/conv_inv.hpp"]
+"sps/log.hpp" = ["sps/conv_inv.hpp"]
+"string/SA/SA.hpp" = []
+"string/SA/SA_H_ver.hpp" = []
+"string/SA/SA_sim.hpp" = []
+"string/SA/lcs.hpp" = ["string/SA/SA.hpp"]
+"string/SA/sort_substring.hpp" = [
+    "string/SA/SA.hpp",
+    "ds/basic/retsu.hpp",
+]
+"string/SA/string_cmp.hpp" = [
+    "string/SA/SA.hpp",
+    "ds/st/range_min.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/min.hpp",
+]
+"string/SAM.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"string/SAM_EX.hpp" = []
+"string/SAM_checker.hpp" = [
+    "string/SAM.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/node_pool.hpp",
+]
+"string/SAM_umap.hpp" = [
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"string/acam.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/queue.hpp",
+]
+"string/enum_dif_pa.hpp" = [
+    "string/hs.hpp",
+    "mod/mint61.hpp",
+    "random/const_rng.hpp",
+    "string/manacher.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"string/hs.hpp" = [
+    "mod/mint61.hpp",
+    "random/const_rng.hpp",
+]
+"string/kmp.hpp" = []
+"string/lyndon.hpp" = []
+"string/manacher.hpp" = []
+"string/pam.hpp" = []
+"string/pam_deque.hpp" = ["ds/basic/deque.hpp"]
+"string/pam_deque2.hpp" = []
+"string/prefix_substring_lcs.hpp" = [
+    "ds/wave/wave_mat.hpp",
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+    "al/m/add.hpp",
+    "ds/basic/retsu.hpp",
+]
+"string/range_dis_substr.hpp" = []
+"string/run_length.hpp" = []
+"string/runs.hpp" = [
+    "string/zfunction.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"string/shuki.hpp" = ["string/zfunction.hpp"]
+"string/subseq.hpp" = []
+"string/wildcard_match_ntt.hpp" = []
+"string/zfunction.hpp" = []
+"string/zfunction_online.hpp" = []
+"tr/centroid_dec.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/centroid_dec_maspy_ver.hpp" = []
+"tr/ddp.hpp" = [
+    "tr/stt.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/ddp_re.hpp" = [
+    "tr/stt.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/dist_sum.hpp" = [
+    "tr/stt.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/doubling.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/retsu.hpp",
+]
+"tr/dp/ddp_sub.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/dp/dynamic_reroot_tree_dp.hpp" = []
+"tr/dp/dynamic_tree_dp.hpp" = []
+"tr/dp/rerooting_tree_dp.hpp" = [
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/dp/tree_dp.hpp" = [
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/dpt/max_indset.hpp" = []
+"tr/dsu_on_tree.hpp" = []
+"tr/fast_lca.hpp" = [
+    "al/m/min.hpp",
+    "ds/st/st_range_prod.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/gbt/gbt_monoid.hpp" = []
+"tr/gbt/gbt_monoid_commute.hpp" = [
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld_abel.hpp" = [
+    "ds/bit/bit.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld_dual.hpp" = [
+    "ds/seg/seg_dual_t.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld_laz.hpp" = [
+    "ds/seg/segl_t.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld_mono.hpp" = [
+    "ds/seg/seg_t.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld_st.hpp" = [
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/hld_wm.hpp" = [
+    "ds/wave/wave_mat_sim.hpp",
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/inc_mst.hpp" = []
+"tr/near_kinbo.hpp" = [
+    "tr/stt.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/nearr.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/skew/lca.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/skew/static_mono.hpp" = [
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/stt.hpp" = [
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"tr/subtree_hash.hpp" = [
+    "tr/dp/rerooting_tree_dp.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
 problem_id = 10527
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "nt/bigint/big.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/bigint/add.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "164 ms"
+time_text = "178 ms"
 memory_text = "16992 KB"
-run_id = 778763
+run_id = 778864
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/div.cpp"]
@@ -697,28 +3471,23 @@ path = "test/bigint/div.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10530"
 problem_id = 10530
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "nt/bigint/big.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/bigint/div.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1772 ms"
+time_text = "1777 ms"
 memory_text = "25104 KB"
-run_id = 778761
+run_id = 778865
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/mul.cpp"]
@@ -726,28 +3495,23 @@ path = "test/bigint/mul.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10529"
 problem_id = 10529
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "nt/bigint/big.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/bigint/mul.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "366 ms"
+time_text = "369 ms"
 memory_text = "28016 KB"
-run_id = 778758
+run_id = 778861
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/beats_maxminadd.cpp"]
@@ -755,25 +3519,20 @@ path = "test/ds/seg/beats_maxminadd.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10533"
 problem_id = 10533
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/ds/seg/beats_maxminadd.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "938 ms"
+time_text = "992 ms"
 memory_text = "43176 KB"
-run_id = 778762
+run_id = 778866
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
@@ -781,17 +3540,12 @@ path = "test/ds/seg/range_sum_point_add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10531"
 problem_id = 10531
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "ds/seg/range_sum_point_add.hpp",
     "al/m/add.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/ds/seg/range_sum_point_add.cpp".last_result]
 status = "passed"
@@ -799,7 +3553,7 @@ verdict = "Accepted"
 grade = "100/100"
 time_text = "121 ms"
 memory_text = "14408 KB"
-run_id = 778759
+run_id = 778862
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/seg_t_add.cpp"]
@@ -807,25 +3561,20 @@ path = "test/ds/seg/seg_t_add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10531"
 problem_id = 10531
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "ds/seg/seg_t.hpp",
     "al/m/add.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/ds/seg/seg_t_add.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "157 ms"
+time_text = "168 ms"
 memory_text = "14788 KB"
-run_id = 778757
+run_id = 778863
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/segd.cpp"]
@@ -833,27 +3582,22 @@ path = "test/ds/seg/segd.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10532"
 problem_id = 10532
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "mod/mint_t.hpp",
     "ds/seg/segd_t.hpp",
     "ds/basic/node_pool.hpp",
     "al/m/affine.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/ds/seg/segd.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "909 ms"
+time_text = "1017 ms"
 memory_text = "144092 KB"
-run_id = 778764
+run_id = 778867
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/comp.cpp"]
@@ -861,10 +3605,6 @@ path = "test/fps/comp.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10539"
 problem_id = 10539
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/comp.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
@@ -872,19 +3612,18 @@ dependencies = [
     "mod/mint_t.hpp",
     "poly/c/trans_ntt.hpp",
     "poly/shift.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/comp.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "826 ms"
+time_text = "833 ms"
 memory_text = "52040 KB"
-run_id = 778765
+run_id = 778868
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/comp_inv.cpp"]
@@ -892,10 +3631,6 @@ path = "test/fps/comp_inv.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10538"
 problem_id = 10538
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/comp_inv.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
@@ -907,19 +3642,18 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/comp_inv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1000 ms"
+time_text = "999 ms"
 memory_text = "13544 KB"
-run_id = 778766
+run_id = 778869
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/comp_inv_mtt.cpp"]
@@ -927,10 +3661,6 @@ path = "test/fps/comp_inv_mtt.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10538"
 problem_id = 10538
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/comp_inv.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
@@ -942,19 +3672,18 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/comp_inv_mtt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "4851 ms"
+time_text = "4841 ms"
 memory_text = "24724 KB"
-run_id = 778767
+run_id = 778870
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/conv17.cpp"]
@@ -962,27 +3691,22 @@ path = "test/fps/conv17.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10535"
 problem_id = 10535
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/conv17.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "560 ms"
+time_text = "556 ms"
 memory_text = "39644 KB"
-run_id = 778768
+run_id = 778871
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/conv99.cpp"]
@@ -990,27 +3714,22 @@ path = "test/fps/conv99.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10534"
 problem_id = 10534
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/conv99.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "200 ms"
+time_text = "202 ms"
 memory_text = "17052 KB"
-run_id = 778769
+run_id = 778872
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/conv_ull.cpp"]
@@ -1018,20 +3737,15 @@ path = "test/fps/conv_ull.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10536"
 problem_id = 10536
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/conv_ull.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/conv_ull.cpp".last_result]
 status = "passed"
@@ -1039,7 +3753,7 @@ verdict = "Accepted"
 grade = "100/100"
 time_text = "899 ms"
 memory_text = "58084 KB"
-run_id = 778770
+run_id = 778873
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_k.cpp"]
@@ -1047,10 +3761,6 @@ path = "test/fps/sing1_k.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10541"
 problem_id = 10541
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/f/stiling_1.hpp",
     "poly/shift.hpp",
     "poly/c/bs.hpp",
@@ -1062,19 +3772,18 @@ dependencies = [
     "poly/fps_div.hpp",
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/sing1_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "541 ms"
+time_text = "535 ms"
 memory_text = "24712 KB"
-run_id = 778771
+run_id = 778874
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_n.cpp"]
@@ -1082,10 +3791,6 @@ path = "test/fps/sing1_n.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10540"
 problem_id = 10540
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/f/stiling_1.hpp",
     "poly/shift.hpp",
     "poly/c/bs.hpp",
@@ -1097,19 +3802,18 @@ dependencies = [
     "poly/fps_div.hpp",
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/sing1_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "239 ms"
+time_text = "241 ms"
 memory_text = "16308 KB"
-run_id = 778772
+run_id = 778875
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_k.cpp"]
@@ -1117,10 +3821,6 @@ path = "test/fps/sing2_k.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10543"
 problem_id = 10543
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/f/stiling_2.hpp",
     "ds/basic/retsu.hpp",
     "mod/powtable.hpp",
@@ -1133,19 +3833,18 @@ dependencies = [
     "poly/fps_div.hpp",
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/sing2_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "547 ms"
+time_text = "558 ms"
 memory_text = "25128 KB"
-run_id = 778773
+run_id = 778876
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_n.cpp"]
@@ -1153,10 +3852,6 @@ path = "test/fps/sing2_n.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10542"
 problem_id = 10542
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "poly/f/stiling_2.hpp",
     "ds/basic/retsu.hpp",
     "mod/powtable.hpp",
@@ -1169,19 +3864,18 @@ dependencies = [
     "poly/fps_div.hpp",
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/fps/sing2_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "174 ms"
+time_text = "165 ms"
 memory_text = "21048 KB"
-run_id = 778774
+run_id = 778877
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/cloest_pair.cpp"]
@@ -1189,28 +3883,23 @@ path = "test/geo/cloest_pair.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11254"
 problem_id = 11254
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "ge/pairs/closest_pair.hpp",
     "ge/basic/point.hpp",
     "random/hash.hpp",
     "random/rng.hpp",
     "ds/basic/hashmap.hpp",
-    "aa/main.hpp",
 ]
-last_trigger = "manual"
+last_trigger = "test_file_changed"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T08:31:48.374166836Z"
 
 [tests."test/geo/cloest_pair.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "813 ms"
+time_text = "628 ms"
 memory_text = "46860 KB"
-run_id = 778775
+run_id = 778929
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/static_hull.cpp"]
@@ -1218,73 +3907,54 @@ path = "test/geo/static_hull.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11192"
 problem_id = 11192
 dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
     "ge/basic/hull.hpp",
     "ge/basic/point.hpp",
-    "aa/main.hpp",
 ]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/geo/static_hull.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "228 ms"
+time_text = "243 ms"
 memory_text = "22268 KB"
-run_id = 778776
+run_id = 778879
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/nim_prod.cpp"]
 path = "test/nt/nim_prod.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10546"
 problem_id = 10546
-dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
-    "nt/nim/nimbase.hpp",
-    "aa/main.hpp",
-]
+dependencies = ["nt/nim/nimbase.hpp"]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/nt/nim_prod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "267 ms"
+time_text = "276 ms"
 memory_text = "3964 KB"
-run_id = 778777
+run_id = 778880
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/sbt.cpp"]
 path = "test/nt/sbt.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10545"
 problem_id = 10545
-dependencies = [
-    "all.hpp",
-    "aa/head.hpp",
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
-    "nt/sbt.hpp",
-    "aa/main.hpp",
-]
+dependencies = ["nt/sbt.hpp"]
 last_trigger = "manual"
 last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
-last_updated_at = "2026-04-06T06:22:43.032395355Z"
+last_updated_at = "2026-04-06T07:43:53.464721882Z"
 
 [tests."test/nt/sbt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "180 ms"
+time_text = "182 ms"
 memory_text = "2696 KB"
-run_id = 778778
+run_id = 778881
 runtime_error = "Run time error details not Available"
