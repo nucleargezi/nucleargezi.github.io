@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-06T10:03:19.345314962Z"
+generated_at = "2026-04-06T10:05:03.131386414Z"
 status = "passed"
 failures = []
 
@@ -10,11 +10,17 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = ["ge/basic/angle_sort.hpp"]
-selected_tests = ["test/geo/angle_sort.cpp"]
+changed_paths = [
+    "ge/basic/angle_sort.hpp",
+    "test/geo/static_hull.cpp",
+]
+selected_tests = [
+    "test/geo/angle_sort.cpp",
+    "test/geo/static_hull.cpp",
+]
 total_discovered = 22
-total_selected = 1
-passed = 1
+total_selected = 2
+passed = 2
 failed = 0
 invalid = 0
 
@@ -6514,16 +6520,16 @@ dependencies = [
     "ge/basic/point.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "498af005c7283fc038a725dfd569b26ead706e73"
-last_updated_at = "2026-04-06T10:03:19.345314962Z"
+last_tested_head = "b05ce19a305fc9d42dfd1ceaadd6a38cf4f72322"
+last_updated_at = "2026-04-06T10:05:03.131386414Z"
 
 [tests."test/geo/angle_sort.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "87 ms"
+time_text = "90 ms"
 memory_text = "9564 KB"
-run_id = 778992
+run_id = 778993
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/cloest_pair.cpp"]
@@ -6558,17 +6564,17 @@ dependencies = [
     "ge/basic/hull.hpp",
     "ge/basic/point.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "b05ce19a305fc9d42dfd1ceaadd6a38cf4f72322"
+last_updated_at = "2026-04-06T10:05:03.131386414Z"
 
 [tests."test/geo/static_hull.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "220 ms"
-memory_text = "22268 KB"
-run_id = 778977
+time_text = "219 ms"
+memory_text = "22148 KB"
+run_id = 778994
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/nim_prod.cpp"]
