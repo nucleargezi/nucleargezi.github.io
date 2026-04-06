@@ -1,5 +1,5 @@
 schema_version = 2
-generated_at = "2026-04-06T05:32:21.565846489Z"
+generated_at = "2026-04-06T05:44:57.389122896Z"
 status = "passed"
 failures = []
 
@@ -10,18 +10,24 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = []
-selected_tests = []
+changed_paths = ["test/geo/cloest_pair.cpp"]
+selected_tests = ["test/geo/cloest_pair.cpp"]
 total_discovered = 21
-total_selected = 0
-passed = 0
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
+    "IO/IO.hpp",
+    "IO/fast_io.hpp",
+    "aa/head.hpp",
+    "aa/main.hpp",
     "al/m/add.hpp",
     "al/m/affine.hpp",
+    "all.hpp",
+    "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
     "ds/basic/retsu.hpp",
     "ds/seg/beats/beats_minmax.hpp",
@@ -30,6 +36,8 @@ all_passed = [
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_t.hpp",
     "ge/basic/hull.hpp",
+    "ge/basic/point.hpp",
+    "ge/pairs/closest_pair.hpp",
     "mod/mint_t.hpp",
     "mod/powtable.hpp",
     "nt/bigint/big.hpp",
@@ -51,19 +59,10 @@ all_passed = [
     "poly/pow_proj.hpp",
     "poly/shift.hpp",
     "pr/ptable.hpp",
-]
-has_failures = [
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
-    "aa/head.hpp",
-    "aa/main.hpp",
-    "all.hpp",
-    "ds/basic/hashmap.hpp",
-    "ge/basic/point.hpp",
-    "ge/pairs/closest_pair.hpp",
     "random/hash.hpp",
     "random/rng.hpp",
 ]
+has_failures = []
 unused = [
     "aa/fast.hpp",
     "aa/file_io.hpp",
@@ -1645,6 +1644,48 @@ dependencies = [
     "ds/basic/hashmap.hpp",
     "aa/main.hpp",
 ]
+last_trigger = "test_file_changed"
+last_tested_head = "434fb55fe5d2d723eda23c263af108041207f239"
+last_updated_at = "2026-04-06T05:44:57.389122896Z"
+
+[tests."test/geo/cloest_pair.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "766 ms"
+memory_text = "46860 KB"
+run_id = 778719
+judge_detail = """
+Sample case: example_00.in, Accepted, 2704 KB, 8 ms
+Secret case: all_same_00.in, Accepted, 3248 KB, 60 ms
+Secret case: fix_near_grid_00.in, Accepted, 46852 KB, 587 ms
+Secret case: fix_near_grid_01.in, Accepted, 46852 KB, 523 ms
+Secret case: max_colinear_00.in, Accepted, 46852 KB, 93 ms
+Secret case: max_colinear_01.in, Accepted, 46852 KB, 96 ms
+Secret case: max_random_00.in, Accepted, 46860 KB, 368 ms
+Secret case: max_random_01.in, Accepted, 46860 KB, 68 ms
+Secret case: max_random_02.in, Accepted, 46860 KB, 72 ms
+Secret case: max_random_03.in, Accepted, 46860 KB, 255 ms
+Secret case: max_random_04.in, Accepted, 46860 KB, 393 ms
+Secret case: max_random_05.in, Accepted, 46860 KB, 66 ms
+Secret case: max_random_06.in, Accepted, 46860 KB, 72 ms
+Secret case: max_random_07.in, Accepted, 46860 KB, 238 ms
+Secret case: mid_random_00.in, Accepted, 46860 KB, 265 ms
+Secret case: mid_random_01.in, Accepted, 46860 KB, 129 ms
+Secret case: mid_random_02.in, Accepted, 46860 KB, 255 ms
+Secret case: near_circle_00.in, Accepted, 46860 KB, 103 ms
+Secret case: near_circle_01.in, Accepted, 46860 KB, 140 ms
+Secret case: near_grid_00.in, Accepted, 46860 KB, 766 ms
+Secret case: near_grid_01.in, Accepted, 46860 KB, 697 ms
+Secret case: small_random_00.in, Accepted, 46860 KB, 265 ms
+Secret case: small_random_01.in, Accepted, 46860 KB, 127 ms
+Secret case: small_random_02.in, Accepted, 46860 KB, 193 ms
+Secret case: small_random_03.in, Accepted, 46860 KB, 226 ms
+Secret case: small_random_04.in, Accepted, 46860 KB, 271 ms
+Secret case: small_random_05.in, Accepted, 46860 KB, 125 ms
+Secret case: small_random_06.in, Accepted, 46860 KB, 190 ms
+Secret case: small_random_07.in, Accepted, 46860 KB, 226 ms"""
+runtime_error = "Run time error details not Available"
 
 [tests."test/geo/static_hull.cpp"]
 path = "test/geo/static_hull.cpp"
