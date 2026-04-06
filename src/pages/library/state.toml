@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-06T16:11:49.583777986Z"
+generated_at = "2026-04-06T16:14:05.46951235Z"
 status = "passed"
 failures = []
 
@@ -10,14 +10,11 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = ["poly/poly_gcd.hpp"]
-selected_tests = [
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/poly_inv.cpp",
-]
+changed_paths = []
+selected_tests = []
 total_discovered = 45
-total_selected = 2
-passed = 2
+total_selected = 0
+passed = 0
 failed = 0
 invalid = 0
 
