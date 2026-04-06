@@ -67,8 +67,8 @@ status = "invalid"
 verdict = "Compile Error"
 `;
 
-const sampleSchema3Toml = `
-schema_version = 3
+const sampleSchema4Toml = `
+schema_version = 4
 generated_at = "2026-04-06T07:43:53.464721882Z"
 status = "passed"
 failures = []
@@ -82,6 +82,12 @@ unused = ["aa/fast.hpp"]
 "aa/head.hpp" = ["aa/main.hpp"]
 "aa/main.hpp" = []
 "al/m/add.hpp" = ["aa/head.hpp", "aa/main.hpp"]
+"aa/fast.hpp" = []
+
+[template_dependents]
+"aa/head.hpp" = ["al/m/add.hpp"]
+"aa/main.hpp" = ["aa/head.hpp", "al/m/add.hpp"]
+"al/m/add.hpp" = []
 "aa/fast.hpp" = []
 
 [tests."test/aa/head.cpp"]
@@ -167,7 +173,7 @@ test("buildLibraryPageDataFromTomlText creates reverse dependency indexes", asyn
   assert.deepEqual(data.testToTemplates["test/al/add.cpp"], ["al/m/add.hpp"]);
 });
 
-test("buildLibraryPageDataFromTomlText includes template dependencies for schema version 3", async () => {
+test("buildLibraryPageDataFromTomlText includes template relations for schema version 4", async () => {
   const module = await loadLibraryStateModule();
 
   assert.equal(
@@ -176,11 +182,37 @@ test("buildLibraryPageDataFromTomlText includes template dependencies for schema
     "expected buildLibraryPageDataFromTomlText to be exported from src/lib/library-state.ts",
   );
 
-  const data = module!.buildLibraryPageDataFromTomlText(sampleSchema3Toml);
+  const data = module!.buildLibraryPageDataFromTomlText(sampleSchema4Toml);
 
   assert.deepEqual(data.details["template:aa/head.hpp"]?.dependencies, ["aa/main.hpp"]);
+  assert.deepEqual(data.details["template:aa/head.hpp"]?.dependents, ["al/m/add.hpp"]);
   assert.deepEqual(data.details["template:aa/main.hpp"]?.dependencies, []);
+  assert.deepEqual(data.details["template:aa/main.hpp"]?.dependents, ["aa/head.hpp", "al/m/add.hpp"]);
   assert.deepEqual(data.details["template:al/m/add.hpp"]?.dependencies, ["aa/head.hpp", "aa/main.hpp"]);
+  assert.deepEqual(data.details["template:al/m/add.hpp"]?.dependents, []);
+});
+
+test("buildLibraryPageDataFromTomlText defaults template dependents to empty arrays when omitted", async () => {
+  const module = await loadLibraryStateModule();
+
+  assert.equal(
+    typeof module?.buildLibraryPageDataFromTomlText,
+    "function",
+    "expected buildLibraryPageDataFromTomlText to be exported from src/lib/library-state.ts",
+  );
+
+  const data = module!.buildLibraryPageDataFromTomlText(`
+schema_version = 3
+[template_coverage]
+all_passed = ["aa/head.hpp"]
+has_failures = []
+unused = []
+
+[template_dependencies]
+"aa/head.hpp" = []
+`);
+
+  assert.deepEqual(data.details["template:aa/head.hpp"]?.dependents, []);
 });
 
 test("buildLibraryPageDataFromTomlText builds sorted directory trees", async () => {
@@ -247,7 +279,7 @@ test("buildLibraryPageDataFromTomlText rejects unsupported future schema version
   assert.throws(
     () =>
       module!.buildLibraryPageDataFromTomlText(`
-schema_version = 4
+schema_version = 5
 [template_coverage]
 all_passed = []
 has_failures = []
@@ -364,7 +396,7 @@ test("buildLibraryPageDataFromTomlText rejects template dependency keys for unkn
   assert.throws(
     () =>
       module!.buildLibraryPageDataFromTomlText(`
-schema_version = 3
+schema_version = 4
 [template_coverage]
 all_passed = ["aa/head.hpp"]
 has_failures = []
@@ -389,13 +421,63 @@ test("buildLibraryPageDataFromTomlText rejects unknown template dependency refer
   assert.throws(
     () =>
       module!.buildLibraryPageDataFromTomlText(`
-schema_version = 3
+schema_version = 4
 [template_coverage]
 all_passed = ["aa/head.hpp"]
 has_failures = []
 unused = []
 
 [template_dependencies]
+"aa/head.hpp" = ["missing/template.hpp"]
+`),
+    /unknown template|missing\/template\.hpp/i,
+  );
+});
+
+test("buildLibraryPageDataFromTomlText rejects template dependent keys for unknown templates", async () => {
+  const module = await loadLibraryStateModule();
+
+  assert.equal(
+    typeof module?.buildLibraryPageDataFromTomlText,
+    "function",
+    "expected buildLibraryPageDataFromTomlText to be exported from src/lib/library-state.ts",
+  );
+
+  assert.throws(
+    () =>
+      module!.buildLibraryPageDataFromTomlText(`
+schema_version = 4
+[template_coverage]
+all_passed = ["aa/head.hpp"]
+has_failures = []
+unused = []
+
+[template_dependents]
+"missing/template.hpp" = ["aa/head.hpp"]
+`),
+    /unknown template|missing\/template\.hpp/i,
+  );
+});
+
+test("buildLibraryPageDataFromTomlText rejects unknown template dependent references", async () => {
+  const module = await loadLibraryStateModule();
+
+  assert.equal(
+    typeof module?.buildLibraryPageDataFromTomlText,
+    "function",
+    "expected buildLibraryPageDataFromTomlText to be exported from src/lib/library-state.ts",
+  );
+
+  assert.throws(
+    () =>
+      module!.buildLibraryPageDataFromTomlText(`
+schema_version = 4
+[template_coverage]
+all_passed = ["aa/head.hpp"]
+has_failures = []
+unused = []
+
+[template_dependents]
 "aa/head.hpp" = ["missing/template.hpp"]
 `),
     /unknown template|missing\/template\.hpp/i,

@@ -129,15 +129,7 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
 
       <ul class="library-detail-meta" data-library-detail-meta hidden></ul>
 
-      <section class="library-detail-related" data-library-detail-primary-section hidden>
-        <h3 class="library-detail-related-title" data-library-detail-primary-title>Related Files</h3>
-        <ul class="library-detail-related-list" data-library-detail-primary-list></ul>
-      </section>
-
-      <section class="library-detail-related" data-library-detail-secondary-section hidden>
-        <h3 class="library-detail-related-title" data-library-detail-secondary-title>Related Files</h3>
-        <ul class="library-detail-related-list" data-library-detail-secondary-list></ul>
-      </section>
+      <div data-library-detail-sections></div>
     </section>
   </section>
 
@@ -163,6 +155,11 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
           title: "Template Dependencies",
           empty: "No template dependencies recorded.",
           getPaths: (detail) => Array.isArray(detail.dependencies) ? detail.dependencies : [],
+        },
+        {
+          title: "Template Dependents",
+          empty: "No template dependents recorded.",
+          getPaths: (detail) => Array.isArray(detail.dependents) ? detail.dependents : [],
         },
         {
           title: "Related Tests",
@@ -199,12 +196,7 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
     const titleElement = document.querySelector("[data-library-detail-title]");
     const summaryElement = document.querySelector("[data-library-detail-summary]");
     const metaElement = document.querySelector("[data-library-detail-meta]");
-    const primarySectionElement = document.querySelector("[data-library-detail-primary-section]");
-    const primaryTitleElement = document.querySelector("[data-library-detail-primary-title]");
-    const primaryListElement = document.querySelector("[data-library-detail-primary-list]");
-    const secondarySectionElement = document.querySelector("[data-library-detail-secondary-section]");
-    const secondaryTitleElement = document.querySelector("[data-library-detail-secondary-title]");
-    const secondaryListElement = document.querySelector("[data-library-detail-secondary-list]");
+    const sectionContainerElement = document.querySelector("[data-library-detail-sections]");
 
     const updateSelection = (activeDetailId) => {
       const activeButton = activeDetailId ? buttonByDetailId.get(activeDetailId) ?? null : null;
@@ -230,16 +222,6 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
 
       item.append(labelElement, valueElement);
       return item;
-    };
-
-    const hideListSection = (sectionElement, listElement) => {
-      if (sectionElement) {
-        sectionElement.hidden = true;
-      }
-
-      if (listElement) {
-        listElement.textContent = "";
-      }
     };
 
     const createEmptyListItem = (label) => {
@@ -276,23 +258,27 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
       return item;
     };
 
-    const renderListSection = (sectionElement, titleElement, listElement, config, paths) => {
-      if (!sectionElement || !titleElement || !listElement || !config) {
-        return;
-      }
+    const createListSection = (config, paths) => {
+      const section = document.createElement("section");
+      section.className = "library-detail-related";
 
-      sectionElement.hidden = false;
+      const titleElement = document.createElement("h3");
+      titleElement.className = "library-detail-related-title";
       titleElement.textContent = config.title;
-      listElement.textContent = "";
+
+      const listElement = document.createElement("ul");
+      listElement.className = "library-detail-related-list";
 
       if (paths.length === 0) {
         listElement.append(createEmptyListItem(config.empty));
-        return;
+      } else {
+        for (const path of paths) {
+          listElement.append(createDetailLink(path));
+        }
       }
 
-      for (const path of paths) {
-        listElement.append(createDetailLink(path));
-      }
+      section.append(titleElement, listElement);
+      return section;
     };
 
     const renderDetail = (detailId) => {
@@ -319,25 +305,12 @@ const serializedDetails = JSON.stringify(library.details).replace(/</g, "\\u003c
         }
       }
 
-      const [primarySection, secondarySection] = detailSections[detail.kind] ?? [];
-      renderListSection(
-        primarySectionElement,
-        primaryTitleElement,
-        primaryListElement,
-        primarySection,
-        primarySection ? primarySection.getPaths(detail) : [],
-      );
+      if (sectionContainerElement) {
+        sectionContainerElement.textContent = "";
 
-      if (secondarySection) {
-        renderListSection(
-          secondarySectionElement,
-          secondaryTitleElement,
-          secondaryListElement,
-          secondarySection,
-          secondarySection.getPaths(detail),
-        );
-      } else {
-        hideListSection(secondarySectionElement, secondaryListElement);
+        for (const config of detailSections[detail.kind] ?? []) {
+          sectionContainerElement.append(createListSection(config, config.getPaths(detail)));
+        }
       }
     };
 

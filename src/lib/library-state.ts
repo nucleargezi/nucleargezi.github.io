@@ -48,6 +48,7 @@ export interface LibraryTemplateDetail {
   path: string;
   status: TemplateStatus;
   dependencies: string[];
+  dependents: string[];
   relatedTests: string[];
 }
 
@@ -262,7 +263,7 @@ function parseTemplateCoverage(value: unknown): Record<TemplateStatus, string[]>
   };
 }
 
-function createEmptyTemplateDependencies(
+function createEmptyTemplateRelations(
   templates: Record<TemplateStatus, string[]>,
 ): Record<string, string[]> {
   return Object.fromEntries(
@@ -270,48 +271,49 @@ function createEmptyTemplateDependencies(
   ) as Record<string, string[]>;
 }
 
-function parseTemplateDependencies(
+function parseTemplateRelationTable(
   value: unknown,
   templates: Record<TemplateStatus, string[]>,
+  label: "template_dependencies" | "template_dependents",
 ): Record<string, string[]> {
   const templateSet = new Set([
     ...templates.all_passed,
     ...templates.has_failures,
     ...templates.unused,
   ]);
-  const result = createEmptyTemplateDependencies(templates);
+  const result = createEmptyTemplateRelations(templates);
 
   if (value === undefined) {
     return result;
   }
 
-  const dependencies = expectRecord(value, "template_dependencies");
+  const relationTable = expectRecord(value, label);
 
-  for (const [rawTemplatePath, rawDependencyPaths] of Object.entries(dependencies)) {
-    const templatePath = normalizePath(rawTemplatePath, `template_dependencies.${rawTemplatePath}`);
+  for (const [rawTemplatePath, rawRelatedTemplatePaths] of Object.entries(relationTable)) {
+    const templatePath = normalizePath(rawTemplatePath, `${label}.${rawTemplatePath}`);
     if (!templateSet.has(templatePath)) {
       throw new Error(
-        `[library-state] Found unknown template "${templatePath}" in template_dependencies.`,
+        `[library-state] Found unknown template "${templatePath}" in ${label}.`,
       );
     }
 
-    const dependencyPaths = sortPaths(
+    const relatedTemplatePaths = sortPaths(
       new Set(
-        expectStringArray(rawDependencyPaths, `template_dependencies.${templatePath}`).map((dependencyPath) =>
-          normalizePath(dependencyPath, `template_dependencies.${templatePath}`),
+        expectStringArray(rawRelatedTemplatePaths, `${label}.${templatePath}`).map((relatedTemplatePath) =>
+          normalizePath(relatedTemplatePath, `${label}.${templatePath}`),
         ),
       ),
     );
 
-    for (const dependencyPath of dependencyPaths) {
-      if (!templateSet.has(dependencyPath)) {
+    for (const relatedTemplatePath of relatedTemplatePaths) {
+      if (!templateSet.has(relatedTemplatePath)) {
         throw new Error(
-          `[library-state] Template "${templatePath}" references unknown template "${dependencyPath}".`,
+          `[library-state] Template "${templatePath}" references unknown template "${relatedTemplatePath}".`,
         );
       }
     }
 
-    result[templatePath] = dependencyPaths;
+    result[templatePath] = relatedTemplatePaths;
   }
 
   return result;
@@ -438,6 +440,7 @@ function createDetails(
   templates: Record<TemplateStatus, string[]>,
   tests: ParsedTestEntry[],
   templateDependencies: Record<string, string[]>,
+  templateDependents: Record<string, string[]>,
   templateToTests: Record<string, string[]>,
   testToTemplates: Record<string, string[]>,
 ): Record<string, LibraryDetail> {
@@ -450,6 +453,7 @@ function createDetails(
         path,
         status,
         dependencies: templateDependencies[path] ?? [],
+        dependents: templateDependents[path] ?? [],
         relatedTests: templateToTests[path] ?? [],
       };
     }
@@ -472,15 +476,19 @@ export function buildLibraryPageDataFromTomlText(text: string): LibraryPageData 
   const rawState = expectRecord(parse(text), "library state");
   const schemaVersion = expectNumber(rawState.schema_version, "schema_version");
 
-  if (schemaVersion !== 2 && schemaVersion !== 3) {
+  if (schemaVersion !== 2 && schemaVersion !== 3 && schemaVersion !== 4) {
     throw new Error(`[library-state] Unsupported schema_version "${schemaVersion}".`);
   }
 
   const templates = parseTemplateCoverage(rawState.template_coverage);
   const templateDependencies =
-    schemaVersion === 3
-      ? parseTemplateDependencies(rawState.template_dependencies, templates)
-      : createEmptyTemplateDependencies(templates);
+    schemaVersion >= 3
+      ? parseTemplateRelationTable(rawState.template_dependencies, templates, "template_dependencies")
+      : createEmptyTemplateRelations(templates);
+  const templateDependents =
+    schemaVersion >= 3
+      ? parseTemplateRelationTable(rawState.template_dependents, templates, "template_dependents")
+      : createEmptyTemplateRelations(templates);
   const tests = parseTests(rawState.tests);
   const templateToTests = createTemplateToTests(templates, tests);
   const testToTemplates = createTestToTemplates(tests);
@@ -499,7 +507,14 @@ export function buildLibraryPageDataFromTomlText(text: string): LibraryPageData 
     testTree: buildTree(tests.map((test) => ({ kind: "test" as const, path: test.path, status: test.status }))),
     templateToTests,
     testToTemplates,
-    details: createDetails(templates, tests, templateDependencies, templateToTests, testToTemplates),
+    details: createDetails(
+      templates,
+      tests,
+      templateDependencies,
+      templateDependents,
+      templateToTests,
+      testToTemplates,
+    ),
   };
 }
 
