@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-06T10:05:03.131386414Z"
+generated_at = "2026-04-06T13:47:51.801552778Z"
 status = "passed"
 failures = []
 
@@ -11,16 +11,70 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "ge/basic/angle_sort.hpp",
-    "test/geo/static_hull.cpp",
+    "README.md",
+    "ge/basic/circle.hpp",
+    "ge/pairs/furthest_pair.hpp",
+    "po/c/count_terms.hpp",
+    "po/c/ntt.hpp",
+    "po/convolution.hpp",
+    "poly/c/fps_t.hpp",
+    "poly/find_root.hpp",
+    "poly/poly_gcd.hpp",
+    "test/fps/basic/comp.cpp",
+    "test/fps/basic/comp_inv.cpp",
+    "test/fps/basic/comp_inv_mtt.cpp",
+    "test/fps/basic/conv17.cpp",
+    "test/fps/basic/conv99.cpp",
+    "test/fps/basic/conv_ull.cpp",
+    "test/fps/basic/find_root.cpp",
+    "test/fps/basic/fps_exp.cpp",
+    "test/fps/basic/fps_inv.cpp",
+    "test/fps/basic/fps_log.cpp",
+    "test/fps/basic/fps_pow.cpp",
+    "test/fps/basic/multi_eval.cpp",
+    "test/fps/basic/multi_eval_geo.cpp",
+    "test/fps/basic/multi_inte.cpp",
+    "test/fps/basic/multi_inte_geo.cpp",
+    "test/fps/basic/poly_divmod.cpp",
+    "test/geo/convex_layers.cpp",
+    "test/geo/count_point_in_triangle.cpp",
+    "test/geo/furthest_pair.cpp",
+    "test/geo/manhattan_mst.cpp",
+    "test/geo/minimum_enclosing_circle.cpp",
 ]
 selected_tests = [
-    "test/geo/angle_sort.cpp",
-    "test/geo/static_hull.cpp",
+    "test/bigint/add.cpp",
+    "test/bigint/div.cpp",
+    "test/bigint/mul.cpp",
+    "test/fps/basic/comp.cpp",
+    "test/fps/basic/comp_inv.cpp",
+    "test/fps/basic/comp_inv_mtt.cpp",
+    "test/fps/basic/conv17.cpp",
+    "test/fps/basic/conv99.cpp",
+    "test/fps/basic/conv_ull.cpp",
+    "test/fps/basic/find_root.cpp",
+    "test/fps/basic/fps_exp.cpp",
+    "test/fps/basic/fps_inv.cpp",
+    "test/fps/basic/fps_log.cpp",
+    "test/fps/basic/fps_pow.cpp",
+    "test/fps/basic/multi_eval.cpp",
+    "test/fps/basic/multi_eval_geo.cpp",
+    "test/fps/basic/multi_inte.cpp",
+    "test/fps/basic/multi_inte_geo.cpp",
+    "test/fps/basic/poly_divmod.cpp",
+    "test/fps/sing1_k.cpp",
+    "test/fps/sing1_n.cpp",
+    "test/fps/sing2_k.cpp",
+    "test/fps/sing2_n.cpp",
+    "test/geo/convex_layers.cpp",
+    "test/geo/count_point_in_triangle.cpp",
+    "test/geo/furthest_pair.cpp",
+    "test/geo/manhattan_mst.cpp",
+    "test/geo/minimum_enclosing_circle.cpp",
 ]
-total_discovered = 22
-total_selected = 2
-passed = 2
+total_discovered = 37
+total_selected = 28
+passed = 28
 failed = 0
 invalid = 0
 
@@ -36,10 +90,23 @@ all_passed = [
     "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_t.hpp",
+    "ds/un/dsu.hpp",
     "ge/basic/angle_sort.hpp",
+    "ge/basic/circle.hpp",
+    "ge/basic/dist.hpp",
     "ge/basic/hull.hpp",
+    "ge/basic/line.hpp",
     "ge/basic/point.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/triangle.hpp",
+    "ge/ds/convex_layer.hpp",
+    "ge/ds/dynamic_hull_del.hpp",
+    "ge/exp/count_p_in_tri.hpp",
+    "ge/exp/minimum_enclosing_circle.hpp",
+    "ge/exp/mst.hpp",
     "ge/pairs/closest_pair.hpp",
+    "ge/pairs/furthest_pair.hpp",
+    "mod/all_inv.hpp",
     "mod/mint_t.hpp",
     "mod/powtable.hpp",
     "nt/bigint/big.hpp",
@@ -47,19 +114,29 @@ all_passed = [
     "nt/sbt.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
+    "poly/c/ntt_db.hpp",
     "poly/c/trans_ntt.hpp",
     "poly/comp.hpp",
     "poly/comp_inv.hpp",
     "poly/conv_ull.hpp",
     "poly/f/stiling_1.hpp",
     "poly/f/stiling_2.hpp",
+    "poly/find_root.hpp",
     "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
     "poly/fps_inv.hpp",
     "poly/fps_log.hpp",
     "poly/fps_pow.hpp",
+    "poly/mid_prod.hpp",
+    "poly/multi.hpp",
+    "poly/multi_geo.hpp",
+    "poly/multi_ntt.hpp",
+    "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
+    "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/shift.hpp",
+    "poly/subprod.hpp",
     "pr/ptable.hpp",
     "random/hash.hpp",
     "random/rng.hpp",
@@ -229,7 +306,6 @@ unused = [
     "ds/treap/treap_monoid.hpp",
     "ds/treap/treap_monoid_commute.hpp",
     "ds/trie_bina.hpp",
-    "ds/un/dsu.hpp",
     "ds/un/dsu_mono.hpp",
     "ds/un/dsu_t.hpp",
     "ds/un/dynamic_dsu.hpp",
@@ -288,30 +364,19 @@ unused = [
     "ge/all.hpp",
     "ge/basic/area.hpp",
     "ge/basic/bs3.hpp",
-    "ge/basic/circle.hpp",
     "ge/basic/convex_checker.hpp",
     "ge/basic/convex_polygon.hpp",
-    "ge/basic/dist.hpp",
     "ge/basic/donut.hpp",
-    "ge/basic/line.hpp",
     "ge/basic/minkovski_sum.hpp",
     "ge/basic/polygon.hpp",
-    "ge/basic/segment.hpp",
-    "ge/basic/triangle.hpp",
-    "ge/ds/convex_layer.hpp",
     "ge/ds/dynamic_hull.hpp",
-    "ge/ds/dynamic_hull_del.hpp",
     "ge/exp/area_of_c_union.hpp",
     "ge/exp/area_of_cyc.hpp",
     "ge/exp/area_of_cyc_fast.hpp",
     "ge/exp/circle_inverse.hpp",
-    "ge/exp/count_p_in_tri.hpp",
     "ge/exp/max_norm_sum.hpp",
-    "ge/exp/minimum_enclosing_circle.hpp",
-    "ge/exp/mst.hpp",
     "ge/exp/rect_convex_cover.hpp",
     "ge/exp/tri_area_me.hpp",
-    "ge/pairs/furthest_pair.hpp",
     "jen/greedy_coins_hack_gen.hpp",
     "jen/magic_square.hpp",
     "jen/rasen.hpp",
@@ -327,7 +392,6 @@ unused = [
     "line/mat_op.hpp",
     "line/solve_line.hpp",
     "mas.hpp",
-    "mod/all_inv.hpp",
     "mod/barrett.hpp",
     "mod/binom.hpp",
     "mod/crt3.hpp",
@@ -456,7 +520,6 @@ unused = [
     "po/taylor.hpp",
     "po/typical_divide.hpp",
     "po/vandermonde.hpp",
-    "poly/c/ntt_db.hpp",
     "poly/c/ntt_short.hpp",
     "poly/cc/label_bcc_e.hpp",
     "poly/cc/label_bcc_v.hpp",
@@ -496,22 +559,15 @@ unused = [
     "poly/fps_tri.hpp",
     "poly/lag.hpp",
     "poly/line_inte.hpp",
-    "poly/mid_prod.hpp",
-    "poly/multi.hpp",
-    "poly/multi_geo.hpp",
-    "poly/multi_ntt.hpp",
     "poly/online_conv.hpp",
     "poly/online_div.hpp",
     "poly/online_exp.hpp",
     "poly/online_inv.hpp",
     "poly/online_log.hpp",
     "poly/online_pow.hpp",
-    "poly/poly_divmod.hpp",
-    "poly/poly_modpow.hpp",
     "poly/prod_of_f_rk_x.hpp",
     "poly/prod_of_one_minus_xn.hpp",
     "poly/prod_of_one_plus_xn.hpp",
-    "poly/subprod.hpp",
     "poly/subset_sum.hpp",
     "poly/subset_sum_lm.hpp",
     "poly/sum_of_exp_bx.hpp",
@@ -1431,10 +1487,8 @@ unused = [
 "nt/bigint/bigint_binary.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "nt/bigint/odd_big_int.hpp" = []
 "nt/counting/count_inv_of_permutation.hpp" = [
@@ -1470,10 +1524,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/mid_prod.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
@@ -1482,10 +1534,8 @@ unused = [
 "po/FFP_conv.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/all.hpp" = [
     "po/bs.hpp",
@@ -1493,6 +1543,7 @@ unused = [
     "po/c/diff.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
     "po/fps_inv.hpp",
     "po/c/count_terms.hpp",
@@ -1509,11 +1560,13 @@ unused = [
     "po/c/diff.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
 ]
 "po/c/convolution_u64.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
     "po/bs.hpp",
     "po/c/inte.hpp",
@@ -1522,9 +1575,10 @@ unused = [
 "po/c/count_terms.hpp" = []
 "po/c/diff.hpp" = []
 "po/c/inte.hpp" = []
-"po/c/ntt.hpp" = []
+"po/c/ntt.hpp" = ["mod/mint_t.hpp"]
 "po/c/ntt_db.hpp" = [
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "po/c/transposed_ntt.hpp",
 ]
 "po/c/transposed_ntt.hpp" = []
@@ -1537,18 +1591,18 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/comp.hpp",
     "po/c/transposed_ntt.hpp",
     "po/taylor.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
     "po/comp_inv.hpp",
+    "po/c/diff.hpp",
     "po/fps_pow.hpp",
     "po/fps_exp.hpp",
+    "po/c/inte.hpp",
     "po/pow_projection.hpp",
 ]
 "po/cg/label_bcc_v.hpp" = [
@@ -1560,18 +1614,18 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/comp.hpp",
     "po/c/transposed_ntt.hpp",
     "po/taylor.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
     "po/comp_inv.hpp",
+    "po/c/diff.hpp",
     "po/fps_pow.hpp",
     "po/fps_exp.hpp",
+    "po/c/inte.hpp",
     "po/pow_projection.hpp",
 ]
 "po/cg/label_bipartite.hpp" = [
@@ -1583,8 +1637,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
     "po/fps_inv.hpp",
@@ -1596,10 +1650,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
 ]
@@ -1610,10 +1662,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/cg/label_undir.hpp",
 ]
 "po/cg/label_forest.hpp" = [
@@ -1624,8 +1674,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/cg/label_scc.hpp" = [
     "po/fps_log.hpp",
@@ -1634,20 +1684,16 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/cg/label_tournament.hpp" = [
     "po/fps_inv.hpp",
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/cg/label_tree.hpp" = []
 "po/cg/label_undir.hpp" = []
@@ -1659,10 +1705,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/cg/label_unicycle.hpp" = [
     "po/fps_log.hpp",
@@ -1671,20 +1715,16 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/cg/unlabel_undir_tree.hpp" = [
     "po/online_exp.hpp",
     "po/online_conv.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "po/convolution.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/coef_of_rational_fps.hpp" = [
     "po/fps_div.hpp",
@@ -1692,10 +1732,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
     "po/poly_divmod.hpp",
@@ -1705,10 +1743,8 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
 ]
@@ -1716,10 +1752,8 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
     "po/comp_f_ex.hpp",
@@ -1735,14 +1769,14 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
     "po/fps_pow.hpp",
     "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
     "po/c/count_terms.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
@@ -1752,10 +1786,8 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
 ]
@@ -1764,10 +1796,8 @@ unused = [
     "po/sum_of_rationals.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
     "po/fps_inv.hpp",
@@ -1777,10 +1807,8 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
     "po/comp_f_ex.hpp",
@@ -1795,10 +1823,8 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
 ]
@@ -1809,30 +1835,26 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
     "po/fps_pow.hpp",
     "po/fps_exp.hpp",
+    "po/c/inte.hpp",
     "po/fps_log.hpp",
     "po/pow_projection.hpp",
 ]
 "po/conv_all.hpp" = [
     "po/c/ntt_db.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "po/c/transposed_ntt.hpp",
     "po/convolution.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/convolution.hpp" = [
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/f/bell.hpp" = [
     "po/fps_exp.hpp",
@@ -1841,8 +1863,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/f/bernoulli.hpp" = [
     "po/fps_div.hpp",
@@ -1850,10 +1872,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/f/count_subseq.hpp" = [
     "ds/basic/hashmap.hpp",
@@ -1872,6 +1892,7 @@ unused = [
     "po/c/diff.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
     "po/lag.hpp",
     "mod/all_inv.hpp",
@@ -1879,6 +1900,7 @@ unused = [
 "po/f/k_presum.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
     "po/bs.hpp",
     "po/c/inte.hpp",
@@ -1892,22 +1914,22 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/f/sinh.hpp" = []
 "po/f/stiling_1.hpp" = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
     "po/fps_pow.hpp",
     "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
     "po/c/count_terms.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
@@ -1917,12 +1939,12 @@ unused = [
 "po/f/stiling_2.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/fps_pow.hpp",
     "po/fps_exp.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
     "po/c/count_terms.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
@@ -1937,8 +1959,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/f/subset_sum_lm.hpp" = [
     "po/fps_exp.hpp",
@@ -1947,8 +1969,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
     "po/fps_inv.hpp",
@@ -1960,10 +1982,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/fps_exp.hpp" = [
     "po/c/inte.hpp",
@@ -1971,17 +1991,15 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/fps_inv.hpp" = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/fps_log.hpp" = [
     "po/fps_div.hpp",
@@ -1989,10 +2007,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/fps_ode_exp.hpp" = [
     "po/fps_log.hpp",
@@ -2001,10 +2017,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/online_conv.hpp",
 ]
 "po/fps_pow.hpp" = [
@@ -2014,8 +2028,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
     "po/fps_inv.hpp",
@@ -2028,8 +2042,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
     "po/fps_inv.hpp",
@@ -2043,8 +2057,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
     "po/fps_sqrt.hpp",
     "po/fps_pow.hpp",
     "po/fps_log.hpp",
@@ -2056,10 +2070,8 @@ unused = [
 "po/lag.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/all_inv.hpp",
 ]
 "po/line_inte.hpp" = [
@@ -2069,22 +2081,21 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
     "po/poly_divmod.hpp",
     "po/find_line.hpp",
+    "po/bs.hpp",
+    "po/c/inte.hpp",
+    "po/c/diff.hpp",
 ]
 "po/mid_prod.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/multipoint.hpp" = [
     "mod/all_inv.hpp",
@@ -2093,10 +2104,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/mid_prod.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
@@ -2105,12 +2114,10 @@ unused = [
     "po/conv_all.hpp",
     "po/c/ntt_db.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "po/c/transposed_ntt.hpp",
     "po/convolution.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/fps_div.hpp",
     "po/c/count_terms.hpp",
     "po/fps_inv.hpp",
@@ -2124,6 +2131,7 @@ unused = [
     "po/c/diff.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
     "ds/basic/node_pool.hpp",
     "po/online_conv.hpp",
@@ -2133,39 +2141,45 @@ unused = [
     "po/online_log.hpp",
     "po/online_pow.hpp",
 ]
-"po/online_conv.hpp" = ["po/c/ntt.hpp"]
+"po/online_conv.hpp" = [
+    "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
+]
 "po/online_div.hpp" = [
     "po/online_conv.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
 ]
 "po/online_exp.hpp" = [
     "po/online_conv.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
 ]
 "po/online_inv.hpp" = [
     "po/online_div.hpp",
     "po/online_conv.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
 ]
 "po/online_log.hpp" = [
     "po/online_div.hpp",
     "po/online_conv.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
 ]
 "po/online_pow.hpp" = [
     "po/online_div.hpp",
     "po/online_conv.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
 ]
 "po/poly_divmod.hpp" = [
     "po/fps_inv.hpp",
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/poly_find_root.hpp" = [
     "po/poly_modpow.hpp",
@@ -2174,10 +2188,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/poly_gcd.hpp",
     "random/rng.hpp",
 ]
@@ -2187,10 +2199,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/poly_inv.hpp" = [
     "po/poly_gcd.hpp",
@@ -2199,10 +2209,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/poly_modpow.hpp" = [
     "po/poly_divmod.hpp",
@@ -2210,18 +2218,14 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/pow_projection.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/prod_of_f_rk_x.hpp" = [
     "po/fps_log.hpp",
@@ -2230,11 +2234,11 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
+    "po/fps_exp.hpp",
     "po/c/inte.hpp",
     "po/c/diff.hpp",
-    "po/fps_exp.hpp",
 ]
 "po/prod_of_one_minus_xn.hpp" = [
     "po/fps_exp.hpp",
@@ -2243,8 +2247,8 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/prod_of_one_plus_xn.hpp" = [
     "po/fps_exp.hpp",
@@ -2253,17 +2257,15 @@ unused = [
     "po/c/count_terms.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
 ]
 "po/sum_of_exp_bx.hpp" = [
     "po/sum_of_rationals.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
     "po/fps_inv.hpp",
@@ -2273,12 +2275,10 @@ unused = [
     "po/conv_all.hpp",
     "po/c/ntt_db.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "po/c/transposed_ntt.hpp",
     "po/convolution.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/fps_log.hpp",
     "po/fps_div.hpp",
     "po/c/count_terms.hpp",
@@ -2288,10 +2288,8 @@ unused = [
 "po/sum_of_rationals.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
 ]
@@ -2299,20 +2297,16 @@ unused = [
     "po/taylor.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
 ]
 "po/taylor.hpp" = [
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "mod/powtable.hpp",
     "pr/ptable.hpp",
 ]
@@ -2320,10 +2314,8 @@ unused = [
     "po/mid_prod.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
 ]
 "po/vandermonde.hpp" = [
     "po/multipoint.hpp",
@@ -2333,10 +2325,8 @@ unused = [
     "po/fps_inv.hpp",
     "po/convolution.hpp",
     "po/c/ntt.hpp",
+    "mod/mint_t.hpp",
     "mod/crt3.hpp",
-    "po/bs.hpp",
-    "po/c/inte.hpp",
-    "po/c/diff.hpp",
     "po/mid_prod.hpp",
     "po/c/ntt_db.hpp",
     "po/c/transposed_ntt.hpp",
@@ -2729,6 +2719,18 @@ unused = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
+"poly/find_root.hpp" = [
+    "random/rng.hpp",
+    "poly/poly_modpow.hpp",
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/poly_gcd.hpp",
+]
 "poly/fps.hpp" = [
     "poly/fps_inv.hpp",
     "poly/c/bs.hpp",
@@ -2909,6 +2911,15 @@ unused = [
     "mod/mint_t.hpp",
 ]
 "poly/poly_divmod.hpp" = [
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/poly_gcd.hpp" = [
+    "poly/poly_divmod.hpp",
     "poly/fps_div.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
@@ -3754,6 +3765,7 @@ unused = [
     "poly/fac_large.hpp",
     "poly/ffp.hpp",
     "poly/find_line.hpp",
+    "poly/find_root.hpp",
     "poly/fps.hpp",
     "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
@@ -3775,6 +3787,7 @@ unused = [
     "poly/online_log.hpp",
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -4322,6 +4335,81 @@ unused = [
     "mod/inv_fast.hpp",
     "mod/pow_fast.hpp",
     "nt/bigint/big.hpp",
+    "nt/bigint/bigint_binary.hpp",
+    "po/FFP.hpp",
+    "po/FFP_conv.hpp",
+    "po/all.hpp",
+    "po/bs.hpp",
+    "po/c/convolution_u64.hpp",
+    "po/c/ntt.hpp",
+    "po/c/ntt_db.hpp",
+    "po/cg/label_bcc_e.hpp",
+    "po/cg/label_bcc_v.hpp",
+    "po/cg/label_bipartite.hpp",
+    "po/cg/label_dag.hpp",
+    "po/cg/label_euler_undir.hpp",
+    "po/cg/label_forest.hpp",
+    "po/cg/label_scc.hpp",
+    "po/cg/label_tournament.hpp",
+    "po/cg/label_undir_con.hpp",
+    "po/cg/label_unicycle.hpp",
+    "po/cg/unlabel_undir_tree.hpp",
+    "po/coef_of_rational_fps.hpp",
+    "po/comp.hpp",
+    "po/comp_f_1_minus_ex.hpp",
+    "po/comp_f_AplusBx_div_CplusDx.hpp",
+    "po/comp_f_a_plus_bx.hpp",
+    "po/comp_f_ex.hpp",
+    "po/comp_f_ex_nimus_1.hpp",
+    "po/comp_f_x_plus_1_divx.hpp",
+    "po/comp_inv.hpp",
+    "po/conv_all.hpp",
+    "po/convolution.hpp",
+    "po/f/bell.hpp",
+    "po/f/bernoulli.hpp",
+    "po/f/fac_large.hpp",
+    "po/f/k_presum.hpp",
+    "po/f/partition.hpp",
+    "po/f/stiling_1.hpp",
+    "po/f/stiling_2.hpp",
+    "po/f/subset_sum.hpp",
+    "po/f/subset_sum_lm.hpp",
+    "po/fps_div.hpp",
+    "po/fps_exp.hpp",
+    "po/fps_inv.hpp",
+    "po/fps_log.hpp",
+    "po/fps_ode_exp.hpp",
+    "po/fps_pow.hpp",
+    "po/fps_sqrt.hpp",
+    "po/fps_trig.hpp",
+    "po/lag.hpp",
+    "po/line_inte.hpp",
+    "po/mid_prod.hpp",
+    "po/multipoint.hpp",
+    "po/multipoint_preprod.hpp",
+    "po/ofps.hpp",
+    "po/online_conv.hpp",
+    "po/online_div.hpp",
+    "po/online_exp.hpp",
+    "po/online_inv.hpp",
+    "po/online_log.hpp",
+    "po/online_pow.hpp",
+    "po/poly_divmod.hpp",
+    "po/poly_find_root.hpp",
+    "po/poly_gcd.hpp",
+    "po/poly_inv.hpp",
+    "po/poly_modpow.hpp",
+    "po/pow_projection.hpp",
+    "po/prod_of_f_rk_x.hpp",
+    "po/prod_of_one_minus_xn.hpp",
+    "po/prod_of_one_plus_xn.hpp",
+    "po/sum_of_exp_bx.hpp",
+    "po/sum_of_pow.hpp",
+    "po/sum_of_rationals.hpp",
+    "po/sum_of_shift_binomail.hpp",
+    "po/taylor.hpp",
+    "po/typical_divide.hpp",
+    "po/vandermonde.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "poly/c/ntt_db.hpp",
@@ -4365,6 +4453,7 @@ unused = [
     "poly/fac_large.hpp",
     "poly/ffp.hpp",
     "poly/find_line.hpp",
+    "poly/find_root.hpp",
     "poly/fps.hpp",
     "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
@@ -4386,6 +4475,7 @@ unused = [
     "poly/online_log.hpp",
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -4478,72 +4568,12 @@ unused = [
 "po/FFP_conv.hpp" = []
 "po/all.hpp" = []
 "po/bs.hpp" = [
-    "nt/bigint/bigint_binary.hpp",
-    "po/FFP.hpp",
-    "po/FFP_conv.hpp",
     "po/all.hpp",
     "po/c/convolution_u64.hpp",
-    "po/cg/label_bcc_e.hpp",
-    "po/cg/label_bcc_v.hpp",
-    "po/cg/label_bipartite.hpp",
-    "po/cg/label_dag.hpp",
-    "po/cg/label_euler_undir.hpp",
-    "po/cg/label_forest.hpp",
-    "po/cg/label_scc.hpp",
-    "po/cg/label_tournament.hpp",
-    "po/cg/label_undir_con.hpp",
-    "po/cg/label_unicycle.hpp",
-    "po/cg/unlabel_undir_tree.hpp",
-    "po/coef_of_rational_fps.hpp",
-    "po/comp.hpp",
-    "po/comp_f_1_minus_ex.hpp",
-    "po/comp_f_AplusBx_div_CplusDx.hpp",
-    "po/comp_f_a_plus_bx.hpp",
-    "po/comp_f_ex.hpp",
-    "po/comp_f_ex_nimus_1.hpp",
-    "po/comp_f_x_plus_1_divx.hpp",
-    "po/comp_inv.hpp",
-    "po/conv_all.hpp",
-    "po/convolution.hpp",
-    "po/f/bell.hpp",
-    "po/f/bernoulli.hpp",
     "po/f/fac_large.hpp",
     "po/f/k_presum.hpp",
-    "po/f/partition.hpp",
-    "po/f/stiling_1.hpp",
-    "po/f/stiling_2.hpp",
-    "po/f/subset_sum.hpp",
-    "po/f/subset_sum_lm.hpp",
-    "po/fps_div.hpp",
-    "po/fps_exp.hpp",
-    "po/fps_inv.hpp",
-    "po/fps_log.hpp",
-    "po/fps_ode_exp.hpp",
-    "po/fps_pow.hpp",
-    "po/fps_sqrt.hpp",
-    "po/fps_trig.hpp",
-    "po/lag.hpp",
     "po/line_inte.hpp",
-    "po/mid_prod.hpp",
-    "po/multipoint.hpp",
-    "po/multipoint_preprod.hpp",
     "po/ofps.hpp",
-    "po/poly_divmod.hpp",
-    "po/poly_find_root.hpp",
-    "po/poly_gcd.hpp",
-    "po/poly_inv.hpp",
-    "po/poly_modpow.hpp",
-    "po/pow_projection.hpp",
-    "po/prod_of_f_rk_x.hpp",
-    "po/prod_of_one_minus_xn.hpp",
-    "po/prod_of_one_plus_xn.hpp",
-    "po/sum_of_exp_bx.hpp",
-    "po/sum_of_pow.hpp",
-    "po/sum_of_rationals.hpp",
-    "po/sum_of_shift_binomail.hpp",
-    "po/taylor.hpp",
-    "po/typical_divide.hpp",
-    "po/vandermonde.hpp",
 ]
 "po/c/convolution_u64.hpp" = []
 "po/c/count_terms.hpp" = [
@@ -4596,36 +4626,16 @@ unused = [
     "po/vandermonde.hpp",
 ]
 "po/c/diff.hpp" = [
-    "nt/bigint/bigint_binary.hpp",
-    "po/FFP.hpp",
-    "po/FFP_conv.hpp",
     "po/all.hpp",
     "po/bs.hpp",
     "po/c/convolution_u64.hpp",
     "po/cg/label_bcc_e.hpp",
     "po/cg/label_bcc_v.hpp",
     "po/cg/label_bipartite.hpp",
-    "po/cg/label_dag.hpp",
-    "po/cg/label_euler_undir.hpp",
     "po/cg/label_forest.hpp",
-    "po/cg/label_scc.hpp",
-    "po/cg/label_tournament.hpp",
-    "po/cg/label_undir_con.hpp",
-    "po/cg/label_unicycle.hpp",
-    "po/cg/unlabel_undir_tree.hpp",
-    "po/coef_of_rational_fps.hpp",
-    "po/comp.hpp",
-    "po/comp_f_1_minus_ex.hpp",
     "po/comp_f_AplusBx_div_CplusDx.hpp",
-    "po/comp_f_a_plus_bx.hpp",
-    "po/comp_f_ex.hpp",
-    "po/comp_f_ex_nimus_1.hpp",
-    "po/comp_f_x_plus_1_divx.hpp",
     "po/comp_inv.hpp",
-    "po/conv_all.hpp",
-    "po/convolution.hpp",
     "po/f/bell.hpp",
-    "po/f/bernoulli.hpp",
     "po/f/fac_large.hpp",
     "po/f/k_presum.hpp",
     "po/f/partition.hpp",
@@ -4633,68 +4643,27 @@ unused = [
     "po/f/stiling_2.hpp",
     "po/f/subset_sum.hpp",
     "po/f/subset_sum_lm.hpp",
-    "po/fps_div.hpp",
     "po/fps_exp.hpp",
-    "po/fps_inv.hpp",
-    "po/fps_log.hpp",
-    "po/fps_ode_exp.hpp",
     "po/fps_pow.hpp",
     "po/fps_sqrt.hpp",
     "po/fps_trig.hpp",
-    "po/lag.hpp",
     "po/line_inte.hpp",
-    "po/mid_prod.hpp",
-    "po/multipoint.hpp",
-    "po/multipoint_preprod.hpp",
     "po/ofps.hpp",
-    "po/poly_divmod.hpp",
-    "po/poly_find_root.hpp",
-    "po/poly_gcd.hpp",
-    "po/poly_inv.hpp",
-    "po/poly_modpow.hpp",
-    "po/pow_projection.hpp",
     "po/prod_of_f_rk_x.hpp",
     "po/prod_of_one_minus_xn.hpp",
     "po/prod_of_one_plus_xn.hpp",
-    "po/sum_of_exp_bx.hpp",
-    "po/sum_of_pow.hpp",
-    "po/sum_of_rationals.hpp",
-    "po/sum_of_shift_binomail.hpp",
-    "po/taylor.hpp",
-    "po/typical_divide.hpp",
-    "po/vandermonde.hpp",
 ]
 "po/c/inte.hpp" = [
-    "nt/bigint/bigint_binary.hpp",
-    "po/FFP.hpp",
-    "po/FFP_conv.hpp",
     "po/all.hpp",
     "po/bs.hpp",
     "po/c/convolution_u64.hpp",
     "po/cg/label_bcc_e.hpp",
     "po/cg/label_bcc_v.hpp",
     "po/cg/label_bipartite.hpp",
-    "po/cg/label_dag.hpp",
-    "po/cg/label_euler_undir.hpp",
     "po/cg/label_forest.hpp",
-    "po/cg/label_scc.hpp",
-    "po/cg/label_tournament.hpp",
-    "po/cg/label_undir_con.hpp",
-    "po/cg/label_unicycle.hpp",
-    "po/cg/unlabel_undir_tree.hpp",
-    "po/coef_of_rational_fps.hpp",
-    "po/comp.hpp",
-    "po/comp_f_1_minus_ex.hpp",
     "po/comp_f_AplusBx_div_CplusDx.hpp",
-    "po/comp_f_a_plus_bx.hpp",
-    "po/comp_f_ex.hpp",
-    "po/comp_f_ex_nimus_1.hpp",
-    "po/comp_f_x_plus_1_divx.hpp",
     "po/comp_inv.hpp",
-    "po/conv_all.hpp",
-    "po/convolution.hpp",
     "po/f/bell.hpp",
-    "po/f/bernoulli.hpp",
     "po/f/fac_large.hpp",
     "po/f/k_presum.hpp",
     "po/f/partition.hpp",
@@ -4702,36 +4671,15 @@ unused = [
     "po/f/stiling_2.hpp",
     "po/f/subset_sum.hpp",
     "po/f/subset_sum_lm.hpp",
-    "po/fps_div.hpp",
     "po/fps_exp.hpp",
-    "po/fps_inv.hpp",
-    "po/fps_log.hpp",
-    "po/fps_ode_exp.hpp",
     "po/fps_pow.hpp",
     "po/fps_sqrt.hpp",
     "po/fps_trig.hpp",
-    "po/lag.hpp",
     "po/line_inte.hpp",
-    "po/mid_prod.hpp",
-    "po/multipoint.hpp",
-    "po/multipoint_preprod.hpp",
     "po/ofps.hpp",
-    "po/poly_divmod.hpp",
-    "po/poly_find_root.hpp",
-    "po/poly_gcd.hpp",
-    "po/poly_inv.hpp",
-    "po/poly_modpow.hpp",
-    "po/pow_projection.hpp",
     "po/prod_of_f_rk_x.hpp",
     "po/prod_of_one_minus_xn.hpp",
     "po/prod_of_one_plus_xn.hpp",
-    "po/sum_of_exp_bx.hpp",
-    "po/sum_of_pow.hpp",
-    "po/sum_of_rationals.hpp",
-    "po/sum_of_shift_binomail.hpp",
-    "po/taylor.hpp",
-    "po/typical_divide.hpp",
-    "po/vandermonde.hpp",
 ]
 "po/c/ntt.hpp" = [
     "nt/bigint/bigint_binary.hpp",
@@ -5238,6 +5186,7 @@ unused = [
     "poly/fac_large.hpp",
     "poly/ffp.hpp",
     "poly/find_line.hpp",
+    "poly/find_root.hpp",
     "poly/fps.hpp",
     "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
@@ -5259,6 +5208,7 @@ unused = [
     "poly/online_log.hpp",
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -5318,6 +5268,7 @@ unused = [
     "poly/fac_large.hpp",
     "poly/ffp.hpp",
     "poly/find_line.hpp",
+    "poly/find_root.hpp",
     "poly/fps.hpp",
     "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
@@ -5339,6 +5290,7 @@ unused = [
     "poly/online_log.hpp",
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -5443,6 +5395,7 @@ unused = [
 "poly/fac_large.hpp" = []
 "poly/ffp.hpp" = []
 "poly/find_line.hpp" = ["poly/line_inte.hpp"]
+"poly/find_root.hpp" = []
 "poly/fps.hpp" = []
 "poly/fps_div.hpp" = [
     "poly/cc/label_bcc_e.hpp",
@@ -5463,6 +5416,7 @@ unused = [
     "poly/f/bernoulli.hpp",
     "poly/f/stiling_1.hpp",
     "poly/f/stiling_2.hpp",
+    "poly/find_root.hpp",
     "poly/fps.hpp",
     "poly/fps_log.hpp",
     "poly/fps_pow.hpp",
@@ -5470,6 +5424,7 @@ unused = [
     "poly/fps_tri.hpp",
     "poly/line_inte.hpp",
     "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
     "poly/prod_of_f_rk_x.hpp",
     "poly/subset_sum_lm.hpp",
@@ -5518,6 +5473,7 @@ unused = [
     "poly/f/stiling_1.hpp",
     "poly/f/stiling_2.hpp",
     "poly/ffp.hpp",
+    "poly/find_root.hpp",
     "poly/fps.hpp",
     "poly/fps_div.hpp",
     "poly/fps_log.hpp",
@@ -5528,6 +5484,7 @@ unused = [
     "poly/multi.hpp",
     "poly/multi_ntt.hpp",
     "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
     "poly/prod_of_f_rk_x.hpp",
     "poly/subprod.hpp",
@@ -5609,10 +5566,13 @@ unused = [
 "poly/online_pow.hpp" = []
 "poly/poly_divmod.hpp" = [
     "poly/coef_of_rationals.hpp",
+    "poly/find_root.hpp",
     "poly/line_inte.hpp",
+    "poly/poly_gcd.hpp",
     "poly/poly_modpow.hpp",
 ]
-"poly/poly_modpow.hpp" = []
+"poly/poly_gcd.hpp" = ["poly/find_root.hpp"]
+"poly/poly_modpow.hpp" = ["poly/find_root.hpp"]
 "poly/pow_proj.hpp" = [
     "poly/cc/label_bcc_e.hpp",
     "poly/cc/label_bcc_v.hpp",
@@ -5911,6 +5871,7 @@ unused = [
     "mod/tetration.hpp",
     "po/f/count_subseq.hpp",
     "po/poly_find_root.hpp",
+    "poly/find_root.hpp",
     "pr/crt.hpp",
     "pr/discreate_log.hpp",
     "pr/discreate_log_fast.hpp",
@@ -6086,17 +6047,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/bigint/add.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "164 ms"
+time_text = "160 ms"
 memory_text = "16992 KB"
-run_id = 778961
+run_id = 779113
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/div.cpp"]
@@ -6110,17 +6071,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/bigint/div.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1761 ms"
+time_text = "1771 ms"
 memory_text = "25104 KB"
-run_id = 778960
+run_id = 779112
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/mul.cpp"]
@@ -6134,17 +6095,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/bigint/mul.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "372 ms"
+time_text = "360 ms"
 memory_text = "28016 KB"
-run_id = 778963
+run_id = 779111
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/beats_maxminadd.cpp"]
@@ -6233,8 +6194,8 @@ memory_text = "144092 KB"
 run_id = 778965
 runtime_error = "Run time error details not Available"
 
-[tests."test/fps/comp.cpp"]
-path = "test/fps/comp.cpp"
+[tests."test/fps/basic/comp.cpp"]
+path = "test/fps/basic/comp.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10539"
 problem_id = 10539
 dependencies = [
@@ -6246,21 +6207,21 @@ dependencies = [
     "poly/c/trans_ntt.hpp",
     "poly/shift.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
-[tests."test/fps/comp.cpp".last_result]
+[tests."test/fps/basic/comp.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "827 ms"
-memory_text = "52040 KB"
-run_id = 778966
+time_text = "826 ms"
+memory_text = "51920 KB"
+run_id = 779114
 runtime_error = "Run time error details not Available"
 
-[tests."test/fps/comp_inv.cpp"]
-path = "test/fps/comp_inv.cpp"
+[tests."test/fps/basic/comp_inv.cpp"]
+path = "test/fps/basic/comp_inv.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10538"
 problem_id = 10538
 dependencies = [
@@ -6276,21 +6237,21 @@ dependencies = [
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
-[tests."test/fps/comp_inv.cpp".last_result]
+[tests."test/fps/basic/comp_inv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1009 ms"
-memory_text = "13544 KB"
-run_id = 778967
+time_text = "994 ms"
+memory_text = "13424 KB"
+run_id = 779110
 runtime_error = "Run time error details not Available"
 
-[tests."test/fps/comp_inv_mtt.cpp"]
-path = "test/fps/comp_inv_mtt.cpp"
+[tests."test/fps/basic/comp_inv_mtt.cpp"]
+path = "test/fps/basic/comp_inv_mtt.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10538"
 problem_id = 10538
 dependencies = [
@@ -6306,21 +6267,21 @@ dependencies = [
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
-[tests."test/fps/comp_inv_mtt.cpp".last_result]
+[tests."test/fps/basic/comp_inv_mtt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "4807 ms"
-memory_text = "24724 KB"
-run_id = 778968
+time_text = "4828 ms"
+memory_text = "24604 KB"
+run_id = 779115
 runtime_error = "Run time error details not Available"
 
-[tests."test/fps/conv17.cpp"]
-path = "test/fps/conv17.cpp"
+[tests."test/fps/basic/conv17.cpp"]
+path = "test/fps/basic/conv17.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10535"
 problem_id = 10535
 dependencies = [
@@ -6329,21 +6290,21 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
-[tests."test/fps/conv17.cpp".last_result]
+[tests."test/fps/basic/conv17.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "569 ms"
-memory_text = "39644 KB"
-run_id = 778969
+time_text = "553 ms"
+memory_text = "39524 KB"
+run_id = 779116
 runtime_error = "Run time error details not Available"
 
-[tests."test/fps/conv99.cpp"]
-path = "test/fps/conv99.cpp"
+[tests."test/fps/basic/conv99.cpp"]
+path = "test/fps/basic/conv99.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10534"
 problem_id = 10534
 dependencies = [
@@ -6352,21 +6313,21 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
-[tests."test/fps/conv99.cpp".last_result]
+[tests."test/fps/basic/conv99.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "210 ms"
-memory_text = "17052 KB"
-run_id = 778970
+time_text = "204 ms"
+memory_text = "16892 KB"
+run_id = 779117
 runtime_error = "Run time error details not Available"
 
-[tests."test/fps/conv_ull.cpp"]
-path = "test/fps/conv_ull.cpp"
+[tests."test/fps/basic/conv_ull.cpp"]
+path = "test/fps/basic/conv_ull.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10536"
 problem_id = 10536
 dependencies = [
@@ -6376,17 +6337,287 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
-[tests."test/fps/conv_ull.cpp".last_result]
+[tests."test/fps/basic/conv_ull.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "897 ms"
-memory_text = "58084 KB"
-run_id = 778971
+time_text = "876 ms"
+memory_text = "57964 KB"
+run_id = 779118
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/find_root.cpp"]
+path = "test/fps/basic/find_root.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11270"
+problem_id = 11270
+dependencies = [
+    "poly/find_root.hpp",
+    "random/rng.hpp",
+    "poly/poly_modpow.hpp",
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/poly_gcd.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/find_root.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "639 ms"
+memory_text = "3312 KB"
+run_id = 779119
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/fps_exp.cpp"]
+path = "test/fps/basic/fps_exp.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11262"
+problem_id = 11262
+dependencies = [
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/fps_exp.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "329 ms"
+memory_text = "20088 KB"
+run_id = 779120
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/fps_inv.cpp"]
+path = "test/fps/basic/fps_inv.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11263"
+problem_id = 11263
+dependencies = [
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/fps_inv.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "196 ms"
+memory_text = "10632 KB"
+run_id = 779121
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/fps_log.cpp"]
+path = "test/fps/basic/fps_log.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11264"
+problem_id = 11264
+dependencies = [
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/fps_log.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "259 ms"
+memory_text = "15676 KB"
+run_id = 779122
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/fps_pow.cpp"]
+path = "test/fps/basic/fps_pow.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11265"
+problem_id = 11265
+dependencies = [
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_exp.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/fps_pow.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "543 ms"
+memory_text = "24112 KB"
+run_id = 779123
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/multi_eval.cpp"]
+path = "test/fps/basic/multi_eval.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11266"
+problem_id = 11266
+dependencies = [
+    "poly/multi.hpp",
+    "poly/subprod.hpp",
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/mid_prod.hpp",
+    "poly/multi_ntt.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/multi_eval.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "385 ms"
+memory_text = "26520 KB"
+run_id = 779124
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/multi_eval_geo.cpp"]
+path = "test/fps/basic/multi_eval_geo.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11267"
+problem_id = 11267
+dependencies = [
+    "poly/multi_geo.hpp",
+    "mod/all_inv.hpp",
+    "poly/mid_prod.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/multi_eval_geo.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "173 ms"
+memory_text = "20992 KB"
+run_id = 779125
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/multi_inte.cpp"]
+path = "test/fps/basic/multi_inte.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11268"
+problem_id = 11268
+dependencies = [
+    "poly/multi.hpp",
+    "poly/subprod.hpp",
+    "poly/fps_inv.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/mid_prod.hpp",
+    "poly/multi_ntt.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/multi_inte.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "869 ms"
+memory_text = "61544 KB"
+run_id = 779126
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/multi_inte_geo.cpp"]
+path = "test/fps/basic/multi_inte_geo.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11269"
+problem_id = 11269
+dependencies = [
+    "poly/multi_geo.hpp",
+    "mod/all_inv.hpp",
+    "poly/mid_prod.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/multi_inte_geo.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "315 ms"
+memory_text = "37460 KB"
+run_id = 779127
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/poly_divmod.cpp"]
+path = "test/fps/basic/poly_divmod.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11261"
+problem_id = 11261
+dependencies = [
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/fps/basic/poly_divmod.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "299 ms"
+memory_text = "19648 KB"
+run_id = 779128
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_k.cpp"]
@@ -6406,17 +6637,17 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/fps/sing1_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "540 ms"
-memory_text = "24712 KB"
-run_id = 778972
+time_text = "550 ms"
+memory_text = "24592 KB"
+run_id = 779129
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_n.cpp"]
@@ -6436,17 +6667,17 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/fps/sing1_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "244 ms"
-memory_text = "16308 KB"
-run_id = 778973
+time_text = "242 ms"
+memory_text = "16188 KB"
+run_id = 779130
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_k.cpp"]
@@ -6467,17 +6698,17 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/fps/sing2_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "556 ms"
-memory_text = "25128 KB"
-run_id = 778974
+time_text = "544 ms"
+memory_text = "25008 KB"
+run_id = 779131
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_n.cpp"]
@@ -6498,17 +6729,17 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
 
 [tests."test/fps/sing2_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "173 ms"
-memory_text = "21048 KB"
-run_id = 778975
+time_text = "170 ms"
+memory_text = "20928 KB"
+run_id = 779132
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/angle_sort.cpp"]
@@ -6554,6 +6785,121 @@ grade = "100/100"
 time_text = "731 ms"
 memory_text = "46860 KB"
 run_id = 778976
+runtime_error = "Run time error details not Available"
+
+[tests."test/geo/convex_layers.cpp"]
+path = "test/geo/convex_layers.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11260"
+problem_id = 11260
+dependencies = [
+    "ge/ds/convex_layer.hpp",
+    "ge/ds/dynamic_hull_del.hpp",
+    "ge/basic/point.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/geo/convex_layers.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "903 ms"
+memory_text = "56916 KB"
+run_id = 779133
+runtime_error = "Run time error details not Available"
+
+[tests."test/geo/count_point_in_triangle.cpp"]
+path = "test/geo/count_point_in_triangle.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11256"
+problem_id = 11256
+dependencies = [
+    "ge/exp/count_p_in_tri.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/angle_sort.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/geo/count_point_in_triangle.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "150 ms"
+memory_text = "4632 KB"
+run_id = 779134
+runtime_error = "Run time error details not Available"
+
+[tests."test/geo/furthest_pair.cpp"]
+path = "test/geo/furthest_pair.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11257"
+problem_id = 11257
+dependencies = [
+    "ge/pairs/furthest_pair.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/hull.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/geo/furthest_pair.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "218 ms"
+memory_text = "29960 KB"
+run_id = 779135
+runtime_error = "Run time error details not Available"
+
+[tests."test/geo/manhattan_mst.cpp"]
+path = "test/geo/manhattan_mst.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11258"
+problem_id = 11258
+dependencies = [
+    "ds/un/dsu.hpp",
+    "ge/exp/mst.hpp",
+    "ge/basic/point.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/geo/manhattan_mst.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "521 ms"
+memory_text = "36192 KB"
+run_id = 779136
+runtime_error = "Run time error details not Available"
+
+[tests."test/geo/minimum_enclosing_circle.cpp"]
+path = "test/geo/minimum_enclosing_circle.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11259"
+problem_id = 11259
+dependencies = [
+    "ge/exp/minimum_enclosing_circle.hpp",
+    "ge/basic/triangle.hpp",
+    "ge/basic/point.hpp",
+    "ge/basic/dist.hpp",
+    "ge/basic/line.hpp",
+    "ge/basic/segment.hpp",
+    "ge/basic/circle.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
+last_updated_at = "2026-04-06T13:47:51.801552778Z"
+
+[tests."test/geo/minimum_enclosing_circle.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "49 ms"
+memory_text = "8752 KB"
+run_id = 779137
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/static_hull.cpp"]
