@@ -1,7 +1,6 @@
 schema_version = 4
-generated_at = "2026-04-06T13:47:51.801552778Z"
-status = "passed"
-failures = []
+generated_at = "2026-04-06T16:09:36.680799512Z"
+status = "failed"
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -12,35 +11,19 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = [
     "README.md",
-    "ge/basic/circle.hpp",
-    "ge/pairs/furthest_pair.hpp",
-    "po/c/count_terms.hpp",
-    "po/c/ntt.hpp",
-    "po/convolution.hpp",
     "poly/c/fps_t.hpp",
-    "poly/find_root.hpp",
+    "poly/lag.hpp",
     "poly/poly_gcd.hpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_ull.cpp",
+    "poly/poly_inv.hpp",
+    "test/fps/basic/conv_all.cpp",
     "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/geo/convex_layers.cpp",
-    "test/geo/count_point_in_triangle.cpp",
-    "test/geo/furthest_pair.cpp",
-    "test/geo/manhattan_mst.cpp",
-    "test/geo/minimum_enclosing_circle.cpp",
+    "test/fps/basic/fps_sqrt.cpp",
+    "test/fps/basic/lag_iota.cpp",
+    "test/fps/basic/poly_inv.cpp",
+    "test/fps/basic/shift.cpp",
+    "test/sps/sps_comp.cpp",
+    "test/sps/sps_exp.cpp",
+    "test/sps/sps_log.cpp",
 ]
 selected_tests = [
     "test/bigint/add.cpp",
@@ -51,31 +34,34 @@ selected_tests = [
     "test/fps/basic/comp_inv_mtt.cpp",
     "test/fps/basic/conv17.cpp",
     "test/fps/basic/conv99.cpp",
+    "test/fps/basic/conv_all.cpp",
     "test/fps/basic/conv_ull.cpp",
     "test/fps/basic/find_root.cpp",
     "test/fps/basic/fps_exp.cpp",
     "test/fps/basic/fps_inv.cpp",
     "test/fps/basic/fps_log.cpp",
     "test/fps/basic/fps_pow.cpp",
+    "test/fps/basic/fps_sqrt.cpp",
+    "test/fps/basic/lag_iota.cpp",
     "test/fps/basic/multi_eval.cpp",
     "test/fps/basic/multi_eval_geo.cpp",
     "test/fps/basic/multi_inte.cpp",
     "test/fps/basic/multi_inte_geo.cpp",
     "test/fps/basic/poly_divmod.cpp",
+    "test/fps/basic/poly_inv.cpp",
+    "test/fps/basic/shift.cpp",
     "test/fps/sing1_k.cpp",
     "test/fps/sing1_n.cpp",
     "test/fps/sing2_k.cpp",
     "test/fps/sing2_n.cpp",
-    "test/geo/convex_layers.cpp",
-    "test/geo/count_point_in_triangle.cpp",
-    "test/geo/furthest_pair.cpp",
-    "test/geo/manhattan_mst.cpp",
-    "test/geo/minimum_enclosing_circle.cpp",
+    "test/sps/sps_comp.cpp",
+    "test/sps/sps_exp.cpp",
+    "test/sps/sps_log.cpp",
 ]
-total_discovered = 37
-total_selected = 28
-passed = 28
-failed = 0
+total_discovered = 45
+total_selected = 31
+passed = 30
+failed = 1
 invalid = 0
 
 [template_coverage]
@@ -84,7 +70,6 @@ all_passed = [
     "al/m/affine.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
-    "ds/basic/retsu.hpp",
     "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
     "ds/seg/range_sum_point_add.hpp",
@@ -107,41 +92,54 @@ all_passed = [
     "ge/pairs/closest_pair.hpp",
     "ge/pairs/furthest_pair.hpp",
     "mod/all_inv.hpp",
-    "mod/mint_t.hpp",
+    "mod/barrett.hpp",
+    "mod/mod_sqrt.hpp",
     "mod/powtable.hpp",
     "nt/bigint/big.hpp",
     "nt/nim/nimbase.hpp",
     "nt/sbt.hpp",
-    "poly/c/bs.hpp",
-    "poly/c/fps_t.hpp",
     "poly/c/ntt_db.hpp",
     "poly/c/trans_ntt.hpp",
     "poly/comp.hpp",
     "poly/comp_inv.hpp",
+    "poly/conv_all.hpp",
     "poly/conv_ull.hpp",
     "poly/f/stiling_1.hpp",
     "poly/f/stiling_2.hpp",
-    "poly/find_root.hpp",
-    "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
-    "poly/fps_inv.hpp",
     "poly/fps_log.hpp",
     "poly/fps_pow.hpp",
+    "poly/fps_sqrt.hpp",
+    "poly/lag.hpp",
     "poly/mid_prod.hpp",
     "poly/multi.hpp",
     "poly/multi_geo.hpp",
     "poly/multi_ntt.hpp",
-    "poly/poly_divmod.hpp",
-    "poly/poly_gcd.hpp",
-    "poly/poly_modpow.hpp",
+    "poly/poly_inv.hpp",
     "poly/pow_proj.hpp",
     "poly/shift.hpp",
     "poly/subprod.hpp",
     "pr/ptable.hpp",
     "random/hash.hpp",
+    "sps/comp.hpp",
+    "sps/conv.hpp",
+    "sps/conv_inv.hpp",
+    "sps/exp.hpp",
+    "sps/log.hpp",
+]
+has_failures = [
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "poly/find_root.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_inv.hpp",
+    "poly/poly_divmod.hpp",
+    "poly/poly_gcd.hpp",
+    "poly/poly_modpow.hpp",
     "random/rng.hpp",
 ]
-has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -392,7 +390,6 @@ unused = [
     "line/mat_op.hpp",
     "line/solve_line.hpp",
     "mas.hpp",
-    "mod/barrett.hpp",
     "mod/binom.hpp",
     "mod/crt3.hpp",
     "mod/dmint_t.hpp",
@@ -403,7 +400,6 @@ unused = [
     "mod/mint_mongo.hpp",
     "mod/mod_inv.hpp",
     "mod/mod_pow.hpp",
-    "mod/mod_sqrt.hpp",
     "mod/modfast.hpp",
     "mod/modfast_d.hpp",
     "mod/pow_fast.hpp",
@@ -542,7 +538,6 @@ unused = [
     "poly/comp_f_x_plus_1_divx.hpp",
     "poly/comp_short.hpp",
     "poly/comp_slow.hpp",
-    "poly/conv_all.hpp",
     "poly/f/bell.hpp",
     "poly/f/bernoulli.hpp",
     "poly/f/derange.hpp",
@@ -555,9 +550,7 @@ unused = [
     "poly/ffp.hpp",
     "poly/find_line.hpp",
     "poly/fps.hpp",
-    "poly/fps_sqrt.hpp",
     "poly/fps_tri.hpp",
-    "poly/lag.hpp",
     "poly/line_inte.hpp",
     "poly/online_conv.hpp",
     "poly/online_div.hpp",
@@ -627,14 +620,9 @@ unused = [
     "snip/tree/tree_hash.hpp",
     "sps/all.hpp",
     "sps/bit.hpp",
-    "sps/comp.hpp",
-    "sps/conv.hpp",
-    "sps/conv_inv.hpp",
-    "sps/exp.hpp",
     "sps/f/hadamard.hpp",
     "sps/f/zeta.hpp",
     "sps/inv.hpp",
-    "sps/log.hpp",
     "string/SA/SA.hpp",
     "string/SA/SA_H_ver.hpp",
     "string/SA/SA_sim.hpp",
@@ -2694,7 +2682,6 @@ unused = [
 ]
 "poly/fac_large.hpp" = [
     "poly/lag.hpp",
-    "mod/all_inv.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
@@ -2810,7 +2797,6 @@ unused = [
     "poly/fps_log.hpp",
 ]
 "poly/lag.hpp" = [
-    "mod/all_inv.hpp",
     "poly/c/bs.hpp",
     "poly/c/fps_t.hpp",
     "ds/basic/retsu.hpp",
@@ -2919,6 +2905,16 @@ unused = [
     "poly/fps_inv.hpp",
 ]
 "poly/poly_gcd.hpp" = [
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+"poly/poly_inv.hpp" = [
+    "poly/poly_gcd.hpp",
     "poly/poly_divmod.hpp",
     "poly/fps_div.hpp",
     "poly/c/bs.hpp",
@@ -3788,6 +3784,7 @@ unused = [
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -4226,8 +4223,6 @@ unused = [
     "po/lag.hpp",
     "po/multipoint.hpp",
     "po/vandermonde.hpp",
-    "poly/fac_large.hpp",
-    "poly/lag.hpp",
     "poly/multi_geo.hpp",
 ]
 "mod/barrett.hpp" = [
@@ -4476,6 +4471,7 @@ unused = [
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -5209,6 +5205,7 @@ unused = [
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -5291,6 +5288,7 @@ unused = [
     "poly/online_pow.hpp",
     "poly/poly_divmod.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
     "poly/prod_of_f_rk_x.hpp",
@@ -5425,6 +5423,7 @@ unused = [
     "poly/line_inte.hpp",
     "poly/poly_divmod.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/prod_of_f_rk_x.hpp",
     "poly/subset_sum_lm.hpp",
@@ -5485,6 +5484,7 @@ unused = [
     "poly/multi_ntt.hpp",
     "poly/poly_divmod.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/prod_of_f_rk_x.hpp",
     "poly/subprod.hpp",
@@ -5569,9 +5569,14 @@ unused = [
     "poly/find_root.hpp",
     "poly/line_inte.hpp",
     "poly/poly_gcd.hpp",
+    "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
 ]
-"poly/poly_gcd.hpp" = ["poly/find_root.hpp"]
+"poly/poly_gcd.hpp" = [
+    "poly/find_root.hpp",
+    "poly/poly_inv.hpp",
+]
+"poly/poly_inv.hpp" = []
 "poly/poly_modpow.hpp" = ["poly/find_root.hpp"]
 "poly/pow_proj.hpp" = [
     "poly/cc/label_bcc_e.hpp",
@@ -6036,6 +6041,12 @@ unused = [
 ]
 "tr/subtree_hash.hpp" = []
 
+[[failures]]
+path = "test/fps/basic/find_root.cpp"
+status = "failed"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11270"
+message = "Compilation error"
+
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -6048,8 +6059,8 @@ dependencies = [
     "mod/mint_t.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/bigint/add.cpp".last_result]
 status = "passed"
@@ -6057,7 +6068,7 @@ verdict = "Accepted"
 grade = "100/100"
 time_text = "160 ms"
 memory_text = "16992 KB"
-run_id = 779113
+run_id = 779163
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/div.cpp"]
@@ -6072,16 +6083,16 @@ dependencies = [
     "mod/mint_t.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/bigint/div.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1771 ms"
+time_text = "1759 ms"
 memory_text = "25104 KB"
-run_id = 779112
+run_id = 779167
 runtime_error = "Run time error details not Available"
 
 [tests."test/bigint/mul.cpp"]
@@ -6096,16 +6107,16 @@ dependencies = [
     "mod/mint_t.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/bigint/mul.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "360 ms"
+time_text = "363 ms"
 memory_text = "28016 KB"
-run_id = 779111
+run_id = 779168
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/beats_maxminadd.cpp"]
@@ -6207,17 +6218,17 @@ dependencies = [
     "poly/c/trans_ntt.hpp",
     "poly/shift.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/comp.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "826 ms"
+time_text = "822 ms"
 memory_text = "51920 KB"
-run_id = 779114
+run_id = 779165
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/comp_inv.cpp"]
@@ -6237,17 +6248,17 @@ dependencies = [
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/comp_inv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "994 ms"
+time_text = "979 ms"
 memory_text = "13424 KB"
-run_id = 779110
+run_id = 779166
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/comp_inv_mtt.cpp"]
@@ -6267,17 +6278,17 @@ dependencies = [
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/comp_inv_mtt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "4828 ms"
+time_text = "4816 ms"
 memory_text = "24604 KB"
-run_id = 779115
+run_id = 779164
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/conv17.cpp"]
@@ -6290,17 +6301,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/conv17.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "553 ms"
+time_text = "554 ms"
 memory_text = "39524 KB"
-run_id = 779116
+run_id = 779169
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/conv99.cpp"]
@@ -6313,17 +6324,43 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/conv99.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "204 ms"
+time_text = "206 ms"
 memory_text = "16892 KB"
-run_id = 779117
+run_id = 779170
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/conv_all.cpp"]
+path = "test/fps/basic/conv_all.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11272"
+problem_id = 11272
+dependencies = [
+    "poly/conv_all.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/c/ntt_db.hpp",
+    "poly/c/trans_ntt.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/fps/basic/conv_all.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "818 ms"
+memory_text = "48468 KB"
+run_id = 779171
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/conv_ull.cpp"]
@@ -6337,17 +6374,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/conv_ull.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "876 ms"
+time_text = "879 ms"
 memory_text = "57964 KB"
-run_id = 779118
+run_id = 779172
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/find_root.cpp"]
@@ -6368,16 +6405,175 @@ dependencies = [
     "poly/poly_gcd.hpp",
 ]
 last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/find_root.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "639 ms"
-memory_text = "3312 KB"
-run_id = 779119
+status = "failed"
+verdict = "Compilation error"
+grade = "-"
+time_text = "-"
+memory_text = "-"
+run_id = 779173
+compile_error = """
+Main.cc: In instantiation of ‘vc<T> sp_gcd::poly_gcd(vc<T>, vc<T>) [with T = mint_t<998244353>; vc<T> = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’:
+Main.cc:1556:26:   required from ‘fps_t<T>::fps fps_t<T>::poly_gcd(fps_t<T>::cf, fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1568:7:   required from ‘fps_t<T>::fps fps_t<T>::find_root(fps_t<T>::fps) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1595:18:   required from here
+Main.cc:1544:29: error: ‘poly_extgcd’ was not declared in this scope
+ 1544 |     Z F = get<0>(poly_extgcd(f, g));
+      |                  ~~~~~~~~~~~^~~~~~
+Main.cc: In instantiation of ‘static void fps_t<T>::ntr(T*, T*, T*, T*, T*, T*) [with T = mint_t<998244353>]’:
+Main.cc:1070:27:   required from ‘static void fps_t<T>::ntt(fps_t<T>::fps&, bool) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1231:6:   required from ‘static fps_t<T>::fps fps_t<T>::sq_ntt(fps_t<T>::fps) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1257:18:   required from ‘fps_t<T>::fps fps_t<T>::sq(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1440:18:   required from ‘fps_t<T>::fps fps_t<T>::modpow(fps_t<T>::cf, ll, fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&; ll = long long int]’
+Main.cc:1565:7:   required from ‘fps_t<T>::fps fps_t<T>::find_root(fps_t<T>::fps) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1595:18:   required from here
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1059:3: note: in expansion of macro ‘f’
+ 1059 |   f(r, 2);
+      |   ^
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1061:3: note: in expansion of macro ‘f’
+ 1061 |   f(b, 3);
+      |   ^
+Main.cc: In instantiation of ‘static void fps_t<T>::ntr(T*, T*, T*, T*, T*, T*) [with T = mint_t<167772161>]’:
+Main.cc:1070:27:   required from ‘static void fps_t<T>::ntt(fps_t<T>::fps&, bool) [with T = mint_t<167772161>; fps_t<T>::fps = std::vector<mint_t<167772161>, std::allocator<mint_t<167772161> > >]’
+Main.cc:1231:6:   required from ‘static fps_t<T>::fps fps_t<T>::sq_ntt(fps_t<T>::fps) [with T = mint_t<167772161>; fps_t<T>::fps = std::vector<mint_t<167772161>, std::allocator<mint_t<167772161> > >]’
+Main.cc:1245:20:   required from ‘fps_t<T>::fps fps_t<T>::sq_mtt(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1260:10:   required from ‘fps_t<T>::fps fps_t<T>::sq(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1440:18:   required from ‘fps_t<T>::fps fps_t<T>::modpow(fps_t<T>::cf, ll, fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&; ll = long long int]’
+Main.cc:1565:7:   required from ‘fps_t<T>::fps fps_t<T>::find_root(fps_t<T>::fps) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1595:18:   required from here
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1059:3: note: in expansion of macro ‘f’
+ 1059 |   f(r, 2);
+      |   ^
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1061:3: note: in expansion of macro ‘f’
+ 1061 |   f(b, 3);
+      |   ^
+Main.cc: In instantiation of ‘static void fps_t<T>::ntr(T*, T*, T*, T*, T*, T*) [with T = mint_t<469762049>]’:
+Main.cc:1070:27:   required from ‘static void fps_t<T>::ntt(fps_t<T>::fps&, bool) [with T = mint_t<469762049>; fps_t<T>::fps = std::vector<mint_t<469762049>, std::allocator<mint_t<469762049> > >]’
+Main.cc:1231:6:   required from ‘static fps_t<T>::fps fps_t<T>::sq_ntt(fps_t<T>::fps) [with T = mint_t<469762049>; fps_t<T>::fps = std::vector<mint_t<469762049>, std::allocator<mint_t<469762049> > >]’
+Main.cc:1246:20:   required from ‘fps_t<T>::fps fps_t<T>::sq_mtt(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1260:10:   required from ‘fps_t<T>::fps fps_t<T>::sq(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1440:18:   required from ‘fps_t<T>::fps fps_t<T>::modpow(fps_t<T>::cf, ll, fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&; ll = long long int]’
+Main.cc:1565:7:   required from ‘fps_t<T>::fps fps_t<T>::find_root(fps_t<T>::fps) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1595:18:   required from here
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1059:3: note: in expansion of macro ‘f’
+ 1059 |   f(r, 2);
+      |   ^
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1061:3: note: in expansion of macro ‘f’
+ 1061 |   f(b, 3);
+      |   ^
+Main.cc: In instantiation of ‘static void fps_t<T>::ntr(T*, T*, T*, T*, T*, T*) [with T = mint_t<754974721>]’:
+Main.cc:1070:27:   required from ‘static void fps_t<T>::ntt(fps_t<T>::fps&, bool) [with T = mint_t<754974721>; fps_t<T>::fps = std::vector<mint_t<754974721>, std::allocator<mint_t<754974721> > >]’
+Main.cc:1231:6:   required from ‘static fps_t<T>::fps fps_t<T>::sq_ntt(fps_t<T>::fps) [with T = mint_t<754974721>; fps_t<T>::fps = std::vector<mint_t<754974721>, std::allocator<mint_t<754974721> > >]’
+Main.cc:1247:20:   required from ‘fps_t<T>::fps fps_t<T>::sq_mtt(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1260:10:   required from ‘fps_t<T>::fps fps_t<T>::sq(fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&]’
+Main.cc:1440:18:   required from ‘fps_t<T>::fps fps_t<T>::modpow(fps_t<T>::cf, ll, fps_t<T>::cf) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >; fps_t<T>::cf = const std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >&; ll = long long int]’
+Main.cc:1565:7:   required from ‘fps_t<T>::fps fps_t<T>::find_root(fps_t<T>::fps) [with T = mint_t<998244353>; fps_t<T>::fps = std::vector<mint_t<998244353>, std::allocator<mint_t<998244353> > >]’
+Main.cc:1595:18:   required from here
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1059:3: note: in expansion of macro ‘f’
+ 1059 |   f(r, 2);
+      |   ^
+Main.cc:40:37: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+   40 | #define FO2(i, a) for (int i = 0; i < (a); ++i)
+      |                                     ^
+Main.cc:38:32: note: in expansion of macro ‘FO2’
+   38 | #define OV(a, b, c, d, e, ...) e
+      |                                ^
+Main.cc:43:18: note: in expansion of macro ‘OV’
+   43 | #define FOR(...) OV(__VA_ARGS__, FO4, FO3, FO2, FO1)(__VA_ARGS__)
+      |                  ^~
+Main.cc:1058:17: note: in expansion of macro ‘FOR’
+ 1058 | #define f(a, g) FOR(i, t - g + 1) a[i] = w[i + g] * s, s *= iw[i + g], i##a[i] = iw[i + g] * c, c *= w[i + g]
+      |                 ^~~
+Main.cc:1061:3: note: in expansion of macro ‘f’
+ 1061 |   f(b, 3);
+      |   ^"""
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/fps_exp.cpp"]
@@ -6391,17 +6587,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/fps_exp.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "329 ms"
+time_text = "333 ms"
 memory_text = "20088 KB"
-run_id = 779120
+run_id = 779174
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/fps_inv.cpp"]
@@ -6415,17 +6611,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/fps_inv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "196 ms"
+time_text = "192 ms"
 memory_text = "10632 KB"
-run_id = 779121
+run_id = 779175
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/fps_log.cpp"]
@@ -6441,17 +6637,17 @@ dependencies = [
     "poly/fps_div.hpp",
     "poly/fps_inv.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/fps_log.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "259 ms"
+time_text = "264 ms"
 memory_text = "15676 KB"
-run_id = 779122
+run_id = 779176
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/fps_pow.cpp"]
@@ -6469,17 +6665,72 @@ dependencies = [
     "poly/fps_inv.hpp",
     "poly/fps_exp.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/fps_pow.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "543 ms"
+time_text = "539 ms"
 memory_text = "24112 KB"
-run_id = 779123
+run_id = 779177
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/fps_sqrt.cpp"]
+path = "test/fps/basic/fps_sqrt.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11274"
+problem_id = 11274
+dependencies = [
+    "poly/fps_sqrt.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_pow.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_exp.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/fps/basic/fps_sqrt.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "223 ms"
+memory_text = "15784 KB"
+run_id = 779178
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/lag_iota.cpp"]
+path = "test/fps/basic/lag_iota.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11273"
+problem_id = 11273
+dependencies = [
+    "poly/lag.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/fps/basic/lag_iota.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "534 ms"
+memory_text = "35424 KB"
+run_id = 779179
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/multi_eval.cpp"]
@@ -6499,17 +6750,17 @@ dependencies = [
     "poly/c/ntt_db.hpp",
     "poly/c/trans_ntt.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/multi_eval.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "385 ms"
+time_text = "379 ms"
 memory_text = "26520 KB"
-run_id = 779124
+run_id = 779180
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/multi_eval_geo.cpp"]
@@ -6525,17 +6776,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/multi_eval_geo.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "173 ms"
+time_text = "170 ms"
 memory_text = "20992 KB"
-run_id = 779125
+run_id = 779181
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/multi_inte.cpp"]
@@ -6555,17 +6806,17 @@ dependencies = [
     "poly/c/ntt_db.hpp",
     "poly/c/trans_ntt.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/multi_inte.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "869 ms"
+time_text = "867 ms"
 memory_text = "61544 KB"
-run_id = 779126
+run_id = 779182
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/multi_inte_geo.cpp"]
@@ -6581,17 +6832,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/multi_inte_geo.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "315 ms"
+time_text = "328 ms"
 memory_text = "37460 KB"
-run_id = 779127
+run_id = 779183
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/poly_divmod.cpp"]
@@ -6607,17 +6858,69 @@ dependencies = [
     "mod/mint_t.hpp",
     "poly/fps_inv.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_trigger = "dependency_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/basic/poly_divmod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "299 ms"
+time_text = "310 ms"
 memory_text = "19648 KB"
-run_id = 779128
+run_id = 779184
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/poly_inv.cpp"]
+path = "test/fps/basic/poly_inv.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11277"
+problem_id = 11277
+dependencies = [
+    "poly/poly_inv.hpp",
+    "poly/poly_gcd.hpp",
+    "poly/poly_divmod.hpp",
+    "poly/fps_div.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+    "poly/fps_inv.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/fps/basic/poly_inv.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "981 ms"
+memory_text = "7868 KB"
+run_id = 779185
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/basic/shift.cpp"]
+path = "test/fps/basic/shift.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11271"
+problem_id = 11271
+dependencies = [
+    "poly/shift.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/fps/basic/shift.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "187 ms"
+memory_text = "26544 KB"
+run_id = 779186
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_k.cpp"]
@@ -6638,16 +6941,16 @@ dependencies = [
     "poly/fps_exp.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/sing1_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "550 ms"
+time_text = "531 ms"
 memory_text = "24592 KB"
-run_id = 779129
+run_id = 779187
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing1_n.cpp"]
@@ -6668,8 +6971,8 @@ dependencies = [
     "poly/fps_exp.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/sing1_n.cpp".last_result]
 status = "passed"
@@ -6677,7 +6980,7 @@ verdict = "Accepted"
 grade = "100/100"
 time_text = "242 ms"
 memory_text = "16188 KB"
-run_id = 779130
+run_id = 779188
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_k.cpp"]
@@ -6699,16 +7002,16 @@ dependencies = [
     "poly/fps_exp.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/sing2_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "544 ms"
+time_text = "553 ms"
 memory_text = "25008 KB"
-run_id = 779131
+run_id = 779189
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_n.cpp"]
@@ -6730,16 +7033,16 @@ dependencies = [
     "poly/fps_exp.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "dea3eed5771f8b4aa7b127ddfd9eafe66e132a22"
-last_updated_at = "2026-04-06T13:47:51.801552778Z"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
 
 [tests."test/fps/sing2_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "170 ms"
+time_text = "188 ms"
 memory_text = "20928 KB"
-run_id = 779132
+run_id = 779190
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/angle_sort.cpp"]
@@ -6957,4 +7260,70 @@ grade = "100/100"
 time_text = "174 ms"
 memory_text = "2696 KB"
 run_id = 778979
+runtime_error = "Run time error details not Available"
+
+[tests."test/sps/sps_comp.cpp"]
+path = "test/sps/sps_comp.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11278"
+problem_id = 11278
+dependencies = [
+    "mod/mint_t.hpp",
+    "sps/comp.hpp",
+    "sps/conv.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/sps/sps_comp.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2407 ms"
+memory_text = "103108 KB"
+run_id = 779191
+runtime_error = "Run time error details not Available"
+
+[tests."test/sps/sps_exp.cpp"]
+path = "test/sps/sps_exp.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11275"
+problem_id = 11275
+dependencies = [
+    "mod/mint_t.hpp",
+    "sps/exp.hpp",
+    "sps/conv.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/sps/sps_exp.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1364 ms"
+memory_text = "98904 KB"
+run_id = 779192
+runtime_error = "Run time error details not Available"
+
+[tests."test/sps/sps_log.cpp"]
+path = "test/sps/sps_log.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11276"
+problem_id = 11276
+dependencies = [
+    "mod/mint_t.hpp",
+    "sps/log.hpp",
+    "sps/conv_inv.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
+last_updated_at = "2026-04-06T16:09:36.680799512Z"
+
+[tests."test/sps/sps_log.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1618 ms"
+memory_text = "98904 KB"
+run_id = 779193
 runtime_error = "Run time error details not Available"
