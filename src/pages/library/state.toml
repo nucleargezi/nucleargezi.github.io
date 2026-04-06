@@ -1,5 +1,5 @@
 schema_version = 2
-generated_at = "2026-04-05T14:35:16.222682488Z"
+generated_at = "2026-04-06T05:32:21.565846489Z"
 status = "passed"
 failures = []
 
@@ -12,7 +12,7 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = []
 selected_tests = []
-total_discovered = 20
+total_discovered = 21
 total_selected = 0
 passed = 0
 failed = 0
@@ -20,13 +20,8 @@ invalid = 0
 
 [template_coverage]
 all_passed = [
-    "IO/IO.hpp",
-    "IO/fast_io.hpp",
-    "aa/head.hpp",
-    "aa/main.hpp",
     "al/m/add.hpp",
     "al/m/affine.hpp",
-    "all.hpp",
     "ds/basic/node_pool.hpp",
     "ds/basic/retsu.hpp",
     "ds/seg/beats/beats_minmax.hpp",
@@ -35,7 +30,6 @@ all_passed = [
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_t.hpp",
     "ge/basic/hull.hpp",
-    "ge/basic/point.hpp",
     "mod/mint_t.hpp",
     "mod/powtable.hpp",
     "nt/bigint/big.hpp",
@@ -58,7 +52,18 @@ all_passed = [
     "poly/shift.hpp",
     "pr/ptable.hpp",
 ]
-has_failures = []
+has_failures = [
+    "IO/IO.hpp",
+    "IO/fast_io.hpp",
+    "aa/head.hpp",
+    "aa/main.hpp",
+    "all.hpp",
+    "ds/basic/hashmap.hpp",
+    "ge/basic/point.hpp",
+    "ge/pairs/closest_pair.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
 unused = [
     "aa/fast.hpp",
     "aa/file_io.hpp",
@@ -136,7 +141,6 @@ unused = [
     "ds/basic/deque.hpp",
     "ds/basic/fset.hpp",
     "ds/basic/fset_del.hpp",
-    "ds/basic/hashmap.hpp",
     "ds/basic/pbds.hpp",
     "ds/basic/queue.hpp",
     "ds/basic/unordered_discreate.hpp",
@@ -310,7 +314,6 @@ unused = [
     "ge/exp/mst.hpp",
     "ge/exp/rect_convex_cover.hpp",
     "ge/exp/tri_area_me.hpp",
-    "ge/pairs/closest_pair.hpp",
     "ge/pairs/furthest_pair.hpp",
     "jen/greedy_coins_hack_gen.hpp",
     "jen/magic_square.hpp",
@@ -553,8 +556,6 @@ unused = [
     "pr/zeta_mobius.hpp",
     "random/const_rng.hpp",
     "random/gen.hpp",
-    "random/hash.hpp",
-    "random/rng.hpp",
     "range_of/mo.hpp",
     "range_of/range_closest_pair.hpp",
     "range_on/range_major_voting.hpp",
@@ -1627,6 +1628,23 @@ Secret case: 499999_00.in, Accepted, 21048 KB, 168 ms
 Secret case: 500000_00.in, Accepted, 21048 KB, 173 ms
 Secret case: 5000_00.in, Accepted, 21048 KB, 6 ms"""
 runtime_error = "Run time error details not Available"
+
+[tests."test/geo/cloest_pair.cpp"]
+path = "test/geo/cloest_pair.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11254"
+problem_id = 11254
+dependencies = [
+    "all.hpp",
+    "aa/head.hpp",
+    "IO/IO.hpp",
+    "IO/fast_io.hpp",
+    "ge/pairs/closest_pair.hpp",
+    "ge/basic/point.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/hashmap.hpp",
+    "aa/main.hpp",
+]
 
 [tests."test/geo/static_hull.cpp"]
 path = "test/geo/static_hull.cpp"
