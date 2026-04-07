@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-07T01:49:14.568880695Z"
+generated_at = "2026-04-07T01:49:52.971680078Z"
 status = "passed"
 failures = []
 
@@ -10,11 +10,11 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = []
-selected_tests = []
+changed_paths = ["test/sps/sps_conv.cpp"]
+selected_tests = ["test/sps/sps_conv.cpp"]
 total_discovered = 46
-total_selected = 0
-passed = 0
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
@@ -48,6 +48,7 @@ all_passed = [
     "ge/pairs/furthest_pair.hpp",
     "mod/all_inv.hpp",
     "mod/barrett.hpp",
+    "mod/mint_t.hpp",
     "mod/mod_sqrt.hpp",
     "mod/powtable.hpp",
     "nt/bigint/big.hpp",
@@ -86,14 +87,12 @@ all_passed = [
     "random/hash.hpp",
     "random/rng.hpp",
     "sps/comp.hpp",
+    "sps/conv.hpp",
     "sps/conv_inv.hpp",
     "sps/exp.hpp",
     "sps/log.hpp",
 ]
-has_failures = [
-    "mod/mint_t.hpp",
-    "sps/conv.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -7081,6 +7080,18 @@ dependencies = [
     "mod/mint_t.hpp",
     "sps/conv.hpp",
 ]
+last_trigger = "test_file_changed"
+last_tested_head = "eed96bf62ca74a618fe6b26a91d2092a32938db7"
+last_updated_at = "2026-04-07T01:49:52.971680078Z"
+
+[tests."test/sps/sps_conv.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1683 ms"
+memory_text = "186864 KB"
+run_id = 779199
+runtime_error = "Run time error details not Available"
 
 [tests."test/sps/sps_exp.cpp"]
 path = "test/sps/sps_exp.cpp"
