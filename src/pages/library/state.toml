@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-07T01:49:52.971680078Z"
+generated_at = "2026-04-07T07:31:40.661703581Z"
 status = "passed"
 failures = []
 
@@ -10,11 +10,17 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = ["test/sps/sps_conv.cpp"]
-selected_tests = ["test/sps/sps_conv.cpp"]
-total_discovered = 46
-total_selected = 1
-passed = 1
+changed_paths = [
+    "test/sps/and_conv.cpp",
+    "test/sps/xor_conv.cpp",
+]
+selected_tests = [
+    "test/sps/and_conv.cpp",
+    "test/sps/xor_conv.cpp",
+]
+total_discovered = 48
+total_selected = 2
+passed = 2
 failed = 0
 invalid = 0
 
@@ -86,10 +92,13 @@ all_passed = [
     "pr/ptable.hpp",
     "random/hash.hpp",
     "random/rng.hpp",
+    "sps/bit.hpp",
     "sps/comp.hpp",
     "sps/conv.hpp",
     "sps/conv_inv.hpp",
     "sps/exp.hpp",
+    "sps/f/hadamard.hpp",
+    "sps/f/zeta.hpp",
     "sps/log.hpp",
 ]
 has_failures = []
@@ -572,9 +581,6 @@ unused = [
     "snip/tree/dynamic_treedp.hpp",
     "snip/tree/tree_hash.hpp",
     "sps/all.hpp",
-    "sps/bit.hpp",
-    "sps/f/hadamard.hpp",
-    "sps/f/zeta.hpp",
     "sps/inv.hpp",
     "string/SA/SA.hpp",
     "string/SA/SA_H_ver.hpp",
@@ -7050,6 +7056,29 @@ memory_text = "2696 KB"
 run_id = 778979
 runtime_error = "Run time error details not Available"
 
+[tests."test/sps/and_conv.cpp"]
+path = "test/sps/and_conv.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11280"
+problem_id = 11280
+dependencies = [
+    "mod/mint_t.hpp",
+    "sps/bit.hpp",
+    "sps/f/zeta.hpp",
+    "sps/f/hadamard.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb7b29bffbe9c6ebd5796d746265c6742266e3bb"
+last_updated_at = "2026-04-07T07:31:40.661703581Z"
+
+[tests."test/sps/and_conv.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "162 ms"
+memory_text = "18924 KB"
+run_id = 779239
+runtime_error = "Run time error details not Available"
+
 [tests."test/sps/sps_comp.cpp"]
 path = "test/sps/sps_comp.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11278"
@@ -7135,4 +7164,27 @@ grade = "100/100"
 time_text = "1618 ms"
 memory_text = "98904 KB"
 run_id = 779193
+runtime_error = "Run time error details not Available"
+
+[tests."test/sps/xor_conv.cpp"]
+path = "test/sps/xor_conv.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11281"
+problem_id = 11281
+dependencies = [
+    "mod/mint_t.hpp",
+    "sps/bit.hpp",
+    "sps/f/zeta.hpp",
+    "sps/f/hadamard.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb7b29bffbe9c6ebd5796d746265c6742266e3bb"
+last_updated_at = "2026-04-07T07:31:40.661703581Z"
+
+[tests."test/sps/xor_conv.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "257 ms"
+memory_text = "18924 KB"
+run_id = 779238
 runtime_error = "Run time error details not Available"
