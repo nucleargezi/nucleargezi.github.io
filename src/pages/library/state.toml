@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-07T07:31:40.661703581Z"
+generated_at = "2026-04-08T05:58:10.55607722Z"
 status = "passed"
 failures = []
 
@@ -11,16 +11,28 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
+    "README.md",
+    "nt/nim/nimbase.hpp",
+    "pr/conv_gcd.hpp",
+    "pr/conv_lcm.hpp",
+    "pr/ptable.hpp",
+    "test/pr/conv_gcd.cpp",
+    "test/pr/conv_lcm.cpp",
     "test/sps/and_conv.cpp",
     "test/sps/xor_conv.cpp",
 ]
 selected_tests = [
+    "test/fps/sing2_k.cpp",
+    "test/fps/sing2_n.cpp",
+    "test/nt/nim_prod.cpp",
+    "test/pr/conv_gcd.cpp",
+    "test/pr/conv_lcm.cpp",
     "test/sps/and_conv.cpp",
     "test/sps/xor_conv.cpp",
 ]
-total_discovered = 48
-total_selected = 2
-passed = 2
+total_discovered = 50
+total_selected = 7
+passed = 7
 failed = 0
 invalid = 0
 
@@ -89,7 +101,10 @@ all_passed = [
     "poly/pow_proj.hpp",
     "poly/shift.hpp",
     "poly/subprod.hpp",
+    "pr/conv_gcd.hpp",
+    "pr/conv_lcm.hpp",
     "pr/ptable.hpp",
+    "pr/zeta_mobius.hpp",
     "random/hash.hpp",
     "random/rng.hpp",
     "sps/bit.hpp",
@@ -531,8 +546,6 @@ unused = [
     "poly/sum_of_rationals_sp.hpp",
     "poly/sum_of_shift_binomail.hpp",
     "pr/convex_floor_sum.hpp",
-    "pr/convolution_gcd.hpp",
-    "pr/convolution_lcm.hpp",
     "pr/copr_bas.hpp",
     "pr/crt.hpp",
     "pr/diri.hpp",
@@ -561,7 +574,6 @@ unused = [
     "pr/mobius_table.hpp",
     "pr/psum.hpp",
     "pr/ptest.hpp",
-    "pr/zeta_mobius.hpp",
     "random/const_rng.hpp",
     "random/gen.hpp",
     "range_of/mo.hpp",
@@ -3000,15 +3012,15 @@ unused = [
     "ds/basic/retsu.hpp",
     "mod/mint_t.hpp",
 ]
+"pr/conv_gcd.hpp" = [
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+"pr/conv_lcm.hpp" = [
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
 "pr/convex_floor_sum.hpp" = []
-"pr/convolution_gcd.hpp" = [
-    "pr/zeta_mobius.hpp",
-    "pr/ptable.hpp",
-]
-"pr/convolution_lcm.hpp" = [
-    "pr/zeta_mobius.hpp",
-    "pr/ptable.hpp",
-]
 "pr/copr_bas.hpp" = []
 "pr/crt.hpp" = [
     "mod/barrett.hpp",
@@ -5585,9 +5597,9 @@ unused = [
     "poly/sum_of_exp_bx.hpp",
 ]
 "poly/sum_of_shift_binomail.hpp" = []
+"pr/conv_gcd.hpp" = []
+"pr/conv_lcm.hpp" = []
 "pr/convex_floor_sum.hpp" = []
-"pr/convolution_gcd.hpp" = []
-"pr/convolution_lcm.hpp" = []
 "pr/copr_bas.hpp" = ["pr/crt.hpp"]
 "pr/crt.hpp" = []
 "pr/diri.hpp" = []
@@ -5656,8 +5668,8 @@ unused = [
     "po/sum_of_shift_binomail.hpp",
     "po/taylor.hpp",
     "poly/f/stiling_2.hpp",
-    "pr/convolution_gcd.hpp",
-    "pr/convolution_lcm.hpp",
+    "pr/conv_gcd.hpp",
+    "pr/conv_lcm.hpp",
     "pr/du.hpp",
     "pr/euler_phi.hpp",
     "pr/lpf_table.hpp",
@@ -5682,8 +5694,8 @@ unused = [
 ]
 "pr/zeta_mobius.hpp" = [
     "mod/tetration.hpp",
-    "pr/convolution_gcd.hpp",
-    "pr/convolution_lcm.hpp",
+    "pr/conv_gcd.hpp",
+    "pr/conv_lcm.hpp",
     "pr/du.hpp",
     "pr/euler_phi.hpp",
     "pr/mobius_table.hpp",
@@ -6796,16 +6808,16 @@ dependencies = [
     "poly/fps_exp.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
-last_updated_at = "2026-04-06T16:09:36.680799512Z"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
 
 [tests."test/fps/sing2_k.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "553 ms"
-memory_text = "25008 KB"
-run_id = 779189
+time_text = "567 ms"
+memory_text = "25072 KB"
+run_id = 779394
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/sing2_n.cpp"]
@@ -6827,16 +6839,16 @@ dependencies = [
     "poly/fps_exp.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "6c4df1c159b32c4d3aad7ad2130a38981861a781"
-last_updated_at = "2026-04-06T16:09:36.680799512Z"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
 
 [tests."test/fps/sing2_n.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "188 ms"
-memory_text = "20928 KB"
-run_id = 779190
+time_text = "169 ms"
+memory_text = "21156 KB"
+run_id = 779392
 runtime_error = "Run time error details not Available"
 
 [tests."test/geo/angle_sort.cpp"]
@@ -7025,17 +7037,17 @@ path = "test/nt/nim_prod.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10546"
 problem_id = 10546
 dependencies = ["nt/nim/nimbase.hpp"]
-last_trigger = "manual"
-last_tested_head = "03b38458710f39a41c191792337eff5e8f2b9b68"
-last_updated_at = "2026-04-06T09:26:32.364056189Z"
+last_trigger = "dependency_changed"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
 
 [tests."test/nt/nim_prod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "287 ms"
+time_text = "319 ms"
 memory_text = "3964 KB"
-run_id = 778978
+run_id = 779393
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/sbt.cpp"]
@@ -7056,6 +7068,52 @@ memory_text = "2696 KB"
 run_id = 778979
 runtime_error = "Run time error details not Available"
 
+[tests."test/pr/conv_gcd.cpp"]
+path = "test/pr/conv_gcd.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11293"
+problem_id = 11293
+dependencies = [
+    "mod/mint_t.hpp",
+    "pr/conv_gcd.hpp",
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
+
+[tests."test/pr/conv_gcd.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "157 ms"
+memory_text = "26740 KB"
+run_id = 779391
+runtime_error = "Run time error details not Available"
+
+[tests."test/pr/conv_lcm.cpp"]
+path = "test/pr/conv_lcm.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11294"
+problem_id = 11294
+dependencies = [
+    "mod/mint_t.hpp",
+    "pr/conv_lcm.hpp",
+    "pr/zeta_mobius.hpp",
+    "pr/ptable.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
+
+[tests."test/pr/conv_lcm.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "178 ms"
+memory_text = "26740 KB"
+run_id = 779390
+runtime_error = "Run time error details not Available"
+
 [tests."test/sps/and_conv.cpp"]
 path = "test/sps/and_conv.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11280"
@@ -7067,16 +7125,16 @@ dependencies = [
     "sps/f/hadamard.hpp",
 ]
 last_trigger = "test_file_changed"
-last_tested_head = "cb7b29bffbe9c6ebd5796d746265c6742266e3bb"
-last_updated_at = "2026-04-07T07:31:40.661703581Z"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
 
 [tests."test/sps/and_conv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "162 ms"
+time_text = "185 ms"
 memory_text = "18924 KB"
-run_id = 779239
+run_id = 779395
 runtime_error = "Run time error details not Available"
 
 [tests."test/sps/sps_comp.cpp"]
@@ -7177,14 +7235,14 @@ dependencies = [
     "sps/f/hadamard.hpp",
 ]
 last_trigger = "test_file_changed"
-last_tested_head = "cb7b29bffbe9c6ebd5796d746265c6742266e3bb"
-last_updated_at = "2026-04-07T07:31:40.661703581Z"
+last_tested_head = "1792cc01b5a4de0e43e916899d522b0edd572134"
+last_updated_at = "2026-04-08T05:58:10.55607722Z"
 
 [tests."test/sps/xor_conv.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "257 ms"
+time_text = "270 ms"
 memory_text = "18924 KB"
-run_id = 779238
+run_id = 779396
 runtime_error = "Run time error details not Available"
