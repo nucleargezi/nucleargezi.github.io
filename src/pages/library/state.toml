@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-08T05:58:10.55607722Z"
+generated_at = "2026-04-08T06:58:02.22126266Z"
 status = "passed"
 failures = []
 
@@ -12,27 +12,20 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = [
     "README.md",
-    "nt/nim/nimbase.hpp",
-    "pr/conv_gcd.hpp",
-    "pr/conv_lcm.hpp",
-    "pr/ptable.hpp",
-    "test/pr/conv_gcd.cpp",
-    "test/pr/conv_lcm.cpp",
-    "test/sps/and_conv.cpp",
-    "test/sps/xor_conv.cpp",
+    "conv/min_add_convolution.hpp",
+    "conv/min_plus_conv.hpp",
+    "test/convex/min_plus_c_a.cpp",
+    "test/convex/min_plus_c_c.cpp",
+    "test/convex/min_plus_cc_a.cpp",
 ]
 selected_tests = [
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/nt/nim_prod.cpp",
-    "test/pr/conv_gcd.cpp",
-    "test/pr/conv_lcm.cpp",
-    "test/sps/and_conv.cpp",
-    "test/sps/xor_conv.cpp",
+    "test/convex/min_plus_c_a.cpp",
+    "test/convex/min_plus_c_c.cpp",
+    "test/convex/min_plus_cc_a.cpp",
 ]
-total_discovered = 50
-total_selected = 7
-passed = 7
+total_discovered = 53
+total_selected = 3
+passed = 3
 failed = 0
 invalid = 0
 
@@ -40,6 +33,7 @@ invalid = 0
 all_passed = [
     "al/m/add.hpp",
     "al/m/affine.hpp",
+    "conv/min_plus_conv.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
     "ds/basic/retsu.hpp",
@@ -174,7 +168,6 @@ unused = [
     "al/m/xor.hpp",
     "al/monoid_pow.hpp",
     "conv/max_add_convolution.hpp",
-    "conv/min_add_convolution.hpp",
     "conv/monotone_minima.hpp",
     "debug.hpp",
     "dp/01.hpp",
@@ -737,7 +730,7 @@ unused = [
 "al/m/xor.hpp" = []
 "al/monoid_pow.hpp" = []
 "conv/max_add_convolution.hpp" = []
-"conv/min_add_convolution.hpp" = []
+"conv/min_plus_conv.hpp" = []
 "conv/monotone_minima.hpp" = []
 "debug.hpp" = []
 "dp/01.hpp" = []
@@ -3517,7 +3510,7 @@ unused = [
     "pr/floor_sum.hpp",
 ]
 "conv/max_add_convolution.hpp" = ["dp/01_diff.hpp"]
-"conv/min_add_convolution.hpp" = []
+"conv/min_plus_conv.hpp" = []
 "conv/monotone_minima.hpp" = []
 "debug.hpp" = []
 "dp/01.hpp" = []
@@ -6082,6 +6075,60 @@ grade = "100/100"
 time_text = "363 ms"
 memory_text = "28016 KB"
 run_id = 779168
+runtime_error = "Run time error details not Available"
+
+[tests."test/convex/min_plus_c_a.cpp"]
+path = "test/convex/min_plus_c_a.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11296"
+problem_id = 11296
+dependencies = ["conv/min_plus_conv.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "a458407fc28606c62edffdffb791d569cff10ee7"
+last_updated_at = "2026-04-08T06:58:02.22126266Z"
+
+[tests."test/convex/min_plus_c_a.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "128 ms"
+memory_text = "14828 KB"
+run_id = 779414
+runtime_error = "Run time error details not Available"
+
+[tests."test/convex/min_plus_c_c.cpp"]
+path = "test/convex/min_plus_c_c.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11297"
+problem_id = 11297
+dependencies = ["conv/min_plus_conv.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "a458407fc28606c62edffdffb791d569cff10ee7"
+last_updated_at = "2026-04-08T06:58:02.22126266Z"
+
+[tests."test/convex/min_plus_c_c.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "99 ms"
+memory_text = "10724 KB"
+run_id = 779412
+runtime_error = "Run time error details not Available"
+
+[tests."test/convex/min_plus_cc_a.cpp"]
+path = "test/convex/min_plus_cc_a.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11295"
+problem_id = 11295
+dependencies = ["conv/min_plus_conv.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "a458407fc28606c62edffdffb791d569cff10ee7"
+last_updated_at = "2026-04-08T06:58:02.22126266Z"
+
+[tests."test/convex/min_plus_cc_a.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "377 ms"
+memory_text = "10748 KB"
+run_id = 779413
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/beats_maxminadd.cpp"]
