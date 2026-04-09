@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-09T11:29:38.437634452Z"
+generated_at = "2026-04-09T11:30:44.102605325Z"
 status = "failed"
 
 [repo]
@@ -6484,16 +6484,16 @@ dependencies = [
     "ds/sl/lline.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "4df0471724ad9fccf479eb155e50ab7e0240b988"
-last_updated_at = "2026-04-09T11:29:38.437634452Z"
+last_tested_head = "449b84ee711a79334abfd9d6e5bb15167546e0f2"
+last_updated_at = "2026-04-09T11:30:44.102605325Z"
 
 [tests."test/ds/slope/lict_sp_line.cpp".last_result]
 status = "failed"
 verdict = "Wrong answer"
 grade = "21/100"
-time_text = "128 ms"
+time_text = "132 ms"
 memory_text = "21152 KB"
-run_id = 782053
+run_id = 782054
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/slope/lict_sp_seg.cpp"]
@@ -6505,16 +6505,16 @@ dependencies = [
     "ds/sl/lline.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "4df0471724ad9fccf479eb155e50ab7e0240b988"
-last_updated_at = "2026-04-09T11:29:38.437634452Z"
+last_tested_head = "449b84ee711a79334abfd9d6e5bb15167546e0f2"
+last_updated_at = "2026-04-09T11:30:44.102605325Z"
 
 [tests."test/ds/slope/lict_sp_seg.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "139 ms"
+time_text = "131 ms"
 memory_text = "12280 KB"
-run_id = 782052
+run_id = 782055
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/swag/swag_deque.cpp"]
