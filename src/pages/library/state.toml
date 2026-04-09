@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-09T21:43:09.257326827Z"
+generated_at = "2026-04-09T21:48:15.19196884Z"
 status = "passed"
 failures = []
 
@@ -10,17 +10,11 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = [
-    "ds/seg/beats/seg_beats.hpp",
-    "ds/treap/treap_act.hpp",
-]
-selected_tests = [
-    "test/ds/seg/beats_maxminadd.cpp",
-    "test/ds/treap/treap_am.cpp",
-]
+changed_paths = ["ds/seg/beats/beats_minmax.hpp"]
+selected_tests = ["test/ds/seg/beats_maxminadd.cpp"]
 total_discovered = 76
-total_selected = 2
-passed = 2
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
@@ -6446,16 +6440,16 @@ dependencies = [
     "ds/seg/beats/seg_beats.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "385aefd54587937619be7f50ab519362272cf10c"
-last_updated_at = "2026-04-09T21:43:09.257326827Z"
+last_tested_head = "0a01607683f2f5c4581907bd561a7c4b7ff02b4a"
+last_updated_at = "2026-04-09T21:48:15.19196884Z"
 
 [tests."test/ds/seg/beats_maxminadd.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "935 ms"
+time_text = "947 ms"
 memory_text = "43016 KB"
-run_id = 782091
+run_id = 782092
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
