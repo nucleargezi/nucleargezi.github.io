@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-04-09T21:37:57.572573013Z"
-status = "failed"
+generated_at = "2026-04-09T21:43:09.257326827Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -10,107 +11,33 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "README.md",
-    "al/am/am_base.hpp",
-    "al/am/his_max_add_assign.hpp",
-    "al/am/max_add.hpp",
-    "al/am/max_assign.hpp",
-    "al/am/max_max.hpp",
-    "al/am/max_set.hpp",
-    "al/am/max_set_add.hpp",
-    "al/am/max_sub_array_sum.hpp",
-    "al/am/maxidx_add.hpp",
-    "al/am/maxidx_max.hpp",
-    "al/am/min_add.hpp",
-    "al/am/min_set.hpp",
-    "al/am/min_set_add.hpp",
-    "al/am/mincnt_add.hpp",
-    "al/am/minidx_add.hpp",
-    "al/am/minmax_add.hpp",
-    "al/am/minmax_rev.hpp",
-    "al/am/sum_add.hpp",
-    "al/am/sum_add_set.hpp",
-    "al/am/sum_affine.hpp",
-    "al/am/sum_assign.hpp",
-    "al/am/sum_line_add.hpp",
-    "al/am/sum_mul.hpp",
-    "al/am/sum_rev.hpp",
-    "al/am/xor_or.hpp",
-    "al/m/add_array.hpp",
-    "al/m/add_line.hpp",
-    "al/m/add_pair.hpp",
-    "al/m/add_set.hpp",
-    "al/m/and.hpp",
-    "al/m/assign.hpp",
-    "al/m/dis_substr.hpp",
-    "al/m/floor_sum.hpp",
-    "al/m/his_add_assign.hpp",
-    "al/m/major_voting.hpp",
-    "al/m/major_voting_pro.hpp",
-    "al/m/max.hpp",
-    "al/m/max_his_max.hpp",
-    "al/m/max_subarray_sum.hpp",
-    "al/m/maxidx.hpp",
-    "al/m/minidx.hpp",
-    "al/m/minmax.hpp",
-    "al/m/minmincnt.hpp",
-    "al/m/reverse.hpp",
-    "al/m/set.hpp",
-    "al/m/sp.hpp",
-    "al/m/sub_array_sum.hpp",
-    "al/m/vector_space.hpp",
-    "al/m/xor.hpp",
-    "al/monoid_pow.hpp",
-    "ds/bit/bit01.hpp",
-    "ds/range/major_voting.hpp",
-    "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
-    "ds/seg/seg_t.hpp",
-    "ds/seg/segd_sprase_t.hpp",
-    "ds/seg/segd_t.hpp",
-    "ds/seg/segdl_def_t.hpp",
-    "ds/seg/segdl_t.hpp",
-    "ds/seg/segl_sparse_t.hpp",
-    "ds/seg/segl_t.hpp",
-    "ds/st/st.hpp",
-    "line/01/transpose01.hpp",
-    "test/ds/bit/bit01.cpp",
-    "test/ds/range/mojor_voting.cpp",
-    "test/ds/seg/seg_sp_bina.cpp",
-    "test/ds/seg/seg_t_bina.cpp",
-    "test/ds/seg/segd_bina.cpp",
-    "test/ds/seg/segdl_bina.cpp",
-    "test/ds/slope/lict_persistent.cpp",
+    "ds/treap/treap_act.hpp",
 ]
 selected_tests = [
-    "test/ds/bit/bit01.cpp",
-    "test/ds/range/mojor_voting.cpp",
-    "test/ds/rect_union.cpp",
     "test/ds/seg/beats_maxminadd.cpp",
-    "test/ds/seg/seg_sp_bina.cpp",
-    "test/ds/seg/seg_t_add.cpp",
-    "test/ds/seg/seg_t_bina.cpp",
-    "test/ds/seg/segd.cpp",
-    "test/ds/seg/segd_bina.cpp",
-    "test/ds/seg/segdl_bina.cpp",
-    "test/ds/slope/lict_persistent.cpp",
     "test/ds/treap/treap_am.cpp",
 ]
 total_discovered = 76
-total_selected = 12
-passed = 10
-failed = 2
+total_selected = 2
+passed = 2
+failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
+    "al/am/am_base.hpp",
     "al/am/mincnt_add.hpp",
     "al/am/sum_add.hpp",
+    "al/am/sum_affine.hpp",
+    "al/m/add.hpp",
+    "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/minmincnt.hpp",
     "conv/min_plus_conv.hpp",
     "ds/basic/deque.hpp",
     "ds/basic/hashmap.hpp",
+    "ds/basic/node_pool.hpp",
     "ds/basic/retsu.hpp",
     "ds/bit/bit.hpp",
     "ds/bit/bit01.hpp",
@@ -119,6 +46,8 @@ all_passed = [
     "ds/heap/minmax_heap.hpp",
     "ds/off_line/rectangle_union.hpp",
     "ds/range/major_voting.hpp",
+    "ds/seg/beats/beats_minmax.hpp",
+    "ds/seg/beats/seg_beats.hpp",
     "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
@@ -131,6 +60,7 @@ all_passed = [
     "ds/sl/lict_sp.hpp",
     "ds/sl/lline.hpp",
     "ds/swag.hpp",
+    "ds/treap/treap_act.hpp",
     "ds/un/dsu.hpp",
     "ge/basic/angle_sort.hpp",
     "ge/basic/circle.hpp",
@@ -149,6 +79,7 @@ all_passed = [
     "ge/pairs/furthest_pair.hpp",
     "mod/all_inv.hpp",
     "mod/barrett.hpp",
+    "mod/mint_t.hpp",
     "mod/mod_pow.hpp",
     "mod/mod_sqrt.hpp",
     "mod/powtable.hpp",
@@ -204,17 +135,7 @@ all_passed = [
     "sps/f/zeta.hpp",
     "sps/log.hpp",
 ]
-has_failures = [
-    "al/am/am_base.hpp",
-    "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/seg/beats/beats_minmax.hpp",
-    "ds/seg/beats/seg_beats.hpp",
-    "ds/treap/treap_act.hpp",
-    "mod/mint_t.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -6233,18 +6154,6 @@ unused = [
 ]
 "tr/subtree_hash.hpp" = []
 
-[[failures]]
-path = "test/ds/seg/beats_maxminadd.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/10533"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/treap/treap_am.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11305"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -6537,210 +6446,16 @@ dependencies = [
     "ds/seg/beats/seg_beats.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "03a116cfb9ec122d2f9dcad792d274d4bc79139e"
-last_updated_at = "2026-04-09T21:37:57.572573013Z"
+last_tested_head = "385aefd54587937619be7f50ab519362272cf10c"
+last_updated_at = "2026-04-09T21:43:09.257326827Z"
 
 [tests."test/ds/seg/beats_maxminadd.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 782079
-compile_error = """
-Main.cc: In instantiation of ‘void seg_beats<T>::build(int, auto:43) [with auto:43 = beats_minmax<long long int>::beats_minmax(vc<long long int>&)::<lambda(int)>; T = beats_minmax<long long int>::AM]’:
-Main.cc:746:14:   required from ‘beats_minmax<T>::beats_minmax(vc<T>&) [with T = long long int; vc<T> = std::vector<long long int, std::allocator<long long int> >]’
-Main.cc:767:25:   required from here
-Main.cc:582:13: error: no matching function for call to ‘std::vector<beats_minmax<long long int>::AM::X, std::allocator<beats_minmax<long long int>::AM::X> >::assign(int&, beats_minmax<long long int>::AM::A)’
-  582 |     b.assign(sz, id());
-      |     ~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/11/vector:67,
-                 from /usr/include/c++/11/functional:62,
-                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
-                 from /usr/include/c++/11/algorithm:74,
-                 from Main.cc:2:
-/usr/include/c++/11/bits/stl_vector.h:768:9: note: candidate: ‘template<class _InputIterator, class> void std::vector<_Tp, _Alloc>::assign(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = beats_minmax<long long int>::AM::X; _Alloc = std::allocator<beats_minmax<long long int>::AM::X>]’
-  768 |         assign(_InputIterator __first, _InputIterator __last)
-      |         ^~~~~~
-/usr/include/c++/11/bits/stl_vector.h:768:9: note:   template argument deduction/substitution failed:
-Main.cc:582:13: note:   deduced conflicting types for parameter ‘_InputIterator’ (‘int’ and ‘std::tuple<long long int, long long int, long long int>’)
-  582 |     b.assign(sz, id());
-      |     ~~~~~~~~^~~~~~~~~~
-In file included from /usr/include/c++/11/vector:67,
-                 from /usr/include/c++/11/functional:62,
-                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
-                 from /usr/include/c++/11/algorithm:74,
-                 from Main.cc:2:
-/usr/include/c++/11/bits/stl_vector.h:749:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::assign(std::vector<_Tp, _Alloc>::size_type, const value_type&) [with _Tp = beats_minmax<long long int>::AM::X; _Alloc = std::allocator<beats_minmax<long long int>::AM::X>; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = beats_minmax<long long int>::AM::X]’
-  749 |       assign(size_type __n, const value_type& __val)
-      |       ^~~~~~
-/usr/include/c++/11/bits/stl_vector.h:749:47: note:   no known conversion for argument 2 from ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} to ‘const value_type&’ {aka ‘const beats_minmax<long long int>::AM::X&’}
-  749 |       assign(size_type __n, const value_type& __val)
-      |                             ~~~~~~~~~~~~~~~~~~^~~~~
-/usr/include/c++/11/bits/stl_vector.h:794:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::assign(std::initializer_list<_Tp>) [with _Tp = beats_minmax<long long int>::AM::X; _Alloc = std::allocator<beats_minmax<long long int>::AM::X>]’
-  794 |       assign(initializer_list<value_type> __l)
-      |       ^~~~~~
-/usr/include/c++/11/bits/stl_vector.h:794:7: note:   candidate expects 1 argument, 2 provided
-Main.cc: In instantiation of ‘void seg_beats<T>::push(int) [with T = beats_minmax<long long int>::AM]’:
-Main.cc:607:33:   required from ‘void seg_beats<T>::apply(int, int, seg_beats<T>::A) [with T = beats_minmax<long long int>::AM; seg_beats<T>::A = beats_minmax<long long int>::AM::X]’
-Main.cc:759:44:   required from ‘void beats_minmax<T>::chmin(int, int, T) [with T = long long int]’
-Main.cc:772:16:   required from here
-Main.cc:598:14: error: no match for ‘operator==’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<beats_minmax<long long int>::AM::X>, beats_minmax<long long int>::AM::X>::value_type’ {aka ‘beats_minmax<long long int>::AM::X’} and ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’})
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
-                 from /usr/include/c++/11/bits/char_traits.h:39,
-                 from /usr/include/c++/11/ios:40,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/bits/stl_iterator.h:495:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&) requires requires{{std::operator==::__x->base() == std::operator==::__y->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’ (reversed)
-  495 |     operator==(const reverse_iterator<_IteratorL>& __x,
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/stl_iterator.h:495:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::reverse_iterator<_IteratorL>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
-                 from /usr/include/c++/11/bits/char_traits.h:39,
-                 from /usr/include/c++/11/ios:40,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/bits/stl_iterator.h:1585:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&) requires requires{{std::operator==::__x->base() == std::operator==::__y->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’ (reversed)
- 1585 |     operator==(const move_iterator<_IteratorL>& __x,
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/stl_iterator.h:1585:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::move_iterator<_IteratorL>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/string:41,
-                 from /usr/include/c++/11/bits/locale_classes.h:40,
-                 from /usr/include/c++/11/bits/ios_base.h:41,
-                 from /usr/include/c++/11/ios:42,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/bits/allocator.h:218:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)’ (reversed)
-  218 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/allocator.h:218:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::allocator<_CharT>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/bits/basic_string.h:48,
-                 from /usr/include/c++/11/string:55,
-                 from /usr/include/c++/11/bits/locale_classes.h:40,
-                 from /usr/include/c++/11/bits/ios_base.h:41,
-                 from /usr/include/c++/11/ios:42,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/string_view:541:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)’ (reversed)
-  541 |     operator==(basic_string_view<_CharT, _Traits> __x,
-      |     ^~~~~~~~
-/usr/include/c++/11/string_view:541:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘std::tuple<long long int, long long int, long long int>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/string:55,
-                 from /usr/include/c++/11/bits/locale_classes.h:40,
-                 from /usr/include/c++/11/bits/ios_base.h:41,
-                 from /usr/include/c++/11/ios:42,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/bits/basic_string.h:6248:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)’ (reversed)
- 6248 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/basic_string.h:6248:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/functional:54,
-                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
-                 from /usr/include/c++/11/algorithm:74,
-                 from Main.cc:2:
-/usr/include/c++/11/tuple:1524:5: note: candidate: ‘template<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)’ (reversed)
- 1524 |     operator==(const tuple<_TElements...>& __t,
-      |     ^~~~~~~~
-/usr/include/c++/11/tuple:1524:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘__gnu_cxx::__alloc_traits<std::allocator<beats_minmax<long long int>::AM::X>, beats_minmax<long long int>::AM::X>::value_type’ {aka ‘beats_minmax<long long int>::AM::X’} is not derived from ‘const std::tuple<_UTypes ...>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/functional:59,
-                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
-                 from /usr/include/c++/11/algorithm:74,
-                 from Main.cc:2:
-/usr/include/c++/11/bits/std_function.h:718:5: note: candidate: ‘template<class _Res, class ... _Args> bool std::operator==(const std::function<_Res(_ArgTypes ...)>&, std::nullptr_t)’ (reversed)
-  718 |     operator==(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/std_function.h:718:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::function<_Res(_ArgTypes ...)>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/bits/locale_conv.h:41,
-                 from /usr/include/c++/11/locale:43,
-                 from /usr/include/c++/11/iomanip:43,
-                 from Main.cc:14:
-/usr/include/c++/11/bits/unique_ptr.h:753:5: note: candidate: ‘template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)’ (reversed)
-  753 |     operator==(const unique_ptr<_Tp, _Dp>& __x,
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/unique_ptr.h:753:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/bits/locale_conv.h:41,
-                 from /usr/include/c++/11/locale:43,
-                 from /usr/include/c++/11/iomanip:43,
-                 from Main.cc:14:
-/usr/include/c++/11/bits/unique_ptr.h:760:5: note: candidate: ‘template<class _Tp, class _Dp> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)’ (reversed)
-  760 |     operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/unique_ptr.h:760:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/ranges:44,
-                 from Main.cc:23:
-/usr/include/c++/11/optional:1045:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_eq_t<_Tp, _Up> std::operator==(const std::optional<_Tp>&, const std::optional<_Up>&)’ (reversed)
- 1045 |     operator==(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
-      |     ^~~~~~~~
-/usr/include/c++/11/optional:1045:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::optional<_Tp>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/ranges:44,
-                 from Main.cc:23:
-/usr/include/c++/11/optional:1105:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator==(const std::optional<_Tp>&, std::nullopt_t)’ (reversed)
- 1105 |     operator==(const optional<_Tp>& __lhs, nullopt_t) noexcept
-      |     ^~~~~~~~
-/usr/include/c++/11/optional:1105:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::optional<_Tp>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/ranges:44,
-                 from Main.cc:23:
-/usr/include/c++/11/optional:1173:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_eq_t<_Tp, _Up> std::operator==(const std::optional<_Tp>&, const _Up&)’ (reversed)
- 1173 |     operator==(const optional<_Tp>& __lhs, const _Up& __rhs)
-      |     ^~~~~~~~
-/usr/include/c++/11/optional:1173:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘beats_minmax<long long int>::AM::A’ {aka ‘std::tuple<long long int, long long int, long long int>’} is not derived from ‘const std::optional<_Tp>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/ranges:44,
-                 from Main.cc:23:
-/usr/include/c++/11/optional:1179:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_eq_t<_Up, _Tp> std::operator==(const _Up&, const std::optional<_Tp>&)’ (reversed)
- 1179 |     operator==(const _Up& __lhs, const optional<_Tp>& __rhs)
-      |     ^~~~~~~~
-/usr/include/c++/11/optional:1179:5: note:   template argument deduction/substitution failed:
-Main.cc:598:14: note:   ‘__gnu_cxx::__alloc_traits<std::allocator<beats_minmax<long long int>::AM::X>, beats_minmax<long long int>::AM::X>::value_type’ {aka ‘beats_minmax<long long int>::AM::X’} is not derived from ‘const std::optional<_Tp>’
-  598 |     if (b[i] == id()) return;
-      |         ~~~~~^~~~~~~
-In file included from /usr/include/c++/11/bits/ios_base.h:46,
-                 from /usr/include/c++/11/ios:42,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "935 ms"
+memory_text = "43016 KB"
+run_id = 782091
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
@@ -7098,59 +6813,16 @@ dependencies = [
     "al/am/am_base.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "03a116cfb9ec122d2f9dcad792d274d4bc79139e"
-last_updated_at = "2026-04-09T21:37:57.572573013Z"
+last_tested_head = "385aefd54587937619be7f50ab519362272cf10c"
+last_updated_at = "2026-04-09T21:43:09.257326827Z"
 
 [tests."test/ds/treap/treap_am.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 782089
-compile_error = """
-Main.cc: In instantiation of ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’:
-Main.cc:1104:14:   required from here
-Main.cc:772:9: error: no type named ‘MX’ in ‘using AM = struct a_monoid_sum_affine<mint_t<998244353> >’ {aka ‘struct a_monoid_sum_affine<mint_t<998244353> >’}
-  772 |   using MX = AM::MX;
-      |         ^~
-Main.cc:773:9: error: no type named ‘MA’ in ‘using AM = struct a_monoid_sum_affine<mint_t<998244353> >’ {aka ‘struct a_monoid_sum_affine<mint_t<998244353> >’}
-  773 |   using MA = AM::MA;
-      |         ^~
-Main.cc:792:6: error: no type named ‘MX’ in ‘struct a_monoid_sum_affine<mint_t<998244353> >’
-  792 |   np newnode(const vc<X> &dat) {
-      |      ^~~~~~~
-Main.cc:1037:9: error: no type named ‘MX’ in ‘struct a_monoid_sum_affine<mint_t<998244353> >’
- 1037 |   vc<X> get_all(np x) {
-      |         ^~~~~~~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1109:13: error: ‘using DS = struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’ {aka ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’} has no member named ‘newnode’; did you mean ‘node’?
- 1109 |   np t = ds.newnode(a);
-      |             ^~~~~~~
-      |             node
-Main.cc:1115:26: error: ‘using DS = struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’ {aka ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’} has no member named ‘newnode’; did you mean ‘node’?
- 1115 |       t = ds.merge(l, ds.newnode(x), r);
-      |                          ^~~~~~~
-      |                          node
-Main.cc:1125:14: error: ‘using DS = struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’ {aka ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’} has no member named ‘apply’
- 1125 |       t = ds.apply(t, l, r, {b, c});
-      |              ^~~~~
-Main.cc:1128:16: error: ‘using DS = struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’ {aka ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >’} has no member named ‘prod’
- 1128 |       print(ds.prod(t, l, r));
-      |                ^~~~
-Main.cc:555:28: note: in definition of macro ‘print’
-  555 | #define print(...) println(__VA_ARGS__)
-      |                            ^~~~~~~~~~~
-Main.cc: In instantiation of ‘void treap_act<am, persistent, bsz>::push(treap_act<am, persistent, bsz>::np) [with am = a_monoid_sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<am, persistent, bsz>::np = treap_act<a_monoid_sum_affine<mint_t<998244353> > >::node*]’:
-Main.cc:856:7:   required from ‘treap_act<am, persistent, bsz>::node* treap_act<am, persistent, bsz>::merge(treap_act<am, persistent, bsz>::np, treap_act<am, persistent, bsz>::np) [with am = a_monoid_sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<am, persistent, bsz>::np = treap_act<a_monoid_sum_affine<mint_t<998244353> > >::node*]’
-Main.cc:1119:19:   required from here
-Main.cc:816:18: error: ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >::node’ has no member named ‘f’
-  816 |     bool lz = x->f != MA::unit();
-      |               ~~~^
-Main.cc:821:15: error: ‘struct treap_act<a_monoid_sum_affine<mint_t<998244353> > >::node’ has no member named ‘mx’
-  821 |         x->l->mx = AM::act(x->l->mx, x->f, 1);
-      |         ~~~~~~^~
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2635 ms"
+memory_text = "45464 KB"
+run_id = 782090
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/comp.cpp"]
