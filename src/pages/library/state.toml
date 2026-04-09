@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-09T11:17:26.935433834Z"
+generated_at = "2026-04-09T11:25:19.821323043Z"
 status = "failed"
 
 [repo]
@@ -9,121 +9,14 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = [
-    "README.md",
-    "all.hpp",
-    "ds/basic/bs_sim.hpp",
-    "ds/basic/deque.hpp",
-    "ds/basic/queue.hpp",
-    "ds/dynamic_array.hpp",
-    "ds/heap/erase_heap.hpp",
-    "ds/heap/minmax_heap.hpp",
-    "ds/off_line/rectangle_union.hpp",
-    "ds/seg/lichao_seg_t.hpp",
-    "ds/seg/seg_premax_t.hpp",
-    "ds/sl/cht.hpp",
-    "ds/sl/lict.hpp",
-    "ds/sl/lict_d.hpp",
-    "ds/sl/lict_sp.hpp",
-    "ds/sl/lline.hpp",
-    "ds/swag.hpp",
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/ds/bs/deque.cpp",
-    "test/ds/bs/hashmap.cpp",
-    "test/ds/dynamic_arr.cpp",
-    "test/ds/minmax_heap.cpp",
-    "test/ds/rect_union.cpp",
-    "test/ds/seg/beats_maxminadd.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/seg_t_add.cpp",
-    "test/ds/seg/segd.cpp",
-    "test/ds/seg/segdl.hpp",
-    "test/ds/slope/cht_max.cpp",
-    "test/ds/slope/cht_min.cpp",
-    "test/ds/slope/lict_d_line.cpp",
-    "test/ds/slope/lict_d_seg.cpp",
-    "test/ds/slope/lict_seg.cpp",
-    "test/ds/slope/lict_sp_line.cpp",
-    "test/ds/slope/lict_sp_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/treap/treap_am.cpp",
-]
+changed_paths = ["ds/sl/lict_sp.hpp"]
 selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/convex/min_plus_c_a.cpp",
-    "test/convex/min_plus_c_c.cpp",
-    "test/convex/min_plus_cc_a.cpp",
-    "test/ds/bs/deque.cpp",
-    "test/ds/bs/hashmap.cpp",
-    "test/ds/dynamic_arr.cpp",
-    "test/ds/minmax_heap.cpp",
-    "test/ds/rect_union.cpp",
-    "test/ds/seg/beats_maxminadd.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/seg_t_add.cpp",
-    "test/ds/seg/segd.cpp",
-    "test/ds/slope/cht_max.cpp",
-    "test/ds/slope/cht_min.cpp",
-    "test/ds/slope/lict_d_line.cpp",
-    "test/ds/slope/lict_d_seg.cpp",
-    "test/ds/slope/lict_seg.cpp",
     "test/ds/slope/lict_sp_line.cpp",
     "test/ds/slope/lict_sp_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/treap/treap_am.cpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_all.cpp",
-    "test/fps/basic/conv_multi_2n.cpp",
-    "test/fps/basic/conv_multi_p.cpp",
-    "test/fps/basic/conv_ull.cpp",
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/fps/basic/lag_iota.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/fps/basic/poly_inv.cpp",
-    "test/fps/basic/shift.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/geo/angle_sort.cpp",
-    "test/geo/cloest_pair.cpp",
-    "test/geo/convex_layers.cpp",
-    "test/geo/count_point_in_triangle.cpp",
-    "test/geo/furthest_pair.cpp",
-    "test/geo/manhattan_mst.cpp",
-    "test/geo/minimum_enclosing_circle.cpp",
-    "test/geo/static_hull.cpp",
-    "test/nt/nim_prod.cpp",
-    "test/nt/sbt.cpp",
-    "test/pr/conv_gcd.cpp",
-    "test/pr/conv_lcm.cpp",
-    "test/sps/and_conv.cpp",
-    "test/sps/sps_comp.cpp",
-    "test/sps/sps_conv.cpp",
-    "test/sps/sps_exp.cpp",
-    "test/sps/sps_log.cpp",
-    "test/sps/xor_conv.cpp",
 ]
 total_discovered = 69
-total_selected = 69
-passed = 67
+total_selected = 2
+passed = 0
 failed = 2
 invalid = 0
 
@@ -6596,17 +6489,17 @@ dependencies = [
     "ds/sl/lict_sp.hpp",
     "ds/sl/lline.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "18cb8fa79b55309eb9f5eed8db2d563fe548c3e5"
-last_updated_at = "2026-04-09T11:17:26.935433834Z"
+last_trigger = "dependency_changed"
+last_tested_head = "e86b88ec1920f4636a6c1c4d40a51354fd17ae2c"
+last_updated_at = "2026-04-09T11:25:19.821323043Z"
 
 [tests."test/ds/slope/lict_sp_line.cpp".last_result]
 status = "failed"
 verdict = "Wrong answer"
 grade = "14/100"
-time_text = "155 ms"
+time_text = "142 ms"
 memory_text = "21152 KB"
-run_id = 782001
+run_id = 782051
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/slope/lict_sp_seg.cpp"]
@@ -6617,17 +6510,17 @@ dependencies = [
     "ds/sl/lict_sp.hpp",
     "ds/sl/lline.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "18cb8fa79b55309eb9f5eed8db2d563fe548c3e5"
-last_updated_at = "2026-04-09T11:17:26.935433834Z"
+last_trigger = "dependency_changed"
+last_tested_head = "e86b88ec1920f4636a6c1c4d40a51354fd17ae2c"
+last_updated_at = "2026-04-09T11:25:19.821323043Z"
 
 [tests."test/ds/slope/lict_sp_seg.cpp".last_result]
 status = "failed"
 verdict = "Wrong answer"
 grade = "0/100"
-time_text = "145 ms"
+time_text = "130 ms"
 memory_text = "12280 KB"
-run_id = 782002
+run_id = 782050
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/swag/swag_deque.cpp"]
