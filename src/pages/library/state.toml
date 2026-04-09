@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-04-09T11:31:50.866926075Z"
-status = "failed"
+generated_at = "2026-04-09T11:35:29.5677001Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -16,8 +17,8 @@ selected_tests = [
 ]
 total_discovered = 69
 total_selected = 2
-passed = 1
-failed = 1
+passed = 2
+failed = 0
 invalid = 0
 
 [template_coverage]
@@ -45,6 +46,8 @@ all_passed = [
     "ds/sl/cht.hpp",
     "ds/sl/lict.hpp",
     "ds/sl/lict_d.hpp",
+    "ds/sl/lict_sp.hpp",
+    "ds/sl/lline.hpp",
     "ds/swag.hpp",
     "ds/treap/treap_act.hpp",
     "ds/un/dsu.hpp",
@@ -121,10 +124,7 @@ all_passed = [
     "sps/f/zeta.hpp",
     "sps/log.hpp",
 ]
-has_failures = [
-    "ds/sl/lict_sp.hpp",
-    "ds/sl/lline.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -6050,12 +6050,6 @@ unused = [
 ]
 "tr/subtree_hash.hpp" = []
 
-[[failures]]
-path = "test/ds/slope/lict_sp_line.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11306"
-message = "Wrong answer"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -6484,16 +6478,16 @@ dependencies = [
     "ds/sl/lline.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "97279c5159ac2314e9a1387b132060352ffc7999"
-last_updated_at = "2026-04-09T11:31:50.866926075Z"
+last_tested_head = "af2f4ae900f60722af3b9d639dd4c28a1350bc68"
+last_updated_at = "2026-04-09T11:35:29.5677001Z"
 
 [tests."test/ds/slope/lict_sp_line.cpp".last_result]
-status = "failed"
-verdict = "Wrong answer"
-grade = "21/100"
-time_text = "143 ms"
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "225 ms"
 memory_text = "21152 KB"
-run_id = 782056
+run_id = 782058
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/slope/lict_sp_seg.cpp"]
@@ -6505,16 +6499,16 @@ dependencies = [
     "ds/sl/lline.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "97279c5159ac2314e9a1387b132060352ffc7999"
-last_updated_at = "2026-04-09T11:31:50.866926075Z"
+last_tested_head = "af2f4ae900f60722af3b9d639dd4c28a1350bc68"
+last_updated_at = "2026-04-09T11:35:29.5677001Z"
 
 [tests."test/ds/slope/lict_sp_seg.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "139 ms"
+time_text = "142 ms"
 memory_text = "12280 KB"
-run_id = 782057
+run_id = 782059
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/swag/swag_deque.cpp"]
