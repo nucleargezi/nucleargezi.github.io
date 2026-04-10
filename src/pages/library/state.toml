@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-10T06:14:33.392347398Z"
+generated_at = "2026-04-10T06:26:18.984429672Z"
 status = "passed"
 failures = []
 
@@ -12,45 +12,12 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = [
     "README.md",
-    "ds/seg/range_max_add.hpp",
-    "ds/seg/range_min_add.hpp",
-    "ds/treap/treap_act.hpp",
-    "ds/treap/treap_monoid.hpp",
-    "ds/treap/treap_monoid_commute.hpp",
-    "ds/wave/wave_mat_sim.hpp",
-    "test/ds/bit/bit01_1.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/fset.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/range_max_add.cpp",
-    "test/ds/seg/range_min_add.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_rev0.cpp",
-    "test/ds/treap/treap_rev1.cpp",
-    "test/ds/treap/treap_rev2.cpp",
-    "test/ds/wave_matrix/wm_kth.cpp",
+    "test/ds/seg/range_assign.cpp",
 ]
-selected_tests = [
-    "test/ds/bit/bit01_1.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/fset.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/range_max_add.cpp",
-    "test/ds/seg/range_min_add.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_am.cpp",
-    "test/ds/treap/treap_rev0.cpp",
-    "test/ds/treap/treap_rev1.cpp",
-    "test/ds/treap/treap_rev2.cpp",
-    "test/ds/wave_matrix/wm_kth.cpp",
-]
-total_discovered = 101
-total_selected = 14
-passed = 14
+selected_tests = ["test/ds/seg/range_assign.cpp"]
+total_discovered = 102
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
@@ -64,6 +31,7 @@ all_passed = [
     "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/minmincnt.hpp",
+    "al/monoid_pow.hpp",
     "conv/min_plus_conv.hpp",
     "debug.hpp",
     "ds/basic/bs_sim.hpp",
@@ -84,6 +52,7 @@ all_passed = [
     "ds/range/major_voting.hpp",
     "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
+    "ds/seg/range_assign_seg.hpp",
     "ds/seg/range_max_add.hpp",
     "ds/seg/range_min_add.hpp",
     "ds/seg/range_sum_point_add.hpp",
@@ -225,7 +194,6 @@ unused = [
     "al/m/sp.hpp",
     "al/m/sub_array_sum.hpp",
     "al/m/xor.hpp",
-    "al/monoid_pow.hpp",
     "conv/max_add_convolution.hpp",
     "conv/monotone_minima.hpp",
     "dp/01.hpp",
@@ -276,7 +244,6 @@ unused = [
     "ds/seg/beats/beats_chmin.hpp",
     "ds/seg/beats/beats_no_sum.hpp",
     "ds/seg/beats/ktt.hpp",
-    "ds/seg/range_assign_seg.hpp",
     "ds/seg/seg_premax_t.hpp",
     "ds/seg/segdl_def_t.hpp",
     "ds/seg/segl_sparse_t.hpp",
@@ -6828,6 +6795,31 @@ grade = "100/100"
 time_text = "997 ms"
 memory_text = "12688 KB"
 run_id = 782156
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/seg/range_assign.cpp"]
+path = "test/ds/seg/range_assign.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11324"
+problem_id = 11324
+dependencies = [
+    "mod/mint_t.hpp",
+    "ds/seg/range_assign_seg.hpp",
+    "al/monoid_pow.hpp",
+    "ds/basic/fset.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/m/affine.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "0fd6c773ecb99cf5a5e55a9288852fec74f8a1c7"
+last_updated_at = "2026-04-10T06:26:18.984429672Z"
+
+[tests."test/ds/seg/range_assign.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "733 ms"
+memory_text = "17072 KB"
+run_id = 782168
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_max_add.cpp"]
