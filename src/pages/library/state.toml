@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-04-11T13:55:59.749092427Z"
-status = "failed"
+generated_at = "2026-04-11T13:57:49.976399235Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -13,8 +14,8 @@ changed_paths = ["test/fps/basic/comp_inv_mtt.cpp"]
 selected_tests = ["test/fps/basic/comp_inv_mtt.cpp"]
 total_discovered = 102
 total_selected = 1
-passed = 0
-failed = 1
+passed = 1
+failed = 0
 invalid = 0
 
 [template_coverage]
@@ -35,6 +36,7 @@ all_passed = [
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
+    "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
     "ds/bit/bit.hpp",
     "ds/bit/bit01.hpp",
@@ -88,6 +90,7 @@ all_passed = [
     "ge/pairs/furthest_pair.hpp",
     "mod/all_inv.hpp",
     "mod/barrett.hpp",
+    "mod/mint_t.hpp",
     "mod/mod_pow.hpp",
     "mod/mod_sqrt.hpp",
     "mod/powtable.hpp",
@@ -95,9 +98,12 @@ all_passed = [
     "nt/bigint/big.hpp",
     "nt/nim/nimbase.hpp",
     "nt/sbt.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
     "poly/c/ntt_db.hpp",
     "poly/c/trans_ntt.hpp",
     "poly/comp.hpp",
+    "poly/comp_inv.hpp",
     "poly/conv_all.hpp",
     "poly/conv_multi_2n.hpp",
     "poly/conv_multi_p.hpp",
@@ -105,6 +111,11 @@ all_passed = [
     "poly/f/stiling_1.hpp",
     "poly/f/stiling_2.hpp",
     "poly/find_root.hpp",
+    "poly/fps_div.hpp",
+    "poly/fps_exp.hpp",
+    "poly/fps_inv.hpp",
+    "poly/fps_log.hpp",
+    "poly/fps_pow.hpp",
     "poly/fps_sqrt.hpp",
     "poly/lag.hpp",
     "poly/mid_prod.hpp",
@@ -115,6 +126,7 @@ all_passed = [
     "poly/poly_gcd.hpp",
     "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
+    "poly/pow_proj.hpp",
     "poly/shift.hpp",
     "poly/subprod.hpp",
     "pr/conv_gcd.hpp",
@@ -134,19 +146,7 @@ all_passed = [
     "sps/f/zeta.hpp",
     "sps/log.hpp",
 ]
-has_failures = [
-    "ds/basic/retsu.hpp",
-    "mod/mint_t.hpp",
-    "poly/c/bs.hpp",
-    "poly/c/fps_t.hpp",
-    "poly/comp_inv.hpp",
-    "poly/fps_div.hpp",
-    "poly/fps_exp.hpp",
-    "poly/fps_inv.hpp",
-    "poly/fps_log.hpp",
-    "poly/fps_pow.hpp",
-    "poly/pow_proj.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -6092,12 +6092,6 @@ unused = [
 ]
 "tr/subtree_hash.hpp" = []
 
-[[failures]]
-path = "test/fps/basic/comp_inv_mtt.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/10538"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -7446,216 +7440,16 @@ dependencies = [
     "poly/pow_proj.hpp",
 ]
 last_trigger = "test_file_changed"
-last_tested_head = "f24a4cf10b06f112bb87bc168a5536a424e4c534"
-last_updated_at = "2026-04-11T13:55:59.749092427Z"
+last_tested_head = "6472af4a6699096b7057191bd4f73fce023d7eb2"
+last_updated_at = "2026-04-11T13:57:49.976399235Z"
 
 [tests."test/fps/basic/comp_inv_mtt.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 782429
-compile_error = """
-Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-Main.cc:134:21: error: no match for ‘operator>>’ (operand types are ‘fio::Fin’ and ‘test_mod<998244353>’)
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-Main.cc:415:17: note: candidate: ‘template<class T>  requires (is_integral_v<T>) || (is_same_v<T, i128>) || (is_same_v<T, u128>) fio::Fin& fio::Fin::operator>>(T&)’
-  415 |     inline Fin &operator>>(T &x) {
-      |                 ^~~~~~~~
-Main.cc:415:17: note:   template argument deduction/substitution failed:
-Main.cc:415:17: note: constraints not satisfied
-Main.cc: In substitution of ‘template<class T>  requires (is_integral_v<T>) || (is_same_v<T, i128>) || (is_same_v<T, u128>) fio::Fin& fio::Fin::operator>>(T&) [with T = test_mod<998244353>]’:
-Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-Main.cc:415:17:   required by the constraints of ‘template<class T>  requires (is_integral_v<T>) || (is_same_v<T, i128>) || (is_same_v<T, u128>) fio::Fin& fio::Fin::operator>>(T&)’
-Main.cc:414:56: note: no operand of the disjunction is satisfied
-  414 |     TE requires(is_integral_v<T> or is_same_v<T, i128> or is_same_v<T, u128>)
-      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
-Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-cc1plus: note: set ‘-fconcepts-diagnostics-depth=’ to at least 2 for more detail
-Main.cc:421:17: note: candidate: ‘template<class T>  requires (is_floating_point_v<T>) || (is_same_v<T, f128>) fio::Fin& fio::Fin::operator>>(T&)’
-  421 |     inline Fin &operator>>(T &x){
-      |                 ^~~~~~~~
-Main.cc:421:17: note:   template argument deduction/substitution failed:
-Main.cc:421:17: note: constraints not satisfied
-Main.cc: In substitution of ‘template<class T>  requires (is_floating_point_v<T>) || (is_same_v<T, f128>) fio::Fin& fio::Fin::operator>>(T&) [with T = test_mod<998244353>]’:
-Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-Main.cc:421:17:   required by the constraints of ‘template<class T>  requires (is_floating_point_v<T>) || (is_same_v<T, f128>) fio::Fin& fio::Fin::operator>>(T&)’
-Main.cc:420:40: note: no operand of the disjunction is satisfied
-  420 |     TE requires(is_floating_point_v<T> or is_same_v<T, f128>)
-      |                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
-Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-Main.cc:404:17: note: candidate: ‘fio::Fin& fio::Fin::operator>>(char&)’
-  404 |     inline Fin &operator>>(char &c) {
-      |                 ^~~~~~~~
-Main.cc:404:34: note:   no known conversion for argument 1 from ‘test_mod<998244353>’ to ‘char&’
-  404 |     inline Fin &operator>>(char &c) {
-      |                            ~~~~~~^
-Main.cc:409:17: note: candidate: ‘fio::Fin& fio::Fin::operator>>(std::string&)’
-  409 |     inline Fin &operator>>(string &s) {
-      |                 ^~~~~~~~
-Main.cc:409:36: note:   no known conversion for argument 1 from ‘test_mod<998244353>’ to ‘std::string&’ {aka ‘std::__cxx11::basic_string<char>&’}
-  409 |     inline Fin &operator>>(string &s) {
-      |                            ~~~~~~~~^
-Main.cc:114:4: note: candidate: ‘template<class I, class ... S>  requires  can_in<I> I& operator>>(I&, std::tuple<_UTypes ...>&)’
-  114 | I &operator>>(I &in, tuple<S...> &a) {
-      |    ^~~~~~~~
-Main.cc:114:4: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘test_mod<998244353>’ is not derived from ‘std::tuple<_UTypes ...>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-Main.cc:121:4: note: candidate: ‘template<class I, class A, class B>  requires  can_in<I> I& operator>>(I&, std::pair<_OIter1, _OIter2>&)’
-  121 | I &operator>>(I &in, pair<A, B> &x) {
-      |    ^~~~~~~~
-Main.cc:121:4: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘test_mod<998244353>’ is not derived from ‘std::pair<_OIter1, _OIter2>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-Main.cc:133:4: note: candidate: ‘template<class I, class T>  requires  can_in<I> I& operator>>(I&, vc<T>&)’
-  133 | I &operator>>(I &in, vc<T> &a) {
-      |    ^~~~~~~~
-Main.cc:133:4: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘test_mod<998244353>’ is not derived from ‘vc<T>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-Main.cc:150:4: note: candidate: ‘template<class I, class T, int N>  requires  can_in<I> I& operator>>(I&, std::array<T, N>&)’
-  150 | I &operator>>(I &in, array<T, N> &a) {
-      |    ^~~~~~~~
-Main.cc:150:4: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘test_mod<998244353>’ is not derived from ‘std::array<T, N>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-Main.cc:584:4: note: candidate: ‘template<class I, class T>  requires  can_in<I> I& operator>>(I&, retsu<T>&)’
-  584 | I &operator>>(I &in, retsu<T> &a) {
-      |    ^~~~~~~~
-Main.cc:584:4: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘test_mod<998244353>’ is not derived from ‘retsu<T>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/string:56,
-                 from /usr/include/c++/11/bits/locale_classes.h:40,
-                 from /usr/include/c++/11/bits/ios_base.h:41,
-                 from /usr/include/c++/11/ios:42,
-                 from /usr/include/c++/11/ostream:38,
-                 from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/bits/basic_string.tcc:1485:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
- 1485 |     operator>>(basic_istream<_CharT, _Traits>& __in,
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/basic_string.tcc:1485:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/istream:1016,
-                 from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/bits/istream.tcc:958:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT&)’
-  958 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT& __c)
-      |     ^~~~~~~~
-/usr/include/c++/11/bits/istream.tcc:958:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/istream:756:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char&)’
-  756 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char& __c)
-      |     ^~~~~~~~
-/usr/include/c++/11/istream:756:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<char, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/istream:761:5: note: candidate: ‘template<class _Traits> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char&)’
-  761 |     operator>>(basic_istream<char, _Traits>& __in, signed char& __c)
-      |     ^~~~~~~~
-/usr/include/c++/11/istream:761:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<char, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/istream:859:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Num> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, _CharT (&)[_Num])’
-  859 |     operator>>(basic_istream<_CharT, _Traits>& __in, _CharT (&__s)[_Num])
-      |     ^~~~~~~~
-/usr/include/c++/11/istream:859:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/istream:868:5: note: candidate: ‘template<class _Traits, long unsigned int _Num> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, unsigned char (&)[_Num])’
-  868 |     operator>>(basic_istream<char, _Traits>& __in, unsigned char (&__s)[_Num])
-      |     ^~~~~~~~
-/usr/include/c++/11/istream:868:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<char, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/istream:873:5: note: candidate: ‘template<class _Traits, long unsigned int _Num> std::basic_istream<char, _Traits>& std::operator>>(std::basic_istream<char, _Traits>&, signed char (&)[_Num])’
-  873 |     operator>>(basic_istream<char, _Traits>& __in, signed char (&__s)[_Num])
-      |     ^~~~~~~~
-/usr/include/c++/11/istream:873:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<char, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from /usr/include/c++/11/iostream:40,
-                 from Main.cc:1:
-/usr/include/c++/11/istream:1006:5: note: candidate: ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&)’
- 1006 |     operator>>(_Istream&& __is, _Tp&& __x)
-      |     ^~~~~~~~
-/usr/include/c++/11/istream:1006:5: note:   template argument deduction/substitution failed:
-/usr/include/c++/11/istream: In substitution of ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = fio::Fin&; _Tp = test_mod<998244353>&]’:
-Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-/usr/include/c++/11/istream:1006:5: error: template constraint failure for ‘template<class _Is, class _Tp>  requires (__derived_from_ios_base<_Is>) && requires(_Is& __is, _Tp&& __t) {__is >> (forward<_Tp>)(__t);} using __rvalue_stream_extraction_t = _Is&&’
-/usr/include/c++/11/istream:1006:5: note: constraints not satisfied
-In file included from /usr/include/c++/11/iostream:39,
-                 from Main.cc:1:
-/usr/include/c++/11/ostream: In substitution of ‘template<class _Is, class _Tp>  requires (__derived_from_ios_base<_Is>) && requires(_Is& __is, _Tp&& __t) {__is >> (forward<_Tp>)(__t);} using __rvalue_stream_extraction_t = _Is&& [with _Is = fio::Fin&; _Tp = test_mod<998244353>&]’:
-/usr/include/c++/11/istream:1006:5:   required by substitution of ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = fio::Fin&; _Tp = test_mod<998244353>&]’
-Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-/usr/include/c++/11/ostream:717:13:   required for the satisfaction of ‘__derived_from_ios_base<_Is>’ [with _Is = fio::Fin&]
-/usr/include/c++/11/ostream:717:39: note: the expression ‘is_class_v<_Tp> [with _Tp = fio::Fin&]’ evaluated to ‘false’
-  717 |     concept __derived_from_ios_base = is_class_v<_Tp>
-      |                                       ^~~~~~~~~~~~~~~
-In file included from Main.cc:4:
-Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
-Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1889:3:   required from here
-/usr/include/c++/11/bitset:1472:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::bitset<_Nb>&)’
- 1472 |     operator>>(std::basic_istream<_CharT, _Traits>& __is, bitset<_Nb>& __x)
-      |     ^~~~~~~~
-/usr/include/c++/11/bitset:1472:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from Main.cc:14:
-/usr/include/c++/11/iomanip:71:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Resetiosflags)’
-   71 |     operator>>(basic_istream<_CharT, _Traits>& __is, _Resetiosflags __f)
-      |     ^~~~~~~~
-/usr/include/c++/11/iomanip:71:5: note:   template argument deduction/substitution failed:
-Main.cc:134:21: note:   ‘fio::Fin’ is not derived from ‘std::basic_istream<_CharT, _Traits>’
-  134 |   for (Z &x : a) in >> x;
-      |                  ~~~^~~~
-In file included from Main.cc:14:
-/usr/include/c++/11/iomanip:101:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::_Setiosflags)’"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "4669 ms"
+memory_text = "24604 KB"
+run_id = 782430
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/conv17.cpp"]
