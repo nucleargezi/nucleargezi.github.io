@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-11T13:50:03.054602034Z"
+generated_at = "2026-04-11T13:55:59.749092427Z"
 status = "failed"
 
 [repo]
@@ -9,121 +9,11 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = [
-    "IO/fio.hpp",
-    "ge/basic/point.hpp",
-    "nt/bigint/big.hpp",
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-]
-selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/convex/min_plus_c_a.cpp",
-    "test/convex/min_plus_c_c.cpp",
-    "test/convex/min_plus_cc_a.cpp",
-    "test/ds/bit/bit01.cpp",
-    "test/ds/bit/bit01_1.cpp",
-    "test/ds/bit/bit2.cpp",
-    "test/ds/bs/deque.cpp",
-    "test/ds/bs/hashmap.cpp",
-    "test/ds/dsu/dsu_persistent.cpp",
-    "test/ds/dynamic_arr.cpp",
-    "test/ds/minmax_heap.cpp",
-    "test/ds/range/mojor_voting.cpp",
-    "test/ds/rect_union.cpp",
-    "test/ds/seg/beats/beats_maxminadd.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina.cpp",
-    "test/ds/seg/dynamic_seg/segd_set0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
-    "test/ds/seg/fset.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/range_assign.cpp",
-    "test/ds/seg/range_max_add.cpp",
-    "test/ds/seg/range_min_add.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/seg/seg_t_add.cpp",
-    "test/ds/seg/seg/seg_t_bina.cpp",
-    "test/ds/seg/seg/seg_t_set.cpp",
-    "test/ds/seg/sort_seg.cpp",
-    "test/ds/slope/cht_max.cpp",
-    "test/ds/slope/cht_min.cpp",
-    "test/ds/slope/lict_d_line.cpp",
-    "test/ds/slope/lict_d_seg.cpp",
-    "test/ds/slope/lict_persistent.cpp",
-    "test/ds/slope/lict_seg.cpp",
-    "test/ds/slope/lict_sp_line.cpp",
-    "test/ds/slope/lict_sp_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_am.cpp",
-    "test/ds/treap/treap_rev0.cpp",
-    "test/ds/treap/treap_rev1.cpp",
-    "test/ds/treap/treap_rev2.cpp",
-    "test/ds/wave_matrix/wm2_bit.cpp",
-    "test/ds/wave_matrix/wm2_narr_seg.cpp",
-    "test/ds/wave_matrix/wm2_seg.cpp",
-    "test/ds/wave_matrix/wm_kth.cpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_all.cpp",
-    "test/fps/basic/conv_multi_2n.cpp",
-    "test/fps/basic/conv_multi_p.cpp",
-    "test/fps/basic/conv_ull.cpp",
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/fps/basic/lag_iota.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/fps/basic/poly_inv.cpp",
-    "test/fps/basic/shift.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/geo/angle_sort.cpp",
-    "test/geo/cloest_pair.cpp",
-    "test/geo/convex_layers.cpp",
-    "test/geo/count_point_in_triangle.cpp",
-    "test/geo/furthest_pair.cpp",
-    "test/geo/manhattan_mst.cpp",
-    "test/geo/minimum_enclosing_circle.cpp",
-    "test/geo/static_hull.cpp",
-    "test/nt/nim_prod.cpp",
-    "test/nt/sbt.cpp",
-    "test/pr/conv_gcd.cpp",
-    "test/pr/conv_lcm.cpp",
-    "test/sps/and_conv.cpp",
-    "test/sps/sps_comp.cpp",
-    "test/sps/sps_conv.cpp",
-    "test/sps/sps_exp.cpp",
-    "test/sps/sps_log.cpp",
-    "test/sps/xor_conv.cpp",
-]
+changed_paths = ["test/fps/basic/comp_inv_mtt.cpp"]
+selected_tests = ["test/fps/basic/comp_inv_mtt.cpp"]
 total_discovered = 102
-total_selected = 102
-passed = 101
+total_selected = 1
+passed = 0
 failed = 1
 invalid = 0
 
@@ -7555,9 +7445,9 @@ dependencies = [
     "poly/fps_exp.hpp",
     "poly/pow_proj.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "68d9f13c4c9d26dbad0a6212be3faa8a3a821169"
-last_updated_at = "2026-04-11T13:50:03.054602034Z"
+last_trigger = "test_file_changed"
+last_tested_head = "f24a4cf10b06f112bb87bc168a5536a424e4c534"
+last_updated_at = "2026-04-11T13:55:59.749092427Z"
 
 [tests."test/fps/basic/comp_inv_mtt.cpp".last_result]
 status = "failed"
@@ -7565,11 +7455,11 @@ verdict = "Compilation error"
 grade = "-"
 time_text = "-"
 memory_text = "-"
-run_id = 782386
+run_id = 782429
 compile_error = """
 Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 Main.cc:134:21: error: no match for ‘operator>>’ (operand types are ‘fio::Fin’ and ‘test_mod<998244353>’)
   134 |   for (Z &x : a) in >> x;
       |                  ~~~^~~~
@@ -7581,14 +7471,14 @@ Main.cc:415:17: note: constraints not satisfied
 Main.cc: In substitution of ‘template<class T>  requires (is_integral_v<T>) || (is_same_v<T, i128>) || (is_same_v<T, u128>) fio::Fin& fio::Fin::operator>>(T&) [with T = test_mod<998244353>]’:
 Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 Main.cc:415:17:   required by the constraints of ‘template<class T>  requires (is_integral_v<T>) || (is_same_v<T, i128>) || (is_same_v<T, u128>) fio::Fin& fio::Fin::operator>>(T&)’
 Main.cc:414:56: note: no operand of the disjunction is satisfied
   414 |     TE requires(is_integral_v<T> or is_same_v<T, i128> or is_same_v<T, u128>)
       |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
 Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 cc1plus: note: set ‘-fconcepts-diagnostics-depth=’ to at least 2 for more detail
 Main.cc:421:17: note: candidate: ‘template<class T>  requires (is_floating_point_v<T>) || (is_same_v<T, f128>) fio::Fin& fio::Fin::operator>>(T&)’
   421 |     inline Fin &operator>>(T &x){
@@ -7598,14 +7488,14 @@ Main.cc:421:17: note: constraints not satisfied
 Main.cc: In substitution of ‘template<class T>  requires (is_floating_point_v<T>) || (is_same_v<T, f128>) fio::Fin& fio::Fin::operator>>(T&) [with T = test_mod<998244353>]’:
 Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 Main.cc:421:17:   required by the constraints of ‘template<class T>  requires (is_floating_point_v<T>) || (is_same_v<T, f128>) fio::Fin& fio::Fin::operator>>(T&)’
 Main.cc:420:40: note: no operand of the disjunction is satisfied
   420 |     TE requires(is_floating_point_v<T> or is_same_v<T, f128>)
       |                ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
 Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 Main.cc:404:17: note: candidate: ‘fio::Fin& fio::Fin::operator>>(char&)’
   404 |     inline Fin &operator>>(char &c) {
       |                 ^~~~~~~~
@@ -7731,7 +7621,7 @@ In file included from /usr/include/c++/11/iostream:40,
 /usr/include/c++/11/istream: In substitution of ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = fio::Fin&; _Tp = test_mod<998244353>&]’:
 Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 /usr/include/c++/11/istream:1006:5: error: template constraint failure for ‘template<class _Is, class _Tp>  requires (__derived_from_ios_base<_Is>) && requires(_Is& __is, _Tp&& __t) {__is >> (forward<_Tp>)(__t);} using __rvalue_stream_extraction_t = _Is&&’
 /usr/include/c++/11/istream:1006:5: note: constraints not satisfied
 In file included from /usr/include/c++/11/iostream:39,
@@ -7740,7 +7630,7 @@ In file included from /usr/include/c++/11/iostream:39,
 /usr/include/c++/11/istream:1006:5:   required by substitution of ‘template<class _Istream, class _Tp> _Istream&& std::operator>>(_Istream&&, _Tp&&) [with _Istream = fio::Fin&; _Tp = test_mod<998244353>&]’
 Main.cc:134:21:   required from ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 /usr/include/c++/11/ostream:717:13:   required for the satisfaction of ‘__derived_from_ios_base<_Is>’ [with _Is = fio::Fin&]
 /usr/include/c++/11/ostream:717:39: note: the expression ‘is_class_v<_Tp> [with _Tp = fio::Fin&]’ evaluated to ‘false’
   717 |     concept __derived_from_ios_base = is_class_v<_Tp>
@@ -7748,7 +7638,7 @@ Main.cc:1887:3:   required from here
 In file included from Main.cc:4:
 Main.cc: In instantiation of ‘I& operator>>(I&, vc<T>&) [with I = fio::Fin; T = test_mod<998244353>; vc<T> = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >]’:
 Main.cc:502:42:   required from ‘void fio::sc(T&, auto:42& ...) [with T = std::vector<test_mod<998244353>, std::allocator<test_mod<998244353> > >; auto:42 = {}]’
-Main.cc:1887:3:   required from here
+Main.cc:1889:3:   required from here
 /usr/include/c++/11/bitset:1472:5: note: candidate: ‘template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::bitset<_Nb>&)’
  1472 |     operator>>(std::basic_istream<_CharT, _Traits>& __is, bitset<_Nb>& __x)
       |     ^~~~~~~~
