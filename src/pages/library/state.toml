@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-12T18:05:04.714438357Z"
+generated_at = "2026-04-12T18:10:41.441919076Z"
 status = "passed"
 failures = []
 
@@ -7849,15 +7849,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/flow/bm.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "2112 ms"
+time_text = "1972 ms"
 memory_text = "21776 KB"
-run_id = 782717
+run_id = 782729
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/hungry.cpp"]
@@ -7870,15 +7870,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/flow/hungry.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "310 ms"
+time_text = "317 ms"
 memory_text = "6448 KB"
-run_id = 782718
+run_id = 782730
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/comp.cpp"]
@@ -8558,15 +8558,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/fps/fac_large1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "448 ms"
+time_text = "464 ms"
 memory_text = "21984 KB"
-run_id = 782719
+run_id = 782726
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/partition.cpp"]
@@ -8936,15 +8936,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/graph/bcc_v.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "804 ms"
+time_text = "822 ms"
 memory_text = "192388 KB"
-run_id = 782722
+run_id = 782731
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/dominator_tree.cpp"]
@@ -8960,15 +8960,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/graph/dominator_tree.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "204 ms"
-memory_text = "25264 KB"
-run_id = 782720
+time_text = "178 ms"
+memory_text = "25260 KB"
+run_id = 782728
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/enum/enum_clique.cpp"]
@@ -8985,15 +8985,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/graph/enum/enum_clique.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "7 ms"
+time_text = "6 ms"
 memory_text = "2544 KB"
-run_id = 782721
+run_id = 782727
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/min_color.cpp"]
@@ -9009,15 +9009,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/graph/min_color.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "50 ms"
+time_text = "49 ms"
 memory_text = "14836 KB"
-run_id = 782723
+run_id = 782732
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/min_cycle_dir.cpp"]
@@ -9033,15 +9033,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/graph/min_cycle_dir.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "292 ms"
-memory_text = "62040 KB"
-run_id = 782724
+time_text = "293 ms"
+memory_text = "62036 KB"
+run_id = 782733
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/min_cycle_undir.cpp"]
@@ -9057,15 +9057,15 @@ dependencies = [
 ]
 last_trigger = "test_file_changed"
 last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
-last_updated_at = "2026-04-12T18:05:04.714438357Z"
+last_updated_at = "2026-04-12T18:10:41.441919076Z"
 
 [tests."test/graph/min_cycle_undir.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "267 ms"
+time_text = "346 ms"
 memory_text = "47308 KB"
-run_id = 782725
+run_id = 782734
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/count/subseq.cpp"]
