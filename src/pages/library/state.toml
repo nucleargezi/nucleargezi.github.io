@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-11T22:28:08.679299893Z"
+generated_at = "2026-04-12T14:10:27.450378997Z"
 status = "passed"
 failures = []
 
@@ -10,11 +10,55 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = []
-selected_tests = []
-total_discovered = 114
-total_selected = 0
-passed = 0
+changed_paths = [
+    "README.md",
+    "al/m/add_array.hpp",
+    "ds/BLOCK.md",
+    "ds/off_line/coef_quis.hpp",
+    "ds/online_range_q/range_major_voting.hpp",
+    "ds/range/range_closest_pair.hpp",
+    "ds/range/range_count_prod_upper.hpp",
+    "ds/range/rec_sum_rec_add.hpp",
+    "nt/counting/count_subseq.hpp",
+    "poly/fac_large.hpp",
+    "range_of/mo.hpp",
+    "range_on/range_major_voting.hpp",
+    "test/ds/dsu.cpp",
+    "test/ds/range/range_count_prod_upper.cpp",
+    "test/ds/range/rec_sum_rec_add.cpp",
+    "test/ds/st/st/range_min.cpp",
+    "test/ds/st/st_dis/range_min.cpp",
+    "test/ds/st/st_dis/range_sum.cpp",
+    "test/ds/st/st_prod/range_min.cpp",
+    "test/ds/st/st_prod/range_prod.cpp",
+    "test/ds/wave_matrix/wm_prod.cpp",
+    "test/fps/bell.cpp",
+    "test/fps/fac_large0.cpp",
+    "test/fps/fac_large1.cpp",
+    "test/fps/partition.cpp",
+    "test/fps/prod_of_one_plus_xn.cpp",
+    "test/nt/count/subseq.cpp",
+]
+selected_tests = [
+    "test/ds/dsu.cpp",
+    "test/ds/range/range_count_prod_upper.cpp",
+    "test/ds/range/rec_sum_rec_add.cpp",
+    "test/ds/st/st/range_min.cpp",
+    "test/ds/st/st_dis/range_min.cpp",
+    "test/ds/st/st_dis/range_sum.cpp",
+    "test/ds/st/st_prod/range_min.cpp",
+    "test/ds/st/st_prod/range_prod.cpp",
+    "test/ds/wave_matrix/wm_prod.cpp",
+    "test/fps/bell.cpp",
+    "test/fps/fac_large0.cpp",
+    "test/fps/fac_large1.cpp",
+    "test/fps/partition.cpp",
+    "test/fps/prod_of_one_plus_xn.cpp",
+    "test/nt/count/subseq.cpp",
+]
+total_discovered = 129
+total_selected = 15
+passed = 15
 failed = 0
 invalid = 0
 
@@ -27,6 +71,7 @@ all_passed = [
     "al/m/add.hpp",
     "al/m/affine.hpp",
     "al/m/major_voting.hpp",
+    "al/m/min.hpp",
     "al/m/minmincnt.hpp",
     "al/monoid_pow.hpp",
     "conv/min_plus_conv.hpp",
@@ -45,11 +90,14 @@ all_passed = [
     "ds/heap/erase_heap.hpp",
     "ds/heap/minmax_heap.hpp",
     "ds/mo/mo.hpp",
+    "ds/off_line/coef_quis.hpp",
     "ds/off_line/rectangle_union.hpp",
     "ds/range/major_voting.hpp",
+    "ds/range/range_count_prod_upper.hpp",
     "ds/range/range_dist.hpp",
     "ds/range/range_inv.hpp",
     "ds/range/range_lis.hpp",
+    "ds/range/rec_sum_rec_add.hpp",
     "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
     "ds/seg/range_assign_seg.hpp",
@@ -68,6 +116,11 @@ all_passed = [
     "ds/sl/lict_d.hpp",
     "ds/sl/lict_sp.hpp",
     "ds/sl/lline.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "ds/st/st_range_prod.hpp",
+    "ds/static_range_group.hpp",
     "ds/swag.hpp",
     "ds/treap/treap_act.hpp",
     "ds/treap/treap_monoid.hpp",
@@ -101,6 +154,7 @@ all_passed = [
     "mod/powtable.hpp",
     "mod/primitive_root.hpp",
     "nt/bigint/big.hpp",
+    "nt/counting/count_subseq.hpp",
     "nt/nim/nimbase.hpp",
     "nt/sbt.hpp",
     "poly/c/bs.hpp",
@@ -113,8 +167,11 @@ all_passed = [
     "poly/conv_multi_2n.hpp",
     "poly/conv_multi_p.hpp",
     "poly/conv_ull.hpp",
+    "poly/f/bell.hpp",
+    "poly/f/partition.hpp",
     "poly/f/stiling_1.hpp",
     "poly/f/stiling_2.hpp",
+    "poly/fac_large.hpp",
     "poly/find_root.hpp",
     "poly/fps_div.hpp",
     "poly/fps_exp.hpp",
@@ -132,6 +189,8 @@ all_passed = [
     "poly/poly_inv.hpp",
     "poly/poly_modpow.hpp",
     "poly/pow_proj.hpp",
+    "poly/prod_of_one_minus_xn.hpp",
+    "poly/prod_of_one_plus_xn.hpp",
     "poly/shift.hpp",
     "poly/subprod.hpp",
     "pr/conv_gcd.hpp",
@@ -185,7 +244,6 @@ unused = [
     "al/m/max_his_max.hpp",
     "al/m/max_subarray_sum.hpp",
     "al/m/maxidx.hpp",
-    "al/m/min.hpp",
     "al/m/minidx.hpp",
     "al/m/minmax.hpp",
     "al/m/mul.hpp",
@@ -235,8 +293,8 @@ unused = [
     "ds/off_line/range_quis/range_mex_query.hpp",
     "ds/off_line/range_quis/range_mode.hpp",
     "ds/online_range_q/range_lis_query.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/range_bitmsk_prod.hpp",
+    "ds/range/range_closest_pair.hpp",
     "ds/range/range_mode.hpp",
     "ds/rb/rb_arr.hpp",
     "ds/rb/rb_dsu.hpp",
@@ -254,11 +312,6 @@ unused = [
     "ds/st/del/st_dis.hpp",
     "ds/st/range_max.hpp",
     "ds/st/range_min.hpp",
-    "ds/st/rmq.hpp",
-    "ds/st/st.hpp",
-    "ds/st/st_dis.hpp",
-    "ds/st/st_range_prod.hpp",
-    "ds/static_range_group.hpp",
     "ds/toptree/satt.hpp",
     "ds/toptree/satt_ddp.hpp",
     "ds/toptree/satt_sim.hpp",
@@ -418,7 +471,6 @@ unused = [
     "po/convolution.hpp",
     "po/f/bell.hpp",
     "po/f/bernoulli.hpp",
-    "po/f/count_subseq.hpp",
     "po/f/derange.hpp",
     "po/f/egf.hpp",
     "po/f/ex.hpp",
@@ -491,15 +543,12 @@ unused = [
     "poly/comp_f_x_plus_1_divx.hpp",
     "poly/comp_short.hpp",
     "poly/comp_slow.hpp",
-    "poly/f/bell.hpp",
     "poly/f/bernoulli.hpp",
     "poly/f/derange.hpp",
     "poly/f/egf.hpp",
     "poly/f/ex.hpp",
-    "poly/f/partition.hpp",
     "poly/f/presum.hpp",
     "poly/f/sinh.hpp",
-    "poly/fac_large.hpp",
     "poly/ffp.hpp",
     "poly/find_line.hpp",
     "poly/fps.hpp",
@@ -512,8 +561,6 @@ unused = [
     "poly/online_log.hpp",
     "poly/online_pow.hpp",
     "poly/prod_of_f_rk_x.hpp",
-    "poly/prod_of_one_minus_xn.hpp",
-    "poly/prod_of_one_plus_xn.hpp",
     "poly/subset_sum.hpp",
     "poly/subset_sum_lm.hpp",
     "poly/sum_of_exp_bx.hpp",
@@ -550,9 +597,6 @@ unused = [
     "pr/psum.hpp",
     "random/const_rng.hpp",
     "random/gen.hpp",
-    "range_of/mo.hpp",
-    "range_of/range_closest_pair.hpp",
-    "range_on/range_major_voting.hpp",
     "seq/inversion.hpp",
     "snip/ds/bs.hpp",
     "snip/math/comb.hpp",
@@ -820,6 +864,7 @@ unused = [
 "ds/mo/mo_roll.hpp" = []
 "ds/mo/mo_upd.hpp" = []
 "ds/off_line/K_cdq.hpp" = []
+"ds/off_line/coef_quis.hpp" = []
 "ds/off_line/mo_niji.hpp" = []
 "ds/off_line/range_quis/range_inverse_count.hpp" = ["ds/off_line/mo_niji.hpp"]
 "ds/off_line/range_quis/range_lis_quety.hpp" = []
@@ -839,17 +884,6 @@ unused = [
     "al/m/add.hpp",
     "nt/seaweed_doubling.hpp",
 ]
-"ds/online_range_q/range_major_voting.hpp" = [
-    "ds/seg/segd_sprase_t.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/seg/seg_t.hpp",
-    "al/m/major_voting.hpp",
-    "al/m/add.hpp",
-    "ds/basic/unordered_discreate.hpp",
-    "ds/basic/hashmap.hpp",
-    "random/hash.hpp",
-    "random/rng.hpp",
-]
 "ds/range/major_voting.hpp" = [
     "ds/seg/segd_sprase_t.hpp",
     "ds/basic/node_pool.hpp",
@@ -861,10 +895,20 @@ unused = [
     "random/rng.hpp",
 ]
 "ds/range/range_bitmsk_prod.hpp" = ["ds/basic/bs.hpp"]
+"ds/range/range_closest_pair.hpp" = [
+    "ds/seg/seg_dual_t.hpp",
+    "al/m/min.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "ds/basic/retsu.hpp",
+]
+"ds/range/range_count_prod_upper.hpp" = []
 "ds/range/range_dist.hpp" = []
 "ds/range/range_inv.hpp" = []
 "ds/range/range_lis.hpp" = []
 "ds/range/range_mode.hpp" = ["ds/mo/mo_roll.hpp"]
+"ds/range/rec_sum_rec_add.hpp" = ["ds/off_line/coef_quis.hpp"]
 "ds/rb/rb_arr.hpp" = []
 "ds/rb/rb_dsu.hpp" = ["ds/rb/rb_arr.hpp"]
 "ds/rb/rollback_dsu_bipartite.hpp" = ["ds/rb/rb_arr.hpp"]
@@ -1473,6 +1517,7 @@ unused = [
     "al/m/add.hpp",
 ]
 "nt/counting/count_rectangle.hpp" = []
+"nt/counting/count_subseq.hpp" = []
 "nt/counting/tri_euler_count.hpp" = []
 "nt/digit_sum.hpp" = []
 "nt/enum_div.hpp" = []
@@ -1851,11 +1896,6 @@ unused = [
     "po/c/ntt.hpp",
     "mod/mint_t.hpp",
     "mod/crt3.hpp",
-]
-"po/f/count_subseq.hpp" = [
-    "ds/basic/hashmap.hpp",
-    "random/hash.hpp",
-    "random/rng.hpp",
 ]
 "po/f/derange.hpp" = []
 "po/f/egf.hpp" = [
@@ -3145,19 +3185,6 @@ unused = [
 "random/gen.hpp" = ["random/rng.hpp"]
 "random/hash.hpp" = ["random/rng.hpp"]
 "random/rng.hpp" = []
-"range_of/mo.hpp" = []
-"range_of/range_closest_pair.hpp" = [
-    "ds/basic/hashmap.hpp",
-    "random/hash.hpp",
-    "random/rng.hpp",
-    "ds/basic/retsu.hpp",
-]
-"range_on/range_major_voting.hpp" = [
-    "ds/basic/unordered_discreate.hpp",
-    "ds/basic/hashmap.hpp",
-    "random/hash.hpp",
-    "random/rng.hpp",
-]
 "seq/inversion.hpp" = [
     "ds/bit/bit01.hpp",
     "al/m/add.hpp",
@@ -3515,7 +3542,6 @@ unused = [
     "ds/bit/bit01.hpp",
     "ds/off_line/rectangle_union.hpp",
     "ds/online_range_q/range_lis_query.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/major_voting.hpp",
     "ds/wave/wave_mat.hpp",
     "ds/wave/wave_mat_2d.hpp",
@@ -3541,10 +3567,7 @@ unused = [
 "al/m/gcd.hpp" = []
 "al/m/hash.hpp" = []
 "al/m/his_add_assign.hpp" = ["al/am/his_max_add_assign.hpp"]
-"al/m/major_voting.hpp" = [
-    "ds/online_range_q/range_major_voting.hpp",
-    "ds/range/major_voting.hpp",
-]
+"al/m/major_voting.hpp" = ["ds/range/major_voting.hpp"]
 "al/m/major_voting_pro.hpp" = []
 "al/m/max.hpp" = [
     "al/am/max_add.hpp",
@@ -3564,6 +3587,7 @@ unused = [
     "al/am/min_add.hpp",
     "al/am/min_set.hpp",
     "al/am/min_set_add.hpp",
+    "ds/range/range_closest_pair.hpp",
     "ds/st/range_min.hpp",
     "string/SA/string_cmp.hpp",
     "tr/fast_lca.hpp",
@@ -3636,8 +3660,8 @@ unused = [
 "ds/basic/fset_del.hpp" = []
 "ds/basic/hashmap.hpp" = [
     "ds/basic/unordered_discreate.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/major_voting.hpp",
+    "ds/range/range_closest_pair.hpp",
     "ds/seg/segl_sparse_t.hpp",
     "flow/BM.hpp",
     "g/01coloring.hpp",
@@ -3682,12 +3706,9 @@ unused = [
     "ge/pairs/closest_pair.hpp",
     "mod/modfast.hpp",
     "mod/modfast_d.hpp",
-    "po/f/count_subseq.hpp",
     "pr/discreate_log.hpp",
     "pr/discreate_log_fast.hpp",
     "pr/du.hpp",
-    "range_of/range_closest_pair.hpp",
-    "range_on/range_major_voting.hpp",
     "string/SAM.hpp",
     "string/SAM_checker.hpp",
     "string/SAM_umap.hpp",
@@ -3722,7 +3743,6 @@ unused = [
     "ds/dynamic_array.hpp",
     "ds/heap/merge.hpp",
     "ds/heap/merge_laz.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/major_voting.hpp",
     "ds/seg/seg_sort_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
@@ -3754,6 +3774,7 @@ unused = [
 ]
 "ds/basic/retsu.hpp" = [
     "ds/bit/bitbit.hpp",
+    "ds/range/range_closest_pair.hpp",
     "flow/hungarian.hpp",
     "g/count_c5.hpp",
     "g/johnson.hpp",
@@ -3848,16 +3869,12 @@ unused = [
     "poly/sum_of_rationals_sp.hpp",
     "poly/sum_of_shift_binomail.hpp",
     "pr/f/exp_miller_factor.hpp",
-    "range_of/range_closest_pair.hpp",
     "seq/inversion.hpp",
     "string/SA/sort_substring.hpp",
     "string/prefix_substring_lcs.hpp",
     "tr/doubling.hpp",
 ]
-"ds/basic/unordered_discreate.hpp" = [
-    "ds/online_range_q/range_major_voting.hpp",
-    "range_on/range_major_voting.hpp",
-]
+"ds/basic/unordered_discreate.hpp" = []
 "ds/bit/bit.hpp" = [
     "ds/bit/bit01.hpp",
     "nt/counting/count_inv_of_permutation.hpp",
@@ -3890,6 +3907,7 @@ unused = [
 "ds/mo/mo_roll.hpp" = ["ds/range/range_mode.hpp"]
 "ds/mo/mo_upd.hpp" = []
 "ds/off_line/K_cdq.hpp" = []
+"ds/off_line/coef_quis.hpp" = ["ds/range/rec_sum_rec_add.hpp"]
 "ds/off_line/mo_niji.hpp" = ["ds/off_line/range_quis/range_inverse_count.hpp"]
 "ds/off_line/range_quis/range_inverse_count.hpp" = []
 "ds/off_line/range_quis/range_lis_quety.hpp" = []
@@ -3897,13 +3915,15 @@ unused = [
 "ds/off_line/range_quis/range_mode.hpp" = []
 "ds/off_line/rectangle_union.hpp" = []
 "ds/online_range_q/range_lis_query.hpp" = []
-"ds/online_range_q/range_major_voting.hpp" = []
 "ds/range/major_voting.hpp" = []
 "ds/range/range_bitmsk_prod.hpp" = []
+"ds/range/range_closest_pair.hpp" = []
+"ds/range/range_count_prod_upper.hpp" = []
 "ds/range/range_dist.hpp" = []
 "ds/range/range_inv.hpp" = []
 "ds/range/range_lis.hpp" = []
 "ds/range/range_mode.hpp" = []
+"ds/range/rec_sum_rec_add.hpp" = []
 "ds/rb/rb_arr.hpp" = [
     "ds/rb/rb_dsu.hpp",
     "ds/rb/rollback_dsu_bipartite.hpp",
@@ -3926,11 +3946,13 @@ unused = [
 "ds/seg/range_max_add.hpp" = []
 "ds/seg/range_min_add.hpp" = []
 "ds/seg/range_sum_point_add.hpp" = []
-"ds/seg/seg_dual_t.hpp" = ["tr/hld_dual.hpp"]
+"ds/seg/seg_dual_t.hpp" = [
+    "ds/range/range_closest_pair.hpp",
+    "tr/hld_dual.hpp",
+]
 "ds/seg/seg_premax_t.hpp" = []
 "ds/seg/seg_sort_t.hpp" = []
 "ds/seg/seg_t.hpp" = [
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/major_voting.hpp",
     "ds/seg/range_assign_seg.hpp",
     "ds/seg/range_max_add.hpp",
@@ -3938,10 +3960,7 @@ unused = [
     "ds/seg/seg_sort_t.hpp",
     "tr/hld_mono.hpp",
 ]
-"ds/seg/segd_sprase_t.hpp" = [
-    "ds/online_range_q/range_major_voting.hpp",
-    "ds/range/major_voting.hpp",
-]
+"ds/seg/segd_sprase_t.hpp" = ["ds/range/major_voting.hpp"]
 "ds/seg/segd_t.hpp" = []
 "ds/seg/segdl_def_t.hpp" = []
 "ds/seg/segdl_t.hpp" = []
@@ -4592,6 +4611,7 @@ unused = [
 "nt/bigint/odd_big_int.hpp" = []
 "nt/counting/count_inv_of_permutation.hpp" = []
 "nt/counting/count_rectangle.hpp" = []
+"nt/counting/count_subseq.hpp" = []
 "nt/counting/tri_euler_count.hpp" = []
 "nt/digit_sum.hpp" = []
 "nt/enum_div.hpp" = []
@@ -4956,7 +4976,6 @@ unused = [
 ]
 "po/f/bell.hpp" = []
 "po/f/bernoulli.hpp" = []
-"po/f/count_subseq.hpp" = []
 "po/f/derange.hpp" = []
 "po/f/egf.hpp" = []
 "po/f/ex.hpp" = ["po/f/egf.hpp"]
@@ -5797,8 +5816,8 @@ unused = [
 "random/hash.hpp" = [
     "ds/basic/hashmap.hpp",
     "ds/basic/unordered_discreate.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/major_voting.hpp",
+    "ds/range/range_closest_pair.hpp",
     "ds/seg/segl_sparse_t.hpp",
     "flow/BM.hpp",
     "g/01coloring.hpp",
@@ -5843,12 +5862,9 @@ unused = [
     "ge/pairs/closest_pair.hpp",
     "mod/modfast.hpp",
     "mod/modfast_d.hpp",
-    "po/f/count_subseq.hpp",
     "pr/discreate_log.hpp",
     "pr/discreate_log_fast.hpp",
     "pr/du.hpp",
-    "range_of/range_closest_pair.hpp",
-    "range_on/range_major_voting.hpp",
     "string/SAM.hpp",
     "string/SAM_checker.hpp",
     "string/SAM_umap.hpp",
@@ -5883,8 +5899,8 @@ unused = [
     "al/m/hash.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/unordered_discreate.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
     "ds/range/major_voting.hpp",
+    "ds/range/range_closest_pair.hpp",
     "ds/seg/segl_sparse_t.hpp",
     "flow/BM.hpp",
     "g/01coloring.hpp",
@@ -5936,7 +5952,6 @@ unused = [
     "mod/modfast_d.hpp",
     "mod/primitive_root.hpp",
     "mod/tetration.hpp",
-    "po/f/count_subseq.hpp",
     "po/poly_find_root.hpp",
     "poly/conv_multi_p.hpp",
     "poly/find_root.hpp",
@@ -5949,8 +5964,6 @@ unused = [
     "pr/factors.hpp",
     "random/gen.hpp",
     "random/hash.hpp",
-    "range_of/range_closest_pair.hpp",
-    "range_on/range_major_voting.hpp",
     "string/SAM.hpp",
     "string/SAM_checker.hpp",
     "string/SAM_umap.hpp",
@@ -5981,9 +5994,6 @@ unused = [
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
-"range_of/mo.hpp" = []
-"range_of/range_closest_pair.hpp" = []
-"range_on/range_major_voting.hpp" = []
 "seq/inversion.hpp" = []
 "snip/ds/bs.hpp" = []
 "snip/math/comb.hpp" = []
@@ -6356,6 +6366,24 @@ memory_text = "37368 KB"
 run_id = 782504
 runtime_error = "Run time error details not Available"
 
+[tests."test/ds/dsu.cpp"]
+path = "test/ds/dsu.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11338"
+problem_id = 11338
+dependencies = ["ds/un/dsu.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/dsu.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "25 ms"
+memory_text = "3268 KB"
+run_id = 782686
+runtime_error = "Run time error details not Available"
+
 [tests."test/ds/dsu/dsu_persistent.cpp"]
 path = "test/ds/dsu/dsu_persistent.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11312"
@@ -6484,6 +6512,24 @@ memory_text = "59868 KB"
 run_id = 782510
 runtime_error = "Run time error details not Available"
 
+[tests."test/ds/range/range_count_prod_upper.cpp"]
+path = "test/ds/range/range_count_prod_upper.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11335"
+problem_id = 11335
+dependencies = ["ds/range/range_count_prod_upper.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/range/range_count_prod_upper.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "468 ms"
+memory_text = "33788 KB"
+run_id = 782685
+runtime_error = "Run time error details not Available"
+
 [tests."test/ds/range/range_dist.cpp"]
 path = "test/ds/range/range_dist.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11329"
@@ -6536,6 +6582,28 @@ grade = "100/100"
 time_text = "819 ms"
 memory_text = "14768 KB"
 run_id = 782513
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/range/rec_sum_rec_add.cpp"]
+path = "test/ds/range/rec_sum_rec_add.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11336"
+problem_id = 11336
+dependencies = [
+    "mod/mint_t.hpp",
+    "ds/range/rec_sum_rec_add.hpp",
+    "ds/off_line/coef_quis.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/range/rec_sum_rec_add.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1215 ms"
+memory_text = "37544 KB"
+run_id = 782683
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/rect_union.cpp"]
@@ -7319,6 +7387,123 @@ memory_text = "35384 KB"
 run_id = 782548
 runtime_error = "Run time error details not Available"
 
+[tests."test/ds/st/st/range_min.cpp"]
+path = "test/ds/st/st/range_min.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11337"
+problem_id = 11337
+dependencies = [
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/min.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/st/st/range_min.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "194 ms"
+memory_text = "39596 KB"
+run_id = 782687
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/st/st_dis/range_min.cpp"]
+path = "test/ds/st/st_dis/range_min.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11337"
+problem_id = 11337
+dependencies = [
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/min.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/st/st_dis/range_min.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "225 ms"
+memory_text = "41644 KB"
+run_id = 782684
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/st/st_dis/range_sum.cpp"]
+path = "test/ds/st/st_dis/range_sum.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11334"
+problem_id = 11334
+dependencies = [
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/st/st_dis/range_sum.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "294 ms"
+memory_text = "80684 KB"
+run_id = 782682
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/st/st_prod/range_min.cpp"]
+path = "test/ds/st/st_prod/range_min.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11337"
+problem_id = 11337
+dependencies = [
+    "ds/st/st_range_prod.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/min.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/st/st_prod/range_min.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "152 ms"
+memory_text = "12128 KB"
+run_id = 782688
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/st/st_prod/range_prod.cpp"]
+path = "test/ds/st/st_prod/range_prod.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11334"
+problem_id = 11334
+dependencies = [
+    "ds/st/st_range_prod.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/st/st_prod/range_prod.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "179 ms"
+memory_text = "21876 KB"
+run_id = 782689
+runtime_error = "Run time error details not Available"
+
 [tests."test/ds/swag/swag_deque.cpp"]
 path = "test/ds/swag/swag_deque.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11303"
@@ -7579,6 +7764,30 @@ grade = "100/100"
 time_text = "858 ms"
 memory_text = "98512 KB"
 run_id = 782559
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/wave_matrix/wm_prod.cpp"]
+path = "test/ds/wave_matrix/wm_prod.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11335"
+problem_id = 11335
+dependencies = [
+    "ds/wave/wave_mat.hpp",
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
+    "al/m/add.hpp",
+    "ds/static_range_group.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/ds/wave_matrix/wm_prod.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1573 ms"
+memory_text = "110448 KB"
+run_id = 782691
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm_s_count.cpp"]
@@ -8238,6 +8447,132 @@ memory_text = "26544 KB"
 run_id = 782584
 runtime_error = "Run time error details not Available"
 
+[tests."test/fps/bell.cpp"]
+path = "test/fps/bell.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11339"
+problem_id = 11339
+dependencies = [
+    "poly/f/bell.hpp",
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/fps/bell.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "317 ms"
+memory_text = "23044 KB"
+run_id = 782690
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/fac_large0.cpp"]
+path = "test/fps/fac_large0.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11340"
+problem_id = 11340
+dependencies = [
+    "poly/fac_large.hpp",
+    "poly/lag.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/fps/fac_large0.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "51 ms"
+memory_text = "5220 KB"
+run_id = 782692
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/fac_large1.cpp"]
+path = "test/fps/fac_large1.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11340"
+problem_id = 11340
+dependencies = [
+    "poly/fac_large.hpp",
+    "poly/lag.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/fps/fac_large1.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "305 ms"
+memory_text = "21984 KB"
+run_id = 782693
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/partition.cpp"]
+path = "test/fps/partition.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11343"
+problem_id = 11343
+dependencies = [
+    "poly/f/partition.hpp",
+    "poly/prod_of_one_minus_xn.hpp",
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/fps/partition.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "385 ms"
+memory_text = "24904 KB"
+run_id = 782694
+runtime_error = "Run time error details not Available"
+
+[tests."test/fps/prod_of_one_plus_xn.cpp"]
+path = "test/fps/prod_of_one_plus_xn.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11344"
+problem_id = 11344
+dependencies = [
+    "poly/prod_of_one_plus_xn.hpp",
+    "poly/fps_exp.hpp",
+    "poly/c/bs.hpp",
+    "poly/c/fps_t.hpp",
+    "ds/basic/retsu.hpp",
+    "mod/mint_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/fps/prod_of_one_plus_xn.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "440 ms"
+memory_text = "26856 KB"
+run_id = 782695
+runtime_error = "Run time error details not Available"
+
 [tests."test/fps/sing1_k.cpp"]
 path = "test/fps/sing1_k.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10541"
@@ -8539,6 +8874,27 @@ grade = "100/100"
 time_text = "272 ms"
 memory_text = "22148 KB"
 run_id = 782596
+runtime_error = "Run time error details not Available"
+
+[tests."test/nt/count/subseq.cpp"]
+path = "test/nt/count/subseq.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11342"
+problem_id = 11342
+dependencies = [
+    "mod/mint_t.hpp",
+    "nt/counting/count_subseq.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
+last_updated_at = "2026-04-12T14:10:27.450378997Z"
+
+[tests."test/nt/count/subseq.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "631 ms"
+memory_text = "27980 KB"
+run_id = 782696
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/nim_prod.cpp"]
