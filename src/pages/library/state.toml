@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-12T14:10:27.450378997Z"
+generated_at = "2026-04-12T18:05:04.714438357Z"
 status = "passed"
 failures = []
 
@@ -12,53 +12,39 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = [
     "README.md",
-    "al/m/add_array.hpp",
-    "ds/BLOCK.md",
-    "ds/off_line/coef_quis.hpp",
-    "ds/online_range_q/range_major_voting.hpp",
-    "ds/range/range_closest_pair.hpp",
-    "ds/range/range_count_prod_upper.hpp",
-    "ds/range/rec_sum_rec_add.hpp",
-    "nt/counting/count_subseq.hpp",
-    "poly/fac_large.hpp",
-    "range_of/mo.hpp",
-    "range_on/range_major_voting.hpp",
-    "test/ds/dsu.cpp",
-    "test/ds/range/range_count_prod_upper.cpp",
-    "test/ds/range/rec_sum_rec_add.cpp",
-    "test/ds/st/st/range_min.cpp",
-    "test/ds/st/st_dis/range_min.cpp",
-    "test/ds/st/st_dis/range_sum.cpp",
-    "test/ds/st/st_prod/range_min.cpp",
-    "test/ds/st/st_prod/range_prod.cpp",
-    "test/ds/wave_matrix/wm_prod.cpp",
-    "test/fps/bell.cpp",
-    "test/fps/fac_large0.cpp",
+    "flow/BM_dense.hpp",
+    "g/block_cut.hpp",
+    "g/cc_of_comp_g.hpp",
+    "g/dominator_tree.hpp",
+    "g/enumerate_clique.hpp",
+    "g/find_cycle_directed.hpp",
+    "g/find_min_cycle.hpp",
+    "g/johnson.hpp",
+    "g/min_color.hpp",
+    "test/flow/bm.cpp",
+    "test/flow/hungry.cpp",
     "test/fps/fac_large1.cpp",
-    "test/fps/partition.cpp",
-    "test/fps/prod_of_one_plus_xn.cpp",
-    "test/nt/count/subseq.cpp",
+    "test/graph/bcc_v.cpp",
+    "test/graph/dominator_tree.cpp",
+    "test/graph/enum/enum_clique.cpp",
+    "test/graph/min_color.cpp",
+    "test/graph/min_cycle_dir.cpp",
+    "test/graph/min_cycle_undir.cpp",
 ]
 selected_tests = [
-    "test/ds/dsu.cpp",
-    "test/ds/range/range_count_prod_upper.cpp",
-    "test/ds/range/rec_sum_rec_add.cpp",
-    "test/ds/st/st/range_min.cpp",
-    "test/ds/st/st_dis/range_min.cpp",
-    "test/ds/st/st_dis/range_sum.cpp",
-    "test/ds/st/st_prod/range_min.cpp",
-    "test/ds/st/st_prod/range_prod.cpp",
-    "test/ds/wave_matrix/wm_prod.cpp",
-    "test/fps/bell.cpp",
-    "test/fps/fac_large0.cpp",
+    "test/flow/bm.cpp",
+    "test/flow/hungry.cpp",
     "test/fps/fac_large1.cpp",
-    "test/fps/partition.cpp",
-    "test/fps/prod_of_one_plus_xn.cpp",
-    "test/nt/count/subseq.cpp",
+    "test/graph/bcc_v.cpp",
+    "test/graph/dominator_tree.cpp",
+    "test/graph/enum/enum_clique.cpp",
+    "test/graph/min_color.cpp",
+    "test/graph/min_cycle_dir.cpp",
+    "test/graph/min_cycle_undir.cpp",
 ]
-total_discovered = 129
-total_selected = 15
-passed = 15
+total_discovered = 137
+total_selected = 9
+passed = 9
 failed = 0
 invalid = 0
 
@@ -81,6 +67,7 @@ all_passed = [
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
+    "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
     "ds/bit/bit.hpp",
@@ -131,6 +118,16 @@ all_passed = [
     "ds/wave/wave_mat.hpp",
     "ds/wave/wave_mat_2d.hpp",
     "ds/wave/wave_mat_sim.hpp",
+    "flow/BM.hpp",
+    "flow/hungarian.hpp",
+    "g/01coloring.hpp",
+    "g/Basic.hpp",
+    "g/block_cut.hpp",
+    "g/dominator_tree.hpp",
+    "g/enumerate_clique.hpp",
+    "g/find_min_cycle.hpp",
+    "g/min_color.hpp",
+    "g/scc.hpp",
     "ge/basic/angle_sort.hpp",
     "ge/basic/circle.hpp",
     "ge/basic/dist.hpp",
@@ -266,7 +263,6 @@ unused = [
     "ds/basic/bs.hpp",
     "ds/basic/fset_del.hpp",
     "ds/basic/pbds.hpp",
-    "ds/basic/queue.hpp",
     "ds/bit/bitbit.hpp",
     "ds/bit/dual_bit.hpp",
     "ds/bit/dual_bit2.hpp",
@@ -318,51 +314,42 @@ unused = [
     "ds/treap/treap_base.hpp",
     "ds/un/dsu_mono.hpp",
     "ds/un/dsu_t.hpp",
-    "flow/BM.hpp",
     "flow/BM_dense.hpp",
     "flow/HLPP.hpp",
     "flow/flow_lm.hpp",
     "flow/flower.hpp",
-    "flow/hungarian.hpp",
     "flow/max_flow.hpp",
     "flow/mcf.hpp",
     "flow/min_cost_flow_lower.hpp",
-    "g/01coloring.hpp",
-    "g/Basic.hpp",
     "g/bcc_e.hpp",
     "g/bcc_v_e.hpp",
     "g/bellman_ford.hpp",
     "g/bfs.hpp",
     "g/bfs01.hpp",
     "g/bfs1.hpp",
-    "g/block_cut_tree.hpp",
     "g/brige.hpp",
     "g/cactus.hpp",
     "g/cactus_diameter.hpp",
+    "g/cc_of_comp_g.hpp",
     "g/count_c3c4.hpp",
     "g/count_c5.hpp",
     "g/count_p345.hpp",
     "g/dag_path_cover.hpp",
     "g/dijkstra.hpp",
     "g/dijkstra_fheap.hpp",
-    "g/dominator_tree.hpp",
-    "g/enumerate_clique.hpp",
     "g/enumerate_cyc3.hpp",
     "g/euler_walk.hpp",
     "g/find_centroids.hpp",
-    "g/find_cycle_directed.hpp",
     "g/johnson.hpp",
     "g/k_shortest/k_short_walk.hpp",
     "g/k_shortest/k_shortest_path.hpp",
     "g/max_anti_chain.hpp",
     "g/max_clique.hpp",
     "g/max_independent_set.hpp",
-    "g/min_color.hpp",
     "g/mst_kru.hpp",
     "g/mst_prim.hpp",
     "g/path_cycle.hpp",
     "g/reverse.hpp",
-    "g/scc.hpp",
     "g/steiner.hpp",
     "g/tree_diameter.hpp",
     "g/two_sat.hpp",
@@ -1080,7 +1067,7 @@ unused = [
     "random/rng.hpp",
     "ds/basic/queue.hpp",
 ]
-"g/block_cut_tree.hpp" = [
+"g/block_cut.hpp" = [
     "g/Basic.hpp",
     "ds/basic/hashmap.hpp",
     "random/hash.hpp",
@@ -1101,6 +1088,12 @@ unused = [
 ]
 "g/cactus_diameter.hpp" = [
     "ds/basic/queue.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+"g/cc_of_comp_g.hpp" = [
     "g/Basic.hpp",
     "ds/basic/hashmap.hpp",
     "random/hash.hpp",
@@ -1178,7 +1171,7 @@ unused = [
     "random/hash.hpp",
     "random/rng.hpp",
 ]
-"g/find_cycle_directed.hpp" = [
+"g/find_min_cycle.hpp" = [
     "g/Basic.hpp",
     "ds/basic/hashmap.hpp",
     "random/hash.hpp",
@@ -3672,10 +3665,11 @@ unused = [
     "g/bfs.hpp",
     "g/bfs01.hpp",
     "g/bfs1.hpp",
-    "g/block_cut_tree.hpp",
+    "g/block_cut.hpp",
     "g/brige.hpp",
     "g/cactus.hpp",
     "g/cactus_diameter.hpp",
+    "g/cc_of_comp_g.hpp",
     "g/count_c3c4.hpp",
     "g/count_c5.hpp",
     "g/count_p345.hpp",
@@ -3687,7 +3681,7 @@ unused = [
     "g/enumerate_cyc3.hpp",
     "g/euler_walk.hpp",
     "g/find_centroids.hpp",
-    "g/find_cycle_directed.hpp",
+    "g/find_min_cycle.hpp",
     "g/johnson.hpp",
     "g/k_shortest/k_short_walk.hpp",
     "g/k_shortest/k_shortest_path.hpp",
@@ -4060,10 +4054,11 @@ unused = [
     "g/bfs.hpp",
     "g/bfs01.hpp",
     "g/bfs1.hpp",
-    "g/block_cut_tree.hpp",
+    "g/block_cut.hpp",
     "g/brige.hpp",
     "g/cactus.hpp",
     "g/cactus_diameter.hpp",
+    "g/cc_of_comp_g.hpp",
     "g/count_c3c4.hpp",
     "g/count_c5.hpp",
     "g/count_p345.hpp",
@@ -4075,7 +4070,7 @@ unused = [
     "g/enumerate_cyc3.hpp",
     "g/euler_walk.hpp",
     "g/find_centroids.hpp",
-    "g/find_cycle_directed.hpp",
+    "g/find_min_cycle.hpp",
     "g/johnson.hpp",
     "g/k_shortest/k_short_walk.hpp",
     "g/k_shortest/k_shortest_path.hpp",
@@ -4124,10 +4119,11 @@ unused = [
 "g/bfs.hpp" = ["g/tree_diameter.hpp"]
 "g/bfs01.hpp" = []
 "g/bfs1.hpp" = []
-"g/block_cut_tree.hpp" = []
+"g/block_cut.hpp" = []
 "g/brige.hpp" = []
 "g/cactus.hpp" = []
 "g/cactus_diameter.hpp" = []
+"g/cc_of_comp_g.hpp" = []
 "g/count_c3c4.hpp" = ["g/count_p345.hpp"]
 "g/count_c5.hpp" = []
 "g/count_p345.hpp" = []
@@ -4139,7 +4135,7 @@ unused = [
 "g/enumerate_cyc3.hpp" = []
 "g/euler_walk.hpp" = []
 "g/find_centroids.hpp" = []
-"g/find_cycle_directed.hpp" = []
+"g/find_min_cycle.hpp" = []
 "g/johnson.hpp" = []
 "g/k_shortest/k_short_walk.hpp" = []
 "g/k_shortest/k_shortest_path.hpp" = []
@@ -5828,10 +5824,11 @@ unused = [
     "g/bfs.hpp",
     "g/bfs01.hpp",
     "g/bfs1.hpp",
-    "g/block_cut_tree.hpp",
+    "g/block_cut.hpp",
     "g/brige.hpp",
     "g/cactus.hpp",
     "g/cactus_diameter.hpp",
+    "g/cc_of_comp_g.hpp",
     "g/count_c3c4.hpp",
     "g/count_c5.hpp",
     "g/count_p345.hpp",
@@ -5843,7 +5840,7 @@ unused = [
     "g/enumerate_cyc3.hpp",
     "g/euler_walk.hpp",
     "g/find_centroids.hpp",
-    "g/find_cycle_directed.hpp",
+    "g/find_min_cycle.hpp",
     "g/johnson.hpp",
     "g/k_shortest/k_short_walk.hpp",
     "g/k_shortest/k_shortest_path.hpp",
@@ -5911,10 +5908,11 @@ unused = [
     "g/bfs.hpp",
     "g/bfs01.hpp",
     "g/bfs1.hpp",
-    "g/block_cut_tree.hpp",
+    "g/block_cut.hpp",
     "g/brige.hpp",
     "g/cactus.hpp",
     "g/cactus_diameter.hpp",
+    "g/cc_of_comp_g.hpp",
     "g/count_c3c4.hpp",
     "g/count_c5.hpp",
     "g/count_p345.hpp",
@@ -5926,7 +5924,7 @@ unused = [
     "g/enumerate_cyc3.hpp",
     "g/euler_walk.hpp",
     "g/find_centroids.hpp",
-    "g/find_cycle_directed.hpp",
+    "g/find_min_cycle.hpp",
     "g/johnson.hpp",
     "g/k_shortest/k_short_walk.hpp",
     "g/k_shortest/k_shortest_path.hpp",
@@ -7834,6 +7832,55 @@ memory_text = "8184 KB"
 run_id = 782561
 runtime_error = "Run time error details not Available"
 
+[tests."test/flow/bm.cpp"]
+path = "test/flow/bm.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11347"
+problem_id = 11347
+dependencies = [
+    "flow/BM.hpp",
+    "g/01coloring.hpp",
+    "ds/un/dsu.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+    "g/scc.hpp",
+    "ds/basic/queue.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/flow/bm.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2112 ms"
+memory_text = "21776 KB"
+run_id = 782717
+runtime_error = "Run time error details not Available"
+
+[tests."test/flow/hungry.cpp"]
+path = "test/flow/hungry.cpp"
+problem_url = "http://icpc.bjtu.edu.cn/problem/11345"
+problem_id = 11345
+dependencies = [
+    "flow/hungarian.hpp",
+    "ds/basic/retsu.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/flow/hungry.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "310 ms"
+memory_text = "6448 KB"
+run_id = 782718
+runtime_error = "Run time error details not Available"
+
 [tests."test/fps/basic/comp.cpp"]
 path = "test/fps/basic/comp.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10539"
@@ -8499,8 +8546,8 @@ runtime_error = "Run time error details not Available"
 
 [tests."test/fps/fac_large1.cpp"]
 path = "test/fps/fac_large1.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11340"
-problem_id = 11340
+problem_url = "https://icpc.bjtu.edu.cn/problem/11341"
+problem_id = 11341
 dependencies = [
     "poly/fac_large.hpp",
     "poly/lag.hpp",
@@ -8510,16 +8557,16 @@ dependencies = [
     "mod/mint_t.hpp",
 ]
 last_trigger = "test_file_changed"
-last_tested_head = "d2ce4d39a53af72710e4774d81d4564cb3d23d51"
-last_updated_at = "2026-04-12T14:10:27.450378997Z"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
 
 [tests."test/fps/fac_large1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "305 ms"
+time_text = "448 ms"
 memory_text = "21984 KB"
-run_id = 782693
+run_id = 782719
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/partition.cpp"]
@@ -8874,6 +8921,151 @@ grade = "100/100"
 time_text = "272 ms"
 memory_text = "22148 KB"
 run_id = 782596
+runtime_error = "Run time error details not Available"
+
+[tests."test/graph/bcc_v.cpp"]
+path = "test/graph/bcc_v.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11346"
+problem_id = 11346
+dependencies = [
+    "g/block_cut.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/graph/bcc_v.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "804 ms"
+memory_text = "192388 KB"
+run_id = 782722
+runtime_error = "Run time error details not Available"
+
+[tests."test/graph/dominator_tree.cpp"]
+path = "test/graph/dominator_tree.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11352"
+problem_id = 11352
+dependencies = [
+    "g/dominator_tree.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/graph/dominator_tree.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "204 ms"
+memory_text = "25264 KB"
+run_id = 782720
+runtime_error = "Run time error details not Available"
+
+[tests."test/graph/enum/enum_clique.cpp"]
+path = "test/graph/enum/enum_clique.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11353"
+problem_id = 11353
+dependencies = [
+    "mod/mint_t.hpp",
+    "g/enumerate_clique.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/graph/enum/enum_clique.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "7 ms"
+memory_text = "2544 KB"
+run_id = 782721
+runtime_error = "Run time error details not Available"
+
+[tests."test/graph/min_color.cpp"]
+path = "test/graph/min_color.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11348"
+problem_id = 11348
+dependencies = [
+    "g/min_color.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/graph/min_color.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "50 ms"
+memory_text = "14836 KB"
+run_id = 782723
+runtime_error = "Run time error details not Available"
+
+[tests."test/graph/min_cycle_dir.cpp"]
+path = "test/graph/min_cycle_dir.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11350"
+problem_id = 11350
+dependencies = [
+    "g/find_min_cycle.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/graph/min_cycle_dir.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "292 ms"
+memory_text = "62040 KB"
+run_id = 782724
+runtime_error = "Run time error details not Available"
+
+[tests."test/graph/min_cycle_undir.cpp"]
+path = "test/graph/min_cycle_undir.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11351"
+problem_id = 11351
+dependencies = [
+    "g/find_min_cycle.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "random/hash.hpp",
+    "random/rng.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "cb341ded4ca99660dec935ef4d03d1883d9e7525"
+last_updated_at = "2026-04-12T18:05:04.714438357Z"
+
+[tests."test/graph/min_cycle_undir.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "267 ms"
+memory_text = "47308 KB"
+run_id = 782725
 runtime_error = "Run time error details not Available"
 
 [tests."test/nt/count/subseq.cpp"]
