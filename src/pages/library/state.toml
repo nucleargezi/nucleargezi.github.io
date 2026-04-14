@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-04-14T00:02:31.44808545Z"
-status = "failed"
+generated_at = "2026-04-14T00:13:39.171391438Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -9,128 +10,22 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = [
-    "README.md",
-    "flow/min_cost_bflow.hpp",
-    "flow/min_cost_flow_lower.hpp",
-    "g/dijkstra.hpp",
-    "g/dijkstra_fheap.hpp",
-    "g/enumerate_c3.hpp",
-    "g/enumerate_cyc3.hpp",
-    "g/euler_walk.hpp",
-    "g/inc_mst.hpp",
-    "g/k_shortest/k_short_walk.hpp",
-    "g/max_independent_set.hpp",
-    "g/mst_kru.hpp",
-    "g/steiner.hpp",
-    "g/vs_to_es.hpp",
-    "mod/mint_t.hpp",
-    "pr/diri.hpp",
-    "pr/ml.hpp",
-    "test/flow/flower.cpp",
-    "test/flow/min_cost_bflow.cpp",
-    "test/fps/bernoulli.cpp",
-    "test/graph/bcc_e.cpp",
-    "test/graph/dij.cpp",
-    "test/graph/dij_fheap.cpp",
-    "test/graph/enum/enum_cyc3.cpp",
-    "test/graph/euler_tour_dir.cpp",
-    "test/graph/euler_tour_undir.cpp",
-    "test/graph/inc_mst.cpp",
-    "test/graph/k_shortset_walk.cpp",
-    "test/graph/max_independent_set.cpp",
-    "test/graph/mst_kru.cpp",
-    "test/graph/steiner_tree.cpp",
-    "test/pr/ml.cpp",
-]
-selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/ds/range/rec_sum_rec_add.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/range_assign.cpp",
-    "test/ds/seg/seg/seg_t_set.cpp",
-    "test/ds/seg/sort_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_am.cpp",
-    "test/flow/flower.cpp",
-    "test/flow/min_cost_bflow.cpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_all.cpp",
-    "test/fps/basic/conv_multi_2n.cpp",
-    "test/fps/basic/conv_multi_p.cpp",
-    "test/fps/basic/conv_ull.cpp",
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/fps/basic/lag_iota.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/fps/basic/poly_inv.cpp",
-    "test/fps/basic/shift.cpp",
-    "test/fps/bell.cpp",
-    "test/fps/bernoulli.cpp",
-    "test/fps/fac_large0.cpp",
-    "test/fps/fac_large1.cpp",
-    "test/fps/partition.cpp",
-    "test/fps/prod_of_one_plus_xn.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/graph/bcc_e.cpp",
-    "test/graph/dij.cpp",
-    "test/graph/dij_fheap.cpp",
-    "test/graph/enum/enum_clique.cpp",
-    "test/graph/enum/enum_cyc3.cpp",
-    "test/graph/euler_tour_dir.cpp",
-    "test/graph/euler_tour_undir.cpp",
-    "test/graph/inc_mst.cpp",
-    "test/graph/k_shortset_walk.cpp",
-    "test/graph/max_independent_set.cpp",
-    "test/graph/mst_kru.cpp",
-    "test/graph/steiner_tree.cpp",
-    "test/nt/count/subseq.cpp",
-    "test/pr/conv_gcd.cpp",
-    "test/pr/conv_lcm.cpp",
-    "test/pr/ml.cpp",
-    "test/sps/and_conv.cpp",
-    "test/sps/sps_comp.cpp",
-    "test/sps/sps_conv.cpp",
-    "test/sps/sps_exp.cpp",
-    "test/sps/sps_log.cpp",
-    "test/sps/xor_conv.cpp",
-]
+changed_paths = ["test/ds/treap/treap_am.cpp"]
+selected_tests = ["test/ds/treap/treap_am.cpp"]
 total_discovered = 152
-total_selected = 76
-passed = 75
-failed = 1
+total_selected = 1
+passed = 1
+failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
+    "al/am/am_base.hpp",
     "al/am/mincnt_add.hpp",
     "al/am/sum_add.hpp",
+    "al/am/sum_affine.hpp",
+    "al/m/add.hpp",
+    "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
     "al/m/minmincnt.hpp",
@@ -141,6 +36,7 @@ all_passed = [
     "ds/basic/deque.hpp",
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
+    "ds/basic/node_pool.hpp",
     "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
@@ -185,6 +81,7 @@ all_passed = [
     "ds/st/st_range_prod.hpp",
     "ds/static_range_group.hpp",
     "ds/swag.hpp",
+    "ds/treap/treap_act.hpp",
     "ds/treap/treap_monoid.hpp",
     "ds/treap/treap_monoid_commute.hpp",
     "ds/trie_bina.hpp",
@@ -233,6 +130,7 @@ all_passed = [
     "ge/pairs/furthest_pair.hpp",
     "mod/all_inv.hpp",
     "mod/barrett.hpp",
+    "mod/mint_t.hpp",
     "mod/mod_pow.hpp",
     "mod/mod_sqrt.hpp",
     "mod/powtable.hpp",
@@ -296,15 +194,7 @@ all_passed = [
     "sps/f/zeta.hpp",
     "sps/log.hpp",
 ]
-has_failures = [
-    "al/am/am_base.hpp",
-    "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/treap/treap_act.hpp",
-    "mod/mint_t.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add_assign.hpp",
@@ -6192,12 +6082,6 @@ unused = [
 ]
 "tr/subtree_hash.hpp" = []
 
-[[failures]]
-path = "test/ds/treap/treap_am.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11305"
-message = "Time limit exceeded"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -7645,17 +7529,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "6a12e84726ae848e9651ccbe9c67c271f24c2189"
-last_updated_at = "2026-04-14T00:02:31.44808545Z"
+last_trigger = "test_file_changed"
+last_tested_head = "ff4abbdf1dc2f841f35173b47da29bf0b751c4f1"
+last_updated_at = "2026-04-14T00:13:39.171391438Z"
 
 [tests."test/ds/treap/treap_am.cpp".last_result]
-status = "failed"
-verdict = "Time limit exceeded"
-grade = "97/100"
-time_text = "3045 ms"
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2264 ms"
 memory_text = "45464 KB"
-run_id = 783194
+run_id = 783253
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_rev0.cpp"]
