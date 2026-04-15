@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-15T10:14:22.373236117Z"
+generated_at = "2026-04-15T11:31:38.581227635Z"
 status = "passed"
 failures = []
 
@@ -11,16 +11,28 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "mod/mod_sqrt.hpp",
-    "mod/modfast_d.hpp",
+    "README.md",
+    "pr/floor_sum_line.hpp",
+    "pr/phi.hpp",
+    "pr/phi_table.hpp",
+    "pr/tetration.hpp",
+    "test/mod/mod_sqrt.cpp",
+    "test/pr/count/subseq.cpp",
+    "test/pr/floor_sum_line.cpp",
+    "test/pr/nim_prod.cpp",
+    "test/pr/sbt.cpp",
 ]
 selected_tests = [
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/mod/discrete_log_fast(dmint).cpp",
+    "test/mod/mod_sqrt.cpp",
+    "test/pr/count/subseq.cpp",
+    "test/pr/du.cpp",
+    "test/pr/floor_sum_line.cpp",
+    "test/pr/nim_prod.cpp",
+    "test/pr/sbt.cpp",
 ]
-total_discovered = 166
-total_selected = 2
-passed = 2
+total_discovered = 168
+total_selected = 6
+passed = 6
 failed = 0
 invalid = 0
 
@@ -191,6 +203,7 @@ all_passed = [
     "pr/enum_div.hpp",
     "pr/factors.hpp",
     "pr/floor_root.hpp",
+    "pr/floor_sum_line.hpp",
     "pr/lpf_table.hpp",
     "pr/min_25.hpp",
     "pr/min_line.hpp",
@@ -389,7 +402,6 @@ unused = [
     "mod/mod_inv.hpp",
     "mod/modfast.hpp",
     "mod/pow_fast.hpp",
-    "mod/tetration.hpp",
     "nt/adaptive_simpson.hpp",
     "nt/bigint/bigint_binary.hpp",
     "nt/bigint/odd_big_int.hpp",
@@ -559,10 +571,11 @@ unused = [
     "pr/first_mod_range_line.hpp",
     "pr/floor_exp_seki.hpp",
     "pr/floor_sum.hpp",
-    "pr/floor_sum_line.hpp",
     "pr/gcd_fast.hpp",
     "pr/min_two_congruences.hpp",
     "pr/pell.hpp",
+    "pr/phi.hpp",
+    "pr/tetration.hpp",
     "random/const_rng.hpp",
     "random/gen.hpp",
     "seq/inversion.hpp",
@@ -1363,7 +1376,6 @@ unused = [
     "mod/mod_pow.hpp",
     "mod/barrett.hpp",
 ]
-"mod/tetration.hpp" = []
 "nt/adaptive_simpson.hpp" = []
 "nt/bigint/big.hpp" = [
     "poly/c/bs.hpp",
@@ -2990,9 +3002,6 @@ unused = [
 "pr/du.hpp" = [
     "ds/basic/hashmap.hpp",
     "pr/phi_table.hpp",
-    "pr/factors.hpp",
-    "pr/ptest.hpp",
-    "random/rng.hpp",
     "pr/zeta_mobius.hpp",
     "pr/ptable.hpp",
     "pr/mu_table.hpp",
@@ -3031,10 +3040,12 @@ unused = [
     "pr/ptable.hpp",
 ]
 "pr/pell.hpp" = []
-"pr/phi_table.hpp" = [
+"pr/phi.hpp" = [
     "pr/factors.hpp",
     "pr/ptest.hpp",
     "random/rng.hpp",
+]
+"pr/phi_table.hpp" = [
     "pr/zeta_mobius.hpp",
     "pr/ptable.hpp",
 ]
@@ -3042,6 +3053,12 @@ unused = [
 "pr/ptable.hpp" = []
 "pr/ptest.hpp" = []
 "pr/rational_bina.hpp" = []
+"pr/tetration.hpp" = [
+    "pr/phi.hpp",
+    "pr/factors.hpp",
+    "pr/ptest.hpp",
+    "random/rng.hpp",
+]
 "pr/zeta_mobius.hpp" = ["pr/ptable.hpp"]
 "random/const_rng.hpp" = []
 "random/gen.hpp" = ["random/rng.hpp"]
@@ -4409,7 +4426,6 @@ unused = [
     "mod/modfast_d.hpp",
     "poly/conv_multi_p.hpp",
 ]
-"mod/tetration.hpp" = []
 "nt/adaptive_simpson.hpp" = []
 "nt/bigint/big.hpp" = []
 "nt/bigint/bigint_binary.hpp" = []
@@ -5533,8 +5549,8 @@ unused = [
     "poly/conv_multi_p.hpp",
     "pr/crt.hpp",
     "pr/divisors.hpp",
-    "pr/du.hpp",
-    "pr/phi_table.hpp",
+    "pr/phi.hpp",
+    "pr/tetration.hpp",
 ]
 "pr/farey.hpp" = ["pr/exgcd.hpp"]
 "pr/first_mod_range_line.hpp" = []
@@ -5557,6 +5573,7 @@ unused = [
 "pr/ml.hpp" = []
 "pr/mu_table.hpp" = ["pr/du.hpp"]
 "pr/pell.hpp" = []
+"pr/phi.hpp" = ["pr/tetration.hpp"]
 "pr/phi_table.hpp" = ["pr/du.hpp"]
 "pr/psum.hpp" = []
 "pr/ptable.hpp" = [
@@ -5595,12 +5612,13 @@ unused = [
     "poly/conv_multi_p.hpp",
     "pr/crt.hpp",
     "pr/divisors.hpp",
-    "pr/du.hpp",
     "pr/fac.hpp",
     "pr/factors.hpp",
-    "pr/phi_table.hpp",
+    "pr/phi.hpp",
+    "pr/tetration.hpp",
 ]
 "pr/rational_bina.hpp" = []
+"pr/tetration.hpp" = []
 "pr/zeta_mobius.hpp" = [
     "pr/conv_gcd.hpp",
     "pr/conv_lcm.hpp",
@@ -5630,9 +5648,9 @@ unused = [
     "poly/find_root.hpp",
     "pr/crt.hpp",
     "pr/divisors.hpp",
-    "pr/du.hpp",
     "pr/factors.hpp",
-    "pr/phi_table.hpp",
+    "pr/phi.hpp",
+    "pr/tetration.hpp",
     "random/gen.hpp",
     "random/hash.hpp",
     "tr/subtree_hash.hpp",
@@ -9048,61 +9066,25 @@ memory_text = "52228 KB"
 run_id = 786951
 runtime_error = "Run time error details not Available"
 
-[tests."test/nt/count/subseq.cpp"]
-path = "test/nt/count/subseq.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11342"
-problem_id = 11342
+[tests."test/mod/mod_sqrt.cpp"]
+path = "test/mod/mod_sqrt.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11384"
+problem_id = 11384
 dependencies = [
-    "mod/mint_t.hpp",
-    "nt/counting/count_subseq.hpp",
+    "mod/mod_sqrt.hpp",
+    "mod/barrett.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "109cde46fbef1f69073143996aa4112378e54db2"
-last_updated_at = "2026-04-15T10:01:36.411025688Z"
+last_trigger = "test_file_changed"
+last_tested_head = "499a25035af14ca81dcd3157dfb47627c6af9402"
+last_updated_at = "2026-04-15T11:31:38.581227635Z"
 
-[tests."test/nt/count/subseq.cpp".last_result]
+[tests."test/mod/mod_sqrt.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "825 ms"
-memory_text = "27980 KB"
-run_id = 786799
-runtime_error = "Run time error details not Available"
-
-[tests."test/nt/nim_prod.cpp"]
-path = "test/nt/nim_prod.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/10546"
-problem_id = 10546
-dependencies = ["nt/nim/nimbase.hpp"]
-last_trigger = "manual"
-last_tested_head = "109cde46fbef1f69073143996aa4112378e54db2"
-last_updated_at = "2026-04-15T10:01:36.411025688Z"
-
-[tests."test/nt/nim_prod.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "300 ms"
-memory_text = "3964 KB"
-run_id = 786804
-runtime_error = "Run time error details not Available"
-
-[tests."test/nt/sbt.cpp"]
-path = "test/nt/sbt.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/10545"
-problem_id = 10545
-dependencies = ["nt/sbt.hpp"]
-last_trigger = "manual"
-last_tested_head = "109cde46fbef1f69073143996aa4112378e54db2"
-last_updated_at = "2026-04-15T10:01:36.411025688Z"
-
-[tests."test/nt/sbt.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "164 ms"
-memory_text = "2696 KB"
-run_id = 786805
+time_text = "111 ms"
+memory_text = "2524 KB"
+run_id = 787190
 runtime_error = "Run time error details not Available"
 
 [tests."test/pr/conv_gcd.cpp"]
@@ -9149,6 +9131,27 @@ grade = "100/100"
 time_text = "182 ms"
 memory_text = "26740 KB"
 run_id = 786808
+runtime_error = "Run time error details not Available"
+
+[tests."test/pr/count/subseq.cpp"]
+path = "test/pr/count/subseq.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11342"
+problem_id = 11342
+dependencies = [
+    "mod/mint_t.hpp",
+    "nt/counting/count_subseq.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "499a25035af14ca81dcd3157dfb47627c6af9402"
+last_updated_at = "2026-04-15T11:31:38.581227635Z"
+
+[tests."test/pr/count/subseq.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "763 ms"
+memory_text = "27980 KB"
+run_id = 787191
 runtime_error = "Run time error details not Available"
 
 [tests."test/pr/diri_conv_presum.cpp"]
@@ -9204,24 +9207,21 @@ dependencies = [
     "pr/du.hpp",
     "ds/basic/hashmap.hpp",
     "pr/phi_table.hpp",
-    "pr/factors.hpp",
-    "pr/ptest.hpp",
-    "random/rng.hpp",
     "pr/zeta_mobius.hpp",
     "pr/ptable.hpp",
     "pr/mu_table.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "109cde46fbef1f69073143996aa4112378e54db2"
-last_updated_at = "2026-04-15T10:01:36.411025688Z"
+last_trigger = "dependency_changed"
+last_tested_head = "499a25035af14ca81dcd3157dfb47627c6af9402"
+last_updated_at = "2026-04-15T11:31:38.581227635Z"
 
 [tests."test/pr/du.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1220 ms"
-memory_text = "47028 KB"
-run_id = 786817
+time_text = "1110 ms"
+memory_text = "47012 KB"
+run_id = 787193
 runtime_error = "Run time error details not Available"
 
 [tests."test/pr/enum_quotients.cpp"]
@@ -9280,6 +9280,24 @@ grade = "100/100"
 time_text = "93 ms"
 memory_text = "2536 KB"
 run_id = 786822
+runtime_error = "Run time error details not Available"
+
+[tests."test/pr/floor_sum_line.cpp"]
+path = "test/pr/floor_sum_line.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11386"
+problem_id = 11386
+dependencies = ["pr/floor_sum_line.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "499a25035af14ca81dcd3157dfb47627c6af9402"
+last_updated_at = "2026-04-15T11:31:38.581227635Z"
+
+[tests."test/pr/floor_sum_line.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "71 ms"
+memory_text = "2524 KB"
+run_id = 787192
 runtime_error = "Run time error details not Available"
 
 [tests."test/pr/min25_0.cpp"]
@@ -9365,6 +9383,24 @@ memory_text = "5928 KB"
 run_id = 786828
 runtime_error = "Run time error details not Available"
 
+[tests."test/pr/nim_prod.cpp"]
+path = "test/pr/nim_prod.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/10546"
+problem_id = 10546
+dependencies = ["nt/nim/nimbase.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "499a25035af14ca81dcd3157dfb47627c6af9402"
+last_updated_at = "2026-04-15T11:31:38.581227635Z"
+
+[tests."test/pr/nim_prod.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "264 ms"
+memory_text = "3964 KB"
+run_id = 787188
+runtime_error = "Run time error details not Available"
+
 [tests."test/pr/prim_test.cpp"]
 path = "test/pr/prim_test.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11382"
@@ -9417,6 +9453,24 @@ grade = "100/100"
 time_text = "68 ms"
 memory_text = "2524 KB"
 run_id = 786838
+runtime_error = "Run time error details not Available"
+
+[tests."test/pr/sbt.cpp"]
+path = "test/pr/sbt.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/10545"
+problem_id = 10545
+dependencies = ["nt/sbt.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "499a25035af14ca81dcd3157dfb47627c6af9402"
+last_updated_at = "2026-04-15T11:31:38.581227635Z"
+
+[tests."test/pr/sbt.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "161 ms"
+memory_text = "2696 KB"
+run_id = 787189
 runtime_error = "Run time error details not Available"
 
 [tests."test/sps/and_conv.cpp"]
