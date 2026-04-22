@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-04-21T07:04:41.276450672Z"
+generated_at = "2026-04-22T09:10:36.850281081Z"
 status = "passed"
 failures = []
 
@@ -10,11 +10,51 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = ["test/ds/treap/treap_mono_cm_rev_prod.cpp"]
-selected_tests = ["test/ds/treap/treap_mono_cm_rev_prod.cpp"]
-total_discovered = 239
-total_selected = 1
-passed = 1
+changed_paths = [
+    "README.md",
+    "ds/chtholly/chtholly.hpp",
+    "ds/chtholly/chtholly_fast.hpp",
+    "ds/chtholly/chtholly_fset.hpp",
+    "ds/lct/lct_act.hpp",
+    "ds/mo/mo_roll.hpp",
+    "ds/range/range_mode.hpp",
+    "ds/seg/seg_dual_t.hpp",
+    "ds/seg/segl_t.hpp",
+    "test/ds/bit/bitbit.cpp",
+    "test/ds/bit/dual_bit2.cpp",
+    "test/ds/chtholly/chtholly.cpp",
+    "test/ds/chtholly/chtholly_fset.cpp",
+    "test/ds/fset.cpp",
+    "test/ds/lct/lct_act_nc.cpp",
+    "test/ds/mo/mo_rollback_cnt.cpp",
+    "test/ds/seg/assign/range_assign0.cpp",
+    "test/ds/seg/assign/range_assign1.cpp",
+    "test/ds/seg/rmq/range_max_add.cpp",
+    "test/ds/seg/rmq/range_min_add.cpp",
+    "test/tr/hld/hld_dual_nc.cpp",
+    "tr/hld_dual.hpp",
+]
+selected_tests = [
+    "test/ds/bit/bitbit.cpp",
+    "test/ds/bit/dual_bit2.cpp",
+    "test/ds/chtholly/chtholly.cpp",
+    "test/ds/chtholly/chtholly_fset.cpp",
+    "test/ds/fset.cpp",
+    "test/ds/lct/lct_act_nc.cpp",
+    "test/ds/mo/mo_rollback_cnt.cpp",
+    "test/ds/rect_union.cpp",
+    "test/ds/seg/assign/range_assign0.cpp",
+    "test/ds/seg/assign/range_assign1.cpp",
+    "test/ds/seg/dual/dual0.cpp",
+    "test/ds/seg/lazy/segl0.cpp",
+    "test/ds/seg/lazy/segl1.cpp",
+    "test/ds/seg/rmq/range_max_add.cpp",
+    "test/ds/seg/rmq/range_min_add.cpp",
+    "test/tr/hld/hld_dual_nc.cpp",
+]
+total_discovered = 247
+total_selected = 16
+passed = 16
 failed = 0
 invalid = 0
 
@@ -29,6 +69,7 @@ all_passed = [
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
     "al/m/minmincnt.hpp",
+    "al/m/xor.hpp",
     "al/monoid_pow.hpp",
     "conv/min_plus_conv.hpp",
     "dp/knapsack_tree.hpp",
@@ -44,18 +85,24 @@ all_passed = [
     "ds/bit/bit.hpp",
     "ds/bit/bit01.hpp",
     "ds/bit/bit2.hpp",
+    "ds/bit/bitbit.hpp",
     "ds/bit/dual_bit.hpp",
+    "ds/bit/dual_bit2.hpp",
     "ds/cartesian.hpp",
+    "ds/chtholly/chtholly.hpp",
+    "ds/chtholly/chtholly_fset.hpp",
     "ds/dynamic_array.hpp",
     "ds/heap/erase_heap.hpp",
     "ds/heap/fheap.hpp",
     "ds/heap/merge.hpp",
     "ds/heap/minmax_heap.hpp",
+    "ds/lct/lct_act.hpp",
     "ds/lct/lct_base.hpp",
     "ds/lct/lct_monoid.hpp",
     "ds/lct/lct_simple.hpp",
     "ds/lct/lct_sub.hpp",
     "ds/mo/mo.hpp",
+    "ds/mo/mo_roll.hpp",
     "ds/off_line/coef_quis.hpp",
     "ds/off_line/rectangle_union.hpp",
     "ds/range/major_voting.hpp",
@@ -64,6 +111,7 @@ all_passed = [
     "ds/range/range_inv.hpp",
     "ds/range/range_lis.hpp",
     "ds/range/rec_sum_rec_add.hpp",
+    "ds/rb/rb_arr.hpp",
     "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
     "ds/seg/range_assign_seg.hpp",
@@ -257,6 +305,7 @@ all_passed = [
     "tr/dp/rerooting_tree_dp.hpp",
     "tr/hld.hpp",
     "tr/hld_abel.hpp",
+    "tr/hld_dual.hpp",
     "tr/hld_mono.hpp",
     "tr/near_kinbo.hpp",
     "tr/nearr.hpp",
@@ -307,7 +356,6 @@ unused = [
     "al/m/set.hpp",
     "al/m/sp.hpp",
     "al/m/sub_array_sum.hpp",
-    "al/m/xor.hpp",
     "conv/max_add_convolution.hpp",
     "conv/monotone_minima.hpp",
     "debug.hpp",
@@ -322,16 +370,10 @@ unused = [
     "ds/basic/bs.hpp",
     "ds/basic/fset_del.hpp",
     "ds/basic/pbds.hpp",
-    "ds/bit/bitbit.hpp",
-    "ds/bit/dual_bit2.hpp",
     "ds/bit/range_sumadd.hpp",
-    "ds/chtholly/chtholly.hpp",
-    "ds/chtholly/chtholly_fast.hpp",
     "ds/heap/merge_laz.hpp",
     "ds/kdtree/kdtree.hpp",
     "ds/lct/lct.hpp",
-    "ds/lct/lct_act.hpp",
-    "ds/mo/mo_roll.hpp",
     "ds/mo/mo_upd.hpp",
     "ds/off_line/K_cdq.hpp",
     "ds/off_line/mo_niji.hpp",
@@ -343,7 +385,6 @@ unused = [
     "ds/range/range_bitmsk_prod.hpp",
     "ds/range/range_closest_pair.hpp",
     "ds/range/range_mode.hpp",
-    "ds/rb/rb_arr.hpp",
     "ds/rb/rb_dsu.hpp",
     "ds/rb/rollback_dsu_bipartite.hpp",
     "ds/seg/beats/beats_chmax.hpp",
@@ -545,7 +586,6 @@ unused = [
     "tr/fast_lca.hpp",
     "tr/gbt/gbt_monoid.hpp",
     "tr/gbt/gbt_monoid_commute.hpp",
-    "tr/hld_dual.hpp",
     "tr/hld_laz.hpp",
     "tr/hld_st.hpp",
     "tr/hld_wm.hpp",
@@ -721,7 +761,7 @@ unused = [
 "ds/bit/range_sumadd.hpp" = []
 "ds/cartesian.hpp" = []
 "ds/chtholly/chtholly.hpp" = []
-"ds/chtholly/chtholly_fast.hpp" = ["ds/basic/fset.hpp"]
+"ds/chtholly/chtholly_fset.hpp" = ["ds/basic/fset.hpp"]
 "ds/dynamic_array.hpp" = ["ds/basic/node_pool.hpp"]
 "ds/heap/erase_heap.hpp" = []
 "ds/heap/fheap.hpp" = []
@@ -2568,7 +2608,7 @@ unused = [
 ]
 "ds/basic/deque.hpp" = ["g/bfs01.hpp"]
 "ds/basic/fset.hpp" = [
-    "ds/chtholly/chtholly_fast.hpp",
+    "ds/chtholly/chtholly_fset.hpp",
     "ds/seg/range_assign_seg.hpp",
     "ds/seg/seg_sort_t.hpp",
 ]
@@ -2809,7 +2849,7 @@ unused = [
 "ds/bit/range_sumadd.hpp" = []
 "ds/cartesian.hpp" = []
 "ds/chtholly/chtholly.hpp" = []
-"ds/chtholly/chtholly_fast.hpp" = []
+"ds/chtholly/chtholly_fset.hpp" = []
 "ds/dynamic_array.hpp" = ["ds/un/dynamic_dsu.hpp"]
 "ds/heap/erase_heap.hpp" = ["ds/heap/minmax_heap.hpp"]
 "ds/heap/fheap.hpp" = ["g/dijkstra_fheap.hpp"]
@@ -4379,6 +4419,49 @@ memory_text = "18228 KB"
 run_id = 790925
 runtime_error = "Run time error details not Available"
 
+[tests."test/ds/bit/bitbit.cpp"]
+path = "test/ds/bit/bitbit.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11463"
+problem_id = 11463
+dependencies = [
+    "ds/bit/bitbit.hpp",
+    "ds/basic/retsu.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/bit/bitbit.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "169 ms"
+memory_text = "34584 KB"
+run_id = 791449
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/bit/dual_bit2.cpp"]
+path = "test/ds/bit/dual_bit2.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11463"
+problem_id = 11463
+dependencies = [
+    "ds/bit/dual_bit2.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/bit/dual_bit2.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "509 ms"
+memory_text = "23176 KB"
+run_id = 791450
+runtime_error = "Run time error details not Available"
+
 [tests."test/ds/bs/deque.cpp"]
 path = "test/ds/bs/deque.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11302"
@@ -4431,6 +4514,45 @@ grade = "100/100"
 time_text = "136 ms"
 memory_text = "36108 KB"
 run_id = 790199
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/chtholly/chtholly.cpp"]
+path = "test/ds/chtholly/chtholly.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11465"
+problem_id = 11465
+dependencies = ["ds/chtholly/chtholly.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/chtholly/chtholly.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "31 ms"
+memory_text = "12436 KB"
+run_id = 791446
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/chtholly/chtholly_fset.cpp"]
+path = "test/ds/chtholly/chtholly_fset.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11465"
+problem_id = 11465
+dependencies = [
+    "ds/chtholly/chtholly_fset.hpp",
+    "ds/basic/fset.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/chtholly/chtholly_fset.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "71 ms"
+memory_text = "52720 KB"
+run_id = 791445
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/dsu.cpp"]
@@ -4492,6 +4614,42 @@ grade = "100/100"
 time_text = "1778 ms"
 memory_text = "791316 KB"
 run_id = 790202
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/fset.cpp"]
+path = "test/ds/fset.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11317"
+problem_id = 11317
+dependencies = ["ds/basic/fset.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/fset.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "251 ms"
+memory_text = "25648 KB"
+run_id = 791448
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/lct/lct_act_nc.cpp"]
+path = "test/ds/lct/lct_act_nc.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11467"
+problem_id = 11467
+dependencies = ["ds/lct/lct_act.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/lct/lct_act_nc.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "546 ms"
+memory_text = "9988 KB"
+run_id = 791447
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_dist_jump.cpp"]
@@ -4711,6 +4869,27 @@ memory_text = "19152 KB"
 run_id = 790213
 runtime_error = "Run time error details not Available"
 
+[tests."test/ds/mo/mo_rollback_cnt.cpp"]
+path = "test/ds/mo/mo_rollback_cnt.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11468"
+problem_id = 11468
+dependencies = [
+    "ds/mo/mo_roll.hpp",
+    "ds/rb/rb_arr.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/mo/mo_rollback_cnt.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "578 ms"
+memory_text = "8740 KB"
+run_id = 791455
+runtime_error = "Run time error details not Available"
+
 [tests."test/ds/range/mojor_voting.cpp"]
 path = "test/ds/range/mojor_voting.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11309"
@@ -4843,17 +5022,17 @@ dependencies = [
     "al/am/am_base.hpp",
     "ds/seg/segl_t.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
+last_trigger = "dependency_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
 
 [tests."test/ds/rect_union.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "2471 ms"
+time_text = "2432 ms"
 memory_text = "87308 KB"
-run_id = 790220
+run_id = 791457
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sim_sub_sum_point_add.cpp"]
@@ -4948,6 +5127,55 @@ memory_text = "42248 KB"
 run_id = 790224
 runtime_error = "Run time error details not Available"
 
+[tests."test/ds/seg/assign/range_assign0.cpp"]
+path = "test/ds/seg/assign/range_assign0.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11324"
+problem_id = 11324
+dependencies = [
+    "mod/mint_t.hpp",
+    "ds/seg/range_assign_seg.hpp",
+    "al/monoid_pow.hpp",
+    "ds/basic/fset.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/m/affine.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/seg/assign/range_assign0.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "865 ms"
+memory_text = "17072 KB"
+run_id = 791459
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/seg/assign/range_assign1.cpp"]
+path = "test/ds/seg/assign/range_assign1.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11465"
+problem_id = 11465
+dependencies = [
+    "ds/seg/range_assign_seg.hpp",
+    "al/monoid_pow.hpp",
+    "ds/basic/fset.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/m/xor.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/seg/assign/range_assign1.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1292 ms"
+memory_text = "288364 KB"
+run_id = 791461
+runtime_error = "Run time error details not Available"
+
 [tests."test/ds/seg/beats/beats_maxminadd.cpp"]
 path = "test/ds/seg/beats/beats_maxminadd.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10533"
@@ -4978,17 +5206,17 @@ dependencies = [
     "ds/seg/seg_dual_t.hpp",
     "al/m/affine.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
+last_trigger = "dependency_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
 
 [tests."test/ds/seg/dual/dual0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "457 ms"
+time_text = "467 ms"
 memory_text = "10724 KB"
-run_id = 790226
+run_id = 791463
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg/segd_bina0.cpp"]
@@ -5270,24 +5498,6 @@ memory_text = "27128 KB"
 run_id = 790237
 runtime_error = "Run time error details not Available"
 
-[tests."test/ds/seg/fset.cpp"]
-path = "test/ds/seg/fset.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11317"
-problem_id = 11317
-dependencies = ["ds/basic/fset.hpp"]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
-
-[tests."test/ds/seg/fset.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "233 ms"
-memory_text = "25648 KB"
-run_id = 790238
-runtime_error = "Run time error details not Available"
-
 [tests."test/ds/seg/lazy/segl0.cpp"]
 path = "test/ds/seg/lazy/segl0.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11320"
@@ -5300,17 +5510,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
+last_trigger = "dependency_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
 
 [tests."test/ds/seg/lazy/segl0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "845 ms"
+time_text = "957 ms"
 memory_text = "12688 KB"
-run_id = 790239
+run_id = 791465
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/lazy/segl1.cpp"]
@@ -5325,84 +5535,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
+last_trigger = "dependency_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
 
 [tests."test/ds/seg/lazy/segl1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "985 ms"
+time_text = "1107 ms"
 memory_text = "12688 KB"
-run_id = 790240
-runtime_error = "Run time error details not Available"
-
-[tests."test/ds/seg/range_assign.cpp"]
-path = "test/ds/seg/range_assign.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11324"
-problem_id = 11324
-dependencies = [
-    "mod/mint_t.hpp",
-    "ds/seg/range_assign_seg.hpp",
-    "al/monoid_pow.hpp",
-    "ds/basic/fset.hpp",
-    "ds/seg/seg_t.hpp",
-    "al/m/affine.hpp",
-]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
-
-[tests."test/ds/seg/range_assign.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "792 ms"
-memory_text = "17072 KB"
-run_id = 790241
-runtime_error = "Run time error details not Available"
-
-[tests."test/ds/seg/range_max_add.cpp"]
-path = "test/ds/seg/range_max_add.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11319"
-problem_id = 11319
-dependencies = [
-    "ds/seg/range_max_add.hpp",
-    "ds/seg/seg_t.hpp",
-]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
-
-[tests."test/ds/seg/range_max_add.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "386 ms"
-memory_text = "22820 KB"
-run_id = 790242
-runtime_error = "Run time error details not Available"
-
-[tests."test/ds/seg/range_min_add.cpp"]
-path = "test/ds/seg/range_min_add.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11319"
-problem_id = 11319
-dependencies = [
-    "ds/seg/range_min_add.hpp",
-    "ds/seg/seg_t.hpp",
-]
-last_trigger = "manual"
-last_tested_head = "b8b383b1aa8e44221ee39ca825ee61a9438136c1"
-last_updated_at = "2026-04-19T10:32:18.680999751Z"
-
-[tests."test/ds/seg/range_min_add.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "390 ms"
-memory_text = "22820 KB"
-run_id = 790243
+run_id = 791467
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
@@ -5424,6 +5567,48 @@ grade = "100/100"
 time_text = "146 ms"
 memory_text = "14248 KB"
 run_id = 790244
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/seg/rmq/range_max_add.cpp"]
+path = "test/ds/seg/rmq/range_max_add.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11319"
+problem_id = 11319
+dependencies = [
+    "ds/seg/range_max_add.hpp",
+    "ds/seg/seg_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/seg/rmq/range_max_add.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "501 ms"
+memory_text = "22820 KB"
+run_id = 791473
+runtime_error = "Run time error details not Available"
+
+[tests."test/ds/seg/rmq/range_min_add.cpp"]
+path = "test/ds/seg/rmq/range_min_add.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11319"
+problem_id = 11319
+dependencies = [
+    "ds/seg/range_min_add.hpp",
+    "ds/seg/seg_t.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/ds/seg/rmq/range_min_add.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "485 ms"
+memory_text = "22820 KB"
+run_id = 791474
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/seg/seg_t_add.cpp"]
@@ -9117,6 +9302,30 @@ grade = "100/100"
 time_text = "686 ms"
 memory_text = "116168 KB"
 run_id = 791016
+runtime_error = "Run time error details not Available"
+
+[tests."test/tr/hld/hld_dual_nc.cpp"]
+path = "test/tr/hld/hld_dual_nc.cpp"
+problem_url = "http://icpc.bjtu.edu.cn/problem/11466"
+problem_id = 11466
+dependencies = [
+    "tr/hld_dual.hpp",
+    "ds/seg/seg_dual_t.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "13e5c37a6da62961991abffe9b400a2793efe3d7"
+last_updated_at = "2026-04-22T09:10:36.850281081Z"
+
+[tests."test/tr/hld/hld_dual_nc.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "297 ms"
+memory_text = "18144 KB"
+run_id = 791472
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/hld/hld_jump.cpp"]
