@@ -9,7 +9,6 @@
 )
 #let code-fonts = (
   "Fira Code",
-  // "DejaVu Sans Mono",
 )
 
 #let body-size = 7pt
