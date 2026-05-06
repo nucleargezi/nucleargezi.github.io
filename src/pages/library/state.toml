@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-05-06T13:28:05.371261693Z"
+generated_at = "2026-05-06T14:01:42.286900784Z"
 status = "passed"
 failures = []
 
@@ -10,91 +10,11 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = [
-    "al/m/xor.hpp",
-    "ds/bit/bit01.hpp",
-    "ds/range/major_voting.hpp",
-    "ds/range/rectangle_union.hpp",
-    "test/ds/bit/bit2_0.cpp",
-    "test/ds/bit/bit2_1.cpp",
-    "test/ds/bit/bit2_2.cpp",
-    "test/ds/bit/bitbit.cpp",
-    "test/ds/bit/dual_bit2.cpp",
-    "test/ds/lct/lct_path_sum_point_add.cpp",
-    "test/ds/lct/lct_path_sum_set.cpp",
-    "test/ds/lct/lct_sub_sum.cpp",
-    "test/ds/lct/lct_sub_sum_p_add.cpp",
-    "test/ds/satt/satt_sim_sub_sum_point_add.cpp",
-    "test/ds/satt/satt_sim_sub_sum_point_set.cpp",
-    "test/ds/seg/assign/range_assign1.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina0.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
-    "test/ds/seg/lazy/his_sum_add.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/seg/seg_t_add.cpp",
-    "test/ds/st/st_dis/range_sum.cpp",
-    "test/ds/st/st_prod/range_prod.cpp",
-    "test/ds/treap/treap_mono_cm_rev_prod.cpp",
-    "test/ds/treap/treap_mono_rev_prod.cpp",
-    "test/ds/wave_matrix/wm2_bit0.cpp",
-    "test/ds/wave_matrix/wm2_bit1.cpp",
-    "test/ds/wave_matrix/wm2_bit2.cpp",
-    "test/ds/wave_matrix/wm2_narr_seg.cpp",
-    "test/ds/wave_matrix/wm2_seg.cpp",
-    "test/ds/wave_matrix/wm_prod.cpp",
-    "test/graph/dynamic_connect_sum.cpp",
-    "test/tr/hld/hld_abel_sub_sum_point_add.cpp",
-    "test/tr/hld/hld_path_sum_point_add.cpp",
-    "test/tr/hld/hld_sub_sum_point_add.cpp",
-    "test/tr/stt/near0.cpp",
-    "test/tr/stt/near1.cpp",
-]
-selected_tests = [
-    "test/ds/bit/bit01.cpp",
-    "test/ds/bit/bit01_1.cpp",
-    "test/ds/bit/bit2_0.cpp",
-    "test/ds/bit/bit2_1.cpp",
-    "test/ds/bit/bit2_2.cpp",
-    "test/ds/bit/bitbit.cpp",
-    "test/ds/bit/dual_bit2.cpp",
-    "test/ds/lct/lct_path_sum_point_add.cpp",
-    "test/ds/lct/lct_path_sum_set.cpp",
-    "test/ds/lct/lct_sub_sum.cpp",
-    "test/ds/lct/lct_sub_sum_p_add.cpp",
-    "test/ds/range/mojor_voting.cpp",
-    "test/ds/rect_union.cpp",
-    "test/ds/satt/satt_sim_sub_sum_point_add.cpp",
-    "test/ds/satt/satt_sim_sub_sum_point_set.cpp",
-    "test/ds/seg/assign/range_assign1.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina0.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
-    "test/ds/seg/lazy/his_sum_add.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/seg/seg_t_add.cpp",
-    "test/ds/st/st_dis/range_sum.cpp",
-    "test/ds/st/st_prod/range_prod.cpp",
-    "test/ds/treap/treap_mono_cm_rev_prod.cpp",
-    "test/ds/treap/treap_mono_rev_prod.cpp",
-    "test/ds/wave_matrix/wm2_bit0.cpp",
-    "test/ds/wave_matrix/wm2_bit1.cpp",
-    "test/ds/wave_matrix/wm2_bit2.cpp",
-    "test/ds/wave_matrix/wm2_narr_seg.cpp",
-    "test/ds/wave_matrix/wm2_seg.cpp",
-    "test/ds/wave_matrix/wm_prod.cpp",
-    "test/graph/dynamic_connect_sum.cpp",
-    "test/tr/hld/hld_abel_sub_sum_point_add.cpp",
-    "test/tr/hld/hld_path_sum_point_add.cpp",
-    "test/tr/hld/hld_sub_sum_point_add.cpp",
-    "test/tr/stt/near0.cpp",
-    "test/tr/stt/near1.cpp",
-]
+changed_paths = ["test/ds/seg/seg/seg_t_bina.cpp"]
+selected_tests = ["test/ds/seg/seg/seg_t_bina.cpp"]
 total_discovered = 254
-total_selected = 39
-passed = 39
+total_selected = 1
+passed = 1
 failed = 0
 invalid = 0
 
@@ -104,6 +24,7 @@ all_passed = [
     "al/am/mincnt_add.hpp",
     "al/am/sum_add.hpp",
     "al/am/sum_affine.hpp",
+    "al/m/add.hpp",
     "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
@@ -158,6 +79,7 @@ all_passed = [
     "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_dual_t.hpp",
     "ds/seg/seg_sort_t.hpp",
+    "ds/seg/seg_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
     "ds/seg/segd_t.hpp",
     "ds/seg/segdl_t.hpp",
@@ -356,10 +278,7 @@ all_passed = [
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
-has_failures = [
-    "al/m/add.hpp",
-    "ds/seg/seg_t.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/am_base.hpp",
@@ -5695,50 +5614,17 @@ dependencies = [
     "ds/seg/seg_t.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "fc292cc755e66d4f89887770cac799e05e1f5e6d"
+last_updated_at = "2026-05-06T14:01:42.286900784Z"
 
 [tests."test/ds/seg/seg/seg_t_bina.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796290
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:652:9: error: ‘monoid_add’ was not declared in this scope
-  652 |   seg_t<monoid_add<int>> s(si(f));
-      |         ^~~~~~~~~~
-Main.cc:652:23: error: template argument 1 is invalid
-  652 |   seg_t<monoid_add<int>> s(si(f));
-      |                       ^~
-Main.cc:653:15: error: request for member ‘set’ in ‘s’, which is of non-class type ‘int’
-  653 |   FOR(i, N) s.set(lb(f, a[i]), 1);
-      |               ^~~
-Main.cc:657:9: error: request for member ‘set’ in ‘s’, which is of non-class type ‘int’
-  657 |       s.set(x, 1);
-      |         ^~~
-Main.cc:660:9: error: request for member ‘set’ in ‘s’, which is of non-class type ‘int’
-  660 |       s.set(x, 0);
-      |         ^~~
-Main.cc:662:13: error: request for member ‘max_right’ in ‘s’, which is of non-class type ‘int’
-  662 |       x = s.max_right([&](int i) { return i < x; }, 0);
-      |             ^~~~~~~~~
-Main.cc:663:20: error: request for member ‘N’ in ‘s’, which is of non-class type ‘int’
-  663 |       print(x == s.N ? -1 : f[x]);
-      |                    ^
-Main.cc:666:15: error: request for member ‘prod’ in ‘s’, which is of non-class type ‘int’
-  666 |       print(s.prod(0, x + 1));
-      |               ^~~~
-Main.cc:669:13: error: request for member ‘min_left’ in ‘s’, which is of non-class type ‘int’
-  669 |       x = s.min_left([&](int i) { return i == 0; }, x + 1);
-      |             ^~~~~~~~
-Main.cc:673:13: error: request for member ‘max_right’ in ‘s’, which is of non-class type ‘int’
-  673 |       x = s.max_right([&](int i) { return i == 0; }, x);
-      |             ^~~~~~~~~
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "413 ms"
+memory_text = "26428 KB"
+run_id = 796357
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/seg/seg_t_set.cpp"]
