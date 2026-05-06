@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-05-06T13:23:35.559854236Z"
-status = "failed"
+generated_at = "2026-05-06T13:28:05.371261693Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -10,55 +11,45 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "README.md",
-    "al/am/his_max_add.hpp",
-    "al/am/his_max_add_assign.hpp",
-    "al/am/his_max_add_set.hpp",
-    "al/am/his_sum_add.hpp",
-    "al/am/max_add.hpp",
-    "al/am/max_max.hpp",
-    "al/am/max_set.hpp",
-    "al/am/max_set_add.hpp",
-    "al/am/max_sub_array_sum.hpp",
-    "al/am/maxidx_add.hpp",
-    "al/am/maxidx_max.hpp",
-    "al/am/min_add.hpp",
-    "al/am/min_affine.hpp",
-    "al/am/mincnt_add.hpp",
-    "al/am/minidx_add.hpp",
-    "al/am/minmax_add.hpp",
-    "al/am/poly_mul_affine.hpp",
-    "al/am/sum_add.hpp",
-    "al/am/sum_affine.hpp",
-    "al/am/sum_line_add.hpp",
-    "al/am/sum_mul.hpp",
-    "al/m/add.hpp",
-    "al/m/add_array.hpp",
-    "al/m/add_line.hpp",
-    "al/m/add_pair.hpp",
-    "al/m/and.hpp",
-    "al/m/assign.hpp",
-    "al/m/dis_substr.hpp",
-    "al/m/floor_sum.hpp",
-    "al/m/gcd.hpp",
-    "al/m/hash.hpp",
-    "al/m/his_add_assign.hpp",
-    "al/m/major_voting.hpp",
-    "al/m/major_voting_pro.hpp",
-    "al/m/max.hpp",
-    "al/m/max_his_max.hpp",
-    "al/m/max_subarray_sum.hpp",
-    "al/m/maxidx.hpp",
-    "al/m/mincnt.hpp",
-    "al/m/minidx.hpp",
-    "al/m/minmax.hpp",
-    "al/m/mul.hpp",
-    "al/m/or.hpp",
-    "al/m/reverse.hpp",
-    "al/m/set.hpp",
-    "al/m/sp.hpp",
-    "al/m/sub_array_sum.hpp",
     "al/m/xor.hpp",
+    "ds/bit/bit01.hpp",
+    "ds/range/major_voting.hpp",
+    "ds/range/rectangle_union.hpp",
+    "test/ds/bit/bit2_0.cpp",
+    "test/ds/bit/bit2_1.cpp",
+    "test/ds/bit/bit2_2.cpp",
+    "test/ds/bit/bitbit.cpp",
+    "test/ds/bit/dual_bit2.cpp",
+    "test/ds/lct/lct_path_sum_point_add.cpp",
+    "test/ds/lct/lct_path_sum_set.cpp",
+    "test/ds/lct/lct_sub_sum.cpp",
+    "test/ds/lct/lct_sub_sum_p_add.cpp",
+    "test/ds/satt/satt_sim_sub_sum_point_add.cpp",
+    "test/ds/satt/satt_sim_sub_sum_point_set.cpp",
+    "test/ds/seg/assign/range_assign1.cpp",
+    "test/ds/seg/dynamic_seg/segd_bina0.cpp",
+    "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp",
+    "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp",
+    "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
+    "test/ds/seg/lazy/his_sum_add.cpp",
+    "test/ds/seg/range_sum_point_add.cpp",
+    "test/ds/seg/seg/seg_t_add.cpp",
+    "test/ds/st/st_dis/range_sum.cpp",
+    "test/ds/st/st_prod/range_prod.cpp",
+    "test/ds/treap/treap_mono_cm_rev_prod.cpp",
+    "test/ds/treap/treap_mono_rev_prod.cpp",
+    "test/ds/wave_matrix/wm2_bit0.cpp",
+    "test/ds/wave_matrix/wm2_bit1.cpp",
+    "test/ds/wave_matrix/wm2_bit2.cpp",
+    "test/ds/wave_matrix/wm2_narr_seg.cpp",
+    "test/ds/wave_matrix/wm2_seg.cpp",
+    "test/ds/wave_matrix/wm_prod.cpp",
+    "test/graph/dynamic_connect_sum.cpp",
+    "test/tr/hld/hld_abel_sub_sum_point_add.cpp",
+    "test/tr/hld/hld_path_sum_point_add.cpp",
+    "test/tr/hld/hld_sub_sum_point_add.cpp",
+    "test/tr/stt/near0.cpp",
+    "test/tr/stt/near1.cpp",
 ]
 selected_tests = [
     "test/ds/bit/bit01.cpp",
@@ -76,26 +67,16 @@ selected_tests = [
     "test/ds/rect_union.cpp",
     "test/ds/satt/satt_sim_sub_sum_point_add.cpp",
     "test/ds/satt/satt_sim_sub_sum_point_set.cpp",
-    "test/ds/satt/satt_sub_sum_point_set.cpp",
-    "test/ds/satt/satt_sub_sum_sub_add.cpp",
     "test/ds/seg/assign/range_assign1.cpp",
     "test/ds/seg/dynamic_seg/segd_bina0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
     "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp",
     "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp",
     "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
     "test/ds/seg/lazy/his_sum_add.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
     "test/ds/seg/range_sum_point_add.cpp",
     "test/ds/seg/seg/seg_t_add.cpp",
-    "test/ds/seg/seg/seg_t_bina.cpp",
     "test/ds/st/st_dis/range_sum.cpp",
     "test/ds/st/st_prod/range_prod.cpp",
-    "test/ds/treap/treap_am_apply_rev_prod.cpp",
-    "test/ds/treap/treap_am_rev_prod.cpp",
     "test/ds/treap/treap_mono_cm_rev_prod.cpp",
     "test/ds/treap/treap_mono_rev_prod.cpp",
     "test/ds/wave_matrix/wm2_bit0.cpp",
@@ -112,21 +93,39 @@ selected_tests = [
     "test/tr/stt/near1.cpp",
 ]
 total_discovered = 254
-total_selected = 49
-passed = 9
-failed = 40
+total_selected = 39
+passed = 39
+failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
+    "al/am/his_sum_add.hpp",
+    "al/am/mincnt_add.hpp",
     "al/am/sum_add.hpp",
     "al/am/sum_affine.hpp",
     "al/m/affine.hpp",
+    "al/m/major_voting.hpp",
     "al/m/min.hpp",
+    "al/m/xor.hpp",
+    "al/monoid_pow.hpp",
     "conv/min_plus_conv.hpp",
     "dp/knapsack_tree.hpp",
+    "ds/basic/bs_sim.hpp",
+    "ds/basic/compress.hpp",
     "ds/basic/deque.hpp",
+    "ds/basic/fset.hpp",
+    "ds/basic/hashmap.hpp",
+    "ds/basic/node_pool.hpp",
     "ds/basic/queue.hpp",
+    "ds/basic/retsu.hpp",
+    "ds/basic/unordered_discreate.hpp",
+    "ds/bit/bit.hpp",
+    "ds/bit/bit01.hpp",
+    "ds/bit/bit2.hpp",
+    "ds/bit/bitbit.hpp",
+    "ds/bit/dual_bit.hpp",
+    "ds/bit/dual_bit2.hpp",
     "ds/cartesian.hpp",
     "ds/chtholly/chtholly.hpp",
     "ds/chtholly/chtholly_fset.hpp",
@@ -137,36 +136,55 @@ all_passed = [
     "ds/heap/minmax_heap.hpp",
     "ds/lct/lct_act.hpp",
     "ds/lct/lct_base.hpp",
+    "ds/lct/lct_monoid.hpp",
     "ds/lct/lct_simple.hpp",
+    "ds/lct/lct_sub.hpp",
     "ds/mo/mo.hpp",
     "ds/mo/mo_roll.hpp",
     "ds/range/coef_quis.hpp",
+    "ds/range/major_voting.hpp",
     "ds/range/range_count_prod_upper.hpp",
     "ds/range/range_dist.hpp",
     "ds/range/range_inv.hpp",
     "ds/range/range_lis.hpp",
     "ds/range/rec_sum_rec_add.hpp",
+    "ds/range/rectangle_union.hpp",
     "ds/rb/rb_arr.hpp",
     "ds/seg/beats/beats_minmax.hpp",
     "ds/seg/beats/seg_beats.hpp",
+    "ds/seg/range_assign_seg.hpp",
     "ds/seg/range_max_add.hpp",
     "ds/seg/range_min_add.hpp",
+    "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_dual_t.hpp",
     "ds/seg/seg_sort_t.hpp",
+    "ds/seg/segd_sprase_t.hpp",
+    "ds/seg/segd_t.hpp",
     "ds/seg/segdl_t.hpp",
+    "ds/seg/segl_t.hpp",
     "ds/sl/cht.hpp",
     "ds/sl/lict.hpp",
     "ds/sl/lict_d.hpp",
     "ds/sl/lict_sp.hpp",
     "ds/sl/lline.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "ds/st/st_dis.hpp",
+    "ds/st/st_range_prod.hpp",
+    "ds/static_range_group.hpp",
     "ds/swag.hpp",
     "ds/toptree/satt.hpp",
+    "ds/toptree/satt_sim.hpp",
     "ds/treap/treap_act.hpp",
     "ds/treap/treap_base.hpp",
+    "ds/treap/treap_mono.hpp",
+    "ds/treap/treap_mono_cm.hpp",
     "ds/trie_bina.hpp",
     "ds/un/dsu.hpp",
     "ds/un/dynamic_dsu.hpp",
     "ds/wave/sswave.hpp",
+    "ds/wave/wave_mat.hpp",
+    "ds/wave/wave_mat_2d.hpp",
     "ds/wave/wave_mat_sim.hpp",
     "flow/BM.hpp",
     "flow/HLPP.hpp",
@@ -177,6 +195,7 @@ all_passed = [
     "flow/mcf.hpp",
     "flow/min_cost_bflow.hpp",
     "g/01coloring.hpp",
+    "g/Basic.hpp",
     "g/bcc_e.hpp",
     "g/bfs.hpp",
     "g/block_cut.hpp",
@@ -184,6 +203,7 @@ all_passed = [
     "g/dijkstra.hpp",
     "g/dijkstra_fheap.hpp",
     "g/dominator_tree.hpp",
+    "g/dynamic_connect.hpp",
     "g/enumerate_c3.hpp",
     "g/enumerate_clique.hpp",
     "g/euler_walk.hpp",
@@ -325,59 +345,20 @@ all_passed = [
     "tr/ddp_re.hpp",
     "tr/doubling.hpp",
     "tr/dp/rerooting_tree_dp.hpp",
+    "tr/hld.hpp",
+    "tr/hld_abel.hpp",
     "tr/hld_dual.hpp",
+    "tr/hld_mono.hpp",
+    "tr/near_kinbo.hpp",
     "tr/nearr.hpp",
     "tr/skew/lca.hpp",
     "tr/skew/lca2.hpp",
+    "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
 has_failures = [
-    "al/am/his_sum_add.hpp",
-    "al/am/mincnt_add.hpp",
     "al/m/add.hpp",
-    "al/m/major_voting.hpp",
-    "al/m/xor.hpp",
-    "al/monoid_pow.hpp",
-    "ds/basic/bs_sim.hpp",
-    "ds/basic/compress.hpp",
-    "ds/basic/fset.hpp",
-    "ds/basic/hashmap.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/basic/retsu.hpp",
-    "ds/basic/unordered_discreate.hpp",
-    "ds/bit/bit.hpp",
-    "ds/bit/bit01.hpp",
-    "ds/bit/bit2.hpp",
-    "ds/bit/bitbit.hpp",
-    "ds/bit/dual_bit.hpp",
-    "ds/bit/dual_bit2.hpp",
-    "ds/lct/lct_monoid.hpp",
-    "ds/lct/lct_sub.hpp",
-    "ds/range/major_voting.hpp",
-    "ds/range/rectangle_union.hpp",
-    "ds/seg/range_assign_seg.hpp",
-    "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_t.hpp",
-    "ds/seg/segd_sprase_t.hpp",
-    "ds/seg/segd_t.hpp",
-    "ds/seg/segl_t.hpp",
-    "ds/st/rmq.hpp",
-    "ds/st/st.hpp",
-    "ds/st/st_dis.hpp",
-    "ds/st/st_range_prod.hpp",
-    "ds/static_range_group.hpp",
-    "ds/toptree/satt_sim.hpp",
-    "ds/treap/treap_mono.hpp",
-    "ds/treap/treap_mono_cm.hpp",
-    "ds/wave/wave_mat.hpp",
-    "ds/wave/wave_mat_2d.hpp",
-    "g/Basic.hpp",
-    "g/dynamic_connect.hpp",
-    "tr/hld.hpp",
-    "tr/hld_abel.hpp",
-    "tr/hld_mono.hpp",
-    "tr/near_kinbo.hpp",
-    "tr/stt.hpp",
 ]
 unused = [
     "al/acted_set/from_monoid.hpp",
@@ -4239,246 +4220,6 @@ unused = [
 "tr/subtree_hash.hpp" = []
 "ttr/doubling.hpp" = []
 
-[[failures]]
-path = "test/ds/bit/bit01.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11310"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/bit/bit01_1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11317"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/bit/bit2_0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11313"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/bit/bit2_1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11326"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/bit/bit2_2.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11452"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/bit/bitbit.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11463"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/bit/dual_bit2.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11463"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/lct/lct_path_sum_point_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11440"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/lct/lct_path_sum_set.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11427"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/lct/lct_sub_sum.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11418"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/lct/lct_sub_sum_p_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11428"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/range/mojor_voting.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11309"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/rect_union.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11300"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/satt/satt_sim_sub_sum_point_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11428"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/satt/satt_sim_sub_sum_point_set.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11427"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/assign/range_assign1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11465"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/dynamic_seg/segd_bina0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11310"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11315"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11330"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11310"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/lazy/his_sum_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11470"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/range_sum_point_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/10531"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/seg/seg_t_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/10531"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/seg/seg_t_bina.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11310"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/st/st_dis/range_sum.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11334"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/st/st_prod/range_prod.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11334"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/treap/treap_mono_cm_rev_prod.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11323"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/treap/treap_mono_rev_prod.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11323"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/wave_matrix/wm2_bit0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11313"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/wave_matrix/wm2_bit1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11326"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/wave_matrix/wm2_bit2.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11452"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/wave_matrix/wm2_narr_seg.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11313"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/wave_matrix/wm2_seg.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11313"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/wave_matrix/wm_prod.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11335"
-message = "Compilation error"
-
-[[failures]]
-path = "test/graph/dynamic_connect_sum.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11472"
-message = "Compilation error"
-
-[[failures]]
-path = "test/tr/hld/hld_abel_sub_sum_point_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11443"
-message = "Compilation error"
-
-[[failures]]
-path = "test/tr/hld/hld_path_sum_point_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11440"
-message = "Compilation error"
-
-[[failures]]
-path = "test/tr/hld/hld_sub_sum_point_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11443"
-message = "Compilation error"
-
-[[failures]]
-path = "test/tr/stt/near0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11441"
-message = "Compilation error"
-
-[[failures]]
-path = "test/tr/stt/near1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11442"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -4636,56 +4377,16 @@ dependencies = [
     "ds/bit/bit.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/bit01.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796262
-compile_error = """
-Main.cc:652:9: error: ‘monoid_add’ was not declared in this scope
-  652 |   bit_t<monoid_add<int>> g;
-      |         ^~~~~~~~~~
-Main.cc:652:23: error: template argument 1 is invalid
-  652 |   bit_t<monoid_add<int>> g;
-      |                       ^~
-Main.cc: In member function ‘void bit01::build(int)’:
-Main.cc:662:7: error: request for member ‘build’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  662 |     g.build(n);
-      |       ^~~~~
-Main.cc: In member function ‘void bit01::build(vc<int>&)’:
-Main.cc:674:7: error: request for member ‘build’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  674 |     g.build(c);
-      |       ^~~~~
-Main.cc: In member function ‘void bit01::set(int)’:
-Main.cc:680:7: error: request for member ‘multiply’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  680 |     g.multiply(k >> 6, 1);
-      |       ^~~~~~~~
-Main.cc: In member function ‘void bit01::reset(int)’:
-Main.cc:686:7: error: request for member ‘multiply’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  686 |     g.multiply(k >> 6, -1);
-      |       ^~~~~~~~
-Main.cc: In member function ‘int bit01::prod(int)’:
-Main.cc:695:15: error: request for member ‘prod’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  695 |     int s = g.prod(k >> 6);
-      |               ^~~~
-Main.cc: In member function ‘int bit01::prod(int, int)’:
-Main.cc:706:18: error: request for member ‘prod’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  706 |     return s + g.prod(l >> 6, r >> 6);
-      |                  ^~~~
-Main.cc: In member function ‘int bit01::prod_all()’:
-Main.cc:709:29: error: request for member ‘prod_all’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  709 |   int prod_all() { return g.prod_all(); }
-      |                             ^~~~~~~~
-Main.cc: In member function ‘int bit01::next(int)’:
-Main.cc:716:12: error: request for member ‘kth’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  716 |     id = g.kth(0, id + 1);
-      |            ^~~
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "335 ms"
+memory_text = "18396 KB"
+run_id = 796316
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bit01_1.cpp"]
@@ -4698,56 +4399,16 @@ dependencies = [
     "ds/bit/bit.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/bit01_1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796263
-compile_error = """
-Main.cc:652:9: error: ‘monoid_add’ was not declared in this scope
-  652 |   bit_t<monoid_add<int>> g;
-      |         ^~~~~~~~~~
-Main.cc:652:23: error: template argument 1 is invalid
-  652 |   bit_t<monoid_add<int>> g;
-      |                       ^~
-Main.cc: In member function ‘void bit01::build(int)’:
-Main.cc:662:7: error: request for member ‘build’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  662 |     g.build(n);
-      |       ^~~~~
-Main.cc: In member function ‘void bit01::build(vc<int>&)’:
-Main.cc:674:7: error: request for member ‘build’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  674 |     g.build(c);
-      |       ^~~~~
-Main.cc: In member function ‘void bit01::set(int)’:
-Main.cc:680:7: error: request for member ‘multiply’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  680 |     g.multiply(k >> 6, 1);
-      |       ^~~~~~~~
-Main.cc: In member function ‘void bit01::reset(int)’:
-Main.cc:686:7: error: request for member ‘multiply’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  686 |     g.multiply(k >> 6, -1);
-      |       ^~~~~~~~
-Main.cc: In member function ‘int bit01::prod(int)’:
-Main.cc:695:15: error: request for member ‘prod’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  695 |     int s = g.prod(k >> 6);
-      |               ^~~~
-Main.cc: In member function ‘int bit01::prod(int, int)’:
-Main.cc:706:18: error: request for member ‘prod’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  706 |     return s + g.prod(l >> 6, r >> 6);
-      |                  ^~~~
-Main.cc: In member function ‘int bit01::prod_all()’:
-Main.cc:709:29: error: request for member ‘prod_all’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  709 |   int prod_all() { return g.prod_all(); }
-      |                             ^~~~~~~~
-Main.cc: In member function ‘int bit01::next(int)’:
-Main.cc:716:12: error: request for member ‘kth’ in ‘((bit01*)this)->bit01::g’, which is of non-class type ‘int’
-  716 |     id = g.kth(0, id + 1);
-      |            ^~~
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "407 ms"
+memory_text = "59476 KB"
+run_id = 796315
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bit2_0.cpp"]
@@ -4758,39 +4419,17 @@ dependencies = [
     "ds/bit/bit2.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/bit2_0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796259
-compile_error = """
-Main.cc:673:12: error: ‘monoid_add’ does not name a type
-  673 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:674:17: error: ‘MX’ was not declared in this scope
-  674 | using DS = bit2<MX, int, 1>;
-      |                 ^~
-Main.cc:674:27: error: template argument 1 is invalid
-  674 | using DS = bit2<MX, int, 1>;
-      |                           ^
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:704:3: error: ‘DS’ was not declared in this scope
-  704 |   DS bit(a, b, w);
-      |   ^~
-Main.cc:709:7: error: ‘bit’ was not declared in this scope; did you mean ‘bit2’?
-  709 |       bit.multiply(x, y, c);
-      |       ^~~
-      |       bit2
-Main.cc:711:13: error: ‘bit’ was not declared in this scope; did you mean ‘bit2’?
-  711 |       print(bit.prod(a, c, b, d));
-      |             ^~~
-      |             bit2"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "775 ms"
+memory_text = "33756 KB"
+run_id = 796312
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bit2_1.cpp"]
@@ -4801,35 +4440,17 @@ dependencies = [
     "ds/bit/bit2.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/bit2_1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796260
-compile_error = """
-Main.cc:673:12: error: ‘monoid_add’ does not name a type
-  673 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:674:17: error: ‘MX’ was not declared in this scope
-  674 | using DS = bit2<MX, int, 1>;
-      |                 ^~
-Main.cc:674:27: error: template argument 1 is invalid
-  674 | using DS = bit2<MX, int, 1>;
-      |                           ^
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:680:3: error: ‘DS’ was not declared in this scope
-  680 |   DS bit(x, y, w);
-      |   ^~
-Main.cc:684:11: error: ‘bit’ was not declared in this scope; did you mean ‘bit2’?
-  684 |     print(bit.prod(l, r, a, b));
-      |           ^~~
-      |           bit2"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1991 ms"
+memory_text = "34540 KB"
+run_id = 796314
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bit2_2.cpp"]
@@ -4840,37 +4461,17 @@ dependencies = [
     "ds/bit/bit2.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/bit2_2.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796261
-compile_error = """
-Main.cc:673:12: error: ‘monoid_add’ does not name a type
-  673 | using MX = monoid_add<int>;
-      |            ^~~~~~~~~~
-Main.cc:674:17: error: ‘MX’ was not declared in this scope
-  674 | using DS = bit2<MX, int, 1>;
-      |                 ^~
-Main.cc:674:27: error: template argument 1 is invalid
-  674 | using DS = bit2<MX, int, 1>;
-      |                           ^
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:687:3: error: ‘DS’ was not declared in this scope
-  687 |   DS g(xx, yy);
-      |   ^~
-Main.cc:690:24: error: ‘g’ was not declared in this scope
-  690 |     for (int i : v[k]) g.multiply(xx[i], yy[i], 1);
-      |                        ^
-Main.cc:693:11: error: ‘g’ was not declared in this scope
-  693 |       ++s[g.prod(y + 1, z + 1) - 1];
-      |           ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "353 ms"
+memory_text = "18228 KB"
+run_id = 796313
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bitbit.cpp"]
@@ -4882,37 +4483,17 @@ dependencies = [
     "ds/basic/retsu.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/bitbit.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796264
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:674:10: error: ‘monoid_add’ was not declared in this scope
-  674 |   bitbit<monoid_add<ll>> bit(QMAX(x) + 1, QMAX(y) + 1);
-      |          ^~~~~~~~~~
-Main.cc:674:23: error: template argument 1 is invalid
-  674 |   bitbit<monoid_add<ll>> bit(QMAX(x) + 1, QMAX(y) + 1);
-      |                       ^~
-Main.cc:674:54: error: expression list treated as compound expression in initializer [-fpermissive]
-  674 |   bitbit<monoid_add<ll>> bit(QMAX(x) + 1, QMAX(y) + 1);
-      |                                                      ^
-Main.cc:674:38: warning: value computed is not used [-Wunused-value]
-  674 |   bitbit<monoid_add<ll>> bit(QMAX(x) + 1, QMAX(y) + 1);
-      |                              ~~~~~~~~^~~
-Main.cc:675:31: error: request for member ‘multiply’ in ‘bit’, which is of non-class type ‘int’
-  675 |   for (Z [x, y, d] : ops) bit.multiply(x - xm, y - ym, d);
-      |                               ^~~~~~~~
-Main.cc:677:38: error: request for member ‘prod’ in ‘bit’, which is of non-class type ‘int’
-  677 |   FOR(i, N) s += max(0ll, w[i] - bit.prod(0, x[i] + 1, 0, y[i] + 1));
-      |                                      ^~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "178 ms"
+memory_text = "34584 KB"
+run_id = 796317
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/dual_bit2.cpp"]
@@ -4923,37 +4504,17 @@ dependencies = [
     "ds/bit/dual_bit2.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/bit/dual_bit2.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796265
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:677:13: error: ‘monoid_add’ was not declared in this scope
-  677 |   dual_bit2<monoid_add<ll>, int, 1> bit(x, y);
-      |             ^~~~~~~~~~
-Main.cc:677:26: error: template argument 1 is invalid
-  677 |   dual_bit2<monoid_add<ll>, int, 1> bit(x, y);
-      |                          ^
-Main.cc:677:27: error: expected unqualified-id before ‘,’ token
-  677 |   dual_bit2<monoid_add<ll>, int, 1> bit(x, y);
-      |                           ^
-Main.cc:677:29: error: expected unqualified-id before ‘int’
-  677 |   dual_bit2<monoid_add<ll>, int, 1> bit(x, y);
-      |                             ^~~
-Main.cc:679:5: error: ‘bit’ was not declared in this scope
-  679 |     bit.apply(x, xx, y, yy, d);
-      |     ^~~
-Main.cc:683:12: error: ‘bit’ was not declared in this scope
-  683 |     ll f = bit.get(x[i], y[i]);
-      |            ^~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "500 ms"
+memory_text = "23176 KB"
+run_id = 796319
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bs/deque.cpp"]
@@ -5230,43 +4791,17 @@ dependencies = [
     "ds/lct/lct_monoid.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/lct/lct_path_sum_point_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796266
-compile_error = """
-Main.cc:728:12: error: ‘monoid_add’ does not name a type
-  728 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:729:21: error: ‘MX’ was not declared in this scope
-  729 | using DS = lct_mono<MX>;
-      |                     ^~
-Main.cc:729:23: error: template argument 1 is invalid
-  729 | using DS = lct_mono<MX>;
-      |                       ^
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:732:3: error: ‘DS’ was not declared in this scope
-  732 |   DS g(N);
-      |   ^~
-Main.cc:733:16: error: ‘g’ was not declared in this scope
-  733 |   FOR(i, N) IN(g[i]->mx);
-      |                ^
-Main.cc:736:5: error: ‘g’ was not declared in this scope
-  736 |     g.link(x, y);
-      |     ^
-Main.cc:742:7: error: ‘g’ was not declared in this scope
-  742 |       g.multiply(i, x);
-      |       ^
-Main.cc:745:13: error: ‘g’ was not declared in this scope
-  745 |       print(g.prod(x, y));
-      |             ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2083 ms"
+memory_text = "25964 KB"
+run_id = 796320
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_path_sum_set.cpp"]
@@ -5277,46 +4812,17 @@ dependencies = [
     "ds/lct/lct_monoid.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/lct/lct_path_sum_set.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796267
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:730:12: error: ‘monoid_add’ was not declared in this scope
-  730 |   lct_mono<monoid_add<ll>> ds(N);
-      |            ^~~~~~~~~~
-Main.cc:730:25: error: template argument 1 is invalid
-  730 |   lct_mono<monoid_add<ll>> ds(N);
-      |                         ^~
-Main.cc:733:7: error: invalid types ‘int[int]’ for array subscript
-  733 |     ds[i]->mx = x;
-      |       ^
-Main.cc:737:8: error: request for member ‘link’ in ‘ds’, which is of non-class type ‘int’
-  737 |     ds.link(x, y);
-      |        ^~~~
-Main.cc:743:10: error: request for member ‘cut’ in ‘ds’, which is of non-class type ‘int’
-  743 |       ds.cut(a, b);
-      |          ^~~
-Main.cc:744:10: error: request for member ‘link’ in ‘ds’, which is of non-class type ‘int’
-  744 |       ds.link(c, d);
-      |          ^~~~
-Main.cc:747:10: error: request for member ‘set’ in ‘ds’, which is of non-class type ‘int’
-  747 |       ds.set(i, ds[i]->mx + x);
-      |          ^~~
-Main.cc:747:19: error: invalid types ‘int[int]’ for array subscript
-  747 |       ds.set(i, ds[i]->mx + x);
-      |                   ^
-Main.cc:750:16: error: request for member ‘prod’ in ‘ds’, which is of non-class type ‘int’
-  750 |       print(ds.prod(x, y));
-      |                ^~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "538 ms"
+memory_text = "11900 KB"
+run_id = 796321
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_sub_sum.cpp"]
@@ -5327,37 +4833,17 @@ dependencies = [
     "ds/lct/lct_sub.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/lct/lct_sub_sum.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796268
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:711:11: error: ‘monoid_add’ was not declared in this scope
-  711 |   lct_sub<monoid_add<int>> lct(N);
-      |           ^~~~~~~~~~
-Main.cc:711:25: error: template argument 1 is invalid
-  711 |   lct_sub<monoid_add<int>> lct(N);
-      |                         ^~
-Main.cc:712:17: error: request for member ‘a’ in ‘lct’, which is of non-class type ‘int’
-  712 |   FOR(i, N) lct.a[i].mx = 1;
-      |                 ^
-Main.cc:717:24: error: request for member ‘link’ in ‘lct’, which is of non-class type ‘int’
-  717 |     if (op == 'A') lct.link(x, y);
-      |                        ^~~~
-Main.cc:718:26: error: request for member ‘prod’ in ‘lct’, which is of non-class type ‘int’
-  718 |     else print(1ll * lct.prod(x, y) * lct.prod(y, x));
-      |                          ^~~~
-Main.cc:718:43: error: request for member ‘prod’ in ‘lct’, which is of non-class type ‘int’
-  718 |     else print(1ll * lct.prod(x, y) * lct.prod(y, x));
-      |                                           ^~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "117 ms"
+memory_text = "6280 KB"
+run_id = 796322
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_sub_sum_p_add.cpp"]
@@ -5368,43 +4854,17 @@ dependencies = [
     "ds/lct/lct_sub.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/lct/lct_sub_sum_p_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796270
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:711:11: error: ‘monoid_add’ was not declared in this scope
-  711 |   lct_sub<monoid_add<ll>> g(N);
-      |           ^~~~~~~~~~
-Main.cc:711:24: error: template argument 1 is invalid
-  711 |   lct_sub<monoid_add<ll>> g(N);
-      |                        ^~
-Main.cc:712:18: error: request for member ‘a’ in ‘g’, which is of non-class type ‘int’
-  712 |   FOR(i, N) IN(g.a[i].mx);
-      |                  ^
-Main.cc:715:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  715 |     g.link(x, y);
-      |       ^~~~
-Main.cc:721:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  721 |       g.cut(x, y);
-      |         ^~~
-Main.cc:722:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  722 |       g.link(a, b);
-      |         ^~~~
-Main.cc:725:9: error: request for member ‘multiply’ in ‘g’, which is of non-class type ‘int’
-  725 |       g.multiply(p, x);
-      |         ^~~~~~~~
-Main.cc:728:15: error: request for member ‘prod’ in ‘g’, which is of non-class type ‘int’
-  728 |       print(g.prod(x, f));
-      |               ^~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "688 ms"
+memory_text = "13468 KB"
+run_id = 796324
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/minmax_heap.cpp"]
@@ -5498,55 +4958,16 @@ dependencies = [
     "al/m/add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/range/mojor_voting.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796271
-compile_error = """
-Main.cc:928:28: error: ‘monoid_add’ was not declared in this scope
-  928 |   using DS = segd_sprase_t<monoid_add<int>>;
-      |                            ^~~~~~~~~~
-Main.cc:928:42: error: template argument 1 is invalid
-  928 |   using DS = segd_sprase_t<monoid_add<int>>;
-      |                                          ^~
-Main.cc:929:14: error: ‘DS’ does not name a type
-  929 |   using np = DS::np;
-      |              ^~
-Main.cc:946:3: error: ‘DS’ does not name a type
-  946 |   DS s;
-      |   ^~
-Main.cc:947:6: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  947 |   vc<np> t;
-      |      ^~
-      |      no
-Main.cc:947:8: error: template argument 1 is invalid
-  947 |   vc<np> t;
-      |        ^
-Main.cc:948:9: error: ‘monoid_major_voting’ was not declared in this scope; did you mean ‘major_voting’?
-  948 |   seg_t<monoid_major_voting> ss;
-      |         ^~~~~~~~~~~~~~~~~~~
-      |         major_voting
-Main.cc:948:28: error: template argument 1 is invalid
-  948 |   seg_t<monoid_major_voting> ss;
-      |                            ^
-Main.cc: In constructor ‘major_voting::major_voting(vc<int>&, int)’:
-Main.cc:951:31: error: class ‘major_voting’ does not have any field named ‘s’
-  951 |       : N(si(v)), Q(Q), a(v), s(0, N), t(N + Q), ss(N, [&](int i) {
-      |                               ^
-Main.cc:951:50: error: expression list treated as compound expression in mem-initializer [-fpermissive]
-  951 |       : N(si(v)), Q(Q), a(v), s(0, N), t(N + Q), ss(N, [&](int i) {
-      |                                                  ^~~~~~~~~~~~~~~~~~
-  952 |           return PII{a[i] = d.add(a[i]), 1};
-      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~      
-  953 |         }) {
-      |         ~~                                        
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1694 ms"
+memory_text = "59860 KB"
+run_id = 796323
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/range/range_count_prod_upper.cpp"]
@@ -5653,41 +5074,16 @@ dependencies = [
     "ds/seg/segl_t.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/rect_union.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796272
-compile_error = """
-Main.cc: In member function ‘T rectangle_union<ll>::f()’:
-Main.cc:741:12: error: ‘a_monoid_mincnt_add’ was not declared in this scope
-  741 |     segl_t<a_monoid_mincnt_add<ll>> seg(
-      |            ^~~~~~~~~~~~~~~~~~~
-Main.cc:741:34: error: template argument 1 is invalid
-  741 |     segl_t<a_monoid_mincnt_add<ll>> seg(
-      |                                  ^~
-Main.cc:742:66: error: expression list treated as compound expression in initializer [-fpermissive]
-  742 |         N - 1, [&](int i) -> PLL { return {0, Y[i + 1] - Y[i]}; });
-      |                                                                  ^
-Main.cc:748:11: error: request for member ‘apply’ in ‘seg’, which is of non-class type ‘int’
-  748 |       seg.apply(I[k << 1], I[k << 1 | 1], a);
-      |           ^~~~~
-Main.cc:749:26: error: request for member ‘prod_all’ in ‘seg’, which is of non-class type ‘int’
-  749 |       Z [min, cnt] = seg.prod_all();
-      |                          ^~~~~~~~
-Main.cc: In instantiation of ‘T rectangle_union<ll>::f() [with T = long long int; ll = long long int]’:
-Main.cc:765:12:   required from here
-Main.cc:742:11: warning: left operand of comma operator has no effect [-Wunused-value]
-  742 |         N - 1, [&](int i) -> PLL { return {0, Y[i + 1] - Y[i]}; });
-      |         ~~^~~
-Main.cc:741:37: error: cannot convert ‘rectangle_union<long long int>::f<>()::<lambda(int)>’ to ‘int’ in initialization
-  741 |     segl_t<a_monoid_mincnt_add<ll>> seg(
-      |                                     ^~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2406 ms"
+memory_text = "87308 KB"
+run_id = 796325
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sim_sub_sum_point_add.cpp"]
@@ -5699,43 +5095,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/satt/satt_sim_sub_sum_point_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796273
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:851:12: error: ‘monoid_add’ was not declared in this scope
-  851 |   satt_sim<monoid_add<ll>> g(N);
-      |            ^~~~~~~~~~
-Main.cc:851:25: error: template argument 1 is invalid
-  851 |   satt_sim<monoid_add<ll>> g(N);
-      |                         ^~
-Main.cc:854:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  854 |     g.set(i, x);
-      |       ^~~
-Main.cc:858:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  858 |     g.link(x, y);
-      |       ^~~~
-Main.cc:864:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  864 |       g.cut(x, y);
-      |         ^~~
-Main.cc:865:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  865 |       g.link(a, b);
-      |         ^~~~
-Main.cc:868:9: error: request for member ‘multiply’ in ‘g’, which is of non-class type ‘int’
-  868 |       g.multiply(p, x);
-      |         ^~~~~~~~
-Main.cc:871:15: error: request for member ‘prod_sb’ in ‘g’, which is of non-class type ‘int’
-  871 |       print(g.prod_sb(x, f));
-      |               ^~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1460 ms"
+memory_text = "49092 KB"
+run_id = 796326
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sim_sub_sum_point_set.cpp"]
@@ -5747,46 +5117,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/satt/satt_sim_sub_sum_point_set.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796274
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:851:12: error: ‘monoid_add’ was not declared in this scope
-  851 |   satt_sim<monoid_add<ll>> g(N);
-      |            ^~~~~~~~~~
-Main.cc:851:25: error: template argument 1 is invalid
-  851 |   satt_sim<monoid_add<ll>> g(N);
-      |                         ^~
-Main.cc:854:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  854 |     g.set(i, x);
-      |       ^~~
-Main.cc:858:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  858 |     g.link(x, y);
-      |       ^~~~
-Main.cc:864:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  864 |       g.cut(a, b);
-      |         ^~~
-Main.cc:865:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  865 |       g.link(c, d);
-      |         ^~~~
-Main.cc:868:9: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  868 |       g.set(i, g.prod_ch(i, i) + x);
-      |         ^~~
-Main.cc:868:18: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
-  868 |       g.set(i, g.prod_ch(i, i) + x);
-      |                  ^~~~~~~
-Main.cc:871:15: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
-  871 |       print(g.prod_ch(x, y));
-      |               ^~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1252 ms"
+memory_text = "52088 KB"
+run_id = 796327
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sub_sum_point_set.cpp"]
@@ -5869,32 +5210,17 @@ dependencies = [
     "ds/seg/seg_t.hpp",
     "al/m/xor.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/assign/range_assign1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796277
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:853:20: error: ‘monoid_xor’ was not declared in this scope; did you mean ‘monoid_pow’?
-  853 |   range_assign_seg<monoid_xor<int>> seg(N);
-      |                    ^~~~~~~~~~
-      |                    monoid_pow
-Main.cc:853:34: error: template argument 1 is invalid
-  853 |   range_assign_seg<monoid_xor<int>> seg(N);
-      |                                  ^~
-Main.cc:857:9: error: request for member ‘assign’ in ‘seg’, which is of non-class type ‘int’
-  857 |     seg.assign(l, r, i + 1);
-      |         ^~~~~~
-Main.cc:860:20: error: request for member ‘get_all’ in ‘seg’, which is of non-class type ‘int’
-  860 |   for (int x : seg.get_all()) if (x) a[x - 1] = 1;
-      |                    ^~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1321 ms"
+memory_text = "288364 KB"
+run_id = 796329
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/beats/beats_maxminadd.cpp"]
@@ -5949,55 +5275,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/dynamic_seg/segd_bina0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796279
-compile_error = """
-Main.cc:854:19: error: ‘monoid_add’ was not declared in this scope
-  854 | using DS = segd_t<monoid_add<int>>;
-      |                   ^~~~~~~~~~
-Main.cc:854:33: error: template argument 1 is invalid
-  854 | using DS = segd_t<monoid_add<int>>;
-      |                                 ^~
-Main.cc:855:12: error: ‘DS’ does not name a type
-  855 | using np = DS::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:858:3: error: ‘DS’ was not declared in this scope
-  858 |   DS s(0, 1000000001);
-      |   ^~
-Main.cc:859:3: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  859 |   np t = 0;
-      |   ^~
-      |   no
-Main.cc:862:5: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  862 |     t = s.set(t, x, 1);
-      |     ^
-      |     fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^
-Main.cc:862:9: error: ‘s’ was not declared in this scope
-  862 |     t = s.set(t, x, 1);
-      |         ^
-Main.cc:864:3: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  864 |   t = s.set(t, 1, 0);
-      |   ^
-      |   fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^
-Main.cc:864:7: error: ‘s’ was not declared in this scope
-  864 |   t = s.set(t, 1, 0);
-      |       ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1281 ms"
+memory_text = "193132 KB"
+run_id = 796330
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg/segd_bina1.cpp"]
@@ -6193,53 +5481,17 @@ dependencies = [
     "ds/basic/unordered_discreate.hpp",
     "ds/basic/hashmap.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796282
-compile_error = """
-Main.cc:926:26: error: ‘monoid_add’ was not declared in this scope
-  926 | using ds = segd_sprase_t<monoid_add<int>, 0>;
-      |                          ^~~~~~~~~~
-Main.cc:926:40: error: template argument 1 is invalid
-  926 | using ds = segd_sprase_t<monoid_add<int>, 0>;
-      |                                        ^
-Main.cc:927:12: error: ‘ds’ does not name a type
-  927 | using np = ds::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:933:6: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  933 |   vc<np> t(N + Q);
-      |      ^~
-      |      no
-Main.cc:933:8: error: template argument 1 is invalid
-  933 |   vc<np> t(N + Q);
-      |        ^
-Main.cc:934:3: error: ‘ds’ was not declared in this scope; did you mean ‘dis’?
-  934 |   ds seg(0, N);
-      |   ^~
-      |   dis
-Main.cc:937:6: error: invalid types ‘int[int]’ for array subscript
-  937 |     t[x] = seg.multiply(t[x], i, 1);
-      |      ^
-Main.cc:937:12: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  937 |     t[x] = seg.multiply(t[x], i, 1);
-      |            ^~~
-      |            se
-Main.cc:937:26: error: invalid types ‘int[int]’ for array subscript
-  937 |     t[x] = seg.multiply(t[x], i, 1);
-      |                          ^
-Main.cc:944:8: error: invalid types ‘int[int]’ for array subscript
-  944 |       t[p] = seg.multiply(t[p], x, -1);
-      |        ^
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "347 ms"
+memory_text = "44444 KB"
+run_id = 796331
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp1.cpp"]
@@ -6251,52 +5503,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796283
-compile_error = """
-Main.cc:812:12: error: ‘monoid_add’ does not name a type
-  812 | using MX = monoid_add<int>;
-      |            ^~~~~~~~~~
-Main.cc:813:26: error: ‘MX’ was not declared in this scope
-  813 | using DS = segd_sprase_t<MX>;
-      |                          ^~
-Main.cc:813:28: error: template argument 1 is invalid
-  813 | using DS = segd_sprase_t<MX>;
-      |                            ^
-Main.cc:814:12: error: ‘DS’ does not name a type
-  814 | using np = DS::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:821:3: error: ‘DS’ was not declared in this scope
-  821 |   DS seg(0, N);
-      |   ^~
-Main.cc:822:6: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  822 |   vc<np> t(si(f));
-      |      ^~
-      |      no
-Main.cc:822:8: error: template argument 1 is invalid
-  822 |   vc<np> t(si(f));
-      |        ^
-Main.cc:824:9: error: ‘p’ was not declared in this scope
-  824 |     np &p = t[a[i]];
-      |         ^
-Main.cc:824:14: error: invalid types ‘int[__gnu_cxx::__alloc_traits<std::allocator<int>, int>::value_type {aka int}]’ for array subscript
-  824 |     np &p = t[a[i]];
-      |              ^
-Main.cc:825:9: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  825 |     p = seg.multiply(p, i, 1);
-      |         ^~~
-      |         se
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1114 ms"
+memory_text = "24796 KB"
+run_id = 796332
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp"]
@@ -6308,55 +5525,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796284
-compile_error = """
-Main.cc:812:26: error: ‘monoid_add’ was not declared in this scope
-  812 | using DS = segd_sprase_t<monoid_add<int>>;
-      |                          ^~~~~~~~~~
-Main.cc:812:40: error: template argument 1 is invalid
-  812 | using DS = segd_sprase_t<monoid_add<int>>;
-      |                                        ^~
-Main.cc:813:12: error: ‘DS’ does not name a type
-  813 | using np = DS::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:816:3: error: ‘DS’ was not declared in this scope
-  816 |   DS s(0, 1000000001);
-      |   ^~
-Main.cc:817:3: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  817 |   np t = 0;
-      |   ^~
-      |   no
-Main.cc:820:5: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  820 |     t = s.set(t, x, 1);
-      |     ^
-      |     fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^
-Main.cc:820:9: error: ‘s’ was not declared in this scope
-  820 |     t = s.set(t, x, 1);
-      |         ^
-Main.cc:822:3: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  822 |   t = s.set(t, 1, 0);
-      |   ^
-      |   fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^
-Main.cc:822:7: error: ‘s’ was not declared in this scope
-  822 |   t = s.set(t, 1, 0);
-      |       ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "694 ms"
+memory_text = "27128 KB"
+run_id = 796333
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/lazy/his_sum_add.cpp"]
@@ -6367,62 +5546,17 @@ dependencies = [
     "ds/seg/segl_t.hpp",
     "al/am/his_sum_add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/lazy/his_sum_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796285
-compile_error = """
-Main.cc:730:12: error: ‘am_his_sum_add’ does not name a type; did you mean ‘Hissum_add’?
-  730 | using AM = am_his_sum_add<ll>;
-      |            ^~~~~~~~~~~~~~
-      |            Hissum_add
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:733:10: error: ‘AM’ was not declared in this scope
-  733 |   segl_t<AM> seg(N, [&](int) {
-      |          ^~
-Main.cc:733:12: error: template argument 1 is invalid
-  733 |   segl_t<AM> seg(N, [&](int) {
-      |            ^
-Main.cc: In lambda function:
-Main.cc:735:12: error: ‘AM’ is not a class, namespace, or enumeration
-  735 |     return AM::X{x, x};
-      |            ^~
-Main.cc:735:17: error: expected ‘;’ before ‘{’ token
-  735 |     return AM::X{x, x};
-      |                 ^
-      |                 ;
-Main.cc:735:18: warning: left operand of comma operator has no effect [-Wunused-value]
-  735 |     return AM::X{x, x};
-      |                  ^
-Main.cc:735:22: error: expected ‘;’ before ‘}’ token
-  735 |     return AM::X{x, x};
-      |                      ^
-      |                      ;
-Main.cc:735:22: warning: right operand of comma operator has no effect [-Wunused-value]
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:736:4: error: expression list treated as compound expression in initializer [-fpermissive]
-  736 |   });
-      |    ^
-Main.cc:733:18: warning: left operand of comma operator has no effect [-Wunused-value]
-  733 |   segl_t<AM> seg(N, [&](int) {
-      |                  ^
-Main.cc:736:4: error: cannot convert ‘Yorisou()::<lambda(int)>’ to ‘int’ in initialization
-  736 |   });
-      |    ^
-Main.cc:742:11: error: request for member ‘apply’ in ‘seg’, which is of non-class type ‘int’
-  742 |       seg.apply(l, r, AM::add(x));
-      |           ^~~~~
-Main.cc:742:23: error: ‘AM’ is not a class, namespace, or enumeration
-  742 |       seg.apply(l, r, AM::add(x));
-      |                       ^~
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "97 ms"
+memory_text = "9704 KB"
+run_id = 796334
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/lazy/segl0.cpp"]
@@ -6477,39 +5611,17 @@ dependencies = [
     "ds/seg/range_sum_point_add.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/range_sum_point_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796288
-compile_error = """
-Main.cc:595:12: error: ‘monoid_add’ does not name a type
-  595 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:596:32: error: ‘MX’ was not declared in this scope
-  596 | using DS = range_sum_point_add<MX>;
-      |                                ^~
-Main.cc:596:34: error: template argument 1 is invalid
-  596 | using DS = range_sum_point_add<MX>;
-      |                                  ^
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:600:3: error: ‘DS’ was not declared in this scope
-  600 |   DS seg(a);
-      |   ^~
-Main.cc:603:18: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  603 |     if (op == 0) seg.multiply(x, y);
-      |                  ^~~
-      |                  se
-Main.cc:604:16: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  604 |     else print(seg.prod(x, y));
-      |                ^~~
-      |                se"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "143 ms"
+memory_text = "14248 KB"
+run_id = 796335
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/rmq/range_max_add.cpp"]
@@ -6562,36 +5674,17 @@ dependencies = [
     "ds/seg/seg_t.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/seg/seg/seg_t_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796289
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:648:9: error: ‘monoid_add’ was not declared in this scope
-  648 |   seg_t<monoid_add<ll>> seg(a);
-      |         ^~~~~~~~~~
-Main.cc:648:22: error: template argument 1 is invalid
-  648 |   seg_t<monoid_add<ll>> seg(a);
-      |                      ^~
-Main.cc:648:29: error: cannot convert ‘vc<long long int>’ {aka ‘std::vector<long long int, std::allocator<long long int> >’} to ‘int’ in initialization
-  648 |   seg_t<monoid_add<ll>> seg(a);
-      |                             ^
-      |                             |
-      |                             vc<long long int> {aka std::vector<long long int, std::allocator<long long int> >}
-Main.cc:651:22: error: request for member ‘multiply’ in ‘seg’, which is of non-class type ‘int’
-  651 |     if (op == 0) seg.multiply(x, y);
-      |                      ^~~~~~~~
-Main.cc:652:28: error: request for member ‘prod’ in ‘seg’, which is of non-class type ‘int’
-  652 |     if (op == 1) print(seg.prod(x, y));
-      |                            ^~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "162 ms"
+memory_text = "14628 KB"
+run_id = 796336
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/seg/seg_t_bina.cpp"]
@@ -6959,35 +6052,17 @@ dependencies = [
     "ds/st/st_dis.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/st/st_dis/range_sum.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796291
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:678:9: error: ‘monoid_add’ was not declared in this scope
-  678 |   rmq_t<monoid_add<ll>, 1> st(a);
-      |         ^~~~~~~~~~
-Main.cc:678:22: error: template argument 1 is invalid
-  678 |   rmq_t<monoid_add<ll>, 1> st(a);
-      |                      ^
-Main.cc:678:23: error: expected unqualified-id before ‘,’ token
-  678 |   rmq_t<monoid_add<ll>, 1> st(a);
-      |                       ^
-Main.cc:678:25: error: expected unqualified-id before numeric constant
-  678 |   rmq_t<monoid_add<ll>, 1> st(a);
-      |                         ^
-Main.cc:681:11: error: ‘st’ was not declared in this scope; did you mean ‘std’?
-  681 |     print(st.prod(l, r));
-      |           ^~
-      |           std"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "316 ms"
+memory_text = "80684 KB"
+run_id = 796337
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/st/st_prod/range_min.cpp"]
@@ -7025,35 +6100,17 @@ dependencies = [
     "ds/st/st_dis.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/st/st_prod/range_prod.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796292
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:739:19: error: ‘monoid_add’ was not declared in this scope
-  739 |   st_range_prod_t<monoid_add<ll>, 1> st(a);
-      |                   ^~~~~~~~~~
-Main.cc:739:32: error: template argument 1 is invalid
-  739 |   st_range_prod_t<monoid_add<ll>, 1> st(a);
-      |                                ^
-Main.cc:739:33: error: expected unqualified-id before ‘,’ token
-  739 |   st_range_prod_t<monoid_add<ll>, 1> st(a);
-      |                                 ^
-Main.cc:739:35: error: expected unqualified-id before numeric constant
-  739 |   st_range_prod_t<monoid_add<ll>, 1> st(a);
-      |                                   ^
-Main.cc:742:11: error: ‘st’ was not declared in this scope; did you mean ‘std’?
-  742 |     print(st.prod(l, r));
-      |           ^~
-      |           std"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "195 ms"
+memory_text = "21876 KB"
+run_id = 796338
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/swag/swag_deque.cpp"]
@@ -7175,60 +6232,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/treap/treap_mono_cm_rev_prod.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796295
-compile_error = """
-Main.cc:889:12: error: ‘monoid_add’ does not name a type
-  889 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:890:26: error: ‘MX’ was not declared in this scope
-  890 | using DS = treap_mono_cm<MX>;
-      |                          ^~
-Main.cc:890:28: error: template argument 1 is invalid
-  890 | using DS = treap_mono_cm<MX>;
-      |                            ^
-Main.cc:891:12: error: ‘DS’ does not name a type
-  891 | using np = DS::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:895:3: error: ‘DS’ was not declared in this scope
-  895 |   DS seg;
-      |   ^~
-Main.cc:896:3: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  896 |   np t = seg.newnode(a);
-      |   ^~
-      |   no
-Main.cc:899:18: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  899 |     if (op == 0) t = seg.reverse(t, l, r);
-      |                  ^
-      |                  fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^
-Main.cc:899:22: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  899 |     if (op == 0) t = seg.reverse(t, l, r);
-      |                      ^~~
-      |                      se
-Main.cc:900:16: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  900 |     else print(seg.prod(t, l, r));
-      |                ^~~
-      |                se
-Main.cc:900:25: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  900 |     else print(seg.prod(t, l, r));
-      |                         ^
-      |                         fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "614 ms"
+memory_text = "14340 KB"
+run_id = 796339
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_mono_rev_prod.cpp"]
@@ -7240,60 +6254,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/treap/treap_mono_rev_prod.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796296
-compile_error = """
-Main.cc:889:12: error: ‘monoid_add’ does not name a type
-  889 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:890:23: error: ‘MX’ was not declared in this scope
-  890 | using DS = treap_mono<MX>;
-      |                       ^~
-Main.cc:890:25: error: template argument 1 is invalid
-  890 | using DS = treap_mono<MX>;
-      |                         ^
-Main.cc:891:12: error: ‘DS’ does not name a type
-  891 | using np = DS::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:895:3: error: ‘DS’ was not declared in this scope
-  895 |   DS seg;
-      |   ^~
-Main.cc:896:3: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  896 |   np t = seg.newnode(a);
-      |   ^~
-      |   no
-Main.cc:899:18: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  899 |     if (op == 0) t = seg.reverse(t, l, r);
-      |                  ^
-      |                  fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^
-Main.cc:899:22: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  899 |     if (op == 0) t = seg.reverse(t, l, r);
-      |                      ^~~
-      |                      se
-Main.cc:900:16: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
-  900 |     else print(seg.prod(t, l, r));
-      |                ^~~
-      |                se
-Main.cc:900:25: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  900 |     else print(seg.prod(t, l, r));
-      |                         ^
-      |                         fio::t
-Main.cc:338:8: note: ‘fio::t’ declared here
-  338 |   char t[100];
-      |        ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "721 ms"
+memory_text = "16388 KB"
+run_id = 796340
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/trie_bina/trie_bina_min.cpp"]
@@ -7330,47 +6301,17 @@ dependencies = [
     "al/m/add.hpp",
     "ds/bit/bit.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/wave_matrix/wm2_bit0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796297
-compile_error = """
-Main.cc:1111:12: error: ‘monoid_add’ does not name a type
- 1111 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:1112:38: error: ‘MX’ was not declared in this scope
- 1112 | using DS = wave_matrix_2d<int, 0, 0, MX, bit_t<MX>>;
-      |                                      ^~
-Main.cc:1112:48: error: ‘MX’ was not declared in this scope
- 1112 | using DS = wave_matrix_2d<int, 0, 0, MX, bit_t<MX>>;
-      |                                                ^~
-Main.cc:1112:48: error: template argument 1 is invalid
-Main.cc:1112:50: error: template argument 4 is invalid
- 1112 | using DS = wave_matrix_2d<int, 0, 0, MX, bit_t<MX>>;
-      |                                                  ^~
-Main.cc:1112:50: error: template argument 5 is invalid
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1130:3: error: ‘DS’ was not declared in this scope
- 1130 |   DS seg(si(a), [&](int i) { return a[i]; });
-      |   ^~
-Main.cc:1130:44: error: expected primary-expression before ‘)’ token
- 1130 |   DS seg(si(a), [&](int i) { return a[i]; });
-      |                                            ^
-Main.cc:1133:7: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1133 |       seg.multiply(N + t++, c);
-      |       ^~~
-      |       se
-Main.cc:1135:13: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1135 |       print(seg.prod(a, c, b, d));
-      |             ^~~
-      |             se"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "642 ms"
+memory_text = "47816 KB"
+run_id = 796341
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm2_bit1.cpp"]
@@ -7385,48 +6326,17 @@ dependencies = [
     "al/m/add.hpp",
     "ds/bit/bit.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/wave_matrix/wm2_bit1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796298
-compile_error = """
-Main.cc:1111:12: error: ‘monoid_add’ does not name a type
- 1111 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:1112:19: error: ‘MX’ was not declared in this scope
- 1112 | using bit = bit_t<MX>;
-      |                   ^~
-Main.cc:1112:21: error: template argument 1 is invalid
- 1112 | using bit = bit_t<MX>;
-      |                     ^
-Main.cc:1113:38: error: ‘MX’ was not declared in this scope
- 1113 | using DS = wave_matrix_2d<int, 0, 0, MX, bit>;
-      |                                      ^~
-Main.cc:1113:42: error: ‘bit’ was not declared in this scope
- 1113 | using DS = wave_matrix_2d<int, 0, 0, MX, bit>;
-      |                                          ^~~
-Main.cc:1113:45: error: template argument 4 is invalid
- 1113 | using DS = wave_matrix_2d<int, 0, 0, MX, bit>;
-      |                                             ^
-Main.cc:1113:45: error: template argument 5 is invalid
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1116:3: error: ‘DS’ was not declared in this scope
- 1116 |   DS wm(N, [&](int) -> T3<int> {
-      |   ^~
-Main.cc:1119:4: error: expected primary-expression before ‘)’ token
- 1119 |   });
-      |    ^
-Main.cc:1123:11: error: ‘wm’ was not declared in this scope; did you mean ‘tm’?
- 1123 |     print(wm.prod(l, r, a, b));
-      |           ^~
-      |           tm"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1562 ms"
+memory_text = "47252 KB"
+run_id = 796342
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm2_bit2.cpp"]
@@ -7441,49 +6351,17 @@ dependencies = [
     "al/m/add.hpp",
     "ds/bit/bit.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/wave_matrix/wm2_bit2.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796299
-compile_error = """
-Main.cc:1111:12: error: ‘monoid_add’ does not name a type
- 1111 | using MX = monoid_add<int>;
-      |            ^~~~~~~~~~
-Main.cc:1112:19: error: ‘MX’ was not declared in this scope
- 1112 | using bit = bit_t<MX>;
-      |                   ^~
-Main.cc:1112:21: error: template argument 1 is invalid
- 1112 | using bit = bit_t<MX>;
-      |                     ^
-Main.cc:1113:38: error: ‘MX’ was not declared in this scope
- 1113 | using wm = wave_matrix_2d<int, 0, 0, MX, bit>;
-      |                                      ^~
-Main.cc:1113:42: error: ‘bit’ was not declared in this scope
- 1113 | using wm = wave_matrix_2d<int, 0, 0, MX, bit>;
-      |                                          ^~~
-Main.cc:1113:45: error: template argument 4 is invalid
- 1113 | using wm = wave_matrix_2d<int, 0, 0, MX, bit>;
-      |                                             ^
-Main.cc:1113:45: error: template argument 5 is invalid
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1123:3: error: ‘wm’ was not declared in this scope; did you mean ‘tm’?
- 1123 |   wm g(N, [&](int i) -> T3<int> {
-      |   ^~
-      |   tm
-Main.cc:1126:4: error: expected primary-expression before ‘)’ token
- 1126 |   });
-      |    ^
-Main.cc:1129:24: error: ‘g’ was not declared in this scope
- 1129 |     for (int i : v[k]) g.multiply(i, 1);
-      |                        ^
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "369 ms"
+memory_text = "22284 KB"
+run_id = 796343
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm2_narr_seg.cpp"]
@@ -7498,49 +6376,17 @@ dependencies = [
     "al/m/add.hpp",
     "ds/seg/range_sum_point_add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/wave_matrix/wm2_narr_seg.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796300
-compile_error = """
-Main.cc:1057:12: error: ‘monoid_add’ does not name a type
- 1057 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:1058:38: error: ‘MX’ was not declared in this scope
- 1058 | using DS = wave_matrix_2d<int, 0, 0, MX, range_sum_point_add<MX, 1 << 4>>;
-      |                                      ^~
-Main.cc:1058:62: error: ‘MX’ was not declared in this scope
- 1058 | using DS = wave_matrix_2d<int, 0, 0, MX, range_sum_point_add<MX, 1 << 4>>;
-      |                                                              ^~
-Main.cc:1058:71: error: template argument 1 is invalid
- 1058 | using DS = wave_matrix_2d<int, 0, 0, MX, range_sum_point_add<MX, 1 << 4>>;
-      |                                                                       ^
-Main.cc:1058:72: error: template argument 4 is invalid
- 1058 | using DS = wave_matrix_2d<int, 0, 0, MX, range_sum_point_add<MX, 1 << 4>>;
-      |                                                                        ^~
-Main.cc:1058:72: error: template argument 5 is invalid
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1076:3: error: ‘DS’ was not declared in this scope
- 1076 |   DS seg(si(a), [&](int i) { return a[i]; });
-      |   ^~
-Main.cc:1076:44: error: expected primary-expression before ‘)’ token
- 1076 |   DS seg(si(a), [&](int i) { return a[i]; });
-      |                                            ^
-Main.cc:1079:7: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1079 |       seg.multiply(N + t++, c);
-      |       ^~~
-      |       se
-Main.cc:1081:13: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1081 |       print(seg.prod(a, c, b, d));
-      |             ^~~
-      |             se"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "573 ms"
+memory_text = "75028 KB"
+run_id = 796344
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm2_seg.cpp"]
@@ -7555,47 +6401,17 @@ dependencies = [
     "al/m/add.hpp",
     "ds/seg/seg_t.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/wave_matrix/wm2_seg.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796301
-compile_error = """
-Main.cc:1107:12: error: ‘monoid_add’ does not name a type
- 1107 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:1108:38: error: ‘MX’ was not declared in this scope
- 1108 | using DS = wave_matrix_2d<int, 0, 0, MX, seg_t<MX>>;
-      |                                      ^~
-Main.cc:1108:48: error: ‘MX’ was not declared in this scope
- 1108 | using DS = wave_matrix_2d<int, 0, 0, MX, seg_t<MX>>;
-      |                                                ^~
-Main.cc:1108:48: error: template argument 1 is invalid
-Main.cc:1108:50: error: template argument 4 is invalid
- 1108 | using DS = wave_matrix_2d<int, 0, 0, MX, seg_t<MX>>;
-      |                                                  ^~
-Main.cc:1108:50: error: template argument 5 is invalid
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1126:3: error: ‘DS’ was not declared in this scope
- 1126 |   DS seg(si(a), [&](int i) { return a[i]; });
-      |   ^~
-Main.cc:1126:44: error: expected primary-expression before ‘)’ token
- 1126 |   DS seg(si(a), [&](int i) { return a[i]; });
-      |                                            ^
-Main.cc:1129:7: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1129 |       seg.multiply(N + t++, c);
-      |       ^~~
-      |       se
-Main.cc:1131:13: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1131 |       print(seg.prod(a, c, b, d));
-      |             ^~~
-      |             se"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1010 ms"
+memory_text = "98512 KB"
+run_id = 796345
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm_prod.cpp"]
@@ -7609,40 +6425,17 @@ dependencies = [
     "al/m/add.hpp",
     "ds/static_range_group.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/ds/wave_matrix/wm_prod.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796302
-compile_error = """
-Main.cc:982:12: error: ‘monoid_add’ does not name a type
-  982 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:983:29: error: ‘MX’ was not declared in this scope
-  983 | using DS = wave_mat<int, 0, MX, static_range_group<MX>>;
-      |                             ^~
-Main.cc:983:52: error: ‘MX’ was not declared in this scope
-  983 | using DS = wave_mat<int, 0, MX, static_range_group<MX>>;
-      |                                                    ^~
-Main.cc:983:52: error: template argument 1 is invalid
-Main.cc:983:54: error: template argument 3 is invalid
-  983 | using DS = wave_mat<int, 0, MX, static_range_group<MX>>;
-      |                                                      ^~
-Main.cc:983:54: error: template argument 4 is invalid
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:987:3: error: ‘DS’ was not declared in this scope
-  987 |   DS wm(vc<int>(all(a)), a);
-      |   ^~
-Main.cc:990:11: error: ‘wm’ was not declared in this scope; did you mean ‘tm’?
-  990 |     print(wm.pre_count_prod(l, r, x + 1));
-      |           ^~
-      |           tm"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1888 ms"
+memory_text = "110448 KB"
+run_id = 796346
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm_s_count.cpp"]
@@ -9214,42 +8007,17 @@ dependencies = [
     "g/dynamic_connect.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/graph/dynamic_connect_sum.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796303
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:936:19: error: ‘monoid_add’ was not declared in this scope
-  936 |   dynamic_connect<monoid_add<ll>> g(a);
-      |                   ^~~~~~~~~~
-Main.cc:936:32: error: template argument 1 is invalid
-  936 |   dynamic_connect<monoid_add<ll>> g(a);
-      |                                ^~
-Main.cc:936:37: error: cannot convert ‘vc<long long int>’ {aka ‘std::vector<long long int, std::allocator<long long int> >’} to ‘int’ in initialization
-  936 |   dynamic_connect<monoid_add<ll>> g(a);
-      |                                     ^
-      |                                     |
-      |                                     vc<long long int> {aka std::vector<long long int, std::allocator<long long int> >}
-Main.cc:941:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  941 |       g.link(x, y);
-      |         ^~~~
-Main.cc:944:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  944 |       g.cut(x, y);
-      |         ^~~
-Main.cc:947:9: error: request for member ‘multiply’ in ‘g’, which is of non-class type ‘int’
-  947 |       g.multiply(x, y);
-      |         ^~~~~~~~
-Main.cc:950:15: error: request for member ‘component_prod’ in ‘g’, which is of non-class type ‘int’
-  950 |       print(g.component_prod(x));
-      |               ^~~~~~~~~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "8824 ms"
+memory_text = "615112 KB"
+run_id = 796348
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/enum/enum_clique.cpp"]
@@ -10737,39 +9505,17 @@ dependencies = [
     "ds/basic/hashmap.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/tr/hld/hld_abel_sub_sum_point_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796304
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1136:17: error: ‘monoid_add’ was not declared in this scope
- 1136 |   hld_abel<int, monoid_add<ll>, 0, 0, 1> seg(v, a);
-      |                 ^~~~~~~~~~
-Main.cc:1136:30: error: template argument 2 is invalid
- 1136 |   hld_abel<int, monoid_add<ll>, 0, 0, 1> seg(v, a);
-      |                              ^
-Main.cc:1136:31: error: expected unqualified-id before ‘,’ token
- 1136 |   hld_abel<int, monoid_add<ll>, 0, 0, 1> seg(v, a);
-      |                               ^
-Main.cc:1136:33: error: expected unqualified-id before numeric constant
- 1136 |   hld_abel<int, monoid_add<ll>, 0, 0, 1> seg(v, a);
-      |                                 ^
-Main.cc:1141:7: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1141 |       seg.multiply(i, x);
-      |       ^~~
-      |       se
-Main.cc:1144:13: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1144 |       print(seg.prod_sub(i));
-      |             ^~~
-      |             se"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "771 ms"
+memory_text = "116164 KB"
+run_id = 796347
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/hld/hld_dual_nc.cpp"]
@@ -10878,39 +9624,17 @@ dependencies = [
     "ds/basic/hashmap.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/tr/hld/hld_path_sum_point_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796305
-compile_error = """
-Main.cc:1309:12: error: ‘monoid_add’ does not name a type
- 1309 | using MX = monoid_add<ll>;
-      |            ^~~~~~~~~~
-Main.cc:1310:26: error: ‘MX’ was not declared in this scope
- 1310 | using DS = hld_mono<int, MX, 0>;
-      |                          ^~
-Main.cc:1310:31: error: template argument 2 is invalid
- 1310 | using DS = hld_mono<int, MX, 0>;
-      |                               ^
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1317:3: error: ‘DS’ was not declared in this scope
- 1317 |   DS seg(v, a);
-      |   ^~
-Main.cc:1322:7: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1322 |       seg.multiply(i, x);
-      |       ^~~
-      |       se
-Main.cc:1325:13: error: ‘seg’ was not declared in this scope; did you mean ‘se’?
- 1325 |       print(seg.prod(x, y));
-      |             ^~~
-      |             se"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "997 ms"
+memory_text = "110664 KB"
+run_id = 796349
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/hld/hld_sub_sum_point_add.cpp"]
@@ -10925,40 +9649,17 @@ dependencies = [
     "ds/basic/hashmap.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/tr/hld/hld_sub_sum_point_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796306
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1319:17: error: ‘monoid_add’ was not declared in this scope
- 1319 |   hld_mono<int, monoid_add<ll>> seg(v, a);
-      |                 ^~~~~~~~~~
-Main.cc:1319:30: error: template argument 2 is invalid
- 1319 |   hld_mono<int, monoid_add<ll>> seg(v, a);
-      |                              ^~
-Main.cc:1319:41: error: expression list treated as compound expression in initializer [-fpermissive]
- 1319 |   hld_mono<int, monoid_add<ll>> seg(v, a);
-      |                                         ^
-Main.cc:1319:37: warning: left operand of comma operator has no effect [-Wunused-value]
- 1319 |   hld_mono<int, monoid_add<ll>> seg(v, a);
-      |                                     ^
-Main.cc:1319:41: error: cannot convert ‘vc<long long int>’ {aka ‘std::vector<long long int, std::allocator<long long int> >’} to ‘int’ in initialization
- 1319 |   hld_mono<int, monoid_add<ll>> seg(v, a);
-      |                                         ^
-Main.cc:1324:11: error: request for member ‘multiply’ in ‘seg’, which is of non-class type ‘int’
- 1324 |       seg.multiply(i, x);
-      |           ^~~~~~~~
-Main.cc:1327:17: error: request for member ‘prod_sub’ in ‘seg’, which is of non-class type ‘int’
- 1327 |       print(seg.prod_sub(i));
-      |                 ^~~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "675 ms"
+memory_text = "108728 KB"
+run_id = 796350
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/reroot_dp.cpp"]
@@ -11138,36 +9839,17 @@ dependencies = [
     "ds/seg/range_sum_point_add.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/tr/stt/near0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796307
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1222:23: error: ‘monoid_add’ was not declared in this scope
- 1222 |   range_sum_point_add<monoid_add<ll>> bit(dat);
-      |                       ^~~~~~~~~~
-Main.cc:1222:36: error: template argument 1 is invalid
- 1222 |   range_sum_point_add<monoid_add<ll>> bit(dat);
-      |                                    ^~
-Main.cc:1222:43: error: cannot convert ‘vc<long long int>’ {aka ‘std::vector<long long int, std::allocator<long long int> >’} to ‘int’ in initialization
- 1222 |   range_sum_point_add<monoid_add<ll>> bit(dat);
-      |                                           ^~~
-      |                                           |
-      |                                           vc<long long int> {aka std::vector<long long int, std::allocator<long long int> >}
-Main.cc:1227:34: error: request for member ‘multiply’ in ‘bit’, which is of non-class type ‘int’
- 1227 |       for (int i : ds.vs(x)) bit.multiply(i, y);
-      |                                  ^~~~~~~~
-Main.cc:1231:51: error: request for member ‘prod’ in ‘bit’, which is of non-class type ‘int’
- 1231 |       for (Z [l, r] : ds.range(x, l, r)) s += bit.prod(l, r);
-      |                                                   ^~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "612 ms"
+memory_text = "77048 KB"
+run_id = 796351
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/stt/near1.cpp"]
@@ -11183,34 +9865,17 @@ dependencies = [
     "ds/bit/dual_bit.hpp",
     "al/m/add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "c3d476979115b4beb320e9db7dff5766c5f8439b"
-last_updated_at = "2026-05-06T13:23:35.559854236Z"
+last_trigger = "test_file_changed"
+last_tested_head = "82905f1259ca7bdb0e39f489ad21461a0489dff7"
+last_updated_at = "2026-05-06T13:28:05.371261693Z"
 
 [tests."test/tr/stt/near1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796308
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:1209:12: error: ‘monoid_add’ was not declared in this scope
- 1209 |   dual_bit<monoid_add<ll>> bit(ds.tt);
-      |            ^~~~~~~~~~
-Main.cc:1209:25: error: template argument 1 is invalid
- 1209 |   dual_bit<monoid_add<ll>> bit(ds.tt);
-      |                         ^~
-Main.cc:1210:17: error: request for member ‘apply’ in ‘bit’, which is of non-class type ‘int’
- 1210 |   FOR(i, N) bit.apply(i, i + 1, a[i]);
-      |                 ^~~~~
-Main.cc:1215:46: error: request for member ‘apply’ in ‘bit’, which is of non-class type ‘int’
- 1215 |       for (Z [l, r] : ds.range(x, l, r)) bit.apply(l, r, w);
-      |                                              ^~~~~
-Main.cc:1219:39: error: request for member ‘get’ in ‘bit’, which is of non-class type ‘int’
- 1219 |       for (int x : ds.vs(x)) s += bit.get(x);
-      |                                       ^~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "592 ms"
+memory_text = "46304 KB"
+run_id = 796352
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/stt/nearr.cpp"]
