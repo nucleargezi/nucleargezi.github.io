@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-05-06T12:47:36.548636784Z"
+generated_at = "2026-05-06T12:49:02.33633717Z"
 status = "passed"
 failures = []
 
@@ -646,11 +646,7 @@ unused = [
     "mod/mint_t.hpp",
 ]
 "al/am/sum_add.hpp" = []
-"al/am/sum_affine.hpp" = [
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "al/am/am_base.hpp",
-]
+"al/am/sum_affine.hpp" = []
 "al/am/sum_line_add.hpp" = [
     "al/m/add.hpp",
     "al/m/add_line.hpp",
@@ -2487,7 +2483,6 @@ unused = [
     "al/am/mincnt_add.hpp",
     "al/am/minidx_add.hpp",
     "al/am/minmax_add.hpp",
-    "al/am/sum_affine.hpp",
     "al/am/sum_line_add.hpp",
     "al/am/sum_mul.hpp",
     "al/am/xor_or.hpp",
@@ -2525,7 +2520,6 @@ unused = [
     "al/am/mincnt_add.hpp",
     "al/am/minidx_add.hpp",
     "al/am/minmax_add.hpp",
-    "al/am/sum_affine.hpp",
     "al/am/sum_line_add.hpp",
     "al/am/sum_mul.hpp",
     "ds/bit/bit01.hpp",
@@ -2546,7 +2540,6 @@ unused = [
     "al/am/max_set.hpp",
     "al/am/max_set_add.hpp",
     "al/am/max_sub_array_sum.hpp",
-    "al/am/sum_affine.hpp",
 ]
 "al/m/and.hpp" = []
 "al/m/assign.hpp" = []
@@ -5387,21 +5380,18 @@ dependencies = [
     "ds/seg/segdl_t.hpp",
     "ds/basic/node_pool.hpp",
     "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "al/am/am_base.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
-last_updated_at = "2026-05-06T12:47:36.548636784Z"
+last_tested_head = "77bb2b108fd5f0f162d013fee430750873a323c7"
+last_updated_at = "2026-05-06T12:49:02.33633717Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1443 ms"
+time_text = "1429 ms"
 memory_text = "37272 KB"
-run_id = 796220
+run_id = 796224
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp"]
@@ -5434,23 +5424,20 @@ problem_id = 11311
 dependencies = [
     "mod/mint_t.hpp",
     "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "al/am/am_base.hpp",
     "ds/seg/segdl_t.hpp",
     "ds/basic/node_pool.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
-last_updated_at = "2026-05-06T12:47:36.548636784Z"
+last_tested_head = "77bb2b108fd5f0f162d013fee430750873a323c7"
+last_updated_at = "2026-05-06T12:49:02.33633717Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "573 ms"
+time_text = "645 ms"
 memory_text = "282376 KB"
-run_id = 796221
+run_id = 796227
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp"]
@@ -5596,21 +5583,18 @@ dependencies = [
     "mod/mint_t.hpp",
     "ds/seg/segl_t.hpp",
     "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "al/am/am_base.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
-last_updated_at = "2026-05-06T12:47:36.548636784Z"
+last_tested_head = "77bb2b108fd5f0f162d013fee430750873a323c7"
+last_updated_at = "2026-05-06T12:49:02.33633717Z"
 
 [tests."test/ds/seg/lazy/segl0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "857 ms"
+time_text = "736 ms"
 memory_text = "12688 KB"
-run_id = 796217
+run_id = 796226
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/lazy/segl1.cpp"]
@@ -5621,21 +5605,18 @@ dependencies = [
     "mod/mint_t.hpp",
     "ds/seg/segl_t.hpp",
     "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "al/am/am_base.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
-last_updated_at = "2026-05-06T12:47:36.548636784Z"
+last_tested_head = "77bb2b108fd5f0f162d013fee430750873a323c7"
+last_updated_at = "2026-05-06T12:49:02.33633717Z"
 
 [tests."test/ds/seg/lazy/segl1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "942 ms"
+time_text = "966 ms"
 memory_text = "12688 KB"
-run_id = 796218
+run_id = 796223
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
@@ -6168,21 +6149,18 @@ dependencies = [
     "ds/treap/treap_act.hpp",
     "ds/basic/node_pool.hpp",
     "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "al/am/am_base.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
-last_updated_at = "2026-05-06T12:47:36.548636784Z"
+last_tested_head = "77bb2b108fd5f0f162d013fee430750873a323c7"
+last_updated_at = "2026-05-06T12:49:02.33633717Z"
 
 [tests."test/ds/treap/treap_am_apply_rev_prod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "2546 ms"
+time_text = "2574 ms"
 memory_text = "45464 KB"
-run_id = 796219
+run_id = 796225
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_am_rev_prod.cpp"]
