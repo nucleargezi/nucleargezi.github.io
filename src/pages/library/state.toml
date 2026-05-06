@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-05-06T12:36:54.836836817Z"
-status = "failed"
+generated_at = "2026-05-06T12:47:36.548636784Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -9,96 +10,29 @@ head = "HEAD"
 
 [latest_run]
 trigger_mode = "diff"
-changed_paths = [
-    "al/am/sum_affine.hpp",
-    "poly/c/bs.hpp",
-    "test/ds/lct/lct_path_aff_set.cpp",
-    "test/ds/seg/assign/range_assign0.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/seg/seg_t_set.cpp",
-    "test/ds/seg/sort_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_am_apply_rev_prod.cpp",
-    "test/tr/hld/hld_path_affine_point_set.cpp",
-]
+changed_paths = ["al/am/sum_affine.hpp"]
 selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/ds/lct/lct_path_aff_set.cpp",
-    "test/ds/seg/assign/range_assign0.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set1.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
     "test/ds/seg/lazy/segl0.cpp",
     "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/seg/seg_t_set.cpp",
-    "test/ds/seg/sort_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/swag/swag_queue.cpp",
     "test/ds/treap/treap_am_apply_rev_prod.cpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_all.cpp",
-    "test/fps/basic/conv_multi_2n.cpp",
-    "test/fps/basic/conv_multi_p.cpp",
-    "test/fps/basic/conv_ull.cpp",
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/fps/basic/lag_iota.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/fps/basic/poly_inv.cpp",
-    "test/fps/basic/shift.cpp",
-    "test/fps/bell.cpp",
-    "test/fps/bernoulli.cpp",
-    "test/fps/coef_of_rationals.cpp",
-    "test/fps/coef_of_rationals_range.cpp",
-    "test/fps/fac_large0.cpp",
-    "test/fps/fac_large1.cpp",
-    "test/fps/partition.cpp",
-    "test/fps/prod_of_one_plus_xn.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/string/wildcard.cpp",
-    "test/tr/hld/hld_path_affine_point_set.cpp",
 ]
 total_discovered = 254
-total_selected = 56
-passed = 51
-failed = 5
+total_selected = 5
+passed = 5
+failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
+    "al/am/am_base.hpp",
     "al/am/his_sum_add.hpp",
     "al/am/mincnt_add.hpp",
     "al/am/sum_add.hpp",
+    "al/am/sum_affine.hpp",
+    "al/m/add.hpp",
+    "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
     "al/m/minmincnt.hpp",
@@ -111,6 +45,7 @@ all_passed = [
     "ds/basic/deque.hpp",
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
+    "ds/basic/node_pool.hpp",
     "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
@@ -155,6 +90,8 @@ all_passed = [
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
     "ds/seg/segd_t.hpp",
+    "ds/seg/segdl_t.hpp",
+    "ds/seg/segl_t.hpp",
     "ds/sl/cht.hpp",
     "ds/sl/lict.hpp",
     "ds/sl/lict_d.hpp",
@@ -168,6 +105,7 @@ all_passed = [
     "ds/swag.hpp",
     "ds/toptree/satt.hpp",
     "ds/toptree/satt_sim.hpp",
+    "ds/treap/treap_act.hpp",
     "ds/treap/treap_base.hpp",
     "ds/treap/treap_mono.hpp",
     "ds/treap/treap_mono_cm.hpp",
@@ -234,6 +172,7 @@ all_passed = [
     "mod/inv_fast.hpp",
     "mod/inv_fast_d.hpp",
     "mod/mint61.hpp",
+    "mod/mint_t.hpp",
     "mod/mod_pow.hpp",
     "mod/mod_sqrt.hpp",
     "mod/modfast.hpp",
@@ -347,17 +286,7 @@ all_passed = [
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
-has_failures = [
-    "al/am/am_base.hpp",
-    "al/am/sum_affine.hpp",
-    "al/m/add.hpp",
-    "al/m/affine.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/seg/segdl_t.hpp",
-    "ds/seg/segl_t.hpp",
-    "ds/treap/treap_act.hpp",
-    "mod/mint_t.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add.hpp",
@@ -4311,36 +4240,6 @@ unused = [
 "tr/subtree_hash.hpp" = []
 "ttr/doubling.hpp" = []
 
-[[failures]]
-path = "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11321"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11311"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/lazy/segl0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11320"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/lazy/segl1.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11321"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/treap/treap_am_apply_rev_prod.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11305"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -5492,52 +5391,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "4acc2b9098418d44c96cfcc7b8d656088d87f607"
-last_updated_at = "2026-05-06T12:36:54.836836817Z"
+last_trigger = "dependency_changed"
+last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
+last_updated_at = "2026-05-06T12:47:36.548636784Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796161
-compile_error = """
-Main.cc: In instantiation of ‘static constexpr Sum_affine<T>::X Sum_affine<T>::map(const X&, const A&, ll) [with T = mint_t<998244353>; Sum_affine<T>::X = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >; ll = long long int]’:
-Main.cc:870:17:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::_a(segdl_t<T, persistent, ll, sz>::np, ll, ll, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> > >::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:861:12:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::apply(segdl_t<T, persistent, ll, sz>::np, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> > >::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:1074:20:   required from here
-Main.cc:1056:18: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1056 |     return x * a.a + T(sz) * a.b;
-      |                ~~^
-Main.cc:1056:32: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
- 1056 |     return x * a.a + T(sz) * a.b;
-      |                              ~~^
-Main.cc: In instantiation of ‘static Sum_affine<T>::A Sum_affine<T>::fu(const A&, const A&) [with T = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’:
-Main.cc:871:16:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::_a(segdl_t<T, persistent, ll, sz>::np, ll, ll, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> > >::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:861:12:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::apply(segdl_t<T, persistent, ll, sz>::np, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> > >::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:1074:20:   required from here
-Main.cc:1051:51: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1051 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                 ~~^
-Main.cc:1051:57: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1051 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                       ~~^
-Main.cc:1051:62: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
- 1051 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                            ~~^
-Main.cc:1051:68: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1051 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                  ~~^
-Main.cc:1051:74: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
- 1051 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                        ~~^
-Main.cc:1051:75: error: could not convert ‘{<expression error>, <expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘Sum_affine<mint_t<998244353> >::A’ {aka ‘std::pair<mint_t<998244353>, mint_t<998244353> >’}
- 1051 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                           ^
-      |                                                                           |
-      |                                                                           <brace-enclosed initializer list>"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1443 ms"
+memory_text = "37272 KB"
+run_id = 796220
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp"]
@@ -5576,52 +5440,17 @@ dependencies = [
     "ds/seg/segdl_t.hpp",
     "ds/basic/node_pool.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "4acc2b9098418d44c96cfcc7b8d656088d87f607"
-last_updated_at = "2026-05-06T12:36:54.836836817Z"
+last_trigger = "dependency_changed"
+last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
+last_updated_at = "2026-05-06T12:47:36.548636784Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796162
-compile_error = """
-Main.cc: In instantiation of ‘static constexpr Sum_affine<T>::X Sum_affine<T>::map(const X&, const A&, ll) [with T = mint_t<998244353>; Sum_affine<T>::X = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >; ll = long long int]’:
-Main.cc:933:17:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::_a(segdl_t<T, persistent, ll, sz>::np, ll, ll, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = true; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> >, true>::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:924:12:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::apply(segdl_t<T, persistent, ll, sz>::np, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = true; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> >, true>::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:1076:23:   required from here
-Main.cc:689:18: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  689 |     return x * a.a + T(sz) * a.b;
-      |                ~~^
-Main.cc:689:32: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  689 |     return x * a.a + T(sz) * a.b;
-      |                              ~~^
-Main.cc: In instantiation of ‘static Sum_affine<T>::A Sum_affine<T>::fu(const A&, const A&) [with T = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’:
-Main.cc:934:16:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::_a(segdl_t<T, persistent, ll, sz>::np, ll, ll, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = true; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> >, true>::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:924:12:   required from ‘segdl_t<T, persistent, ll, sz>::node* segdl_t<T, persistent, ll, sz>::apply(segdl_t<T, persistent, ll, sz>::np, ll, ll, const A&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = true; ll = int; int sz = 262144; segdl_t<T, persistent, ll, sz>::np = segdl_t<Sum_affine<mint_t<998244353> >, true>::node*; segdl_t<T, persistent, ll, sz>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:1076:23:   required from here
-Main.cc:684:51: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  684 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                 ~~^
-Main.cc:684:57: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  684 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                       ~~^
-Main.cc:684:62: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  684 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                            ~~^
-Main.cc:684:68: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  684 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                  ~~^
-Main.cc:684:74: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  684 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                        ~~^
-Main.cc:684:75: error: could not convert ‘{<expression error>, <expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘Sum_affine<mint_t<998244353> >::A’ {aka ‘std::pair<mint_t<998244353>, mint_t<998244353> >’}
-  684 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                           ^
-      |                                                                           |
-      |                                                                           <brace-enclosed initializer list>"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "573 ms"
+memory_text = "282376 KB"
+run_id = 796221
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp"]
@@ -5771,52 +5600,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "4acc2b9098418d44c96cfcc7b8d656088d87f607"
-last_updated_at = "2026-05-06T12:36:54.836836817Z"
+last_trigger = "dependency_changed"
+last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
+last_updated_at = "2026-05-06T12:47:36.548636784Z"
 
 [tests."test/ds/seg/lazy/segl0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796165
-compile_error = """
-Main.cc: In instantiation of ‘static constexpr Sum_affine<T>::X Sum_affine<T>::map(const X&, const A&, ll) [with T = mint_t<998244353>; Sum_affine<T>::X = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >; ll = long long int]’:
-Main.cc:661:15:   required from ‘void segl_t<T>::app(int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:683:18:   required from ‘void segl_t<T>::apply(int, int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:870:16:   required from here
-Main.cc:854:18: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  854 |     return x * a.a + T(sz) * a.b;
-      |                ~~^
-Main.cc:854:32: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  854 |     return x * a.a + T(sz) * a.b;
-      |                              ~~^
-Main.cc: In instantiation of ‘static Sum_affine<T>::A Sum_affine<T>::fu(const A&, const A&) [with T = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’:
-Main.cc:662:26:   required from ‘void segl_t<T>::app(int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:683:18:   required from ‘void segl_t<T>::apply(int, int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:870:16:   required from here
-Main.cc:849:51: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                 ~~^
-Main.cc:849:57: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                       ~~^
-Main.cc:849:62: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                            ~~^
-Main.cc:849:68: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                  ~~^
-Main.cc:849:74: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                        ~~^
-Main.cc:849:75: error: could not convert ‘{<expression error>, <expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘Sum_affine<mint_t<998244353> >::A’ {aka ‘std::pair<mint_t<998244353>, mint_t<998244353> >’}
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                           ^
-      |                                                                           |
-      |                                                                           <brace-enclosed initializer list>"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "857 ms"
+memory_text = "12688 KB"
+run_id = 796217
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/lazy/segl1.cpp"]
@@ -5831,52 +5625,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "4acc2b9098418d44c96cfcc7b8d656088d87f607"
-last_updated_at = "2026-05-06T12:36:54.836836817Z"
+last_trigger = "dependency_changed"
+last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
+last_updated_at = "2026-05-06T12:47:36.548636784Z"
 
 [tests."test/ds/seg/lazy/segl1.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796166
-compile_error = """
-Main.cc: In instantiation of ‘static constexpr Sum_affine<T>::X Sum_affine<T>::map(const X&, const A&, ll) [with T = mint_t<998244353>; Sum_affine<T>::X = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >; ll = long long int]’:
-Main.cc:661:15:   required from ‘void segl_t<T>::app(int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:683:18:   required from ‘void segl_t<T>::apply(int, int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:870:16:   required from here
-Main.cc:854:18: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  854 |     return x * a.a + T(sz) * a.b;
-      |                ~~^
-Main.cc:854:32: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  854 |     return x * a.a + T(sz) * a.b;
-      |                              ~~^
-Main.cc: In instantiation of ‘static Sum_affine<T>::A Sum_affine<T>::fu(const A&, const A&) [with T = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’:
-Main.cc:662:26:   required from ‘void segl_t<T>::app(int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:683:18:   required from ‘void segl_t<T>::apply(int, int, segl_t<T>::A) [with T = Sum_affine<mint_t<998244353> >; segl_t<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’
-Main.cc:870:16:   required from here
-Main.cc:849:51: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                 ~~^
-Main.cc:849:57: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                       ~~^
-Main.cc:849:62: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                            ~~^
-Main.cc:849:68: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                  ~~^
-Main.cc:849:74: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                        ~~^
-Main.cc:849:75: error: could not convert ‘{<expression error>, <expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘Sum_affine<mint_t<998244353> >::A’ {aka ‘std::pair<mint_t<998244353>, mint_t<998244353> >’}
-  849 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                           ^
-      |                                                                           |
-      |                                                                           <brace-enclosed initializer list>"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "942 ms"
+memory_text = "12688 KB"
+run_id = 796218
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/range_sum_point_add.cpp"]
@@ -6413,58 +6172,17 @@ dependencies = [
     "al/m/affine.hpp",
     "al/am/am_base.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "4acc2b9098418d44c96cfcc7b8d656088d87f607"
-last_updated_at = "2026-05-06T12:36:54.836836817Z"
+last_trigger = "dependency_changed"
+last_tested_head = "984daaca993e0b5887d437145c308ba61d4e99c5"
+last_updated_at = "2026-05-06T12:47:36.548636784Z"
 
 [tests."test/ds/treap/treap_am_apply_rev_prod.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796172
-compile_error = """
-Main.cc: In instantiation of ‘T* node_pool<T, sz>::gen(S&& ...) [with S = {std::nullptr_t, std::nullptr_t, const mint_t<998244353>&, const mint_t<998244353>&, std::pair<mint_t<998244353>, mint_t<998244353> >, unsigned int, int}; T = treap_act<Sum_affine<mint_t<998244353> > >::node; int sz = 262144; node_pool<T, sz>::np = treap_act<Sum_affine<mint_t<998244353> > >::node*]’:
-Main.cc:746:17:   required from ‘treap_act<T, persistent, bsz>::node* treap_act<T, persistent, bsz>::newnode(const X&) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<T, persistent, bsz>::np = treap_act<Sum_affine<mint_t<998244353> > >::node*; treap_act<T, persistent, bsz>::X = mint_t<998244353>]’
-Main.cc:1085:33:   required from here
-Main.cc:647:12: warning: narrowing conversion of ‘std::forward<int>((* & x#6))’ from ‘int’ to ‘bool’ [-Wnarrowing]
-  647 |     return ::new(&s->nd) T{std::forward<S>(x)...};
-      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Main.cc: In instantiation of ‘static constexpr Sum_affine<T>::X Sum_affine<T>::map(const X&, const A&, ll) [with T = mint_t<998244353>; Sum_affine<T>::X = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >; ll = long long int]’:
-Main.cc:777:23:   required from ‘void treap_act<T, persistent, bsz>::push(treap_act<T, persistent, bsz>::np) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<T, persistent, bsz>::np = treap_act<Sum_affine<mint_t<998244353> > >::node*]’
-Main.cc:812:7:   required from ‘treap_act<T, persistent, bsz>::node* treap_act<T, persistent, bsz>::merge(treap_act<T, persistent, bsz>::np, treap_act<T, persistent, bsz>::np) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<T, persistent, bsz>::np = treap_act<Sum_affine<mint_t<998244353> > >::node*]’
-Main.cc:1089:19:   required from here
-Main.cc:1066:18: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1066 |     return x * a.a + T(sz) * a.b;
-      |                ~~^
-Main.cc:1066:32: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
- 1066 |     return x * a.a + T(sz) * a.b;
-      |                              ~~^
-Main.cc: In instantiation of ‘static Sum_affine<T>::A Sum_affine<T>::fu(const A&, const A&) [with T = mint_t<998244353>; Sum_affine<T>::A = std::pair<mint_t<998244353>, mint_t<998244353> >]’:
-Main.cc:779:21:   required from ‘void treap_act<T, persistent, bsz>::push(treap_act<T, persistent, bsz>::np) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<T, persistent, bsz>::np = treap_act<Sum_affine<mint_t<998244353> > >::node*]’
-Main.cc:812:7:   required from ‘treap_act<T, persistent, bsz>::node* treap_act<T, persistent, bsz>::merge(treap_act<T, persistent, bsz>::np, treap_act<T, persistent, bsz>::np) [with T = Sum_affine<mint_t<998244353> >; bool persistent = false; int bsz = 262144; treap_act<T, persistent, bsz>::np = treap_act<Sum_affine<mint_t<998244353> > >::node*]’
-Main.cc:1089:19:   required from here
-Main.cc:1061:51: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1061 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                 ~~^
-Main.cc:1061:57: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1061 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                       ~~^
-Main.cc:1061:62: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
- 1061 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                            ~~^
-Main.cc:1061:68: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘a’
- 1061 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                  ~~^
-Main.cc:1061:74: error: ‘const A’ {aka ‘const struct std::pair<mint_t<998244353>, mint_t<998244353> >’} has no member named ‘b’
- 1061 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                        ~~^
-Main.cc:1061:75: error: could not convert ‘{<expression error>, <expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘Sum_affine<mint_t<998244353> >::A’ {aka ‘std::pair<mint_t<998244353>, mint_t<998244353> >’}
- 1061 |   static A fu(const A &f, const A &g) { return {f.a * g.a, f.b * g.a + g.b}; }
-      |                                                                           ^
-      |                                                                           |
-      |                                                                           <brace-enclosed initializer list>"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2546 ms"
+memory_text = "45464 KB"
+run_id = 796219
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_am_rev_prod.cpp"]
