@@ -7,10 +7,7 @@ export default defineConfig({
   // base: "/next-blog",
   integrations: [
     typst({
-      mode: {
-        default: "html",
-        detect: () => "html",
-      },
+      target: "svg",
     }),
   ],
 });

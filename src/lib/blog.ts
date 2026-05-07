@@ -1,11 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
 export type BlogPost = CollectionEntry<"blog">;
-export interface TocHeading {
-  id: string;
-  level: number;
-  title: string;
-}
 
 export function sortPosts(posts: BlogPost[]) {
   return [...posts].sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -48,56 +43,4 @@ export function toHtmlLang(lang?: string, region?: string) {
   }
 
   return region ? `${lang}-${region.toUpperCase()}` : lang;
-}
-
-function normalizeTocTitle(rawTitle: string) {
-  return rawTitle
-    .replace(/#link\(\s*"[^"]*"\s*,\s*"([^"]*)"\s*\)/g, "$1")
-    .replace(/#link\(\s*"[^"]*"\s*,\s*\[([^\]]*)\]\s*\)/g, "$1")
-    .replace(/#\w+\[([^\]]+)\]/g, "$1")
-    .replace(/#\w+\(\s*"([^"]+)"\s*\)/g, "$1")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-export function extractTypstToc(body?: string): TocHeading[] {
-  if (!body) {
-    return [];
-  }
-
-  const headings: TocHeading[] = [];
-  let inFence = false;
-
-  for (const rawLine of body.split(/\r?\n/)) {
-    const line = rawLine.trimEnd();
-    const trimmed = line.trim();
-
-    if (trimmed.startsWith("```")) {
-      inFence = !inFence;
-      continue;
-    }
-
-    if (inFence) {
-      continue;
-    }
-
-    const match = line.match(/^(={1,6})\s+(.+?)\s*$/);
-    if (!match) {
-      continue;
-    }
-
-    const [, marks, rawTitle] = match;
-    const title = normalizeTocTitle(rawTitle);
-    if (!title) {
-      continue;
-    }
-
-    headings.push({
-      id: `heading-${headings.length + 1}`,
-      level: marks.length,
-      title,
-    });
-  }
-
-  return headings;
 }

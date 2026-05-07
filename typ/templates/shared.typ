@@ -44,6 +44,33 @@
   ]
 }
 
+#let toc-entry-block(it) = link(
+  it.element.location(),
+  block(
+    width: 100%,
+    // above: 0.18em,
+    // below: 0.18em,
+    inset: (left: calc.max(0pt, (it.level - 1) * 8pt)),
+  )[
+    #it.element.body
+  ],
+)
+
+#let toc-block(title: [Contents], depth: 3) = block(
+  width: 100%,
+  above: 0pt,
+  below: 1.2em,
+)[
+  #show outline.entry: toc-entry-block
+
+  #outline(
+    title: block(below: 0.6em)[
+      #text(size: 9pt, weight: 700)[#title]
+    ],
+    depth: depth,
+  )
+]
+
 #let article-rules(body, lang: none, region: none) = {
   set page(
     width: 540pt,
@@ -93,6 +120,9 @@
   date: "1970-01-01",
   tags: (),
   category: "",
+  toc: true,
+  toc-title: [Contents],
+  toc-depth: 3,
   body,
 ) = {
   [
@@ -107,6 +137,10 @@
 
   set document(title: title)
   show: article-rules.with()
+
+  if toc {
+    toc-block(title: toc-title, depth: toc-depth)
+  }
 
   body
 }

@@ -71,7 +71,7 @@ void yorisou() {
 }
 ```
 
-== A
+== G. Guarding Plan
 - In-Contest Solves: 53/170 (ucup)
 - #link("https://qoj.ac/contest/2071/problem/10976")
 
