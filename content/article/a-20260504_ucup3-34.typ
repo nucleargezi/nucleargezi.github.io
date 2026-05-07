@@ -2,7 +2,7 @@
 
 #show: main.with(
   title: "Record The 3rd Universal Cup. Stage 34: Aobayama",
-  desc: [ucup 3-33 训练记录],
+  desc: [ucup 3-34 训练记录],
   date: "2026-05-04",
   tags: ("icpc",),
   category: "ICPC",
