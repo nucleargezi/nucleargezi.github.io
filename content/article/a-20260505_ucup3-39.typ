@@ -1,135 +1,214 @@
 #import "/typ/templates/blog.typ": *
 
 #show: main.with(
-  title: "Record The 3rd Universal Cup. Stage 34: Aobayama",
-  desc: [ucup 3-33 训练记录],
-  date: "2026-05-02",
+  title: "Record The 3rd Universal Cup. Stage 39: Tokyo",
+  desc: [ucup 3-39 训练记录],
+  date: "2026-05-05",
   tags: ("icpc",),
   category: "ICPC",
 )
 
-= The 3rd Universal Cup. Stage 34: Aobayama
+= The 3rd Universal Cup. Stage 39: Tokyo
 
-#link("https://qoj.ac/contest/1965", "Qoj Link")
+#link("https://qoj.ac/contest/2071", "Qoj Link")
 
 == Hitokoto
 
 假期组队训练
 
-== N. Palindromic Path
-- In-Contest Solves: 43/181 (ucup)
-- #link("https://qoj.ac/contest/1965/problem/10334")
+== B. Bracket Character Frequency
+- In-Contest Solves: 137/352 (ucup)
+- #link("https://qoj.ac/contest/2071/problem/10971")
 === Formal Problem Statement
 
-给定一个有 $2N$ 个点和 $M$ 条边的简单无向图 $G$
+给定 $T$ 组测试数据, 每组给定整数 $N, K$ 和一个长度为 $2K$ 的整数序列 $A_1, A_2, dots, A_(2K)$
 
-对于每个点 $i$, 它的标签为 $floor((i + 1) / 2)$, 因此点 $2x - 1$ 和点 $2x$ 的标签均为 $x$
+称一个只由字符 `"("` 和 `")"` 组成的字符串为正确括号序列, 当且仅当它可以由空串, 外层匹配括号包裹一个正确括号序列, 或两个非空正确括号序列拼接得到
 
-称一个点序列 $P = (v_1, v_2, dots, v_K)$ 为回文路径, 当且仅当满足以下条件
+需要判断是否存在一个由 $N$ 个正确括号序列组成的元组, 使得每个正确括号序列的长度均为 $2K$, 且对于每个位置 $i$, 在这 $N$ 个序列中恰好有 $A_i$ 个序列的第 $i$ 个字符为 `"("`
 
-- $K >= 2$
-- $P$ 是一条简单路径, 即相邻点之间均有边, 且不重复经过同一个点
-- 路径上点的标签序列构成回文, 即对于所有 $1 <= k <= floor(K / 2)$, 有 $floor((v_k + 1) / 2) = floor((v_(K - k + 1) + 1) / 2)$
-
-对于每个 $x = 1, 2, dots, N$, 判断是否存在一条从某个标签为 $x$ 的点出发的回文路径
+对于每组测试数据, 若存在满足条件的元组, 输出 `Yes`, 否则输出 `No`
 
 === Constraints
 
-- $1 <= N <= 2 dot 10^5$
-- $1 <= M <= 4 dot 10^5$
-- $1 <= u_j < v_j <= 2N$
-- $(u_i, v_i) != (u_j, v_j)$ for $i != j$
+- $1 <= T <= 10^5$
+- $1 <= N <= 10^12$
+- $1 <= K <= 2 dot 10^5$
+- $0 <= A_i <= N$
+- $sum K <= 5 dot 10^5$
 
 === Solution
 
-要写的东西有点多, 但每一步都不难, 有点拼好题
-
-回文路径去掉头尾还是回文路径, 这启发选手以这种方式建图: 若 $2i, 2i+1$ 可以分别到达 $2k, 2k+1$, 就连一条有向边 $i->k$, 当然此时也一定有一条边 $k->i$ 存在, 当无向边就行 , 这样对于任何一个合法起点, 从它出发产生的所有路径都是一个回文串, 也就是它能到达的点都可以作为合法回文路径的起点
-
-现在可以枚举回文中心, 分两种情况:
-+ 回文路径长度为偶, 回文中心是某个 $2i, 2i+1$ , 这种中心可以直接枚举, 它所在的连通块都可以贡献答案
-+ 回文路径为奇, 这时存在一个问题, 实现上是枚举它能到达的合法点对作为中心向外扩展, 例如 "abcba", 统计过程是对于奇中心 'c', 枚举起点 'b', 这时真正作为中心的数字不能在其他地方使用, 也就是合法路径不能经过它, 需要进行一些处理
-
-可以使用圆方树将图转化成一个森林, 然后处理出整个森林的 dfn ,维护一个 dfs 序的贡献序列 , 对于第一种情况就是对某个点所在的树进行一次区间加, 而在第二种情况中, 如果奇中心和起点在一个连通块内, 相当于要对圆方树内刨去奇中心以起点为根的子树, 剩下部分产生贡献, 相当于对整棵树产生 1 的贡献, 然后对这个子树部分扣掉 1 的贡献, 可以通过倍增 lca 来处理出这部分影响的 dfn 区间
-
-最后对整个贡献序列做一次前缀和, 看一下哪些点存在贡献哪些不存在
+直接模拟, 每次贪心把新增的 '(' 给前缀 '(' 少的串
 
 === Implementation
 ```cpp
 void yorisou() {
-  INT(N, M);
-  vc<vc<int>> v(N << 1), g(N);
-  FOR(M) {
-    INT(a, b);
-    --a, --b;
-    v[a].ep(b), v[b].ep(a);
+  INT(N, K);
+  map<int, ll> q;
+  q[0] = N;
+  vc<PLL> st;
+  VEC(ll, a, K << 1);
+  FOR(i, 2 * K) {
+    ll x = a[i];
+    st.clear();
+    while (x) {
+      Z it = bg(q);
+      Z [c, n] = *it;
+      q.erase(it);
+      ll d = min(x, n);
+      x -= d;
+      n -= d;
+      st.ep(c + 1, d);
+      if (n) st.ep(c, n);
+    }
+    for (var [c, n] : st) q[c] += n;
+    if (q.bg()->fi * 2 < i + 1) return print("No");
   }
-  vc<int> c(N << 1), to;
+  ll s = 0;
+  for (var [a, b] : q) if (a == K) s += b;
+  print(s == N ? "Yes" : "No");
+}
+```
+
+== A
+- In-Contest Solves: 53/170 (ucup)
+- #link("https://qoj.ac/contest/2071/problem/10976")
+
+=== Formal Problem Statement
+
+=== Solution
+
+先从后往前扫一遍将已经被覆盖的点去掉, 对于剩下的点, 处于非严格凸包上的点一定是不能删的, 新增的点一定在凸包的边上, 对于凸包上相邻两个点的 x 坐标范围内的其他点, 尝试新增点进行覆盖
+
+对于凸包上的一条斜边 $(x, y) - (x + a, y - b)$ , 对于范围内的每个点, 可以知道想要覆盖它, 最远新增点的 x 在哪里, 也就是每个点存在一个覆盖范围, 如果以它为一个新增点的边界的话; 所以用一些数据结构优化一个区间取 min 的 dp 来处理每个区间就行
+
+这里贪心也可以得到最小有效点数, 只需要贪心扩展每次新增点覆盖的右边界, 最后去掉只覆盖了一个点的无效覆盖就行, 但这样操作次数不一定是最优的, 还是必须以点数为第一关键字, 操作次数为第二关键字进行 dp 才行
+
+=== Implementation
+```cpp
+using P = point<ll>;
+using DS = seg_dual_t<Min<PII>>;
+void yorisou() {
+  INT(N);
+  map<int, int> mp;
+  FOR(N) {
+    INT(x, y);
+    chmax(mp[x], y);
+  }
+  vc<P> a;
+  for (var [x, y] : mp) a.ep(x, y);
+  N = si(a);
+  int mx = -1;
+  FOR_R(i, N) {
+    var [x, y] = a[i];
+    if (chmax(mx, y)) a.ep(x, y);
+  }
+  a.erase(bg(a), bg(a) + N);
+  reverse(all(a));
+  N = si(a);
+
+  vc<char> vis(N);
+  vc<int> s;
   FOR(i, N) {
-    to.clear();
-    for (int x : v[i << 1]) c[x] |= 1;
-    for (int x : v[i << 1 | 1]) c[x] |= 2;
-    for (int x : v[i << 1]) {
-      int a = x, b = x ^ 1;
-      if (((c[a] & 1) and (c[b] & 2)) or 
-          ((c[a] & 2) and (c[b] & 1))) {
-        to.ep(x >> 1);
+    while (si(s) > 1) {
+      int l = s.ed()[-2], m = s.ed()[-1];
+      if (ccw(a[l], a[m], a[i]) == 1) pop(s);
+      else break;
+    }
+    s.ep(i);
+  }
+  for (int x : s) vis[x] = 1;
+  vc<int> L(N), R(N);
+  FOR(i, N) {
+    if (vis[i]) L[i] = i;
+    else L[i] = L[i - 1];
+  }
+  FOR_R(i, N) {
+    if (vis[i]) R[i] = i;
+    else R[i] = R[i + 1];
+  }
+
+  vc<vc<PII>> rgs(N);
+  FOR(i, N) if (not vis[i]) {
+    int l = L[i], r = R[i];
+    int d = bina([&](int d) -> bool {
+      P tmp = a[i];
+      tmp.x += d;
+      return ccw(a[l], tmp, a[r]) != -1;
+    }, 0, a[r].x - a[i].x);
+    int rx = a[i].x + d;
+    rgs[l].ep(i, bina([&](int p) { return rx >= a[p].x; }, i, N) + 1);
+  }
+
+  int co = SUM<int>(vis), op = 0;
+  DS seg(N);
+  FOR(i, N) if (si(rgs[i])) {
+    Z &v = rgs[i];
+    seg.apply(i, i + 1, {0, 0});
+    for (var [ls, rs] : v) {
+      Z [a, b] = seg.get(ls - 1);
+      seg.apply(ls, ls + 1, {a + 1, b});
+      seg.apply(ls, rs, {a + 1, b + 1});
+    }
+    var [a, b] = seg.get(R[i + 1] - 1);
+    co += a, op += b;
+  }
+  print(co);
+  print(op);
+}
+```
+
+== Q. Quadratic Pieces
+- In-Contest Solves: 145/245	 (ucup)
+- #link("https://qoj.ac/contest/2071/problem/10986")
+
+=== Formal Problem Statement
+
+给定 $T$ 组测试数据, 每组给定一个长度为 $N$ 的整数序列 $A_1, A_2, dots, A_N$
+
+对于一段连续子序列 $(A_L, A_(L + 1), dots, A_R)$, 若存在实数 $a, b, c$, 使得对于所有 $L <= i <= R$, 都有 $A_i = a i^2 + b i + c$, 则称这段子序列是二次的
+
+你需要将整个序列划分为若干个连续的二次子序列
+
+对于每组测试数据, 求最少需要划分成多少段
+
+=== Constraints
+
+- $1 <= T <= 10^5$
+- $1 <= N <= 2 dot 10^5$
+- $-10^18 <= A_i <= 10^18$
+- $sum N <= 2 dot 10^5$
+
+=== Solution
+
+注意到每个序列的二阶差分是个常数, 以此划分即可
+
+=== Implementation
+```cpp
+void yorisou() {
+  INT(N);
+  VEC(int, a, N);
+  int s = 0;
+  for (int l = 0, r; l < N; l = r) {
+    r = l + 1;
+    ll d;
+    while (r < N) {
+      if (r - 1 == l) {
+        d = a[r] - a[l];
+        ++r;
+      } else if (r - 2 == l) {
+        d = a[r] - a[r - 1] - d;
+        ++r;
+      } else {
+        ll g = a[r] - a[r - 1] - (a[r - 1] - a[r - 2]);
+        if (g != d) break;
+        ++r;
       }
     }
-    for (int x : v[i << 1]) c[x] = 0;
-    for (int x : v[i << 1 | 1]) c[x] = 0;
-    unique(to);
-    for (int x : to) if (i != x) g[i].ep(x);
+    ++s;
   }
-
-  vc<vc<int>> ng = bct(g);
-  int cc = si(ng);
-  doubling db(ng);
-  var L = db.L;
-  var R = db.R;
-
-  dsu f(cc);
-  FOR(i, cc) for (int x : ng[i]) f.merge(i, x);
-
-  vc<PII> lr(cc, {cc + 1, -1});
-  FOR(i, cc) {
-    Z &[l, r] = lr[f[i]];
-    chmin(l, L[i]), chmax(r, R[i]);
-  }
-  
-  vc<int> pr(cc + 1);
-  Z op = [&](PII lr, bool f) -> void {
-    var [l, r] = lr;
-    if (f) ++pr[l], --pr[r];
-    else --pr[l], ++pr[r];
-  };
-  Z apply = [&](int x, int rt, bool a = 1) -> void {
-    if (x == rt) return op(lr[f[x]], a);
-    if (not db.ins(rt, x)) return op({L[x], R[x]}, a);
-    x = db.jump(x, rt, 1);
-    int l = L[x], r = R[x];
-    var [LL, RR] = lr[f[x]];
-    op({LL, l}, a);
-    op({r, RR}, a);
-  };
-
-  FOR(i, N) for (int x : v[i << 1]) {
-    if (x == (i << 1 | 1)) apply(i, i, 1);
-  }
-  vc<int> q;
-  FOR(i, N << 1) {
-    q.clear();
-    for (int x : v[i]) q.ep(x >> 1);
-    sort(all(q));
-    int sz = si(q);
-    FOR(k, sz - 1) if (q[k] == q[k + 1]) {
-      int x = q[k];
-      apply(x, x, 1);
-      if (f[i >> 1] == f[x]) apply(i >> 1, x, 0);
-    }
-  }
-  FOR(i, cc) pr[i + 1] += pr[i];
-  FOR(i, N) print(pr[L[i]] > 0 ? "Yes" : "No");
+  print(s);
 }
 ```
 
