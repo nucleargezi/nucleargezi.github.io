@@ -3,7 +3,7 @@
 #show: main.with(
   title: "Record The 3rd Universal Cup. Stage 33: India",
   desc: [ucup 3-33 训练记录],
-  date: "2026-05-02",
+  date: "2026-05-03",
   tags: ("icpc",),
   category: "ICPC",
 )
@@ -19,7 +19,6 @@
 == C. Construct uwu
 - In-Contest Solves: 22/40 (ucup)
 - #link("https://qoj.ac/contest/1954/problem/10267")
-
 === Formal Problem Statement
 
 给定 $T$ 组测试数据, 每组给定一个正整数 $N$
@@ -108,7 +107,6 @@ void Yorisou() {
 == H. Majority Graph
 - In-Contest Solves: 31/88 (ucup)
 - #link("https://qoj.ac/contest/1954/problem/10272")
-
 === Formal Problem Statement
 
 给定 $T$ 组测试数据, 每组给定一个长度为 $N$ 的数组 $A_1, A_2, dots, A_N$
@@ -180,7 +178,6 @@ void yorisou() {
 == J. Max Mod
 - In-Contest Solves: 45/171 (ucup)
 - #link("https://qoj.ac/contest/1954/problem/10274")
-
 === Formal Problem Statement
 
 给定整数 $N, M, Q$, 其中 $M$ 为质数
@@ -232,7 +229,6 @@ void yorisou() {
 == N. Yet Another MST Problem
 - In-Contest Solves: 91/152 (ucup)
 - #link("https://qoj.ac/contest/1954/problem/10278")
-
 === Formal Problem Statement
 
 给定 $T$ 组测试数据, 每组给定一个有 $N$ 个点和 $M$ 条边的连通无向图 $G$, 每条边的权值均为 $1$
