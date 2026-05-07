@@ -7,3 +7,4 @@
 #let tab = text[#h(8pt)]
 #let endl = linebreak()
 #let prod = $product$
+#let sp = $"span"_(FF_2)$
