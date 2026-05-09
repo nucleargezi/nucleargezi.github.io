@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-05-09T10:35:45.090371985Z"
-status = "failed"
+generated_at = "2026-05-09T11:00:33.838335812Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -10,89 +11,39 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "README.md",
-    "al/am/am_base.hpp",
-    "al/am/max_affine.hpp",
-    "al/am/maxidx_max.hpp",
-    "al/am/minmax_add.hpp",
-    "al/am/sum_add.hpp",
-    "al/am/sum_line_add.hpp",
-    "al/am/sum_mul.hpp",
-    "al/am/xor_or.hpp",
-    "al/beats/sum_sqrt_add.hpp",
-    "al/m/add_div.hpp",
-    "al/m/affine.hpp",
-    "al/m/floor_sum.hpp",
-    "ds/range/rectangle_union.hpp",
-    "ds/seg/beats/beats_chmax.hpp",
-    "ds/seg/beats/beats_chmin.hpp",
-    "ds/seg/beats/beats_minmax.hpp",
-    "ds/seg/beats/beats_no_sum.hpp",
-    "ds/seg/beats/ktt.hpp",
-    "ds/seg/seg_premax_t.hpp",
-    "ds/swag.hpp",
-    "ds/treap/treap_act.hpp",
-    "ds/wave/sswave_2d.hpp",
-    "gg/bct.hpp",
-    "gg/make_rooted.hpp",
-    "mar.hpp",
-    "notes/nlb/anc.typ",
+    "mod/binom.hpp",
     "notes/nlb/main.typ",
-    "notes/nlb/sections/alg.typ",
-    "notes/nlb/sections/auxiliary.typ",
-    "notes/nlb/sections/dp.typ",
-    "notes/nlb/sections/ds.typ",
-    "notes/nlb/sections/ds/bit.typ",
-    "notes/nlb/sections/ds/bs.typ",
-    "notes/nlb/sections/ds/chtholly.typ",
-    "notes/nlb/sections/ds/range.typ",
-    "notes/nlb/sections/ds/seg.typ",
-    "notes/nlb/sections/ds/treap.typ",
-    "notes/nlb/sections/ds/wave.typ",
-    "notes/nlb/sections/ds/z.typ",
-    "notes/nlb/sections/flow.typ",
-    "notes/nlb/sections/graph.typ",
-    "seq/lis.hpp",
-    "seq/mex.hpp",
-    "test/ds/treap/treap_am_rev_prod.cpp",
-    "ttr/doubling.hpp",
-    "ttr/find_center.hpp",
-    "ttr/hld.hpp",
-]
-selected_tests = [
-    "test/ds/lct/lct_path_aff_set.cpp",
-    "test/ds/rect_union.cpp",
+    "notes/nlb/sections/line.typ",
+    "notes/nlb/sections/mod.typ",
+    "notes/nlb/sections/pr.typ",
+    "notes/nlb/sections/seq.typ",
+    "notes/nlb/sections/tree.typ",
     "test/ds/satt/satt_sub_sum_point_set.cpp",
     "test/ds/satt/satt_sub_sum_sub_add.cpp",
-    "test/ds/seg/assign/range_assign0.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set1.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/seg/seg_t_set.cpp",
-    "test/ds/seg/sort_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_am_apply_rev_prod.cpp",
-    "test/ds/treap/treap_am_rev_prod.cpp",
-    "test/seq/lis.cpp",
-    "test/tr/hld/hld_path_affine_point_set.cpp",
+    "tr/ddp_re.hpp",
+]
+selected_tests = [
+    "test/ds/satt/satt_sub_sum_point_set.cpp",
+    "test/ds/satt/satt_sub_sum_sub_add.cpp",
+    "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp",
+    "test/tr/stt/ddp_re.cpp",
 ]
 total_discovered = 255
-total_selected = 19
-passed = 16
-failed = 3
+total_selected = 4
+passed = 4
+failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
     "al/am/his_sum_add.hpp",
     "al/am/mincnt_add.hpp",
+    "al/am/sum_add.hpp",
     "al/am/sum_affine.hpp",
     "al/beats/sum_add_ch.hpp",
     "al/beats/sum_div_set.hpp",
+    "al/m/add.hpp",
     "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
@@ -105,6 +56,7 @@ all_passed = [
     "ds/basic/deque.hpp",
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
+    "ds/basic/node_pool.hpp",
     "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
@@ -148,6 +100,7 @@ all_passed = [
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
     "ds/seg/segd_t.hpp",
+    "ds/seg/segdl_t.hpp",
     "ds/seg/segl_t.hpp",
     "ds/sl/cht.hpp",
     "ds/sl/lict.hpp",
@@ -160,6 +113,7 @@ all_passed = [
     "ds/st/st_range_prod.hpp",
     "ds/static_range_group.hpp",
     "ds/swag.hpp",
+    "ds/toptree/satt.hpp",
     "ds/toptree/satt_sim.hpp",
     "ds/treap/treap_act.hpp",
     "ds/treap/treap_base.hpp",
@@ -342,13 +296,7 @@ all_passed = [
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
-has_failures = [
-    "al/am/sum_add.hpp",
-    "al/m/add.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/seg/segdl_t.hpp",
-    "ds/toptree/satt.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add.hpp",
@@ -4233,24 +4181,6 @@ unused = [
 "ttr/find_center.hpp" = []
 "ttr/hld.hpp" = []
 
-[[failures]]
-path = "test/ds/satt/satt_sub_sum_point_set.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11427"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/satt/satt_sub_sum_sub_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11417"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11310"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -5170,46 +5100,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/am/sum_add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
-last_updated_at = "2026-05-09T10:35:45.090371985Z"
+last_trigger = "test_file_changed"
+last_tested_head = "831cf634f21068cb3ad915f50966e367154d611b"
+last_updated_at = "2026-05-09T11:00:33.838335812Z"
 
 [tests."test/ds/satt/satt_sub_sum_point_set.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796677
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:909:8: error: ‘a_monoid_sum_add’ was not declared in this scope
-  909 |   satt<a_monoid_sum_add<ll>> g(N);
-      |        ^~~~~~~~~~~~~~~~
-Main.cc:909:27: error: template argument 1 is invalid
-  909 |   satt<a_monoid_sum_add<ll>> g(N);
-      |                           ^~
-Main.cc:912:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  912 |     g.set(i, x);
-      |       ^~~
-Main.cc:916:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  916 |     g.link(x, y);
-      |       ^~~~
-Main.cc:922:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  922 |       g.cut(a, b);
-      |         ^~~
-Main.cc:923:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  923 |       g.link(c, d);
-      |         ^~~~
-Main.cc:926:9: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  926 |       g.set(i, g.prod_ch(i, i) + x);
-      |         ^~~
-Main.cc:926:18: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
-  926 |       g.set(i, g.prod_ch(i, i) + x);
-      |                  ^~~~~~~
-Main.cc:929:15: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
-  929 |       print(g.prod_ch(x, y));
-      |               ^~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1102 ms"
+memory_text = "46808 KB"
+run_id = 796696
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sub_sum_sub_add.cpp"]
@@ -5221,47 +5122,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/am/sum_add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
-last_updated_at = "2026-05-09T10:35:45.090371985Z"
+last_trigger = "test_file_changed"
+last_tested_head = "831cf634f21068cb3ad915f50966e367154d611b"
+last_updated_at = "2026-05-09T11:00:33.838335812Z"
 
 [tests."test/ds/satt/satt_sub_sum_sub_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796675
-compile_error = """
-Main.cc:907:12: error: ‘a_monoid_sum_add’ does not name a type
-  907 | using am = a_monoid_sum_add<ll>;
-      |            ^~~~~~~~~~~~~~~~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:910:8: error: ‘am’ was not declared in this scope; did you mean ‘tm’?
-  910 |   satt<am> g(N);
-      |        ^~
-      |        tm
-Main.cc:910:10: error: template argument 1 is invalid
-  910 |   satt<am> g(N);
-      |          ^
-Main.cc:913:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  913 |     g.set(i, x);
-      |       ^~~
-Main.cc:917:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  917 |     g.link(x, y);
-      |       ^~~~
-Main.cc:923:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  923 |       g.cut(x, y);
-      |         ^~~
-Main.cc:924:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  924 |       g.link(a, b);
-      |         ^~~~
-Main.cc:927:9: error: request for member ‘apply_sub’ in ‘g’, which is of non-class type ‘int’
-  927 |       g.apply_sub(p, rt, x);
-      |         ^~~~~~~~~
-Main.cc:930:15: error: request for member ‘prod_sub’ in ‘g’, which is of non-class type ‘int’
-  930 |       print(g.prod_sub(x, f));
-      |               ^~~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1249 ms"
+memory_text = "42248 KB"
+run_id = 796695
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/assign/range_assign0.cpp"]
@@ -5499,63 +5370,17 @@ dependencies = [
     "al/m/add.hpp",
     "al/am/sum_add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
-last_updated_at = "2026-05-09T10:35:45.090371985Z"
+last_trigger = "test_file_changed"
+last_tested_head = "831cf634f21068cb3ad915f50966e367154d611b"
+last_updated_at = "2026-05-09T11:00:33.838335812Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 796681
-compile_error = """
-Main.cc:930:20: error: ‘a_monoid_sum_add’ was not declared in this scope
-  930 | using DS = segdl_t<a_monoid_sum_add<int>>;
-      |                    ^~~~~~~~~~~~~~~~
-Main.cc:930:40: error: template argument 1 is invalid
-  930 | using DS = segdl_t<a_monoid_sum_add<int>>;
-      |                                        ^~
-Main.cc:931:12: error: ‘DS’ does not name a type
-  931 | using np = DS::np;
-      |            ^~
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:934:3: error: ‘DS’ was not declared in this scope
-  934 |   DS s(0, 1000000001);
-      |   ^~
-Main.cc:935:3: error: ‘np’ was not declared in this scope; did you mean ‘no’?
-  935 |   np t = 0;
-      |   ^~
-      |   no
-Main.cc:938:5: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  938 |     t = s.set(t, x, 1);
-      |     ^
-      |     fio::t
-Main.cc:339:8: note: ‘fio::t’ declared here
-  339 |   char t[100];
-      |        ^
-Main.cc:938:9: error: ‘s’ was not declared in this scope
-  938 |     t = s.set(t, x, 1);
-      |         ^
-Main.cc:943:7: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  943 |       t = s.set(t, x, 1);
-      |       ^
-      |       fio::t
-Main.cc:339:8: note: ‘fio::t’ declared here
-  339 |   char t[100];
-      |        ^
-Main.cc:943:11: error: ‘s’ was not declared in this scope
-  943 |       t = s.set(t, x, 1);
-      |           ^
-Main.cc:945:7: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
-  945 |       t = s.set(t, x, 0);
-      |       ^
-      |       fio::t
-Main.cc:339:8: note: ‘fio::t’ declared here
-  339 |   char t[100];
-      |        ^
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1243 ms"
+memory_text = "193120 KB"
+run_id = 796698
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp"]
@@ -9938,16 +9763,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "831cf634f21068cb3ad915f50966e367154d611b"
+last_updated_at = "2026-05-09T11:00:33.838335812Z"
 
 [tests."test/tr/stt/ddp_re.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1411 ms"
+time_text = "1164 ms"
 memory_text = "65824 KB"
-run_id = 796651
+run_id = 796697
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/stt/near0.cpp"]
