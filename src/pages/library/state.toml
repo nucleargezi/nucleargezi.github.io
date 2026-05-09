@@ -1,7 +1,6 @@
 schema_version = 4
-generated_at = "2026-05-08T14:14:19.402407186Z"
-status = "passed"
-failures = []
+generated_at = "2026-05-09T10:35:45.090371985Z"
+status = "failed"
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -12,299 +11,88 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = [
     "README.md",
-    "aa/head.hpp",
-    "al/beats/ktt_max.hpp",
-    "al/beats/ktt_min.hpp",
-    "al/beats/sum_add_ch.hpp",
-    "al/beats/sum_div_add.hpp",
-    "al/beats/sum_div_set.hpp",
-    "al/beats/sum_sqrt.hpp",
+    "al/am/am_base.hpp",
+    "al/am/max_affine.hpp",
+    "al/am/maxidx_max.hpp",
+    "al/am/minmax_add.hpp",
+    "al/am/sum_add.hpp",
+    "al/am/sum_line_add.hpp",
+    "al/am/sum_mul.hpp",
+    "al/am/xor_or.hpp",
     "al/beats/sum_sqrt_add.hpp",
-    "al/m/add_array.hpp",
-    "dp/monge.hpp",
-    "ds/seg/anglebeats.hpp",
-    "ds/seg/anglebeats2.hpp",
+    "al/m/add_div.hpp",
+    "al/m/affine.hpp",
+    "al/m/floor_sum.hpp",
+    "ds/range/rectangle_union.hpp",
+    "ds/seg/beats/beats_chmax.hpp",
+    "ds/seg/beats/beats_chmin.hpp",
     "ds/seg/beats/beats_minmax.hpp",
+    "ds/seg/beats/beats_no_sum.hpp",
     "ds/seg/beats/ktt.hpp",
-    "line/mat_ar.hpp",
-    "mod/binom.hpp",
-    "string/hs.hpp",
-    "test/alg/monoid/prefix_sum.hpp",
-    "test/ds/seg/beats/beats_maxminadd.cpp",
-    "test/ds/seg/beats/beats_sum_div_set.cpp",
+    "ds/seg/seg_premax_t.hpp",
+    "ds/swag.hpp",
+    "ds/treap/treap_act.hpp",
+    "ds/wave/sswave_2d.hpp",
+    "gg/bct.hpp",
+    "gg/make_rooted.hpp",
+    "mar.hpp",
+    "notes/nlb/anc.typ",
+    "notes/nlb/main.typ",
+    "notes/nlb/sections/alg.typ",
+    "notes/nlb/sections/auxiliary.typ",
+    "notes/nlb/sections/dp.typ",
+    "notes/nlb/sections/ds.typ",
+    "notes/nlb/sections/ds/bit.typ",
+    "notes/nlb/sections/ds/bs.typ",
+    "notes/nlb/sections/ds/chtholly.typ",
+    "notes/nlb/sections/ds/range.typ",
+    "notes/nlb/sections/ds/seg.typ",
+    "notes/nlb/sections/ds/treap.typ",
+    "notes/nlb/sections/ds/wave.typ",
+    "notes/nlb/sections/ds/z.typ",
+    "notes/nlb/sections/flow.typ",
+    "notes/nlb/sections/graph.typ",
+    "seq/lis.hpp",
+    "seq/mex.hpp",
+    "test/ds/treap/treap_am_rev_prod.cpp",
+    "ttr/doubling.hpp",
+    "ttr/find_center.hpp",
+    "ttr/hld.hpp",
 ]
 selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/convex/min_plus_c_a.cpp",
-    "test/convex/min_plus_c_c.cpp",
-    "test/convex/min_plus_cc_a.cpp",
-    "test/dp/knapsack_tree.cpp",
-    "test/ds/bit/bit01.cpp",
-    "test/ds/bit/bit01_1.cpp",
-    "test/ds/bit/bit2_0.cpp",
-    "test/ds/bit/bit2_1.cpp",
-    "test/ds/bit/bit2_2.cpp",
-    "test/ds/bit/bitbit.cpp",
-    "test/ds/bit/dual_bit2.cpp",
-    "test/ds/bs/deque.cpp",
-    "test/ds/bs/hashmap.cpp",
-    "test/ds/cartesian_tree.cpp",
-    "test/ds/chtholly/chtholly.cpp",
-    "test/ds/chtholly/chtholly_fset.cpp",
-    "test/ds/dsu.cpp",
-    "test/ds/dsu/dsu_persistent.cpp",
-    "test/ds/dynamic_arr.cpp",
-    "test/ds/fset.cpp",
-    "test/ds/lct/lct_act_nc.cpp",
-    "test/ds/lct/lct_dist_jump.cpp",
-    "test/ds/lct/lct_jump.cpp",
-    "test/ds/lct/lct_lca.cpp",
     "test/ds/lct/lct_path_aff_set.cpp",
-    "test/ds/lct/lct_path_sum_point_add.cpp",
-    "test/ds/lct/lct_path_sum_set.cpp",
-    "test/ds/lct/lct_sub_sum.cpp",
-    "test/ds/lct/lct_sub_sum_p_add.cpp",
-    "test/ds/minmax_heap.cpp",
-    "test/ds/mo/mo_range_cnt.cpp",
-    "test/ds/mo/mo_range_dist.cpp",
-    "test/ds/mo/mo_rollback_cnt.cpp",
-    "test/ds/range/mojor_voting.cpp",
-    "test/ds/range/range_count_prod_upper.cpp",
-    "test/ds/range/range_dist.cpp",
-    "test/ds/range/range_inv.cpp",
-    "test/ds/range/range_lis.cpp",
-    "test/ds/range/rec_sum_rec_add.cpp",
     "test/ds/rect_union.cpp",
-    "test/ds/satt/satt_sim_sub_sum_point_add.cpp",
-    "test/ds/satt/satt_sim_sub_sum_point_set.cpp",
     "test/ds/satt/satt_sub_sum_point_set.cpp",
     "test/ds/satt/satt_sub_sum_sub_add.cpp",
     "test/ds/seg/assign/range_assign0.cpp",
-    "test/ds/seg/assign/range_assign1.cpp",
-    "test/ds/seg/beats/beats_maxminadd.cpp",
-    "test/ds/seg/beats/beats_sum_div_set.cpp",
     "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina0.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina1.cpp",
     "test/ds/seg/dynamic_seg/segd_set0.cpp",
     "test/ds/seg/dynamic_seg/segd_set1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
-    "test/ds/seg/lazy/his_sum_add.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
-    "test/ds/seg/rmq/range_max_add.cpp",
-    "test/ds/seg/rmq/range_min_add.cpp",
-    "test/ds/seg/seg/seg_t_add.cpp",
-    "test/ds/seg/seg/seg_t_bina.cpp",
     "test/ds/seg/seg/seg_t_set.cpp",
     "test/ds/seg/sort_seg.cpp",
-    "test/ds/slope/cht/cht_max.cpp",
-    "test/ds/slope/cht/cht_min.cpp",
-    "test/ds/slope/lict/lict_d_line.cpp",
-    "test/ds/slope/lict/lict_d_seg0.cpp",
-    "test/ds/slope/lict/lict_d_seg1.cpp",
-    "test/ds/slope/lict/lict_persistent.cpp",
-    "test/ds/slope/lict/lict_seg.cpp",
-    "test/ds/slope/lict/lict_sp_line.cpp",
-    "test/ds/slope/lict/lict_sp_seg0.cpp",
-    "test/ds/slope/lict/lict_sp_seg1.cpp",
-    "test/ds/st/st/range_min.cpp",
-    "test/ds/st/st_dis/range_min.cpp",
-    "test/ds/st/st_dis/range_sum.cpp",
-    "test/ds/st/st_prod/range_min.cpp",
-    "test/ds/st/st_prod/range_prod.cpp",
     "test/ds/swag/swag_deque.cpp",
     "test/ds/swag/swag_queue.cpp",
     "test/ds/treap/treap_am_apply_rev_prod.cpp",
     "test/ds/treap/treap_am_rev_prod.cpp",
-    "test/ds/treap/treap_base_bina.cpp",
-    "test/ds/treap/treap_mono_cm_rev_prod.cpp",
-    "test/ds/treap/treap_mono_rev_prod.cpp",
-    "test/ds/trie_bina/trie_bina_min.cpp",
-    "test/ds/wave_matrix/wm2_bit0.cpp",
-    "test/ds/wave_matrix/wm2_bit1.cpp",
-    "test/ds/wave_matrix/wm2_bit2.cpp",
-    "test/ds/wave_matrix/wm2_narr_seg.cpp",
-    "test/ds/wave_matrix/wm2_seg.cpp",
-    "test/ds/wave_matrix/wm_prod.cpp",
-    "test/ds/wave_matrix/wm_s_count.cpp",
-    "test/ds/wave_matrix/wm_s_kth.cpp",
-    "test/flow/bflow_check.cpp",
-    "test/flow/bflow_max.cpp",
-    "test/flow/bflow_min.cpp",
-    "test/flow/bm.cpp",
-    "test/flow/bm_DM_dec.cpp",
-    "test/flow/flower.cpp",
-    "test/flow/hlpp.cpp",
-    "test/flow/hungry.cpp",
-    "test/flow/max_flow.cpp",
-    "test/flow/mcf.cpp",
-    "test/flow/min_cost_bflow.cpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_all.cpp",
-    "test/fps/basic/conv_multi_2n.cpp",
-    "test/fps/basic/conv_multi_p.cpp",
-    "test/fps/basic/conv_ull.cpp",
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/fps/basic/lag_iota.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/fps/basic/poly_inv.cpp",
-    "test/fps/basic/shift.cpp",
-    "test/fps/bell.cpp",
-    "test/fps/bernoulli.cpp",
-    "test/fps/coef_of_rationals.cpp",
-    "test/fps/coef_of_rationals_range.cpp",
-    "test/fps/fac_large0.cpp",
-    "test/fps/fac_large1.cpp",
-    "test/fps/lag_dis.cpp",
-    "test/fps/partition.cpp",
-    "test/fps/prod_of_one_plus_xn.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/geo/angle_sort.cpp",
-    "test/geo/cloest_pair.cpp",
-    "test/geo/convex_layers.cpp",
-    "test/geo/count_point_in_triangle.cpp",
-    "test/geo/furthest_pair.cpp",
-    "test/geo/manhattan_mst.cpp",
-    "test/geo/minimum_enclosing_circle.cpp",
-    "test/geo/static_hull.cpp",
-    "test/graph/bcc_e.cpp",
-    "test/graph/bcc_v.cpp",
-    "test/graph/count_C4.cpp",
-    "test/graph/dij.cpp",
-    "test/graph/dij_fheap.cpp",
-    "test/graph/dominator_tree.cpp",
-    "test/graph/dynamic_connect.cpp",
-    "test/graph/dynamic_connect_sum.cpp",
-    "test/graph/enum/enum_clique.cpp",
-    "test/graph/enum/enum_cyc3.cpp",
-    "test/graph/euler_tour_dir.cpp",
-    "test/graph/euler_tour_undir.cpp",
-    "test/graph/inc_mst.cpp",
-    "test/graph/k_shortset_walk.cpp",
-    "test/graph/max_independent_set.cpp",
-    "test/graph/min_color.cpp",
-    "test/graph/min_cycle_dir.cpp",
-    "test/graph/min_cycle_undir.cpp",
-    "test/graph/mst_kru.cpp",
-    "test/graph/steiner_tree.cpp",
-    "test/graph/three_ecc.cpp",
-    "test/line/01/vector_space_kth.cpp",
-    "test/line/01/vector_space_max.cpp",
-    "test/line/mat/mat_,mul.cpp",
-    "test/mod/discrete_log.cpp",
-    "test/mod/discrete_log_fast(dmint).cpp",
-    "test/mod/fast_inv.cpp",
-    "test/mod/fast_inv_dmint.cpp",
-    "test/mod/fast_pow.cpp",
-    "test/mod/fast_pow_d.cpp",
-    "test/mod/mod_sqrt.cpp",
-    "test/mod/modfast_inv.cpp",
-    "test/mod/modfast_inv_d.cpp",
-    "test/pr/conv_gcd.cpp",
-    "test/pr/conv_lcm.cpp",
-    "test/pr/count/subseq.cpp",
-    "test/pr/diri_conv_presum.cpp",
-    "test/pr/diri_inv_presum.cpp",
-    "test/pr/du.cpp",
-    "test/pr/enum_quotients.cpp",
-    "test/pr/factors.cpp",
-    "test/pr/floor_root.cpp",
-    "test/pr/floor_sum_line.cpp",
-    "test/pr/min25_0.cpp",
-    "test/pr/min25_1.cpp",
-    "test/pr/min_line_mod.cpp",
-    "test/pr/ml.cpp",
-    "test/pr/nim_prod.cpp",
-    "test/pr/prim_test.cpp",
-    "test/pr/prime_table.cpp",
-    "test/pr/rational_bina.cpp",
-    "test/pr/sbt.cpp",
     "test/seq/lis.cpp",
-    "test/sps/and_conv.cpp",
-    "test/sps/sps_comp.cpp",
-    "test/sps/sps_conv.cpp",
-    "test/sps/sps_exp.cpp",
-    "test/sps/sps_log.cpp",
-    "test/sps/xor_conv.cpp",
-    "test/string/hash/hash.cpp",
-    "test/string/lyndon.cpp",
-    "test/string/manacher.cpp",
-    "test/string/pam/pam.cpp",
-    "test/string/pam/pam_dq_pop.cpp",
-    "test/string/pre_sub_lcs.cpp",
-    "test/string/runs.cpp",
-    "test/string/sa/sa.cpp",
-    "test/string/sa/sa_count_substr.cpp",
-    "test/string/sa/sa_lcs.cpp",
-    "test/string/sam/sam_count_substr.cpp",
-    "test/string/wildcard.cpp",
-    "test/string/zfunction.cpp",
-    "test/string/zfunction_online.cpp",
-    "test/tr/best_topo_invs.cpp",
-    "test/tr/diameter.cpp",
-    "test/tr/doubling/doubling_jump.cpp",
-    "test/tr/doubling/doubling_lca.cpp",
-    "test/tr/hld/hld_abel_sub_sum_point_add.cpp",
-    "test/tr/hld/hld_dual_nc.cpp",
-    "test/tr/hld/hld_jump.cpp",
-    "test/tr/hld/hld_lca.cpp",
     "test/tr/hld/hld_path_affine_point_set.cpp",
-    "test/tr/hld/hld_path_sum_point_add.cpp",
-    "test/tr/hld/hld_sub_sum_point_add.cpp",
-    "test/tr/reroot_dp.cpp",
-    "test/tr/skew/skew_addleaf.cpp",
-    "test/tr/skew/skew_jump.cpp",
-    "test/tr/skew/skew_lca.cpp",
-    "test/tr/stt/ddp_affine.cpp",
-    "test/tr/stt/ddp_hash.cpp",
-    "test/tr/stt/ddp_re.cpp",
-    "test/tr/stt/near0.cpp",
-    "test/tr/stt/near1.cpp",
-    "test/tr/stt/nearr.cpp",
-    "test/tr/subtree_hash.cpp",
 ]
 total_discovered = 255
-total_selected = 255
-passed = 255
-failed = 0
+total_selected = 19
+passed = 16
+failed = 3
 invalid = 0
 
 [template_coverage]
 all_passed = [
     "al/am/his_sum_add.hpp",
     "al/am/mincnt_add.hpp",
-    "al/am/sum_add.hpp",
     "al/am/sum_affine.hpp",
     "al/beats/sum_add_ch.hpp",
     "al/beats/sum_div_set.hpp",
-    "al/m/add.hpp",
     "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
@@ -317,7 +105,6 @@ all_passed = [
     "ds/basic/deque.hpp",
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
-    "ds/basic/node_pool.hpp",
     "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
@@ -361,7 +148,6 @@ all_passed = [
     "ds/seg/seg_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
     "ds/seg/segd_t.hpp",
-    "ds/seg/segdl_t.hpp",
     "ds/seg/segl_t.hpp",
     "ds/sl/cht.hpp",
     "ds/sl/lict.hpp",
@@ -374,7 +160,6 @@ all_passed = [
     "ds/st/st_range_prod.hpp",
     "ds/static_range_group.hpp",
     "ds/swag.hpp",
-    "ds/toptree/satt.hpp",
     "ds/toptree/satt_sim.hpp",
     "ds/treap/treap_act.hpp",
     "ds/treap/treap_base.hpp",
@@ -557,15 +342,20 @@ all_passed = [
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
-has_failures = []
+has_failures = [
+    "al/am/sum_add.hpp",
+    "al/m/add.hpp",
+    "ds/basic/node_pool.hpp",
+    "ds/seg/segdl_t.hpp",
+    "ds/toptree/satt.hpp",
+]
 unused = [
     "al/acted_set/from_monoid.hpp",
-    "al/am/am_base.hpp",
     "al/am/his_max_add.hpp",
     "al/am/his_max_add_set.hpp",
     "al/am/max_add.hpp",
+    "al/am/max_affine.hpp",
     "al/am/max_max.hpp",
-    "al/am/max_set_add.hpp",
     "al/am/maxidx_add.hpp",
     "al/am/maxidx_max.hpp",
     "al/am/min_add.hpp",
@@ -582,6 +372,7 @@ unused = [
     "al/beats/sum_sqrt.hpp",
     "al/beats/sum_sqrt_add.hpp",
     "al/m/add_array.hpp",
+    "al/m/add_div.hpp",
     "al/m/add_line.hpp",
     "al/m/and.hpp",
     "al/m/dis_substr.hpp",
@@ -639,11 +430,6 @@ unused = [
     "ds/rb/rb_dsu.hpp",
     "ds/rb/rollback_dsu_bipartite.hpp",
     "ds/seg/anglebeats2.hpp",
-    "ds/seg/beats/beats_chmax.hpp",
-    "ds/seg/beats/beats_chmin.hpp",
-    "ds/seg/beats/beats_minmax.hpp",
-    "ds/seg/beats/beats_no_sum.hpp",
-    "ds/seg/beats/ktt.hpp",
     "ds/seg/seg_premax_t.hpp",
     "ds/seg/segd_def.hpp",
     "ds/seg/segdl_def_t.hpp",
@@ -656,6 +442,7 @@ unused = [
     "ds/st/range_min.hpp",
     "ds/un/dsu_mono.hpp",
     "ds/un/dsu_t.hpp",
+    "ds/wave/sswave_2d.hpp",
     "flow/BM_dense.hpp",
     "flow/mcf_ring.hpp",
     "g/bcc_v_e.hpp",
@@ -696,6 +483,7 @@ unused = [
     "ge/exp/rect_convex_cover.hpp",
     "ge/exp/tri_area_me.hpp",
     "gg/bct.hpp",
+    "gg/make_rooted.hpp",
     "gg/unicycle_forest.hpp",
     "jen/greedy_coins_hack_gen.hpp",
     "jen/magic_square.hpp",
@@ -805,6 +593,7 @@ unused = [
     "pr/tetration.hpp",
     "random/gen.hpp",
     "seq/inversion.hpp",
+    "seq/mex.hpp",
     "snip/ds/bs.hpp",
     "snip/math/comb.hpp",
     "snip/math/factor.hpp",
@@ -851,22 +640,22 @@ unused = [
     "tr/hld_wm.hpp",
     "tr/skew/static_mono.hpp",
     "ttr/doubling.hpp",
+    "ttr/find_center.hpp",
+    "ttr/hld.hpp",
 ]
 
 [template_dependencies]
 "al/acted_set/from_monoid.hpp" = []
-"al/am/am_base.hpp" = []
 "al/am/his_max_add.hpp" = []
 "al/am/his_max_add_set.hpp" = []
 "al/am/his_sum_add.hpp" = []
 "al/am/max_add.hpp" = []
+"al/am/max_affine.hpp" = []
 "al/am/max_max.hpp" = []
-"al/am/max_set_add.hpp" = []
 "al/am/maxidx_add.hpp" = []
 "al/am/maxidx_max.hpp" = [
     "al/m/max.hpp",
     "al/m/maxidx.hpp",
-    "al/am/am_base.hpp",
 ]
 "al/am/min_add.hpp" = []
 "al/am/min_affine.hpp" = []
@@ -874,12 +663,10 @@ unused = [
 "al/am/minidx_add.hpp" = [
     "al/m/add.hpp",
     "al/m/minidx.hpp",
-    "al/am/am_base.hpp",
 ]
 "al/am/minmax_add.hpp" = [
     "al/m/add.hpp",
     "al/m/minmax.hpp",
-    "al/am/am_base.hpp",
 ]
 "al/am/poly_mul_affine.hpp" = [
     "mod/binom.hpp",
@@ -890,17 +677,14 @@ unused = [
 "al/am/sum_line_add.hpp" = [
     "al/m/add.hpp",
     "al/m/add_line.hpp",
-    "al/am/am_base.hpp",
 ]
 "al/am/sum_mul.hpp" = [
     "al/m/add.hpp",
     "al/m/mul.hpp",
-    "al/am/am_base.hpp",
 ]
 "al/am/xor_or.hpp" = [
     "al/m/xor.hpp",
     "al/m/or.hpp",
-    "al/am/am_base.hpp",
 ]
 "al/beats/ktt_max.hpp" = ["ds/seg/anglebeats.hpp"]
 "al/beats/ktt_min.hpp" = ["ds/seg/anglebeats.hpp"]
@@ -914,6 +698,7 @@ unused = [
     "mod/binom.hpp",
     "mod/mint_t.hpp",
 ]
+"al/m/add_div.hpp" = []
 "al/m/add_line.hpp" = []
 "al/m/affine.hpp" = []
 "al/m/and.hpp" = []
@@ -1053,11 +838,6 @@ unused = [
 "ds/rb/rollback_dsu_bipartite.hpp" = ["ds/rb/rb_arr.hpp"]
 "ds/seg/anglebeats.hpp" = []
 "ds/seg/anglebeats2.hpp" = []
-"ds/seg/beats/beats_chmax.hpp" = []
-"ds/seg/beats/beats_chmin.hpp" = []
-"ds/seg/beats/beats_minmax.hpp" = []
-"ds/seg/beats/beats_no_sum.hpp" = []
-"ds/seg/beats/ktt.hpp" = []
 "ds/seg/range_assign_seg.hpp" = [
     "al/monoid_pow.hpp",
     "ds/basic/fset.hpp",
@@ -1133,6 +913,7 @@ unused = [
     "ds/basic/node_pool.hpp",
 ]
 "ds/wave/sswave.hpp" = []
+"ds/wave/sswave_2d.hpp" = ["ds/wave/sswave.hpp"]
 "ds/wave/wave_mat.hpp" = [
     "ds/basic/bs_sim.hpp",
     "ds/basic/compress.hpp",
@@ -1477,6 +1258,7 @@ unused = [
     "ge/basic/hull.hpp",
 ]
 "gg/bct.hpp" = []
+"gg/make_rooted.hpp" = []
 "gg/unicycle_forest.hpp" = []
 "jen/greedy_coins_hack_gen.hpp" = []
 "jen/magic_square.hpp" = ["ds/basic/retsu.hpp"]
@@ -2461,6 +2243,7 @@ unused = [
     "ds/basic/retsu.hpp",
 ]
 "seq/lis.hpp" = []
+"seq/mex.hpp" = []
 "snip/ds/bs.hpp" = []
 "snip/math/comb.hpp" = []
 "snip/math/factor.hpp" = []
@@ -2710,23 +2493,17 @@ unused = [
     "random/rng.hpp",
 ]
 "ttr/doubling.hpp" = []
+"ttr/find_center.hpp" = []
+"ttr/hld.hpp" = []
 
 [template_dependents]
 "al/acted_set/from_monoid.hpp" = ["pr/discreate_logg.hpp"]
-"al/am/am_base.hpp" = [
-    "al/am/maxidx_max.hpp",
-    "al/am/minidx_add.hpp",
-    "al/am/minmax_add.hpp",
-    "al/am/sum_line_add.hpp",
-    "al/am/sum_mul.hpp",
-    "al/am/xor_or.hpp",
-]
 "al/am/his_max_add.hpp" = []
 "al/am/his_max_add_set.hpp" = []
 "al/am/his_sum_add.hpp" = []
 "al/am/max_add.hpp" = []
+"al/am/max_affine.hpp" = []
 "al/am/max_max.hpp" = []
-"al/am/max_set_add.hpp" = []
 "al/am/maxidx_add.hpp" = []
 "al/am/maxidx_max.hpp" = []
 "al/am/min_add.hpp" = []
@@ -2765,6 +2542,7 @@ unused = [
     "seq/inversion.hpp",
 ]
 "al/m/add_array.hpp" = []
+"al/m/add_div.hpp" = []
 "al/m/add_line.hpp" = ["al/am/sum_line_add.hpp"]
 "al/m/affine.hpp" = []
 "al/m/and.hpp" = []
@@ -3145,11 +2923,6 @@ unused = [
     "al/beats/sum_div_add.hpp",
     "al/beats/sum_sqrt_add.hpp",
 ]
-"ds/seg/beats/beats_chmax.hpp" = []
-"ds/seg/beats/beats_chmin.hpp" = []
-"ds/seg/beats/beats_minmax.hpp" = []
-"ds/seg/beats/beats_no_sum.hpp" = []
-"ds/seg/beats/ktt.hpp" = []
 "ds/seg/range_assign_seg.hpp" = []
 "ds/seg/range_max_add.hpp" = []
 "ds/seg/range_min_add.hpp" = []
@@ -3251,7 +3024,11 @@ unused = [
 "ds/un/dsu_mono.hpp" = []
 "ds/un/dsu_t.hpp" = []
 "ds/un/dynamic_dsu.hpp" = []
-"ds/wave/sswave.hpp" = ["string/pre_sub_ils.hpp"]
+"ds/wave/sswave.hpp" = [
+    "ds/wave/sswave_2d.hpp",
+    "string/pre_sub_ils.hpp",
+]
+"ds/wave/sswave_2d.hpp" = []
 "ds/wave/wave_mat.hpp" = [
     "ds/online_range_q/range_lis_query.hpp",
     "ds/wave/wave_mat_2d.hpp",
@@ -3496,6 +3273,7 @@ unused = [
 "ge/pairs/closest_pair.hpp" = []
 "ge/pairs/furthest_pair.hpp" = []
 "gg/bct.hpp" = []
+"gg/make_rooted.hpp" = []
 "gg/unicycle_forest.hpp" = []
 "jen/greedy_coins_hack_gen.hpp" = []
 "jen/magic_square.hpp" = []
@@ -4329,6 +4107,7 @@ unused = [
 ]
 "seq/inversion.hpp" = []
 "seq/lis.hpp" = []
+"seq/mex.hpp" = []
 "snip/ds/bs.hpp" = []
 "snip/math/comb.hpp" = []
 "snip/math/factor.hpp" = []
@@ -4451,6 +4230,26 @@ unused = [
 ]
 "tr/subtree_hash.hpp" = []
 "ttr/doubling.hpp" = []
+"ttr/find_center.hpp" = []
+"ttr/hld.hpp" = []
+
+[[failures]]
+path = "test/ds/satt/satt_sub_sum_point_set.cpp"
+status = "failed"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11427"
+message = "Compilation error"
+
+[[failures]]
+path = "test/ds/satt/satt_sub_sum_sub_add.cpp"
+status = "failed"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11417"
+message = "Compilation error"
+
+[[failures]]
+path = "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp"
+status = "failed"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11310"
+message = "Compilation error"
 
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
@@ -5003,16 +4802,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/lct/lct_path_aff_set.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1016 ms"
+time_text = "1047 ms"
 memory_text = "13480 KB"
-run_id = 796428
+run_id = 796674
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_path_sum_point_add.cpp"]
@@ -5306,16 +5105,16 @@ dependencies = [
     "ds/seg/segl_t.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/rect_union.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "2428 ms"
+time_text = "2313 ms"
 memory_text = "87308 KB"
-run_id = 796443
+run_id = 796678
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sim_sub_sum_point_add.cpp"]
@@ -5372,16 +5171,45 @@ dependencies = [
     "al/am/sum_add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/satt/satt_sub_sum_point_set.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "1348 ms"
-memory_text = "46812 KB"
-run_id = 796446
+status = "failed"
+verdict = "Compilation error"
+grade = "-"
+time_text = "-"
+memory_text = "-"
+run_id = 796677
+compile_error = """
+Main.cc: In function ‘void Yorisou()’:
+Main.cc:909:8: error: ‘a_monoid_sum_add’ was not declared in this scope
+  909 |   satt<a_monoid_sum_add<ll>> g(N);
+      |        ^~~~~~~~~~~~~~~~
+Main.cc:909:27: error: template argument 1 is invalid
+  909 |   satt<a_monoid_sum_add<ll>> g(N);
+      |                           ^~
+Main.cc:912:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
+  912 |     g.set(i, x);
+      |       ^~~
+Main.cc:916:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
+  916 |     g.link(x, y);
+      |       ^~~~
+Main.cc:922:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
+  922 |       g.cut(a, b);
+      |         ^~~
+Main.cc:923:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
+  923 |       g.link(c, d);
+      |         ^~~~
+Main.cc:926:9: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
+  926 |       g.set(i, g.prod_ch(i, i) + x);
+      |         ^~~
+Main.cc:926:18: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
+  926 |       g.set(i, g.prod_ch(i, i) + x);
+      |                  ^~~~~~~
+Main.cc:929:15: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
+  929 |       print(g.prod_ch(x, y));
+      |               ^~~~~~~"""
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sub_sum_sub_add.cpp"]
@@ -5394,16 +5222,46 @@ dependencies = [
     "al/am/sum_add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/satt/satt_sub_sum_sub_add.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "1430 ms"
-memory_text = "42248 KB"
-run_id = 796447
+status = "failed"
+verdict = "Compilation error"
+grade = "-"
+time_text = "-"
+memory_text = "-"
+run_id = 796675
+compile_error = """
+Main.cc:907:12: error: ‘a_monoid_sum_add’ does not name a type
+  907 | using am = a_monoid_sum_add<ll>;
+      |            ^~~~~~~~~~~~~~~~
+Main.cc: In function ‘void Yorisou()’:
+Main.cc:910:8: error: ‘am’ was not declared in this scope; did you mean ‘tm’?
+  910 |   satt<am> g(N);
+      |        ^~
+      |        tm
+Main.cc:910:10: error: template argument 1 is invalid
+  910 |   satt<am> g(N);
+      |          ^
+Main.cc:913:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
+  913 |     g.set(i, x);
+      |       ^~~
+Main.cc:917:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
+  917 |     g.link(x, y);
+      |       ^~~~
+Main.cc:923:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
+  923 |       g.cut(x, y);
+      |         ^~~
+Main.cc:924:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
+  924 |       g.link(a, b);
+      |         ^~~~
+Main.cc:927:9: error: request for member ‘apply_sub’ in ‘g’, which is of non-class type ‘int’
+  927 |       g.apply_sub(p, rt, x);
+      |         ^~~~~~~~~
+Main.cc:930:15: error: request for member ‘prod_sub’ in ‘g’, which is of non-class type ‘int’
+  930 |       print(g.prod_sub(x, f));
+      |               ^~~~~~~~"""
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/assign/range_assign0.cpp"]
@@ -5419,16 +5277,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/assign/range_assign0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "773 ms"
+time_text = "850 ms"
 memory_text = "17072 KB"
-run_id = 796448
+run_id = 796676
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/assign/range_assign1.cpp"]
@@ -5507,8 +5365,8 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/dual/dual0.cpp".last_result]
 status = "passed"
@@ -5516,7 +5374,7 @@ verdict = "Accepted"
 grade = "100/100"
 time_text = "451 ms"
 memory_text = "10724 KB"
-run_id = 796452
+run_id = 796673
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg/segd_bina0.cpp"]
@@ -5573,16 +5431,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/dynamic_seg/segd_set0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "959 ms"
+time_text = "1002 ms"
 memory_text = "143932 KB"
-run_id = 796455
+run_id = 796679
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg/segd_set1.cpp"]
@@ -5596,16 +5454,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/dynamic_seg/segd_set1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "852 ms"
+time_text = "864 ms"
 memory_text = "31032 KB"
-run_id = 796456
+run_id = 796680
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp"]
@@ -5642,16 +5500,62 @@ dependencies = [
     "al/am/sum_add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "1244 ms"
-memory_text = "193120 KB"
-run_id = 796458
+status = "failed"
+verdict = "Compilation error"
+grade = "-"
+time_text = "-"
+memory_text = "-"
+run_id = 796681
+compile_error = """
+Main.cc:930:20: error: ‘a_monoid_sum_add’ was not declared in this scope
+  930 | using DS = segdl_t<a_monoid_sum_add<int>>;
+      |                    ^~~~~~~~~~~~~~~~
+Main.cc:930:40: error: template argument 1 is invalid
+  930 | using DS = segdl_t<a_monoid_sum_add<int>>;
+      |                                        ^~
+Main.cc:931:12: error: ‘DS’ does not name a type
+  931 | using np = DS::np;
+      |            ^~
+Main.cc: In function ‘void Yorisou()’:
+Main.cc:934:3: error: ‘DS’ was not declared in this scope
+  934 |   DS s(0, 1000000001);
+      |   ^~
+Main.cc:935:3: error: ‘np’ was not declared in this scope; did you mean ‘no’?
+  935 |   np t = 0;
+      |   ^~
+      |   no
+Main.cc:938:5: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
+  938 |     t = s.set(t, x, 1);
+      |     ^
+      |     fio::t
+Main.cc:339:8: note: ‘fio::t’ declared here
+  339 |   char t[100];
+      |        ^
+Main.cc:938:9: error: ‘s’ was not declared in this scope
+  938 |     t = s.set(t, x, 1);
+      |         ^
+Main.cc:943:7: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
+  943 |       t = s.set(t, x, 1);
+      |       ^
+      |       fio::t
+Main.cc:339:8: note: ‘fio::t’ declared here
+  339 |   char t[100];
+      |        ^
+Main.cc:943:11: error: ‘s’ was not declared in this scope
+  943 |       t = s.set(t, x, 1);
+      |           ^
+Main.cc:945:7: error: ‘t’ was not declared in this scope; did you mean ‘fio::t’?
+  945 |       t = s.set(t, x, 0);
+      |       ^
+      |       fio::t
+Main.cc:339:8: note: ‘fio::t’ declared here
+  339 |   char t[100];
+      |        ^
+compilation terminated due to -fmax-errors=10."""
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp"]
@@ -5688,16 +5592,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1201 ms"
+time_text = "1103 ms"
 memory_text = "191036 KB"
-run_id = 796460
+run_id = 796682
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp"]
@@ -5711,16 +5615,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "946 ms"
+time_text = "969 ms"
 memory_text = "39224 KB"
-run_id = 796461
+run_id = 796683
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp0.cpp"]
@@ -5971,16 +5875,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/seg/seg_t_set.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "265 ms"
+time_text = "318 ms"
 memory_text = "10720 KB"
-run_id = 796473
+run_id = 796684
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/sort_seg.cpp"]
@@ -5996,16 +5900,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/seg/sort_seg.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1312 ms"
+time_text = "1422 ms"
 memory_text = "375544 KB"
-run_id = 796474
+run_id = 796685
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/slope/cht/cht_max.cpp"]
@@ -6343,16 +6247,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/swag/swag_deque.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "74 ms"
+time_text = "60 ms"
 memory_text = "11848 KB"
-run_id = 796490
+run_id = 796686
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/swag/swag_queue.cpp"]
@@ -6365,16 +6269,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/swag/swag_queue.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "57 ms"
+time_text = "62 ms"
 memory_text = "10340 KB"
-run_id = 796491
+run_id = 796687
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_am_apply_rev_prod.cpp"]
@@ -6388,16 +6292,16 @@ dependencies = [
     "al/am/sum_affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/treap/treap_am_apply_rev_prod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "2888 ms"
+time_text = "2421 ms"
 memory_text = "45464 KB"
-run_id = 796492
+run_id = 796688
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_am_rev_prod.cpp"]
@@ -6409,17 +6313,17 @@ dependencies = [
     "ds/basic/node_pool.hpp",
     "al/am/sum_add.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_trigger = "test_file_changed"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/ds/treap/treap_am_rev_prod.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "668 ms"
+time_text = "640 ms"
 memory_text = "16392 KB"
-run_id = 796493
+run_id = 796689
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_base_bina.cpp"]
@@ -9198,16 +9102,16 @@ problem_url = "https://icpc.bjtu.edu.cn/problem/11402"
 problem_id = 11402
 dependencies = ["seq/lis.hpp"]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/seq/lis.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "72 ms"
-memory_text = "12476 KB"
-run_id = 796613
+time_text = "70 ms"
+memory_text = "10616 KB"
+run_id = 796690
 runtime_error = "Run time error details not Available"
 
 [tests."test/sps/and_conv.cpp"]
@@ -9820,16 +9724,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "1108d07a8aa2ac15ef6a58e78a2ed61de9ff3e33"
+last_updated_at = "2026-05-09T10:35:45.090371985Z"
 
 [tests."test/tr/hld/hld_path_affine_point_set.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "794 ms"
-memory_text = "44324 KB"
-run_id = 796642
+time_text = "687 ms"
+memory_text = "44320 KB"
+run_id = 796691
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/hld/hld_path_sum_point_add.cpp"]
