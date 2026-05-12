@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-05-12T13:33:25.962295366Z"
+generated_at = "2026-05-12T22:07:08.241617596Z"
 status = "passed"
 failures = []
 
@@ -11,34 +11,39 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "al/m/affine.hpp",
-    "ds/seg/range_max_add.hpp",
-    "ds/seg/range_min_add.hpp",
-    "ds/toptree/satt.hpp",
-    "test/ds/lct/lct_act_nc.cpp",
+    "README.md",
+    "ds/matroid/matroid.hpp",
+    "ds/matroid/matroid_forest.hpp",
+    "ds/matroid/matroid_ins.hpp",
+    "ds/matroid/matroid_parition.hpp",
+    "ds/matroid/matroid_unicycle.hpp",
+    "flow/max_flow.hpp",
+    "g/bcc_e.hpp",
+    "g/bcc_v_e.hpp",
+    "g/dijkstra.hpp",
+    "g/dijkstra_fheap.hpp",
+    "g/scc.hpp",
+    "gg/bct.hpp",
+    "gg/scc.hpp",
+    "nt/enum_pytagorean_triple.hpp",
+    "nt/fib_search.hpp",
+    "nt/hyogen.hpp",
+    "nt/step_of_add_pc.hpp",
+    "test/flow/min_cut_tree.cpp",
 ]
 selected_tests = [
-    "test/ds/lct/lct_act_nc.cpp",
-    "test/ds/lct/lct_path_aff_set.cpp",
-    "test/ds/satt/satt_sub_sum_point_set.cpp",
-    "test/ds/satt/satt_sub_sum_sub_add.cpp",
-    "test/ds/seg/assign/range_assign0.cpp",
-    "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set0.cpp",
-    "test/ds/seg/dynamic_seg/segd_set1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/rmq/range_max_add.cpp",
-    "test/ds/seg/rmq/range_min_add.cpp",
-    "test/ds/seg/seg/seg_t_set.cpp",
-    "test/ds/seg/sort_seg.cpp",
-    "test/ds/swag/swag_deque.cpp",
-    "test/ds/swag/swag_queue.cpp",
-    "test/tr/hld/hld_path_affine_point_set.cpp",
+    "test/flow/bm.cpp",
+    "test/flow/bm_DM_dec.cpp",
+    "test/flow/max_flow.cpp",
+    "test/flow/min_cut_tree.cpp",
+    "test/graph/bcc_e.cpp",
+    "test/graph/dij.cpp",
+    "test/graph/dij_fheap.cpp",
+    "test/graph/k_shortset_walk.cpp",
 ]
-total_discovered = 255
-total_selected = 17
-passed = 17
+total_discovered = 256
+total_selected = 8
+passed = 8
 failed = 0
 invalid = 0
 
@@ -296,6 +301,7 @@ all_passed = [
     "tr/hld_abel.hpp",
     "tr/hld_dual.hpp",
     "tr/hld_mono.hpp",
+    "tr/hld_st.hpp",
     "tr/near_kinbo.hpp",
     "tr/nearr.hpp",
     "tr/skew/lca.hpp",
@@ -369,6 +375,11 @@ unused = [
     "ds/heap/merge_laz.hpp",
     "ds/kdtree/kdtree.hpp",
     "ds/lct/lct.hpp",
+    "ds/matroid/matroid.hpp",
+    "ds/matroid/matroid_forest.hpp",
+    "ds/matroid/matroid_ins.hpp",
+    "ds/matroid/matroid_parition.hpp",
+    "ds/matroid/matroid_unicycle.hpp",
     "ds/mo/mo_upd.hpp",
     "ds/off_line/K_cdq.hpp",
     "ds/off_line/range_quis/range_inverse_count.hpp",
@@ -439,6 +450,7 @@ unused = [
     "gg/bct.hpp",
     "gg/func.hpp",
     "gg/make_rooted.hpp",
+    "gg/scc.hpp",
     "gg/unicycle_forest.hpp",
     "jen/greedy_coins_hack_gen.hpp",
     "jen/magic_square.hpp",
@@ -591,7 +603,6 @@ unused = [
     "tr/gbt/gbt_monoid.hpp",
     "tr/gbt/gbt_monoid_commute.hpp",
     "tr/hld_laz.hpp",
-    "tr/hld_st.hpp",
     "tr/hld_wm.hpp",
     "tr/skew/static_mono.hpp",
     "ttr/doubling.hpp",
@@ -743,6 +754,14 @@ unused = [
 "ds/lct/lct_monoid.hpp" = ["al/alg.hpp"]
 "ds/lct/lct_simple.hpp" = []
 "ds/lct/lct_sub.hpp" = ["al/alg.hpp"]
+"ds/matroid/matroid.hpp" = []
+"ds/matroid/matroid_forest.hpp" = ["ds/matroid/matroid.hpp"]
+"ds/matroid/matroid_ins.hpp" = [
+    "ds/basic/queue.hpp",
+    "ds/matroid/matroid.hpp",
+]
+"ds/matroid/matroid_parition.hpp" = ["ds/matroid/matroid.hpp"]
+"ds/matroid/matroid_unicycle.hpp" = ["ds/matroid/matroid.hpp"]
 "ds/mo/mo.hpp" = []
 "ds/mo/mo_roll.hpp" = []
 "ds/mo/mo_upd.hpp" = []
@@ -1269,6 +1288,7 @@ unused = [
     "ttr/hld.hpp",
 ]
 "gg/make_rooted.hpp" = []
+"gg/scc.hpp" = []
 "gg/unicycle_forest.hpp" = []
 "jen/greedy_coins_hack_gen.hpp" = []
 "jen/magic_square.hpp" = ["ds/basic/retsu.hpp"]
@@ -2808,6 +2828,7 @@ unused = [
 ]
 "ds/basic/pbds.hpp" = []
 "ds/basic/queue.hpp" = [
+    "ds/matroid/matroid_ins.hpp",
     "flow/BM.hpp",
     "g/bfs.hpp",
     "g/bfs1.hpp",
@@ -2951,6 +2972,16 @@ unused = [
 "ds/lct/lct_monoid.hpp" = []
 "ds/lct/lct_simple.hpp" = []
 "ds/lct/lct_sub.hpp" = []
+"ds/matroid/matroid.hpp" = [
+    "ds/matroid/matroid_forest.hpp",
+    "ds/matroid/matroid_ins.hpp",
+    "ds/matroid/matroid_parition.hpp",
+    "ds/matroid/matroid_unicycle.hpp",
+]
+"ds/matroid/matroid_forest.hpp" = []
+"ds/matroid/matroid_ins.hpp" = []
+"ds/matroid/matroid_parition.hpp" = []
+"ds/matroid/matroid_unicycle.hpp" = []
 "ds/mo/mo.hpp" = []
 "ds/mo/mo_roll.hpp" = ["ds/range/range_mode.hpp"]
 "ds/mo/mo_upd.hpp" = []
@@ -3344,6 +3375,7 @@ unused = [
 "gg/bct.hpp" = []
 "gg/func.hpp" = []
 "gg/make_rooted.hpp" = []
+"gg/scc.hpp" = []
 "gg/unicycle_forest.hpp" = []
 "jen/greedy_coins_hack_gen.hpp" = []
 "jen/magic_square.hpp" = []
@@ -6682,16 +6714,16 @@ dependencies = [
     "ds/basic/queue.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "6467f15e0be87d95fcd66dc2b5bae8681a06fdcc"
-last_updated_at = "2026-05-12T12:32:11.067542528Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/flow/bm.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "2194 ms"
-memory_text = "21772 KB"
-run_id = 797284
+time_text = "1772 ms"
+memory_text = "21768 KB"
+run_id = 797478
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/bm_DM_dec.cpp"]
@@ -6708,16 +6740,16 @@ dependencies = [
     "ds/basic/queue.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "6467f15e0be87d95fcd66dc2b5bae8681a06fdcc"
-last_updated_at = "2026-05-12T12:32:11.067542528Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/flow/bm_DM_dec.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "27 ms"
+time_text = "29 ms"
 memory_text = "9820 KB"
-run_id = 797283
+run_id = 797477
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/flower.cpp"]
@@ -6783,16 +6815,16 @@ problem_url = "https://icpc.bjtu.edu.cn/problem/11447"
 problem_id = 11447
 dependencies = ["flow/max_flow.hpp"]
 last_trigger = "dependency_changed"
-last_tested_head = "f0786e2f5c54454985e4a9f2164e35820caf2caf"
-last_updated_at = "2026-05-08T14:14:19.402407186Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/flow/max_flow.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "22 ms"
+time_text = "16 ms"
 memory_text = "3084 KB"
-run_id = 796513
+run_id = 797480
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/mcf.cpp"]
@@ -6829,6 +6861,36 @@ grade = "100/100"
 time_text = "22 ms"
 memory_text = "2888 KB"
 run_id = 796516
+runtime_error = "Run time error details not Available"
+
+[tests."test/flow/min_cut_tree.cpp"]
+path = "test/flow/min_cut_tree.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11475"
+problem_id = 11475
+dependencies = [
+    "flow/max_flow.hpp",
+    "tr/hld_st.hpp",
+    "ds/st/st_range_prod.hpp",
+    "ds/st/rmq.hpp",
+    "ds/st/st.hpp",
+    "al/alg.hpp",
+    "ds/st/st_dis.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+    "al/m/min.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
+
+[tests."test/flow/min_cut_tree.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "260 ms"
+memory_text = "6588 KB"
+run_id = 797479
 runtime_error = "Run time error details not Available"
 
 [tests."test/fps/basic/comp.cpp"]
@@ -7990,16 +8052,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "6467f15e0be87d95fcd66dc2b5bae8681a06fdcc"
-last_updated_at = "2026-05-12T12:32:11.067542528Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/graph/bcc_e.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "134 ms"
-memory_text = "26868 KB"
-run_id = 797321
+time_text = "148 ms"
+memory_text = "26864 KB"
+run_id = 797482
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/bcc_v.cpp"]
@@ -8056,16 +8118,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "6467f15e0be87d95fcd66dc2b5bae8681a06fdcc"
-last_updated_at = "2026-05-12T12:32:11.067542528Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/graph/dij.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "564 ms"
-memory_text = "40400 KB"
-run_id = 797324
+time_text = "367 ms"
+memory_text = "40404 KB"
+run_id = 797481
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/dij_fheap.cpp"]
@@ -8079,16 +8141,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/graph/dij_fheap.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "463 ms"
+time_text = "281 ms"
 memory_text = "44808 KB"
-run_id = 797450
+run_id = 797483
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/dominator_tree.cpp"]
@@ -8275,16 +8337,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "38e91398fe686840e60738a2e61eb9b66235d1a8"
+last_updated_at = "2026-05-12T22:07:08.241617596Z"
 
 [tests."test/graph/k_shortset_walk.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "458 ms"
+time_text = "453 ms"
 memory_text = "208512 KB"
-run_id = 797451
+run_id = 797484
 runtime_error = "Run time error details not Available"
 
 [tests."test/graph/max_independent_set.cpp"]
