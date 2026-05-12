@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-05-12T13:26:24.906057755Z"
-status = "failed"
+generated_at = "2026-05-12T13:33:25.962295366Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -10,159 +11,48 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "README.md",
-    "al/monoid_pow.hpp",
-    "ds/cartesian.hpp",
-    "ds/dynamic_array.hpp",
-    "ds/ett/ett_mark copy.hpp",
-    "ds/ett/ett_mark.hpp",
-    "ds/heap/fheap.hpp",
-    "ds/heap/merge.hpp",
-    "ds/heap/merge_laz.hpp",
-    "ds/lct/lct_act.hpp",
-    "ds/lct/lct_monoid.hpp",
-    "ds/lct/lct_sub.hpp",
-    "ds/off_line/K_cdq.hpp",
-    "ds/off_line/coef_quis.hpp",
-    "ds/off_line/mo_niji.hpp",
-    "ds/off_line/rectangle_union.hpp",
-    "ds/online_range_q/range_lis_query.hpp",
-    "ds/range/coef_quis.hpp",
-    "ds/range/range_closest_pair.hpp",
-    "ds/range/rect_union.hpp",
-    "ds/range/rectangle_union.hpp",
-    "ds/seg/range_assign_seg.hpp",
+    "al/m/affine.hpp",
     "ds/seg/range_max_add.hpp",
     "ds/seg/range_min_add.hpp",
-    "ds/seg/range_sum_point_add.hpp",
-    "ds/seg/seg_dual_t.hpp",
-    "ds/seg/seg_premax_t.hpp",
-    "ds/seg/seg_sort_t.hpp",
-    "ds/seg/seg_t.hpp",
-    "ds/seg/segd_def.hpp",
-    "ds/seg/segd_sprase_t.hpp",
-    "ds/seg/segd_t.hpp",
-    "ds/seg/segdl_def_t.hpp",
-    "ds/seg/segdl_t.hpp",
-    "ds/seg/segl_sparse_t.hpp",
-    "ds/seg/segl_t.hpp",
-    "ds/sl/cht.hpp",
-    "ds/sl/lict.hpp",
-    "ds/sl/lict_d.hpp",
-    "ds/sl/lict_sp.hpp",
-    "ds/sl/slope_trick.hpp",
-    "ds/st/range_max.hpp",
-    "ds/st/range_min.hpp",
-    "ds/st/rmq.hpp",
-    "ds/st/st.hpp",
-    "ds/st/st_dis.hpp",
-    "ds/st/st_range_prod.hpp",
-    "ds/static_range_group.hpp",
-    "ds/swag.hpp",
     "ds/toptree/satt.hpp",
-    "ds/treap/treap_act.hpp",
-    "ds/treap/treap_base.hpp",
-    "ds/treap/treap_mono.hpp",
-    "ds/treap/treap_mono_cm.hpp",
-    "ds/trie_bina.hpp",
-    "ds/wave/wave_mat.hpp",
-    "ds/wave/wave_mat_2d.hpp",
-    "ds/wave/wave_mat_sim.hpp",
-    "test/ds/rect_union.cpp",
+    "test/ds/lct/lct_act_nc.cpp",
 ]
 selected_tests = [
-    "test/ds/cartesian_tree.cpp",
-    "test/ds/dsu/dsu_persistent.cpp",
-    "test/ds/dynamic_arr.cpp",
     "test/ds/lct/lct_act_nc.cpp",
     "test/ds/lct/lct_path_aff_set.cpp",
-    "test/ds/lct/lct_path_sum_point_add.cpp",
-    "test/ds/lct/lct_path_sum_set.cpp",
-    "test/ds/lct/lct_sub_sum.cpp",
-    "test/ds/lct/lct_sub_sum_p_add.cpp",
-    "test/ds/range/mojor_voting.cpp",
-    "test/ds/range/rec_sum_rec_add.cpp",
-    "test/ds/rect_union.cpp",
     "test/ds/satt/satt_sub_sum_point_set.cpp",
     "test/ds/satt/satt_sub_sum_sub_add.cpp",
     "test/ds/seg/assign/range_assign0.cpp",
-    "test/ds/seg/assign/range_assign1.cpp",
     "test/ds/seg/dual/dual0.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina0.cpp",
-    "test/ds/seg/dynamic_seg/segd_bina1.cpp",
     "test/ds/seg/dynamic_seg/segd_set0.cpp",
     "test/ds/seg/dynamic_seg/segd_set1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_bina.cpp",
-    "test/ds/seg/dynamic_seg_lazy/segdl_persistent_copy.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp",
     "test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp0.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp1.cpp",
-    "test/ds/seg/dynamic_seg_sp/seg_sp_bina.cpp",
-    "test/ds/seg/lazy/his_sum_add.cpp",
-    "test/ds/seg/lazy/segl0.cpp",
-    "test/ds/seg/lazy/segl1.cpp",
-    "test/ds/seg/range_sum_point_add.cpp",
     "test/ds/seg/rmq/range_max_add.cpp",
     "test/ds/seg/rmq/range_min_add.cpp",
-    "test/ds/seg/seg/seg_t_add.cpp",
-    "test/ds/seg/seg/seg_t_bina.cpp",
     "test/ds/seg/seg/seg_t_set.cpp",
     "test/ds/seg/sort_seg.cpp",
-    "test/ds/slope/cht/cht_max.cpp",
-    "test/ds/slope/cht/cht_min.cpp",
-    "test/ds/slope/lict/lict_d_line.cpp",
-    "test/ds/slope/lict/lict_d_seg0.cpp",
-    "test/ds/slope/lict/lict_d_seg1.cpp",
-    "test/ds/slope/lict/lict_persistent.cpp",
-    "test/ds/slope/lict/lict_seg.cpp",
-    "test/ds/slope/lict/lict_sp_line.cpp",
-    "test/ds/slope/lict/lict_sp_seg0.cpp",
-    "test/ds/slope/lict/lict_sp_seg1.cpp",
-    "test/ds/st/st/range_min.cpp",
-    "test/ds/st/st_dis/range_min.cpp",
-    "test/ds/st/st_dis/range_sum.cpp",
-    "test/ds/st/st_prod/range_min.cpp",
-    "test/ds/st/st_prod/range_prod.cpp",
     "test/ds/swag/swag_deque.cpp",
     "test/ds/swag/swag_queue.cpp",
-    "test/ds/treap/treap_am_apply_rev_prod.cpp",
-    "test/ds/treap/treap_am_rev_prod.cpp",
-    "test/ds/treap/treap_base_bina.cpp",
-    "test/ds/treap/treap_mono_cm_rev_prod.cpp",
-    "test/ds/treap/treap_mono_rev_prod.cpp",
-    "test/ds/trie_bina/trie_bina_min.cpp",
-    "test/ds/wave_matrix/wm2_bit0.cpp",
-    "test/ds/wave_matrix/wm2_bit1.cpp",
-    "test/ds/wave_matrix/wm2_bit2.cpp",
-    "test/ds/wave_matrix/wm2_narr_seg.cpp",
-    "test/ds/wave_matrix/wm2_seg.cpp",
-    "test/ds/wave_matrix/wm_prod.cpp",
-    "test/ds/wave_matrix/wm_s_count.cpp",
-    "test/ds/wave_matrix/wm_s_kth.cpp",
-    "test/graph/dij_fheap.cpp",
-    "test/graph/k_shortset_walk.cpp",
-    "test/tr/hld/hld_dual_nc.cpp",
     "test/tr/hld/hld_path_affine_point_set.cpp",
-    "test/tr/hld/hld_path_sum_point_add.cpp",
-    "test/tr/hld/hld_sub_sum_point_add.cpp",
-    "test/tr/stt/near0.cpp",
 ]
 total_discovered = 255
-total_selected = 77
-passed = 71
-failed = 6
+total_selected = 17
+passed = 17
+failed = 0
 invalid = 0
 
 [template_coverage]
 all_passed = [
+    "al/alg.hpp",
     "al/am/his_sum_add.hpp",
     "al/am/mincnt_add.hpp",
+    "al/am/sum_add.hpp",
     "al/am/sum_affine.hpp",
     "al/beats/sum_add_ch.hpp",
     "al/beats/sum_div_set.hpp",
     "al/m/add.hpp",
+    "al/m/affine.hpp",
     "al/m/major_voting.hpp",
     "al/m/min.hpp",
     "al/m/xor.hpp",
@@ -171,7 +61,9 @@ all_passed = [
     "ds/basic/bs_sim.hpp",
     "ds/basic/compress.hpp",
     "ds/basic/deque.hpp",
+    "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
+    "ds/basic/node_pool.hpp",
     "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
@@ -189,6 +81,7 @@ all_passed = [
     "ds/heap/fheap.hpp",
     "ds/heap/merge.hpp",
     "ds/heap/minmax_heap.hpp",
+    "ds/lct/lct_act.hpp",
     "ds/lct/lct_base.hpp",
     "ds/lct/lct_monoid.hpp",
     "ds/lct/lct_simple.hpp",
@@ -205,9 +98,13 @@ all_passed = [
     "ds/range/rect_union.hpp",
     "ds/rb/rb_arr.hpp",
     "ds/seg/anglebeats.hpp",
+    "ds/seg/range_assign_seg.hpp",
+    "ds/seg/range_max_add.hpp",
+    "ds/seg/range_min_add.hpp",
     "ds/seg/range_sum_point_add.hpp",
     "ds/seg/seg_dual_t.hpp",
     "ds/seg/seg_sort_t.hpp",
+    "ds/seg/seg_t.hpp",
     "ds/seg/segd_sprase_t.hpp",
     "ds/seg/segd_t.hpp",
     "ds/seg/segdl_t.hpp",
@@ -223,6 +120,7 @@ all_passed = [
     "ds/st/st_range_prod.hpp",
     "ds/static_range_group.hpp",
     "ds/swag.hpp",
+    "ds/toptree/satt.hpp",
     "ds/toptree/satt_sim.hpp",
     "ds/treap/treap_act.hpp",
     "ds/treap/treap_base.hpp",
@@ -291,6 +189,7 @@ all_passed = [
     "mod/inv_fast.hpp",
     "mod/inv_fast_d.hpp",
     "mod/mint61.hpp",
+    "mod/mint_t.hpp",
     "mod/mod_pow.hpp",
     "mod/mod_sqrt.hpp",
     "mod/modfast.hpp",
@@ -404,20 +303,7 @@ all_passed = [
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
 ]
-has_failures = [
-    "al/alg.hpp",
-    "al/am/sum_add.hpp",
-    "al/m/affine.hpp",
-    "ds/basic/fset.hpp",
-    "ds/basic/node_pool.hpp",
-    "ds/lct/lct_act.hpp",
-    "ds/seg/range_assign_seg.hpp",
-    "ds/seg/range_max_add.hpp",
-    "ds/seg/range_min_add.hpp",
-    "ds/seg/seg_t.hpp",
-    "ds/toptree/satt.hpp",
-    "mod/mint_t.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add.hpp",
@@ -4419,42 +4305,6 @@ unused = [
 "ttr/find_center.hpp" = []
 "ttr/hld.hpp" = ["gg/func.hpp"]
 
-[[failures]]
-path = "test/ds/lct/lct_act_nc.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11467"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/satt/satt_sub_sum_point_set.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11427"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/satt/satt_sub_sum_sub_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11417"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/assign/range_assign0.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11324"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/rmq/range_max_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11319"
-message = "Compilation error"
-
-[[failures]]
-path = "test/ds/seg/rmq/range_min_add.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11319"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -4939,28 +4789,17 @@ dependencies = [
     "ds/lct/lct_act.hpp",
     "al/alg.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_trigger = "test_file_changed"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/lct/lct_act_nc.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 797382
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:852:3: error: ‘lct_act’ was not declared in this scope
-  852 |   lct_act<F> g(N);
-      |   ^~~~~~~
-Main.cc:852:12: error: expected primary-expression before ‘>’ token
-  852 |   lct_act<F> g(N);
-      |            ^
-Main.cc:852:14: error: ‘g’ was not declared in this scope
-  852 |   lct_act<F> g(N);
-      |              ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "465 ms"
+memory_text = "9988 KB"
+run_id = 797460
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_dist_jump.cpp"]
@@ -5028,16 +4867,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/lct/lct_path_aff_set.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1117 ms"
+time_text = "950 ms"
 memory_text = "13480 KB"
-run_id = 797385
+run_id = 797459
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/lct/lct_path_sum_point_add.cpp"]
@@ -5404,51 +5243,16 @@ dependencies = [
     "al/am/sum_add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/satt/satt_sub_sum_point_set.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 797392
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:937:18: error: template constraint failure for ‘template<class T, int B>  requires  abel<T> struct satt’
-  937 |   satt<Sum_add<ll>> g(N);
-      |                  ^~
-Main.cc:937:18: note: constraints not satisfied
-Main.cc: In substitution of ‘template<class T, int B>  requires  abel<T> struct satt [with T = Sum_add<long long int>; int B = 18]’:
-Main.cc:937:18:   required from here
-Main.cc:542:12:   required for the satisfaction of ‘abel<T>’ [with T = Sum_add<long long int>]
-Main.cc:542:31:   in requirements with ‘const typename T::X& a’ [with T = Sum_add<long long int>]
-Main.cc:543:11: note: the required expression ‘T::inv(a)’ is invalid
-  543 |   { T::inv(a) } -> same_as<TN T::X>;
-      |     ~~~~~~^~~
-cc1plus: note: set ‘-fconcepts-diagnostics-depth=’ to at least 2 for more detail
-Main.cc:940:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  940 |     g.set(i, x);
-      |       ^~~
-Main.cc:944:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  944 |     g.link(x, y);
-      |       ^~~~
-Main.cc:950:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  950 |       g.cut(a, b);
-      |         ^~~
-Main.cc:951:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  951 |       g.link(c, d);
-      |         ^~~~
-Main.cc:954:9: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  954 |       g.set(i, g.prod_ch(i, i) + x);
-      |         ^~~
-Main.cc:954:18: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
-  954 |       g.set(i, g.prod_ch(i, i) + x);
-      |                  ^~~~~~~
-Main.cc:957:15: error: request for member ‘prod_ch’ in ‘g’, which is of non-class type ‘int’
-  957 |       print(g.prod_ch(x, y));
-      |               ^~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1234 ms"
+memory_text = "46816 KB"
+run_id = 797458
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/satt/satt_sub_sum_sub_add.cpp"]
@@ -5462,48 +5266,16 @@ dependencies = [
     "al/am/sum_add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/satt/satt_sub_sum_sub_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 797394
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:938:10: error: template constraint failure for ‘template<class T, int B>  requires  abel<T> struct satt’
-  938 |   satt<am> g(N);
-      |          ^
-Main.cc:938:10: note: constraints not satisfied
-Main.cc: In substitution of ‘template<class T, int B>  requires  abel<T> struct satt [with T = Sum_add<long long int>; int B = 18]’:
-Main.cc:938:10:   required from here
-Main.cc:542:12:   required for the satisfaction of ‘abel<T>’ [with T = Sum_add<long long int>]
-Main.cc:542:31:   in requirements with ‘const typename T::X& a’ [with T = Sum_add<long long int>]
-Main.cc:543:11: note: the required expression ‘T::inv(a)’ is invalid
-  543 |   { T::inv(a) } -> same_as<TN T::X>;
-      |     ~~~~~~^~~
-cc1plus: note: set ‘-fconcepts-diagnostics-depth=’ to at least 2 for more detail
-Main.cc:941:7: error: request for member ‘set’ in ‘g’, which is of non-class type ‘int’
-  941 |     g.set(i, x);
-      |       ^~~
-Main.cc:945:7: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  945 |     g.link(x, y);
-      |       ^~~~
-Main.cc:951:9: error: request for member ‘cut’ in ‘g’, which is of non-class type ‘int’
-  951 |       g.cut(x, y);
-      |         ^~~
-Main.cc:952:9: error: request for member ‘link’ in ‘g’, which is of non-class type ‘int’
-  952 |       g.link(a, b);
-      |         ^~~~
-Main.cc:955:9: error: request for member ‘apply_sub’ in ‘g’, which is of non-class type ‘int’
-  955 |       g.apply_sub(p, rt, x);
-      |         ^~~~~~~~~
-Main.cc:958:15: error: request for member ‘prod_sub’ in ‘g’, which is of non-class type ‘int’
-  958 |       print(g.prod_sub(x, f));
-      |               ^~~~~~~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1359 ms"
+memory_text = "42248 KB"
+run_id = 797461
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/assign/range_assign0.cpp"]
@@ -5519,195 +5291,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/assign/range_assign0.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 797393
-compile_error = """
-Main.cc: In instantiation of ‘struct range_assign_seg<Affine<mint_t<998244353> > >’:
-Main.cc:983:10:   required from here
-Main.cc:880:28: error: ‘pow’ has not been declared in ‘struct Affine<mint_t<998244353> >’
-  880 |   using T::op, T::unit, T::pow;
-      |                            ^~~
-Main.cc: In instantiation of ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’:
-Main.cc:991:17:   required from here
-Main.cc:925:30: error: no matching function for call to ‘pow(__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type&, int)’
-  925 |     if (a < l) seg.set(a, pow(dat[a], l - a));
-      |                           ~~~^~~~~~~~~~~~~~~
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:415:5: note: candidate: ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up)’
-  415 |     pow(_Tp __x, _Up __y)
-      |     ^~~
-/usr/include/c++/11/cmath:415:5: note:   template argument deduction/substitution failed:
-/usr/include/c++/11/cmath: In substitution of ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = Affine<mint_t<998244353> >::X; _Up = int]’:
-Main.cc:925:30:   required from ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’
-Main.cc:991:17:   required from here
-/usr/include/c++/11/cmath:415:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__promote<Affine<mint_t<998244353> >::X, false>’
-In file included from /usr/include/features.h:486,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:39,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:586,
-                 from /usr/include/c++/11/iostream:38,
-                 from Main.cc:1:
-Main.cc: In instantiation of ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’:
-Main.cc:991:17:   required from here
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note: candidate: ‘double pow(double, double)’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^~~~~~~~~~~~~~
-In file included from /usr/include/c++/11/cmath:45,
-                 from Main.cc:21:
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘double’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:392:3: note: candidate: ‘constexpr long double std::pow(long double, long double)’
-  392 |   pow(long double __x, long double __y)
-      |   ^~~
-/usr/include/c++/11/cmath:392:19: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘long double’
-  392 |   pow(long double __x, long double __y)
-      |       ~~~~~~~~~~~~^~~
-/usr/include/c++/11/cmath:388:3: note: candidate: ‘constexpr float std::pow(float, float)’
-  388 |   pow(float __x, float __y)
-      |   ^~~
-/usr/include/c++/11/cmath:388:13: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘float’
-  388 |   pow(float __x, float __y)
-      |       ~~~~~~^~~
-Main.cc:930:21: error: no matching function for call to ‘pow(range_assign_seg<Affine<mint_t<998244353> > >::X&, int)’
-  930 |       seg.set(r, pow(y, b - r));
-      |                  ~~~^~~~~~~~~~
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:415:5: note: candidate: ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up)’
-  415 |     pow(_Tp __x, _Up __y)
-      |     ^~~
-/usr/include/c++/11/cmath:415:5: note:   template argument deduction/substitution failed:
-/usr/include/c++/11/cmath: In substitution of ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = Affine<mint_t<998244353> >::X; _Up = int]’:
-Main.cc:930:21:   required from ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’
-Main.cc:991:17:   required from here
-/usr/include/c++/11/cmath:415:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__promote<Affine<mint_t<998244353> >::X, false>’
-In file included from /usr/include/features.h:486,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:39,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:586,
-                 from /usr/include/c++/11/iostream:38,
-                 from Main.cc:1:
-Main.cc: In instantiation of ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’:
-Main.cc:991:17:   required from here
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note: candidate: ‘double pow(double, double)’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^~~~~~~~~~~~~~
-In file included from /usr/include/c++/11/cmath:45,
-                 from Main.cc:21:
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note:   no known conversion for argument 1 from ‘range_assign_seg<Affine<mint_t<998244353> > >::X’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘double’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:392:3: note: candidate: ‘constexpr long double std::pow(long double, long double)’
-  392 |   pow(long double __x, long double __y)
-      |   ^~~
-/usr/include/c++/11/cmath:392:19: note:   no known conversion for argument 1 from ‘range_assign_seg<Affine<mint_t<998244353> > >::X’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘long double’
-  392 |   pow(long double __x, long double __y)
-      |       ~~~~~~~~~~~~^~~
-/usr/include/c++/11/cmath:388:3: note: candidate: ‘constexpr float std::pow(float, float)’
-  388 |   pow(float __x, float __y)
-      |   ^~~
-/usr/include/c++/11/cmath:388:13: note:   no known conversion for argument 1 from ‘range_assign_seg<Affine<mint_t<998244353> > >::X’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘float’
-  388 |   pow(float __x, float __y)
-      |       ~~~~~~^~~
-Main.cc:938:19: error: no matching function for call to ‘pow(range_assign_seg<Affine<mint_t<998244353> > >::X&, int)’
-  938 |     seg.set(l, pow(x, r - l));
-      |                ~~~^~~~~~~~~~
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:415:5: note: candidate: ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up)’
-  415 |     pow(_Tp __x, _Up __y)
-      |     ^~~
-/usr/include/c++/11/cmath:415:5: note:   template argument deduction/substitution failed:
-/usr/include/c++/11/cmath: In substitution of ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = Affine<mint_t<998244353> >::X; _Up = int]’:
-Main.cc:938:19:   required from ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’
-Main.cc:991:17:   required from here
-/usr/include/c++/11/cmath:415:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__promote<Affine<mint_t<998244353> >::X, false>’
-In file included from /usr/include/features.h:486,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:39,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:586,
-                 from /usr/include/c++/11/iostream:38,
-                 from Main.cc:1:
-Main.cc: In instantiation of ‘void range_assign_seg<T>::assign(int, int, range_assign_seg<T>::X) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’:
-Main.cc:991:17:   required from here
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note: candidate: ‘double pow(double, double)’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^~~~~~~~~~~~~~
-In file included from /usr/include/c++/11/cmath:45,
-                 from Main.cc:21:
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note:   no known conversion for argument 1 from ‘range_assign_seg<Affine<mint_t<998244353> > >::X’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘double’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:392:3: note: candidate: ‘constexpr long double std::pow(long double, long double)’
-  392 |   pow(long double __x, long double __y)
-      |   ^~~
-/usr/include/c++/11/cmath:392:19: note:   no known conversion for argument 1 from ‘range_assign_seg<Affine<mint_t<998244353> > >::X’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘long double’
-  392 |   pow(long double __x, long double __y)
-      |       ~~~~~~~~~~~~^~~
-/usr/include/c++/11/cmath:388:3: note: candidate: ‘constexpr float std::pow(float, float)’
-  388 |   pow(float __x, float __y)
-      |   ^~~
-/usr/include/c++/11/cmath:388:13: note:   no known conversion for argument 1 from ‘range_assign_seg<Affine<mint_t<998244353> > >::X’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘float’
-  388 |   pow(float __x, float __y)
-      |       ~~~~~~^~~
-Main.cc: In instantiation of ‘range_assign_seg<T>::X range_assign_seg<T>::prod(int, int) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’:
-Main.cc:994:21:   required from here
-Main.cc:913:27: error: no matching function for call to ‘pow(__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type&, int)’
-  913 |     if (a == c) return pow(dat[a], r - l);
-      |                        ~~~^~~~~~~~~~~~~~~
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:415:5: note: candidate: ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up)’
-  415 |     pow(_Tp __x, _Up __y)
-      |     ^~~
-/usr/include/c++/11/cmath:415:5: note:   template argument deduction/substitution failed:
-/usr/include/c++/11/cmath: In substitution of ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up) [with _Tp = Affine<mint_t<998244353> >::X; _Up = int]’:
-Main.cc:913:27:   required from ‘range_assign_seg<T>::X range_assign_seg<T>::prod(int, int) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’
-Main.cc:994:21:   required from here
-/usr/include/c++/11/cmath:415:5: error: no type named ‘__type’ in ‘struct __gnu_cxx::__promote<Affine<mint_t<998244353> >::X, false>’
-In file included from /usr/include/features.h:486,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:39,
-                 from /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h:586,
-                 from /usr/include/c++/11/iostream:38,
-                 from Main.cc:1:
-Main.cc: In instantiation of ‘range_assign_seg<T>::X range_assign_seg<T>::prod(int, int) [with T = Affine<mint_t<998244353> >; range_assign_seg<T>::X = Affine<mint_t<998244353> >::X]’:
-Main.cc:994:21:   required from here
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note: candidate: ‘double pow(double, double)’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^~~~~~~~~~~~~~
-In file included from /usr/include/c++/11/cmath:45,
-                 from Main.cc:21:
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:140:1: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘double’
-  140 | __MATHCALL_VEC (pow,, (_Mdouble_ __x, _Mdouble_ __y));
-      | ^
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:392:3: note: candidate: ‘constexpr long double std::pow(long double, long double)’
-  392 |   pow(long double __x, long double __y)
-      |   ^~~
-/usr/include/c++/11/cmath:392:19: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘long double’
-  392 |   pow(long double __x, long double __y)
-      |       ~~~~~~~~~~~~^~~
-/usr/include/c++/11/cmath:388:3: note: candidate: ‘constexpr float std::pow(float, float)’
-  388 |   pow(float __x, float __y)
-      |   ^~~
-/usr/include/c++/11/cmath:388:13: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type’ {aka ‘Affine<mint_t<998244353> >::X’} to ‘float’
-  388 |   pow(float __x, float __y)
-      |       ~~~~~~^~~
-Main.cc:915:14: error: no matching function for call to ‘pow(__gnu_cxx::__alloc_traits<std::allocator<Affine<mint_t<998244353> >::X>, Affine<mint_t<998244353> >::X>::value_type&, int)’
-  915 |     X x = pow(dat[a], b - l);
-      |           ~~~^~~~~~~~~~~~~~~
-In file included from Main.cc:21:
-/usr/include/c++/11/cmath:415:5: note: candidate: ‘template<class _Tp, class _Up> constexpr typename __gnu_cxx::__promote_2<_Tp, _Up>::__type std::pow(_Tp, _Up)’
-  415 |     pow(_Tp __x, _Up __y)
-      |     ^~~
-/usr/include/c++/11/cmath:415:5: note:   template argument deduction/substitution failed:
-compilation terminated due to -fmax-errors=10."""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "804 ms"
+memory_text = "14772 KB"
+run_id = 797457
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/assign/range_assign1.cpp"]
@@ -5787,16 +5380,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/dual/dual0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "442 ms"
+time_text = "447 ms"
 memory_text = "10724 KB"
-run_id = 797396
+run_id = 797462
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg/segd_bina0.cpp"]
@@ -5856,16 +5449,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/dynamic_seg/segd_set0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1007 ms"
+time_text = "1070 ms"
 memory_text = "143932 KB"
-run_id = 797398
+run_id = 797463
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg/segd_set1.cpp"]
@@ -5880,16 +5473,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/dynamic_seg/segd_set1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "678 ms"
+time_text = "790 ms"
 memory_text = "31032 KB"
-run_id = 797400
+run_id = 797464
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_apply1.cpp"]
@@ -5976,16 +5569,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1091 ms"
+time_text = "1059 ms"
 memory_text = "191036 KB"
-run_id = 797404
+run_id = 797465
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp"]
@@ -6000,16 +5593,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/dynamic_seg_lazy/segdl_set1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "989 ms"
+time_text = "881 ms"
 memory_text = "39224 KB"
-run_id = 797405
+run_id = 797466
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/dynamic_seg_sp/seg_sp0.cpp"]
@@ -6183,64 +5776,16 @@ dependencies = [
     "al/alg.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/rmq/range_max_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 797413
-compile_error = """
-Main.cc: In instantiation of ‘struct range_max_add<long long int>’:
-Main.cc:737:26:   required from here
-Main.cc:673:13: error: template constraint failure for ‘template<class T>  requires  mono<T> struct seg_t’
-  673 |   seg_t<MX> seg;
-      |             ^~~
-Main.cc:673:13: note: constraints not satisfied
-Main.cc: In substitution of ‘template<class T>  requires  mono<T> struct seg_t [with T = range_max_add<long long int>::MX]’:
-Main.cc:673:13:   required from ‘struct range_max_add<long long int>’
-Main.cc:737:26:   required from here
-Main.cc:532:12:   required for the satisfaction of ‘mono<T>’ [with T = range_max_add<long long int>::MX]
-Main.cc:532:19:   in requirements with ‘const typename T::X& a’, ‘const typename T::X& b’ [with T = range_max_add<long long int>::MX]
-Main.cc:534:10: note: the required expression ‘T::op(a, b)’ is invalid
-  534 |   { T::op(a, b) } -> same_as<TN T::X>;
-      |     ~~~~~^~~~~~
-Main.cc:535:12: note: the required expression ‘T::unit()’ is invalid
-  535 |   { T::unit() } -> same_as<TN T::X>;
-      |     ~~~~~~~^~
-Main.cc: In instantiation of ‘struct range_max_add<long long int>’:
-Main.cc:737:26:   required from here
-cc1plus: note: set ‘-fconcepts-diagnostics-depth=’ to at least 2 for more detail
-Main.cc: In instantiation of ‘T range_max_add<T>::prod(int, int) [with T = long long int]’:
-Main.cc:745:22:   required from here
-Main.cc:695:12: error: using invalid field ‘range_max_add<T>::seg’
-  695 |     ll s = seg.prod(l, r).se;
-      |            ^~~
-Main.cc:696:10: error: using invalid field ‘range_max_add<T>::seg’
-  696 |     l += seg.sz;
-      |          ^~~
-Main.cc:697:40: error: using invalid field ‘range_max_add<T>::seg’
-  697 |     for (; l; l >>= 1) if (l & 1) s += seg.a[--l].fi;
-      |                                        ^~~
-Main.cc: In instantiation of ‘void range_max_add<T>::app(int, T) [with T = long long int]’:
-Main.cc:704:10:   required from ‘void range_max_add<T>::apply(int, int, T) [with T = long long int]’
-Main.cc:742:16:   required from here
-Main.cc:712:11: error: using invalid field ‘range_max_add<T>::seg’
-  712 |     T t = seg.get(i).fi + x;
-      |           ^~~
-Main.cc:713:5: error: using invalid field ‘range_max_add<T>::seg’
-  713 |     seg.set(i, {t, t});
-      |     ^~~
-Main.cc: In instantiation of ‘void range_max_add<T>::build(int, auto:48) [with auto:48 = range_max_add<long long int>::build(vc<long long int>&)::<lambda(int)>; T = long long int]’:
-Main.cc:680:10:   required from ‘void range_max_add<T>::build(vc<T>&) [with T = long long int; vc<T> = std::vector<long long int, std::allocator<long long int> >]’
-Main.cc:677:42:   required from ‘range_max_add<T>::range_max_add(vc<T>&) [with T = long long int; vc<T> = std::vector<long long int, std::allocator<long long int> >]’
-Main.cc:737:26:   required from here
-Main.cc:686:5: error: using invalid field ‘range_max_add<T>::seg’
-  686 |     seg.build(N, [&](int i) -> MX::X {
-      |     ^~~"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "368 ms"
+memory_text = "22820 KB"
+run_id = 797467
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/rmq/range_min_add.cpp"]
@@ -6253,65 +5798,16 @@ dependencies = [
     "al/alg.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/rmq/range_min_add.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 797414
-compile_error = """
-Main.cc: In instantiation of ‘struct range_min_add<long long int>’:
-Main.cc:735:26:   required from here
-Main.cc:673:13: error: template constraint failure for ‘template<class T>  requires  mono<T> struct seg_t’
-  673 |   seg_t<MX> a;
-      |             ^
-Main.cc:673:13: note: constraints not satisfied
-Main.cc: In substitution of ‘template<class T>  requires  mono<T> struct seg_t [with T = range_min_add<long long int>::MX]’:
-Main.cc:673:13:   required from ‘struct range_min_add<long long int>’
-Main.cc:735:26:   required from here
-Main.cc:532:12:   required for the satisfaction of ‘mono<T>’ [with T = range_min_add<long long int>::MX]
-Main.cc:532:19:   in requirements with ‘const typename T::X& a’, ‘const typename T::X& b’ [with T = range_min_add<long long int>::MX]
-Main.cc:534:10: note: the required expression ‘T::op(a, b)’ is invalid
-  534 |   { T::op(a, b) } -> same_as<TN T::X>;
-      |     ~~~~~^~~~~~
-Main.cc:535:12: note: the required expression ‘T::unit()’ is invalid
-  535 |   { T::unit() } -> same_as<TN T::X>;
-      |     ~~~~~~~^~
-Main.cc: In instantiation of ‘struct range_min_add<long long int>’:
-Main.cc:735:26:   required from here
-cc1plus: note: set ‘-fconcepts-diagnostics-depth=’ to at least 2 for more detail
-Main.cc: In instantiation of ‘T range_min_add<T>::prod(int, int) [with T = long long int]’:
-Main.cc:743:21:   required from here
-Main.cc:695:11: error: using invalid field ‘range_min_add<T>::a’
-  695 |     T s = a.prod(l, r).se;
-      |           ^
-Main.cc:696:10: error: using invalid field ‘range_min_add<T>::a’
-  696 |     l += a.sz;
-      |          ^
-Main.cc:697:40: error: using invalid field ‘range_min_add<T>::a’
-  697 |     for (; l; l >>= 1) if (l & 1) s += a.a[--l].fi;
-      |                                        ^
-Main.cc: In instantiation of ‘void range_min_add<T>::build(int, auto:48) [with auto:48 = range_min_add<long long int>::build(vc<long long int>&)::<lambda(int)>; T = long long int]’:
-Main.cc:680:10:   required from ‘void range_min_add<T>::build(vc<T>&) [with T = long long int; vc<T> = std::vector<long long int, std::allocator<long long int> >]’
-Main.cc:677:42:   required from ‘range_min_add<T>::range_min_add(vc<T>&) [with T = long long int; vc<T> = std::vector<long long int, std::allocator<long long int> >]’
-Main.cc:735:26:   required from here
-Main.cc:686:5: error: using invalid field ‘range_min_add<T>::a’
-  686 |     a.build(N, [&](int i) -> MX::X {
-      |     ^
-Main.cc: In instantiation of ‘void range_min_add<T>::app(int, T) [with T = long long int]’:
-Main.cc:711:34:   required from ‘void range_min_add<T>::ap(int, T) [with T = long long int]’
-Main.cc:709:35:   required from ‘void range_min_add<T>::apply(int, int, T) [with T = long long int]’
-Main.cc:740:16:   required from here
-Main.cc:715:11: error: using invalid field ‘range_min_add<T>::a’
-  715 |     T t = a.get(i).fi + x;
-      |           ^
-Main.cc:716:5: error: using invalid field ‘range_min_add<T>::a’
-  716 |     a.set(i, {t, t});
-      |     ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "358 ms"
+memory_text = "22820 KB"
+run_id = 797468
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/seg/seg_t_add.cpp"]
@@ -6369,16 +5865,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/seg/seg_t_set.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "316 ms"
+time_text = "287 ms"
 memory_text = "10720 KB"
-run_id = 797417
+run_id = 797469
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/sort_seg.cpp"]
@@ -6395,16 +5891,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/seg/sort_seg.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1341 ms"
+time_text = "1337 ms"
 memory_text = "375544 KB"
-run_id = 797418
+run_id = 797470
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/slope/cht/cht_max.cpp"]
@@ -6748,16 +6244,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/swag/swag_deque.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "64 ms"
+time_text = "66 ms"
 memory_text = "11848 KB"
-run_id = 797434
+run_id = 797471
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/swag/swag_queue.cpp"]
@@ -6771,16 +6267,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/ds/swag/swag_queue.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "63 ms"
+time_text = "57 ms"
 memory_text = "10340 KB"
-run_id = 797435
+run_id = 797472
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/treap/treap_am_apply_rev_prod.cpp"]
@@ -10239,16 +9735,16 @@ dependencies = [
     "al/m/affine.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "41746b5f4535015ea28c5ed278fa6a8bb47c42fd"
-last_updated_at = "2026-05-12T13:26:24.906057755Z"
+last_tested_head = "b2501797ae2470d943ae6986f460375f725217e4"
+last_updated_at = "2026-05-12T13:33:25.962295366Z"
 
 [tests."test/tr/hld/hld_path_affine_point_set.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "898 ms"
-memory_text = "44316 KB"
-run_id = 797453
+time_text = "669 ms"
+memory_text = "44320 KB"
+run_id = 797473
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/hld/hld_path_sum_point_add.cpp"]
