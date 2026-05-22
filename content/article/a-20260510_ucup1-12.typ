@@ -2,7 +2,7 @@
 
 #show: main.with(
   title: "Record The 1st Universal Cup. Stage 12: Ōokayama",
-  desc: [ucup 3-39 训练记录],
+  desc: [ucup 1-12 训练记录],
   date: "2026-05-10",
   tags: ("icpc",),
   category: "ICPC",
