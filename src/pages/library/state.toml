@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-05-22T09:22:04.305377794Z"
+generated_at = "2026-05-26T08:36:13.114066444Z"
 status = "passed"
 failures = []
 
@@ -12,50 +12,63 @@ head = "HEAD"
 trigger_mode = "diff"
 changed_paths = [
     "README.md",
-    "al/am/presum_add.hpp",
-    "ds/kdt/kdt.hpp",
-    "g/dijkstra_fheap.hpp",
-    "ge/basic/line.hpp",
-    "ge/basic/poly_union.hpp",
-    "notes/nlb/main.typ",
-    "notes/nlb/ou2/aux_conv_dp_geo.pdf",
-    "notes/nlb/ou2/ds0.pdf",
-    "notes/nlb/ou2/ds1.pdf",
-    "notes/nlb/ou2/ds2.pdf",
-    "notes/nlb/ou2/flow_graph.pdf",
-    "notes/nlb/ou2/jen_line_mod_nt_pr.pdf",
-    "notes/nlb/ou2/poly_rand_seq_sps_str.pdf",
-    "notes/nlb/ou2/tree_vec_al_oth_net.pdf",
-    "notes/nlb/sections/alg.typ",
-    "notes/nlb/sections/auxiliary.typ",
-    "notes/nlb/sections/ds.typ",
-    "notes/nlb/sections/ds/bit.typ",
-    "notes/nlb/sections/ds/bs.typ",
-    "notes/nlb/sections/ds/kdt.typ",
-    "notes/nlb/sections/ds/lct.typ",
-    "notes/nlb/sections/ds/matroid.typ",
-    "notes/nlb/sections/ds/seg.typ",
-    "notes/nlb/sections/ds/splay.typ",
-    "notes/nlb/sections/ds/wave.typ",
-    "notes/nlb/sections/flow.typ",
-    "notes/nlb/sections/geo.typ",
-    "notes/nlb/sections/graph.typ",
-    "notes/nlb/sections/nt.typ",
-    "notes/nlb/sections/pr.typ",
-    "notes/nlb/sections/seq.typ",
-    "notes/nlb/sections/tree.typ",
-    "seq/inversion.hpp",
-    "tr/hld_abel.hpp",
+    "al/dp_t.hpp",
+    "ds/bit/bit01.hpp",
+    "ds/seg/range_sum_point_add.hpp",
+    "ds/spl/splay_mono_re.hpp",
+    "ds/spl/splay_mono_re_c.hpp",
+    "test/ttr/doubling/doubling_jump.cpp",
+    "test/ttr/doubling/doubling_lca.cpp",
+    "test/ttr/hld/hld_jump.cpp",
+    "test/ttr/hld/hld_lca.cpp",
+    "test/ttr/hld/hld_path_affine_point_set.cpp",
+    "test/ttr/hld/hld_path_sum_point_add.cpp",
+    "test/ttr/hld/hld_sayo.cpp",
+    "test/ttr/hld/hld_sub_sum_point_add.cpp",
+    "test/ttr/skew/skew_jump.cpp",
+    "test/ttr/stt/ddp_affine.cpp",
+    "test/ttr/stt/ddp_hash.cpp",
+    "test/ttr/stt/ddp_re.cpp",
+    "tr/hld_ds/hld_dual.hpp",
+    "tr/hld_ds/hld_mono.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
+    "tr/skew/lca.hpp",
+    "ttr/ddp.hpp",
+    "ttr/ddp_re.hpp",
+    "ttr/doubling.hpp",
+    "ttr/find_center.hpp",
+    "ttr/hld.hpp",
+    "ttr/hld_dual.hpp",
+    "ttr/hld_mono.hpp",
+    "ttr/hld_sayo.hpp",
+    "ttr/skew.hpp",
+    "ttr/skewle.hpp",
+    "ttr/stt.hpp",
 ]
 selected_tests = [
-    "test/ds/kdtree/kdktree_find_point.cpp",
-    "test/geo/minimum_enclosing_circle.cpp",
-    "test/graph/dij_fheap.cpp",
-    "test/tr/hld/hld_abel_sub_sum_point_add.cpp",
+    "test/ds/bit/bit01.cpp",
+    "test/ds/bit/bit01_1.cpp",
+    "test/ds/seg/range_sum_point_add.cpp",
+    "test/ds/wave_matrix/wm2_narr_seg.cpp",
+    "test/tr/skew/skew_jump.cpp",
+    "test/tr/skew/skew_lca.cpp",
+    "test/tr/stt/near0.cpp",
+    "test/ttr/doubling/doubling_jump.cpp",
+    "test/ttr/doubling/doubling_lca.cpp",
+    "test/ttr/hld/hld_jump.cpp",
+    "test/ttr/hld/hld_lca.cpp",
+    "test/ttr/hld/hld_path_affine_point_set.cpp",
+    "test/ttr/hld/hld_path_sum_point_add.cpp",
+    "test/ttr/hld/hld_sayo.cpp",
+    "test/ttr/hld/hld_sub_sum_point_add.cpp",
+    "test/ttr/skew/skew_jump.cpp",
+    "test/ttr/stt/ddp_affine.cpp",
+    "test/ttr/stt/ddp_hash.cpp",
+    "test/ttr/stt/ddp_re.cpp",
 ]
-total_discovered = 264
-total_selected = 4
-passed = 4
+total_discovered = 276
+total_selected = 19
+passed = 19
 failed = 0
 invalid = 0
 
@@ -68,6 +81,7 @@ all_passed = [
     "al/am/sum_affine.hpp",
     "al/beats/sum_add_ch.hpp",
     "al/beats/sum_div_set.hpp",
+    "al/dp_t.hpp",
     "al/m/add.hpp",
     "al/m/affine.hpp",
     "al/m/major_voting.hpp",
@@ -330,6 +344,14 @@ all_passed = [
     "tr/skew/lca2.hpp",
     "tr/stt.hpp",
     "tr/subtree_hash.hpp",
+    "ttr/ddp.hpp",
+    "ttr/ddp_re.hpp",
+    "ttr/doubling.hpp",
+    "ttr/hld.hpp",
+    "ttr/hld_mono.hpp",
+    "ttr/hld_sayo.hpp",
+    "ttr/skew.hpp",
+    "ttr/stt.hpp",
 ]
 has_failures = []
 unused = [
@@ -630,12 +652,15 @@ unused = [
     "tr/fast_lca.hpp",
     "tr/gbt/gbt_monoid.hpp",
     "tr/gbt/gbt_monoid_commute.hpp",
+    "tr/hld_ds/hld_dual.hpp",
+    "tr/hld_ds/hld_mono.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
     "tr/hld_laz.hpp",
     "tr/hld_wm.hpp",
     "tr/skew/static_mono.hpp",
-    "ttr/doubling.hpp",
     "ttr/find_center.hpp",
-    "ttr/hld.hpp",
+    "ttr/hld_dual.hpp",
+    "ttr/skewle.hpp",
 ]
 
 [template_dependencies]
@@ -692,6 +717,7 @@ unused = [
 "al/beats/sum_div_set.hpp" = ["ds/seg/anglebeats.hpp"]
 "al/beats/sum_sqrt.hpp" = ["ds/seg/anglebeats.hpp"]
 "al/beats/sum_sqrt_add.hpp" = ["ds/seg/anglebeats2.hpp"]
+"al/dp_t.hpp" = []
 "al/m/add.hpp" = []
 "al/m/add_array.hpp" = [
     "mod/binom.hpp",
@@ -2554,6 +2580,27 @@ unused = [
     "g/Basic.hpp",
     "ds/basic/hashmap.hpp",
 ]
+"tr/hld_ds/hld_dual.hpp" = [
+    "ds/seg/seg_dual_t.hpp",
+    "al/alg.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+]
+"tr/hld_ds/hld_mono.hpp" = [
+    "ds/seg/seg_t.hpp",
+    "al/alg.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+]
+"tr/hld_ds/hld_sayo.hpp" = [
+    "ds/seg/segl_t.hpp",
+    "al/alg.hpp",
+    "tr/hld.hpp",
+    "g/Basic.hpp",
+    "ds/basic/hashmap.hpp",
+]
 "tr/hld_dual.hpp" = [
     "ds/seg/seg_dual_t.hpp",
     "al/alg.hpp",
@@ -2625,9 +2672,37 @@ unused = [
     "mod/mint61.hpp",
     "random/rng.hpp",
 ]
+"ttr/ddp.hpp" = [
+    "al/dp_t.hpp",
+    "ttr/stt.hpp",
+    "ttr/hld.hpp",
+]
+"ttr/ddp_re.hpp" = [
+    "al/dp_t.hpp",
+    "ttr/stt.hpp",
+    "ttr/hld.hpp",
+]
 "ttr/doubling.hpp" = []
 "ttr/find_center.hpp" = []
 "ttr/hld.hpp" = []
+"ttr/hld_dual.hpp" = [
+    "ds/seg/seg_dual_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+]
+"ttr/hld_mono.hpp" = [
+    "ds/seg/seg_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+]
+"ttr/hld_sayo.hpp" = [
+    "ds/seg/segl_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+]
+"ttr/skew.hpp" = []
+"ttr/skewle.hpp" = ["ds/un/dsu.hpp"]
+"ttr/stt.hpp" = ["ttr/hld.hpp"]
 
 [template_dependents]
 "al/acted_set/from_monoid.hpp" = ["pr/discreate_logg.hpp"]
@@ -2692,10 +2767,16 @@ unused = [
     "string/SA/string_cmp.hpp",
     "tr/fast_lca.hpp",
     "tr/hld_abel.hpp",
+    "tr/hld_ds/hld_dual.hpp",
+    "tr/hld_ds/hld_mono.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
     "tr/hld_dual.hpp",
     "tr/hld_laz.hpp",
     "tr/hld_mono.hpp",
     "tr/hld_st.hpp",
+    "ttr/hld_dual.hpp",
+    "ttr/hld_mono.hpp",
+    "ttr/hld_sayo.hpp",
 ]
 "al/am/his_max_add.hpp" = []
 "al/am/his_max_add_set.hpp" = []
@@ -2724,6 +2805,10 @@ unused = [
 "al/beats/sum_div_set.hpp" = []
 "al/beats/sum_sqrt.hpp" = []
 "al/beats/sum_sqrt_add.hpp" = []
+"al/dp_t.hpp" = [
+    "ttr/ddp.hpp",
+    "ttr/ddp_re.hpp",
+]
 "al/m/add.hpp" = [
     "al/am/minidx_add.hpp",
     "al/am/minmax_add.hpp",
@@ -2898,6 +2983,9 @@ unused = [
     "tr/gbt/gbt_monoid_commute.hpp",
     "tr/hld.hpp",
     "tr/hld_abel.hpp",
+    "tr/hld_ds/hld_dual.hpp",
+    "tr/hld_ds/hld_mono.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
     "tr/hld_dual.hpp",
     "tr/hld_laz.hpp",
     "tr/hld_mono.hpp",
@@ -3146,7 +3234,9 @@ unused = [
 "ds/seg/s2/segd_segd.hpp" = []
 "ds/seg/seg_dual_t.hpp" = [
     "ds/range/range_closest_pair.hpp",
+    "tr/hld_ds/hld_dual.hpp",
     "tr/hld_dual.hpp",
+    "ttr/hld_dual.hpp",
 ]
 "ds/seg/seg_premax_t.hpp" = []
 "ds/seg/seg_sort_t.hpp" = []
@@ -3157,7 +3247,9 @@ unused = [
     "ds/seg/range_max_add.hpp",
     "ds/seg/range_min_add.hpp",
     "ds/seg/seg_sort_t.hpp",
+    "tr/hld_ds/hld_mono.hpp",
     "tr/hld_mono.hpp",
+    "ttr/hld_mono.hpp",
 ]
 "ds/seg/segd_def.hpp" = []
 "ds/seg/segd_sprase_t.hpp" = [
@@ -3171,7 +3263,9 @@ unused = [
 "ds/seg/segl_sparse_t.hpp" = []
 "ds/seg/segl_t.hpp" = [
     "ds/range/rect_union.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
     "tr/hld_laz.hpp",
+    "ttr/hld_sayo.hpp",
 ]
 "ds/seg/segseg.hpp" = []
 "ds/sl/cht.hpp" = []
@@ -3249,6 +3343,7 @@ unused = [
     "gg/func.hpp",
     "tr/best_topo_invs.hpp",
     "tr/skew/lca2.hpp",
+    "ttr/skewle.hpp",
 ]
 "ds/un/dsu_mono.hpp" = []
 "ds/un/dsu_t.hpp" = []
@@ -3343,6 +3438,9 @@ unused = [
     "tr/gbt/gbt_monoid_commute.hpp",
     "tr/hld.hpp",
     "tr/hld_abel.hpp",
+    "tr/hld_ds/hld_dual.hpp",
+    "tr/hld_ds/hld_mono.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
     "tr/hld_dual.hpp",
     "tr/hld_laz.hpp",
     "tr/hld_mono.hpp",
@@ -4455,6 +4553,9 @@ unused = [
     "tr/fast_lca.hpp",
     "tr/gbt/gbt_monoid_commute.hpp",
     "tr/hld_abel.hpp",
+    "tr/hld_ds/hld_dual.hpp",
+    "tr/hld_ds/hld_mono.hpp",
+    "tr/hld_ds/hld_sayo.hpp",
     "tr/hld_dual.hpp",
     "tr/hld_laz.hpp",
     "tr/hld_mono.hpp",
@@ -4465,6 +4566,9 @@ unused = [
     "tr/subtree_hash.hpp",
 ]
 "tr/hld_abel.hpp" = []
+"tr/hld_ds/hld_dual.hpp" = []
+"tr/hld_ds/hld_mono.hpp" = []
+"tr/hld_ds/hld_sayo.hpp" = []
 "tr/hld_dual.hpp" = []
 "tr/hld_laz.hpp" = []
 "tr/hld_mono.hpp" = []
@@ -4482,9 +4586,28 @@ unused = [
     "tr/near_kinbo.hpp",
 ]
 "tr/subtree_hash.hpp" = []
+"ttr/ddp.hpp" = []
+"ttr/ddp_re.hpp" = []
 "ttr/doubling.hpp" = []
 "ttr/find_center.hpp" = []
-"ttr/hld.hpp" = ["gg/func.hpp"]
+"ttr/hld.hpp" = [
+    "gg/func.hpp",
+    "ttr/ddp.hpp",
+    "ttr/ddp_re.hpp",
+    "ttr/hld_dual.hpp",
+    "ttr/hld_mono.hpp",
+    "ttr/hld_sayo.hpp",
+    "ttr/stt.hpp",
+]
+"ttr/hld_dual.hpp" = []
+"ttr/hld_mono.hpp" = []
+"ttr/hld_sayo.hpp" = []
+"ttr/skew.hpp" = []
+"ttr/skewle.hpp" = []
+"ttr/stt.hpp" = [
+    "ttr/ddp.hpp",
+    "ttr/ddp_re.hpp",
+]
 
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
@@ -4644,16 +4767,16 @@ dependencies = [
     "al/alg.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/ds/bit/bit01.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "370 ms"
+time_text = "326 ms"
 memory_text = "18396 KB"
-run_id = 804589
+run_id = 806141
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bit01_1.cpp"]
@@ -4667,16 +4790,16 @@ dependencies = [
     "al/alg.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/ds/bit/bit01_1.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "405 ms"
+time_text = "404 ms"
 memory_text = "59480 KB"
-run_id = 804590
+run_id = 806138
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/bit/bit2_0.cpp"]
@@ -5978,16 +6101,16 @@ dependencies = [
     "al/m/add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/ds/seg/range_sum_point_add.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "126 ms"
+time_text = "137 ms"
 memory_text = "14248 KB"
-run_id = 804654
+run_id = 806137
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/seg/rmq/range_max_add.cpp"]
@@ -6851,16 +6974,16 @@ dependencies = [
     "ds/seg/range_sum_point_add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/ds/wave_matrix/wm2_narr_seg.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "470 ms"
+time_text = "596 ms"
 memory_text = "75028 KB"
-run_id = 804693
+run_id = 806136
 runtime_error = "Run time error details not Available"
 
 [tests."test/ds/wave_matrix/wm2_seg.cpp"]
@@ -10251,16 +10374,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/tr/skew/skew_jump.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "1884 ms"
-memory_text = "64920 KB"
-run_id = 804850
+time_text = "1652 ms"
+memory_text = "64912 KB"
+run_id = 806139
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/skew/skew_lca.cpp"]
@@ -10273,16 +10396,16 @@ dependencies = [
     "ds/basic/hashmap.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/tr/skew/skew_lca.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "789 ms"
+time_text = "589 ms"
 memory_text = "59516 KB"
-run_id = 804851
+run_id = 806140
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/stt/ddp_affine.cpp"]
@@ -10375,16 +10498,16 @@ dependencies = [
     "al/m/add.hpp",
 ]
 last_trigger = "dependency_changed"
-last_tested_head = "7cdddac079b37b1500ab737d30498a06d7a7fd23"
-last_updated_at = "2026-05-22T05:38:12.051502947Z"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
 
 [tests."test/tr/stt/near0.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "660 ms"
+time_text = "689 ms"
 memory_text = "77048 KB"
-run_id = 804855
+run_id = 806142
 runtime_error = "Run time error details not Available"
 
 [tests."test/tr/stt/near1.cpp"]
@@ -10460,4 +10583,263 @@ grade = "100/100"
 time_text = "893 ms"
 memory_text = "140000 KB"
 run_id = 804860
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/doubling/doubling_jump.cpp"]
+path = "test/ttr/doubling/doubling_jump.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11430"
+problem_id = 11430
+dependencies = ["ttr/doubling.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/doubling/doubling_jump.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2518 ms"
+memory_text = "94440 KB"
+run_id = 806144
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/doubling/doubling_lca.cpp"]
+path = "test/ttr/doubling/doubling_lca.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11431"
+problem_id = 11431
+dependencies = ["ttr/doubling.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/doubling/doubling_lca.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1320 ms"
+memory_text = "94436 KB"
+run_id = 806145
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/hld/hld_jump.cpp"]
+path = "test/ttr/hld/hld_jump.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11430"
+problem_id = 11430
+dependencies = ["ttr/hld.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/hld/hld_jump.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1351 ms"
+memory_text = "96216 KB"
+run_id = 806147
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/hld/hld_lca.cpp"]
+path = "test/ttr/hld/hld_lca.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11431"
+problem_id = 11431
+dependencies = ["ttr/hld.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/hld/hld_lca.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "848 ms"
+memory_text = "96216 KB"
+run_id = 806146
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/hld/hld_path_affine_point_set.cpp"]
+path = "test/ttr/hld/hld_path_affine_point_set.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11444"
+problem_id = 11444
+dependencies = [
+    "mod/mint_t.hpp",
+    "ttr/hld_mono.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+    "al/m/affine.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/hld/hld_path_affine_point_set.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "885 ms"
+memory_text = "47632 KB"
+run_id = 806148
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/hld/hld_path_sum_point_add.cpp"]
+path = "test/ttr/hld/hld_path_sum_point_add.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11440"
+problem_id = 11440
+dependencies = [
+    "debug.hpp",
+    "ttr/hld_mono.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/hld/hld_path_sum_point_add.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1219 ms"
+memory_text = "109876 KB"
+run_id = 806149
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/hld/hld_sayo.cpp"]
+path = "test/ttr/hld/hld_sayo.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11494"
+problem_id = 11494
+dependencies = [
+    "ttr/hld_sayo.hpp",
+    "ds/seg/segl_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/hld/hld_sayo.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "279 ms"
+memory_text = "21260 KB"
+run_id = 806150
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/hld/hld_sub_sum_point_add.cpp"]
+path = "test/ttr/hld/hld_sub_sum_point_add.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11443"
+problem_id = 11443
+dependencies = [
+    "ttr/hld_mono.hpp",
+    "ds/seg/seg_t.hpp",
+    "al/alg.hpp",
+    "ttr/hld.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/hld/hld_sub_sum_point_add.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "630 ms"
+memory_text = "112232 KB"
+run_id = 806152
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/skew/skew_jump.cpp"]
+path = "test/ttr/skew/skew_jump.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11430"
+problem_id = 11430
+dependencies = ["ttr/skew.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/skew/skew_jump.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2545 ms"
+memory_text = "57056 KB"
+run_id = 806153
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/stt/ddp_affine.cpp"]
+path = "test/ttr/stt/ddp_affine.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11435"
+problem_id = 11435
+dependencies = [
+    "mod/mint_t.hpp",
+    "ttr/ddp.hpp",
+    "al/dp_t.hpp",
+    "ttr/stt.hpp",
+    "ttr/hld.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/stt/ddp_affine.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "931 ms"
+memory_text = "57420 KB"
+run_id = 806154
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/stt/ddp_hash.cpp"]
+path = "test/ttr/stt/ddp_hash.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/8420"
+problem_id = 8420
+dependencies = [
+    "mod/mint_t.hpp",
+    "ttr/ddp.hpp",
+    "al/dp_t.hpp",
+    "ttr/stt.hpp",
+    "ttr/hld.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/stt/ddp_hash.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "371 ms"
+memory_text = "53172 KB"
+run_id = 806155
+runtime_error = "Run time error details not Available"
+
+[tests."test/ttr/stt/ddp_re.cpp"]
+path = "test/ttr/stt/ddp_re.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11434"
+problem_id = 11434
+dependencies = [
+    "mod/mint_t.hpp",
+    "ttr/ddp_re.hpp",
+    "al/dp_t.hpp",
+    "ttr/stt.hpp",
+    "ttr/hld.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "6eb6b0d711a246c5e6ba00d6b36f95b180770c23"
+last_updated_at = "2026-05-26T08:36:13.114066444Z"
+
+[tests."test/ttr/stt/ddp_re.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "1405 ms"
+memory_text = "67588 KB"
+run_id = 806156
 runtime_error = "Run time error details not Available"
