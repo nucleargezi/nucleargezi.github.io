@@ -49,6 +49,12 @@ export const algorithmTree = [
         ]
       },
       {
+        label: "Set Power Series",
+        children: [
+          { label: "SPS Note 0", slug: "a-20260601_sps0" },
+        ]
+      },
+      {
         label: "Group Theory",
         children: [
           { label: "Base", slug: "a-20260203_group" },
