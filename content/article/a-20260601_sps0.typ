@@ -80,8 +80,10 @@ $
 === Zeta 变换与 Mobius 变换
 
 zeta 变换和 mobius 变换是定义在偏序集合上的概念, 即使是同一个词, 根据上下文, 所指的内容也可能发生变化
+
 - 对于 $a in #K$ , 定义 $zeta a in #K$ 为 $[x^s]zeta a = sum_(t subset.eq s) a_t$
 将 $zeta: #K -> #K$ 称作 zeta 变化
+
 - 将 $zeta$ 的逆变换记作 $mu$ , 称为 mobius 变换
 给定 $a$ 时, $zeta a$ 和 $mu a$ 可以 $O(n 2^n)$ 计算
 
