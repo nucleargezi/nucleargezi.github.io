@@ -2,6 +2,14 @@
 #let timeline_entries = (
   (
     tier: "gold",
+    date: "05/2026",
+    title: "2026年北京市大学生程序设计竞赛",
+    subtitle: "2026 - 2027 China Collegiate Programming Contest, Beijing Site",
+    award_cn: "金奖",
+    award_en: "Gold Medal",
+  ),
+  (
+    tier: "gold",
     date: "11/2025",
     title: "第 11 届 CCPC 中国大学生程序设计竞赛区域赛郑州站",
     subtitle: "2025 - 2026 China Collegiate Programming Contest, Zhengzhou Site",

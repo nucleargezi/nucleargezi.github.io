@@ -13,7 +13,7 @@
 
 // #figure(image("/public/trash.svg", alt: "yorisou"), caption: "yorisou")
 
-#import "/public/trs.typ": * 
+#import "/public/trs.typ": *
 
 #align(center)[
   #profile-card[
@@ -81,6 +81,80 @@
   ]
 ]
 
+== Team
+
+#let seasons = (
+  (year: "2026-2027", team: "绮罗星距离", id: "BJTU01", role: "Captain", best: "TBD"),
+  (year: "2025-2026", team: "绮罗星距离", id: "BJTU01", role: "Captain", best: "rk9"),
+  (year: "2024-2025", team: "白夜追风", id: "BJTU02", role: "Member", best: "rk20"),
+)
+
+#let badge(s, kind: "plain") = {
+  let bg = if kind == "captain" {
+    rgb("#fff3d6")
+  } else if kind == "member" {
+    rgb("#eaf2ff")
+  } else {
+    rgb("#f1f5f9")
+  }
+
+  let fg = if kind == "captain" {
+    rgb("#8a5a00")
+  } else if kind == "member" {
+    rgb("#1d4ed8")
+  } else {
+    rgb("#475569")
+  }
+
+  box(
+    fill: bg,
+    radius: 1pt,
+    inset: (x: 4pt, y: 1pt),
+  )[
+    #text(size: 7.5pt, fill: fg, weight: "medium")[#s]
+  ]
+}
+
+#let role-kind(role) = if role == "Captain" {
+  "captain"
+} else {
+  "member"
+}
+
+#let team-cell(s) = grid(
+  columns: (42pt, 54pt),
+  gutter: 8pt,
+  align: (left, left),
+  text(weight: "semibold")[#(s.team)], badge(s.id),
+)
+
+#table(
+  columns: (1.2fr, 2.4fr, auto, auto),
+  inset: (x: 8pt, y: 6pt),
+  align: (left, left, center, center),
+  stroke: (x, y) => if y == 0 {
+    (bottom: 0.7pt + rgb("#cbd5e1"))
+  } else {
+    (bottom: 0.4pt + rgb("#e2e8f0"))
+  },
+
+  table.header(
+    text(weight: "bold")[Year],
+    text(weight: "bold")[Team],
+    text(weight: "bold")[Role],
+    text(weight: "bold")[Season Best],
+  ),
+
+  ..seasons
+    .map(s => (
+      s.year,
+      team-cell(s),
+      badge(s.role, kind: role-kind(s.role)),
+      s.best,
+    ))
+    .flatten(),
+)
+
 == About Yorisou Realm
 
 主要是记录个人学习，以及一些乱七八糟的东西
@@ -94,15 +168,12 @@
 
 // 2e5 888ms , offline 88ms
 // (f[i], g[i]) return c[i]; (N + M - 1) all ins
-template <typename T> 
-struct fps_t<T>::conv_t {
+TE struct fps_t<T>::conv_t {
   fps f, g, c, a, b;
   vc<fps> ff, gg;
   int p = 0;
 
-  inline T operator()(T fi, T gi) { return add(fi, gi); }
-
-  T add(T fi, T gi) {
+  T operator()(T fi, T gi) {
     f.ep(fi);
     g.ep(gi);
     int k = lowbit(p + 2), w = 1 << k, s;
@@ -135,6 +206,5 @@ struct fps_t<T>::conv_t {
   }
 };
 
-template <typename T> 
-fps_t<T>::conv_t fps_t<T>::online_conv() { return conv_t(); }
+TE fps_t<T>::conv_t fps_t<T>::online_conv() { return conv_t(); }
 ```
