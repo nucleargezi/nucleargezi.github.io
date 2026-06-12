@@ -1,5 +1,5 @@
 schema_version = 4
-generated_at = "2026-06-12T06:12:55.273852134Z"
+generated_at = "2026-06-12T19:55:42.294179929Z"
 status = "passed"
 failures = []
 
@@ -11,20 +11,32 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "test/flow/BM/BM_ecov.cpp",
-    "test/flow/BM/BM_v_DM_dec.cpp",
-    "test/flow/BM/BM_v_matching.cpp",
-    "test/flow/BM/BM_v_vcov.cpp",
+    "README.md",
+    "g/count_p345.hpp",
+    "gg/c3/count_c3c4.hpp",
+    "gg/c3/count_p345.hpp",
+    "gg/sht/bfs1.hpp",
+    "test/flow/BM/BM_v_ecov.cpp",
+    "test/gg/c3/count_p345.cpp",
+    "test/gg/dynamic_connect/dynamic_connect.cpp",
+    "test/gg/dynamic_connect/dynamic_connect_sum.cpp",
+    "test/gg/shortest/bellman_ford.cpp",
+    "test/gg/shortest/bfs1.cpp",
+    "test/gg/two_sat.cpp",
 ]
 selected_tests = [
-    "test/flow/BM/BM_ecov.cpp",
-    "test/flow/BM/BM_v_DM_dec.cpp",
-    "test/flow/BM/BM_v_matching.cpp",
-    "test/flow/BM/BM_v_vcov.cpp",
+    "test/flow/BM/BM_v_ecov.cpp",
+    "test/gg/c3/count_c4.cpp",
+    "test/gg/c3/count_p345.cpp",
+    "test/gg/dynamic_connect/dynamic_connect.cpp",
+    "test/gg/dynamic_connect/dynamic_connect_sum.cpp",
+    "test/gg/shortest/bellman_ford.cpp",
+    "test/gg/shortest/bfs1.cpp",
+    "test/gg/two_sat.cpp",
 ]
-total_discovered = 313
-total_selected = 4
-passed = 4
+total_discovered = 319
+total_selected = 8
+passed = 8
 failed = 0
 invalid = 0
 
@@ -185,6 +197,7 @@ all_passed = [
     "gg/bs.hpp",
     "gg/c3/count_c3c4.hpp",
     "gg/c3/count_c5.hpp",
+    "gg/c3/count_p345.hpp",
     "gg/c3/enum_c3.hpp",
     "gg/cactus/diameter.hpp",
     "gg/cactus/dist.hpp",
@@ -193,14 +206,17 @@ all_passed = [
     "gg/clique/max_independent_set.hpp",
     "gg/dag_path_cover.hpp",
     "gg/dominator.hpp",
+    "gg/dynamic_connect.hpp",
     "gg/euler_walk.hpp",
     "gg/find_min_cycle.hpp",
     "gg/inc_mst.hpp",
     "gg/max_anti_chain.hpp",
     "gg/min_color.hpp",
     "gg/scc.hpp",
+    "gg/sht/bellman_ford.hpp",
     "gg/sht/bfs.hpp",
     "gg/sht/bfs01.hpp",
+    "gg/sht/bfs1.hpp",
     "gg/sht/dij.hpp",
     "gg/sht/dij_fheap.hpp",
     "gg/sht/k_short_path.hpp",
@@ -208,6 +224,7 @@ all_passed = [
     "gg/steiner.hpp",
     "gg/tr_ecc.hpp",
     "gg/tree_diameter.hpp",
+    "gg/two_sat.hpp",
     "gg/unicycle.hpp",
     "gg/vs_es.hpp",
     "line/01/sp.hpp",
@@ -489,15 +506,10 @@ unused = [
     "ge/exp/tri_area_me.hpp",
     "gg/bcc_v_e.hpp",
     "gg/bridge.hpp",
-    "gg/c3/count_p345.hpp",
-    "gg/dynamic_connect.hpp",
     "gg/func.hpp",
     "gg/func_mono.hpp",
     "gg/mst_kru.hpp",
-    "gg/sht/bellman_ford.hpp",
-    "gg/sht/bfs1.hpp",
     "gg/sht/johnson.hpp",
-    "gg/two_sat.hpp",
     "gg/unicycle_forest.hpp",
     "jen/greedy_coins_hack_gen.hpp",
     "jen/magic_square.hpp",
@@ -7580,30 +7592,6 @@ memory_text = "8184 KB"
 run_id = 819550
 runtime_error = "Run time error details not Available"
 
-[tests."test/flow/BM/BM_ecov.cpp"]
-path = "test/flow/BM/BM_ecov.cpp"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11524"
-problem_id = 11524
-dependencies = [
-    "flow/BM_v.hpp",
-    "gg/01coloring.hpp",
-    "gg/scc.hpp",
-    "ds/basic/queue.hpp",
-    "gg/bs.hpp",
-]
-last_trigger = "test_file_changed"
-last_tested_head = "77c21c37bf464b92fa28a6dfbf266f9501c135b1"
-last_updated_at = "2026-06-12T06:12:55.273852134Z"
-
-[tests."test/flow/BM/BM_ecov.cpp".last_result]
-status = "passed"
-verdict = "Accepted"
-grade = "100/100"
-time_text = "542 ms"
-memory_text = "27388 KB"
-run_id = 819856
-runtime_error = "Run time error details not Available"
-
 [tests."test/flow/BM/BM_v_DM_dec.cpp"]
 path = "test/flow/BM/BM_v_DM_dec.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11474"
@@ -7625,6 +7613,30 @@ grade = "100/100"
 time_text = "21 ms"
 memory_text = "4836 KB"
 run_id = 819858
+runtime_error = "Run time error details not Available"
+
+[tests."test/flow/BM/BM_v_ecov.cpp"]
+path = "test/flow/BM/BM_v_ecov.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11524"
+problem_id = 11524
+dependencies = [
+    "flow/BM_v.hpp",
+    "gg/01coloring.hpp",
+    "gg/scc.hpp",
+    "ds/basic/queue.hpp",
+    "gg/bs.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/flow/BM/BM_v_ecov.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "597 ms"
+memory_text = "27384 KB"
+run_id = 819866
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/BM/BM_v_matching.cpp"]
@@ -9196,17 +9208,17 @@ dependencies = [
     "gg/c3/count_c3c4.hpp",
     "gg/bs.hpp",
 ]
-last_trigger = "test_file_changed"
-last_tested_head = "1809f54e77686f3406345cefaa5973fd74d515e8"
-last_updated_at = "2026-06-12T06:04:39.094471684Z"
+last_trigger = "dependency_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
 
 [tests."test/gg/c3/count_c4.cpp".last_result]
 status = "passed"
 verdict = "Accepted"
 grade = "100/100"
-time_text = "117 ms"
+time_text = "114 ms"
 memory_text = "12236 KB"
-run_id = 819810
+run_id = 819865
 runtime_error = "Run time error details not Available"
 
 [tests."test/gg/c3/count_c5.cpp"]
@@ -9229,6 +9241,28 @@ grade = "100/100"
 time_text = "3646 ms"
 memory_text = "30020 KB"
 run_id = 819811
+runtime_error = "Run time error details not Available"
+
+[tests."test/gg/c3/count_p345.cpp"]
+path = "test/gg/c3/count_p345.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11539"
+problem_id = 11539
+dependencies = [
+    "gg/c3/count_p345.hpp",
+    "gg/c3/count_c3c4.hpp",
+    "gg/bs.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/gg/c3/count_p345.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "199 ms"
+memory_text = "3572 KB"
+run_id = 819868
 runtime_error = "Run time error details not Available"
 
 [tests."test/gg/cactus/cactus_diameter.cpp"]
@@ -9337,6 +9371,45 @@ grade = "100/100"
 time_text = "169 ms"
 memory_text = "24796 KB"
 run_id = 819816
+runtime_error = "Run time error details not Available"
+
+[tests."test/gg/dynamic_connect/dynamic_connect.cpp"]
+path = "test/gg/dynamic_connect/dynamic_connect.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11471"
+problem_id = 11471
+dependencies = ["gg/dynamic_connect.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/gg/dynamic_connect/dynamic_connect.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "6225 ms"
+memory_text = "20772 KB"
+run_id = 819869
+runtime_error = "Run time error details not Available"
+
+[tests."test/gg/dynamic_connect/dynamic_connect_sum.cpp"]
+path = "test/gg/dynamic_connect/dynamic_connect_sum.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11472"
+problem_id = 11472
+dependencies = [
+    "gg/dynamic_connect.hpp",
+    "al/m/add.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/gg/dynamic_connect/dynamic_connect_sum.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "8188 ms"
+memory_text = "615116 KB"
+run_id = 819870
 runtime_error = "Run time error details not Available"
 
 [tests."test/gg/enum/enum_clique.cpp"]
@@ -9577,6 +9650,49 @@ memory_text = "80928 KB"
 run_id = 819616
 runtime_error = "Run time error details not Available"
 
+[tests."test/gg/shortest/bellman_ford.cpp"]
+path = "test/gg/shortest/bellman_ford.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11541"
+problem_id = 11541
+dependencies = [
+    "gg/sht/bellman_ford.hpp",
+    "gg/bs.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/gg/shortest/bellman_ford.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "18 ms"
+memory_text = "2804 KB"
+run_id = 819867
+runtime_error = "Run time error details not Available"
+
+[tests."test/gg/shortest/bfs1.cpp"]
+path = "test/gg/shortest/bfs1.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11542"
+problem_id = 11542
+dependencies = [
+    "gg/sht/bfs1.hpp",
+    "ds/basic/queue.hpp",
+    "gg/bs.hpp",
+]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/gg/shortest/bfs1.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "27 ms"
+memory_text = "5640 KB"
+run_id = 819871
+runtime_error = "Run time error details not Available"
+
 [tests."test/gg/shortest/dij.cpp"]
 path = "test/gg/shortest/dij.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/11365"
@@ -9727,6 +9843,24 @@ grade = "100/100"
 time_text = "797 ms"
 memory_text = "47916 KB"
 run_id = 819829
+runtime_error = "Run time error details not Available"
+
+[tests."test/gg/two_sat.cpp"]
+path = "test/gg/two_sat.cpp"
+problem_url = "https://icpc.bjtu.edu.cn/problem/11540"
+problem_id = 11540
+dependencies = ["gg/two_sat.hpp"]
+last_trigger = "test_file_changed"
+last_tested_head = "63e2e1b8144eab2ef4394181ccb109c8fa724513"
+last_updated_at = "2026-06-12T19:55:42.294179929Z"
+
+[tests."test/gg/two_sat.cpp".last_result]
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "37 ms"
+memory_text = "4336 KB"
+run_id = 819872
 runtime_error = "Run time error details not Available"
 
 [tests."test/gg/unicycle_dist.cpp"]
