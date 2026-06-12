@@ -1,6 +1,7 @@
 schema_version = 4
-generated_at = "2026-06-12T06:04:39.094471684Z"
-status = "failed"
+generated_at = "2026-06-12T06:12:55.273852134Z"
+status = "passed"
+failures = []
 
 [repo]
 root = "/home/yorisou/Yorisou_alg_space/YRS"
@@ -10,180 +11,21 @@ head = "HEAD"
 [latest_run]
 trigger_mode = "diff"
 changed_paths = [
-    "README.md",
-    "ds/basic/retsu.hpp",
-    "flow/BM_v.hpp",
-    "flow/max_flow.hpp",
-    "g/cactus.hpp",
-    "g/cactus_diameter.hpp",
-    "g/dag_path_cover.hpp",
-    "g/find_min_cycle.hpp",
-    "g/max_clique.hpp",
-    "g/max_independent_set.hpp",
-    "g/steiner.hpp",
-    "g/tr_ecc.hpp",
-    "g/vs_to_es.hpp",
-    "gg/bridge.hpp",
-    "gg/c3/count_c3c4.hpp",
-    "gg/c3/count_c5.hpp",
-    "gg/c3/count_p345.hpp",
-    "gg/c3/enum_c3.hpp",
-    "gg/cactus/diameter.hpp",
-    "gg/cactus/dist.hpp",
-    "gg/cc_of_comp_g.hpp",
-    "gg/clique/enum_clique.hpp",
-    "gg/clique/max_independent_set.hpp",
-    "gg/dag_path_cover.hpp",
-    "gg/dominator.hpp",
-    "gg/dynamic_connect.hpp",
-    "gg/euler_walk.hpp",
-    "gg/find_min_cycle.hpp",
-    "gg/inc_mst.hpp",
-    "gg/max_anti_chain.hpp",
-    "gg/min_color.hpp",
-    "gg/mst_kru.hpp",
-    "gg/sht/bfs.hpp",
-    "gg/sht/johnson.hpp",
-    "gg/steiner.hpp",
-    "gg/tr_ecc.hpp",
-    "gg/tree_diameter.hpp",
-    "gg/two_sat.hpp",
-    "gg/vs_es.hpp",
-    "line/01/range_sp_online.hpp",
-    "test/gg/c3/count_c4.cpp",
-    "test/gg/c3/count_c5.cpp",
-    "test/gg/cactus/cactus_diameter.cpp",
-    "test/gg/cactus/cactus_dist.cpp",
-    "test/gg/cc_of_comp_g.cpp",
-    "test/gg/dag_path_cover_un_cross.cpp",
-    "test/gg/dominator_tree.cpp",
-    "test/gg/enum/enum_clique.cpp",
-    "test/gg/enum/enum_cyc3.cpp",
-    "test/gg/euler/euler_tour_dir.cpp",
-    "test/gg/euler/euler_tour_undir.cpp",
-    "test/gg/find_min_cycle_dir.cpp",
-    "test/gg/find_min_cycle_undir.cpp",
-    "test/gg/inc_mst.cpp",
-    "test/gg/max_anti_chain.cpp",
-    "test/gg/max_independent_set.cpp",
-    "test/gg/min_color.cpp",
-    "test/gg/steiner.cpp",
-    "test/gg/three_ecc.cpp",
-    "test/gg/tree_diameter.cpp",
-    "test/gg/unicycle_dist.cpp",
-    "test/graph/sht/dij.cpp",
-    "test/graph/sht/dij_fheap.cpp",
-    "test/graph/sht/k_shortset_walk.cpp",
-    "test/ttr/find_tree_centroid.cpp",
-    "test/ttr/hld/hld_pre_vec_sp.cpp",
-    "ttr/find_center.hpp",
-    "ttr/find_centroids.hpp",
-    "ttr/hld.hpp",
-    "ttr/hld_sp.hpp",
-    "ttr/hld_st.hpp",
-    "ttr/nearr.hpp",
-    "ttr/sk/skew.hpp",
-    "ttr/sk/skewle.hpp",
-]
-selected_tests = [
-    "test/bigint/add.cpp",
-    "test/bigint/div.cpp",
-    "test/bigint/mul.cpp",
-    "test/dp/knapsack_tree.cpp",
-    "test/ds/bit/bitbit.cpp",
     "test/flow/BM/BM_ecov.cpp",
     "test/flow/BM/BM_v_DM_dec.cpp",
     "test/flow/BM/BM_v_matching.cpp",
     "test/flow/BM/BM_v_vcov.cpp",
-    "test/flow/hungry.cpp",
-    "test/flow/max_flow.cpp",
-    "test/flow/min_cut_tree.cpp",
-    "test/fps/basic/comp.cpp",
-    "test/fps/basic/comp_inv.cpp",
-    "test/fps/basic/comp_inv_mtt.cpp",
-    "test/fps/basic/conv17.cpp",
-    "test/fps/basic/conv99.cpp",
-    "test/fps/basic/conv_all.cpp",
-    "test/fps/basic/conv_multi_2n.cpp",
-    "test/fps/basic/conv_multi_p.cpp",
-    "test/fps/basic/conv_ull.cpp",
-    "test/fps/basic/find_root.cpp",
-    "test/fps/basic/fps_exp.cpp",
-    "test/fps/basic/fps_inv.cpp",
-    "test/fps/basic/fps_log.cpp",
-    "test/fps/basic/fps_pow.cpp",
-    "test/fps/basic/fps_sqrt.cpp",
-    "test/fps/basic/lag_iota.cpp",
-    "test/fps/basic/multi_eval.cpp",
-    "test/fps/basic/multi_eval_geo.cpp",
-    "test/fps/basic/multi_inte.cpp",
-    "test/fps/basic/multi_inte_geo.cpp",
-    "test/fps/basic/poly_divmod.cpp",
-    "test/fps/basic/poly_inv.cpp",
-    "test/fps/basic/shift.cpp",
-    "test/fps/bell.cpp",
-    "test/fps/bernoulli.cpp",
-    "test/fps/coef_of_rationals.cpp",
-    "test/fps/coef_of_rationals_range.cpp",
-    "test/fps/fac_large0.cpp",
-    "test/fps/fac_large1.cpp",
-    "test/fps/partition.cpp",
-    "test/fps/prod_of_one_plus_xn.cpp",
-    "test/fps/sing1_k.cpp",
-    "test/fps/sing1_n.cpp",
-    "test/fps/sing2_k.cpp",
-    "test/fps/sing2_n.cpp",
-    "test/gg/c3/count_c4.cpp",
-    "test/gg/c3/count_c5.cpp",
-    "test/gg/cactus/cactus_diameter.cpp",
-    "test/gg/cactus/cactus_dist.cpp",
-    "test/gg/cc_of_comp_g.cpp",
-    "test/gg/dag_path_cover_un_cross.cpp",
-    "test/gg/dominator_tree.cpp",
-    "test/gg/enum/enum_clique.cpp",
-    "test/gg/enum/enum_cyc3.cpp",
-    "test/gg/euler/euler_tour_dir.cpp",
-    "test/gg/euler/euler_tour_undir.cpp",
-    "test/gg/find_min_cycle_dir.cpp",
-    "test/gg/find_min_cycle_undir.cpp",
-    "test/gg/inc_mst.cpp",
-    "test/gg/max_anti_chain.cpp",
-    "test/gg/max_independent_set.cpp",
-    "test/gg/min_color.cpp",
-    "test/gg/steiner.cpp",
-    "test/gg/three_ecc.cpp",
-    "test/gg/tree_diameter.cpp",
-    "test/gg/unicycle_dist.cpp",
-    "test/graph/euler_tour_dir.cpp",
-    "test/graph/euler_tour_undir.cpp",
-    "test/graph/max_independent_set.cpp",
-    "test/graph/min_cycle_dir.cpp",
-    "test/graph/min_cycle_undir.cpp",
-    "test/graph/sht/dij.cpp",
-    "test/graph/sht/dij_fheap.cpp",
-    "test/graph/sht/k_shortset_walk.cpp",
-    "test/graph/steiner_tree.cpp",
-    "test/graph/three_ecc.cpp",
-    "test/string/wildcard.cpp",
-    "test/tr/doubling/doubling_jump.cpp",
-    "test/tr/doubling/doubling_lca.cpp",
-    "test/ttr/best_topo_invs.cpp",
-    "test/ttr/find_tree_centroid.cpp",
-    "test/ttr/hld/hld_jump.cpp",
-    "test/ttr/hld/hld_lca.cpp",
-    "test/ttr/hld/hld_path_affine_point_set.cpp",
-    "test/ttr/hld/hld_path_sum_point_add.cpp",
-    "test/ttr/hld/hld_pre_vec_sp.cpp",
-    "test/ttr/hld/hld_sayo.cpp",
-    "test/ttr/hld/hld_sub_sum_point_add.cpp",
-    "test/ttr/stt/ddp_affine.cpp",
-    "test/ttr/stt/ddp_hash.cpp",
-    "test/ttr/stt/ddp_re.cpp",
+]
+selected_tests = [
+    "test/flow/BM/BM_ecov.cpp",
+    "test/flow/BM/BM_v_DM_dec.cpp",
+    "test/flow/BM/BM_v_matching.cpp",
+    "test/flow/BM/BM_v_vcov.cpp",
 ]
 total_discovered = 313
-total_selected = 93
-passed = 89
-failed = 4
+total_selected = 4
+passed = 4
+failed = 0
 invalid = 0
 
 [template_coverage]
@@ -211,6 +53,7 @@ all_passed = [
     "ds/basic/fset.hpp",
     "ds/basic/hashmap.hpp",
     "ds/basic/node_pool.hpp",
+    "ds/basic/queue.hpp",
     "ds/basic/retsu.hpp",
     "ds/basic/unordered_discreate.hpp",
     "ds/bit/bit.hpp",
@@ -287,6 +130,7 @@ all_passed = [
     "ds/wave/wave_mat_2d.hpp",
     "ds/wave/wave_mat_sim.hpp",
     "flow/BM.hpp",
+    "flow/BM_v.hpp",
     "flow/HLPP.hpp",
     "flow/flow_lm.hpp",
     "flow/flower.hpp",
@@ -335,8 +179,10 @@ all_passed = [
     "ge/exp/mst.hpp",
     "ge/pairs/closest_pair.hpp",
     "ge/pairs/furthest_pair.hpp",
+    "gg/01coloring.hpp",
     "gg/bcc_e.hpp",
     "gg/bct.hpp",
+    "gg/bs.hpp",
     "gg/c3/count_c3c4.hpp",
     "gg/c3/count_c5.hpp",
     "gg/c3/enum_c3.hpp",
@@ -352,6 +198,7 @@ all_passed = [
     "gg/inc_mst.hpp",
     "gg/max_anti_chain.hpp",
     "gg/min_color.hpp",
+    "gg/scc.hpp",
     "gg/sht/bfs.hpp",
     "gg/sht/bfs01.hpp",
     "gg/sht/dij.hpp",
@@ -498,13 +345,7 @@ all_passed = [
     "ttr/hld_sp.hpp",
     "ttr/stt.hpp",
 ]
-has_failures = [
-    "ds/basic/queue.hpp",
-    "flow/BM_v.hpp",
-    "gg/01coloring.hpp",
-    "gg/bs.hpp",
-    "gg/scc.hpp",
-]
+has_failures = []
 unused = [
     "al/acted_set/from_monoid.hpp",
     "al/am/his_max_add.hpp",
@@ -5244,30 +5085,6 @@ unused = [
 "ttr/tr.hpp" = ["ttr/tr_rand_walk.hpp"]
 "ttr/tr_rand_walk.hpp" = []
 
-[[failures]]
-path = "test/flow/BM/BM_ecov.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11524"
-message = "Compilation error"
-
-[[failures]]
-path = "test/flow/BM/BM_v_DM_dec.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11474"
-message = "Compilation error"
-
-[[failures]]
-path = "test/flow/BM/BM_v_matching.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11347"
-message = "Compilation error"
-
-[[failures]]
-path = "test/flow/BM/BM_v_vcov.cpp"
-status = "failed"
-problem_url = "https://icpc.bjtu.edu.cn/problem/11523"
-message = "Compilation error"
-
 [tests."test/bigint/add.cpp"]
 path = "test/bigint/add.cpp"
 problem_url = "https://icpc.bjtu.edu.cn/problem/10527"
@@ -7774,26 +7591,17 @@ dependencies = [
     "ds/basic/queue.hpp",
     "gg/bs.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1809f54e77686f3406345cefaa5973fd74d515e8"
-last_updated_at = "2026-06-12T06:04:39.094471684Z"
+last_trigger = "test_file_changed"
+last_tested_head = "77c21c37bf464b92fa28a6dfbf266f9501c135b1"
+last_updated_at = "2026-06-12T06:12:55.273852134Z"
 
 [tests."test/flow/BM/BM_ecov.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 819766
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:804:3: error: ‘BM’ was not declared in this scope; did you mean ‘M’?
-  804 |   BM f(g);
-      |   ^~
-      |   M
-Main.cc:805:9: error: ‘f’ was not declared in this scope
-  805 |   Z s = f.ecov();
-      |         ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "542 ms"
+memory_text = "27388 KB"
+run_id = 819856
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/BM/BM_v_DM_dec.cpp"]
@@ -7806,26 +7614,17 @@ dependencies = [
     "gg/scc.hpp",
     "ds/basic/queue.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1809f54e77686f3406345cefaa5973fd74d515e8"
-last_updated_at = "2026-06-12T06:04:39.094471684Z"
+last_trigger = "test_file_changed"
+last_tested_head = "77c21c37bf464b92fa28a6dfbf266f9501c135b1"
+last_updated_at = "2026-06-12T06:12:55.273852134Z"
 
 [tests."test/flow/BM/BM_v_DM_dec.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 819769
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:783:3: error: ‘BM’ was not declared in this scope; did you mean ‘M’?
-  783 |   BM f(g);
-      |   ^~
-      |   M
-Main.cc:784:14: error: ‘f’ was not declared in this scope
-  784 |   Z [c, w] = f.DM_dec();
-      |              ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "21 ms"
+memory_text = "4836 KB"
+run_id = 819858
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/BM/BM_v_matching.cpp"]
@@ -7838,23 +7637,17 @@ dependencies = [
     "gg/scc.hpp",
     "ds/basic/queue.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1809f54e77686f3406345cefaa5973fd74d515e8"
-last_updated_at = "2026-06-12T06:04:39.094471684Z"
+last_trigger = "test_file_changed"
+last_tested_head = "77c21c37bf464b92fa28a6dfbf266f9501c135b1"
+last_updated_at = "2026-06-12T06:12:55.273852134Z"
 
 [tests."test/flow/BM/BM_v_matching.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 819770
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:782:9: error: ‘BM’ was not declared in this scope; did you mean ‘M’?
-  782 |   Z s = BM(g)();
-      |         ^~
-      |         M"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "2431 ms"
+memory_text = "23008 KB"
+run_id = 819857
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/BM/BM_v_vcov.cpp"]
@@ -7867,26 +7660,17 @@ dependencies = [
     "gg/scc.hpp",
     "ds/basic/queue.hpp",
 ]
-last_trigger = "dependency_changed"
-last_tested_head = "1809f54e77686f3406345cefaa5973fd74d515e8"
-last_updated_at = "2026-06-12T06:04:39.094471684Z"
+last_trigger = "test_file_changed"
+last_tested_head = "77c21c37bf464b92fa28a6dfbf266f9501c135b1"
+last_updated_at = "2026-06-12T06:12:55.273852134Z"
 
 [tests."test/flow/BM/BM_v_vcov.cpp".last_result]
-status = "failed"
-verdict = "Compilation error"
-grade = "-"
-time_text = "-"
-memory_text = "-"
-run_id = 819771
-compile_error = """
-Main.cc: In function ‘void Yorisou()’:
-Main.cc:784:3: error: ‘BM’ was not declared in this scope; did you mean ‘M’?
-  784 |   BM f(g);
-      |   ^~
-      |   M
-Main.cc:787:16: error: ‘f’ was not declared in this scope
-  787 |   for (int x : f.vcov()) ++s[x], ++c;
-      |                ^"""
+status = "passed"
+verdict = "Accepted"
+grade = "100/100"
+time_text = "61 ms"
+memory_text = "9856 KB"
+run_id = 819859
 runtime_error = "Run time error details not Available"
 
 [tests."test/flow/bflow_check.cpp"]
