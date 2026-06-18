@@ -114,14 +114,13 @@ pnpm dev:local
 仓库当前测试位于 `tests/`：
 
 - `tests/local-debug.test.mjs`
+- `tests/library-state.test.mjs`
 
-项目暂时没有在 `package.json` 里单独声明 `test` 脚本, 可以直接用 Node 原生测试运行：
+可以通过 `pnpm test` 运行 Node 原生测试：
 
 ```bash
-node --test tests/*.test.mjs
+pnpm test
 ```
-
-如果后续测试范围继续扩大, 建议把常用命令补进 `package.json` 的 `scripts`. 
 
 ## 部署
 

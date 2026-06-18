@@ -8,7 +8,8 @@
     "dev": "astro dev",
     "dev:local": "BLOG_LOCAL_DEBUG=1 astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test": "node --test tests/*.test.mjs"
   },
   "keywords": [],
   "author": "",
