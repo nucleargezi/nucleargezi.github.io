@@ -1,12 +1,12 @@
 schema_version = 4
-generated_at = "2026-06-18T08:40:49.234276Z"
+generated_at = "2026-06-18T12:45:33.283340Z"
 status = "passed"
 failures = []
 
 [repo]
 root = "/home/runner/work/Library/Library/work/YRS"
 base = ""
-head = "afe7c33c82290898079a43577e1b1555ca5b973b"
+head = "236586f28383716910d82241a91a5f2d755048a3"
 
 [latest_run]
 trigger_mode = "all"
@@ -752,6 +752,7 @@ unused = [
     "string/runs.hpp",
     "string/sam.hpp",
     "string/sam_checker.hpp",
+    "string/sam_ex.hpp",
     "string/shuki.hpp",
     "string/subseq.hpp",
     "string/wildcard_match_ntt.hpp",
@@ -2365,6 +2366,7 @@ unused = [
     "ds/basic/node_pool.hpp",
     "string/sam.hpp",
 ]
+"string/sam_ex.hpp" = []
 "string/shuki.hpp" = [
     "string/zfunction.hpp",
 ]
@@ -3922,6 +3924,7 @@ unused = [
     "string/sam_checker.hpp",
 ]
 "string/sam_checker.hpp" = []
+"string/sam_ex.hpp" = []
 "string/shuki.hpp" = []
 "string/subseq.hpp" = []
 "string/wildcard_match_ntt.hpp" = []
@@ -4044,13 +4047,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."conv/max_plus_conv_concave_concave".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.135s"
+time_text = "18.62s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4066,13 +4069,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."conv/max_plus_conv_mixed".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.238s"
+time_text = "18.031s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4088,13 +4091,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."conv/min_plus_conv_convex_convex".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.382s"
+time_text = "16.054s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4110,13 +4113,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."conv/min_plus_conv_mixed".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.099s"
+time_text = "19.937s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4132,13 +4135,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."conv/monotone_minima".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "11.409s"
+time_text = "17.935s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4154,13 +4157,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."conv/nth_ele_from_sorted_list".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.189s"
+time_text = "20.165s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4176,13 +4179,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/candy_dp".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "14.79s"
+time_text = "13.104s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4198,13 +4201,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/knapsack01_diff_value".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.033s"
+time_text = "15.461s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4220,13 +4223,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/knapsack01_frontier".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.249s"
+time_text = "15.681s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4242,13 +4245,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/knapsack01_value".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.561s"
+time_text = "19.191s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4264,13 +4267,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/knapsack_all_value".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.065s"
+time_text = "11.728s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4286,13 +4289,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/knapsack_multi_value".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.687s"
+time_text = "16.328s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4309,13 +4312,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/knapsack_tree_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "14.673s"
+time_text = "15.009s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4331,13 +4334,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/monge_dp".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "14.8s"
+time_text = "14.448s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4353,13 +4356,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/monoton_dp".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.264s"
+time_text = "16.015s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4375,13 +4378,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."dp/subset_sum".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.27s"
+time_text = "14.832s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4397,13 +4400,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_bs_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.639s"
+time_text = "16.11s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4419,13 +4422,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_bsa_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "27.841s"
+time_text = "28.03s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4441,13 +4444,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_deque_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.547s"
+time_text = "18.648s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4464,13 +4467,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_floyd_bitset_closure".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.174s"
+time_text = "13.275s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4486,13 +4489,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_fset_del_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.926s"
+time_text = "19.585s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4508,13 +4511,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_fset_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.038s"
+time_text = "18.792s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4530,13 +4533,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_hashmap_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "22.214s"
+time_text = "20.145s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4552,13 +4555,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_queue_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.014s"
+time_text = "13.761s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4574,13 +4577,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/basic_retsu_matrix".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.573s"
+time_text = "17.653s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4596,13 +4599,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/bit01_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.001s"
+time_text = "18.464s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4619,13 +4622,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/bit2_2d_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.042s"
+time_text = "23.303s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4643,13 +4646,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/bit_t_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.288s"
+time_text = "14.379s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4666,13 +4669,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/bitbit_2d_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.901s"
+time_text = "15.041s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4688,13 +4691,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/cartesian_tree_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "36.121s"
+time_text = "36.66s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4710,13 +4713,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/chtholly_fset_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.967s"
+time_text = "17.682s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4732,13 +4735,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/chtholly_map_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.086s"
+time_text = "17.65s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4755,13 +4758,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/dual_bit2_2d_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.943s"
+time_text = "19.333s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4779,13 +4782,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/dual_bit_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.552s"
+time_text = "16.701s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4801,13 +4804,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/dynamic_array_persistent_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.283s"
+time_text = "19.179s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4823,13 +4826,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/dynamic_array_sparse_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.599s"
+time_text = "18.486s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4846,13 +4849,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/dynamic_bit_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.551s"
+time_text = "18.283s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4868,13 +4871,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/heap_erase_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.023s"
+time_text = "18.428s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4890,13 +4893,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/heap_fheap_monotone_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.935s"
+time_text = "15.806s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4912,13 +4915,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/heap_laz_merge_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.782s"
+time_text = "29.818s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4934,13 +4937,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/heap_merge_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "26.405s"
+time_text = "25.794s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4956,13 +4959,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/heap_minmax_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.475s"
+time_text = "18.405s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -4978,13 +4981,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/kdt_circle_enum".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.198s"
+time_text = "18.931s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5002,13 +5005,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/kdt_mono_generic_smoke".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.67s"
+time_text = "17.735s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5025,13 +5028,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/kdt_mono_set_add_rect".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.455s"
+time_text = "17.126s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5048,13 +5051,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/kdt_mono_sum_rect".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "11.904s"
+time_text = "18.467s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5070,13 +5073,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/kdt_nearest".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.123s"
+time_text = "17.872s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5092,13 +5095,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/lct_base_path_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.802s"
+time_text = "19.04s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5115,13 +5118,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/lct_mono_path_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.047s"
+time_text = "18.656s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5137,13 +5140,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/lct_sayo_path_apply_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.523s"
+time_text = "15.245s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5159,13 +5162,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/lct_simple_topology_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.721s"
+time_text = "17.893s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5182,13 +5185,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/lct_subtree_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.368s"
+time_text = "19.574s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5206,13 +5209,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/matroid_circuit_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "46.926s"
+time_text = "36.401s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5231,13 +5234,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/matroid_intersection_graph_partition".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "57.689s"
+time_text = "58.823s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5253,13 +5256,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/mo_rollback_range_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.022s"
+time_text = "17.581s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5275,13 +5278,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/mo_static_range_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.43s"
+time_text = "17.862s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5297,13 +5300,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/mo_updates_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.672s"
+time_text = "19.022s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5319,13 +5322,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/range_sum_add_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.159s"
+time_text = "16.503s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5341,13 +5344,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/rb_array_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.019s"
+time_text = "17.039s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5363,13 +5366,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/rb_bipartite_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.793s"
+time_text = "18.537s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5385,13 +5388,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/rb_dsu_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.358s"
+time_text = "14.798s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5411,13 +5414,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_2d_sum_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.465s"
+time_text = "19.888s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5434,13 +5437,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_anglebeats_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.757s"
+time_text = "19.086s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5461,13 +5464,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_lazy_dual_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.082s"
+time_text = "16.543s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5486,13 +5489,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_premax_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.266s"
+time_text = "20.448s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5511,13 +5514,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_range_assign_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.823s"
+time_text = "19.39s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5534,13 +5537,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_range_extrema_add_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.472s"
+time_text = "17.769s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5557,13 +5560,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_range_sum_point_add_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.012s"
+time_text = "20.422s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5581,13 +5584,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_sort_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "13.35s"
+time_text = "20.667s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5604,13 +5607,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_sparse_lazy_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.037s"
+time_text = "17.684s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5627,13 +5630,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/seg_static_monoid_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.058s"
+time_text = "20.263s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5650,13 +5653,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/segd_default_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.763s"
+time_text = "16.47s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5673,13 +5676,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/segd_dense_root_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.043s"
+time_text = "21.342s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5698,13 +5701,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/segd_sparse_point_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.082s"
+time_text = "16.46s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5722,13 +5725,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/segdl_default_lazy_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.072s"
+time_text = "17.671s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5747,13 +5750,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/segdl_lazy_copy_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.793s"
+time_text = "22.317s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5769,13 +5772,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/sl_cht_line_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.191s"
+time_text = "16.604s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5791,13 +5794,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/sl_lichao_dynamic_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.769s"
+time_text = "18.065s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5814,13 +5817,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/sl_lichao_static_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.995s"
+time_text = "18.088s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5836,13 +5839,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/sl_slope_trick_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.443s"
+time_text = "18.304s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5858,13 +5861,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/spl_commutative_re_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.578s"
+time_text = "16.386s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5883,13 +5886,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/spl_lazy_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.828s"
+time_text = "19.368s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5906,13 +5909,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/spl_ordered_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.649s"
+time_text = "18.027s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5930,13 +5933,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/spl_sequence_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "22.467s"
+time_text = "17.313s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5954,13 +5957,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/st_disjoint_monoid_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "25.278s"
+time_text = "26.291s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -5979,13 +5982,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/st_idempotent_rmq_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.455s"
+time_text = "17.769s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6004,13 +6007,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/st_range_prod_sparse_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.387s"
+time_text = "20.868s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6028,13 +6031,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/static_range_group_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.052s"
+time_text = "16.472s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6052,13 +6055,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/swag_deque_affine_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.406s"
+time_text = "18.345s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6076,13 +6079,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/swag_queue_affine_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.017s"
+time_text = "18.828s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6099,13 +6102,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/toptree_satt_lazy_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.072s"
+time_text = "18.211s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6122,13 +6125,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/toptree_satt_sim_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.137s"
+time_text = "18.608s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6145,13 +6148,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/treap_act_lazy_sequence_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.038s"
+time_text = "21.293s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6167,13 +6170,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/treap_base_sequence_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "13.96s"
+time_text = "21.357s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6191,13 +6194,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/treap_mono_sequence_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "23.756s"
+time_text = "23.915s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6213,13 +6216,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/trie_bina_multiset_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.95s"
+time_text = "17.511s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6235,13 +6238,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/trie_bina_persistent_range".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.721s"
+time_text = "19.146s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6257,13 +6260,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/trie_low_offset_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.087s"
+time_text = "18.514s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6280,13 +6283,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/un_dsu_mono_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.438s"
+time_text = "18.586s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6302,13 +6305,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/un_dsu_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.227s"
+time_text = "17.923s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6324,13 +6327,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/un_dsu_time_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.316s"
+time_text = "20.228s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6346,13 +6349,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/un_dynamic_dsu_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.679s"
+time_text = "14.744s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6372,13 +6375,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/wave_2d_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.443s"
+time_text = "20.58s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6396,13 +6399,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/wave_monoid_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "23.771s"
+time_text = "24.362s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6419,13 +6422,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/wave_sswave_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.181s"
+time_text = "18.546s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6441,13 +6444,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."ds/wave_static_order_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.225s"
+time_text = "20.628s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6464,13 +6467,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/bipartite_matching_dense_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.888s"
+time_text = "22.337s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6488,13 +6491,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/bipartite_matching_sparse_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.196s"
+time_text = "19.911s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6510,13 +6513,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/bounded_flow_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.486s"
+time_text = "20.166s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6532,13 +6535,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/dag_mcf_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.729s"
+time_text = "14.116s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6554,13 +6557,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/general_matching_flower_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.628s"
+time_text = "18.755s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6576,13 +6579,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/gomory_hu_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.062s"
+time_text = "18.333s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6598,13 +6601,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/hlpp_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.334s"
+time_text = "19.266s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6621,13 +6624,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/hungarian_assignment_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.011s"
+time_text = "18.311s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6643,13 +6646,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/max_flow_directed_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.779s"
+time_text = "19.733s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6665,13 +6668,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/max_flow_dynamic_capacity_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.192s"
+time_text = "16.529s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6687,13 +6690,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/mcf_hos_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.122s"
+time_text = "16.741s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6709,13 +6712,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/mcf_ring_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.974s"
+time_text = "15.877s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6731,13 +6734,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/mcf_slope_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "11.158s"
+time_text = "16.48s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6753,13 +6756,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/min_cost_bflow_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.868s"
+time_text = "16.785s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6775,13 +6778,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/sp_mcf_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.35s"
+time_text = "16.5s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6797,13 +6800,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."flow/submodular_flow_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.532s"
+time_text = "15.982s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6820,13 +6823,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_biconnected_components_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.113s"
+time_text = "16.775s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6843,13 +6846,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_cactus_distance_diameter_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.729s"
+time_text = "20.218s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6867,13 +6870,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_clique_coloring_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.244s"
+time_text = "16.608s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6890,13 +6893,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_complement_coloring_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.581s"
+time_text = "14.511s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6913,13 +6916,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_connectivity_core_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.364s"
+time_text = "19.667s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6939,13 +6942,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_counting_helpers".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "38.187s"
+time_text = "37.649s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6962,13 +6965,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_dynamic_connect_state".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "57.039s"
+time_text = "57.011s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -6984,13 +6987,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_euler_walk_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "17.631s"
+time_text = "18.22s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7008,13 +7011,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_functional_graph_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "23.326s"
+time_text = "24.854s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7031,13 +7034,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_k_shortest_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "13.909s"
+time_text = "20.054s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7055,13 +7058,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_matching_reduction_witnesses".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "21.974s"
+time_text = "21.571s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7077,13 +7080,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_min_cycle_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.686s"
+time_text = "16.14s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7105,13 +7108,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_shortest_path_distances".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "19.117s"
+time_text = "15.468s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7128,13 +7131,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_tree_unicycle_distance_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "16.753s"
+time_text = "16.303s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7150,13 +7153,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."gg/gg_two_sat_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.91s"
+time_text = "18.127s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7174,13 +7177,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."line/line_bitset_linear_helpers".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.342s"
+time_text = "20.647s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7198,13 +7201,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."line/line_gf2_basis_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "15.652s"
+time_text = "16.422s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7221,13 +7224,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."line/line_gf2_range_space".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "23.919s"
+time_text = "23.74s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7248,13 +7251,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."line/line_matrix_arithmetic_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "20.044s"
+time_text = "19.416s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7272,13 +7275,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."line/line_solve_linear_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.832s"
+time_text = "16.53s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7297,13 +7300,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."mod/mod_crt_combinatorics_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "30.459s"
+time_text = "31.23s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7326,13 +7329,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."mod/mod_fast_pow_log_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "22.322s"
+time_text = "22.64s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7350,13 +7353,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."mod/mod_mint_arithmetic_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.277s"
+time_text = "19.553s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7372,13 +7375,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."mod/mod_mint_montgomery_api".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.655s"
+time_text = "19.11s"
 memory_text = ""
 run_id = 0
 compile_error = ""
@@ -7400,13 +7403,13 @@ dependencies = [
 ]
 last_trigger = "ci"
 last_tested_head = ""
-last_updated_at = "2026-06-18T08:40:49.234276Z"
+last_updated_at = "2026-06-18T12:45:33.283340Z"
 
 [tests."mod/mod_roots_logs_inverse_sqrt".last_result]
 status = "passed"
 verdict = "accepted"
 grade = ""
-time_text = "18.512s"
+time_text = "18.891s"
 memory_text = ""
 run_id = 0
 compile_error = ""
