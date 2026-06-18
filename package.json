@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
+    "dev:local": "BLOG_LOCAL_DEBUG=1 astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },

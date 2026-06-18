@@ -2,13 +2,15 @@
 import { getCollection } from "astro:content";
 
 import AlgorithmTree from "../../components/AlgorithmTree.astro";
-import { algorithmTree, type AlgorithmTreeNode } from "../../data/algorithm-tree";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAlgorithmTreeForMode } from "../../lib/local-debug";
+import type { AlgorithmTreeNode } from "../../data/algorithm-tree";
 import "../../styles/listing.css";
 import "../../styles/algorithm-tree.css";
 
 const posts = await getCollection("blog");
 const postIds = new Set(posts.map((post) => post.id));
+const algorithmTree = getAlgorithmTreeForMode();
 
 function countLeaves(nodes: AlgorithmTreeNode[]): number {
   return nodes.reduce((count, node) => {

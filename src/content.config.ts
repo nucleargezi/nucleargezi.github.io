@@ -1,8 +1,10 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
+import { getBlogArticleGlobPattern } from "./lib/local-debug";
+
 const blog = defineCollection({
-  loader: glob({ base: "./content/article", pattern: "*.typ" }),
+  loader: glob({ base: "./content/article", pattern: getBlogArticleGlobPattern() }),
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),

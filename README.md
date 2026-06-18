@@ -57,6 +57,16 @@ CI 当前使用：
 - `src/layouts/BlogPost.astro`
 - `src/lib/blog.ts`
 
+### 本地轻量调试
+
+默认 `pnpm dev` 会加载完整文章集合, 用于完整本地预览. 如果只需要调试页面结构或少量文章, 可以运行：
+
+```bash
+pnpm dev:local
+```
+
+这个模式会设置 `BLOG_LOCAL_DEBUG=1`, 只加载 `src/lib/local-debug.ts` 中配置的少量文章, 并让 `algorithm` 页面使用 `src/data/algorithm-tree-for-test.ts`.
+
 ### 页面样式
 
 样式目前按页面和模块拆分：
@@ -101,16 +111,14 @@ CI 当前使用：
 
 ## 测试
 
-仓库当前测试集中在 `library` 页面相关逻辑, 位于 `tests/`：
+仓库当前测试位于 `tests/`：
 
-- `tests/library-page.test.ts`
-- `tests/library-state.test.ts`
-- `tests/library-styles.test.ts`
+- `tests/local-debug.test.mjs`
 
 项目暂时没有在 `package.json` 里单独声明 `test` 脚本, 可以直接用 Node 原生测试运行：
 
 ```bash
-node --test tests/*.test.ts
+node --test tests/*.test.mjs
 ```
 
 如果后续测试范围继续扩大, 建议把常用命令补进 `package.json` 的 `scripts`. 
@@ -130,4 +138,4 @@ CI 里会额外安装一组字体, 再执行 `pnpm build`. 如果本地渲染结
 - `site = "https://nucleargezi.github.io"`
 - `astro-typst` 默认按 `html` 模式渲染
 
-如果后续改成项目页部署或自定义域名, 这里和 GitHub Pages 配置都要一起检查. 
+如果后续改成项目页部署或自定义域名, 这里和 GitHub Pages 配置都要一起检查.
