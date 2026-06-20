@@ -93,6 +93,10 @@ pnpm dev:local
 - 数据解析：`src/lib/library-state.ts`
 - 展示组件：`src/components/LibraryTree.astro`
 
+`state.toml` 由 `libck/myge` 的 CI shard reports 通过
+`libck/myge/scripts/build_library_state.py` 生成；手动维护页面时通常只改
+解析、页面或样式，不直接手写大段覆盖状态。
+
 `state.toml` 当前记录的信息包括：
 
 - 模板文件覆盖情况
