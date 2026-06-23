@@ -74,4 +74,10 @@ export const algorithmTree = [
       { label: "Major Voting", slug: "a-20251025_major_voting" },
     ],
   },
+  {
+    label: "String",
+    children: [
+      { label: "SAM", slug: "a-20260620_sam" },
+    ],
+  },
 ] satisfies AlgorithmTreeNode[];
