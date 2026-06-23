@@ -4,7 +4,7 @@
   title: "SAM",
   desc: [后缀自动机总结],
   date: "2026-06-20",
-  category: ("alg", "SAM"),
+  tags: ("alg", "SAM"),
 )
 
 = SAM - 从入门到入土
