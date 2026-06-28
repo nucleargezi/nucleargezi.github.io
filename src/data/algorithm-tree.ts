@@ -55,11 +55,23 @@ export const algorithmTree = [
         ]
       },
       {
+        label: "Combinatorics",
+        children: [
+          { label: "q-Binomial Coefficient", slug: "a-20260621_q_binom" },
+        ]
+      },
+      {
         label: "Group Theory",
         children: [
           { label: "Base", slug: "a-20260203_group" },
         ]
       },
+    ],
+  },
+  {
+    label: "String",
+    children: [
+      { label: "SAM", slug: "a-20260620_sam" },
     ],
   },
   {
@@ -72,12 +84,6 @@ export const algorithmTree = [
     label: "Other",
     children: [
       { label: "Major Voting", slug: "a-20251025_major_voting" },
-    ],
-  },
-  {
-    label: "String",
-    children: [
-      { label: "SAM", slug: "a-20260620_sam" },
     ],
   },
 ] satisfies AlgorithmTreeNode[];
