@@ -2,7 +2,7 @@
 
 #show: main.with(
   title: "Record CCPC 2022 Mianyang Site",
-  desc: [ucup 4-1 训练记录],
+  desc: [2022 ccpc 绵阳 训练记录],
   date: "2026-10-11",
   tags: ("icpc",),
   category: "ICPC",
