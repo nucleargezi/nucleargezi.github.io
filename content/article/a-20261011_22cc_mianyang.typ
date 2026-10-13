@@ -530,7 +530,7 @@ int main() { Yorisou(); }
 ```
 
 == L. Por Una Cabeza
-- In-Contest Solves: 138/150 (qoj)
+- In-Contest Solves: 18/42 (qoj)
 - #link("https://qoj.ac/contest/1480/problem/8045/statement/zh_cn")
 
 === Formal Problem Statement
