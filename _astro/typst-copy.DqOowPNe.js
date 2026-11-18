@@ -1,6 +1,54 @@
 const selector = "[data-typst-article] .typst-doc";
 const articleSvg = document.querySelector(selector);
-if (articleSvg) enableTextSelection(articleSvg);
+if (articleSvg) {
+  enableTextSelection(articleSvg);
+  enableCodeCopy(articleSvg);
+}
+
+function enableCodeCopy(svg) {
+  const paper = svg.closest(".typst-paper");
+  const buttons = paper?.querySelectorAll("button.code-copy");
+  if (!buttons?.length) return;
+
+  const blocks = new Map(Array.from(svg.querySelectorAll("g[data-code-block]"),
+    block => [block.dataset.codeBlock, block]));
+  const status = document.createElement("span");
+  status.className = "code-copy-status";
+  status.setAttribute("role", "status");
+  paper.append(status);
+
+  for (const button of buttons) {
+    const id = button.dataset.codeBlock;
+    const block = blocks.get(id);
+    if (!block) continue;
+    button.dataset.ready = "";
+
+    // The button overlays the SVG but is its sibling in the document.
+    for (const area of [block, button]) {
+      area.addEventListener("pointerenter", () => { button.dataset.hovered = ""; });
+      area.addEventListener("pointerleave", event => {
+        if (event.relatedTarget?.closest?.("[data-code-block]")?.dataset.codeBlock !== id) {
+          delete button.dataset.hovered;
+        }
+      });
+    }
+
+    let reset;
+    button.addEventListener("click", async () => {
+      status.textContent = "";
+      try {
+        await navigator.clipboard.writeText(button.dataset.code);
+        button.dataset.result = "copied";
+        status.textContent = "代码已复制";
+      } catch {
+        button.dataset.result = "failed";
+        status.textContent = "复制失败，请手动选择代码并复制";
+      }
+      clearTimeout(reset);
+      reset = setTimeout(() => { delete button.dataset.result; }, 1500);
+    });
+  }
+}
 
 function enableTextSelection(svg) {
   const selection = window.getSelection();
